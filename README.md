@@ -1,5 +1,6 @@
 # Pipeline Safety Toolkit
 
+Archived release: [Zenodo DOI 10.5281/zenodo.23899127](https://doi.org/10.5281/zenodo.23899127) · [GitHub Release](https://github.com/lyullee/pipeline-safety-toolkit/releases/tag/v0.1.0a1)
 **Composable Python tools for pipeline engineering, model exchange and reproducible verification.**
 
 배관의 유동·열역학·구조·손상·계측·운영 계산을 작은 모델과 명시적인 데이터 계약으로 연결하는 연구용 패키지입니다. 사용자 파라미터, 물성 공급자, 관측 데이터와 외부 엔진을 교체할 수 있습니다. 결과에는 단위, 적용 조건, 입력 출처와 실행 식별정보를 함께 남깁니다.

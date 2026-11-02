@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0a1",
+  "release_commit": "d535361",
+  "github": "https://github.com/lyullee/pipeline-safety-toolkit",
+  "zenodo_doi": "10.5281/zenodo.23899127",
+  "zenodo_source_zip_sha256": "b3f371d6d625c07d8025f3d4a5644d0070d6e44d278fd8092237ee0dac7200aa",
+  "release_note": "The archived release snapshot precedes this DOI metadata follow-up commit.",
+  "implementation": {
+    "completed": 223,
+    "total": 223
+  },
+  "bounded_physical_profiles": {
+    "passed": 198,
+    "total": 223,
+    "case_records_passed": 2013,
+    "pending": 25
+  },
+  "pypi_status": "GitHub trusted publishing workflow dispatched; verify its terminal result before claiming publication."
+}
