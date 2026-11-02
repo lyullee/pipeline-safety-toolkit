@@ -1,0 +1,193 @@
+{
+  "schema": "pipeline_integrity.scheduling_checks.v1",
+  "cases": {
+    "reference": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 8.0,
+      "objective": 8,
+      "makespan_ticks": 8,
+      "independent_primal_valid": true,
+      "result_digest": "ce6b3282de7d7cdbf527cfdcd1965668af0735a1ee191799816e3e5b9a22b92d",
+      "work_authorized": false
+    },
+    "zero_fast_mode_cost": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 7.0,
+      "objective": 7,
+      "makespan_ticks": 7,
+      "independent_primal_valid": true,
+      "result_digest": "893eed9fd37dcf11d2eafeb49b6f9a93c8174ec0056486cf032949a45dae8a09",
+      "work_authorized": false
+    },
+    "no_spare": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 8.0,
+      "objective": 8,
+      "makespan_ticks": 8,
+      "independent_primal_valid": true,
+      "result_digest": "44bf0349353d78d2544c3caad40c259b5103992dcfe29fdab816aa8296d8a371",
+      "work_authorized": false
+    },
+    "later_operator_shift": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 9.0,
+      "objective": 9,
+      "makespan_ticks": 9,
+      "independent_primal_valid": true,
+      "result_digest": "38de42dee73e375258c40de9cab7053a52a610f0f63d6a9fb2928240cf7abe8c",
+      "work_authorized": false
+    },
+    "hold_omitted_counterfactual": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 6.0,
+      "objective": 6,
+      "makespan_ticks": 6,
+      "independent_primal_valid": true,
+      "result_digest": "ea0f3f9bdcbdfed9a522eadb69e59e72fcdddf3ca6418c0ea52683cc7cae9fd3",
+      "work_authorized": false
+    },
+    "deadline_infeasible": {
+      "status": "infeasible",
+      "proven_optimal": false,
+      "native_status": "INFEASIBLE",
+      "native_bound": 0.0,
+      "objective": null,
+      "makespan_ticks": null,
+      "independent_primal_valid": null,
+      "result_digest": "1cabcbb746c2cf8434b98ddbe3b12f5a09ecc3cabdd579afd81cf718a448b236",
+      "work_authorized": false
+    },
+    "tiny_search_budget": {
+      "status": "unknown",
+      "proven_optimal": false,
+      "native_status": "UNKNOWN",
+      "native_bound": 0.0,
+      "objective": null,
+      "makespan_ticks": null,
+      "independent_primal_valid": null,
+      "result_digest": "80c1d433b8e817f69ec0a8ae786ca456ae1e65153ca8a4686ad7711dea5304ee",
+      "work_authorized": false
+    },
+    "gap_stopped": {
+      "status": "feasible",
+      "proven_optimal": false,
+      "native_status": "OPTIMAL",
+      "native_bound": 7.0,
+      "objective": 9,
+      "makespan_ticks": 9,
+      "independent_primal_valid": true,
+      "result_digest": "41207203d2a3e36425b1141cc11c1f5393c7e8f31de045be412f50c2f01365d2",
+      "work_authorized": false
+    },
+    "zero_time_objective": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 0.0,
+      "objective": 0,
+      "makespan_ticks": 9,
+      "independent_primal_valid": true,
+      "result_digest": "98f3a75dd1ae522a11bd22f01b893a5d485ca4c972d964a62e500b3cd1ba5075",
+      "work_authorized": false
+    }
+  },
+  "modules_sha256": {
+    "scheduling": "2448ac5a8cfb6109feaf144698a5e2e15dd4880c7c9f3eb884f04675e1a03273",
+    "schedule_exchange": "e08342e9dc46df11a5d732a35ef3985da9f5e98a2558ec6d976b2528ed1e7ef5"
+  },
+  "verification_script_sha256": "b806236d04dc6facde0ebdfe6aa80df97a10edf9d672a7d978c42415d3d16c49",
+  "solver": {
+    "id": "OR-Tools CP-SAT",
+    "version": "9.15.6755",
+    "workers": 1,
+    "seed": 0,
+    "wall_time_s": 0.013217000000000001
+  },
+  "cp_model_module_sha256": "8ccd32d856725a1641048e879e833eceb2edd7beeb5bc53146d3a03aa80ec136",
+  "cp_sat_binary_sha256": "6c8114648ed61c704a19ab44849013398ad2b9323c2780ab581c337a8a6c6b6f",
+  "hra": {
+    "source": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    },
+    "native_task_digest": "a31cd33d9db5f0201e67bf904fc143954fa50b5bed9e3dfab6533b619e4f2d9f",
+    "binding_digest": "d53f543cc0571d78d965f77e1d9eafb986897c579bce4df257f475da0cdacc0e",
+    "actual_steps": 4,
+    "planned_steps": 4,
+    "qualitative_candidate_count": 5,
+    "failure_event_definition_only": {
+      "id": "declared_verification_failure",
+      "task_id": "authored_inspection_task",
+      "step_ids": [
+        "verify"
+      ],
+      "role": "response",
+      "failure_definition": "Required pressure-state review is omitted or incorrectly accepted",
+      "opportunity_definition": "One declared execution of the authored task; no exposure count supplied",
+      "conditioning": "Research task with explicitly declared evidence; no field failure probability",
+      "deadline_s": null,
+      "includes_recovery": false,
+      "includes_timing": false,
+      "dependency_group": null
+    },
+    "deadlines_applied": false,
+    "task_unchanged": true,
+    "observed_completion": false,
+    "human_failure_probability": null
+  },
+  "gaslib": {
+    "source_sha256": "d264a3de986152a3c8e31e969ee9f492659828dfde8438ed2feffa9b31de43fb",
+    "citation": "Schmidt et al. (2017), GasLib - A Library of Gas Network Instances, DOI 10.3390/data2040040; Pfetsch et al., ZIB Report 12-41 (2012), as required by the source files",
+    "creators": [
+      "Martin Schmidt",
+      "Denis A\u00dfmann",
+      "Robert Burlacu",
+      "Jesco Humpola",
+      "Imke Joormann",
+      "Nikolaos Kanelakis",
+      "Thorsten Koch",
+      "Djamal Oucherif",
+      "Marc E. Pfetsch",
+      "Lars Schewe",
+      "Robert Schwarz",
+      "Mathias Sirvent"
+    ],
+    "license_id": "CC-BY-3.0",
+    "operations": 8,
+    "shared_node_resources": 11,
+    "result": {
+      "status": "optimal",
+      "proven_optimal": true,
+      "native_status": "OPTIMAL",
+      "native_bound": 45.0,
+      "objective": 45,
+      "makespan_ticks": 45,
+      "independent_primal_valid": true,
+      "result_digest": "4cdd76826e72fe8944ec5b7a97f8846f1a2665f81f785ececf9258cb60fc9055",
+      "work_authorized": false
+    },
+    "crew_work_s": 4800,
+    "capacity_lower_bound_makespan_s": 2700,
+    "declared_durations_and_calendar": true,
+    "shared_node_conflicts_are_declared_policy": true,
+    "actual_maintenance_durations_inferred": false,
+    "complete_network_physics_status": "needs_data"
+  },
+  "cli_objective_and_primal_audit_match": true,
+  "full_result_hashes_vary_with_solver_runtime": true,
+  "original_topology_and_locally_transformed_tables_excluded_from_release": true,
+  "field_schedule_validation": false,
+  "work_authorized": false
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "pipeline_integrity.consequence_checks.v1",
+  "sources": {
+    "PRISM": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "e3052a317818501fae3a29475b6b057ba5f260b406547354e29f755b0298a0b8",
+      "source_tree_files": 296
+    },
+    "lh2dt_models": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c",
+      "source_tree_files": 52
+    },
+    "slabx": {
+      "commit": "820e368ba6454aad8627dac5967115d9648c80c7",
+      "working_tree_modified": false,
+      "source_tree_sha256": "a5092084a3cc3dc93c9c55ca8c704af189237a195330db0c1ef61d9e0a160b37",
+      "source_tree_files": 33
+    },
+    "slabx_lh2_commit": "1ef613102819de1c2feebd062aff3b49997e1927"
+  },
+  "backend_packages": [
+    {
+      "name": "prism_qra",
+      "source_sha256": "27b506d6586ac564a43e198343a99319f44a9a9aa0d0fb9363de22dd1d891d25"
+    },
+    {
+      "name": "prism_lh2_models",
+      "source_sha256": "86e43d526f7eaf838f32dfd824a1adfab5ab45bacbaecfcf84c0fc5c3074e45c"
+    },
+    {
+      "name": "slabx",
+      "source_sha256": "569c97642f882e94a93d71a45dd5592027b479569d8cfaed3b70e5b16f085163"
+    },
+    {
+      "name": "slabx_lh2",
+      "source_sha256": "9a8bcd969c5db54ceb19bb3a3fbdb061222e0b3156108927a3d869c3f4b7b9a7"
+    }
+  ],
+  "required_versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "CoolProp": "8.0.0",
+    "pydantic": "2.14.1"
+  },
+  "unadapted_status": "withheld",
+  "adapted_statuses": {
+    "wind_270": "computed_diagnostic",
+    "wind_180": "withheld",
+    "wind_250": "withheld",
+    "refinement": "computed_diagnostic"
+  },
+  "source_interval_counts": [
+    20,
+    40
+  ],
+  "released_mass_kg": [
+    0.00033613318746187465,
+    0.0003361331917780772
+  ],
+  "mass_timestep_difference_kg": 4.316202560292193e-12,
+  "mass_timestep_relative_tolerance": 0.01,
+  "plane_energy_residual_j_kg": 0.0,
+  "conditional_harm_sensitivity": {
+    "near": [
+      0.28,
+      0.28
+    ],
+    "middle": [
+      0.0,
+      0.0
+    ],
+    "far": [
+      0.0,
+      0.0
+    ]
+  },
+  "oblique_plane_status": "withheld",
+  "oblique_plane_reason": "wind_projection_geometry_mass_mismatch",
+  "oblique_cosine_mass_difference_percent": 6.030737921409157,
+  "annualized_window_rate_sensitivity": {
+    "near": [
+      0.0014000000000000002,
+      0.0014000000000000002
+    ],
+    "middle": [
+      0.0,
+      0.0
+    ],
+    "far": [
+      0.0,
+      0.0
+    ]
+  },
+  "crosswind_status": "withheld",
+  "crosswind_reason": "no_positive_downwind_plane_velocity",
+  "incomplete_condition_status": "needs_consequence",
+  "incomplete_condition_envelope": {
+    "near": [
+      0.0008400000000000001,
+      0.00284
+    ],
+    "middle": [
+      0.0,
+      0.002
+    ],
+    "far": [
+      0.0,
+      0.002
+    ]
+  },
+  "mass_residuals_kg": [
+    0.0,
+    0.0
+  ],
+  "missing_frequency_status": "needs_frequency",
+  "wrong_frequency_guard": "annual release risk requires an explicitly bound loss-of-containment frequency",
+  "local_native_record_sha256": "71cb0c267aab7b815369b7f6f9f43704eb0c93369e41e9648ce98b0106ef709f",
+  "implementation_sha256": "396bc4ac13187330b365cac130856a0d2220e606cdec989df2237e4fbb26ebb9",
+  "complete_accident_or_facility_risk": false,
+  "independent_physical_validation": false,
+  "external_sources_modified": false
+}

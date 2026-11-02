@@ -1,0 +1,416 @@
+{
+  "schema": "pipeline_integrity.data_application.v1",
+  "battledim": {
+    "source": "https://doi.org/10.5281/zenodo.4017659",
+    "origin": "simulation",
+    "rows_examined": 864,
+    "channels": 37,
+    "elapsed_start_s": 0.0,
+    "elapsed_end_s": 258900.0,
+    "all_selected_samples_finite": true,
+    "pressure_is_head_m_not_absolute_pressure": true,
+    "source_sha256": {
+      "2018_SCADA_Pressures.csv": "7782d890a7195699be94ddc01cba392da7ca285908afff619065a9616e04dcae",
+      "2018_SCADA_Flows.csv": "7f7e8625c9d92b083ee079a54cffb9ef803876de1e35017c1da0455968daf3ff",
+      "2018_SCADA_Levels.csv": "a1fc5f0229448a620b6220f4d079b3162a255b3070acdce448608fbfc760903c",
+      "L-TOWN.inp": "a7551b86745f4cc3433c78e60023077fa1386947d4d35372ffd3a0405622b436"
+    },
+    "network": {
+      "schema": "pipeline_integrity.water_network.v1",
+      "status": "withheld",
+      "source_sha256": "a7551b86745f4cc3433c78e60023077fa1386947d4d35372ffd3a0405622b436",
+      "run_digest": "f5b56121db59bd711a2336dd0932fd30552c14ea4a40e409bd5c32366d58aebe",
+      "backend": {
+        "wntr": "1.5.0",
+        "epanet_version": "2.2"
+      },
+      "solver_error_code": null,
+      "native_diagnostics": {
+        "mass_balance_ratio": null,
+        "native_version_code": 20200,
+        "effective_time_parameters": {
+          "duration_s": 86400,
+          "hydraulic_timestep_s": 300,
+          "quality_timestep_s": 300,
+          "pattern_timestep_s": 300,
+          "pattern_start_s": 0,
+          "report_timestep_s": 300,
+          "report_start_s": 0,
+          "quality_elapsed_s": 86400,
+          "hydraulic_halt_flag": 0
+        },
+        "warnings": [
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 0
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 300
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 3600
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 4500
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 8400
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 8981
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 9000
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 9300
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 9600
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 9900
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 10200
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 10500
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 11100
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 11400
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 12000
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 12300
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 12600
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 13200
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 13500
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 13800
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 14100
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 14400
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 14700
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 15300
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 15600
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 15900
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 16200
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 16500
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 16800
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 17100
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 17400
+          },
+          {
+            "stage": "ENrunH",
+            "code": 1,
+            "elapsed_time_s": 17700
+          }
+        ],
+        "warning_count": 128,
+        "warning_details_truncated": true,
+        "hydraulic_periods": 291,
+        "hydraulic_elapsed_s": 86400,
+        "maximum_native_hydraulic_statistics": {
+          "iterations": 211.0,
+          "relative_error": 2.3071307616742996e-06,
+          "head_error_m": 7.086822249213306e-13,
+          "flow_change_m3_s": 1.860501744539927e-08
+        },
+        "parsed_hydraulic_options_si": {
+          "maximum_trials": 200.0,
+          "relative_accuracy": 1e-05,
+          "head_error_m": 1e-07,
+          "flow_change_m3_s": 9.999999999999999e-10
+        },
+        "effective_hydraulic_options_si": {
+          "maximum_trials": 200.0,
+          "relative_accuracy": 1e-08,
+          "head_error_m": 1e-07,
+          "flow_change_m3_s": 1.0000000000000003e-09
+        },
+        "hydraulic_options_verified": true,
+        "native_options_reapplied_after_INP_parse": true,
+        "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d",
+        "serialized_model_sha256": "588f4693c105ca5a1261e8669c99a9679a1f0166a770836109a083f68f0686ef",
+        "binding_scope": "WNTR_ENepanet_project_handle_and_EPANET_2_2_public_C_API",
+        "serialization_flow_units": "LPS",
+        "serialization_pressure_units": "METERS"
+      },
+      "specification": {
+        "duration_s": 86400.0,
+        "hydraulic_timestep_s": 300.0,
+        "report_timestep_s": 300.0,
+        "continuity_tolerance_m3_s": 1e-06,
+        "solver_relative_accuracy": 1e-08,
+        "solver_head_error_m": 1e-07,
+        "solver_flow_change_m3_s": 1e-09,
+        "solver_maximum_trials": 200,
+        "maximum_hydraulic_periods": 1000000
+      },
+      "maximum_junction_continuity_residual_m3_s": 2.6200723368674517e-08,
+      "topology": {
+        "junctions": 782,
+        "pipes": 905,
+        "pumps": 1,
+        "valves": 3,
+        "tanks": 1
+      },
+      "hydraulic_settings": {
+        "headloss": "H-W",
+        "demand_model": "DDA"
+      },
+      "scope": "water-network hydraulic heads; pressure heads are not absolute pressure",
+      "field_validation_claim": false
+    },
+    "network_report_rows": 289,
+    "observation_agreement_claim": false,
+    "limitation": "The released nominal network differs from the hidden generating network; continuity is a solver check."
+  },
+  "hydraulic": {
+    "source": "https://doi.org/10.24432/C5CW21",
+    "origin": "laboratory",
+    "source_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+    "cycle_index": 0,
+    "label_excluded_from_signal_inputs": true,
+    "sensors": {
+      "PS1": {
+        "samples": 6000,
+        "sample_rate_hz": 100.0,
+        "unit": "bar_unspecified_pressure_reference",
+        "finite": true
+      },
+      "FS1": {
+        "samples": 600,
+        "sample_rate_hz": 10.0,
+        "unit": "m3/s",
+        "finite": true
+      },
+      "TS1": {
+        "samples": 60,
+        "sample_rate_hz": 1.0,
+        "unit": "K",
+        "finite": true
+      },
+      "VS1": {
+        "samples": 60,
+        "sample_rate_hz": 1.0,
+        "unit": "m/s",
+        "finite": true
+      }
+    },
+    "pressure_reference_resolved": false,
+    "predictive_accuracy_established": false
+  },
+  "ili": {
+    "source": "https://doi.org/10.17632/c2h2jf5c54.1",
+    "source_sha256": "255c7fa88f4c5656baeb21e56c5a5e4961c446016faebae58bf834bd75a05c6c",
+    "workbooks": [
+      {
+        "member": "Dataset (.xlsx)/External Features Year Three.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "reported_max_row": 832682,
+            "reported_max_column": 15,
+            "headers": [
+              "Year",
+              "GWNUM",
+              "JL.m",
+              "RD.m",
+              "SO.deg",
+              "SPD.m",
+              "SPO.deg",
+              "EPD.m",
+              "EPO.deg",
+              "SIPRD.m",
+              "SIPO.deg",
+              "WT.mm",
+              "L.mm",
+              "W.mm",
+              "MD.mm"
+            ]
+          }
+        ]
+      },
+      {
+        "member": "Dataset (.xlsx)/External Features Year One.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "reported_max_row": 735756,
+            "reported_max_column": 15,
+            "headers": [
+              "Year",
+              "GWNUM",
+              "JL.m",
+              "RD.m",
+              "SO.deg",
+              "SPD.m",
+              "SPO.deg",
+              "EPD.m",
+              "EPO.deg",
+              "SIPRD.m",
+              "SIPO.deg",
+              "WT.mm",
+              "L.mm",
+              "W.mm",
+              "MD.mm"
+            ]
+          }
+        ]
+      },
+      {
+        "member": "Dataset (.xlsx)/External Features Year Five.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "reported_max_row": 759684,
+            "reported_max_column": 15,
+            "headers": [
+              "Year",
+              "GWNUM",
+              "JL.m",
+              "RD.m",
+              "SO.deg",
+              "SPD.m",
+              "SPO.deg",
+              "EPD.m",
+              "EPO.deg",
+              "SIPRD.m",
+              "SIPO.deg",
+              "WT.mm",
+              "L.mm",
+              "W.mm",
+              "MD.mm"
+            ]
+          }
+        ]
+      },
+      {
+        "member": "Dataset (.xlsx)/External Features Year Seven.xlsx",
+        "sheets": [
+          {
+            "sheet": "Sheet1",
+            "reported_max_row": 870302,
+            "reported_max_column": 15,
+            "headers": [
+              "Year",
+              "GWNUM",
+              "JL.m",
+              "RD.m",
+              "SO.deg",
+              "SPD.m",
+              "SPO.deg",
+              "EPD.m",
+              "EPO.deg",
+              "SIPRD.m",
+              "SIPO.deg",
+              "WT.mm",
+              "L.mm",
+              "W.mm",
+              "MD.mm"
+            ]
+          }
+        ]
+      }
+    ],
+    "dimensions_are_xml_metadata": true,
+    "matched_defect_count_established": false,
+    "longitudinal_corrosion_rate_qualified": false
+  }
+}

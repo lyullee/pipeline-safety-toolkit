@@ -1,0 +1,18 @@
+include LICENSE THIRD_PARTY_NOTICES.md README.md AGENTS.md CHANGELOG.md CITATION.cff .zenodo.json
+include .gitignore .gitattributes
+include requirements-tested.txt requirements-hra.txt
+recursive-include .github *.yml
+recursive-include jobs *.pbs *.sbatch *.json *.sh *.ps1
+recursive-include docs *.md *.png
+recursive-include examples *.py *.json *.inp
+recursive-include tests *.py
+include tests/data/mechanics_input_baselines_223.json
+recursive-include scripts *.py *.json
+recursive-include research *.json *.md
+exclude research/release_audit.json
+prune data
+prune artifacts
+prune tmp
+prune .venv
+prune .venv-core
+global-exclude *.pyc *.pdf *.zip *.7z *.rar *.xlsx *.RData *.sqlite .env

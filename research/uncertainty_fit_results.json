@@ -1,0 +1,742 @@
+{
+  "schema": "pipeline_integrity.uncertainty_fit_verification.v1",
+  "data": {
+    "id": "hydraulic",
+    "source": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+    "citation": "Condition monitoring of hydraulic systems; https://doi.org/10.24432/C5CW21",
+    "creators": [
+      "Nikolai Helwig",
+      "Eliseo Pignanelli",
+      "Andreas Sch\u00fctze"
+    ],
+    "license_id": "CC-BY-4.0",
+    "archive_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+    "member_sha256": {
+      "profile.txt": "867987ca884b2f0fd607ad3918329eba887d095af2befa21122cea518eaa584a",
+      "EPS1.txt": "2a8d13ca793bb36c0ec4afd27b0103b97b3c1b5a176677be5e7a2ae98c277ab9",
+      "FS1.txt": "7ff09b17047f776befc136b7902bc7bd4419f96dc107a7ae94d8c412effe0375"
+    },
+    "original_cycles": 2205,
+    "original_power_samples": 13230000,
+    "original_flow_samples": 1323000,
+    "used_power_samples": 13210155,
+    "used_flow_samples": 1323000,
+    "common_interval_s": [
+      0.0,
+      59.9
+    ],
+    "complete_feature_pairs": 2205,
+    "condition_profiles": 180,
+    "source_order_is_physical_time": false,
+    "bulk_source_audits": {
+      "0": {
+        "power_samples": 5991,
+        "flow_samples": 600,
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "power_integrator_digest": "c175e0749549805fb055f5d011bc7fa642e881e1f1138e5a31c8a36e716716a0",
+        "energy_absolute_difference_j": 0.0
+      },
+      "146": {
+        "power_samples": 5991,
+        "flow_samples": 600,
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "power_integrator_digest": "91ad1aa8dc807b6c9513256a140500ce400b7ead800d9cf28d3242e07ef6f942",
+        "energy_absolute_difference_j": 2.9103830456733704e-11
+      },
+      "2186": {
+        "power_samples": 5991,
+        "flow_samples": 600,
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "power_integrator_digest": "34a5ca569efbbc344df746685bbad066ad3fbcdde42ef67ee144113763725154",
+        "energy_absolute_difference_j": 2.9103830456733704e-11
+      },
+      "2204": {
+        "power_samples": 5991,
+        "flow_samples": 600,
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "power_integrator_digest": "4c2fe2aa44c823ccd5d57ef8cd4b4c0134a0ae9600cc6334f121f96037429119",
+        "energy_absolute_difference_j": 0.0
+      }
+    },
+    "raw_or_derived_cycle_rows_in_release": false
+  },
+  "transient_cohort": {
+    "profile": [
+      3,
+      100,
+      0,
+      130,
+      1
+    ],
+    "contiguous_source_rows": 210,
+    "stable_flag_meaning": "static conditions may not yet have been reached; this study does not assume stationarity",
+    "independent_train_and_holdout_established": false,
+    "criteria": {
+      "lower_quantile": 0.05,
+      "upper_quantile": 0.95,
+      "minimum_marginal_coverage": 0.8,
+      "maximum_mean_energy_score": 1.0,
+      "maximum_distance_pairs": 4000000,
+      "evidence_id": "protocol"
+    },
+    "candidates": {
+      "normal": {
+        "training_rows": 128,
+        "ignored_gap_rows": 18,
+        "validation_rows": 64,
+        "status": "computed",
+        "training_only_digest": "ed161e6efbf0731ad41059dbc871f574597221dc43d2851ceccb87ed3c740712",
+        "fitted_variables": [
+          {
+            "id": "energy_j",
+            "unit": "J",
+            "layer": "measurement",
+            "evidence_id": "uci447",
+            "marginal": {
+              "family": "normal",
+              "parameters": {
+                "mean": 145214.98290625,
+                "standard_deviation": 1742.8322159301322
+              }
+            }
+          },
+          {
+            "id": "volume_m3",
+            "unit": "m3",
+            "layer": "measurement",
+            "evidence_id": "uci447",
+            "marginal": {
+              "family": "normal",
+              "parameters": {
+                "mean": 0.0066164730078125,
+                "standard_deviation": 2.48838481496133e-05
+              }
+            }
+          }
+        ],
+        "latent_correlation": [
+          [
+            1.0,
+            0.8398929867237299
+          ],
+          [
+            0.8398929867237299,
+            1.0
+          ]
+        ],
+        "same_source_block_in_train_and_validation": true,
+        "heldout": {
+          "empirical_pairs": {
+            "schema": "pipeline_integrity.distribution_assessment.v1",
+            "fit_digest": "157f6b4a3c159efb730894718e3816d97d26357a6ae7bb94df13d0bf2704df71",
+            "use_digest": "1da47c35bd1333738a3bcdc0082f145bba7c856d6d37e3ea1a7cc50b36c545e2",
+            "specification": {
+              "lower_quantile": 0.05,
+              "upper_quantile": 0.95,
+              "minimum_marginal_coverage": 0.8,
+              "maximum_mean_energy_score": 1.0,
+              "maximum_distance_pairs": 4000000,
+              "evidence_id": "protocol"
+            },
+            "status": "computed",
+            "issues": [],
+            "marginal_intervals": {
+              "energy_j": {
+                "unit": "J",
+                "interval": [
+                  143901.81800000003,
+                  149429.35099999997
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.0,
+                "full_holdout_coverage_bounds": [
+                  0.0,
+                  0.0
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 0
+              },
+              "volume_m3": {
+                "unit": "m3",
+                "interval": [
+                  0.0065893175000000005,
+                  0.006676513333333333
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.359375,
+                "full_holdout_coverage_bounds": [
+                  0.359375,
+                  0.359375
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 23
+              }
+            },
+            "scores": {
+              "known_rows": 64,
+              "unresolved_rows": 0,
+              "known_fraction": 1.0,
+              "unresolved_fraction": 0.0,
+              "conditional_on_complete_mean_energy_score": 0.008169591566114897,
+              "full_holdout_mean_energy_score": 0.008169591566114897,
+              "predictive_pair_distance_half_term": 0.008595661172013859,
+              "score_space": "caller_scaled_joint_variables",
+              "score_weight_normalization_divisor": 1.0,
+              "diagonal_predictive_pairs_included": true,
+              "energy_score_roundoff_tolerance": 1e-12,
+              "negative_roundoff_scores_retained": 0
+            },
+            "declared_gate": "failed",
+            "independently_validated": false,
+            "independent_trial_confidence_interval_computed": false,
+            "field_qualified": false,
+            "automatically_selected_or_applied": false,
+            "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+            "distance_pairs": 24576,
+            "runtime": {
+              "numpy": "2.5.4",
+              "scipy": "1.18.1"
+            },
+            "record_digest": "be486de350fc14f4271d5ff89e9cb2a3bdf2ecfadac3cf60df5b3688a64390c3"
+          },
+          "normal_score_copula": {
+            "schema": "pipeline_integrity.distribution_assessment.v1",
+            "fit_digest": "157f6b4a3c159efb730894718e3816d97d26357a6ae7bb94df13d0bf2704df71",
+            "use_digest": "49fbbd254f14e24f4bff0e513ae09185b786a95eba52af83bfc1cc462ee115f5",
+            "specification": {
+              "lower_quantile": 0.05,
+              "upper_quantile": 0.95,
+              "minimum_marginal_coverage": 0.8,
+              "maximum_mean_energy_score": 1.0,
+              "maximum_distance_pairs": 4000000,
+              "evidence_id": "protocol"
+            },
+            "status": "computed",
+            "issues": [],
+            "marginal_intervals": {
+              "energy_j": {
+                "unit": "J",
+                "interval": [
+                  142353.6858760987,
+                  148073.51066373763
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 1.0,
+                "full_holdout_coverage_bounds": [
+                  1.0,
+                  1.0
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 64
+              },
+              "volume_m3": {
+                "unit": "m3",
+                "interval": [
+                  0.006575493823118718,
+                  0.006657500907275837
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.9375,
+                "full_holdout_coverage_bounds": [
+                  0.9375,
+                  0.9375
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 60
+              }
+            },
+            "scores": {
+              "known_rows": 64,
+              "unresolved_rows": 0,
+              "known_fraction": 1.0,
+              "unresolved_fraction": 0.0,
+              "conditional_on_complete_mean_energy_score": 0.010017423699337181,
+              "full_holdout_mean_energy_score": 0.010017423699337181,
+              "predictive_pair_distance_half_term": 0.010431811807669283,
+              "score_space": "caller_scaled_joint_variables",
+              "score_weight_normalization_divisor": 1.0,
+              "diagonal_predictive_pairs_included": true,
+              "energy_score_roundoff_tolerance": 1e-12,
+              "negative_roundoff_scores_retained": 0
+            },
+            "declared_gate": "passed",
+            "independently_validated": false,
+            "independent_trial_confidence_interval_computed": false,
+            "field_qualified": false,
+            "automatically_selected_or_applied": false,
+            "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+            "distance_pairs": 1114112,
+            "runtime": {
+              "numpy": "2.5.4",
+              "scipy": "1.18.1"
+            },
+            "record_digest": "86b525d82c190c3c22661722e287523fc916bd3dde86a824fe4974064ad16d00"
+          },
+          "independent_counterfactual": {
+            "schema": "pipeline_integrity.distribution_assessment.v1",
+            "fit_digest": "157f6b4a3c159efb730894718e3816d97d26357a6ae7bb94df13d0bf2704df71",
+            "use_digest": "ff2f6b4d77d2bdc95ba4aeaccb183c3a577973192336f32c371d455a7a8703d2",
+            "specification": {
+              "lower_quantile": 0.05,
+              "upper_quantile": 0.95,
+              "minimum_marginal_coverage": 0.8,
+              "maximum_mean_energy_score": 1.0,
+              "maximum_distance_pairs": 4000000,
+              "evidence_id": "protocol"
+            },
+            "status": "computed",
+            "issues": [],
+            "marginal_intervals": {
+              "energy_j": {
+                "unit": "J",
+                "interval": [
+                  142358.43878583793,
+                  148074.44123259708
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 1.0,
+                "full_holdout_coverage_bounds": [
+                  1.0,
+                  1.0
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 64
+              },
+              "volume_m3": {
+                "unit": "m3",
+                "interval": [
+                  0.0065756653959755775,
+                  0.006657365649795592
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.9375,
+                "full_holdout_coverage_bounds": [
+                  0.9375,
+                  0.9375
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 60
+              }
+            },
+            "scores": {
+              "known_rows": 64,
+              "unresolved_rows": 0,
+              "known_fraction": 1.0,
+              "unresolved_fraction": 0.0,
+              "conditional_on_complete_mean_energy_score": 0.010422599474676138,
+              "full_holdout_mean_energy_score": 0.010422599474676138,
+              "predictive_pair_distance_half_term": 0.010713889462285202,
+              "score_space": "caller_scaled_joint_variables",
+              "score_weight_normalization_divisor": 1.0,
+              "diagonal_predictive_pairs_included": true,
+              "energy_score_roundoff_tolerance": 1e-12,
+              "negative_roundoff_scores_retained": 0
+            },
+            "declared_gate": "passed",
+            "independently_validated": false,
+            "independent_trial_confidence_interval_computed": false,
+            "field_qualified": false,
+            "automatically_selected_or_applied": false,
+            "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+            "distance_pairs": 1114112,
+            "runtime": {
+              "numpy": "2.5.4",
+              "scipy": "1.18.1"
+            },
+            "record_digest": "5a291f42de77f5c4a06ee86d118350be82527d7235ace079ed98a03526ac2640"
+          }
+        }
+      },
+      "lognormal": {
+        "training_rows": 128,
+        "ignored_gap_rows": 18,
+        "validation_rows": 64,
+        "status": "computed",
+        "training_only_digest": "ed161e6efbf0731ad41059dbc871f574597221dc43d2851ceccb87ed3c740712",
+        "fitted_variables": [
+          {
+            "id": "energy_j",
+            "unit": "J",
+            "layer": "measurement",
+            "evidence_id": "uci447",
+            "marginal": {
+              "family": "lognormal",
+              "parameters": {
+                "log_mean": 11.885899706533605,
+                "log_standard_deviation": 0.011856189877691235
+              }
+            }
+          },
+          {
+            "id": "volume_m3",
+            "unit": "m3",
+            "layer": "measurement",
+            "evidence_id": "uci447",
+            "marginal": {
+              "family": "lognormal",
+              "parameters": {
+                "log_mean": -5.0181998724268775,
+                "log_standard_deviation": 0.0037493221518495917
+              }
+            }
+          }
+        ],
+        "latent_correlation": [
+          [
+            1.0,
+            0.8398929867237299
+          ],
+          [
+            0.8398929867237299,
+            1.0
+          ]
+        ],
+        "same_source_block_in_train_and_validation": true,
+        "heldout": {
+          "empirical_pairs": {
+            "schema": "pipeline_integrity.distribution_assessment.v1",
+            "fit_digest": "77584f36ca00beb22f1a2cad775ba140bae5cda4d4452981a7773fb447a89b15",
+            "use_digest": "52291e144b15a291228de9352ce01a3fde51250c64315253794fe9dcf2f9631d",
+            "specification": {
+              "lower_quantile": 0.05,
+              "upper_quantile": 0.95,
+              "minimum_marginal_coverage": 0.8,
+              "maximum_mean_energy_score": 1.0,
+              "maximum_distance_pairs": 4000000,
+              "evidence_id": "protocol"
+            },
+            "status": "computed",
+            "issues": [],
+            "marginal_intervals": {
+              "energy_j": {
+                "unit": "J",
+                "interval": [
+                  143901.81800000003,
+                  149429.35099999997
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.0,
+                "full_holdout_coverage_bounds": [
+                  0.0,
+                  0.0
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 0
+              },
+              "volume_m3": {
+                "unit": "m3",
+                "interval": [
+                  0.0065893175000000005,
+                  0.006676513333333333
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.359375,
+                "full_holdout_coverage_bounds": [
+                  0.359375,
+                  0.359375
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 23
+              }
+            },
+            "scores": {
+              "known_rows": 64,
+              "unresolved_rows": 0,
+              "known_fraction": 1.0,
+              "unresolved_fraction": 0.0,
+              "conditional_on_complete_mean_energy_score": 0.008169591566114897,
+              "full_holdout_mean_energy_score": 0.008169591566114897,
+              "predictive_pair_distance_half_term": 0.008595661172013859,
+              "score_space": "caller_scaled_joint_variables",
+              "score_weight_normalization_divisor": 1.0,
+              "diagonal_predictive_pairs_included": true,
+              "energy_score_roundoff_tolerance": 1e-12,
+              "negative_roundoff_scores_retained": 0
+            },
+            "declared_gate": "failed",
+            "independently_validated": false,
+            "independent_trial_confidence_interval_computed": false,
+            "field_qualified": false,
+            "automatically_selected_or_applied": false,
+            "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+            "distance_pairs": 24576,
+            "runtime": {
+              "numpy": "2.5.4",
+              "scipy": "1.18.1"
+            },
+            "record_digest": "cee94283585200b31e2b9f4a4a46c3501537aeb8954e84b5cd778aa8f1a0afb1"
+          },
+          "normal_score_copula": {
+            "schema": "pipeline_integrity.distribution_assessment.v1",
+            "fit_digest": "77584f36ca00beb22f1a2cad775ba140bae5cda4d4452981a7773fb447a89b15",
+            "use_digest": "4c6c975f571793cf95d89df0a750a842d43cd663fb458077728979e401439253",
+            "specification": {
+              "lower_quantile": 0.05,
+              "upper_quantile": 0.95,
+              "minimum_marginal_coverage": 0.8,
+              "maximum_mean_energy_score": 1.0,
+              "maximum_distance_pairs": 4000000,
+              "evidence_id": "protocol"
+            },
+            "status": "computed",
+            "issues": [],
+            "marginal_intervals": {
+              "energy_j": {
+                "unit": "J",
+                "interval": [
+                  142405.62684865514,
+                  148055.9886077934
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 1.0,
+                "full_holdout_coverage_bounds": [
+                  1.0,
+                  1.0
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 64
+              },
+              "volume_m3": {
+                "unit": "m3",
+                "interval": [
+                  0.0065756994523377445,
+                  0.006657454472254857
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.9375,
+                "full_holdout_coverage_bounds": [
+                  0.9375,
+                  0.9375
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 60
+              }
+            },
+            "scores": {
+              "known_rows": 64,
+              "unresolved_rows": 0,
+              "known_fraction": 1.0,
+              "unresolved_fraction": 0.0,
+              "conditional_on_complete_mean_energy_score": 0.009975681047531004,
+              "full_holdout_mean_energy_score": 0.009975681047531004,
+              "predictive_pair_distance_half_term": 0.01031492269215302,
+              "score_space": "caller_scaled_joint_variables",
+              "score_weight_normalization_divisor": 1.0,
+              "diagonal_predictive_pairs_included": true,
+              "energy_score_roundoff_tolerance": 1e-12,
+              "negative_roundoff_scores_retained": 0
+            },
+            "declared_gate": "passed",
+            "independently_validated": false,
+            "independent_trial_confidence_interval_computed": false,
+            "field_qualified": false,
+            "automatically_selected_or_applied": false,
+            "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+            "distance_pairs": 1114112,
+            "runtime": {
+              "numpy": "2.5.4",
+              "scipy": "1.18.1"
+            },
+            "record_digest": "c335326d532280f2acea55dc7d6c56b65f43e638dfe4e00313989dc3ed2f55df"
+          },
+          "independent_counterfactual": {
+            "schema": "pipeline_integrity.distribution_assessment.v1",
+            "fit_digest": "77584f36ca00beb22f1a2cad775ba140bae5cda4d4452981a7773fb447a89b15",
+            "use_digest": "c5a8cf3608c502e59a39b67140279272dcf98494b04797a4a14b9dec6d947f2b",
+            "specification": {
+              "lower_quantile": 0.05,
+              "upper_quantile": 0.95,
+              "minimum_marginal_coverage": 0.8,
+              "maximum_mean_energy_score": 1.0,
+              "maximum_distance_pairs": 4000000,
+              "evidence_id": "protocol"
+            },
+            "status": "computed",
+            "issues": [],
+            "marginal_intervals": {
+              "energy_j": {
+                "unit": "J",
+                "interval": [
+                  142410.23135742563,
+                  148056.92587934455
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 1.0,
+                "full_holdout_coverage_bounds": [
+                  1.0,
+                  1.0
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 64
+              },
+              "volume_m3": {
+                "unit": "m3",
+                "interval": [
+                  0.006575869445466352,
+                  0.006657318797111965
+                ],
+                "nominal_mass": 0.8999999999999999,
+                "conditional_on_valid_coverage": 0.9375,
+                "full_holdout_coverage_bounds": [
+                  0.9375,
+                  0.9375
+                ],
+                "known": 64,
+                "missing": 0,
+                "covered": 60
+              }
+            },
+            "scores": {
+              "known_rows": 64,
+              "unresolved_rows": 0,
+              "known_fraction": 1.0,
+              "unresolved_fraction": 0.0,
+              "conditional_on_complete_mean_energy_score": 0.010386723042147692,
+              "full_holdout_mean_energy_score": 0.010386723042147692,
+              "predictive_pair_distance_half_term": 0.01059613053290322,
+              "score_space": "caller_scaled_joint_variables",
+              "score_weight_normalization_divisor": 1.0,
+              "diagonal_predictive_pairs_included": true,
+              "energy_score_roundoff_tolerance": 1e-12,
+              "negative_roundoff_scores_retained": 0
+            },
+            "declared_gate": "passed",
+            "independently_validated": false,
+            "independent_trial_confidence_interval_computed": false,
+            "field_qualified": false,
+            "automatically_selected_or_applied": false,
+            "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+            "distance_pairs": 1114112,
+            "runtime": {
+              "numpy": "2.5.4",
+              "scipy": "1.18.1"
+            },
+            "record_digest": "2e4b9bca82686518971b333cb523500dcd42d93b9e7c7259ef20c65ab8d7dfc6"
+          }
+        }
+      }
+    },
+    "family_or_mode_automatically_selected": false
+  },
+  "stable_cohort": {
+    "profile": [
+      100,
+      100,
+      0,
+      90,
+      0
+    ],
+    "all_components_nominal": false,
+    "accumulator_condition": "source label 90: degraded accumulator; not an executable pressure boundary",
+    "rows": 19,
+    "training_rows": 10,
+    "validation_rows": 6,
+    "required_training_rows": 30,
+    "required_validation_rows": 10,
+    "status": "needs_data",
+    "issues": [
+      "the predeclared minimum split sizes are not met"
+    ],
+    "lowered_minimum_to_force_fit": false
+  },
+  "all_nominal_stable_cohort": {
+    "profile": [
+      100,
+      100,
+      0,
+      130,
+      0
+    ],
+    "rows": 10,
+    "training_rows": 6,
+    "validation_rows": 3,
+    "required_training_rows": 30,
+    "required_validation_rows": 10,
+    "status": "needs_data",
+    "issues": [
+      "the predeclared minimum split sizes are not met"
+    ],
+    "lowered_minimum_to_force_fit": false
+  },
+  "target_condition_transfer": {
+    "status": "out_of_scope",
+    "issues": [
+      "target process condition differs from training; no automatic transfer"
+    ]
+  },
+  "heldout_values_cannot_change_fitted_parameters": true,
+  "native_fitted_propagation": {
+    "samples": 1024,
+    "status": "computed",
+    "summaries": {
+      "interval_quantities": {
+        "specific_energy": {
+          "status": "computed",
+          "unit": "J/m3",
+          "meaning": "quantity",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 21946931.17166171,
+          "conditional_on_valid_mean": 21946931.17166171,
+          "full_design_mean": 21946931.17166171,
+          "conditional_on_valid_quantiles": [
+            21626348.108659137,
+            21944777.581713654,
+            22268184.92777695
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        },
+        "interval_energy_cost": {
+          "status": "computed",
+          "unit": "REF",
+          "meaning": "cost",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 0.00806749774185148,
+          "conditional_on_valid_mean": 0.00806749774185148,
+          "full_design_mean": 0.00806749774185148,
+          "conditional_on_valid_quantiles": [
+            0.007911423713814175,
+            0.00806577265858652,
+            0.008225332700432969
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        }
+      }
+    },
+    "result_digest": "691809863a14ec0a3170cbe7779a907edfd087926dcff6791a9083294296f201",
+    "diagnostic_use_only": true,
+    "observed_human_error_rate_or_annual_duty_inferred": false
+  },
+  "implementation_sha256": "bbe56f9b281d32828398ed2fdcf7bfa878a4efbb501df8f108a464af6a6c6a9b",
+  "ensemble_implementation_sha256": "fbcbb20c9b1a2e7c97ebecbc9bb4b14a9a33d270368db5abd4d6d247336080e4",
+  "script_sha256": "019505f13bfb3326d4919eeae156d355efaa961c7c85d6a88c5ac51665b5a515",
+  "field_qualified": false
+}

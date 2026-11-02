@@ -1,0 +1,2383 @@
+[
+  {
+    "id": "anchor_group_reaction",
+    "scope": "Prescribed pure-moment anchor tension row with supplied bearing line, equal stiffness and equal-share shear; no contact law or capacity inference.",
+    "criteria": [
+      "independent_complementary_energy",
+      "force_moment_constraints",
+      "zero_moment_limit"
+    ],
+    "selectors": [
+      "tests/test_anchor_row_demand_independent.py::test_minimum_complementary_energy_with_independent_force_moment_constraints",
+      "tests/test_anchor_row_demand_independent.py::test_moving_reviewed_bearing_line_changes_demand_without_choosing_contact_law",
+      "tests/test_anchor_row_demand_independent.py::test_zero_moment_preserves_shear_only_demand"
+    ]
+  },
+  {
+    "id": "compressor.fixed_geometry_speed_head",
+    "scope": "Supplied fixed-geometry polytropic head map point within declared similarity support; no actual efficiency or flow prediction.",
+    "criteria": [
+      "Euler_angular_momentum",
+      "power_torque_balance",
+      "stage_energy_sum"
+    ],
+    "selectors": [
+      "tests/test_compressor_speed_head_independent.py::test_independent_euler_angular_momentum_and_power_matches_head_and_speed_inverse",
+      "tests/test_compressor_speed_head_independent.py::test_stage_count_sum_and_specific_energy_unit_conversion"
+    ]
+  },
+  {
+    "id": "compressor.observed_external_energy_loss_balance",
+    "scope": "Observed steady parcel enthalpy flows, external heat and mechanical loss with common energy datum.",
+    "criteria": [
+      "parcel_energy_ledger",
+      "enthalpy_origin_invariance",
+      "extensive_scaling"
+    ],
+    "selectors": [
+      "tests/test_compressor_external_energy_individual.py::test_independent_parcel_heating_and_leak_export",
+      "tests/test_compressor_external_energy_individual.py::test_common_enthalpy_reference_shift",
+      "tests/test_compressor_external_energy_individual.py::test_extensive_flow_heat_loss_scaling",
+      "tests/test_compressor_external_energy_individual.py::test_heat_into_fluid_reduces_driver_work",
+      "tests/test_compressor_external_energy_individual.py::test_negative_observed_work_preserved_as_not_compressor_power_prediction",
+      "tests/test_compressor_external_energy_individual.py::test_incomplete_or_zero_throughflow_mass_boundary"
+    ]
+  },
+  {
+    "id": "elasticity.incremental_pipe_compliance",
+    "scope": "Incremental linear thin-wall membrane diameter compliance under declared axial stress or strain restraint.",
+    "criteria": [
+      "independent_membrane_Hooke_system",
+      "work_conjugacy",
+      "signed_unloading",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_pressure_diameter_individual.py::test_diameter_satisfies_independent_membrane_hooke_system_and_elastic_work",
+      "tests/test_pressure_diameter_individual.py::test_pressure_unloading_and_zero_increment_preserve_signed_linear_response",
+      "tests/test_pressure_diameter_individual.py::test_geometric_and_material_similarity"
+    ]
+  },
+  {
+    "id": "engineering.target.covered_pipe_flotation_balance",
+    "scope": "Local fully submerged empty pipe and declared backfill prism weight; no soil failure mechanism.",
+    "criteria": [
+      "displaced_solid_volume",
+      "mass_force_ledger",
+      "geometric_similarity",
+      "zero_cover_limit"
+    ],
+    "selectors": [
+      "tests/test_covered_pipe_uplift_independent.py::test_vertical_margin_matches_mass_and_displaced_solid_volume_ledger",
+      "tests/test_covered_pipe_uplift_independent.py::test_geometric_similarity_scales_all_forces_per_length_quadratically",
+      "tests/test_covered_pipe_uplift_independent.py::test_zero_cover_does_not_require_backfill_properties",
+      "tests/test_covered_pipe_uplift_independent.py::test_equality_of_unfactored_solid_cylinder_and_water_weight_is_preserved"
+    ]
+  },
+  {
+    "id": "engineering.target.local_wind_pressure_force",
+    "scope": "Local force from kinetic pressure and caller-supplied aerodynamic multipliers; no coefficient calibration or structural response.",
+    "criteria": [
+      "kinetic_energy_density",
+      "projected_area_force",
+      "scaling",
+      "zero_load"
+    ],
+    "selectors": [
+      "tests/test_wind_screening_independent_local_20261101.py::test_wind_pressure_matches_kinetic_energy_per_volume_and_area_load",
+      "tests/test_wind_screening_independent_local_20261101.py::test_velocity_density_area_and_reviewed_multipliers_have_distinct_scalings",
+      "tests/test_wind_screening_independent_local_20261101.py::test_zero_load_limits"
+    ]
+  },
+  {
+    "id": "engineering.target.seabed_static_margin",
+    "scope": "Local stationary per-length force ledger and supplied Coulomb resistance while contact remains; no dynamic seabed response.",
+    "criteria": [
+      "signed_force_ledger",
+      "contact_loss_boundary",
+      "sliding_threshold",
+      "load_similarity"
+    ],
+    "selectors": [
+      "tests/test_seabed_balance_independent.py::test_independent_vertical_and_horizontal_force_ledgers",
+      "tests/test_seabed_balance_independent.py::test_axis_reversal_preserves_resistance_and_opposing_forces_cancel",
+      "tests/test_seabed_balance_independent.py::test_analytic_lift_threshold_brackets_sliding_boundary",
+      "tests/test_seabed_balance_independent.py::test_contact_loss_withholds_coulomb_capacity_and_preserves_signed_normal",
+      "tests/test_seabed_balance_independent.py::test_common_force_scale_preserves_normalized_margin"
+    ]
+  },
+  {
+    "id": "engineering.target.soil_prism_overburden",
+    "scope": "Declared dry/submerged soil-prism weights and hydrostatic pore pressure at one plane; no soil arching law.",
+    "criteria": [
+      "independent_layer_weight",
+      "pressure_line_force",
+      "width_similarity",
+      "zero_cover"
+    ],
+    "selectors": [
+      "tests/test_soil_prism_load_independent.py::test_dry_prism_pressure_equals_declared_unit_length_weight_per_area",
+      "tests/test_soil_prism_load_independent.py::test_partly_wet_prism_matches_independent_layer_weight_ledger",
+      "tests/test_soil_prism_load_independent.py::test_width_scales_line_load_without_changing_pressure",
+      "tests/test_soil_prism_load_independent.py::test_water_level_above_ground_is_not_silently_extrapolated"
+    ]
+  },
+  {
+    "id": "engineering.target.stationary_section_hydrodynamic_load",
+    "scope": "Instantaneous stationary cylinder loads with supplied drag/lift/inertia coefficients; no coefficient calibration or moving-body dynamics.",
+    "criteria": [
+      "whole_segment_force",
+      "displaced_mass_impulse",
+      "signed_axis_conventions",
+      "geometric_similarity"
+    ],
+    "selectors": [
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_section_load_equals_independent_whole_segment_pressure_area_normalization",
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_velocity_reversal_changes_drag_but_lift_uses_its_own_signed_axis",
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_total_and_added_conventions_match_and_keep_displaced_fluid_component",
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_zero_added_mass_retains_displaced_fluid_acceleration_load",
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_diameter_and_velocity_scaling_distinguish_area_from_projected_width",
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_acceleration_impulse_matches_displaced_mass_times_velocity_change",
+      "tests/test_cylinder_hydrodynamics_individual_local.py::test_signed_inertia_can_cancel_drag_without_adding_magnitudes"
+    ]
+  },
+  {
+    "id": "engineering.target.strouhal_frequency_screen",
+    "scope": "Caller-supplied Strouhal coordinate and harmonic frequency comparison; no vortex-lock-in response or Strouhal calibration.",
+    "criteria": [
+      "dimensionless_frequency",
+      "harmonic_band_comparison",
+      "zero_flow_limit"
+    ],
+    "selectors": [
+      "tests/test_wind_screening_independent_local_20261101.py::test_shedding_frequencies_recover_dimensionless_strouhal_and_harmonic",
+      "tests/test_wind_screening_independent_local_20261101.py::test_caller_band_is_closed_and_compares_each_harmonic_separately",
+      "tests/test_wind_screening_independent_local_20261101.py::test_still_flow_has_no_shedding_frequency"
+    ]
+  },
+  {
+    "id": "flange_external_load_bolt_stress",
+    "scope": "Rigid joint faces with explicitly supplied elastic bolt/member sharing before contact separation.",
+    "criteria": [
+      "angular_resultant_solution",
+      "virtual_work",
+      "equilibrium",
+      "signed_load_reversal"
+    ],
+    "selectors": [
+      "tests/test_elastic_bolt_group_independent.py::test_circular_bolt_group_matches_independent_angular_resultant_solution",
+      "tests/test_elastic_bolt_group_independent.py::test_irregular_heterogeneous_joint_virtual_work_and_equilibrium",
+      "tests/test_elastic_bolt_group_independent.py::test_contact_separation_is_not_continued_as_linear_safe_state",
+      "tests/test_elastic_bolt_group_independent.py::test_load_reversal_preserves_incremental_energy_and_reverses_increment"
+    ]
+  },
+  {
+    "id": "free_surface.circular_uniform_friction_balance",
+    "scope": "Uniform open-channel flow with caller-supplied dimensional Chezy factor and known wetted geometry; no roughness calibration.",
+    "criteria": [
+      "gravity_resistance_balance",
+      "half_full_circle_limit",
+      "geometric_similarity"
+    ],
+    "selectors": [
+      "tests/test_uniform_chezy_individual.py::test_uniform_gravity_and_resistance_terms_balance_with_signed_flow",
+      "tests/test_uniform_chezy_individual.py::test_half_full_circle_has_half_radius_hydraulic_radius",
+      "tests/test_uniform_chezy_individual.py::test_geometric_similarity_scales_velocity_and_flow",
+      "tests/test_uniform_chezy_individual.py::test_dry_or_zero_perimeter_geometry_is_outside_this_wet_flow_relation"
+    ]
+  },
+  {
+    "id": "liquid.homogeneous_mixture_compliance_celerity",
+    "scope": "Homogeneous frozen-phase liquid/gas acoustic tangent with supplied gas polytropic law and elastic wall storage; no phase-slip or mass transfer.",
+    "criteria": [
+      "independent_phase_volume_derivative",
+      "polytropic_acoustic_limit",
+      "single_liquid_limit",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_mixture_wave_compliance_individual.py::test_phase_volume_work_tangent_matches_combined_wave_compliance",
+      "tests/test_mixture_wave_compliance_individual.py::test_all_gas_rigid_wall_limit_is_polytropic_acoustic_speed",
+      "tests/test_mixture_wave_compliance_individual.py::test_zero_gas_exactly_reuses_the_existing_single_liquid_owner_without_gas_data",
+      "tests/test_mixture_wave_compliance_individual.py::test_pressure_density_and_modulus_scale_preserves_acoustic_speed",
+      "tests/test_mixture_wave_compliance_individual.py::test_geometric_scale_and_rigid_wall_bounds",
+      "tests/test_mixture_wave_compliance_individual.py::test_density_and_compressibility_competition_has_an_interior_speed_minimum",
+      "tests/test_mixture_wave_compliance_individual.py::test_input_support_and_applicability_reviews_are_required"
+    ]
+  },
+  {
+    "id": "mechanics.key_shear_bearing",
+    "scope": "Nominal key shear and bearing on declared contact areas and supplied torque shares; no local stress concentration.",
+    "criteria": [
+      "section_force_moment",
+      "independent_contact_areas",
+      "torque_partition",
+      "geometric_similarity"
+    ],
+    "selectors": [
+      "tests/test_key_loads_individual.py::test_contact_integrals_reconstruct_force_and_moment",
+      "tests/test_key_loads_individual.py::test_actual_bearing_height_is_independent_of_shear_width",
+      "tests/test_key_loads_individual.py::test_unequal_reviewed_key_shares_and_different_contact_areas",
+      "tests/test_key_loads_individual.py::test_geometric_cube_torque_similarity",
+      "tests/test_key_loads_individual.py::test_load_shares_are_not_automatically_normalized"
+    ]
+  },
+  {
+    "id": "metrology.parallel_identical_meter_runs",
+    "scope": "Identical quadratic meter branches under frozen total flow and density; no measured calibration.",
+    "criteria": [
+      "independent_Bernoulli_branch_root",
+      "flow_continuity",
+      "count_change",
+      "unit_scaling"
+    ],
+    "selectors": [
+      "tests/test_parallel_meter_runs_independent.py::test_independent_frozen_bernoulli_branch_root_and_continuity",
+      "tests/test_parallel_meter_runs_independent.py::test_withdrawal_order_and_unit_scaling",
+      "tests/test_parallel_meter_runs_independent.py::test_zero_head_identity_and_explicit_measurement_range",
+      "tests/test_parallel_meter_runs_independent.py::test_unequal_or_changing_state_not_silently_frozen"
+    ]
+  },
+  {
+    "id": "plasticity.hardening_membrane_pressure_turn",
+    "scope": "Supplied isotropic power-hardening thin membrane with declared strain transformation; no fracture or material fit.",
+    "criteria": [
+      "independent_pressure_curve_optimizer",
+      "virtual_work",
+      "incompressible_material_volume",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_hardening_membrane_limit_independent.py::test_pressure_turning_point_matches_independent_curve_optimizer",
+      "tests/test_hardening_membrane_limit_independent.py::test_work_conjugate_transformation_and_constant_length_material_volume",
+      "tests/test_hardening_membrane_limit_independent.py::test_supplied_legacy_transformation_matches_distinct_closed_expression",
+      "tests/test_hardening_membrane_limit_independent.py::test_material_and_geometry_similarity",
+      "tests/test_hardening_membrane_limit_independent.py::test_thick_geometry_is_not_silently_treated_as_a_membrane",
+      "tests/test_hardening_membrane_limit_independent.py::test_supplied_transformation_requires_an_explicit_basis"
+    ]
+  },
+  {
+    "id": "properties.black_oil_phase_partition",
+    "scope": "Supplied black-oil equilibrium closures tested with manufactured Henry chemistry and additive phase volumes; no reservoir PVT calibration.",
+    "criteria": [
+      "chemical_potential_equilibrium",
+      "component_mass_budget",
+      "phase_volume",
+      "bubblepoint_event",
+      "extensive_scaling"
+    ],
+    "selectors": [
+      "tests/test_black_oil_phase_observer_independent.py::test_independent_henry_chemical_potential_component_mass_and_phase_volume",
+      "tests/test_black_oil_phase_observer_independent.py::test_reference_gas_volume_relabel_preserves_physical_inventory_and_phase_state",
+      "tests/test_black_oil_phase_observer_independent.py::test_inventory_scale_preserves_phase_densities_and_volume_fractions",
+      "tests/test_black_oil_phase_observer_independent.py::test_bubblepoint_threshold_both_sides_and_boundary",
+      "tests/test_black_oil_phase_observer_independent.py::test_no_gas_and_zero_solubility_boundaries",
+      "tests/test_black_oil_phase_observer_independent.py::test_wrong_saturated_formation_factor_in_undersaturated_oil_not_silently_accepted",
+      "tests/test_black_oil_phase_observer_independent.py::test_gas_only_inventory_outside_oil_host_model"
+    ]
+  },
+  {
+    "id": "properties.crude_oil_bulk_modulus",
+    "scope": "Single-phase liquid local isothermal/isentropic derivatives from a supplied property provider; no universal crude correlation.",
+    "criteria": [
+      "independent_Tait_constitutive_law",
+      "heat_capacity_identity",
+      "native_EOS_derivative_reference"
+    ],
+    "selectors": [
+      "tests/test_identified_liquid_bulk_modulus_independent.py::test_independent_tait_pressure_volume_law_and_zero_expansion_caloric_identity",
+      "tests/test_identified_liquid_bulk_modulus_independent.py::test_native_hydrocarbon_distinct_isothermal_and_isentropic_derivative_references"
+    ]
+  },
+  {
+    "id": "release.offshore_advanced_inventory",
+    "scope": "Initial/final offshore component inventory from caller-supplied phase factors plus declared feed; no time-resolved discharge.",
+    "criteria": [
+      "independent_component_parcels",
+      "mass_budget",
+      "reference_basis_invariance",
+      "extensive_scaling"
+    ],
+    "selectors": [
+      "tests/test_offshore_inventory_release_individual.py::test_component_parcels_determine_independent_reference_volume",
+      "tests/test_offshore_inventory_release_individual.py::test_equal_states_zero_inventory_release_and_immediate_shutin",
+      "tests/test_offshore_inventory_release_individual.py::test_extensive_volume_scaling",
+      "tests/test_offshore_inventory_release_individual.py::test_reference_volume_reexpression_preserves_masses"
+    ]
+  },
+  {
+    "id": "release.offshore_fast_ledger",
+    "scope": "Conditional initial-volume and pre-shutin-feed ledger with supplied release/reduction factors; no empirical factor calibration.",
+    "criteria": [
+      "independent_volume_time_units",
+      "initial_plus_feed_budget",
+      "immediate_shutin_limit"
+    ],
+    "selectors": [
+      "tests/test_offshore_release_ledger_individual.py::test_same_basis_si_aggregation_matches_independent_us_volume_and_time_coordinates",
+      "tests/test_offshore_release_ledger_individual.py::test_complete_factor_domain_grid_preserves_initial_plus_feed_volume_budget",
+      "tests/test_offshore_release_ledger_individual.py::test_immediate_shutin_has_no_feed_release"
+    ]
+  },
+  {
+    "id": "mixture.sample_cylinder_pressure_purge",
+    "scope": "Ideal-gas common-temperature well-mixed pressure fill/vent stages with known species molar masses.",
+    "criteria": [
+      "independent_species_inventory_ODE",
+      "mole_mass_conservation",
+      "pressure_product_reference",
+      "target_event",
+      "extensive_scaling"
+    ],
+    "selectors": [
+      "tests/test_sample_pressure_purge_individual.py::test_stage_process_from_independent_species_mass_ODE",
+      "tests/test_sample_pressure_purge_individual.py::test_independent_decimal_pressure_product_and_retained_final_fill_target",
+      "tests/test_sample_pressure_purge_individual.py::test_venting_alone_changes_inventory_not_composition",
+      "tests/test_sample_pressure_purge_individual.py::test_cylinder_volume_extensivity_preserves_fraction_and_first_cycle",
+      "tests/test_sample_pressure_purge_individual.py::test_zero_target_remains_unattainable_despite_fraction_underflow",
+      "tests/test_sample_pressure_purge_individual.py::test_no_stages_and_initial_target_event",
+      "tests/test_sample_pressure_purge_individual.py::test_no_pressure_change_and_unrequested_target",
+      "tests/test_sample_pressure_purge_individual.py::test_same_chemistry_molar_mass_does_not_erase_original_provenance"
+    ]
+  },
+  {
+    "id": "engineering.target.constant_stress_viscoelastic_strain",
+    "scope": "Supplied linear viscoelastic element constants under held tensile stress; no material calibration.",
+    "criteria": [
+      "independent_element_ODE",
+      "initial_long_time_limits",
+      "stress_time_scaling"
+    ],
+    "selectors": [
+      "tests/test_viscoelastic_strain_independent.py::test_strain_matches_independently_integrated_element_odes",
+      "tests/test_viscoelastic_strain_independent.py::test_zero_time_short_time_and_long_time_limits",
+      "tests/test_viscoelastic_strain_independent.py::test_stress_linearity_and_zero_stress",
+      "tests/test_viscoelastic_strain_independent.py::test_coordinate_order_and_common_time_viscosity_scaling"
+    ]
+  },
+  {
+    "id": "energy.linear_liquid_storage",
+    "scope": "Small-strain liquid compression with supplied constant bulk modulus relative to zero pressure increment.",
+    "criteria": [
+      "independent_pressure_volume_work",
+      "work_conjugate_derivative",
+      "rigid_limit",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_stored_liquid_energy_independent.py::test_energy_matches_separately_integrated_compression_work",
+      "tests/test_stored_liquid_energy_independent.py::test_zero_reference_load_and_rigid_modulus_limit",
+      "tests/test_stored_liquid_energy_independent.py::test_pressure_volume_similarity_and_work_conjugate_derivative"
+    ]
+  },
+  {
+    "id": "electrical.two_state_current_rms",
+    "scope": "Two prescribed RMS states, duration fractions and constant resistance; no conductor temperature model.",
+    "criteria": [
+      "independent_waveform_square_integral",
+      "Joule_heat",
+      "zero_duration_limits",
+      "time_current_scaling"
+    ],
+    "selectors": [
+      "tests/test_two_state_current_individual.py::test_independent_sinusoidal_state_waveforms_and_cycle_joule_heat",
+      "tests/test_two_state_current_individual.py::test_effective_rms_is_not_mean_magnitude",
+      "tests/test_two_state_current_individual.py::test_time_and_current_scaling_have_separate_energy_meanings",
+      "tests/test_two_state_current_individual.py::test_zero_and_equal_currents_and_zero_resistance",
+      "tests/test_two_state_current_individual.py::test_no_period_or_resistance_preserves_unrequested_coordinates"
+    ]
+  },
+  {
+    "id": "optics.point_source_illuminance",
+    "scope": "Far-field point-source intensity on a planar differential receiver with supplied transmission.",
+    "criteria": [
+      "independent_solid_angle_flux",
+      "oblique_geometry",
+      "inverse_square_similarity",
+      "source_superposition"
+    ],
+    "selectors": [
+      "tests/test_point_illuminance_individual.py::test_normal_and_oblique_three_four_five_geometry",
+      "tests/test_point_illuminance_individual.py::test_distance_square_and_intensity_scaling",
+      "tests/test_point_illuminance_individual.py::test_disk_received_flux_against_independent_exact_solid_angle",
+      "tests/test_point_illuminance_individual.py::test_multiple_sources_transmission_and_back_face",
+      "tests/test_point_illuminance_individual.py::test_rigid_translation_and_normal_scale_preserve_observation"
+    ]
+  },
+  {
+    "id": "blower.supplied_reduced_similarity",
+    "scope": "Supplied synthetic fixed-geometry blower maps, reduced coordinates and supported speed inverse; no measured map calibration.",
+    "criteria": [
+      "independent_affine_map",
+      "similarity_invariants",
+      "power_units",
+      "independent_speed_root"
+    ],
+    "selectors": [
+      "tests/test_blower_similarity_individual.py::test_bilinear_map_matches_independent_affine_surface_and_power_units",
+      "tests/test_blower_similarity_individual.py::test_mach_similarity_preserves_map_point_and_cubic_power",
+      "tests/test_blower_similarity_individual.py::test_fixed_thermal_coordinate_density_rescaling_preserves_specific_power",
+      "tests/test_blower_similarity_individual.py::test_speed_inverse_matches_independent_quadratic_root"
+    ]
+  },
+  {
+    "id": "damage.supplied_profile_pressure_capacity",
+    "scope": "Declared area-scan pressure-capacity law with manufactured parabolic loss and supplied amplification curve; no empirical law calibration.",
+    "criteria": [
+      "independent_continuous_window_minimum",
+      "profile_scan_convergence",
+      "uniform_loss_limit"
+    ],
+    "selectors": [
+      "tests/test_profile_capacity_modern_independent.py::test_parabolic_profile_nodal_scan_converges_to_independent_continuous_window_minimum",
+      "tests/test_profile_capacity_modern_independent.py::test_existing_public_profile_api_preserves_uniform_loss_pressure_reference"
+    ]
+  },
+  {
+    "id": "leak.supplied_small_discrepancy_location",
+    "scope": "Small observed discrepancy position in a prescribed linear hydraulic-resistance split; no leak diagnosis or general network inverse.",
+    "criteria": [
+      "independent_branch_pressure_balance",
+      "small_leak_position"
+    ],
+    "selectors": [
+      "tests/test_leak_inverse_relations_independent.py::test_discrepancy_from_independent_linear_hydraulic_resistances"
+    ]
+  },
+  {
+    "id": "mixture.gas_calorific_value",
+    "scope": "Supplied complete-combustion component reaction energies with declared reference volume and water basis; no heating-value fit.",
+    "criteria": [
+      "atom_balanced_reaction",
+      "energy_mass_budget",
+      "water_latent_energy",
+      "reference_volume_extensivity"
+    ],
+    "selectors": [
+      "tests/test_gas_combustion_reference_individual.py::test_independent_complete_reaction_product_energy_and_dry_mass",
+      "tests/test_gas_combustion_reference_individual.py::test_wet_dry_energy_is_invariant_but_mass_changes_only_by_water",
+      "tests/test_gas_combustion_reference_individual.py::test_Z_correction_is_molar_density_not_a_new_heating_fit",
+      "tests/test_gas_combustion_reference_individual.py::test_existing_native_gas_reference_backend_reaches_independent_dilute_energy_density_limit",
+      "tests/test_gas_combustion_reference_individual.py::test_gross_minus_net_equals_independent_stoichiometric_product_water_latent_energy",
+      "tests/test_gas_combustion_reference_individual.py::test_quantity_extensivity_retains_energy_density_and_J_versus_W",
+      "tests/test_gas_combustion_reference_individual.py::test_all_inert_zero_is_explicit_not_unknown_combustion_data"
+    ]
+  },
+  {
+    "id": "mixture.glycol_freezing_target",
+    "scope": "Supplied monotone glycol freezing branch with independent ideal solvent-equilibrium test provider and weighed stock recipe; no empirical phase-curve calibration.",
+    "criteria": [
+      "independent_chemical_potential",
+      "mole_inventory",
+      "weighed_mass_volume_recipe"
+    ],
+    "selectors": [
+      "tests/test_glycol_freezing_target_independent.py::test_independent_solvent_chemical_potential_and_species_mole_inventory",
+      "tests/test_glycol_freezing_target_independent.py::test_charged_volume_recipe_from_independently_weighed_stocks_not_mixture_additivity"
+    ]
+  },
+  {
+    "id": "mixture.oil_water_pseudoliquid_viscosity",
+    "scope": "Explicit parallel-stripe Newtonian Couette averaging approximation; no emulsion rheology prediction.",
+    "criteria": [
+      "independent_Couette_force_work_dissipation",
+      "phase_relabel",
+      "volume_scaling",
+      "identical_phase_limit"
+    ],
+    "selectors": [
+      "tests/test_oil_water_viscosity_estimate_independent.py::test_independent_parallel_stripe_couette_force_work_and_dissipation",
+      "tests/test_oil_water_viscosity_estimate_independent.py::test_volume_scale_phase_relabel_and_identical_viscosity_limits",
+      "tests/test_oil_water_viscosity_estimate_independent.py::test_convex_dynamic_not_density_or_kinematic_mix",
+      "tests/test_oil_water_viscosity_estimate_independent.py::test_absent_component_property_not_inferred",
+      "tests/test_oil_water_viscosity_estimate_independent.py::test_zero_volume_and_no_shear_observation"
+    ]
+  },
+  {
+    "id": "sensing.uniform_resistive_cable_coordinate",
+    "scope": "Uniform two-wire resistive cable with supplied fixed series resistance and current.",
+    "criteria": [
+      "independent_two_wire_network"
+    ],
+    "selectors": [
+      "tests/test_sensing_location_individual_local.py::test_resistance_location_inverts_independent_two_wire_network"
+    ]
+  },
+  {
+    "id": "thermo.ideal_gas_state",
+    "scope": "Ideal-gas composition density and closed-mass endpoint coordinate transformations; no nonideal EOS.",
+    "criteria": [
+      "mole_mass_basis",
+      "Boyle_Charles_law",
+      "closed_mass_inventory",
+      "extensivity"
+    ],
+    "selectors": [
+      "tests/test_gas_state_observer_independent.py::test_ideal_forward_density_uses_mole_or_mass_basis_without_g_per_mol_confusion",
+      "tests/test_gas_state_observer_independent.py::test_closed_mass_endpoint_pressure_matches_boyle_charles_and_exact_molar_count",
+      "tests/test_gas_state_observer_independent.py::test_closed_mass_inverse_volume_and_amount_extensivity"
+    ]
+  },
+  {
+    "id": "thermo.real_gas_state",
+    "scope": "Reviewed HEOS single-phase gas states and fixed-mass endpoint transforms; thermodynamic consistency and dilute limits, not EOS calibration.",
+    "criteria": [
+      "independent_ideal_dilute_limit",
+      "heat_capacity_derivative_identity",
+      "closed_mass_budget",
+      "composition_basis"
+    ],
+    "selectors": [
+      "tests/test_gas_state_observer_independent.py::test_real_dilute_limit_matches_independent_molar_ideal_law",
+      "tests/test_gas_state_observer_independent.py::test_real_density_derivatives_obey_independent_heat_capacity_identity",
+      "tests/test_gas_state_observer_independent.py::test_real_pure_closed_mass_volume_inverse_exposes_pressure_without_energy_path_claim",
+      "tests/test_gas_state_observer_independent.py::test_mixture_molar_mass_and_dilute_density_do_not_use_unweighted_species_average",
+      "tests/test_gas_state_observer_independent.py::test_mixture_closed_volume_inverse_requires_reviewed_bracket_then_preserves_mass",
+      "tests/test_gas_state_observer_independent.py::test_heos_mass_fraction_coordinate_reuses_existing_composition_ledger"
+    ]
+  },
+  {
+    "id": "transport.ideal_sensor_tube_parcel",
+    "scope": "Passive nondispersing parcel at declared constant tube airflow with explicit purge timing and detector latency.",
+    "criteria": [
+      "independent_constant_velocity_motion",
+      "purge_wait_once",
+      "one_way_clock"
+    ],
+    "selectors": [
+      "tests/test_vapor_tube_individual_local.py::test_continuous_advection_matches_independent_constant_velocity_motion",
+      "tests/test_vapor_tube_individual_local.py::test_single_purge_uses_supplied_residual_wait_once",
+      "tests/test_vapor_tube_individual_local.py::test_parcel_location_has_one_way_airflow_start_clock_and_latency"
+    ]
+  },
+  {
+    "id": "conservation.observed_section_mass",
+    "scope": "Fixed observed control-volume inventory and directional port mass totals over declared windows; no leak inference from residual.",
+    "criteria": [
+      "independent_open_mass_ledger",
+      "signed_port_budget",
+      "inventory_clock_invariance",
+      "window_partition_additivity"
+    ],
+    "selectors": [
+      "tests/test_section_mass_balance_individual_local.py::test_independent_mass_ledger_preserves_zero_loss_and_negative_residual",
+      "tests/test_section_mass_balance_individual_local.py::test_multiple_ports_and_reversing_port_use_directional_mass_totals",
+      "tests/test_section_mass_balance_individual_local.py::test_closed_section_has_zero_directional_totals_and_explicit_storage_loss",
+      "tests/test_section_mass_balance_individual_local.py::test_constant_inventory_offset_and_clock_translation_leave_residual_unchanged",
+      "tests/test_section_mass_balance_individual_local.py::test_partitioned_windows_have_additive_mass_and_time_weighted_rates",
+      "tests/test_section_mass_balance_individual_local.py::test_overflow_does_not_emit_an_infinite_residual"
+    ]
+  },
+  {
+    "id": "pump.pipe_head_operating_point",
+    "scope": "Supported steady pump branch coupled to laminar or declared Colebrook pipe loss and local resistance; no pump map calibration.",
+    "criteria": [
+      "independent_laminar_quadratic_root",
+      "independent_turbulent_friction_root",
+      "series_partition_invariance"
+    ],
+    "selectors": [
+      "tests/test_pump_pipe_operating_individual.py::test_laminar_pipe_linear_pump_and_quadratic_minor_loss_exact_root",
+      "tests/test_pump_pipe_operating_individual.py::test_turbulent_pipe_root_matches_independent_inverse_sqrt_friction_solution",
+      "tests/test_pump_pipe_operating_individual.py::test_serial_pipe_partition_invariance_preserves_minor_loss_and_common_flow"
+    ]
+  },
+  {
+    "id": "metrology.ultrasonic_transit",
+    "scope": "Uniform moving isotropic medium with fixed ray geometry, explicit timing delays and supplied profile factor.",
+    "criteria": [
+      "independent_vector_ray_geometry",
+      "flow_sound_inverse",
+      "clock_delay_removal"
+    ],
+    "selectors": [
+      "tests/test_paired_transit_individual.py::test_independent_vector_ray_geometry_recovers_flow_and_medium_sound",
+      "tests/test_paired_transit_individual.py::test_oblique_half_sum_is_not_relabelled_true_sound_speed",
+      "tests/test_paired_transit_individual.py::test_asymmetric_fixed_delays_are_removed_in_same_clock"
+    ]
+  },
+  {
+    "id": "sensing.electromagnetic_cable_flight",
+    "scope": "Nonmagnetic nondispersive dielectric cable round-trip flight with supplied permittivity and latency.",
+    "criteria": [
+      "independent_dielectric_wave_path"
+    ],
+    "selectors": [
+      "tests/test_leak_inverse_relations_independent.py::test_dielectric_wave_time_and_existing_range_latency"
+    ]
+  },
+  {
+    "id": "waves.prescribed_one_dimensional_travel_time",
+    "scope": "Known constant-pressure reflection interface and uniform one-dimensional wave speed; no unknown multipath inverse.",
+    "criteria": [
+      "independent_direct_reflected_path_geometry"
+    ],
+    "selectors": [
+      "tests/test_leak_inverse_relations_independent.py::test_reflection_independent_direct_and_reflected_paths"
+    ]
+  },
+  {
+    "id": "elasticity.closed_pressure_cylinder",
+    "scope": "Closed-end isotropic elastic cylinder under internal pressure with zero exterior traction.",
+    "criteria": [
+      "independent_radial_boundary_value_solution",
+      "traction_conditions",
+      "end_force"
+    ],
+    "selectors": [
+      "tests/test_closed_cylinder_zero_exterior_independent.py::test_closed_internal_pressure_profile_matches_boundary_problem_and_end_force"
+    ]
+  },
+  {
+    "id": "leak.incompressible_small_hole",
+    "scope": "Steady incompressible declared opening driven by positive pressure head with supplied discharge coefficient; no coefficient calibration.",
+    "criteria": [
+      "independent_parcel_acceleration_ODE",
+      "pressure_power",
+      "geometry_density_similarity"
+    ],
+    "selectors": [
+      "tests/test_liquid_opening_release_independent.py::test_ideal_parcel_pressure_ode_and_power",
+      "tests/test_liquid_opening_release_independent.py::test_supplied_coefficient_decimal_head_reference",
+      "tests/test_liquid_opening_release_independent.py::test_area_pressure_density_and_coefficient_similarity",
+      "tests/test_liquid_opening_release_independent.py::test_zero_area_is_closed_not_an_invented_jet",
+      "tests/test_liquid_opening_release_independent.py::test_zero_head_and_steady_duration_contract"
+    ]
+  },
+  {
+    "id": "compressor.labyrinth_series_cavity_leakage",
+    "scope": "Ideal-gas rest-cavity restrictions with supplied areas/discharge coefficients and common stagnation temperature; no geometric seal coefficient prediction.",
+    "criteria": [
+      "independent_isentropic_flux_root",
+      "serial_mass_continuity",
+      "choked_plateau",
+      "low_Mach_resistance_limit"
+    ],
+    "selectors": [
+      "tests/test_serial_gas_cavities_individual.py::test_two_cavity_reference_from_independent_flux_root",
+      "tests/test_serial_gas_cavities_individual.py::test_multiple_rest_cavities_and_common_mass",
+      "tests/test_serial_gas_cavities_individual.py::test_area_scaling_not_duplicate_unit_models",
+      "tests/test_serial_gas_cavities_individual.py::test_choked_first_tooth_plateau_and_terminal_event",
+      "tests/test_serial_gas_cavities_individual.py::test_low_mach_series_resistance_limit_converges",
+      "tests/test_serial_gas_cavities_individual.py::test_unconverged_iteration_budget_not_accepted"
+    ]
+  },
+  {
+    "id": "gas.squared_pressure_mean",
+    "scope": "Spatial mean of a declared linear squared-absolute-pressure profile.",
+    "criteria": [
+      "independent_profile_quadrature",
+      "symmetry",
+      "homogeneity",
+      "uniform_limit"
+    ],
+    "selectors": [
+      "tests/test_squared_pressure_profile_mean_individual.py::test_mean_matches_independent_linear_squared_pressure_profile_quadrature",
+      "tests/test_squared_pressure_profile_mean_individual.py::test_profile_mean_is_symmetric_and_homogeneous_in_absolute_pressure",
+      "tests/test_squared_pressure_profile_mean_individual.py::test_uniform_profile_returns_exact_endpoint_across_wide_finite_scales"
+    ]
+  },
+  {
+    "id": "liquid.linear_acoustic_characteristics",
+    "scope": "Two incident linear acoustic states in supported liquid media and their junction star state; no phase change.",
+    "criteria": [
+      "independent_acoustic_Riemann_solution",
+      "unequal_impedance_energy",
+      "pressure_datum_invariance"
+    ],
+    "selectors": [
+      "tests/test_liquid_column_collision_independent.py::test_equal_medium_signed_approach_has_half_relative_joukowsky_increment",
+      "tests/test_liquid_column_collision_independent.py::test_unequal_impedance_two_state_riemann_solution_and_independent_energy",
+      "tests/test_liquid_column_collision_independent.py::test_stationary_liquid_is_not_a_rigid_wall_and_coherent_force_units_match_SI",
+      "tests/test_liquid_column_collision_independent.py::test_reference_datum_change_does_not_change_physical_interface_state",
+      "tests/test_liquid_column_collision_independent.py::test_two_actual_moc_incident_waves_meet_at_junction_with_the_same_star_state"
+    ]
+  },
+  {
+    "id": "ground_movement_pipe_response",
+    "scope": "Linear straight beam on distributed elastic springs under prescribed ground shape; no nonlinear soil constitutive prediction.",
+    "criteria": [
+      "independent_fourth_order_foundation_solution",
+      "displacement_mesh_convergence",
+      "reaction_mesh_convergence"
+    ],
+    "selectors": [
+      "tests/test_prescribed_ground_profile_independent.py::test_prescribed_ground_profile_converges_in_displacement_and_support_reaction"
+    ]
+  },
+  {
+    "id": "shell.elastic_ring_pressure_instability",
+    "scope": "Thin homogeneous elastic circular ring under uniform external pressure with declared axial strip condition; no general shell collapse.",
+    "criteria": [
+      "independent_modal_determinant",
+      "instability_event",
+      "thin_limit",
+      "quadrature_refinement",
+      "energy_closure"
+    ],
+    "selectors": [
+      "tests/test_elastic_ring_critical_pressure_independent_local.py::test_actual_instability_event_matches_independent_extensible_modal_reference",
+      "tests/test_elastic_ring_critical_pressure_independent_local.py::test_thickness_refinement_approaches_classical_long_cylinder_limit",
+      "tests/test_elastic_ring_critical_pressure_independent_local.py::test_angular_quadrature_refinement_retains_critical_pressure_and_energy_closure",
+      "tests/test_elastic_ring_critical_pressure_independent_local.py::test_independent_reference_has_expected_strip_width_independence"
+    ]
+  },
+  {
+    "id": "compressor.clearance_efficiency",
+    "scope": "Supplied gas residual chamber cycle with isentropic reexpansion and prescribed suction state; no valve dynamics or leakage calibration.",
+    "criteria": [
+      "independent_closed_expansion_open_intake_ODE",
+      "mass_energy_entropy_budget",
+      "suction_event",
+      "zero_clearance_limit"
+    ],
+    "selectors": [
+      "tests/test_gas_clearance_intake_individual.py::test_ideal_constant_cp_clearance_limit_and_pressure_volume_work",
+      "tests/test_gas_clearance_intake_individual.py::test_variable_cp_against_independent_closed_expansion_and_open_intake_ODE",
+      "tests/test_gas_clearance_intake_individual.py::test_zero_clearance_requires_no_fictitious_residual_state",
+      "tests/test_gas_clearance_intake_individual.py::test_no_suction_event_is_zero_admission_not_negative_capacity",
+      "tests/test_gas_clearance_intake_individual.py::test_suction_event_threshold_from_both_sides",
+      "tests/test_gas_clearance_intake_individual.py::test_extensive_chamber_volume_similarity",
+      "tests/test_gas_clearance_intake_individual.py::test_common_enthalpy_and_entropy_reference_invariance",
+      "tests/test_gas_clearance_intake_individual.py::test_actual_EOS_mass_energy_entropy_and_full_stroke_volume_budgets"
+    ]
+  },
+  {
+    "id": "compressor.internal_recycle_inlet_enthalpy",
+    "scope": "Steady adiabatic supplied-flow recycle mixing and passive pressure return within a reviewed gas phase.",
+    "criteria": [
+      "independent_caloric_integral",
+      "enthalpy_energy_balance",
+      "origin_invariance",
+      "flow_extensivity"
+    ],
+    "selectors": [
+      "tests/test_compressor_recycle_individual.py::test_independent_integrated_caloric_mixing",
+      "tests/test_compressor_recycle_individual.py::test_common_enthalpy_reference_invariance",
+      "tests/test_compressor_recycle_individual.py::test_extensive_flow_scaling",
+      "tests/test_compressor_recycle_individual.py::test_zero_return_requires_no_return_state",
+      "tests/test_compressor_recycle_individual.py::test_actual_nitrogen_integrated_cp_energy_budget"
+    ]
+  },
+  {
+    "id": "electrical.half_space_point_source_potential",
+    "scope": "Homogeneous conductive half-space with prescribed point-source currents and explicit returns; no finite-electrode contact resistance.",
+    "criteria": [
+      "hemisphere_charge_flux",
+      "Laplace_refinement",
+      "insulating_boundary",
+      "dipole_superposition",
+      "rigid_motion"
+    ],
+    "selectors": [
+      "tests/test_ground_halfspace_individual.py::test_integrated_hemispherical_charge_flux",
+      "tests/test_ground_halfspace_individual.py::test_insulating_surface_no_normal_current",
+      "tests/test_ground_halfspace_individual.py::test_potential_gradient_and_laplace_convergence",
+      "tests/test_ground_halfspace_individual.py::test_finite_return_dipole_and_polarity_superposition",
+      "tests/test_ground_halfspace_individual.py::test_ground_coordinate_translation_and_rotation",
+      "tests/test_ground_halfspace_individual.py::test_resistivity_scales_voltage_not_prescribed_current_density",
+      "tests/test_ground_halfspace_individual.py::test_active_point_singularity_not_finite_electrode_resistance",
+      "tests/test_ground_halfspace_individual.py::test_zero_source_at_observation_is_known_zero"
+    ]
+  },
+  {
+    "id": "electrical.distributed_pipeline_cp",
+    "scope": "One-dimensional passive distributed resistor/shunt conductor with supplied conductance and endpoint conditions; no electrochemical protection-potential calibration.",
+    "criteria": [
+      "independent_resistor_ladder_convergence",
+      "Kirchhoff_BVP",
+      "current_heat_integrals",
+      "inverse_ODE_event",
+      "energy_charge_budget"
+    ],
+    "selectors": [
+      "tests/test_distributed_pipe_cp_individual.py::test_resistor_ladder_refinement_converges_to_potential_current_and_power",
+      "tests/test_distributed_pipe_cp_individual.py::test_actual_endpoint_combinations_against_independent_Kirchhoff_BVP",
+      "tests/test_distributed_pipe_cp_individual.py::test_insulated_end_target_inverse_against_independent_reverse_state_ODE",
+      "tests/test_distributed_pipe_cp_individual.py::test_local_Kirchhoff_derivatives_and_independent_integrated_current_and_heat",
+      "tests/test_distributed_pipe_cp_individual.py::test_semi_infinite_charge_and_resistor_energy_from_independent_integrals",
+      "tests/test_distributed_pipe_cp_individual.py::test_semi_infinite_target_distance_against_independent_ODE_event_and_two_arm_sum",
+      "tests/test_distributed_pipe_cp_individual.py::test_semi_infinite_current_boundary_and_sign_reversal",
+      "tests/test_distributed_pipe_cp_individual.py::test_perfect_coating_is_exact_series_resistor_with_no_ground_current",
+      "tests/test_distributed_pipe_cp_individual.py::test_zero_leakage_pure_current_boundaries_do_not_invent_a_potential",
+      "tests/test_distributed_pipe_cp_individual.py::test_leakage_to_zero_limit_and_long_line_to_semi_infinite_limit",
+      "tests/test_distributed_pipe_cp_individual.py::test_polarity_and_coordinate_length_coefficient_similarity",
+      "tests/test_distributed_pipe_cp_individual.py::test_declared_numerical_decay_support_and_semi_infinite_no_leak_are_not_extrapolated"
+    ]
+  },
+  {
+    "id": "engineering.target.supplied_gasket_required_preload",
+    "scope": "Supplied gasket factors and effective widths for seating and operating preload demand; no leak-tightness or code compliance claim.",
+    "criteria": [
+      "independent_pressure_surface_strip_integrals",
+      "governing_case",
+      "area_similarity"
+    ],
+    "selectors": [
+      "tests/test_gasket_bolt_demand_independent.py::test_three_load_components_match_separate_surface_and_strip_integrals",
+      "tests/test_gasket_bolt_demand_independent.py::test_governing_case_is_explicit_including_zero_and_equal_limits",
+      "tests/test_gasket_bolt_demand_independent.py::test_pressure_scaling_does_not_change_assembly_seating_demand",
+      "tests/test_gasket_bolt_demand_independent.py::test_common_geometry_scale_changes_all_loads_with_area",
+      "tests/test_gasket_bolt_demand_independent.py::test_zero_operating_factor_removes_seal_term_without_removing_pressure_end_force"
+    ]
+  },
+  {
+    "id": "fracture.local_energy_arrest",
+    "scope": "Declared uniaxial elastic energy release length and caller-supplied resistance transfer; no empirical arrest-factor selection.",
+    "criteria": [
+      "independent_loading_work",
+      "release_length_energy",
+      "strict_comparison_boundary"
+    ],
+    "selectors": [
+      "tests/test_local_crack_arrest_energy_independent.py::test_independent_loading_work_times_release_length",
+      "tests/test_local_crack_arrest_energy_independent.py::test_resistance_input_is_a_separate_energy_area_transfer",
+      "tests/test_local_crack_arrest_energy_independent.py::test_equality_is_not_a_strictly_lower_driving_energy"
+    ]
+  },
+  {
+    "id": "hydraulics.concentric_annulus_loss",
+    "scope": "Steady Newtonian laminar concentric annulus with no-slip walls; supplied Darcy alternative is separate from laminar derivation.",
+    "criteria": [
+      "independent_radial_Poisson_BVP",
+      "wall_work_dissipation",
+      "thin_slit_convergence",
+      "circular_limit",
+      "high_precision_thin_gap"
+    ],
+    "selectors": [
+      "tests/test_concentric_annulus_independent.py::test_actual_annular_flow_and_wall_shears_match_independent_radial_poisson_bvp",
+      "tests/test_concentric_annulus_independent.py::test_thin_gap_converges_to_independent_plane_slit_pressure_and_parabola",
+      "tests/test_concentric_annulus_independent.py::test_vanishing_inner_rod_approaches_circular_poiseuille_limit_without_replacing_annular_area",
+      "tests/test_concentric_annulus_independent.py::test_thin_conductance_and_next_float_inside_wall_match_ninety_six_digit_reference",
+      "tests/test_concentric_annulus_independent.py::test_supplied_darcy_uses_actual_mean_velocity_and_native_pressure_loss",
+      "tests/test_concentric_annulus_independent.py::test_zero_flow_or_length_preserves_zero_pressure_work",
+      "tests/test_concentric_annulus_independent.py::test_sample_order_immutability_and_out_of_range_arithmetic_remain_explicit"
+    ]
+  },
+  {
+    "id": "impact.elastic_energy_bound",
+    "scope": "Loss-free linear equivalent stiffness drop-energy upper envelope with supplied impact mass and reviewed deflection range; no contact stress history.",
+    "criteria": [
+      "independent_energy_root",
+      "event_ODE",
+      "energy_conservation",
+      "zero_gap_limit",
+      "mass_clock_scaling"
+    ],
+    "selectors": [
+      "tests/test_elastic_drop_energy_bound_independent.py::test_peak_matches_independent_initial_final_energy_root",
+      "tests/test_elastic_drop_energy_bound_independent.py::test_event_ode_and_constant_energy_agree_with_equivalent_oscillator_clock",
+      "tests/test_elastic_drop_energy_bound_independent.py::test_zero_gap_unpreloaded_sudden_weight_has_two_times_static_reaction",
+      "tests/test_elastic_drop_energy_bound_independent.py::test_equivalent_mass_changes_the_clock_but_not_the_energy_bound"
+    ]
+  },
+  {
+    "id": "instrument.compact_prover_two_clock_factor",
+    "scope": "Supplied swept piston volume and pulse timing windows with explicit volume correction; no traceable instrument calibration claim.",
+    "criteria": [
+      "independent_piston_pulse_ODE",
+      "high_precision_clock_ratio",
+      "clock_volume_scaling"
+    ],
+    "selectors": [
+      "tests/test_compact_prover_independent.py::test_independent_piston_volume_and_pulse_phase_ode",
+      "tests/test_compact_prover_independent.py::test_high_precision_clock_ratio_and_units",
+      "tests/test_compact_prover_independent.py::test_equal_clock_scaling_and_volume_scaling",
+      "tests/test_compact_prover_independent.py::test_nominal_factor_is_optional_and_orientation_is_explicit"
+    ]
+  },
+  {
+    "id": "instrument.vibrating_density_calibration",
+    "scope": "Caller-supplied dimensioned period-density calibration checked against a synthetic loaded oscillator; no sensor accuracy claim.",
+    "criteria": [
+      "independent_spring_mass_ODE",
+      "oscillator_energy",
+      "high_precision_polynomial",
+      "coefficient_unit_conversion"
+    ],
+    "selectors": [
+      "tests/test_vibrating_density_independent.py::test_independent_loaded_spring_mass_ode_period_and_energy",
+      "tests/test_vibrating_density_independent.py::test_dimensioned_polynomial_against_high_precision",
+      "tests/test_vibrating_density_independent.py::test_millisecond_coefficient_conversion_is_explicit_si_data"
+    ]
+  },
+  {
+    "id": "metrology.master_meter_calibration",
+    "scope": "Declared proving volume/density/counter observations and factor transfer; no new physical instrument calibration.",
+    "criteria": [
+      "independent_geometry_mass_counter_ODE",
+      "pulse_partition"
+    ],
+    "selectors": [
+      "tests/test_master_meter_proving_independent.py::test_geometry_volume_and_independent_mass_counter_odes",
+      "tests/test_master_meter_proving_independent.py::test_calibration_pulse_count_split_and_no_transfer_request"
+    ]
+  },
+  {
+    "id": "metrology.ultrasonic_wall_thickness",
+    "scope": "Known solid echo path and supplied wave speed, fixed reference reflector and observation angle; no defect detectability inference.",
+    "criteria": [
+      "independent_ray_flight",
+      "normal_depth_projection",
+      "absolute_clock_shift"
+    ],
+    "selectors": [
+      "tests/test_solid_pulse_echo_reference_independent.py::test_native_solid_echo_recovers_known_depth_from_independent_ray_flight",
+      "tests/test_solid_pulse_echo_reference_independent.py::test_equal_absolute_timestamp_shift_preserves_measured_solid_echo_interval"
+    ]
+  },
+  {
+    "id": "pump.suction_acceleration_head",
+    "scope": "Prescribed incompressible piston-driven uniform inertance with explicit acceleration history; no friction or valve inertia.",
+    "criteria": [
+      "independent_Euler_force",
+      "kinetic_work_integral",
+      "cycle_zero_work",
+      "signed_deceleration"
+    ],
+    "selectors": [
+      "tests/test_liquid_acceleration_head_independent.py::test_piston_motion_distributed_euler_pressure_force_and_work",
+      "tests/test_liquid_acceleration_head_independent.py::test_integrated_pressure_work_equals_kinetic_change_and_period_zero_work",
+      "tests/test_liquid_acceleration_head_independent.py::test_inertial_head_not_friction_and_deceleration_returns_energy",
+      "tests/test_liquid_acceleration_head_independent.py::test_zero_rate_and_zero_length_do_not_invent_dissipation",
+      "tests/test_liquid_acceleration_head_independent.py::test_pressure_observer_does_not_require_flow_for_optional_kinetic_output"
+    ]
+  },
+  {
+    "id": "pump.liquid_clearance_volumetric_efficiency",
+    "scope": "Single-phase liquid chamber delivery from supplied endpoint densities and slip with a reviewed stroke; no slip calibration.",
+    "criteria": [
+      "independent_closed_mass_pressure_volume_ODE",
+      "cycle_mass_transfer",
+      "incompressible_limit",
+      "reference_pressure_scaling"
+    ],
+    "selectors": [
+      "tests/test_liquid_chamber_cycle_independent.py::test_closed_mass_pressure_volume_ode_and_full_piston_cycle",
+      "tests/test_liquid_chamber_cycle_independent.py::test_incompressible_limit_and_slip_basis",
+      "tests/test_liquid_chamber_cycle_independent.py::test_zero_clearance_removes_liquid_compression_delivery_penalty",
+      "tests/test_liquid_chamber_cycle_independent.py::test_extensive_scaling_and_common_pressure_datum_do_not_change_efficiency",
+      "tests/test_liquid_chamber_cycle_independent.py::test_small_density_increment_continuous_liquid_limit",
+      "tests/test_liquid_chamber_cycle_independent.py::test_impossible_stroke_density_reversal_and_excessive_slip_not_clipped",
+      "tests/test_liquid_chamber_cycle_independent.py::test_zero_delivery_boundary_is_preserved_without_artificial_positive_flow",
+      "tests/test_liquid_chamber_cycle_independent.py::test_existing_coolprop_liquid_states_endpoint_mass_reference"
+    ]
+  },
+  {
+    "id": "plasticity.perfect_plastic_cylinder",
+    "scope": "Closed-cap isotropic incompressible perfectly plastic cylinder under zero exterior reference pressure; no hardening or fracture.",
+    "criteria": [
+      "independent_radial_IVP",
+      "J2_yield_every_radius",
+      "cap_thrust",
+      "collapse_virtual_work",
+      "thin_limit"
+    ],
+    "selectors": [
+      "tests/test_perfect_plastic_cylinder_independent.py::test_independent_radial_equilibrium_initial_value_solution_and_boundaries",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_every_point_satisfies_von_mises_yield_and_closed_cap_axial_force",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_admissible_incompressible_collapse_velocity_dissipation_matches_pressure_power",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_decreasing_wall_ratios_converge_to_closed_end_thin_j2_limit",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_full_wall_limit_is_at_least_elastic_lame_first_yield",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_pressure_and_geometry_similarity",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_other_axial_constraints_are_not_assigned_the_closed_cap_solution",
+      "tests/test_perfect_plastic_cylinder_independent.py::test_zero_exterior_reference_and_limitations_are_explicit"
+    ]
+  },
+  {
+    "id": "compressor.ideal_compression_work",
+    "scope": "Reversible steady-flow ideal-gas supplied polytropic compression path; no real compressor map or efficiency inference.",
+    "criteria": [
+      "independent_pressure_volume_work",
+      "isothermal_limit",
+      "isentropic_heat_limit",
+      "first_law"
+    ],
+    "selectors": [
+      "tests/test_compression_process_independent.py::test_work_matches_independent_log_pressure_volume_integral",
+      "tests/test_compression_process_independent.py::test_isothermal_work_heat_and_near_isothermal_limit",
+      "tests/test_compression_process_independent.py::test_isentropic_exponent_has_zero_heat_and_matches_enthalpy"
+    ]
+  },
+  {
+    "id": "moisture.dewpoint_relative_humidity",
+    "scope": "Reviewed water/ice equilibrium saturation and ideal dilute-carrier humidity coordinates; no nonideal multicomponent phase-envelope calibration.",
+    "criteria": [
+      "independent_Clausius_Clapeyron",
+      "latent_heat_integral",
+      "phase_seam",
+      "RH_partial_pressure",
+      "condensation_coordinate"
+    ],
+    "selectors": [
+      "tests/test_water_vapor_observation_individual.py::test_liquid_saturation_slope_matches_independent_clausius_clapeyron",
+      "tests/test_water_vapor_observation_individual.py::test_ice_sublimation_slope_matches_ice_vapor_latent_heat",
+      "tests/test_water_vapor_observation_individual.py::test_liquid_pressure_change_from_integrated_latent_heat_not_inverse_roundtrip",
+      "tests/test_water_vapor_observation_individual.py::test_triple_reference_and_named_phase_seam_not_a_single_unlabelled_curve",
+      "tests/test_water_vapor_observation_individual.py::test_partial_pressure_RH_mole_fraction_and_condensation_coordinates",
+      "tests/test_water_vapor_observation_individual.py::test_RH_liquid_reference_at_warm_gas_and_separate_cold_frost_point",
+      "tests/test_water_vapor_observation_individual.py::test_saturated_state_returns_phase_reference_and_same_condensation_point"
+    ]
+  },
+  {
+    "id": "properties.liquid_water_eos_response",
+    "scope": "Supported single-phase liquid-water HEOS response, density derivatives and fixed-mass state paths; no new EOS calibration.",
+    "criteria": [
+      "independent_five_point_derivatives",
+      "caloric_identity",
+      "density_anomaly",
+      "thermodynamic_path_integrals",
+      "reference_invariance"
+    ],
+    "selectors": [
+      "tests/test_liquid_water_response_individual.py::test_beta_and_kappa_from_independent_five_point_density_derivatives",
+      "tests/test_liquid_water_response_individual.py::test_water_anomaly_has_negative_zero_positive_signed_beta",
+      "tests/test_liquid_water_response_individual.py::test_fixed_mass_ratio_and_isobaric_beta_path_integral",
+      "tests/test_liquid_water_response_individual.py::test_pressure_path_integral_and_two_leg_state_path",
+      "tests/test_liquid_water_response_individual.py::test_reference_state_changes_ratio_without_changing_local_response",
+      "tests/test_liquid_water_response_individual.py::test_extensive_mass_scaling_and_absent_reference",
+      "tests/test_liquid_water_response_individual.py::test_enthalpy_entropy_reference_shift_does_not_change_response"
+    ]
+  },
+  {
+    "id": "valve.steam_superheat_sizing",
+    "scope": "Single-phase superheated steam ideal isentropic effective-area nozzle; no actual valve discharge coefficient or wet-steam claim.",
+    "criteria": [
+      "independent_PT_first_law_ODE",
+      "flux_maximum_sonic_event",
+      "variable_cp_limit",
+      "enthalpy_entropy_origin_invariance",
+      "area_extensivity"
+    ],
+    "selectors": [
+      "tests/test_steam_nozzle_individual.py::test_constant_cp_limit_against_analytic_nozzle_flux",
+      "tests/test_steam_nozzle_individual.py::test_actual_water_against_independent_PT_thermodynamic_ODE_and_flux_maximum",
+      "tests/test_steam_nozzle_individual.py::test_actual_water_unchoked_PT_path_energy_integral",
+      "tests/test_steam_nozzle_individual.py::test_actual_industrial_water_backend_selected_gas_case",
+      "tests/test_steam_nozzle_individual.py::test_variable_cp_ideal_fixture_against_energy_ODE",
+      "tests/test_steam_nozzle_individual.py::test_effective_area_extensivity_and_mass_flow_area_inverse",
+      "tests/test_steam_nozzle_individual.py::test_choked_capacity_does_not_need_an_unreviewed_downstream_expansion",
+      "tests/test_steam_nozzle_individual.py::test_enthalpy_entropy_reference_shift_invariance",
+      "tests/test_steam_nozzle_individual.py::test_small_pressure_drive_converges_to_incompressible_kinetic_limit",
+      "tests/test_steam_nozzle_individual.py::test_zero_drive_and_zero_requested_mass_are_explicit"
+    ]
+  },
+  {
+    "id": "gas.prescribed_junction_mass_enthalpy_boundary",
+    "scope": "Prescribed-flow steady gas junction with compatible property and enthalpy bases; no unresolved transient node storage.",
+    "criteria": [
+      "independent_caloric_resistor_balance",
+      "component_mass_ledger",
+      "coupled_thermal_resistance",
+      "branch_reversal",
+      "EOS_energy_integrals"
+    ],
+    "selectors": [
+      "tests/test_prescribed_gas_junction_independent.py::test_signed_external_flow_analytic_resistor_and_caloric_balance",
+      "tests/test_prescribed_gas_junction_independent.py::test_two_species_mass_inventory_and_caloric_energy",
+      "tests/test_prescribed_gas_junction_independent.py::test_coupled_pressure_temperature_against_eliminated_thermal_resistance",
+      "tests/test_prescribed_gas_junction_independent.py::test_enthalpy_reference_shift_leaves_pressure_temperature_unchanged",
+      "tests/test_prescribed_gas_junction_independent.py::test_solver_resolution_and_branch_reversal_event",
+      "tests/test_prescribed_gas_junction_independent.py::test_zero_flow_branch_does_not_impose_incoming_temperature",
+      "tests/test_prescribed_gas_junction_independent.py::test_zero_throughflow_has_no_identified_steady_temperature",
+      "tests/test_prescribed_gas_junction_independent.py::test_native_nitrogen_against_independent_cp_volume_derivative_energy_integrals"
+    ]
+  },
+  {
+    "id": "electrochemistry.anode_charge_lifetime",
+    "scope": "Prescribed current-density and exposed-fraction histories with supplied usable anode charge; no protective-potential or corrosion-rate prediction.",
+    "criteria": [
+      "independent_current_quadrature",
+      "first_capacity_crossing_root",
+      "charge_capacity_ledger",
+      "no_extrapolation"
+    ],
+    "selectors": [
+      "tests/test_anode_depletion_independent.py::test_charge_ledger_and_first_depletion_match_independent_current_integral"
+    ]
+  },
+  {
+    "id": "thermo.cubic_gas_eos",
+    "scope": "Pure-fluid PR/SRK gas states above critical temperature; independent cubic volume roots. PR nitrogen PT auto-density failure is retained and the supported T,Dmass pair is separately checked; no measured EOS calibration.",
+    "criteria": [
+      "independent_primitive_pressure_volume_root",
+      "phase_domain",
+      "independent_state_pair_pressure_recovery",
+      "native_PT_failure_not_silently_accepted"
+    ],
+    "selectors": [
+      "tests/test_cubic_eos_independent.py::test_pure_supercritical_temperature_state_matches_independent_cubic_volume_root"
+    ]
+  },
+  {
+    "id": "liquid.linear_elastic_compliance_celerity",
+    "scope": "Single liquid with linear bulk response and thin elastic pipe under zero axial strain.",
+    "criteria": [
+      "independent_Hooke_constraint_system",
+      "stored_line_mass_pressure_derivative",
+      "linear_wave_speed"
+    ],
+    "selectors": [
+      "tests/test_single_liquid_celerity_independent.py::test_celerity_matches_independent_pressure_derivative_of_stored_line_mass"
+    ]
+  },
+  {
+    "id": "fatigue.supplied_stress_life",
+    "scope": "Caller-supplied constant-amplitude stress-life curve coordinates and cycle convention; no measured fatigue calibration.",
+    "criteria": [
+      "independent_coefficient_form",
+      "amplitude_range_cycle_basis",
+      "stress_unit_invariance"
+    ],
+    "selectors": [
+      "tests/test_stress_life_coordinate_independent.py::test_effective_component_amplitude_matches_supplied_coefficient_form",
+      "tests/test_stress_life_coordinate_independent.py::test_maximum_stress_curve_matches_independent_cycles_times_stress_power_form",
+      "tests/test_stress_life_coordinate_independent.py::test_amplitude_and_full_range_change_coordinates_without_doubling_cycle_count",
+      "tests/test_stress_life_coordinate_independent.py::test_coherent_stress_unit_scale_leaves_cycle_life_unchanged"
+    ]
+  },
+  {
+    "id": "smooth_specimen_strain_life",
+    "scope": "Supplied fully reversed two-term strain-life law with unequal exponents inside its reviewed cycle interval; no material fit.",
+    "criteria": [
+      "independent_quadratic_inverse",
+      "strain_range_amplitude",
+      "reversal_cycle_consistency"
+    ],
+    "selectors": [
+      "tests/test_strain_life_coordinate_independent.py::test_quadratic_inverse_and_coordinate_consistency"
+    ]
+  },
+  {
+    "id": "fracture.growth_threshold_critical_modifiers",
+    "scope": "Supplied threshold and critical-intensity modifiers of a declared baseline crack-growth rate; no calibration or failure-time prediction.",
+    "criteria": [
+      "independent_log_rate_reference",
+      "threshold_arrest",
+      "critical_domain_boundary",
+      "intensity_similarity"
+    ],
+    "selectors": [
+      "tests/test_crack_growth_modifiers_independent.py::test_rate_matches_separate_log_coordinate_reference",
+      "tests/test_crack_growth_modifiers_independent.py::test_arrest_branch_and_exact_threshold_return_zero",
+      "tests/test_crack_growth_modifiers_independent.py::test_critical_boundary_never_returns_divergent_growth",
+      "tests/test_crack_growth_modifiers_independent.py::test_common_intensity_coordinate_scaling_preserves_modifiers",
+      "tests/test_crack_growth_modifiers_independent.py::test_increasing_intensity_near_critical_accelerates_without_crossing_boundary"
+    ]
+  },
+  {
+    "id": "pipe.prescribed_pressure_floor_route",
+    "scope": "Prescribed circular-pipe route pressure-floor observer under declared head boundary and optional separate depth capacity checks; no vapor transport dynamics.",
+    "criteria": [
+      "independent_global_head_optimization",
+      "transfer_events",
+      "vertical_datum_invariance",
+      "survey_partition_invariance",
+      "capacity_budget"
+    ],
+    "selectors": [
+      "tests/test_saturation_head_route_individual.py::test_exact_transfer_intersections_and_original_boundary_are_retained",
+      "tests/test_saturation_head_route_individual.py::test_piecewise_route_matches_independent_global_head_optimization",
+      "tests/test_saturation_head_route_individual.py::test_two_separated_gravity_candidates_retain_a_filled_middle_reach",
+      "tests/test_saturation_head_route_individual.py::test_vertical_datum_shift_does_not_change_pressure_or_transfer_positions",
+      "tests/test_saturation_head_route_individual.py::test_linear_survey_partition_does_not_change_the_route_or_events",
+      "tests/test_saturation_head_route_individual.py::test_sufficient_outlet_pressure_keeps_every_section_filled",
+      "tests/test_saturation_head_route_individual.py::test_flat_transformed_obstacle_is_marginal_not_an_invented_vapor_fraction",
+      "tests/test_saturation_head_route_individual.py::test_optional_partial_flow_depth_checks_mass_capacity_and_velocity_head_budget",
+      "tests/test_saturation_head_route_individual.py::test_pressure_density_scaling_preserves_head_and_scales_absolute_pressures",
+      "tests/test_saturation_head_route_individual.py::test_optional_velocity_head_limit_is_enforced_instead_of_silently_claiming_exact_routing"
+    ]
+  },
+  {
+    "id": "weld_group_section_stress",
+    "scope": "Linear nominal weld-line group stresses from declared throat geometry and complete force/moment resultants; no weld strength or fatigue acceptance.",
+    "criteria": [
+      "independent_six_resultant_line_integral",
+      "rectangular_line_section_modulus"
+    ],
+    "selectors": [
+      "tests/test_weld_line_group_independent.py::test_independent_line_integral_recovers_all_six_resultants",
+      "tests/test_weld_line_group_independent.py::test_rectangular_line_section_modulus_and_orthogonal_resultant"
+    ]
+  },
+  {
+    "id": "damage.creep_rupture_fraction",
+    "scope": "Supplied rupture lives and exposure blocks under the linear time-fraction rule; no rupture-life fit or interaction calibration.",
+    "criteria": [
+      "exact_exposure_life_sum",
+      "block_partition_order",
+      "exposure_scaling"
+    ],
+    "selectors": [
+      "tests/test_creep_time_fraction_physical_qualification.py::test_time_fraction_equals_sum_of_exposure_to_life_ratios",
+      "tests/test_creep_time_fraction_physical_qualification.py::test_time_fraction_is_invariant_to_block_order",
+      "tests/test_creep_time_fraction_physical_qualification.py::test_time_fraction_scales_with_exposure_and_is_not_clipped_at_one"
+    ]
+  },
+  {
+    "id": "elasticity.supplied_pipe_area_observation",
+    "scope": "Small-strain observed pipe area with supplied thermal coefficient, pressure difference and axial restraint; no evolving dynamic wall field.",
+    "criteria": [
+      "independent_three_variable_Hooke_system",
+      "thermal_integral",
+      "area_volume_distinction",
+      "first_order_geometry"
+    ],
+    "selectors": [
+      "tests/test_pipe_thermoelastic_area_independent.py::test_independent_hooke_system_compatibility_signed_loads",
+      "tests/test_pipe_thermoelastic_area_independent.py::test_piecewise_coefficient_integral_and_explicit_area_basis",
+      "tests/test_pipe_thermoelastic_area_independent.py::test_first_order_area_has_only_quadratic_geometric_difference",
+      "tests/test_pipe_thermoelastic_area_independent.py::test_mechanical_and_total_support_checked_separately",
+      "tests/test_pipe_thermoelastic_area_independent.py::test_temperature_range_pressure_review_and_fixed_axial_poisson_requirements",
+      "tests/test_pipe_thermoelastic_area_independent.py::test_closed_end_independent_hooke_area_versus_volume_observables"
+    ]
+  },
+  {
+    "id": "hydraulics.hydraulic_grade_profile",
+    "scope": "Steady prescribed pump stations and common-flow pipe head balances with supported curves.",
+    "criteria": [
+      "independent_station_assembly_root",
+      "serial_head_budget",
+      "datum_invariance",
+      "station_pressure_order",
+      "partition_invariance"
+    ],
+    "selectors": [
+      "tests/test_pump_station_path_individual.py::test_nonidentical_series_parallel_path_matches_exact_root_and_station_pressures",
+      "tests/test_pump_station_path_individual.py::test_elevation_datum_does_not_change_pressure_or_flow",
+      "tests/test_pump_station_path_individual.py::test_density_pressure_similarity_preserves_common_flow_and_scales_power",
+      "tests/test_pump_station_path_individual.py::test_station_and_pipe_order_preserve_flow_but_change_intermediate_pressure",
+      "tests/test_pump_station_path_individual.py::test_serial_pipe_partition_and_branch_permutation_do_not_change_root",
+      "tests/test_pump_station_path_individual.py::test_caller_pressure_thresholds_are_visible_without_claiming_cavitation_acceptance"
+    ]
+  },
+  {
+    "id": "mechanics.relief_jet_reaction",
+    "scope": "Known steady flow ports and explicit fluid body force in a complete control volume; no internal transient pressure model.",
+    "criteria": [
+      "independent_parcel_impulse",
+      "pressure_thrust",
+      "momentum_balance",
+      "frame_rotation",
+      "pressure_datum"
+    ],
+    "selectors": [
+      "tests/test_port_momentum_load_individual.py::test_outlet_pressure_plus_momentum_thrust",
+      "tests/test_port_momentum_load_individual.py::test_opposed_outlets_cancel_only_their_known_contributions",
+      "tests/test_port_momentum_load_individual.py::test_complete_elbow_force_from_independent_parcel_impulse",
+      "tests/test_port_momentum_load_individual.py::test_explicit_fluid_body_force_is_transferred_to_hardware",
+      "tests/test_port_momentum_load_individual.py::test_uniform_absolute_pressure_reference_shift_does_not_change_thrust",
+      "tests/test_port_momentum_load_individual.py::test_orthogonal_frame_rotation_rotates_the_load",
+      "tests/test_port_momentum_load_individual.py::test_unbalanced_whole_cv_is_not_a_steady_hardware_force"
+    ]
+  },
+  {
+    "id": "shell.short_stiff_pipe_supplied_membrane_yield_reference",
+    "scope": "Caller-supplied nominal compressive hoop limit converted through a declared thin membrane half-section force balance; no shell collapse prediction.",
+    "criteria": [
+      "independent_half_section_force",
+      "geometry_strength_similarity"
+    ],
+    "selectors": [
+      "tests/test_shell_pressure_references_independent.py::test_short_pipe_reference_closes_nominal_half_section_hoop_force",
+      "tests/test_shell_pressure_references_independent.py::test_short_reference_is_invariant_to_common_geometry_scale_and_linear_in_limit"
+    ]
+  },
+  {
+    "id": "valve.gas_modern_terminal_ratio",
+    "scope": "Declared equal-bore turbulent gas valve capacity law with supplied terminal/recovery factors; no actual device coefficient calibration.",
+    "criteria": [
+      "independent_engineering_unit_capacity",
+      "reference_mass_volume_conversion",
+      "choked_backpressure_plateau"
+    ],
+    "selectors": [
+      "tests/test_gas_valve_forward_capacity_independent.py::test_forward_mass_and_normal_flow_match_separate_engineering_unit_expression",
+      "tests/test_gas_valve_forward_capacity_independent.py::test_conventional_cv_input_recovers_the_same_physical_capacity_after_exact_unit_conversion",
+      "tests/test_gas_valve_forward_capacity_independent.py::test_forward_choked_mass_capacity_is_a_backpressure_plateau",
+      "tests/test_gas_valve_forward_capacity_independent.py::test_zero_declared_coefficient_has_zero_model_flow_without_inventing_a_choking_state"
+    ]
+  },
+  {
+    "id": "valve.liquid_capacity",
+    "scope": "Supplied conventional liquid valve coefficient with explicit equal-bore recovery pressure budget; no measured device calibration.",
+    "criteria": [
+      "available_pressure_budget",
+      "recovery_boundary_continuity",
+      "choked_backpressure_plateau",
+      "flow_factor_scaling"
+    ],
+    "selectors": [
+      "tests/test_liquid_valve_recovery_limit_individual.py::test_equal_bore_capacity_matches_explicit_available_pressure_budget",
+      "tests/test_liquid_valve_recovery_limit_individual.py::test_recovery_boundary_from_either_side_is_continuous_with_changed_choke_flag",
+      "tests/test_liquid_valve_recovery_limit_individual.py::test_decreasing_downstream_pressure_below_choke_does_not_raise_capacity",
+      "tests/test_liquid_valve_recovery_limit_individual.py::test_choked_coefficient_scales_with_requested_flow_and_inverse_recovery_factor"
+    ]
+  },
+  {
+    "id": "valve.cavitation_margin",
+    "scope": "Declared nominal recovery proxy and separate choking pressure comparison; not onset of actual cavitation damage.",
+    "criteria": [
+      "independent_pressure_budgets",
+      "separate_inception_choking_criteria",
+      "zero_drop_limit"
+    ],
+    "selectors": [
+      "tests/test_liquid_valve_pressure_limits_independent.py::test_nominal_inception_proxy_and_separate_choke_budget",
+      "tests/test_liquid_valve_pressure_limits_independent.py::test_zero_pressure_drop_keeps_the_index_undefined_and_both_finite_limit_comparisons_false"
+    ]
+  },
+  {
+    "id": "valve.supplied_liquid_pressure_limits",
+    "scope": "Caller-supplied cavitation index basis and declared pressure-state limits; no inferred vapor fraction or measured inception threshold.",
+    "criteria": [
+      "supplied_index_basis",
+      "pressure_condition_interpretation"
+    ],
+    "selectors": [
+      "tests/test_liquid_valve_pressure_limits_independent.py::test_supplied_index_has_an_explicit_different_basis_from_the_recovery_factor",
+      "tests/test_liquid_valve_pressure_limits_independent.py::test_below_vapour_outlet_is_only_a_pressure_condition_not_an_inferred_phase_fraction"
+    ]
+  },
+  {
+    "id": "shell.supplied_oval_pressure_interaction",
+    "scope": "Supplied normalized hoop/axial strength ellipse and nominal pressure coordinate; other oval-collapse correlations are outside this profile.",
+    "criteria": [
+      "independent_upper_ellipse_root",
+      "J2_principal_invariant",
+      "pressure_sign_convention"
+    ],
+    "selectors": [
+      "tests/test_longitudinal_hoop_yield_independent.py::test_upper_ellipse_root_and_principal_stress_yield_surface",
+      "tests/test_longitudinal_hoop_yield_independent.py::test_od_nominal_pressure_reference_preserves_tensile_pressure_sign_separation"
+    ]
+  },
+  {
+    "id": "fatigue_mean_stress_correction",
+    "scope": "Supplied Morrow/SWT strain-life laws inside reviewed cycle support; no new measured mean-stress calibration.",
+    "criteria": [
+      "independent_high_precision_quadratic_cubic",
+      "zero_mean_limits",
+      "stress_modulus_similarity"
+    ],
+    "selectors": [
+      "tests/test_morrow_swt_strain_life_independent.py::test_morrow_inverse_matches_independent_high_precision_quadratic",
+      "tests/test_morrow_swt_strain_life_independent.py::test_morrow_mean_effect_continuously_weakens_as_plastic_term_dominates",
+      "tests/test_morrow_swt_strain_life_independent.py::test_morrow_zero_mean_reduces_to_existing_fully_reversed_strain_life",
+      "tests/test_morrow_swt_strain_life_independent.py::test_swt_inverse_matches_independent_high_precision_monotone_cubic",
+      "tests/test_morrow_swt_strain_life_independent.py::test_swt_zero_mean_consistent_stress_strain_anchor_recovers_baseline_cycles",
+      "tests/test_morrow_swt_strain_life_independent.py::test_swt_common_stress_modulus_scaling_preserves_life_and_scales_parameter"
+    ]
+  },
+  {
+    "id": "elbow_pressure_stress",
+    "scope": "Thin curved elbow nominal membrane stress with declared outside-diameter convention; no local finite-thickness peak stress prediction.",
+    "criteria": [
+      "independent_meridional_equilibrium_ODE",
+      "circumferential_force_budget",
+      "straight_thin_torus_limits",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_elbow_pressure_stress_independent.py::test_field_solves_independent_meridional_equilibrium_ode",
+      "tests/test_elbow_pressure_stress_independent.py::test_weighted_circumferential_force_budget_and_extreme_locations",
+      "tests/test_elbow_pressure_stress_independent.py::test_side_angles_match_existing_straight_od_nominal_coordinate",
+      "tests/test_elbow_pressure_stress_independent.py::test_curvature_correction_converges_to_straight_pipe",
+      "tests/test_elbow_pressure_stress_independent.py::test_hybrid_nominal_coordinate_converges_to_consistent_thin_torus_reference",
+      "tests/test_elbow_pressure_stress_independent.py::test_pressure_and_geometric_similarity",
+      "tests/test_elbow_pressure_stress_independent.py::test_zero_pressure_produces_zero_nominal_field"
+    ]
+  },
+  {
+    "id": "support_force_movement",
+    "scope": "Linear single-degree harmonic response with declared positive mass/stiffness/damping; no support capacity or nonlinear contact.",
+    "criteria": [
+      "independent_steady_IVP",
+      "resonance_limit",
+      "critical_decay",
+      "energy_conservation",
+      "static_high_frequency_limits"
+    ],
+    "selectors": [
+      "tests/test_harmonic_response_independent_local.py::test_frequency_response_matches_separately_integrated_steady_oscillator",
+      "tests/test_harmonic_response_independent_local.py::test_static_resonance_and_high_frequency_limits_and_phase_quadrant",
+      "tests/test_harmonic_response_independent_local.py::test_si_parameter_scaling_and_output_clock_do_not_change_trajectory"
+    ]
+  },
+  {
+    "id": "local_pipe_indentation",
+    "scope": "Manufactured shallow parabolic punch on a rigid-perfectly-plastic strip for the supplied indentation coordinate laws; actual pipe contact and residual dent are not qualified.",
+    "criteria": [
+      "independent_contact_traction_integral",
+      "plastic_work_integral",
+      "work_force_derivative",
+      "zero_limit"
+    ],
+    "selectors": [
+      "tests/test_local_indentation_independent.py::test_force_inverse_against_integrated_plastic_contact_traction_and_displacement_work",
+      "tests/test_local_indentation_independent.py::test_energy_inverse_and_force_against_independent_plastic_displacement_integral",
+      "tests/test_local_indentation_independent.py::test_work_derivative_matches_force_under_symmetric_refinement",
+      "tests/test_local_indentation_independent.py::test_stationary_zero_limit_has_no_inferred_residual_dent"
+    ]
+  },
+  {
+    "id": "sleeve_end_fillet_stress",
+    "scope": "Nominal thin sleeve fillet section with supplied stress factors and retained effective width; no local weld toe peak prediction.",
+    "criteria": [
+      "independent_shear_invariants",
+      "circumferential_force",
+      "finite_annulus_thin_limit"
+    ],
+    "selectors": [
+      "tests/test_sleeve_fillet_nominal_stress_independent.py::test_unit_factors_match_independent_uniform_shear_invariants_and_circumferential_force",
+      "tests/test_sleeve_fillet_nominal_stress_independent.py::test_clearance_loss_preserves_force_and_supports_explicit_factor_provider",
+      "tests/test_sleeve_fillet_nominal_stress_independent.py::test_nominal_area_approaches_exact_finite_annulus_in_thin_limit",
+      "tests/test_sleeve_fillet_nominal_stress_independent.py::test_clearance_cannot_remove_all_effective_width",
+      "tests/test_sleeve_fillet_nominal_stress_independent.py::test_declared_thin_geometry_support_is_retained"
+    ]
+  },
+  {
+    "id": "shell.local_normal_membrane_equilibrium",
+    "scope": "Local membrane patch normal equilibrium with supplied principal curvatures and sufficient independent constitutive constraints.",
+    "criteria": [
+      "independent_patch_traction_integrals",
+      "spherical_cylindrical_limits",
+      "anisotropic_mesh_limit",
+      "normal_reversal"
+    ],
+    "selectors": [
+      "tests/test_principal_membrane_equilibrium_independent.py::test_sphere_cap_pressure_and_boundary_traction",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_cylinder_pressure_patch_and_hoop_traction",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_infinitesimal_anisotropic_surface_edge_traction_convergence",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_normal_reversal_preserves_physical_tension",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_thickness_changes_stress_coordinate_not_resultant",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_equal_resultant_requires_extra_constraint_evidence",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_zero_coefficient_no_arbitrary_unique_solution",
+      "tests/test_principal_membrane_equilibrium_independent.py::test_observed_imbalance_is_exposed_not_forced_to_pass"
+    ]
+  },
+  {
+    "id": "shaft.material_capacity",
+    "scope": "Circular elastic torsion demand and inverse capacity relative to a caller-supplied nominal shear ceiling; no material strength prediction.",
+    "criteria": [
+      "independent_twist_traction_energy",
+      "allowable_torque_inverse",
+      "rotation_work",
+      "zero_speed_limit"
+    ],
+    "selectors": [
+      "tests/test_shaft_torsion_individual.py::test_independent_twist_field_section_traction_and_energy_integrals",
+      "tests/test_shaft_torsion_individual.py::test_allowable_inverse_is_independently_recovered_from_traction",
+      "tests/test_shaft_torsion_individual.py::test_rotation_work_and_energy_gradient_have_distinct_factor_two",
+      "tests/test_shaft_torsion_individual.py::test_speed_sign_and_zero_speed_do_not_change_torque_capacity"
+    ]
+  },
+  {
+    "id": "uniaxial_constitutive_coordinate",
+    "scope": "Supplied normalized monotonic power-strain coordinate law in its reviewed calibration interval; no fitted material parameters.",
+    "criteria": [
+      "independent_inverse_root",
+      "conjugate_tangent_work_integral",
+      "stress_unit_scaling"
+    ],
+    "selectors": [
+      "tests/test_normalized_constitutive_coordinate_independent.py::test_native_coordinate_recovers_independently_inverted_normalized_curve",
+      "tests/test_normalized_constitutive_coordinate_independent.py::test_monotonic_work_coordinate_matches_independent_tangent_integral",
+      "tests/test_normalized_constitutive_coordinate_independent.py::test_zero_stress_and_consistent_stress_unit_scaling",
+      "tests/test_normalized_constitutive_coordinate_independent.py::test_curve_support_is_not_extrapolated"
+    ]
+  },
+  {
+    "id": "gas.receiver_start_inventory_size",
+    "scope": "Rigid uniform gas receiver endpoint mass capacity under supplied reference demand and endpoint temperatures; no transient heat path or pressure rating selection.",
+    "criteria": [
+      "ideal_inventory_reference",
+      "endpoint_mass_budget",
+      "reference_basis_invariance",
+      "actual_air_EOS_budget"
+    ],
+    "selectors": [
+      "tests/test_gas_receiver_sizing_individual.py::test_independent_isothermal_pressure_ratio_sizing",
+      "tests/test_gas_receiver_sizing_individual.py::test_declared_different_endpoint_temperatures",
+      "tests/test_gas_receiver_sizing_individual.py::test_demand_extensivity",
+      "tests/test_gas_receiver_sizing_individual.py::test_gas_reference_volume_basis_change_preserves_required_mass_and_vessel",
+      "tests/test_gas_receiver_sizing_individual.py::test_ideal_gas_constant_cancels_only_with_same_composition_reference",
+      "tests/test_gas_receiver_sizing_individual.py::test_zero_demand",
+      "tests/test_gas_receiver_sizing_individual.py::test_actual_air_eos_endpoint_inventory_budget"
+    ]
+  },
+  {
+    "id": "fracture.mode_i_coordinate",
+    "scope": "Infinite elastic plate uniform crack-opening traction with geometry factor one and supplied toughness; no surface flaw geometry prediction.",
+    "criteria": [
+      "independent_crack_weight_integral",
+      "elastic_closure_energy",
+      "toughness_margin"
+    ],
+    "selectors": [
+      "tests/test_through_crack_intensity_independent.py::test_weight_function_integral_and_elastic_crack_closure_energy",
+      "tests/test_through_crack_intensity_independent.py::test_half_length_never_surface_penetration_gate_and_no_variable_factor_critical_claim"
+    ]
+  },
+  {
+    "id": "hydraulics.series_local_resistance",
+    "scope": "Known local-loss/Cv components reduced using explicit reference velocities, areas and fluid states.",
+    "criteria": [
+      "independent_pressure_work",
+      "reference_velocity_ODE",
+      "unit_definition",
+      "coordinate_invariance"
+    ],
+    "selectors": [
+      "tests/test_liquid_resistance_coordinates_independent.py::test_distinct_reference_velocities_pressure_ode_and_energy",
+      "tests/test_liquid_resistance_coordinates_independent.py::test_water_cv_definition_series_pressure_and_reference_reexpression",
+      "tests/test_liquid_resistance_coordinates_independent.py::test_mixed_cv_k_and_actual_basis_roundtrip_without_assumed_water_density",
+      "tests/test_liquid_resistance_coordinates_independent.py::test_diameter_reference_transform_preserves_work_and_single_component_limit",
+      "tests/test_liquid_resistance_coordinates_independent.py::test_same_bore_sum_and_reordering_are_coordinate_invariant",
+      "tests/test_liquid_resistance_coordinates_independent.py::test_review_flow_direction_and_actual_state_guards"
+    ]
+  },
+  {
+    "id": "hydraulics.series_parallel_network",
+    "scope": "Two-terminal supported parallel liquid paths with actual diameters and declared common boundary type.",
+    "criteria": [
+      "independent_laminar_fields",
+      "branch_pressure_flow_conservation",
+      "turbulent_friction_roots"
+    ],
+    "selectors": [
+      "tests/test_liquid_path_system_independent.py::test_parallel_pressure_boundary_matches_independent_laminar_column_fields",
+      "tests/test_liquid_path_system_independent.py::test_parallel_total_flow_inverse_uses_common_pressure_and_conserves_flow",
+      "tests/test_liquid_path_system_independent.py::test_parallel_static_pressure_inverse_uses_common_endpoint_area_not_branch_area",
+      "tests/test_liquid_path_system_independent.py::test_native_turbulent_colebrook_parallel_paths_match_independent_friction_roots",
+      "tests/test_liquid_path_system_independent.py::test_parallel_pointwise_equivalence_matches_independent_conductance"
+    ]
+  },
+  {
+    "id": "pipe.hose_mises_friction",
+    "scope": "Reviewed actual-diameter series liquid path using supported Darcy/local-loss owners; no separate legacy empirical hose-law calibration.",
+    "criteria": [
+      "independent_radial_force",
+      "series_energy_budget",
+      "pointwise_reference_length"
+    ],
+    "selectors": [
+      "tests/test_liquid_path_system_independent.py::test_series_actual_diameters_and_local_velocity_basis_from_radial_force",
+      "tests/test_liquid_path_system_independent.py::test_static_pressure_keeps_independently_integrated_endpoint_kinetic_energy",
+      "tests/test_liquid_path_system_independent.py::test_series_pointwise_reference_length_includes_actual_local_losses"
+    ]
+  },
+  {
+    "id": "hydraulics.relief_system_total_resistance",
+    "scope": "Reviewed adiabatic constant-area ideal-gas Fanno relief branch with supplied friction and area; empirical expansion-curve calibration is outside this profile.",
+    "criteria": [
+      "independent_Fanno_quadrature",
+      "PT_velocity_momentum_energy_ODE",
+      "sonic_event",
+      "friction_zero_limit",
+      "midpoint_refinement"
+    ],
+    "selectors": [
+      "tests/test_relief_line_capacity_individual.py::test_Fanno_integral_against_independent_positive_differential_quadrature",
+      "tests/test_relief_line_capacity_individual.py::test_subcritical_capacity_against_independent_P_T_velocity_momentum_energy_ODE",
+      "tests/test_relief_line_capacity_individual.py::test_choked_profile_conserves_mass_energy_and_loses_stagnation_pressure",
+      "tests/test_relief_line_capacity_individual.py::test_sonic_event_is_continuous_and_lower_back_pressure_does_not_increase_capacity",
+      "tests/test_relief_line_capacity_individual.py::test_zero_distributed_friction_reuses_existing_ideal_nozzle_limit",
+      "tests/test_relief_line_capacity_individual.py::test_friction_to_zero_and_low_Mach_asymptotic_limits",
+      "tests/test_relief_line_capacity_individual.py::test_pressure_area_similarity_and_profile_sampling_do_not_add_new_losses",
+      "tests/test_relief_line_capacity_individual.py::test_independent_explicit_midpoint_refinement_converges_to_endpoint"
+    ]
+  },
+  {
+    "id": "mixture.gas_molar_mass_heat_capacity",
+    "scope": "Ideal-gas caloric mixture using supplied component molar masses and common-temperature heat capacities.",
+    "criteria": [
+      "independent_weighed_moles",
+      "parcel_enthalpy_integral",
+      "expansion_work_Cp_Cv",
+      "mass_fraction_conversion",
+      "single_species_limit"
+    ],
+    "selectors": [
+      "tests/test_gas_caloric_mixture_individual.py::test_weighed_component_mass_and_parcel_heat_ledgers",
+      "tests/test_gas_caloric_mixture_individual.py::test_mass_fraction_basis_reconstructs_independently_counted_moles",
+      "tests/test_gas_caloric_mixture_individual.py::test_molar_mass_only_needs_no_viscosity_or_heat_capacity",
+      "tests/test_gas_caloric_mixture_individual.py::test_single_component_limit",
+      "tests/test_gas_caloric_mixture_individual.py::test_different_component_temperature_not_averaged",
+      "tests/test_gas_caloric_mixture_individual.py::test_nonphysical_ideal_gas_cv_not_clipped",
+      "tests/test_gas_caloric_mixture_individual.py::test_explicit_absolute_quantity_adapter_reuses_same_composition",
+      "tests/test_gas_caloric_mixture_individual.py::test_zero_absolute_quantity_has_no_composition"
+    ]
+  },
+  {
+    "id": "soil.surface_load_and_pipe_contact",
+    "scope": "Homogeneous isotropic elastic half-space point-load transfer and its prescribed circular footprint integral; pipe-ring contact variant remains outside this profile.",
+    "criteria": [
+      "independent_displacement_constitutive_stress",
+      "integrated_force_conservation",
+      "circular_footprint_limit",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_surface_point_load_transfer_independent.py::test_independent_boussinesq_displacement_constitutive_stress",
+      "tests/test_surface_point_load_transfer_independent.py::test_horizontal_plane_integrated_stress_transmits_full_vertical_force",
+      "tests/test_surface_point_load_transfer_independent.py::test_integrated_uniform_circular_footprint_matches_independent_axis_solution",
+      "tests/test_surface_point_load_transfer_independent.py::test_force_length_similarity_and_zero_load"
+    ]
+  },
+  {
+    "id": "free_surface.circular_steady_depth_observers",
+    "scope": "Supported smooth steady circular free-surface branches with supplied Chezy closure and explicit critical-depth margin.",
+    "criteria": [
+      "independent_section_force",
+      "energy_minimum",
+      "spatial_energy_quadrature",
+      "critical_event",
+      "static_depth_boundary"
+    ],
+    "selectors": [
+      "tests/test_steady_circular_depth_individual.py::test_normal_depth_recovers_independent_section_force_balance",
+      "tests/test_steady_circular_depth_individual.py::test_selected_brackets_keep_both_valid_near_full_normal_depth_roots",
+      "tests/test_steady_circular_depth_individual.py::test_critical_depth_minimizes_independent_specific_energy",
+      "tests/test_steady_circular_depth_individual.py::test_lossless_steady_profiles_match_independent_energy_level_roots",
+      "tests/test_steady_circular_depth_individual.py::test_resisted_profile_matches_independent_spatial_quadrature",
+      "tests/test_steady_circular_depth_individual.py::test_uniform_chezy_state_remains_exactly_steady_with_signed_energy_work",
+      "tests/test_steady_circular_depth_individual.py::test_critical_margin_event_stops_before_singularity_at_independent_quadrature_station",
+      "tests/test_steady_circular_depth_individual.py::test_static_tilted_surface_stops_at_declared_upper_depth_without_clipping"
+    ]
+  },
+  {
+    "id": "properties.acoustic_bulk_density",
+    "scope": "Same-state isentropic bulk modulus and true uniform-medium wave speed density inverse; no dispersive or pipe-wall effective-speed interpretation.",
+    "criteria": [
+      "independent_mass_momentum_IVP",
+      "isentropic_EOS_derivative",
+      "oblique_ray_reference",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_acoustic_density_individual.py::test_linear_mass_momentum_mode_period_inverts_known_density",
+      "tests/test_acoustic_density_individual.py::test_actual_single_phase_EOS_isentropic_derivative",
+      "tests/test_acoustic_density_individual.py::test_true_medium_speed_from_oblique_transit_not_effective_beam_speed",
+      "tests/test_acoustic_density_individual.py::test_common_modulus_and_speed_scaling",
+      "tests/test_acoustic_density_individual.py::test_different_states_not_relabelled"
+    ]
+  },
+  {
+    "id": "vacuum.pumpdown_time",
+    "scope": "Isothermal fixed-volume ideal gas with supplied effective pumping/line conductance and constant loading.",
+    "criteria": [
+      "independent_throughput_ODE",
+      "integrated_gas_mass",
+      "target_floor_event",
+      "clock_scaling"
+    ],
+    "selectors": [
+      "tests/test_vacuum_pumpdown_individual.py::test_series_resistance_and_one_time_constant_target",
+      "tests/test_vacuum_pumpdown_individual.py::test_independent_throughput_ode_and_integrated_mass_budget",
+      "tests/test_vacuum_pumpdown_individual.py::test_zero_pumping_or_closed_line_no_target_and_linear_gas_loading",
+      "tests/test_vacuum_pumpdown_individual.py::test_target_semantics_and_asymptotic_floor",
+      "tests/test_vacuum_pumpdown_individual.py::test_equal_initial_and_asymptotic_pressure_is_stationary",
+      "tests/test_vacuum_pumpdown_individual.py::test_gas_load_can_raise_pressure_despite_running_pump",
+      "tests/test_vacuum_pumpdown_individual.py::test_volume_speed_and_gas_load_common_scaling",
+      "tests/test_vacuum_pumpdown_individual.py::test_clock_origin_translation_preserved",
+      "tests/test_vacuum_pumpdown_individual.py::test_short_time_positive_pump_inventory_with_loading",
+      "tests/test_vacuum_pumpdown_individual.py::test_small_positive_long_time_pressure_not_cancelled_to_zero"
+    ]
+  },
+  {
+    "id": "vacuum.water_evaporation_time",
+    "scope": "Declared rigid-volume liquid/vapor saturation plateau with supplied heat and pumping capacities until depletion; no later transient phase path.",
+    "criteria": [
+      "independent_mass_volume_system",
+      "ODE_depletion_event",
+      "open_energy_budget",
+      "latent_heat_limit",
+      "enthalpy_origin_invariance"
+    ],
+    "selectors": [
+      "tests/test_vacuum_water_evaporation_individual.py::test_independent_mass_volume_linear_system_and_ode_depletion_event",
+      "tests/test_vacuum_water_evaporation_individual.py::test_finite_net_heat_throttles_pump_without_inventing_thermal_transport",
+      "tests/test_vacuum_water_evaporation_individual.py::test_exact_open_mass_and_energy_budgets_with_finite_vapor_storage",
+      "tests/test_vacuum_water_evaporation_individual.py::test_event_stop_does_not_extend_constant_pressure_plateau_after_depletion",
+      "tests/test_vacuum_water_evaporation_individual.py::test_existing_series_conductance_and_zero_isolation",
+      "tests/test_vacuum_water_evaporation_individual.py::test_source_removal_only_time_is_recovered_in_dilute_vapor_limit",
+      "tests/test_vacuum_water_evaporation_individual.py::test_geometry_scaling_clock_and_zero_initial_inventory",
+      "tests/test_vacuum_water_evaporation_individual.py::test_ice_critical_and_nonvacuum_boundaries",
+      "tests/test_vacuum_water_evaporation_individual.py::test_native_water_plateau_independent_rigid_volume_energy_and_mass",
+      "tests/test_vacuum_water_evaporation_individual.py::test_common_enthalpy_reference_shift_preserves_time_heat_and_open_energy_balance"
+    ]
+  },
+  {
+    "id": "properties.suspension_viscosity",
+    "scope": "Reviewed hard-sphere low-inertia Newtonian-carrier effective-medium closure and independent dilute-sphere traction limit; no general slurry calibration.",
+    "criteria": [
+      "independent_stresslet_ODE",
+      "Einstein_surface_traction",
+      "dilute_limit",
+      "packing_limit"
+    ],
+    "selectors": [
+      "tests/test_suspension_viscosity_independent.py::test_independent_incremental_stresslet_effective_medium_ODE",
+      "tests/test_suspension_viscosity_independent.py::test_sphere_surface_traction_recovers_independent_Einstein_dilute_slope",
+      "tests/test_suspension_viscosity_independent.py::test_zero_solids_and_monotone_packing_approach"
+    ]
+  },
+  {
+    "id": "damage.prescribed_constant_loss_time",
+    "scope": "Supplied constant wall-loss rate and declared positive-wall threshold; no corrosion-rate forecast calibration.",
+    "criteria": [
+      "independent_loss_event_ODE",
+      "zero_rate_initial_threshold",
+      "unit_clock_conversion",
+      "similarity"
+    ],
+    "selectors": [
+      "tests/test_constant_wall_loss_time_individual.py::test_existing_public_job_time_and_forecast_match_independent_event_ode",
+      "tests/test_constant_wall_loss_time_individual.py::test_zero_rate_no_finite_future_crossing_and_already_reached_threshold_are_distinct",
+      "tests/test_constant_wall_loss_time_individual.py::test_exact_threshold_time_remains_positive_wall_not_failure_probability",
+      "tests/test_constant_wall_loss_time_individual.py::test_common_length_rate_scaling_preserves_time_and_scales_wall",
+      "tests/test_constant_wall_loss_time_individual.py::test_declared_customary_length_and_year_conversion_uses_seconds_not_a_hidden_clock"
+    ]
+  },
+  {
+    "id": "damage.fatigue_cycle_fraction",
+    "scope": "Supplied cycle counts and corresponding lives under linear Miner accumulation; no sequence interaction or fatigue-curve calibration.",
+    "criteria": [
+      "independent_cycle_fraction_sum",
+      "block_reordering",
+      "exposure_scaling",
+      "no_damage_clipping"
+    ],
+    "selectors": [
+      "tests/test_miner_damage_physical_qualification.py::test_miner_damage_matches_independent_sum_of_cycle_fractions",
+      "tests/test_miner_damage_physical_qualification.py::test_miner_damage_is_invariant_to_reordering_of_cycle_blocks",
+      "tests/test_miner_damage_physical_qualification.py::test_miner_damage_scales_linearly_with_repeated_block_counts",
+      "tests/test_miner_damage_physical_qualification.py::test_miner_damage_above_declared_limit_is_preserved_not_clipped"
+    ]
+  },
+  {
+    "id": "mixture.water_saturated_gas",
+    "scope": "Ideal dilute water/carrier wet-dry mass/mole and reference-volume ledgers at declared saturation basis; fugacity-based nonideal branch remains outside this profile.",
+    "criteria": [
+      "independent_decimal_mass_moles",
+      "dry_carrier_extensivity",
+      "water_free_zero_limit",
+      "reference_volume_ledger"
+    ],
+    "selectors": [
+      "tests/test_water_vapor_observation_individual.py::test_wet_dry_mass_and_mole_ledgers_against_independent_decimal_conservation",
+      "tests/test_water_vapor_observation_individual.py::test_dry_carrier_extensivity_preserves_humidity_and_clock",
+      "tests/test_water_vapor_observation_individual.py::test_zero_dry_quantity_has_zero_amounts_without_fake_zero_molar_mass",
+      "tests/test_water_vapor_observation_individual.py::test_exact_zero_water_has_no_finite_dewpoint_and_no_added_water",
+      "tests/test_water_vapor_observation_individual.py::test_computed_water_fraction_reuses_existing_reference_volume_owner_and_mass_ledger"
+    ]
+  },
+  {
+    "id": "pipe.karman_radial_profile",
+    "scope": "Supplied wall-law constants and monotone inverse-gradient pipe profile with explicit support; no turbulent wall-law empirical fit.",
+    "criteria": [
+      "independent_inverse_gradient_ODE",
+      "area_moment_integrals",
+      "constitutive_stress_balance",
+      "no_slip",
+      "asymptotic_limits"
+    ],
+    "selectors": [
+      "tests/test_karman_radial_profile_individual.py::test_profile_and_three_area_moments_match_independent_inverse_gradient_ode",
+      "tests/test_karman_radial_profile_individual.py::test_sign_and_geometric_scaling_preserve_dimensionless_shape_and_distinct_moments",
+      "tests/test_karman_radial_profile_individual.py::test_large_offset_arithmetic_has_the_triangular_profile_limit_not_a_fake_parabola",
+      "tests/test_karman_radial_profile_individual.py::test_next_float_inside_wall_retains_small_positive_velocity_and_axis_limit_is_explicit",
+      "tests/test_karman_radial_profile_individual.py::test_profile_finite_differences_and_stress_constitutive_balance_agree_away_from_axis",
+      "tests/test_karman_radial_profile_individual.py::test_supplied_wall_gradient_condition_and_no_slip_hold"
+    ]
+  },
+  {
+    "id": "fracture.surface_flaw_proof_survival",
+    "scope": "Supplied monotone manufactured constant-geometry elastic failure-pressure curve and supported proof/operating depth bounds; no proof-induced plasticity, actual flaw calibration or growth variant qualification.",
+    "criteria": [
+      "independent_LEFM_energy_bound",
+      "curve_mesh_convergence",
+      "proof_operating_order"
+    ],
+    "selectors": [
+      "tests/test_surface_flaw_proof_lefm_independent.py::test_proof_depth_bounds_converge_to_independent_elastic_crack_energy_limit"
+    ]
+  },
+  {
+    "id": "free_surface.circular_saint_venant",
+    "scope": "Circular one-dimensional free-surface Saint-Venant field with supported gravity/friction and boundary stages; no mixed pressurized or dry-front extension.",
+    "criteria": [
+      "independent_geometry_quadrature",
+      "Riemann_shock_rarefaction",
+      "spatial_convergence",
+      "volume_momentum_budget",
+      "gravity_work",
+      "boundary_event"
+    ],
+    "selectors": [
+      "tests/test_circular_free_surface_independent.py::test_circular_geometry_matches_independent_positive_cross_section_quadratures",
+      "tests/test_circular_free_surface_independent.py::test_area_inverse_preserves_the_supplied_area_and_recovers_depth",
+      "tests/test_circular_free_surface_independent.py::test_flat_resting_lake_is_stationary_under_consistent_boundary_states",
+      "tests/test_circular_free_surface_independent.py::test_uniform_chezy_flow_balances_tangential_gravity_and_friction",
+      "tests/test_circular_free_surface_independent.py::test_periodic_nonlinear_motion_conserves_volume_and_momentum_without_claiming_exact_energy",
+      "tests/test_circular_free_surface_independent.py::test_small_free_surface_wave_has_geometric_wave_speed_and_spatial_convergence",
+      "tests/test_circular_free_surface_independent.py::test_nonlinear_circular_shock_and_rarefaction_match_independent_riemann_solution_with_refinement",
+      "tests/test_circular_free_surface_independent.py::test_uniform_tangential_gravity_has_exact_acceleration_and_work_budget",
+      "tests/test_circular_free_surface_independent.py::test_uniform_chezy_friction_has_signed_analytic_decay_and_mechanical_dissipation",
+      "tests/test_circular_free_surface_independent.py::test_closure_event_and_optin_snapshots_preserve_pre_event_state_and_mass_budget",
+      "tests/test_circular_free_surface_independent.py::test_strong_closure_that_cannot_remain_free_surface_terminates_without_a_fake_computed_result",
+      "tests/test_circular_free_surface_independent.py::test_scalar_and_per_cell_chezy_closures_agree_for_the_same_supplied_coefficient",
+      "tests/test_circular_free_surface_independent.py::test_observation_times_are_not_reordered_clipped_or_merged"
+    ]
+  },
+  {
+    "id": "gas.conditional_legacy_blowdown_estimator",
+    "scope": "Reviewed finite ideal-gas pipe with supported nozzle face and declared finite horizon/pressure endpoint; no legacy empirical emptying-time correlation.",
+    "criteria": [
+      "independent_nozzle_capacity",
+      "characteristic_boundary_matching",
+      "adiabatic_inventory_limit",
+      "opening_event",
+      "energy_origin_invariance"
+    ],
+    "selectors": [
+      "tests/test_restricted_gas_vent_independent.py::test_existing_relief_shape_normalizes_to_independent_SI_nozzle_capacity",
+      "tests/test_restricted_gas_vent_independent.py::test_pipe_face_independently_matches_acoustic_invariant_and_nozzle",
+      "tests/test_restricted_gas_vent_independent.py::test_finite_pipe_pressure_endpoint_against_independent_adiabatic_inventory_limit",
+      "tests/test_restricted_gas_vent_independent.py::test_opening_event_and_explicit_finite_horizon_are_not_time_to_empty",
+      "tests/test_restricted_gas_vent_independent.py::test_negative_energy_reference_keeps_mass_pressure_endpoint_and_balances"
+    ]
+  },
+  {
+    "id": "hydraulics.supplied_drag_reduction",
+    "scope": "Caller-supplied same-flow drag reduction and explicitly reviewed projection law; no additive chemistry or extrapolation calibration.",
+    "criteria": [
+      "independent_distributed_friction_equilibrium",
+      "pressure_work",
+      "signed_same_flow_measurement",
+      "fixed_head_power_distinction"
+    ],
+    "selectors": [
+      "tests/test_drag_reduction_independent.py::test_independent_distributed_friction_equilibrium_and_work",
+      "tests/test_drag_reduction_independent.py::test_measured_same_flow_drop_defines_signed_reduction_without_chemistry",
+      "tests/test_drag_reduction_independent.py::test_fixed_head_and_power_limits_are_different_and_pump_limits_do_not_clip",
+      "tests/test_drag_reduction_independent.py::test_same_flow_measurement_does_not_prove_extrapolation"
+    ]
+  },
+  {
+    "id": "liquid.declared_saturated_mixed_circular_flow",
+    "scope": "Reviewed one-dimensional barotropic saturated mixed circular pipe with supported filled/partial states and declared vapor model; no general two-fluid phase kinetics.",
+    "criteria": [
+      "independent_nonlinear_Riemann_reference",
+      "mesh_convergence",
+      "acoustic_travel",
+      "phase_boundary_event",
+      "mass_observation_clock"
+    ],
+    "selectors": [
+      "tests/test_saturated_mixed_pipe_independent.py::test_uniform_wet_or_filled_signed_translation",
+      "tests/test_saturated_mixed_pipe_independent.py::test_resting_surface_crosses_crown_over_bed_without_numerical_motion",
+      "tests/test_saturated_mixed_pipe_independent.py::test_filled_negative_gauge_is_distinct_from_massless_vapor_surface",
+      "tests/test_saturated_mixed_pipe_independent.py::test_nonlinear_filled_to_partial_riemann_reference_and_mesh_convergence",
+      "tests/test_saturated_mixed_pipe_independent.py::test_boundary_switch_creates_moving_partial_region_with_exact_observation_clock",
+      "tests/test_saturated_mixed_pipe_independent.py::test_diverging_filled_columns_create_finite_vapor_region_with_rarefaction_reference",
+      "tests/test_saturated_mixed_pipe_independent.py::test_pressurized_acoustic_travel_and_spatial_refinement"
+    ]
+  },
+  {
+    "id": "mixture.pseudocritical_gas",
+    "scope": "Manufactured fixed-composition van-der-Waals pseudofluid family with common excluded volume and arithmetic pair attractions; not a general real-mixture critical law.",
+    "criteria": [
+      "independent_Helmholtz_critical_root",
+      "pressure_work_derivative",
+      "tolerance_refinement",
+      "composition_extensivity"
+    ],
+    "selectors": [
+      "tests/test_kay_pseudocritical_helmholtz_independent.py::test_independent_pair_helmholtz_mechanical_critical_root_and_tolerance_refinement",
+      "tests/test_kay_pseudocritical_helmholtz_independent.py::test_independent_reference_pressure_is_helmholtz_derivative_and_reversible_work",
+      "tests/test_kay_pseudocritical_helmholtz_independent.py::test_noncommon_excluded_volume_is_not_a_general_true_critical_prediction",
+      "tests/test_kay_pseudocritical_helmholtz_independent.py::test_species_amount_scaling_and_identical_component_splitting_invariance"
+    ]
+  },
+  {
+    "id": "pendulum_swing_response",
+    "scope": "Small-angle pendulum spectral coordinate with supplied spectral ordinate and displacement multiplier; no nonlinear swinging or spectrum calibration.",
+    "criteria": [
+      "independent_gravity_energy_period_quadrature",
+      "small_angle_limit",
+      "pseudo_acceleration_identity",
+      "gravity_work"
+    ],
+    "selectors": [
+      "tests/test_pendulum_spectral_coordinate_independent.py::test_frequency_is_small_angle_limit_of_gravity_energy_period",
+      "tests/test_pendulum_spectral_coordinate_independent.py::test_spectral_pseudo_acceleration_and_gravity_work",
+      "tests/test_pendulum_spectral_coordinate_independent.py::test_zero_spectrum_preserves_natural_frequency"
+    ]
+  },
+  {
+    "id": "pipeline.buried_aboveground_transition",
+    "scope": "Straight linear elastic axial transition with declared constant soil resistance and observed far-field loading; no nonlinear soil law inference.",
+    "criteria": [
+      "independent_axial_equilibrium_ODE",
+      "compatibility_event",
+      "anchor_force_balance",
+      "zero_load_limit"
+    ],
+    "selectors": [
+      "tests/test_soil_transition_individual.py::test_independent_axial_equilibrium_and_compatibility_event_ode",
+      "tests/test_soil_transition_individual.py::test_zero_load_has_zero_length_movement_and_no_fictitious_soil_force",
+      "tests/test_soil_transition_individual.py::test_resistance_changes_length_and_displacement_but_not_anchor_force"
+    ]
+  },
+  {
+    "id": "electrical.dc_ac_power_balance",
+    "scope": "Steady declared sinusoidal AC or direct-current power at known voltage/current and explicit phase convention.",
+    "criteria": [
+      "independent_periodic_waveform_power",
+      "DC_power",
+      "zero_load"
+    ],
+    "selectors": [
+      "tests/test_electrical_circuit_individual.py::test_independent_periodic_power_and_line_heat",
+      "tests/test_electrical_circuit_individual.py::test_direct_current_observation_returns_real_power",
+      "tests/test_electrical_circuit_individual.py::test_zero_load_and_unknown_conversion_are_preserved"
+    ]
+  },
+  {
+    "id": "gas.dilute_binary_molecular_diffusivity",
+    "scope": "Dilute ideal binary gas molecular transport with supplied Lennard-Jones inputs and collision integral; no collision parameter calibration.",
+    "criteria": [
+      "independent_Maxwell_speed_quadrature",
+      "Fick_face_mass_budget",
+      "temperature_pressure_scaling"
+    ],
+    "selectors": [
+      "tests/test_binary_gas_diffusion_independent.py::test_relative_maxwell_speed_quadrature",
+      "tests/test_binary_gas_diffusion_independent.py::test_species_interchange",
+      "tests/test_binary_gas_diffusion_independent.py::test_pressure_and_temperature_conditioned_on_same_supplied_omega",
+      "tests/test_binary_gas_diffusion_independent.py::test_collision_diameter_scaling",
+      "tests/test_binary_gas_diffusion_independent.py::test_omega_scaling",
+      "tests/test_binary_gas_diffusion_independent.py::test_reduced_temperature_geometric_mixing",
+      "tests/test_binary_gas_diffusion_independent.py::test_independent_legacy_unit_conversion_rounded_coefficient",
+      "tests/test_binary_gas_diffusion_independent.py::test_fick_relative_face_transfer_and_binary_mole_budget"
+    ]
+  },
+  {
+    "id": "gas.steady_pipe_total_energy_path",
+    "scope": "Single-phase steady gas path with signed elevation, acceleration, prescribed heat and supported friction; no empirical network-capacity law qualification.",
+    "criteria": [
+      "independent_continuous_momentum_energy_ODE",
+      "mesh_refinement",
+      "signed_height",
+      "low_Mach_reduction"
+    ],
+    "selectors": [
+      "tests/test_elevated_general_gas_independent.py::test_signed_height_momentum_energy_against_continuous_reference_with_refinement",
+      "tests/test_elevated_general_gas_independent.py::test_exponential_source_reduction_matches_independent_low_mach_ode"
+    ]
+  },
+  {
+    "id": "liquid.supplied_exponential_viscosity",
+    "scope": "Supplied exponential viscosity temperature law and bounded two-point fit, with a separate constant-density heated-pipe test provider; no material viscosity calibration.",
+    "criteria": [
+      "independent_temperature_ODE",
+      "unit_origin_invariance",
+      "logarithmic_fit_limits",
+      "coupled_continuum_reference"
+    ],
+    "selectors": [
+      "tests/test_liquid_viscosity_individual.py::test_constitutive_law_matches_independently_integrated_temperature_ode",
+      "tests/test_liquid_viscosity_individual.py::test_two_point_law_is_order_invariant_and_has_geometric_midpoint",
+      "tests/test_liquid_viscosity_individual.py::test_kelvin_origin_shift_preserves_temperature_difference_and_curve",
+      "tests/test_liquid_viscosity_individual.py::test_dynamic_conversion_requires_real_density_and_preserves_kinematic_basis",
+      "tests/test_liquid_viscosity_individual.py::test_mismatched_density_does_not_manufacture_dynamic_viscosity",
+      "tests/test_liquid_viscosity_individual.py::test_same_temperature_is_underdetermined_or_conflicting_not_a_zero_slope_fit",
+      "tests/test_liquid_viscosity_individual.py::test_constant_and_extreme_calibration_ratios_use_positive_log_coordinates",
+      "tests/test_liquid_viscosity_individual.py::test_fitted_law_plugs_into_existing_heated_pipe_against_independent_continuum"
+    ]
+  },
+  {
+    "id": "meter.supplied_gas_differential_flow",
+    "scope": "Supplied coefficient/expansibility annular cone differential gas meter with reviewed actual operating geometry; no coefficient calibration or other meter geometries.",
+    "criteria": [
+      "independent_annular_pressure_energy_capacity",
+      "reference_mass_budget",
+      "area_similarity",
+      "thermal_geometry"
+    ],
+    "selectors": [
+      "tests/test_cone_meter_individual.py::test_independent_annular_capacity_and_reference_mass",
+      "tests/test_cone_meter_individual.py::test_similar_geometry_scales_area",
+      "tests/test_cone_meter_individual.py::test_operating_dimensions_reuse_reviewed_thermal_curve",
+      "tests/test_cone_meter_individual.py::test_native_cone_solution_against_separately_bracketed_coefficient_relation"
+    ]
+  },
+  {
+    "id": "pipe.state_dependent_quasisteady_friction",
+    "scope": "Linear liquid acoustic field with prescribed spatially varying laminar-viscosity drag and reviewed characteristic interpolation; no general turbulent transient friction memory.",
+    "criteria": [
+      "independent_modal_field_solution",
+      "characteristic_feet",
+      "spatial_refinement",
+      "friction_work_budget"
+    ],
+    "selectors": [
+      "tests/test_liquid_moc_spatial_drag_wave_individual.py::test_spatial_viscosity_characteristic_feet_wave_and_work_budget"
+    ]
+  },
+  {
+    "id": "yield.pressurized_isotropic_cylinder",
+    "scope": "Closed-end isotropic elastic cylinder first J2 yield under supported pressure loading and supplied yield strength; no plastic collapse.",
+    "criteria": [
+      "independent_radial_BVP",
+      "first_yield_inverse",
+      "hydrostatic_shift_invariance",
+      "thin_limit"
+    ],
+    "selectors": [
+      "tests/test_elastic_first_yield_independent.py::test_first_yield_matches_radial_boundary_problem_and_occurs_at_bore",
+      "tests/test_elastic_first_yield_independent.py::test_common_hydrostatic_pressure_does_not_change_closed_end_first_yield",
+      "tests/test_elastic_first_yield_independent.py::test_yield_strength_scales_threshold_without_changing_critical_radius",
+      "tests/test_elastic_first_yield_independent.py::test_full_geometry_solution_converges_to_thin_wall_first_yield_limit",
+      "tests/test_elastic_first_yield_independent.py::test_unbracketed_threshold_is_not_reported_as_a_failed_material_or_as_zero_pressure"
+    ]
+  },
+  {
+    "id": "contact.prescribed_pressure_coulomb_axial",
+    "scope": "Caller-supplied compressive contact pressure field and Coulomb coefficient with explicit sliding/static meaning; no contact-pressure or soil-law prediction.",
+    "criteria": [
+      "independent_pressure_surface_integral",
+      "friction_dissipation",
+      "static_capacity_interval",
+      "contact_area_similarity"
+    ],
+    "selectors": [
+      "tests/test_axial_contact_friction_individual.py::test_uniform_pressure_scalar_load_does_not_cancel_with_radial_normal",
+      "tests/test_axial_contact_friction_individual.py::test_independent_separable_axial_angular_pressure_integral",
+      "tests/test_axial_contact_friction_individual.py::test_partial_open_contact_has_no_invented_tensile_pressure",
+      "tests/test_axial_contact_friction_individual.py::test_sliding_drag_opposes_motion_and_work_dissipates",
+      "tests/test_axial_contact_friction_individual.py::test_static_capacity_is_interval_not_actual_signed_force",
+      "tests/test_axial_contact_friction_individual.py::test_section_contact_area_similarity",
+      "tests/test_axial_contact_friction_individual.py::test_underresolved_pressure_field_is_not_qualified_result"
+    ]
+  },
+  {
+    "id": "cylindrical_local_load_attenuation",
+    "scope": "Linear decaying cylindrical shell edge-moment solution with supplied decay support and boundary moment/shear.",
+    "criteria": [
+      "independent_fourth_order_BVP",
+      "moment_equilibrium",
+      "decay_scaling",
+      "zero_load"
+    ],
+    "selectors": [
+      "tests/test_cylindrical_edge_attenuation_independent.py::test_independent_boundary_solution_and_shell_moment_equilibrium",
+      "tests/test_cylindrical_edge_attenuation_independent.py::test_distance_and_decay_scaling_preserves_dimensionless_response",
+      "tests/test_cylindrical_edge_attenuation_independent.py::test_zero_moment_and_zero_edge_shear"
+    ]
+  },
+  {
+    "id": "elastic_thermal_compression_buckling_variant",
+    "scope": "Straight elastic guided span with declared thermal-compression preload and ideal support conditions.",
+    "criteria": [
+      "independent_Euler_thermal_equilibrium",
+      "mesh_convergence",
+      "distinct_flexural_compressive_moduli"
+    ],
+    "selectors": [
+      "tests/test_thermal_compression_guide_buckling_independent.py::test_guide_span_critical_temperature_converges_to_independent_euler_thermal_equilibrium"
+    ]
+  },
+  {
+    "id": "gas.panhandle_network_equivalence",
+    "scope": "Frozen caller-reviewed fractional-exponent resistance coordinate reductions, including series common flow and parallel common potential; no Panhandle empirical capacity calibration.",
+    "criteria": [
+      "independent_decimal_constitutive_sums",
+      "noninteger_continuity",
+      "branch_potential_equality"
+    ],
+    "selectors": [
+      "tests/test_frozen_fractional_resistance_independent.py::test_series_common_flow_loss_with_fractional_geometry",
+      "tests/test_frozen_fractional_resistance_independent.py::test_parallel_noninteger_continuity_and_each_branch_potential"
+    ]
+  },
+  {
+    "id": "pipeline.lowering_elastic_compatibility",
+    "scope": "Prescribed lowering profile with pure linear elastic material-length compatibility and declared initial axial stress; no unknown slip/feed mechanics.",
+    "criteria": [
+      "independent_curve_arc_length",
+      "axial_bar_shooting",
+      "elastic_work",
+      "material_length_compatibility"
+    ],
+    "selectors": [
+      "tests/test_lowering_axial_compatibility_individual.py::test_circular_profile_length_uses_independent_parametric_curve_integral",
+      "tests/test_lowering_axial_compatibility_individual.py::test_independent_axial_bar_shooting_equilibrium_work_and_compatibility",
+      "tests/test_lowering_axial_compatibility_individual.py::test_authored_smooth_four_arc_profile_preserves_initial_horizontal_length",
+      "tests/test_lowering_axial_compatibility_individual.py::test_initial_convex_material_length_is_not_replaced_with_chord",
+      "tests/test_lowering_axial_compatibility_individual.py::test_existing_stress_is_separate_from_additional_elastic_work"
+    ]
+  },
+  {
+    "id": "thermal.ground_heat_diffusion",
+    "scope": "P1 two-dimensional soil heat diffusion on supported rectangular/polygon cavity geometries with supplied conductivity and capacity.",
+    "criteria": [
+      "independent_separated_heat_mode",
+      "spatial_convergence",
+      "time_convergence",
+      "heat_storage_flux_budget",
+      "constant_temperature_limit"
+    ],
+    "selectors": [
+      "tests/test_ground_heat_equation_individual.py::test_2d_heat_equation_analytic_mode_spatial_convergence",
+      "tests/test_ground_heat_equation_individual.py::test_transient_heat_time_refinement_fixed_mesh",
+      "tests/test_ground_heat_equation_individual.py::test_steady_linear_2d_heat_flux_and_constant_temperature_preservation",
+      "tests/test_ground_heat_equation_individual.py::test_signed_heat_flux_integrated_storage_and_zero_flux_boundary_ledger"
+    ]
+  },
+  {
+    "id": "gas.capacity_limited_regulator_boundary",
+    "scope": "Reviewed steady supplied gas branch laws and bounded valve capacity with pressure/temperature domains; no controller transient dynamics or device coefficient calibration.",
+    "criteria": [
+      "independent_mass_equilibrium",
+      "capacity_inverse",
+      "choked_plateau",
+      "saturated_pressure_root_refinement"
+    ],
+    "selectors": [
+      "tests/test_gas_regulator_boundary_independent.py::test_two_pressure_squared_resistances_independent_common_mass_equilibrium",
+      "tests/test_gas_regulator_boundary_independent.py::test_zero_external_flow_closes_capacity_without_inventing_a_stem_curve",
+      "tests/test_gas_regulator_boundary_independent.py::test_native_maximum_kv_inverse_against_dimensional_gas_expansion_capacity",
+      "tests/test_gas_regulator_boundary_independent.py::test_native_choked_capacity_plateau_and_no_guessed_normal_density",
+      "tests/test_gas_regulator_boundary_independent.py::test_actual_native_kv_capacity_with_both_control_sides_and_saturation",
+      "tests/test_gas_regulator_boundary_independent.py::test_saturated_pressure_root_refinement_retains_original_coarse_tolerance",
+      "tests/test_gas_regulator_boundary_independent.py::test_actual_existing_coolprop_factory_and_explicit_normal_mass_basis"
+    ]
+  },
+  {
+    "id": "hydraulics.nonisothermal_viscous_pipe",
+    "scope": "Single-phase constant-density liquid march with supplied temperature-dependent viscosity and reviewed thermal boundary; no phase change or unknown rheology.",
+    "criteria": [
+      "independent_logarithmic_pressure_solution",
+      "coupled_temperature_pressure_ODE",
+      "mesh_convergence",
+      "gravity_internal_energy_balance"
+    ],
+    "selectors": [
+      "tests/test_heated_variable_viscosity_individual.py::test_variable_laminar_adiabatic_friction_has_independent_logarithmic_solution",
+      "tests/test_heated_variable_viscosity_individual.py::test_temperature_viscosity_pressure_coupling_converges_to_independent_ode",
+      "tests/test_heated_variable_viscosity_individual.py::test_elevation_changes_pressure_without_spurious_gravity_heating",
+      "tests/test_heated_variable_viscosity_individual.py::test_viscosity_uses_reviewed_kelvin_difference_and_real_pressure_work_enthalpy"
+    ]
+  },
+  {
+    "id": "batch.effective_longitudinal_dispersion",
+    "scope": "Positive supplied longitudinal dispersion and supported finite-pipe component transport; no empirical turbulent dispersion coefficient calibration.",
+    "criteria": [
+      "independent_Gaussian_convolution",
+      "diffusion_PDE_variance",
+      "Danckwerts_Robin_reference",
+      "space_time_convergence",
+      "event_mass_budget"
+    ],
+    "selectors": [
+      "tests/test_batch_dispersion_individual.py::test_interface_equals_independent_gaussian_convolution",
+      "tests/test_batch_dispersion_individual.py::test_sharp_front_and_half_value_convention",
+      "tests/test_batch_dispersion_individual.py::test_interface_threshold_inverse_and_exact_time_area_similarity",
+      "tests/test_batch_dispersion_individual.py::test_heat_kernel_solves_positive_diffusion_pde_and_spreads_variance",
+      "tests/test_batch_dispersion_individual.py::test_danckwerts_continuum_oracle_satisfies_robin_boundary_and_pde",
+      "tests/test_batch_dispersion_individual.py::test_positive_dispersion_continuum_refinement_with_different_component_densities",
+      "tests/test_batch_dispersion_individual.py::test_positive_dispersion_time_refinement_and_event_mass_budget"
+    ]
+  },
+  {
+    "id": "engineering.target.nut_factor_torque_preload",
+    "scope": "Supplied nut factor derived for a manufactured helical thread/collar friction work reference; no real fastener torque calibration.",
+    "criteria": [
+      "independent_helical_contact_work",
+      "axial_force_balance"
+    ],
+    "selectors": [
+      "tests/test_remaining_physical_limits_independent.py::test_nut_factor_from_independent_helical_contact_work_recovers_axial_load"
+    ]
+  },
+  {
+    "id": "damage.circumferential_tensile_section",
+    "scope": "Uniform wide-loss thin-ligament force limit and bounded supplied correlation coordinate; no calibration for isolated real defects.",
+    "criteria": [
+      "independent_annulus_force_integral",
+      "wide_loss_thin_limit",
+      "geometry_strength_scaling"
+    ],
+    "selectors": [
+      "tests/test_circumferential_loss_tension_independent.py::test_wide_loss_converges_to_uniform_ligament_force_equilibrium",
+      "tests/test_circumferential_loss_tension_independent.py::test_bounds_and_zero_width_endpoint",
+      "tests/test_circumferential_loss_tension_independent.py::test_length_and_stress_units_scale_independently"
+    ]
+  },
+  {
+    "id": "fluid.horizontal_jet_discharge",
+    "scope": "Horizontal ballistic parcel with constant gravity and separately supplied actual jet-area/mean-velocity mapping; no empirical discharge factor.",
+    "criteria": [
+      "independent_Newton_trajectory_IVP",
+      "observed_area_flux",
+      "gravity_geometry_similarity"
+    ],
+    "selectors": [
+      "tests/test_horizontal_jet_individual.py::test_independent_time_integrated_trajectory_inverse",
+      "tests/test_horizontal_jet_individual.py::test_actual_jet_area_and_tracked_mean_mapping_are_separate",
+      "tests/test_horizontal_jet_individual.py::test_degenerate_observation_is_not_fitted",
+      "tests/test_horizontal_jet_individual.py::test_gravity_and_horizontal_geometric_similarity"
+    ]
+  },
+  {
+    "id": "fragmentation.supplied_empirical_capacity",
+    "scope": "Ideal constant-flow plastic work versus supplied sheet areal-mass impulse shape; no actual fragmentation or failure strain calibration.",
+    "criteria": [
+      "independent_strain_work",
+      "pressure_impulse_integral",
+      "momentum_kinetic_budget",
+      "thickness_similarity"
+    ],
+    "selectors": [
+      "tests/test_plastic_impulse_budget_independent.py::test_strain_work_equals_kinetic_energy_from_pressure_impulse",
+      "tests/test_plastic_impulse_budget_independent.py::test_triangular_shape_peak_preserves_impulse_budget",
+      "tests/test_plastic_impulse_budget_independent.py::test_areal_thickness_scaling_preserves_specific_material_work_and_velocity"
+    ]
+  },
+  {
+    "id": "properties.gas_heating_value_gravity_fit",
+    "scope": "Identifiable declared two-fuel/inert composition class with supplied pure reaction data and ideal reference density; no universal gravity heating-value fit.",
+    "criteria": [
+      "independent_molecular_density_inverse",
+      "Hess_reaction_energy",
+      "reference_water_mass_budget"
+    ],
+    "selectors": [
+      "tests/test_gravity_constrained_calorific_independent.py::test_independent_molecular_density_inverse_and_hess_total_reaction_energy",
+      "tests/test_gravity_constrained_calorific_independent.py::test_reference_pressure_temperature_and_water_dilution_preserve_dry_molar_energy",
+      "tests/test_gravity_constrained_calorific_independent.py::test_equal_molar_masses_have_no_unique_inverse_even_with_different_heats",
+      "tests/test_gravity_constrained_calorific_independent.py::test_infeasible_gravity_not_clipped_into_binary_convex_domain"
+    ]
+  },
+  {
+    "id": "properties.water_resistivity_solids_fit",
+    "scope": "Caller-supplied electroneutral ionic analysis and same-state transport mobilities in dilute linear-response water; no universal solids-resistivity fit.",
+    "criteria": [
+      "independent_particle_force_drag_current",
+      "Joule_dissipation",
+      "detailed_balance_random_walk",
+      "mass_charge_budget"
+    ],
+    "selectors": [
+      "tests/test_ionic_water_conductivity_independent.py::test_independent_single_particle_force_drag_charge_current_and_joule_budget",
+      "tests/test_ionic_water_conductivity_independent.py::test_independent_detailed_balance_random_walk_small_field_reference",
+      "tests/test_ionic_water_conductivity_independent.py::test_mass_concentration_scaling_reference_unit_and_no_universal_TDS_mapping",
+      "tests/test_ionic_water_conductivity_independent.py::test_neutral_solute_does_not_create_carrier_current",
+      "tests/test_ionic_water_conductivity_independent.py::test_zero_dissolved_inventory_background_and_no_infinity_serialization",
+      "tests/test_ionic_water_conductivity_independent.py::test_state_shift_is_not_silently_corrected"
+    ]
+  },
+  {
+    "id": "gas.empirical_capacity_alternatives",
+    "scope": "Selected supported gas-path diameter inverse using the conservative momentum/energy alternative; empirical Panhandle/Spitzglass branches remain outside this profile.",
+    "criteria": [
+      "independent_continuous_thermal_momentum_ODE",
+      "geometry_inverse",
+      "mesh_convergence"
+    ],
+    "selectors": [
+      "tests/test_gas_path_diameter_individual.py::test_diameter_for_independent_continuum_target_converges_to_known_geometry",
+      "tests/test_gas_path_diameter_individual.py::test_selected_root_recovers_the_forward_discrete_solution_and_endpoint_root"
+    ]
+  },
+  {
+    "id": "fabrication.supplied_neutral_axis_curvature",
+    "scope": "Circular plane-section kinematics about an explicitly located neutral surface; no plastic neutral-axis prediction or springback.",
+    "criteria": [
+      "independent_face_arc_length_ratio",
+      "neutral_radius_geometry"
+    ],
+    "selectors": [
+      "tests/test_mechanics_223_gap_implementations.py::test_neutral_arc_ratio_and_face_radius"
+    ]
+  },
+  {
+    "id": "pump.screw_empirical_slip_and_friction",
+    "scope": "Manufactured Newtonian planar leakage gap and annular Couette drag mapped to supplied screw-pump closure coefficients; no actual screw geometry/vendor calibration.",
+    "criteria": [
+      "independent_planar_Stokes_BVP",
+      "annular_azimuthal_Stokes_BVP",
+      "pressure_work_dissipation",
+      "stopped_reverse_leak"
+    ],
+    "selectors": [
+      "tests/test_remaining_physical_limits_independent.py::test_screw_supplied_gap_closures_against_independent_stokes_fields"
+    ]
+  },
+  {
+    "id": "welding.supplied_burnthrough_limit",
+    "scope": "Conservative constant-property radial wall heating with prescribed outer flux and inner film; no melting or actual weld burn-through acceptance.",
+    "criteria": [
+      "independent_steady_log_conduction",
+      "film_heat_balance",
+      "lumped_energy_ODE_limit",
+      "time_refinement"
+    ],
+    "selectors": [
+      "tests/test_remaining_physical_limits_independent.py::test_weld_wall_steady_log_profile_and_gas_heat_balance",
+      "tests/test_remaining_physical_limits_independent.py::test_weld_wall_high_conductivity_time_refinement_matches_lumped_energy_ode"
+    ]
+  },
+  {
+    "id": "measurement.slick_appearance_thickness",
+    "scope": "Volume interval propagation for a caller-supplied appearance/thickness band; no optical appearance calibration.",
+    "criteria": [
+      "independent_variable_thickness_surface_integral",
+      "volume_bound_enclosure"
+    ],
+    "selectors": [
+      "tests/test_remaining_physical_limits_independent.py::test_slick_volume_bounds_enclose_independent_variable_thickness_surface_integral"
+    ]
+  },
+  {
+    "id": "emissions.filling_vapor_rate",
+    "scope": "Prescribed headspace displacement and heat/feed-limited evaporation with zero additional empirical capacity-generation term; that empirical term remains outside this profile.",
+    "criteria": [
+      "independent_headspace_inventory_ODE",
+      "latent_energy_budget",
+      "finite_liquid_supply"
+    ],
+    "selectors": [
+      "tests/test_emissions_inventory_independent.py::test_filling_displaced_inventory_and_heat_limited_evaporation_ODE"
+    ]
+  },
+  {
+    "id": "emissions.tank_standing_working_loss",
+    "scope": "Manufactured constant-composition ideal-gas fixed-roof heating/venting episodes; seal, weather and wetting calibration remain outside this profile.",
+    "criteria": [
+      "independent_ideal_gas_inventory",
+      "temperature_partition_convergence",
+      "calendar_window_accounting"
+    ],
+    "selectors": [
+      "tests/test_emissions_inventory_independent.py::test_tank_breathing_partition_refines_to_independent_ideal_gas_inventory_loss"
+    ]
+  },
+  {
+    "id": "emissions.calibrated_overfill_cascade_source",
+    "scope": "Prescribed pure-component ideal carrier saturation capacity, heat and available liquid supply with declared aerosol fraction; no splash/transfer-efficiency calibration.",
+    "criteria": [
+      "independent_carrier_moles",
+      "latent_heat_limit",
+      "species_feed_limit",
+      "phase_mass_budget"
+    ],
+    "selectors": [
+      "tests/test_emissions_inventory_independent.py::test_cascade_independent_carrier_moles_heat_and_finite_feed_limits"
+    ]
+  }
+]

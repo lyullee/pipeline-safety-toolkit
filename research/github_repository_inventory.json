@@ -1,0 +1,261 @@
+{
+  "schema": "pipeline_integrity.github_public_inventory.v1",
+  "checked_on": "2026-10-29",
+  "api": "https://api.github.com/users/lyullee/repos?per_page=100&sort=full_name",
+  "public_repository_count": 27,
+  "toolkit_repository_listed": false,
+  "local_remote_configured": false,
+  "local_integration_evidence_hra_commit": "6617d36664a467dc3469905ed30bb2ae21366146",
+  "repositories": [
+    {
+      "name": "adm1-tea-lca",
+      "url": "https://github.com/lyullee/adm1-tea-lca",
+      "description": "Recorded ADM1 biomethane simulation, reconstructed TEA/LCA, finite-grid optimization and sensitivity workflow.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-24T03:21:35Z"
+    },
+    {
+      "name": "ammonia-supply-risk",
+      "url": "https://github.com/lyullee/ammonia-supply-risk",
+      "description": "Python screening utilities for ammonia supply systems: material damage proxies, conditional multipliers, and mutually exclusive protection-path frequencies.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-22T07:54:29Z"
+    },
+    {
+      "name": "api581-risk-analysis",
+      "url": "https://github.com/lyullee/api581-risk-analysis",
+      "description": "Unofficial, independently authored Python calculations and workflows for API-RP-581 risk-based inspection; original code only, standards excluded.",
+      "license_spdx": "NOASSERTION",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-26T04:43:19Z",
+      "head_commit": "7c8badb829f84b19c7b84d07fbc476601d9194eb"
+    },
+    {
+      "name": "degadisx",
+      "url": "https://github.com/lyullee/degadisx",
+      "description": "Python reimplementation of EPA DEGADIS 2.1",
+      "license_spdx": "NOASSERTION",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-09-12T14:42:43Z"
+    },
+    {
+      "name": "degali",
+      "url": "https://github.com/lyullee/degali",
+      "description": "DEGALI (Dense Gas Dispersion for Liquid Hydrogen) is a research-grade Python model for cryogenic hydrogen release and atmospheric dispersion analysis.",
+      "license_spdx": "NOASSERTION",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-22T07:51:49Z"
+    },
+    {
+      "name": "DynamicLH2PoolX",
+      "url": "https://github.com/lyullee/DynamicLH2PoolX",
+      "description": "Dynamic, evidence-qualified liquid-hydrogen pool source-term model for declared ground inflow.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-09T08:18:25Z"
+    },
+    {
+      "name": "human-reliability-toolkit",
+      "url": "https://github.com/lyullee/human-reliability-toolkit",
+      "description": "Composable, evidence-qualified human reliability and process-risk research models with source-qualified numeric data and Python APIs.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-26T07:18:17Z",
+      "head_commit": "d2754bbea16e12d00240e88d13cb4badbe672ac3"
+    },
+    {
+      "name": "hydrogen-local-energetics",
+      "url": "https://github.com/lyullee/hydrogen-local-energetics",
+      "description": "Reproducibility data and code for local hydrogen energetics and lattice-controlled mobility",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-08-25T05:28:28Z"
+    },
+    {
+      "name": "hydrogen-station-sim",
+      "url": "https://github.com/lyullee/hydrogen-station-sim",
+      "description": "Physics-based hydrogen refueling station digital twin with sensor HAZOP and 3D monitoring.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-22T07:51:56Z",
+      "head_commit": "9f8fa941c611abc092a10516a09e31ec2908c1d6"
+    },
+    {
+      "name": "lh2-psv-tno-risk",
+      "url": "https://github.com/lyullee/lh2-psv-tno-risk",
+      "description": "Research record for LH2 tank self-pressurization, PSV release, and TNO conditional-risk analysis",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-02T15:08:53Z"
+    },
+    {
+      "name": "lh2dt_models",
+      "url": "https://github.com/lyullee/lh2dt_models",
+      "description": "First-principles liquid-hydrogen component and network models",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-22T07:51:51Z",
+      "head_commit": "b2f276333c1b1793c39f25763703d196d36742ec"
+    },
+    {
+      "name": "lh2poolx",
+      "url": "https://github.com/lyullee/lh2poolx",
+      "description": "Evidence-qualified liquid-hydrogen pool source terms for dispersion models",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-09T08:18:23Z"
+    },
+    {
+      "name": "lyullee",
+      "url": "https://github.com/lyullee/lyullee",
+      "description": "Scientific software portfolio: hydrogen safety, process simulation, dispersion and fire models, materials research, and quantum probability methods.",
+      "license_spdx": null,
+      "language": null,
+      "default_branch": "main",
+      "pushed_at": "2026-10-26T09:30:15Z"
+    },
+    {
+      "name": "lyullee.github.io",
+      "url": "https://github.com/lyullee/lyullee.github.io",
+      "description": "Personal research homepage: hydrogen safety, scientific software, process modelling and reproducible research. Eight languages.",
+      "license_spdx": null,
+      "language": "JavaScript",
+      "default_branch": "main",
+      "pushed_at": "2026-10-26T09:30:16Z"
+    },
+    {
+      "name": "nbcp-magnetocaloric-quantum-spectral-flow",
+      "url": "https://github.com/lyullee/nbcp-magnetocaloric-quantum-spectral-flow",
+      "description": "Reproducible Cryogenics study with N=18 model-transfer gates and a complete IBM Kingston QPU benchmark.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-12T20:33:13Z"
+    },
+    {
+      "name": "pifira",
+      "url": "https://github.com/lyullee/pifira",
+      "description": "Pressure-based inverse fire heat-flux and effective-area analysis for LPG and LH2 tanks",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-09-04T03:24:51Z"
+    },
+    {
+      "name": "prism",
+      "url": "https://github.com/lyullee/prism",
+      "description": "PRISM — Process Risk Integration and Scenario Modeling; optional LH2 analysis, auditable model coupling and literature-based frequencies.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-18T14:15:36Z",
+      "head_commit": "884b0553341beb2d51d1d3c563f86982f378e160"
+    },
+    {
+      "name": "prism-dynasense",
+      "url": "https://github.com/lyullee/prism-dynasense",
+      "description": "Local hydrogen release and thermal-exposure screening with PRISM dose/probit functions, direct-model Sobol sensitivity analysis, and an offline results dashboard.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-22T07:51:53Z"
+    },
+    {
+      "name": "process-monitoring-toolkit",
+      "url": "https://github.com/lyullee/process-monitoring-toolkit",
+      "description": "Composable Python toolkit for process-signal anomaly detection, fault monitoring, CoolProp residuals, and reproducible research.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-25T14:42:30Z",
+      "head_commit": "79b4cf52a0acd0d0cbd3addbe82c3d98d6385e5a"
+    },
+    {
+      "name": "process-risk-consequence-toolkit",
+      "url": "https://github.com/lyullee/process-risk-consequence-toolkit",
+      "description": "Independent consequence screening and dense-gas research toolkit. Apache-2.0. Not affiliated with CCPS or AIChE.",
+      "license_spdx": "Apache-2.0",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-26T08:22:28Z",
+      "head_commit": "4106da0020196fcf61c8b6264ae0598e63a881a1"
+    },
+    {
+      "name": "psa-dyna",
+      "url": "https://github.com/lyullee/psa-dyna",
+      "description": "Physics-based non-isothermal dynamic PSA/VPSA model with explicit validation and guarded DWSIM coupling.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-24T03:10:31Z"
+    },
+    {
+      "name": "psa-qae-resource-audit",
+      "url": "https://github.com/lyullee/psa-qae-resource-audit",
+      "description": "Reproducibility archive for pressure-consistent hydrogen PSA/membrane operation, probability-event oracle resources, and a two-bit IBM QPU probe.",
+      "license_spdx": "MIT",
+      "language": "OpenQASM",
+      "default_branch": "main",
+      "pushed_at": "2026-10-22T07:51:57Z"
+    },
+    {
+      "name": "qsafety-qae",
+      "url": "https://github.com/lyullee/qsafety-qae",
+      "description": "Quantum amplitude-estimation research for finite-mixture safety and reliability models, with classical baselines, Qiskit circuit checks, and opt-in IBM QPU execution.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-09T14:44:17Z"
+    },
+    {
+      "name": "saga-py",
+      "url": "https://github.com/lyullee/saga-py",
+      "description": "Python/FastAPI gas-safety knowledge assistant with document-grounded Korean/English chat, HAZOP retrieval, and digital-twin explanation APIs.",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-11T23:29:08Z"
+    },
+    {
+      "name": "saga-sts",
+      "url": "https://github.com/lyullee/saga-sts",
+      "description": "Earlier Java/Spring Tool Suite edition of SAGA, preserved separately from saga-py.",
+      "license_spdx": "MIT",
+      "language": "Fluent",
+      "default_branch": "main",
+      "pushed_at": "2026-10-01T14:55:29Z"
+    },
+    {
+      "name": "slabx",
+      "url": "https://github.com/lyullee/slabx",
+      "description": "Python reimplementation of the SLAB dense-gas dispersion model",
+      "license_spdx": "NOASSERTION",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-01T14:15:25Z"
+    },
+    {
+      "name": "slabx-lh2",
+      "url": "https://github.com/lyullee/slabx-lh2",
+      "description": "Liquid hydrogen extensions and an applicability criterion for the SLAB dense-gas dispersion model",
+      "license_spdx": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "pushed_at": "2026-10-06T13:53:10Z"
+    }
+  ]
+}

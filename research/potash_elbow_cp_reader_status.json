@@ -1,0 +1,87 @@
+{
+  "schema": "pipeline_integrity.potash_elbow_cp_reader_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.potash_elbow_cp",
+  "entrypoints": [
+    "read_potash_elbow_cp",
+    "PotashElbowCPError"
+  ],
+  "dataset_id": "potash_elbow_cp_slurry",
+  "source_version": "Mendeley Data V3 / DOI 10.17632/gkwrx7tz2k.3",
+  "license_id": "CC-BY-4.0",
+  "source_sha256": "9b6ba2bd756d402596783353c9dfb7ecad951fb6f3780e67e239acc7f9aa5103",
+  "source_bytes": 34410,
+  "standard_library_ooxml_reader": true,
+  "table_schema": {
+    "velocity_tables": {
+      "A.1": 2.5,
+      "A.2": 3.0,
+      "A.3": 3.5,
+      "A.4": 4.0
+    },
+    "source_fragments": [
+      {
+        "source_table_index": 1,
+        "velocity_table_id": "A.1",
+        "rows": 25,
+        "replicates": 9
+      },
+      {
+        "source_table_index": 2,
+        "velocity_table_id": "A.1",
+        "rows": 11,
+        "replicates": 9
+      },
+      {
+        "source_table_index": 3,
+        "velocity_table_id": "A.2",
+        "rows": 36,
+        "replicates": 4
+      },
+      {
+        "source_table_index": 4,
+        "velocity_table_id": "A.3",
+        "rows": 36,
+        "replicates": 3
+      },
+      {
+        "source_table_index": 5,
+        "velocity_table_id": "A.4",
+        "rows": 36,
+        "replicates": 3
+      }
+    ],
+    "source_fields": [
+      "sand_concentration_wt_pct",
+      "replicate_current_density_mA_cm2",
+      "reported_mean_current_density_mA_cm2",
+      "reported_95_ci_mA_cm2"
+    ],
+    "si_fields": "A/m2 values are explicitly derived with factor 10; originals retained",
+    "source_table_and_row_ids_preserved": true
+  },
+  "authored_test_functions": 3,
+  "authored_test_cases": 4,
+  "tests_executed": 0,
+  "source_observations_embedded_in_code_or_tests": false,
+  "raw_source_in_code_release": false,
+  "limitations": [
+    "Source summaries remain publisher reported and are not recomputed.",
+    "Replicate readings and velocity conditions are not independent field trials.",
+    "No field transfer, anode sizing, protection potential, corrosion loss, or cathodic-protection qualification is asserted.",
+    "Changing the expected checksum allows caller-pinned compatible files; default is the exact Mendeley V3 source digest."
+  ],
+  "guide": "docs/POTASH_ELBOW_CP_DATA_KO.md",
+  "actual_source_application": {
+    "receipt": "artifacts/derived/potash_elbow_cp_application_receipt.json",
+    "source_sha256_verified": true,
+    "row_count": 144,
+    "replicate_count": 684,
+    "pointwise_values_in_receipt": false,
+    "analysis": "descriptive ranges by velocity after explicit unit conversion",
+    "fit_or_inference_performed": false,
+    "tests_executed": 0,
+    "nurion_job_submitted": false,
+    "field_qualification": false
+  }
+}

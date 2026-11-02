@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.pressure_pair_qualification_status.v1",
+  "date": "2026-10-28",
+  "implementation": "src/pipeline_integrity/pressure_wave_data.py:qualify_pressure_pair",
+  "state": "implemented_static_validation_pending",
+  "reuses": [
+    "parse_pressure_csv",
+    "verify_pressure_csv_record",
+    "pressure_member_labels"
+  ],
+  "required_evidence": [
+    "both original CSV byte payloads replay their sealed parsed records",
+    "archive members are the P1/P2 files of one filename condition",
+    "caller supplies a nonempty pairing evidence identity",
+    "common-trigger and sample-alignment review decisions are explicit booleans"
+  ],
+  "ready_rule": "ready only when both common trigger and sample alignment are reviewed true and parsed clock IDs and SI coordinates agree",
+  "always_unresolved_by_pairing": [
+    "arrival ground truth",
+    "leak onset ground truth",
+    "independent validation of CSV physical-unit mapping"
+  ],
+  "replay_verifier": "verify_pressure_pair_qualification requires the caller-pinned expected evidence identity and both original raw payloads",
+  "new_test_functions_written": 4,
+  "pytest_executed": false,
+  "numerical_model_executed": false,
+  "confirmed_scope_percent_after_change": 67.2
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "pipeline_integrity.fracture_exchange_figure.v1",
+  "source_sha256": "9b9f6f07b02cfef551276b2fc4d2802989a9a62f8de2d7d20e1450e053c07f26",
+  "generator_sha256": "78a4d3ffeb496e242aff82dadeb5eda35381db2bf2ccc218f10f5ab9a28b4f23",
+  "figure_sha256": "e06e3ec8bd0779aef570150ee859036fb740254ea2e371feb7e43b5e33120e7e",
+  "experimental_observations_plotted": false,
+  "curve_is_authored_and_not_a_standard": true,
+  "calibration_out_of_scope_preserved": true
+}

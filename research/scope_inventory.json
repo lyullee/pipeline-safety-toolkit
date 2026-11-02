@@ -1,0 +1,12 @@
+{
+  "schema": "pipeline_integrity.scope_inventory.v1",
+  "capabilities": 202,
+  "states": {
+    "implemented": 36,
+    "interface_verified": 99,
+    "partial": 38,
+    "procedure_required": 29
+  },
+  "registered_models": 24,
+  "catalog_entries_are_not_independent_validation": true
+}

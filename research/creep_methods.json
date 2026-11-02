@@ -1,0 +1,67 @@
+{
+  "schema": "pipeline_integrity.creep_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "implementation_policy": "Reuse application-owned constitutive laws, censored-life inference and primary-data readers through strict MaterialJob schemas. Implement explicit support, exposure history, provenance and period semantics in this package.",
+  "new_runtime_dependencies": [],
+  "native_models": {
+    "creep.norton": "1.0.0",
+    "creep.larson_miller": "1.0.0",
+    "creep.time_fraction": "1.0.0",
+    "creep.lognormal_life_fit": "1.0.0",
+    "creep.conditional_life": "1.0.0",
+    "kinetics.arrhenius": "1.0.0",
+    "degradation.parabolic_oxidation": "1.0.0"
+  },
+  "method_selection": {
+    "baseline": "Preserve interpretable constitutive and time-fraction checks; deterministic indices do not supply event probabilities.",
+    "censored_inference": "Reuse the owner's censored lognormal model instead of regressing only observed failures or treating administrative endpoints as rupture. This model is not claimed to outperform all alternative lifetime families.",
+    "remaining_comparison": "Specimen-level held-out validation, alternative lifetime families, parameter uncertainty, multi-temperature identification, changing conditions and field transfer remain unqualified."
+  },
+  "primary_method_references": [
+    {
+      "title": "NIST Engineering Statistics Handbook: lognormal lifetime distribution",
+      "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr164.htm",
+      "use": "Distribution, median and survival relationships; original mathematical reference cases, no copied wording or tables."
+    },
+    {
+      "title": "NIST Engineering Statistics Handbook: censored maximum-likelihood estimation example",
+      "url": "https://www.itl.nist.gov/div898/handbook/apr/section4/apr413.htm",
+      "use": "Censoring-aware estimation and comparison perspective; no source example data or code imported."
+    }
+  ],
+  "data_rights": {
+    "version_doi": "10.5281/zenodo.14750432",
+    "registered_version": "1.1",
+    "workbook_filename_version": "v1.0",
+    "creators": [
+      "Luis A. Avila Calderon",
+      "Sina Schriever",
+      "Ying Han",
+      "Juergen Olbricht",
+      "Pedro Dolabella Portella",
+      "Birgit Skrotzki"
+    ],
+    "source": "https://zenodo.org/records/14750432",
+    "rights_metadata_url": "https://api.datacite.org/dois/10.5281/zenodo.14750432",
+    "retrieved_rights_identifier": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "cached_metadata_sha256": "c97e33ee44b90720df682b0e5674efe49abe1b157989b88087244d755421a3ae",
+    "assets_verified": 13,
+    "bytes": 5470578,
+    "supplier_md5_and_local_sha256_recorded": true,
+    "source_or_transformed_observation_rows_in_release": false
+  },
+  "risk_handoff": {
+    "endpoint": "creep_rupture",
+    "measure": "mission_probability",
+    "native_semantics": "conditional_first_failure_in_period",
+    "native_hra_single_period_event_executed": true,
+    "local_generic_multievent_period_adapter_completed": true,
+    "demand_annualization_or_containment_inferred": false,
+    "period_adapter_evidence": "research/period_risk_results.json",
+    "original_creep_verification_exercised_single_event_only": true
+  },
+  "public_explanations_and_comments_original": true,
+  "supplier_tables_or_design_criteria_copied": false,
+  "legal_or_field_qualification_claim": false
+}

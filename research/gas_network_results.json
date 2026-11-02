@@ -1,0 +1,321 @@
+{
+  "schema": "pipeline_integrity.gas_network_checks.v1",
+  "native_source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c",
+    "source_tree_files": 52
+  },
+  "module_sha256": {
+    "gas_network": "e4f706e70f947309e45d702ae59717bccf16239add93ee271f2ae4b5c1575b44",
+    "gaslib": "ac43f05477aba82fb05f4ea9bd10a49c0bbbf0baba63d81b81598f97ecead4d3"
+  },
+  "verification_script_sha256": "54d13b430b8112422469f5e2c04f72caa7084dfc3112ea463cbe1162331390f6",
+  "cases": {
+    "methane_load": {
+      "status": "computed",
+      "result_digest": "9f902ffcb2bbd0a1fbd878e2bbe5209534ef70b68548cd4b1805d04cdc317741",
+      "global_mass_residual_kg_s": -2.9121149935917856e-13,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.0017016901986934355,
+      "maximum_segment_density_change": 6.643057257876191e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999190.436689767
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "nitrogen_load": {
+      "status": "computed",
+      "result_digest": "5176a13dfb72373452352aa375a405937c18c511ea555807ba96372b8c9b8555",
+      "global_mass_residual_kg_s": 1.800781745942004e-13,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.001286682234176177,
+      "maximum_segment_density_change": 4.337060156745433e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999455.828743728
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "heated_load": {
+      "status": "computed",
+      "result_digest": "332b419bbd206a9b013879dac711814948016c1d8a509a43a1ea6c6032ef0eda",
+      "global_mass_residual_kg_s": -2.9121149935917856e-13,
+      "global_static_energy_residual_w": -1.1641532182693481e-10,
+      "maximum_mach": 0.0017025372319289698,
+      "maximum_segment_density_change": 0.0005168158494364939,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999190.243125916
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "two_source_mixing": {
+      "status": "computed",
+      "result_digest": "c65ad8d65c0a0aafa51b09255f84081fb57da063534803cf5f081cd4fca2e9fe",
+      "global_mass_residual_kg_s": -3.3928415632544784e-13,
+      "global_static_energy_residual_w": -5.0560629460960627e-08,
+      "maximum_mach": 0.0017452986969758912,
+      "maximum_segment_density_change": 6.963037826405805e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "warm": 6000000.0,
+        "load": 5999151.448956162
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "fixed_forward": {
+      "status": "computed",
+      "result_digest": "3411bc91df4be8cccc1556bd55f69f5027b13618b4f6f37b611d79a78409ae9a",
+      "global_mass_residual_kg_s": -7.189804307472514e-13,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.0019062972459813234,
+      "maximum_segment_density_change": 8.206061825308876e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "fixed_reverse": {
+      "status": "computed",
+      "result_digest": "353dd0128acb6e4eea8c1de6fb0951f44039c0c2ad2d31511bd41e009797b4d0",
+      "global_mass_residual_kg_s": -7.189804307472514e-13,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.0019062972459813234,
+      "maximum_segment_density_change": 8.206061825308876e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "parallel": {
+      "status": "computed",
+      "result_digest": "87a0d4d40dd2ab9d47a9b7eb35b9308c5d63e8f68bbfdd5f2aaa977fe9271449",
+      "global_mass_residual_kg_s": -1.4379608614945028e-12,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.0019062972459813234,
+      "maximum_segment_density_change": 8.206061825308876e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "outside_low_mach_domain": {
+      "status": "out_of_scope",
+      "result_digest": "c5dd4e1fac5176ea39f8182b4d478fbaf33769f3f40e8e3e09753e35176aa92a",
+      "global_mass_residual_kg_s": -0.0,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 7.540998464448202,
+      "maximum_segment_density_change": 0.9943512381838525,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 3000000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "liquid_rejected": {
+      "status": "out_of_scope",
+      "result_digest": "9523d59eacb453d36d31fe14e1b66361ecfe28d3a684e4db44352b80a4603a99",
+      "global_mass_residual_kg_s": null,
+      "global_static_energy_residual_w": null,
+      "maximum_mach": null,
+      "maximum_segment_density_change": null,
+      "node_pressures_pa_abs": {},
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "conversion_budget": {
+      "status": "withheld",
+      "result_digest": "47d214ad3c2171631e94e460665986a1b0326e386138876f97233008ed17dcc1",
+      "global_mass_residual_kg_s": null,
+      "global_static_energy_residual_w": null,
+      "maximum_mach": null,
+      "maximum_segment_density_change": null,
+      "node_pressures_pa_abs": {},
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "stagnant_unknown_enthalpy": {
+      "status": "withheld",
+      "result_digest": "562036679324764653a239f802eaf1f370dd5e9121f25aef48006d199c3650a4",
+      "global_mass_residual_kg_s": -0.0,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.0,
+      "maximum_segment_density_change": 0.0,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 6000000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": [
+        "__gas_internal:pipe:main:1",
+        "load"
+      ]
+    },
+    "methane_hydrogen_mixture": {
+      "status": "computed",
+      "result_digest": "127889a97f4d08beaf03f6e7a56d6cbc14f2c9990af3332a9cfe054fb5f593ef",
+      "global_mass_residual_kg_s": -1.538769112130467e-13,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.00179757129119729,
+      "maximum_segment_density_change": 7.403220278003067e-05,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5999094.078489706
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "laminar_1": {
+      "status": "computed",
+      "result_digest": "b50e5ebf045793ae0c058a2c8f9966f00796fe534980717ec20d86f3e4c88bba",
+      "global_mass_residual_kg_s": -0.0,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.0019982446495757675,
+      "maximum_segment_density_change": 0.009994644950819436,
+      "node_pressures_pa_abs": {
+        "source": 101000.0,
+        "load": 100000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "laminar_4": {
+      "status": "computed",
+      "result_digest": "cd94cb13d2c4703ad4a993ac419282ebde07e0f68af81cbb3765ad71526fb641",
+      "global_mass_residual_kg_s": -1.231653667943533e-16,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.001990838851026398,
+      "maximum_segment_density_change": 0.0025079776617387495,
+      "node_pressures_pa_abs": {
+        "source": 101000.0,
+        "load": 100000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "laminar_8": {
+      "status": "computed",
+      "result_digest": "19347fbac0658efbf46461f2e6ba206efdc37f4f0886468c28122cf764665d84",
+      "global_mass_residual_kg_s": -4.96564594998361e-17,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.001989604532602651,
+      "maximum_segment_density_change": 0.0012547787540143466,
+      "node_pressures_pa_abs": {
+        "source": 101000.0,
+        "load": 100000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    },
+    "gaslib_isolated_geometry_declared_methane": {
+      "status": "computed",
+      "result_digest": "475ecfa5ad163f023b8cd33422b26b4b2dce98768525fdc09ed6beded989066b",
+      "global_mass_residual_kg_s": -5.755396159656812e-13,
+      "global_static_energy_residual_w": 0.0,
+      "maximum_mach": 0.009586692971549316,
+      "maximum_segment_density_change": 0.011661599691424754,
+      "node_pressures_pa_abs": {
+        "source": 6000000.0,
+        "load": 5500000.0
+      },
+      "physical_field_validation": false,
+      "nodes_without_resolved_inflow": []
+    }
+  },
+  "native_provenance": {
+    "owner": "lh2dt_models",
+    "modules_sha256": {
+      "network": "d2437197f11fb3471eb571df8abf09b1c4b3cc81bccaffbbc5a2b8cc91ebe759",
+      "pipe": "531bd56e1c380e7d0f0930a9c7ff4899c5ab076881d8a62853b8e79a9767c0f4",
+      "properties": "835f694d46c55882dc9b51bdeda714995c05eda4bd90b3055662fb06ae6293a3"
+    },
+    "state_conversions": 33
+  },
+  "property_runtime": {
+    "provider_version": "8.0.0",
+    "provider_revision": "ae81610e7d23efc57f9d051c8e70a4d66e87537f"
+  },
+  "laminar_reference": {
+    "relation": "constant mid-state p/rho and viscosity in an isothermal laminar p-squared reference",
+    "reference_mass_flow_kg_s": 0.0009912057060717696,
+    "actual_mass_flow_kg_s": {
+      "1": 0.000996134359109827,
+      "4": 0.0009924425336902095,
+      "8": 0.0009918272201488517
+    },
+    "relative_errors": {
+      "1": 0.0049723816235784845,
+      "4": 0.0012478011485037974,
+      "8": 0.0006270283486816697
+    },
+    "reynolds": {
+      "1": 1772.3849187544897,
+      "4": 1765.8161907143767,
+      "8": 1764.7213861520859
+    },
+    "experimental_validation": false
+  },
+  "gaslib": {
+    "archive_sha256": "d264a3de986152a3c8e31e969ee9f492659828dfde8438ed2feffa9b31de43fb",
+    "network_member_sha256": "80b97b511e67446d0c4c5a349177702bd1ad17986864b31434f8e2816752b2b4",
+    "scenario_member_sha256": "5d3d0de103ec2a227ff83e140776c83b54de096a39a4c4ad0a2648930af3002b",
+    "citation": "Schmidt et al. (2017), GasLib - A Library of Gas Network Instances, DOI 10.3390/data2040040; Pfetsch et al., ZIB Report 12-41 (2012), as required by the source files",
+    "creators": [
+      "Martin Schmidt",
+      "Denis A\u00dfmann",
+      "Robert Burlacu",
+      "Jesco Humpola",
+      "Imke Joormann",
+      "Nikolaos Kanelakis",
+      "Thorsten Koch",
+      "Djamal Oucherif",
+      "Marc E. Pfetsch",
+      "Lars Schewe",
+      "Robert Schwarz",
+      "Mathias Sirvent"
+    ],
+    "license_id": "CC-BY-3.0",
+    "node_types": {
+      "source": 3,
+      "sink": 3,
+      "innode": 5
+    },
+    "connection_types": {
+      "pipe": 8,
+      "valve": 1,
+      "compressorStation": 2
+    },
+    "complete_network_run_status": "needs_data",
+    "missing_mapping": [
+      "reviewed gas composition and EOS mapping",
+      "pressure reference and selected boundary states",
+      "nomination volume/power basis and mass conversion",
+      "thermal boundary and active equipment configuration"
+    ],
+    "selected_geometry_id": "pipe01_entry01_entry03",
+    "explicit_changes": [
+      "isolated pipe; other network devices and nominations not simulated",
+      "declared pure Methane and 300 K source; original composition not inferred",
+      "declared absolute 6/5.5 MPa reservoirs",
+      "adiabatic declared case replaces original heat-transfer coefficient; no ambient boundary inferred"
+    ],
+    "initial_python_download": "TLS certificate-chain validation failed; no verification disabled",
+    "actual_acquisition": "PowerShell HTTPS with default OS certificate validation, then pinned SHA-256 and ZIP checks"
+  },
+  "actual_cli_result_matches": true,
+  "raw_and_transformed_observation_rows_excluded": true,
+  "full_total_energy_or_field_validation": false
+}

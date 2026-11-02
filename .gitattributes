@@ -1,0 +1,9 @@
+* text=auto eol=lf
+# Reviewed source fingerprints bind exact bytes, including existing line endings.
+# Preserve Python and JSON bytes on both Windows and Linux checkouts.
+*.py -text
+*.json -text
+*.png binary
+jobs/*.pbs text eol=lf
+jobs/*.sbatch text eol=lf
+jobs/*.sh text eol=lf

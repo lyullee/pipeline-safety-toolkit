@@ -1,0 +1,30 @@
+{
+  "schema": "pipeline_integrity.calibration_application_status.v1",
+  "date": "2026-10-29",
+  "state": "implemented_static_validation_pending",
+  "capability_ids": [
+    "instrument.custody_transfer"
+  ],
+  "module": "pipeline_integrity.calibration_application",
+  "entrypoints": [
+    "CalibrationApplicationRequest",
+    "apply_verified_calibration",
+    "verify_calibration_application"
+  ],
+  "owner_engines_reused": [
+    "calibration.verify_calibration_record",
+    "calibration.predict_calibration"
+  ],
+  "authored_test_functions": 3,
+  "tests_executed": 0,
+  "input_covariance_digest_bound": true,
+  "input_covariance_propagated": false,
+  "systematic_drift_or_reset_modelled": false,
+  "field_qualification": false,
+  "limitations": [
+    "Source and application IDs are caller supplied and require reviewed custody evidence.",
+    "The input covariance is retained by digest but is not propagated to output uncertainty.",
+    "Receipt verification checks structure and digest; source replay remains the responsibility of the existing calibration API and source ledger."
+  ],
+  "guide": "docs/CALIBRATION_APPLICATION_KO.md"
+}

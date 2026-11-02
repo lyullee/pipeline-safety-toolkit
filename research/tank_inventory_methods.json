@@ -1,0 +1,48 @@
+{
+  "schema": "pipeline_integrity.tank_inventory_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "geometry_backend": {
+    "name": "Fluids",
+    "tested_version": "1.3.1",
+    "official_documentation": "https://fluids.readthedocs.io/fluids.geometry.html",
+    "license_expression_from_installed_metadata": "MIT",
+    "adoption": "separately installed TANK with full volume evaluation and residual-checked inversion",
+    "default_inverse_method_name": "brenth",
+    "native_method_name_is_not_an_algorithm_proof": true,
+    "vertical_guppy_qualified": false,
+    "vendor_or_standard_shape_coefficients_assumed": false
+  },
+  "property_backend": {
+    "name": "CoolProp",
+    "tested_version": "8.0.0",
+    "adapter": "existing CheckedProvider and CoolPropProvider",
+    "scope": "declared uniform phase density for a static inventory; no equilibrium or dynamic solver"
+  },
+  "owned_engine_reuse": {
+    "lh2dt_models": "native HorizontalVesselGeometry; two symmetric horizontal shapes, volume-only comparison",
+    "process-monitoring-toolkit": "native SignalBatch with relative clock, unit metadata and invalid mask",
+    "existing_dpt_pressure_and_stratified_tank_models_duplicated": false,
+    "extension_request": "PI-X01"
+  },
+  "dataset": {
+    "id": "coupled_tank",
+    "record": "https://zenodo.org/records/19856119",
+    "metadata": "https://zenodo.org/api/records/19856119",
+    "creators": ["Guilherme Silva", "Marcela Coelho", "Valter Leite"],
+    "version": "v1.0.0",
+    "license_id": "CC-BY-4.0",
+    "selected_files": 6,
+    "selected_bytes": 286911,
+    "publisher_md5_verified": true,
+    "raw_or_transformed_observations_redistributed": false,
+    "source_status": "needs_data",
+    "unresolved": [
+      "truncated operational parameter JSON",
+      "relationship between h1/h2 centimetres and h3/h4 millimetres",
+      "internal geometry, level datum, pressure and temperature",
+      "missing final pump command and command-to-flow relation"
+    ]
+  },
+  "source_prose_or_restricted_tables_copied": false,
+  "field_inventory_or_mass_balance_validation_claim": false
+}

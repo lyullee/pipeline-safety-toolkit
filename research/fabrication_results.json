@@ -1,0 +1,146 @@
+{
+  "schema": "pipeline_integrity.fabrication_verification.v1",
+  "passed": true,
+  "native_owner": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "a10fec2140a170ab115565f5ce25cf303db4f5dffb1036a05608710e2362cbb5",
+    "source_tree_files": 69
+  },
+  "native_sources_unchanged": true,
+  "native_models": {
+    "fabrication.bend_strain": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "82f60f91a62b8194ed12b01bad8e76e72e7d46e82c7ee52da20acf5968cbe6f1",
+      "status": "computed",
+      "values": {
+        "outer_fiber_strain": 0.1
+      },
+      "output_units": {
+        "outer_fiber_strain": "1"
+      },
+      "requirement_outcome": "not_satisfied",
+      "receipt_digest": "5c967e9e0218480332bd6913697607ab93837b6bbb81f4060012cb73191791cb",
+      "result_digest": "5944a320a4d580b1f9a4a71ac11d002a04a1b119acfb1502214c3980ff9788c3"
+    },
+    "fabrication.bolt_preload": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "116f2558189c1b4dfa4cd27ee5a888f96305c0e84fcc17fe64d8c441bed225d9",
+      "status": "computed",
+      "values": {
+        "preload_N": 25000.0,
+        "nominal_tensile_stress_Pa": 100000000.0
+      },
+      "output_units": {
+        "preload_N": "N",
+        "nominal_tensile_stress_Pa": "Pa"
+      },
+      "requirement_outcome": "satisfied",
+      "receipt_digest": "c5d6a25a9089ae2c249ffed790804f12a5910f6558783f0545514acbc1feb81c",
+      "result_digest": "433764f4b4f831a080ec21cdae7bfe613e1c5cc9aeabc376f75dd9e638525217"
+    },
+    "fabrication.thickness_budget": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "3a8fcb985f096cd905c3def086147cfc9f494cc19127b6bdc05fe674bc284fdc",
+      "status": "computed",
+      "values": {
+        "minimum_supplied_thickness_m": 0.009000000000000001,
+        "minimum_formed_thickness_m": 0.008100000000000001,
+        "nominal_budget_structural_thickness_m": 0.007100000000000001,
+        "nominal_budget_margin_m": 0.00010000000000000113,
+        "measured_structural_thickness_m": 0.007500000000000001,
+        "measured_margin_m": 0.0005000000000000004
+      },
+      "output_units": {
+        "minimum_supplied_thickness_m": "m",
+        "minimum_formed_thickness_m": "m",
+        "nominal_budget_structural_thickness_m": "m",
+        "nominal_budget_margin_m": "m",
+        "measured_structural_thickness_m": "m",
+        "measured_margin_m": "m"
+      },
+      "requirement_outcome": "satisfied",
+      "receipt_digest": "2cda45c4e41c94b94090840a9188c36f9dc44aa08ace0e7a05f3a91fc59db010",
+      "result_digest": "3c526a5a9c040b51c451888ab91f12231be646ac33aef73b3efeb67dc7cef9bc"
+    }
+  },
+  "independent_authored_references": {
+    "authored_bend_kinematic_strain": {
+      "actual": 0.1,
+      "expected": 0.1,
+      "absolute_error": 0.0
+    },
+    "authored_torque_factor_force_N": {
+      "actual": 25000.0,
+      "expected": 25000.0,
+      "absolute_error": 0.0
+    },
+    "authored_effective_area_stress_Pa": {
+      "actual": 100000000.0,
+      "expected": 100000000.0,
+      "absolute_error": 0.0
+    },
+    "authored_minimum_supplied_thickness_m": {
+      "actual": 0.009000000000000001,
+      "expected": 0.009,
+      "absolute_error": 1.734723475976807e-18
+    },
+    "authored_minimum_formed_thickness_m": {
+      "actual": 0.008100000000000001,
+      "expected": 0.0081,
+      "absolute_error": 1.734723475976807e-18
+    },
+    "authored_nominal_budget_structural_thickness_m": {
+      "actual": 0.007100000000000001,
+      "expected": 0.0071,
+      "absolute_error": 8.673617379884035e-19
+    },
+    "authored_nominal_budget_margin_m": {
+      "actual": 0.00010000000000000113,
+      "expected": 0.0001,
+      "absolute_error": 1.1248597539537109e-18
+    },
+    "authored_measured_structural_thickness_m": {
+      "actual": 0.007500000000000001,
+      "expected": 0.0075,
+      "absolute_error": 8.673617379884035e-19
+    },
+    "authored_measured_margin_m": {
+      "actual": 0.0005000000000000004,
+      "expected": 0.0005,
+      "absolute_error": 4.336808689942018e-19
+    },
+    "zero_torque_force_N": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0
+    },
+    "zero_torque_stress_Pa": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0
+    }
+  },
+  "zero_torque_status": "computed",
+  "zero_torque_requirement_outcome": "not_satisfied",
+  "bend_support_boundary_status": "out_of_scope",
+  "exhausted_wall_status": "out_of_scope",
+  "optional_measurement_absence_preserved": true,
+  "measured_wall_manufacturing_and_forming_losses_not_subtracted_twice": true,
+  "unknown_cases": {
+    "all_parameters": "needs_data",
+    "unreviewed_method": "needs_data",
+    "unreviewed_nut_factor": "needs_data",
+    "unreviewed_effective_area": "needs_data"
+  },
+  "strict_json_boolean_rejected": true,
+  "schema_pin_change_rejected": true,
+  "native_context_preserved": true,
+  "calculation_and_requirement_outcomes_separate": true,
+  "pressure_capacity_leak_tightness_human_error_or_code_acceptance_established": false,
+  "field_validation": false,
+  "implementation_sha256": "10c6a2578e6970c20bddc8c2b99639f50d27fd1cc3c7c1119c74e9d228565123",
+  "example_sha256": "c05f8f28a3970c8926602254f4291f3a6f10f68717c1fea569ca64a2aa3a2609",
+  "script_sha256": "954de868d64b5f8f0e098346aa25d31c2c975cce44002035bff86d33206c9ae7",
+  "test_sha256": "2a509a5211c17a61e5f96ec8341bafa77e87f62e1bdc71f3c88b0ff2e914209f"
+}

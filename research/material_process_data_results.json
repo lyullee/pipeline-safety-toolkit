@@ -1,0 +1,194 @@
+{
+  "schema_version": "pipeline_integrity.material_process_data_review.v1",
+  "status": "source_observations_preserved_model_conditions_need_data",
+  "assets": [
+    {
+      "dataset_id": "bam_s355_charpy",
+      "filename": "charpy_test.zip",
+      "bytes": 151256,
+      "sha256": "9c71ba755acc1838458f3072ac79af9f204de84abb72024ca234a9a13543e720",
+      "supplier_checksum": "md5:d174fcac8acb997793226c38d74c7825",
+      "supplier_checksum_verified": true,
+      "checksum_origin": "publisher_metadata",
+      "citation": "Schilling, M., Glaubitz, S., Matzak, K., Rehmer, B., & Skrotzki, B. (2022). Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6778336",
+      "source_version": "1.0.0",
+      "license_id": "CC-BY-4.0"
+    },
+    {
+      "dataset_id": "bam_s355_charpy",
+      "filename": "_steel_sheet_test_data_mission_abstract_content.pdf",
+      "bytes": 235745,
+      "sha256": "d1bc049e7ee2b35a12d9ea6806919b69fe2009ce8af1f8c2aa33961e19c7db42",
+      "supplier_checksum": "md5:ffd721056f476f64873ac54e34e91bf7",
+      "supplier_checksum_verified": true,
+      "checksum_origin": "publisher_metadata",
+      "citation": "Schilling, M., Glaubitz, S., Matzak, K., Rehmer, B., & Skrotzki, B. (2022). Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6778336",
+      "creators": [
+        "Schilling, Markus",
+        "Glaubitz, Steffen",
+        "Matzak, Kathrin",
+        "Rehmer, Birgit",
+        "Skrotzki, Birgit"
+      ],
+      "source_version": "1.0.0",
+      "license_id": "CC-BY-4.0",
+      "source_url": "https://zenodo.org/records/6778336",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6778336"
+    },
+    {
+      "dataset_id": "bam_s355_charpy",
+      "filename": "Declaration_of_performance_S355_1.0577.pdf",
+      "bytes": 135887,
+      "sha256": "578d5c6703659ac1bc7a54ffc5a0c731345959ace7c013d15ab39b63bb85076c",
+      "supplier_checksum": "md5:800fa842b2f1d869eb8cb095e563f797",
+      "supplier_checksum_verified": true,
+      "checksum_origin": "publisher_metadata",
+      "citation": "Schilling, M., Glaubitz, S., Matzak, K., Rehmer, B., & Skrotzki, B. (2022). Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6778336",
+      "creators": [
+        "Schilling, Markus",
+        "Glaubitz, Steffen",
+        "Matzak, Kathrin",
+        "Rehmer, Birgit",
+        "Skrotzki, Birgit"
+      ],
+      "source_version": "1.0.0",
+      "license_id": "CC-BY-4.0",
+      "source_url": "https://zenodo.org/records/6778336",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6778336"
+    },
+    {
+      "dataset_id": "bam_s355_charpy",
+      "filename": "test_piece_extraction_sketch.pdf",
+      "bytes": 1009187,
+      "sha256": "87baccab13edc7ec79daf8e8bc5ae560459f11ba597b8856ef08aae23257afb3",
+      "supplier_checksum": "md5:c5538a50e55c7711602de9bb59cfa74d",
+      "supplier_checksum_verified": true,
+      "checksum_origin": "publisher_metadata",
+      "citation": "Schilling, M., Glaubitz, S., Matzak, K., Rehmer, B., & Skrotzki, B. (2022). Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6778336",
+      "creators": [
+        "Schilling, Markus",
+        "Glaubitz, Steffen",
+        "Matzak, Kathrin",
+        "Rehmer, Birgit",
+        "Skrotzki, Birgit"
+      ],
+      "source_version": "1.0.0",
+      "license_id": "CC-BY-4.0",
+      "source_url": "https://zenodo.org/records/6778336",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6778336"
+    },
+    {
+      "dataset_id": "ahss_hydrogen_permeation",
+      "filename": "Permeation_MS AHSS 1300.xlsx",
+      "bytes": 88885,
+      "sha256": "117d75a3f8329456732beada95b8f2be8bda688da88e6b8c7c83a9ee49698b3b",
+      "supplier_checksum": "sha256:117d75a3f8329456732beada95b8f2be8bda688da88e6b8c7c83a9ee49698b3b",
+      "supplier_checksum_verified": true,
+      "checksum_origin": "publisher_metadata",
+      "citation": "Macoretta, Giuseppe (2025), Hydrogen permeation test on MS AHSS grade 1300, Mendeley Data, V1, doi:10.17632/tnsgf7v76z.1",
+      "creators": [
+        "Giuseppe Macoretta"
+      ],
+      "source_version": "1",
+      "license_id": "CC-BY-4.0",
+      "source_url": "https://data.mendeley.com/datasets/tnsgf7v76z/1",
+      "rights_evidence_url": "https://data.mendeley.com/public-api/datasets/tnsgf7v76z/snapshot/1"
+    }
+  ],
+  "acquired_groups": 2,
+  "acquired_files": 5,
+  "acquired_bytes": 1620960,
+  "source_observation_digest": "b0b259264c312fa7f4adbc2d948c5bdf1909507185e8c3a7067e7474e8a86bdb",
+  "bam_charpy": {
+    "summary": {
+      "physical_specimens": 6,
+      "material_populations": 1,
+      "temperatures": 1,
+      "unbroken_specimens": 6,
+      "secondary_rows": 6,
+      "secondary_rows_are_independent": false
+    },
+    "maximum_secondary_energy_rounding_residual_J": 0.04999999999999716,
+    "maximum_dimension_reconciliation_residual_m": 0.0,
+    "measured_tested_lot_composition": null,
+    "manufacturer_declaration_tested_lot_match": null,
+    "manufacturer_declaration_verified_for_tested_lot": false,
+    "manufacturer_limits_imported": false,
+    "transition_parameters_fitted": false,
+    "applicability": {
+      "composition_reconcile": "needs_data",
+      "pitting_composition_index": "needs_data",
+      "impact_transition": "needs_data",
+      "fitted_transition_parameters": null,
+      "reasons": [
+        "Tested-lot composition is not provided; the declaration concerns a comparable batch.",
+        "One test temperature and no broken specimens cannot identify a transition curve.",
+        "No declared transition lower/upper shelves, midpoint and width are provided."
+      ]
+    }
+  },
+  "ahss_permeation": {
+    "summary": {
+      "histories": 2,
+      "rows": 1859,
+      "physical_specimens_resolved": null,
+      "histories_are_independent_specimens": false
+    },
+    "history_diagnostics": [
+      {
+        "history_id": "0.5 to 1 mA_cm2",
+        "rows": 1260,
+        "repeated_adjacent_times": 0,
+        "decreasing_adjacent_times": 0,
+        "missing_or_invalid_numeric_cells": 0
+      },
+      {
+        "history_id": "5 to 10 mA_cm2",
+        "rows": 599,
+        "repeated_adjacent_times": 0,
+        "decreasing_adjacent_times": 0,
+        "missing_or_invalid_numeric_cells": 0
+      }
+    ],
+    "active_area_resolved": false,
+    "total_current_converted_to_flux": false,
+    "electrochemical_boundary_converted_to_lattice_concentration": false,
+    "transport_parameters_fitted": false,
+    "applicability": {
+      "trap_equilibrium": "needs_data",
+      "semiinfinite_diffusion": "needs_data",
+      "slab_kinetic": "needs_data",
+      "fitted_transport_parameters": null,
+      "reasons": [
+        "Cathodic current density does not specify an entry lattice concentration.",
+        "Total measured current lacks a reviewed active area and flux interpretation.",
+        "Lattice diffusivity, initial state, trap properties and kinetic coefficients are absent.",
+        "A finite 1.2 mm sample is not automatically a semi-infinite domain."
+      ]
+    }
+  },
+  "model_boundary_review": {
+    "status": "passed_original_conditions_withheld",
+    "records": 9,
+    "status_counts": {
+      "needs_data": 9
+    },
+    "native_calls": 0,
+    "material_quality_requests": 3,
+    "hydrogen_transport_requests": 6,
+    "source_tree_before": {
+      "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+      "source_tree_files": 76
+    },
+    "source_tree_after": {
+      "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+      "source_tree_files": 76
+    },
+    "source_unchanged": true
+  },
+  "independent_physical_validation": false,
+  "source_observations_transformed_rows_and_receipts_in_public_summary": false,
+  "private_artifacts": "artifacts/material_process_data",
+  "implementation_sha256": "88a69afd592b58a550b2bbce3088e4d8665b5e88d7871d55ee66649ded9b8a64",
+  "script_sha256": "777a518283e5f2d53dd37077439fccd508faeed8e49692efe115514fd671ba97"
+}

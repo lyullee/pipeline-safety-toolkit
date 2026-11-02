@@ -1,0 +1,27 @@
+{
+  "title": "Pipeline Safety Toolkit: Composable Pipeline Engineering and Reproducible Verification",
+  "upload_type": "software",
+  "description": "Research alpha with explicit model contracts, SI/context boundaries, replaceable property providers and reproducible verification. The fixed scope contains223 engineering methods;198 bounded physical profiles are recorded and25 remain incomplete. This does not constitute field or all-variant qualification.",
+  "creators": [
+    {
+      "name": "Lee, Ugwiyeon"
+    }
+  ],
+  "version": "0.1.0a1",
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "pipeline",
+    "engineering",
+    "safety",
+    "verification",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/lyullee/pipeline-safety-toolkit",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

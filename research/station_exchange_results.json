@@ -1,0 +1,456 @@
+{
+  "schema": "station-exchange-verification/1",
+  "source_pin": "611a98deaf0d5d3305a46d6516f92d94354164f72793b11f5dea8a5da2aab91b",
+  "source_version": "0.1.2",
+  "license": "MIT",
+  "readiness": "research alpha; no engineering qualification",
+  "owner_files": {
+    "LICENSE": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4",
+    "pyproject.toml": "476305e20e41ef80070f22cf076d785ca4277bad22ea53f265a38374aee9cfb4",
+    "scripts/generate_hydrogen_table.py": "7a47fccd1ae0d7ce4e35abe44b5b6998f6ae141c2ddcd71ca6c528a40b30fb0b",
+    "src/h2station/__init__.py": "854178e62639d08177abd9baa5b349ef582779b643c31a80e7d474d756402b89",
+    "src/h2station/__main__.py": "515b496a4306abb4ab65bd22c7732b16f2ca0d29cca12f48dbfaec66800a3931",
+    "src/h2station/api.py": "1ce02b7f25fdd9dd233f429a13d25d155a6c88979f8956a37442de25ee0635c6",
+    "src/h2station/apparatus_release_validation.py": "a31b9dcebbb4320749e0f39b9661519626cadbc1624c66c14c6ffa7f0ec2c035",
+    "src/h2station/calibration_profiles.py": "c6a26cdc918ceb13e496f039ad44507c613c5bfc3b43626e8e0751ea46f6b3b8",
+    "src/h2station/cli.py": "6df2e10426480f058423113ab4ced9844c708b4bf58ede0e7a0389f343c9ace3",
+    "src/h2station/component_bundle_evidence.py": "4ae7df1d02f45b77c2300988c4771414413b310bd9aefaf62a5f9829b512539b",
+    "src/h2station/components.py": "d86c0a0d57ec07104f310cedd209318b2168f1d90af66d76265d7aa29b147d26",
+    "src/h2station/confidential_cascade_sequence_holdout.py": "a669e8bdc81ebfb471bdb7157f26d605903305777cd3422eb6edb5703edd9f4a",
+    "src/h2station/confidential_history_profile.py": "018e48d4dea67e98e900a39724583d4f404314d4871b7989a0780233580ce9e1",
+    "src/h2station/confidential_lifecycle_pressure_alignment.py": "d1072c3aa42df41d54ea23c4e97baacfcdb44221d175b18f34adfe34a96bdd2f",
+    "src/h2station/confidential_pressure_cycle_filtered_holdout.py": "6f450f5a2fe204b4ca35f045553c764fe6a0ed70412993305f12c6b10e55f719",
+    "src/h2station/confidential_pressure_cycle_holdout.py": "74bf77c848b5f038a93185cd82a68ecfdfbda860583f852fdaea385268e5d99a",
+    "src/h2station/confidential_pressure_cycle_ordered_holdout.py": "f9717a5f97ec73f9738c0f22e99d80d04b1ff28ff665e6279b4532ba49776d5e",
+    "src/h2station/confidential_recharge_flow.py": "6008cca58bf8c69e547563b766f429c6e7822b6c9871a14fbf77debb5d91a329",
+    "src/h2station/confidential_recharge_forecast.py": "2907bc4f39cf96a4730d2651b93cb7677e91a00a421ff93db9ff423d44d97f98",
+    "src/h2station/confidential_signal_consistency.py": "83f1c43624a69d597a2db7e41af60bfef7cb0b6d4b1fe6da974eede2d6700aed",
+    "src/h2station/controlled_station_replay.py": "510b3d1f2071904b24e20c6988db4c0f4182f6d1db3ee2e765133a3a186d6c31",
+    "src/h2station/data/emergency_playbooks.json": "997da81d9f273031dc5d160d1fdee826cc1defaa3cbf5651f9bd0c7c7988e052",
+    "src/h2station/data/hydrogen_properties_v1.npz": "7ee25c94cdba920398679d9eb5c2828460fe58bba32595bcff076adc4d2d2433",
+    "src/h2station/detector_policy.py": "6b2743d8c3327b93a74572724301787eb587839a1059c512aaf51270c9aaf1ec",
+    "src/h2station/dispenser.py": "92f0f09c3442fece4ee41a4d7e3ac134022679d7ca74a15aef73819b15a1832d",
+    "src/h2station/dispersion_proxy.py": "301a6c95c637f9585b97db125d4506138ede66fc29590231689249038a94b401",
+    "src/h2station/ekoto_2012_validation.py": "85525d3ab01a2201aba02e02dc316803f6e8094830660e4e31073c7ee6dac294",
+    "src/h2station/full_loop_bundle_evidence.py": "db26fb85a8b48db2311b31aa45e3697fe5fc273b6026264737eab7b2aa389dd2",
+    "src/h2station/full_station.py": "0ffc98042bb47dba5089101ec72f5c429a32a67493ee4291c347e90e309d32f7",
+    "src/h2station/grune_2014_validation.py": "5f264cfac51832bf1745fd730d5a7dbb23232c872ed9fe78f8a76906ba514438",
+    "src/h2station/hazop/__init__.py": "ba2edd19c776a1a4fb584aa08650b048302260235204523d6e933f07b84bf5f2",
+    "src/h2station/hazop/__main__.py": "8842200ca933f694ccb71aa8205ad5ceb91d3198a18ebb516244ded719c97302",
+    "src/h2station/hazop/database.py": "0ad5091c5ef091ccc7e629bd2127507c8e3868a1727a4de390f7a851f74330d5",
+    "src/h2station/hazop/engine.py": "b6bfe5302d192fe5553c72c5852ccd892c796bd8f7fa04f2bbd37ff773af66e2",
+    "src/h2station/hazop/expressions.py": "8da7177c0815e697681264a8370128d9f50a1de0087f4aca9e861fe5bb1d29d6",
+    "src/h2station/hazop/flame.py": "e23cd6819582b963005c05707247d03e01ea106569b3dce7570908b9efaf586a",
+    "src/h2station/hazop/mapping.py": "19f3971ff02a2edb9c99a72209de1f312f0656a73b60e49233d5392ca1cdbfbe",
+    "src/h2station/hazop/response.py": "cbbcf741bde852242a319a236a324b7fe421b89de6e8ef0dd329422c009be4ab",
+    "src/h2station/hazop/runtime.py": "905ee1201b22e27a9c89480c52f815f1566077fa91393f4bb5f44b0336705fc9",
+    "src/h2station/hazop/scenario_actions.py": "2013c02956347fe9530eeb23e92ddb4685a0696a746377cd084ba3c708da25ae",
+    "src/h2station/hydrogen_blend_dispersion_validation.py": "78cd19bc83c283b923d3cb66d7ffcfdf5ba128195225ec16ef57d240c7b098f6",
+    "src/h2station/hytunnel_carpark_validation.py": "3c747ba64c1fdcdc20da59d7d682969010f921f3fe5c5cc958c5c3280492597e",
+    "src/h2station/hytunnel_spatial_validation.py": "90b730f20a452c307da2d92c321a95c3263a62fdec648fe1dba910154d3e1d01",
+    "src/h2station/hytunnel_two_zone_diagnostic.py": "a2e25f2e2acdcccf7bc5ea752f123aa0320acbb5163eb919d0bd5d0da663ad90",
+    "src/h2station/ignited_pressure_peaking.py": "8b91060fb0058fd83928a3b67872b9c196861bd0468d1669453e9d44cca60d82",
+    "src/h2station/integration_lock.py": "8618048271a7419bb3291260da6e81689867d39801132a68dd2512c04808d9c1",
+    "src/h2station/liang_2026_release_benchmark.py": "4a58080ff64767b7b6eabddee25dc4d1877d87503507b0d2e8a9d4aa797b2dc0",
+    "src/h2station/lifecycle_evidence.py": "a36b66bbd9a099a6fb0aa642f332f955fe496d618f83ae356020856d2a3edb3e",
+    "src/h2station/line_transient_development.py": "51ea43c28774364c3b506b4df7f56577ac83fd31d212f448fbdaa58bf4acf4d0",
+    "src/h2station/llm_grounding.py": "dec09b451a58e475745967c0457ddac5d96e2c29655b6ef7d9c8f67e9ff37288",
+    "src/h2station/local_evidence.py": "cfef0e5bf106b99a85778b43804358c0cd0403ea6b3f998f37bf541eb50cd7af",
+    "src/h2station/nbsdc_ingest.py": "eeb302bc89a190914810e28c32ca91bf8c7878386aca252736e408983d1ecdab",
+    "src/h2station/network.py": "bd3b42c3cab29e0d5011a682472decdf9fc074242ba1a549ed0a88a21945af48",
+    "src/h2station/operations.py": "fbb3261e2edabeba75ed171ea17a601a9a2bc9ac4c994ce7ce3ba7b736e7ebdc",
+    "src/h2station/pipes.py": "58f78a549d27d3d52dce5d720543ac7eb9566b59cdbcb634634094d008f66660",
+    "src/h2station/preslhy_80k_holdout.py": "2f53a5f4c012796a3d8f4b1d3ef8bc3134e33848c67bd5d16aca80d241469c1c",
+    "src/h2station/preslhy_e31_concentration_transport.py": "2f917c6e221f1ac35eaeaf59a302e9dba4f8e12dfe101828edca978c33188b30",
+    "src/h2station/preslhy_e5_validation.py": "378d5535c3a777a4bf366fcab6fd75b5e542a3714dd396e2dccd18ac6cc04354",
+    "src/h2station/preslhy_nonadiabatic.py": "c20c49c884f31dce7d1501a36ae0af4ba85eca3417a37079704f4e4d3d10e194",
+    "src/h2station/preslhy_partb_validation.py": "4b941ec7f5ab3f11263e75b21c8c87bda5db204e9c3081779bb41875264db25f",
+    "src/h2station/preslhy_validation.py": "3b5fe2149c1f5374e89cdabfed90074d0b9b0b2c33aa091526615d8d4f094673",
+    "src/h2station/pressure_driven_thermal.py": "8c6b38d24a3a046dd485bc5ff812b69201e8813596a8480ca9398d4759dda7c0",
+    "src/h2station/privacy_safe_full_loop_intake.py": "36111ca12f3b607453937ddd9fb57f7ac5cde763683a40b17a4bd325ccd68af5",
+    "src/h2station/prospective_spatial_rank.py": "7ec8658fa729b1b8817e86314d7d178ee1ad3772f00e1f2b76e10f95d636b387",
+    "src/h2station/protocol.py": "2c6b8e89e037ef04246d77459e8ee15eef9323b67565a718c7568e2bda425cf5",
+    "src/h2station/proust_release_network_development.py": "7693cdbc42f11b46386564113830eb1db7018f6f0936723a8f7f81d5b748b410",
+    "src/h2station/proust_release_validation.py": "726c71b17cb451fbc421fc5a2d9324179dda7439b9b7b7804c46424776f7291f",
+    "src/h2station/public_benchmarks.py": "bcd10ede4c21f1a03644173859b76abaa128075e6efd72c77fa2073f0b4a169b",
+    "src/h2station/public_tank_calibration.py": "db963b9f6d1f67137e2bbec97b45cb723260d61a32aa34441f697bda2fffd6fc",
+    "src/h2station/public_validation.py": "bf48c5a9de769e4b2e143e4038572aec96ed111d8e90ac2487442e7087253c46",
+    "src/h2station/release_network.py": "ba240756c4dddb55aa7a98fc40b3635494bf157e7fbe4835bbddb2f06afeced6",
+    "src/h2station/release_network_development.py": "b9e695b7d3db9ffdaed2c491b10f424a83be690ee90adb83e5e5d4114b18d3b8",
+    "src/h2station/research_evaluation.py": "ab7dd791a0f54858086bbc2ef25467be29cb01fbd6da63a27dfaf5d2fe3f1a84",
+    "src/h2station/restricted_attestation.py": "fad0e03df73178f990ae7e9acad8c05ac35a3a768a65bcff18f5f4b438adc084",
+    "src/h2station/restricted_attestation_review.py": "71b3c95f095c8fe4eac928d3ccc812b73d6ded65bcb3bb6281d6492b7897a643",
+    "src/h2station/risk/__init__.py": "8b4be6aebfa601aa5779464e2beb1fb74f886247dce143410a1faf26ab100842",
+    "src/h2station/risk/cabinet_ventilation.py": "30b086c43da8901778ab9fb546cd63b049c0bfb64998c334e2516acf497cfc74",
+    "src/h2station/risk/consequence_uncertainty.py": "8d9e6f9ce02e2b48843b1cbf4a2239116609b017adb389e96d882ce1317fbff8",
+    "src/h2station/risk/coordinator.py": "952339172b2b80340426e943e70b434ba876ac77790238fa967928a8c6f97f3a",
+    "src/h2station/risk/delayed_ignition.py": "b86451c49d6f445193eb096e7df04e9f140b2644f92cfec7d53191fec43e36c9",
+    "src/h2station/risk/hyram_adapter.py": "131df6b4df42285e246e1b7cf9afd039de9d415b051a854629dac5f2ebffcc59",
+    "src/h2station/risk/jet_flame.py": "0f4c4dc1ca3ea6d6c3792ae1233e288e65162845d0ff22f8674bd0363a7a1a2c",
+    "src/h2station/risk/live.py": "73b9d430fd02ccad87758aa206ce2f31fdb78604225f7f3a3579231097fd97d4",
+    "src/h2station/risk/release_uncertainty.py": "c0d6fdb5dd6ed542ce3c4232caa525047a36808d855a2f3649a2edb690c02a32",
+    "src/h2station/risk/runtime_backend.py": "24e84c27736cdd21eea4a0174bca102ac8304b9af4b3629a907c52a19986e55e",
+    "src/h2station/risk/scenario_planning.py": "b70e84819c3c40016bc44fc0d659411392e7801e05c37e30bda1330f187f8059",
+    "src/h2station/risk/sensor_assessment.py": "53d347d54b8ca0bab827a23284731efea01d9bc3e23cba4b86f7ea9258b33536",
+    "src/h2station/runtime_evidence_gate.py": "7ea1407dd46b5adeeaa7aeb59ecc9c65df4b1ac08f029b925ec09f3259e1f5c8",
+    "src/h2station/safe_operation.py": "73d7d71c699775622d1c9003b40f8150a1bff1b6b85808efcd68dabdadc95f87",
+    "src/h2station/safety.py": "8c45a58e1709a95e615860df4671194f1b441ee50e2b2a7bcebf321a691129e8",
+    "src/h2station/safety_runtime.py": "12857261d7aea777178b3b406a8e4ad457ec5c242e36160f384799a7f899ded8",
+    "src/h2station/scenario.py": "41e0676839c24ecf21a2ed2b200c7df2c26c43355d44c249c5288df8d1c18f69",
+    "src/h2station/schefer_2006_validation.py": "426cfb93cd8b6bf3b5e452a575ae259a7c662d04eee51fe52010ddf1b21804f8",
+    "src/h2station/schefer_2007_nonadiabatic_diagnostic.py": "955f79fadab95cf3b98748aa07817defa23c05f9f660f744e63e3ae3678509b8",
+    "src/h2station/schefer_2007_validation.py": "bd3f5eae66e3d8bc093ebc182fa5c9f8a308813468632c973a65f76e30f2b580",
+    "src/h2station/simulation_clock.py": "1a3747ad8f29371aa57fa30ff3f3a82dc22b6d52131744f5658da33290a269ec",
+    "src/h2station/spatial_detector.py": "d01b4378a43b3dc233d7093733119963c11db208f604160eba0fa7f962d7580a",
+    "src/h2station/spatial_development.py": "86ccff97715ed71ebb475184eb3bc540dc5b0bbf35bb2d7af45eafca67028bb5",
+    "src/h2station/station_dynamics_calibration.py": "fb91af7f6f826335c2b7471de355fd0178ba9aa292d1ac775f8a1fa26836f52e",
+    "src/h2station/station_pressure_forecast.py": "af26df8a3a509457be8c45b5cc0d7d24e25f8124a7001f2b3fe1d1141188300e",
+    "src/h2station/station_thermal_diagnostic.py": "0a012ffdc841132047b715a3d0c4b49e214e101ba43483a589aac284a653f854",
+    "src/h2station/tabulated.py": "b6b97b1614721c1ed95922d318157a9ae4ce0a3205187fd71c5ae4d1aaa3fe15",
+    "src/h2station/thermo.py": "2f6e0c2cf927368239ae5e1df1263142a8e0c971ac8b5cce56a7266845d116a6",
+    "src/h2station/thermo_types.py": "aeab3b3f2b6407833cd33e32579223ae078b1a1efdc40b8c8e29924e6321d8e4",
+    "src/h2station/unreal_api.py": "6d8cd3bd96f3ce399c7c4e218c4941e22ce14aaeef2b4d0a597c69eb85e4171d",
+    "src/h2station/usn_ignited_jet.py": "0dcc73f0df5b3fb4e0166a4b29ef7f0b7072a86089a3836e49e26d3f69d0608b",
+    "src/h2station/validation.py": "0c4a57d05b2cff413d5aad6c415e6b06394704ffae4c9150927d0e775b7ad576",
+    "src/h2station/vehicle.py": "28a3e664bd7291f1557332fd929aa97e812df7a5accc5192c7c2a81b60f9ca84",
+    "src/h2station/ventilation_calibration.py": "232d1aaf31dcd19fee981ae455dc9b60fc2f19c84f8a56157788f0992014af64",
+    "src/h2station/virtual_safety.py": "7fccc00d8e58d131f58e43ae82ae545a466a25b22e0efebf46d9ac4fc3a7040a",
+    "src/h2station/visualization.py": "f00368fc3a83a94e0382565b5c76e09002d4d4da5dfbfb23b9461b8caaabacdd"
+  },
+  "upstream_pin": "80f80dcedd185a863645e0e90897ecf6a797a5f9e54618db495041f482bc3447",
+  "derived_table": {
+    "generator": "scripts/generate_hydrogen_table.py",
+    "CoolProp": "8.0.0",
+    "original_table_missing": true
+  },
+  "checks": {
+    "partial_preserves_prefix": true,
+    "upstream_unchanged": true,
+    "snapshot_preserves_upstream_files": true,
+    "open_native_success": true,
+    "open_mass": true,
+    "open_energy": true,
+    "closed_native_success": true,
+    "closed_mass": true,
+    "closed_energy": true,
+    "equal_native_success": true,
+    "equal_mass": true,
+    "equal_energy": true,
+    "reverse_blocked_native_success": true,
+    "reverse_blocked_mass": true,
+    "reverse_blocked_energy": true,
+    "reverse_allowed_native_success": true,
+    "reverse_allowed_mass": true,
+    "reverse_allowed_energy": true,
+    "refined_native_success": true,
+    "refined_mass": true,
+    "refined_energy": true,
+    "switched_native_success": true,
+    "switched_mass": true,
+    "switched_energy": true,
+    "three_nodes_native_success": true,
+    "three_nodes_mass": true,
+    "three_nodes_energy": true,
+    "full_reference_native_success": true,
+    "open_sign": true,
+    "closed": true,
+    "equal": true,
+    "reverse_blocked": true,
+    "reverse_allowed": true,
+    "refinement": true,
+    "three_nodes": true,
+    "clock": true,
+    "no_active_risk": true,
+    "open_stored_receipt": true,
+    "open_signal_clock": true,
+    "open_signal_origin": true,
+    "closed_stored_receipt": true,
+    "closed_signal_clock": true,
+    "closed_signal_origin": true,
+    "closed_signal_no_flow": true,
+    "closed_stream_enthalpy_unknown": true,
+    "equal_stored_receipt": true,
+    "equal_signal_clock": true,
+    "equal_signal_origin": true,
+    "reverse_blocked_stored_receipt": true,
+    "reverse_blocked_signal_clock": true,
+    "reverse_blocked_signal_origin": true,
+    "reverse_allowed_stored_receipt": true,
+    "reverse_allowed_signal_clock": true,
+    "reverse_allowed_signal_origin": true,
+    "reverse_signal_signed_nominal": true,
+    "refined_stored_receipt": true,
+    "refined_signal_clock": true,
+    "refined_signal_origin": true,
+    "switched_stored_receipt": true,
+    "switched_signal_clock": true,
+    "switched_signal_origin": true,
+    "three_nodes_stored_receipt": true,
+    "three_nodes_signal_clock": true,
+    "three_nodes_signal_origin": true,
+    "full_reference_stored_receipt": true,
+    "full_reference_signal_clock": true,
+    "full_reference_signal_origin": true,
+    "partial_stored_receipt": true,
+    "partial_default_export_refused": true,
+    "partial_opt_in_export": true,
+    "corruption_clock_refused": true,
+    "corruption_ports_refused": true,
+    "corruption_balance_refused": true,
+    "corruption_property_basis_refused": true,
+    "corruption_owner_refused": true,
+    "corruption_selected_evidence_refused": true,
+    "corruption_mirror_refused": true,
+    "corruption_worker_pin_refused": true
+  },
+  "check_meaning": "observable numerical budgets and authored behavioural/contract checks, not independent full-engine or field validation",
+  "rehashed_corruptions_refused": {
+    "clock": true,
+    "ports": true,
+    "balance": true,
+    "property_basis": true,
+    "owner": true,
+    "selected_evidence": true,
+    "mirror": true,
+    "worker_pin": true
+  },
+  "passed": 78,
+  "total": 78,
+  "cases": {
+    "open": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": -6.661338147750939e-16,
+        "energy_residual_j": 2.449927762881456e-08,
+        "ambient_heat_j": -0.00016162945507005588,
+        "initial_total_energy_j": 10865949.10284676
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 61,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "closed": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": 0.0,
+        "energy_residual_j": 0.0,
+        "ambient_heat_j": 0.0,
+        "initial_total_energy_j": 10865949.10284676
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 60,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "equal": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": 0.0,
+        "energy_residual_j": 0.0,
+        "ambient_heat_j": 0.0,
+        "initial_total_energy_j": 13646178.955183469
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 61,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "reverse_blocked": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": 0.0,
+        "energy_residual_j": 0.0,
+        "ambient_heat_j": 0.0,
+        "initial_total_energy_j": 15216819.21022467
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 57,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "reverse_allowed": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": -8.881784197001252e-16,
+        "energy_residual_j": -1.788556289739605e-08,
+        "ambient_heat_j": -2.6370208266257572e-05,
+        "initial_total_energy_j": 15216819.21022467
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 61,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "refined": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": 4.440892098500626e-16,
+        "energy_residual_j": 9.834643037719441e-08,
+        "ambient_heat_j": -0.00016160085673959655,
+        "initial_total_energy_j": 10865949.10284676
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 99,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "switched": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": 0.0,
+        "energy_residual_j": -3.7044283885734656e-06,
+        "ambient_heat_j": -0.00014158748118688888,
+        "initial_total_energy_j": 10865949.10284676
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 124,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "three_nodes": {
+      "status": "computed",
+      "balance": {
+        "mass_residual_kg": 0.0,
+        "energy_residual_j": -1.0935090983822367e-07,
+        "ambient_heat_j": -0.00018259006119762943,
+        "initial_total_energy_j": 14065637.346624512
+      },
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": 64,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "reviewed station API; no facility qualification",
+      "limitations": [
+        "synthetic closed network; no full station, vehicle, PLC, risk or experimental validation",
+        "energy quadrature diagnostic; interrupted native solve has no recoverable internal samples"
+      ]
+    },
+    "full_reference": {
+      "status": "computed",
+      "balance": null,
+      "reason": null,
+      "runtime": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "fluids": "1.3.1",
+        "ht": "1.2.0"
+      },
+      "rhs_calls": null,
+      "owner_version": "0.1.2",
+      "source_unchanged": true,
+      "scope": "native reference full station; no faults or consequence backend",
+      "limitations": [
+        "no leak/fault injection, HyRAM, HRA, external commands or LLM",
+        "no facility qualification or full-loop balance claim"
+      ]
+    }
+  },
+  "limited_case": {
+    "status": "partial",
+    "solver_message": "RuntimeError: RHS call budget exhausted",
+    "rhs_calls": 101,
+    "balance": {
+      "mass_residual_kg": 0.0,
+      "energy_residual_j": -6.200212396833968e-08,
+      "ambient_heat_j": -2.0406605420930647e-05,
+      "initial_total_energy_j": 10865949.10284676
+    }
+  },
+  "adapter_files": {
+    "src/pipeline_integrity/station_exchange.py": "431b01526c724846b7fedcfc81d7e4d81ad7a9828db7852c3dd4d87e4b62b298",
+    "src/pipeline_integrity/station_worker.py": "bbbec6903d2c9dff1d352055b2d81d9f8bf8be3c3ef48cc8b6fa0a2224842078",
+    "scripts/check_station_exchange.py": "583af2931e64ff756760a75f949af93d371c5d99569380eae80922b90ee5dc13",
+    "tests/test_station_exchange.py": "e203ecf9315afc29954ef584426030a6d2ae84d17f8126b90eeed56b11362e11",
+    "examples/station_exchange.py": "1dd501481e920c54d0b3bfd09f6675f276b05c69fe61791646ca53bf6dc8f168",
+    "docs/STATION_EXCHANGE_KO.md": "ae930d4e3c798bb9ba73543216fdcc8be3256d73022cae5507c7264cf6a9e754"
+  },
+  "limits": [
+    "synthetic verification, not experimental validation",
+    "full-loop balance remains needs_data",
+    "HyRAM consequence, active faults, external control and LLM excluded"
+  ]
+}

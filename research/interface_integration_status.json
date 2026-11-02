@@ -1,0 +1,200 @@
+{
+  "schema": "pipeline_integrity.interface_integration_status.v1",
+  "kind": "static_integration_and_written_regressions_not_execution",
+  "generated_utc": "2026-10-28T10:52:12.672478+00:00",
+  "baseline_bundle_sha256": "bf9e8cc145ce3325ca92c1b7e9dca8a9502b4b4c106877f9351b12ac485c8629",
+  "source_changes": [
+    {
+      "source_path": "src/pipeline_integrity/adapter_jobs.py",
+      "baseline_sha256": null,
+      "current_sha256": "b4efca633ff8d555abfd887ed5e220a704ca34521c8778bcfd98de59f19487b2",
+      "change": "added"
+    },
+    {
+      "source_path": "src/pipeline_integrity/cli.py",
+      "baseline_sha256": "dca7189d72ecc6a1afdeedea074c01bb6e2c0cd047779ba7ec710a061dae1bbd",
+      "current_sha256": "3cac0b5e7f928df4dc366f1735a491952b7a4e5bb6e326a3082a650305837bc5",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/structural.py",
+      "baseline_sha256": "56470da2e5eada022b820543483f8b90b3dbd173dcbccc5397c340ca97ae084f",
+      "current_sha256": "89b1874a8f58b0824792fe9ea6a02c61edc25a6bbb7799ac3ee2b123552f9a3c",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/soil_pipe.py",
+      "baseline_sha256": "3ec11f22281a1e502fda3b199890fa88df3b682be0f7188b68b48fc0002827a5",
+      "current_sha256": "f2929f38f5395bb5b40409656380bab66e2436f1a3530fdb2d7de366a2429cce",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/buckling.py",
+      "baseline_sha256": "a7eaa596a39c7542b2e4d04baca41158d4c412824e7f22e8365437c6a1a16366",
+      "current_sha256": "1ed70f7a2a1afde40bb3d5c2daeea646409bc0c523c21692a044986d80c1d5f5",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/inverse_localization.py",
+      "baseline_sha256": "524b0be7a5d3d91301af8be192d0a0453a413638dbbf933ff3d39ba9db001666",
+      "current_sha256": "b7e3f30cc7efeccc704ada3f303ee036f8e003ea2de5b3f66b9a0851fb7da254",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/external_sensing.py",
+      "baseline_sha256": "c0d26bf578b2558222086051955627398dc199c01a75c6604a0ec04358c17d52",
+      "current_sha256": "495bf2bf6c361cb8ad3ded8a13d599fbb29480d8755b4ecd2f485c8d463358be",
+      "change": "modified"
+    },
+    {
+      "source_path": "scripts/hpc_tests.py",
+      "baseline_sha256": "da307bb85b2d93b87e3359855a06f13fd34789b5456f9740a702c873ed7e652f",
+      "current_sha256": "ff02d1143cd48007496a226c3fc9b56db8607908167be3b4a4d99f4f2ac16038",
+      "change": "modified"
+    },
+    {
+      "source_path": "scripts/export_adapter_jobs.py",
+      "baseline_sha256": null,
+      "current_sha256": "9a68e46c79a68968b243d1071984ed6f2647ef477cc98fb357ace472e54d4855",
+      "change": "added"
+    }
+  ],
+  "allowlisted_adapter_jobs": 18,
+  "declared_adapter_signatures_statically_checked": 18,
+  "public_structural_api": [
+    "build_native_frame",
+    "audit_frame_equilibrium",
+    "assemble_frame_stiffness"
+  ],
+  "added_unexecuted_test_functions": [
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_byte_budget_precedes_adapter_execution"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_cli_budget_rejects_input_before_decode"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_cli_dispatch_and_verify_without_provider_loading"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_cli_static_adapter_list_does_not_build_numeric_registry"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_false_dictionary_verifier_is_not_truthy_success"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_job_inherits_finite_serializer_without_validator_name_collision"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_resealed_identity_cannot_claim_current_source"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_resealed_result_still_requires_original_adapter_replay"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_schema_describes_real_contract_without_evaluation"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_static_list_and_unknown_id_do_not_import_engines"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_unknown_provider_role_or_payload_rejected"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_unregistered_provider_rejected_before_native_import"
+    },
+    {
+      "source_path": "tests/test_adapter_jobs.py",
+      "function": "test_withheld_status_and_original_replay_preserved"
+    },
+    {
+      "source_path": "tests/test_structural.py",
+      "function": "test_public_audit_rejects_incomplete_reactions_and_duplicate_evidence"
+    },
+    {
+      "source_path": "tests/test_structural.py",
+      "function": "test_public_equilibrium_audit_retains_existing_force_and_moment_result"
+    },
+    {
+      "source_path": "tests/test_structural.py",
+      "function": "test_public_factory_native_input_mutation_is_detected"
+    },
+    {
+      "source_path": "tests/test_structural.py",
+      "function": "test_public_factory_withholds_without_loading_optional_owner"
+    },
+    {
+      "source_path": "tests/test_structural.py",
+      "function": "test_public_stiffness_receipt_uses_shared_native_factory_and_support_basis"
+    },
+    {
+      "source_path": "tests/test_inverse_localization.py",
+      "function": "test_identifiability_whitens_prediction_difference_not_absolute_baseline"
+    },
+    {
+      "source_path": "tests/test_external_sensing.py",
+      "function": "test_explicit_equal_boxcar_exposures_keep_a_distinct_trace_response"
+    },
+    {
+      "source_path": "tests/test_external_sensing.py",
+      "function": "test_exposure_summary_is_available_at_end_not_midpoint"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_aggregate_does_not_accept_plausible_but_incomplete_junit"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_aggregate_pass_requires_actual_collection_and_stage_coverage"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_allowed_skips_are_distinct_from_no_skip_pass"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_genuine_failed_cases_are_reported_in_actual_counts"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_native_pytest_call_failure_plus_teardown_error_is_not_controller_failure"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_owner_license_and_native_binary_are_pinned_and_isolated"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_payload_does_not_bundle_private_nested_artifacts"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_resealed_manifest_noncanonical_paths_rejected"
+    },
+    {
+      "source_path": "tests/test_hpc_tests.py",
+      "function": "test_run_sanitizes_pytest_environment_without_launching_tests"
+    }
+  ],
+  "test_function_count_is_not_collected_or_passed_case_count": true,
+  "static_checks": [
+    "ruff check .",
+    "ruff format --check .",
+    "compileall src scripts tests examples"
+  ],
+  "pytest_native_mpi_pbs_executions": 0,
+  "engineering_qualification": false,
+  "owner_request_index": "docs/owner_requests/README.md"
+}

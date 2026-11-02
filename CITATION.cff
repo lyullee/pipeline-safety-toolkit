@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the software version and record the model, data and verification scope used."
+type: software
+title: "Pipeline Safety Toolkit: Composable Pipeline Engineering and Reproducible Verification"
+authors:
+  - family-names: "Lee"
+    given-names: "Ugwiyeon"
+version: "0.1.0a1"
+date-released: "2026-11-03"
+license: MIT
+url: "https://github.com/lyullee/pipeline-safety-toolkit"
+repository-code: "https://github.com/lyullee/pipeline-safety-toolkit"
+keywords:
+  - pipeline
+  - engineering
+  - safety
+  - verification
+  - reproducibility

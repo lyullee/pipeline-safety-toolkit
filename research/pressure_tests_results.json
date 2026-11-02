@@ -1,0 +1,135 @@
+{
+  "schema": "pipeline_integrity.pressure_tests_verification.v1",
+  "independent_references": {
+    "test_reference_load": {
+      "actual": 2250000.0,
+      "expected": 2250000.0,
+      "absolute_error": 0.0
+    },
+    "test_local_elevation": {
+      "actual": 2348066.5,
+      "expected": 2348066.5,
+      "absolute_error": 0.0
+    },
+    "adiabatic_final_volume": {
+      "actual": 0.1640670712015276,
+      "expected": 0.1640670712015276,
+      "absolute_error": 0.0
+    },
+    "reversible_work_not_blast": {
+      "actual": 8983.232199618105,
+      "expected": 8983.232199618096,
+      "absolute_error": 9.094947017729282e-12
+    },
+    "ideal_molar_outflow": {
+      "actual": 0.040090785014242014,
+      "expected": 0.040090785014242014,
+      "absolute_error": 0.0
+    },
+    "reference_volume_outflow": {
+      "actual": 0.001,
+      "expected": 0.001,
+      "absolute_error": 0.0
+    },
+    "vacuum_total_load": {
+      "actual": 0.0002,
+      "expected": 0.0002,
+      "absolute_error": 0.0
+    },
+    "negative_background_corrected_retained": {
+      "actual": -9.999999999999996e-05,
+      "expected": -0.0001,
+      "absolute_error": 4.0657581468206416e-20
+    },
+    "complete_history_total_net_moles": {
+      "actual": 0.40090785014242014,
+      "expected": 0.40090785014242014,
+      "absolute_error": 0.0
+    },
+    "interval_endpoint_residual": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0
+    },
+    "cooling_pressure_drop_not_mole_loss": {
+      "actual": -8.881784197001253e-17,
+      "expected": 0.0,
+      "absolute_error": 8.881784197001253e-17
+    },
+    "negative_net_outflow_retained": {
+      "actual": -0.04009078501424197,
+      "expected": -0.040090785014242014,
+      "absolute_error": 4.163336342344337e-17
+    }
+  },
+  "native_models": {
+    "inspection.pressure_test_load": {
+      "status": "computed",
+      "values": {
+        "reference_test_pressure_Pa": 2250000.0,
+        "local_test_pressure_Pa": 2348066.5
+      }
+    },
+    "inspection.gas_expansion_energy": {
+      "status": "computed",
+      "values": {
+        "ideal_expansion_work_J": 8983.232199618105,
+        "final_volume_m3": 0.1640670712015276
+      }
+    },
+    "inspection.gas_pressure_decay": {
+      "status": "computed",
+      "values": {
+        "net_molar_outflow_mol_s": 0.040090785014242014,
+        "reference_volume_outflow_m3_s": 0.001
+      }
+    },
+    "inspection.vacuum_rise": {
+      "status": "computed",
+      "values": {
+        "total_gas_load_Pa_m3_s": 0.0002,
+        "background_corrected_throughput_Pa_m3_s": -9.999999999999996e-05
+      }
+    }
+  },
+  "primary_data": {
+    "dataset_id": "pe100_pressure_decay",
+    "source": "https://zenodo.org/records/20582921",
+    "citation": "Milos Mician; Radoslav Konar; https://doi.org/10.5281/zenodo.20582921",
+    "license_id": "CC-BY-4.0",
+    "source_sha256": "f2b34758d95a2ebb43ee4ec4630acefdc331ce8f4e6e8477bfda8b4248fda5ad",
+    "supplier_checksum": "md5:6ac71c66d5bdb45c508f73b4aa7f56b1",
+    "physical_capillary_profiles": 10,
+    "time_rows": 310,
+    "samples_per_profile": 31,
+    "metadata_only_no_defect_profiles_not_manufactured": true,
+    "ambient_temperature_channel_identified": false,
+    "gas_temperature_role_resolved": false,
+    "measured_volume_and_atmospheric_pressure_available": false,
+    "direct_inventory_profiles_withheld": 10,
+    "hypothetical_named_fluid_profiles_computed": 8,
+    "predefined_Air_model_is_declared_assumption": true,
+    "unresolved_mixture_profiles_withheld": 2,
+    "hypothetical_rigid_volume_m3": 0.01,
+    "hypothetical_ambient_pa_abs": 101325.0,
+    "explicit_reference_pressure_pa_abs": 100000.0,
+    "explicit_reference_temperature_k": 293.15,
+    "conditional_scenario_only": true,
+    "negative_interval_net_outflows_preserved": 5,
+    "maximum_interval_endpoint_mole_residual": 0.0,
+    "maximum_independent_density_mole_error": 9.974659986866641e-17,
+    "field_or_leak_path_validation": false
+  },
+  "external_material_source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "aa037d7dcab42c17b1d54abc03eee92cf29d21a59e21726a0af4a76548379520",
+    "source_tree_files": 68
+  },
+  "external_source_unchanged": true,
+  "implementation_sha256": "2ab9258d79c23b5e96e61eb27537a06053eb94f6684d752d9726c34e446bdaac",
+  "script_sha256": "4409ee37e31f49e1b092f478cab5ce83c7c2661644391e289993ee3018b11c30",
+  "example_sha256": "387eac9c127edf75b96312ed902934247b182aba7ad2d66ea1cade69988e4ee0",
+  "raw_or_transformed_observations_in_release": false,
+  "inspection_acceptance_or_field_validation": false
+}

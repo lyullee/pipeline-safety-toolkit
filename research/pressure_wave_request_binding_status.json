@@ -1,0 +1,25 @@
+{
+  "schema": "pipeline_integrity.pressure_wave_request_binding_status.v1",
+  "date": "2026-10-28",
+  "state": "implemented_static_validation_pending",
+  "entrypoint": "pipeline_integrity.pressure_wave.bind_pressure_wave_pair_request",
+  "inputs": [
+    "caller-pinned pressure-pair trace record digest",
+    "caller-pinned pressure-pair qualification digest",
+    "RunContext with unique analysis and sensor-role evidence",
+    "explicit left and right sensor IDs",
+    "complete pressure-wave feature, timing and topology policy"
+  ],
+  "invariants": [
+    "P1 is never assumed to be the left sensor",
+    "left and right roles cover exactly the two qualified sensors",
+    "trace asset, clock and origin match the actual context",
+    "qualification source hashes match trace source hashes",
+    "request boundary, sensor-role evidence and trace-record digest are added to context metadata"
+  ],
+  "new_test_functions_written": 2,
+  "new_parameterized_cases_written": 5,
+  "pytest_executed": false,
+  "numerical_model_executed": false,
+  "confirmed_scope_percent_after_change": 67.2
+}

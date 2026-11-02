@@ -1,0 +1,85 @@
+{
+  "schema": "pipeline_integrity.leak_multisensor_adapter_status.v1",
+  "date": "2026-10-28",
+  "dataset_id": "leak_multisensor_transients",
+  "state": "implemented_static_validation_pending",
+  "actual_archive_inventory_executed": true,
+  "inventory_record_digest": "49432f6a5359f7716dfc30411af097e38b0426ef38500d2d2ed7e6953e6a42ce",
+  "portable_archive_identity": true,
+  "local_absolute_path_in_receipt": false,
+  "local_download_alias_in_receipt": false,
+  "representative_accelerometer_member_read_executed": true,
+  "representative_accelerometer_member": {
+    "condition": "Branched/Circumferential Crack/0.18 LPS/A1",
+    "bytes": 23109495,
+    "sha256": "cbf37677c4544c1162baf9b95c1ce17dc6c999143b510861458a11a8549b3c6f",
+    "header": "Sample,Value",
+    "si_mapping_applied": false
+  },
+  "representative_hydrophone_member_read_executed": true,
+  "representative_hydrophone_member": {
+    "condition": "Background Noise/H1",
+    "bytes": 1274840,
+    "sha256": "74368d6562b84abe345fcf365f5ce0117936a72c8c8eb41076a0ad3923ac6401",
+    "vendor_raw_decoded": false
+  },
+  "families": {
+    "accelerometer": {
+      "files": 80,
+      "bytes": 1848001201,
+      "format": "csv"
+    },
+    "dynamic_pressure": {
+      "files": 80,
+      "bytes": 1883226891,
+      "format": "csv"
+    },
+    "hydrophone": {
+      "files": 122,
+      "bytes": 150702480,
+      "format": "vendor_raw"
+    }
+  },
+  "entrypoints": [
+    "pipeline_integrity.leak_multisensor_data.inventory_leak_multisensor_archive",
+    "pipeline_integrity.leak_multisensor_data.accelerometer_member_labels",
+    "pipeline_integrity.leak_multisensor_data.read_accelerometer_member",
+    "pipeline_integrity.leak_multisensor_data.parse_accelerometer_csv",
+    "pipeline_integrity.leak_multisensor_data.verify_accelerometer_csv_record",
+    "pipeline_integrity.leak_multisensor_data.qualify_accelerometer_pair",
+    "pipeline_integrity.leak_multisensor_data.verify_accelerometer_pair_qualification",
+    "pipeline_integrity.leak_multisensor_data.build_accelerometer_pair_trace_record",
+    "pipeline_integrity.leak_multisensor_data.verify_accelerometer_pair_trace_record",
+    "pipeline_integrity.leak_multisensor_data.bind_accelerometer_delay_request",
+    "pipeline_integrity.leak_multisensor_data.hydrophone_member_labels",
+    "pipeline_integrity.leak_multisensor_data.read_hydrophone_member",
+    "pipeline_integrity.leak_multisensor_data.verify_hydrophone_source_record",
+    "pipeline_integrity.leak_multisensor_data.LeakMultisensorArchiveSession",
+    "pipeline_integrity.leak_multisensor_data.verify_leak_multisensor_member_source"
+  ],
+  "hydrophone_vendor_raw_decoded": false,
+  "hydrophone_opaque_source_receipt_implemented": true,
+  "hydrophone_filename_marker_semantics_inferred": false,
+  "physical_units_inferred": false,
+  "clock_or_event_truth_inferred": false,
+  "accelerometer_pair_requires_reviewed_units_trigger_and_alignment": true,
+  "accelerometer_trace_interpolation_or_resampling_performed": false,
+  "accelerometer_sensor_roles_inferred": false,
+  "accelerometer_delay_engine_duplicated": false,
+  "accelerometer_delay_request_binding_requires_context_evidence": true,
+  "new_test_functions_written": 19,
+  "new_parameterized_cases_written": 15,
+  "pytest_executed": false,
+  "confirmed_scope_percent_after_change": 67.2,
+  "archive_reuse_session": {
+    "implemented": true,
+    "reads_per_session": "one member at a time",
+    "whole_archive_sha256": "verified at session open through inventory and at close",
+    "member_byte_and_time_budgets": true,
+    "member_receipt_provisional_until_close": true,
+    "numerical_tests_executed": 0
+  },
+  "limitations": [
+    "Session member receipts remain provisional until successful context exit rechecks the full archive SHA-256; consumers must not publish or treat them as verified before exit."
+  ]
+}

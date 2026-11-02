@@ -1,0 +1,86 @@
+{
+  "schema": "pipeline_integrity.physics_integration_checks.v1",
+  "origin": "synthetic",
+  "lh2dt_source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c"
+  },
+  "prism_source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "e3052a317818501fae3a29475b6b057ba5f260b406547354e29f755b0298a0b8"
+  },
+  "lh2dt_roundtrip_temperature_difference_k": -1.3287149158713873e-12,
+  "native_actuator": {
+    "stroke_time_s": 2.0,
+    "elapsed_s": 0.5,
+    "opening": 0.75,
+    "initial_flow_kg_s": 0.004254454924181797,
+    "advanced_flow_kg_s": 0.003190841193136347
+  },
+  "prism_handoff": {
+    "schema": "pipeline_integrity.port_handoff.v1",
+    "owner": "PRISM",
+    "native_payload": {
+      "schema_version": "prism.provider_port_state.v1",
+      "component_id": "demo_hydrogen_pipe",
+      "port_id": "outlet",
+      "time_s": 0.0,
+      "fluid": "ParaHydrogen",
+      "phase": "liquid",
+      "pressure_pa_abs": 300000.0,
+      "temperature_k": 20.0,
+      "density_kg_m3": 71.4114434071726,
+      "specific_enthalpy_j_kg": -726.941142637802,
+      "specific_entropy_j_kgk": -174.82908786891747,
+      "vapour_quality": null,
+      "mass_flow_kg_s": 0.01,
+      "position_enu_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction_enu": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "provenance": "pipeline context 96dcd185a070207c91f0f45f18c484404cb6825c27d9ac6aa1b01ceeee5747f7; clock elapsed; basis CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "source_digest": "ab156473e8918aab5dc4a86f7c56011c413e69068079957823c0e391eedcaf30",
+      "state_owner": "equipment_twin"
+    },
+    "boundary": {
+      "schema_version": "pipeline_integrity.flow_boundary.v1",
+      "component_id": "demo_hydrogen_pipe",
+      "port_id": "outlet",
+      "clock_id": "elapsed",
+      "time_s": 0.0,
+      "direction": "out_of_component",
+      "fluid": "ParaHydrogen",
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "pressure_pa_abs": 300000.0,
+      "temperature_k": 20.0,
+      "mass_flow_kg_s": 0.01,
+      "specific_enthalpy_j_kg": -726.941142637802,
+      "phase": "liquid",
+      "vapour_mass_fraction": null,
+      "evidence_ids": [
+        "declared_synthetic_case"
+      ]
+    },
+    "context": {
+      "asset_id": "demo_hydrogen_pipe",
+      "scenario_id": "declared_port_exchange",
+      "clock_id": "elapsed",
+      "origin": "synthetic",
+      "evidence": [],
+      "metadata": {}
+    },
+    "boundary_digest": "ab156473e8918aab5dc4a86f7c56011c413e69068079957823c0e391eedcaf30",
+    "clock_and_property_basis_retained": true,
+    "consequence_or_frequency_calculated": false
+  },
+  "consequence_chain_executed": false,
+  "external_sources_modified": false
+}

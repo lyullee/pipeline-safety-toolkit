@@ -1,0 +1,42 @@
+{
+  "schema": "pipeline_integrity.uncertainty_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "selected": [
+    {
+      "component": "SciPy stats.qmc and continuous inverse distributions",
+      "installed_version": "1.18.1",
+      "license": "BSD-3-Clause; upstream distribution retains component notices",
+      "sources": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.qmc.Sobol.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.qmc.LatinHypercube.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html"
+      ],
+      "decision": "Reuse the existing optional dependency for scrambled balanced Sobol, plain LHS and inverse distributions; retain seed, runtime and failed transforms."
+    },
+    {
+      "component": "NumPy weighted quantiles and symmetric matrix eigendecomposition",
+      "installed_version": "2.5.4",
+      "license": "BSD-3-Clause; upstream distribution retains component notices",
+      "sources": [
+        "https://numpy.org/doc/stable/reference/generated/numpy.quantile.html"
+      ],
+      "decision": "Use inverted_cdf for weighted discrete conditional quantiles. Declare PSD roundoff tolerance and report the reconstructed latent correlation root."
+    }
+  ],
+  "evaluated_reference": {
+    "component": "statsmodels GaussianCopula",
+    "source": "https://www.statsmodels.org/stable/generated/statsmodels.distributions.copula.api.GaussianCopula.html",
+    "installed_or_copied": false,
+    "decision": "Reviewed the latent Gaussian probability transform. The present feature needs explicit paired QMC coordinates rather than fitted copula likelihoods; no additional runtime dependency is introduced. This is not a claim of superior fitting or tail estimation."
+  },
+  "native_model_reuse": [
+    "equipment.pump_power",
+    "economics.energy v2",
+    "economics.cashflow v2 via lifecycle",
+    "human-reliability-toolkit demand_frequency via HRARiskClient"
+  ],
+  "new_distribution_fit_or_tail_claim": false,
+  "raw_data_in_code_release": false,
+  "documentation_and_comments_original": true,
+  "legal_guarantee": false
+}

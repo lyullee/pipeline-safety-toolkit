@@ -1,0 +1,9 @@
+{
+  "schema": "pipeline_integrity.inspection_planning_figure.v1",
+  "summary_sha256": "16aba5a709e28074b75b3f53cb2bc157e58f5b974b2084d8f6894f199050602c",
+  "reference_sha256": "bcb5b64b31bd04ae65af62ad58914efd3b75e45d9d8af03bb44b418df4ec4c27",
+  "generator_sha256": "460297fcd08f15557334784059a7aa57c7a00ab3b783e011209ca8191b242907",
+  "figure_sha256": "5641670d8c39199439a0ed8cc49837fdff0a9111ec9b24c451aebf38d8e9769c",
+  "original_synthetic_case": true,
+  "field_calibrated": false
+}

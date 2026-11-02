@@ -1,0 +1,446 @@
+{
+  "schema": "pipeline_integrity.calibration.verification.v1",
+  "checks": {
+    "authored_deming:stored_replay": true,
+    "authored_deming:input_binding": true,
+    "authored_deming:source_binding": true,
+    "deming:computed": true,
+    "deming:independent_closed_form_slope": true,
+    "deming:independent_closed_form_intercept": true,
+    "deming:degree_count": true,
+    "deming:absolute_not_residual_scaled": true,
+    "uncertainty_scaled:stored_replay": true,
+    "uncertainty_scaled:input_binding": true,
+    "uncertainty_scaled:source_binding": true,
+    "scale:parameters_invariant": true,
+    "scale:covariance_times_nine": true,
+    "scale:objective_divided_nine": true,
+    "explicit_exact_input:stored_replay": true,
+    "explicit_exact_input:input_binding": true,
+    "explicit_exact_input:source_binding": true,
+    "exact:linear_solution": true,
+    "exact:absolute_covariance": true,
+    "exact:no_latent_x": true,
+    "nonlinear_exponential:stored_replay": true,
+    "nonlinear_exponential:input_binding": true,
+    "nonlinear_exponential:source_binding": true,
+    "nonlinear:known_parameters": true,
+    "nonlinear:independent_information": true,
+    "shared_cross_axis_covariance:stored_replay": true,
+    "shared_cross_axis_covariance:input_binding": true,
+    "shared_cross_axis_covariance:source_binding": true,
+    "shared:retained_off_diagonal": true,
+    "heldout_original:stored_replay": true,
+    "heldout_original:input_binding": true,
+    "heldout_original:source_binding": true,
+    "heldout_changed_only:stored_replay": true,
+    "heldout_changed_only:input_binding": true,
+    "heldout_changed_only:source_binding": true,
+    "holdout:parameters_unchanged": true,
+    "holdout:native_fit_inputs_and_outputs_identical": true,
+    "holdout:large_residual_observable": true,
+    "holdout:separate_error_declaration": true,
+    "withheld_same_run:stored_replay": true,
+    "withheld_same_run:input_binding": true,
+    "withheld_same_run:source_binding": true,
+    "holdout:same_run_refused": true,
+    "withheld_singular:stored_replay": true,
+    "withheld_singular:input_binding": true,
+    "withheld_singular:source_binding": true,
+    "singular:no_repair": true,
+    "unreviewed:stored_replay": true,
+    "unreviewed:input_binding": true,
+    "unreviewed:source_binding": true,
+    "unreviewed:no_backend": true,
+    "application:no_hidden_input_uncertainty": true,
+    "application:no_extrapolation": true,
+    "tamper:parameters": true,
+    "tamper:covariance": true,
+    "tamper:native_result": true,
+    "tamper:backend": true,
+    "tamper:split": true,
+    "tamper:context": true,
+    "tamper:status": true,
+    "source:cached_inputs_match_pinned_archive": true,
+    "emue_published_full_covariance:stored_replay": true,
+    "emue_published_full_covariance:input_binding": true,
+    "emue_published_full_covariance:source_binding": true,
+    "source:thirty_paired_points": true,
+    "source:all_cross_correlations_preserved": true,
+    "source:published_rounded_offset": true,
+    "source:published_rounded_slope": true,
+    "source:published_rounded_u_offset": true,
+    "source:published_rounded_u_slope": true,
+    "source:published_rounded_covariance": true,
+    "source:one_campaign_no_validation": true,
+    "odr:actual_native_success": true,
+    "odr:deming_parameter_agreement": true,
+    "odr:raw_irank_is_zero_for_full_rank": true,
+    "odr:sd_is_residual_scaled": true,
+    "odr:full_vector_failure_not_accepted": true
+  },
+  "passed": 77,
+  "total": 77,
+  "requests": 11,
+  "computed": 8,
+  "cases": {
+    "authored_deming": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 23,
+      "fit_count": 6,
+      "record_digest": "0ac54e910df1e8557156bfdec9bc21f3fd2b6a5cbfc548faf2ad65cfcf969a3f",
+      "audits": {
+        "joint_jacobian_rank": 8,
+        "unknown_count": 8,
+        "singular_values": [
+          276.5674254473941,
+          118.652243856922,
+          113.09802482112947,
+          113.09802482112947,
+          113.09802482112944,
+          113.09802482112944,
+          76.26540222773775,
+          32.75499357151788
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 1.2393674376155323e-11,
+        "degrees_of_freedom": 4,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ]
+    },
+    "uncertainty_scaled": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 23,
+      "fit_count": 6,
+      "record_digest": "653947f09a562e8358bed31a7c377906c68a1937c86da926255f1b266d694b02",
+      "audits": {
+        "joint_jacobian_rank": 8,
+        "unknown_count": 8,
+        "singular_values": [
+          92.18914181579804,
+          39.55074795230734,
+          37.69934160704316,
+          37.699341607043145,
+          37.699341607043145,
+          37.699341607043145,
+          25.421800742579233,
+          10.918331190505953
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 1.2393585496932296e-11,
+        "degrees_of_freedom": 4,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ]
+    },
+    "explicit_exact_input": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 11,
+      "fit_count": 6,
+      "record_digest": "0c404ed49f03676b21d6dfc25a6b8cf7956151ffc0d671158ee7e7399237b66b",
+      "audits": {
+        "joint_jacobian_rank": 2,
+        "unknown_count": 2,
+        "singular_values": [
+          263.6567736172794,
+          48.58091935859924
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 8.886331670431148e-12,
+        "degrees_of_freedom": 4,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ]
+    },
+    "nonlinear_exponential": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 143,
+      "fit_count": 6,
+      "record_digest": "35b071dfab26708c65d3bcd90a61310daa306f307c269f42ea3cd74c99884c51",
+      "audits": {
+        "joint_jacobian_rank": 2,
+        "unknown_count": 2,
+        "singular_values": [
+          2312.831289754791,
+          109.75562807146838
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": null,
+        "degrees_of_freedom": 4,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ]
+    },
+    "shared_cross_axis_covariance": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 22,
+      "fit_count": 6,
+      "record_digest": "68acf45e3b59374f9853127c6422b1a84d019b89bcaa01ee6135b46bcb382961",
+      "audits": {
+        "joint_jacobian_rank": 8,
+        "unknown_count": 8,
+        "singular_values": [
+          228.1673638473319,
+          113.09802482457135,
+          113.09802482457134,
+          113.09802482457134,
+          113.09802482457134,
+          112.27140921479396,
+          57.24407339266874,
+          32.71428342509621
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 1.2481160372374561e-11,
+        "degrees_of_freedom": 4,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ]
+    },
+    "heldout_original": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 19,
+      "fit_count": 4,
+      "record_digest": "055b1772d150650db6e75977d8ca7679f27c3b14ad75c5e2dd609029f4e8b8b8",
+      "audits": {
+        "joint_jacobian_rank": 6,
+        "unknown_count": 6,
+        "singular_values": [
+          187.8733806064073,
+          115.20240260817027,
+          112.63106153726862,
+          112.63106153726861,
+          70.76599176515982,
+          23.358763784419253
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 8.887752755902642e-12,
+        "degrees_of_freedom": 2,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": []
+    },
+    "heldout_changed_only": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 19,
+      "fit_count": 4,
+      "record_digest": "26853da664b469242cfca0400a5bd1762cdf245c46a52dcf8ab486f4e0328f07",
+      "audits": {
+        "joint_jacobian_rank": 6,
+        "unknown_count": 6,
+        "singular_values": [
+          187.8733806064073,
+          115.20240260817027,
+          112.63106153726862,
+          112.63106153726861,
+          70.76599176515982,
+          23.358763784419253
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 8.887752755902642e-12,
+        "degrees_of_freedom": 2,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": []
+    },
+    "withheld_same_run": {
+      "status": "out_of_scope",
+      "native_called": false,
+      "model_calls": 0,
+      "fit_count": null,
+      "record_digest": "a324766f99d124a3f46b3f20650d0bc60f86e08f9fd034604a4169a1195ab80b",
+      "audits": null,
+      "notes": [
+        "fit and validation share the split unit run_id"
+      ]
+    },
+    "withheld_singular": {
+      "status": "out_of_scope",
+      "native_called": false,
+      "model_calls": 0,
+      "fit_count": null,
+      "record_digest": "43e4b7321e8083814ab9ad075feb90ade548ea901354042e004a7331e4a47f71",
+      "audits": null,
+      "notes": [
+        "ValueError: complete stochastic covariance is numerically singular; no repair is applied"
+      ]
+    },
+    "unreviewed": {
+      "status": "needs_data",
+      "native_called": false,
+      "model_calls": 0,
+      "fit_count": null,
+      "record_digest": "81c2d7b16a8c019a20e116c573b8522fe7e77a4bd0593a56e8eaac0ed2d5eb25",
+      "audits": null,
+      "notes": [
+        "review and evidence required: measurement_pairs_units_and_full_covariance",
+        "review and evidence required: model_domain_and_error_structure",
+        "review and evidence required: run_population_split_and_shared_errors",
+        "review and evidence required: absolute_covariance_local_linearization",
+        "standard covariance definition must be reviewed"
+      ]
+    },
+    "emue_published_full_covariance": {
+      "status": "computed",
+      "native_called": true,
+      "model_calls": 70,
+      "fit_count": 30,
+      "record_digest": "3995d0993b9931b01c1e20292c75a2143c57daa068ef428f8d6148d7d347b1aa",
+      "audits": {
+        "joint_jacobian_rank": 32,
+        "unknown_count": 32,
+        "singular_values": [
+          107086.97986604308,
+          105924.25256168075,
+          105323.65314015423,
+          104362.3681775388,
+          103183.82568387494,
+          102301.663655309,
+          100997.02328071535,
+          99624.10563828955,
+          98209.36007433115,
+          96844.54210810183,
+          94775.33268685645,
+          94419.17887208721,
+          93985.38158328543,
+          92757.74700230324,
+          91697.45772053201,
+          90971.71018192188,
+          89500.69138734242,
+          88464.69749824799,
+          86535.33380267599,
+          85400.39094646659,
+          84640.89276874541,
+          78668.56004325658,
+          75067.24393557962,
+          70010.76082538244,
+          65188.99944797379,
+          53971.156266416314,
+          47524.18144983454,
+          30425.774073440374,
+          27301.362184081103,
+          721.9205655040532,
+          307.9706094663036,
+          166.89322525863108
+        ],
+        "full_rank": true,
+        "active_bounds": false,
+        "native_success": true,
+        "analytical_derivative_relative_error": 2.5819987972989894e-09,
+        "degrees_of_freedom": 28,
+        "covariance_residual_scaled": false,
+        "fit_validation_shared_covariance": false
+      },
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ]
+    }
+  },
+  "source_application": {
+    "asset_sha256": "351c8f662491ae18394f1ac181f0c7ccdb89a7719faae94cdeb6f8a867d9356c",
+    "source_record_digest": "99c5176eddbd9a909d03aa071c83ea0044ccc7fa49166acd13753f4d594407d0",
+    "model_source_sha256": "629b92cc08d2f12c88c2df98cdba8433679c5472ef6349a18e7529700fb2b3cc",
+    "fit_count": 30,
+    "comparison": "published rounded numerical reference, not independent experimental validation",
+    "parameters": {
+      "offset": 0.9966305635235851,
+      "slope": -3.5267395836365374
+    },
+    "standard_uncertainty": [
+      0.0009607332303363187,
+      0.048265233669321096
+    ],
+    "parameter_covariance": [
+      [
+        9.23008339872458e-07,
+        -2.5347247079682374e-05
+      ],
+      [
+        -2.5347247079682374e-05,
+        0.0023295327811541666
+      ]
+    ],
+    "weighted_sum_squares": 3.1204529388672344,
+    "independent_validation": false
+  },
+  "optional_odr_reference": {
+    "version": "0.7.0",
+    "native_binary_sha256": {
+      "odrpack.libs/libgcc_s_seh-1-b18fa0962e8bfb1054d5abf9715576e9.dll": "5849f63658923f157a0e148eca0aae7b6e04f996c620865ddd0a185c2b4fb8e4",
+      "odrpack.libs/libgfortran-5-07cad6836ff2124d1082909e92002696.dll": "3040dc32a205b1c85eb712af65d5cb0259b15216008224bddb6c8546eeb3858e",
+      "odrpack.libs/libquadmath-0-59a12b7cebbf9aa8a010d9e48b6d09a6.dll": "8b36fa6b508e0640d416f928bfcc4a84b0b10bccb1ea9168393797abdcd32fb6",
+      "odrpack.libs/libstdc++-6-97786d3c5f76f8cee7ee6e45ad933f48.dll": "74e6a4ce9440101c5bd134cb0138ddaac62f1be5a76c9188b9c08e12530ec1ad",
+      "odrpack.libs/libwinpthread-1-76cc52adfcdb8c800813b2ae8da42a90.dll": "76cc52adfcdb8c800813b2ae8da42a908934eb1ee54ce8e9744fc8d703c76ee1",
+      "odrpack/__odrpack.cp312-win_amd64.pyd": "c2d96cdbca1ff8616bb7015548e5eb7cdba2f938021b6273ce0d97882a9799c4"
+    },
+    "full_vector_failure_info": 10010,
+    "irank_meaning": "preserved native rank deficiency; zero does not mean zero fitted rank",
+    "license": "Python/ODRPACK95 MIT; compiler runtime DLLs retain separate supplier licenses and exceptions; optional installed reference only"
+  },
+  "backend": {
+    "scipy_version": "1.18.1",
+    "numpy_version": "2.5.4",
+    "python_version": "3.12.14",
+    "runtime_platform": "Windows-11-10.0.26200-SP0",
+    "scipy_selected_source_and_binary_sha256": "1c86a18f4e065089950fe865e2dc88fc04a08f1cfb884548a51766f06ad9815c",
+    "scipy_selected_files": 88,
+    "shared_inverse_sha256": "c216deb827e94589adc337c5edd4c45dcfbe6089867700805e9c6f9e9d78ea2e",
+    "shared_contracts_sha256": "32f37a1f61606ee64d48e397268b95ed2523238afad0df3daf06688611d34d4e",
+    "shared_metrology_sha256": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb",
+    "numpy_linalg_module_sha256": "cb491584b896825cd10be0fa03ea70d7ccbfa7a1143d2e7acc772543209cb560",
+    "numpy_linalg_binary_sha256": "03bc9de2d6d8e2d9ea3ec781f3c16bcbc9960095cc02ca588f4229cd1560c661",
+    "numpy_binary_tree_sha256": "9905dddba6933687b1f505d6bb44088c033684dd4989584fe6d060a4906a7297",
+    "numpy_binary_files": 21
+  },
+  "files": {
+    "src/pipeline_integrity/calibration.py": "9923ffbf89e3bcecb8fa2a20a4a8e4c4b1dad14332a3d15028ba4c7d490e7167",
+    "tests/test_calibration.py": "e29eb8cc0330d3a75af06e1bafec39ab7693ea7dda0a47875258c40fda20100d",
+    "examples/calibration.py": "509026911fe6ab18956761b2d2f837f81868f6a97635a5de34daad1da20b261f",
+    "scripts/check_eiv_calibration.py": "3fb03bcc46551736860669ee7d642002cd2f633342c9de0de9d77a06d55022d9",
+    "docs/EIV_CALIBRATION_KO.md": "fd9a8c2cf4931cc3b2e615d562e6e3cbcfee2f5456f900132301400d31279d9e"
+  },
+  "limitations": [
+    "No independent field/custody certification; public source is one fit-only campaign.",
+    "Positive-definite stochastic covariance; only explicitly exact abscissae can be removed from stochastic coordinates.",
+    "Parameter covariance is local Gauss-Newton nuisance marginalization, unscaled by residuals; no automatic coverage probability.",
+    "Source callbacks must be deterministic; hashes/replay are not signatures or execution attestation."
+  ]
+}

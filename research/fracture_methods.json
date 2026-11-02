@@ -1,0 +1,51 @@
+{
+  "schema": "pipeline_integrity.fracture_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "adopted": {
+    "owner": "matintegrity",
+    "license": "MIT",
+    "models": [
+      "fracture.stress_intensity",
+      "fracture.paris_constant_amplitude",
+      "fracture.variable_paris",
+      "structural.failure_assessment_points"
+    ],
+    "native_validation": "public registry.run_json; existing default Python route retained",
+    "engine_source_or_standard_tables_vendored": false
+  },
+  "primary_data": {
+    "source": "https://data.mendeley.com/datasets/g69875w65c/1",
+    "doi": "10.17632/g69875w65c.1",
+    "creator": "Puyi Gao",
+    "version": "1",
+    "license": "CC-BY-4.0",
+    "archive_bytes": 943565,
+    "checksum_origin": "previous_acquisition",
+    "raw_or_transformed_observations_redistributed": false,
+    "property_or_dynamic_arrest_calibration": false
+  },
+  "compilation_candidate": {
+    "source": "https://data.mendeley.com/datasets/2vkgrbsy8j/1",
+    "publisher_license": "CC-BY-4.0",
+    "decision": "metadata_only",
+    "row_lineage_applicability_and_rights_reviewed_here": false,
+    "service_property_adopted": false
+  },
+  "alternatives": {
+    "primary_context": "https://www.nasa.gov/centers-and-facilities/nesc/copv-damage-tolerance-life-demonstration-guidelines/",
+    "decision": "Dedicated crack-growth software is a comparison context only. No external runtime, handbook prose, standard curve or proprietary model/coefficients introduced; licensing is not asserted."
+  },
+  "current_limits": [
+    "qualified scalar Mode-I inputs only",
+    "cycle/elapsed time/exposure remain distinct",
+    "no retardation, mixed-mode or dynamic arrest qualification",
+    "native critical depth and geometry-supported depth kept distinct",
+    "computed and declared-boundary satisfaction kept distinct"
+  ],
+  "source_prose_copied": false,
+  "field_or_standard_acceptance": false,
+  "extension_requests": [
+    "PI-X04",
+    "PI-X02"
+  ]
+}

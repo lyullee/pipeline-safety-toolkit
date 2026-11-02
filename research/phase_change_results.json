@@ -1,0 +1,109 @@
+{
+  "schema": "pipeline_integrity.phase_change_verification.v1",
+  "checks": {
+    "kinetic_interface:replay": true,
+    "kinetic_interface:status": true,
+    "kinetic_interface:qualification": true,
+    "kinetic_interface:signal_origin": true,
+    "steady_vaporizer:replay": true,
+    "steady_vaporizer:status": true,
+    "steady_vaporizer:qualification": true,
+    "steady_vaporizer:signal_origin": true,
+    "steady_vaporizer:port_basis": true,
+    "steady_reliquefier:replay": true,
+    "steady_reliquefier:status": true,
+    "steady_reliquefier:qualification": true,
+    "steady_reliquefier:signal_origin": true,
+    "steady_reliquefier:port_basis": true,
+    "dynamic_vaporizer:replay": true,
+    "dynamic_vaporizer:status": true,
+    "dynamic_vaporizer:qualification": true,
+    "dynamic_vaporizer:signal_origin": true,
+    "dynamic_vaporizer:port_basis": true,
+    "dynamic_vaporizer:closed_energy": true,
+    "dynamic_vaporizer:no_endpoint_integral": true,
+    "dynamic_reliquefier:replay": true,
+    "dynamic_reliquefier:status": true,
+    "dynamic_reliquefier:qualification": true,
+    "dynamic_reliquefier:signal_origin": true,
+    "dynamic_reliquefier:port_basis": true,
+    "dynamic_reliquefier:closed_energy": true,
+    "dynamic_reliquefier:no_endpoint_integral": true,
+    "vacuum_insulation:replay": true,
+    "vacuum_insulation:status": true,
+    "vacuum_insulation:qualification": true,
+    "vacuum_insulation:signal_origin": true,
+    "bulk_freezing:replay": true,
+    "bulk_freezing:status": true,
+    "bulk_freezing:qualification": true,
+    "bulk_freezing:no_native": true,
+    "ambient_frost:replay": true,
+    "ambient_frost:status": true,
+    "ambient_frost:qualification": true,
+    "ambient_frost:no_native": true,
+    "default_no_native": true,
+    "rehashed_refusal:heat": true,
+    "rehashed_refusal:source": true,
+    "rehashed_refusal:status": true,
+    "rehashed_refusal:qualification": true,
+    "rehashed_refusal:context": true,
+    "actual_native_provider_pins_stable": true
+  },
+  "passed": 47,
+  "total": 47,
+  "records": 9,
+  "statuses": {
+    "computed_diagnostic": 6,
+    "out_of_scope": 2,
+    "needs_data": 1
+  },
+  "file_sha256": {
+    "src/pipeline_integrity/phase_change_exchange.py": "9f467f00524d299f9b232dd3c4f96edcc36d6f71b3fc30ecb358f7c40f76ffd6",
+    "src/pipeline_integrity/thermo.py": "153219efe31c9f003ec67cb39e387926758cf1c3964eca6bd36533634207bfea",
+    "tests/test_phase_change_exchange.py": "da7440a1ca55f0301d129aa4de5ee802b015530a4a2ca291c31597a11cdd9e6f",
+    "tests/test_property_reference.py": "a0724eb039726580db89480953450a79cd066c34bcff0829ecd32f9c020f032b",
+    "examples/phase_change_exchange.py": "d88434517afa989bfc9736e1ecd622de8fbfed84dd14ca65aac5a9891418ab98",
+    "scripts/check_thermal_equipment.py": "00f27e53dd4195889b3e052ee4e527696b4a88ba17bfd6c275d3c5bb4ff53d25",
+    "docs/PHASE_CHANGE_KO.md": "548ce495ac116e83d2c43d3e05ace2bc4778e03017f82cf505283fe615f4c26f"
+  },
+  "criteria_mix_contract_numeric_source_and_replay": true,
+  "independent_physical_validation": false,
+  "native_provider": {
+    "owner": {
+      "id": "lh2dt_models",
+      "version": "0.1.2",
+      "python_files": 51,
+      "sha256": "763df66518bc554e5608f1ccfa6ea70f585a921e344bcef6ae683779453bf9ea",
+      "license": "MIT",
+      "license_sha256": "cd63f148087d189cedb2a388fed0bc3f1f0676df5f7ad1adfc8a8789f9570a72"
+    },
+    "runtime": {
+      "CoolProp": "8.0.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pydantic": "2.14.1"
+    },
+    "CoolProp_revision": "ae81610e7d23efc57f9d051c8e70a4d66e87537f",
+    "CoolProp_binary_tree_sha256": "17d13ba02733555cb4a2214960732a4475ac51172d4ebdd6a07752485bc06c05",
+    "reference_anchors": {
+      "Hydrogen": {
+        "pressure_Pa_abs": 100000.0,
+        "temperature_K": 300.0,
+        "specific_enthalpy_J_kg": 3958274.858524086,
+        "specific_entropy_J_kg_K": 53518.80833822272
+      },
+      "ParaHydrogen": {
+        "pressure_Pa_abs": 100000.0,
+        "temperature_K": 300.0,
+        "specific_enthalpy_J_kg": 4455768.665933009,
+        "specific_entropy_J_kg_K": 56846.47912026396
+      }
+    },
+    "shared_sources": {
+      "pipeline_integrity.contracts": "32f37a1f61606ee64d48e397268b95ed2523238afad0df3daf06688611d34d4e",
+      "pipeline_integrity.equipment_exchange": "6c27730a7452b230566d2b505eaf0d6fdefb55648aa7ac70f9ebb8724d92c496",
+      "pipeline_integrity.thermo": "153219efe31c9f003ec67cb39e387926758cf1c3964eca6bd36533634207bfea"
+    }
+  },
+  "owner_source_url": "https://github.com/lyullee/lh2dt_models"
+}

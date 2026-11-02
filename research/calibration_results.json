@@ -1,0 +1,3679 @@
+{
+  "schema": "pipeline_integrity.calibration_application.v1",
+  "fit": {
+    "schema": "pipeline_integrity.parameter_fit.v1",
+    "request": {
+      "parameters": [
+        {
+          "id": "demand_scale",
+          "unit": "1",
+          "lower": 0.9,
+          "upper": 1.1,
+          "initial": 1.0
+        },
+        {
+          "id": "roughness_scale",
+          "unit": "1",
+          "lower": 0.9,
+          "upper": 1.1,
+          "initial": 1.0
+        }
+      ],
+      "provider_id": "water_forward",
+      "provider_version": "1",
+      "fit_end_s": 84600.0,
+      "validation_start_s": 86400.0,
+      "validation_end_s": 171000.0,
+      "loss": "linear",
+      "loss_scale": 1.0,
+      "difference_step_fraction": 0.01,
+      "identifiability_relative_tolerance": 1e-06,
+      "maximum_model_evaluations": 150,
+      "maximum_optimizer_evaluations": 20,
+      "parameter_tolerance": 0.0001
+    },
+    "context": {
+      "asset_id": "nominal_L_TOWN",
+      "scenario_id": "first_day_parameter_fit_second_day_check",
+      "clock_id": "battledim_2018_local_elapsed",
+      "origin": "simulation",
+      "evidence": [
+        {
+          "id": "battledim",
+          "citation": "Stelios G. Vrachimis; Demetrios G. Eliades; Riccardo Taormina; Avi Ostfeld; Zoran Kapelan; Shuming Liu; Marios S. Kyriakou; Pavlos Pavlou; Mengning Qiu; Marios Polycarpou; https://doi.org/10.5281/zenodo.4017659",
+          "origin": "simulation",
+          "locator": "",
+          "sha256": null,
+          "license_id": "CC-BY-4.0",
+          "limitations": []
+        }
+      ],
+      "metadata": {}
+    },
+    "observation_digest": "8148673e7fb4643fa4872af0865dfcb465a0e58fe56f509bf2cff3e2ccd80b99",
+    "observation_origin": "simulation",
+    "source_digests": {
+      "L-TOWN.inp": "a7551b86745f4cc3433c78e60023077fa1386947d4d35372ffd3a0405622b436",
+      "README.txt": "e6a3e83bdf7f116c47c72640de6e4785fd3437b96428448adf9ca76f066f2226",
+      "2018_SCADA_Pressures.csv": "7782d890a7195699be94ddc01cba392da7ca285908afff619065a9616e04dcae",
+      "2018_SCADA_Flows.csv": "7f7e8625c9d92b083ee079a54cffb9ef803876de1e35017c1da0455968daf3ff",
+      "2018_SCADA_Levels.csv": "a1fc5f0229448a620b6220f4d079b3162a255b3070acdce448608fbfc760903c"
+    },
+    "fit_rows": 48,
+    "validation_rows": 48,
+    "unused_rows": 0,
+    "field_validation_claim": false,
+    "parameter_confidence_intervals_calculated": false,
+    "implementation_sha256": "c216deb827e94589adc337c5edd4c45dcfbe6089867700805e9c6f9e9d78ea2e",
+    "scipy_version": "1.18.1",
+    "status": "fitted",
+    "fitted_parameters": {
+      "demand_scale": 0.992798360377134,
+      "roughness_scale": 1.0044540213952502
+    },
+    "optimizer": {
+      "success": true,
+      "status": 4,
+      "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+      "reported_nfev": 17,
+      "loss_cost": 667.8712345468025
+    },
+    "local_identifiability": {
+      "rank": 2,
+      "parameter_count": 2,
+      "singular_values": [
+        767.3585738401933,
+        10.795243503255813
+      ],
+      "coordinates": "unit_interval_parameters_and_scaled_training_residuals",
+      "condition_number": 71.08302592792467,
+      "bound_active_parameters": []
+    },
+    "training": {
+      "baseline": {
+        "channels": {
+          "pressure_head:n1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.19552960772245825,
+            "mae": 0.17270982424418127,
+            "bias": 0.0007715161641438743,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n4": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.23061396845342902,
+            "mae": 0.19918595631917313,
+            "bias": 0.022819913228352934,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n31": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.18287566597891386,
+            "mae": 0.15822887420654297,
+            "bias": -0.014789447784423851,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n54": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.19935003283762717,
+            "mae": 0.11396179517110176,
+            "bias": -0.024599631627401308,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n105": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.07185475737186874,
+            "mae": 0.052067858378092836,
+            "bias": -0.02728981018066386,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n114": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08602831538655856,
+            "mae": 0.06431485176086375,
+            "bias": -0.03689675331115705,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n163": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.14345526320112226,
+            "mae": 0.09938947995503744,
+            "bias": -0.05493456840515121,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n188": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.13890199901368336,
+            "mae": 0.0965799395243326,
+            "bias": -0.053787593841552926,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n215": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.004078983655265626,
+            "mae": 0.003290125528972343,
+            "bias": -1.6860961916294787e-05,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n229": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.15110007001336528,
+            "mae": 0.10767378171285043,
+            "bias": -0.06650621096293168,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n288": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11596603795997223,
+            "mae": 0.09001795768737786,
+            "bias": -0.07197870572408031,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n296": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08417595733157845,
+            "mae": 0.06631968180338547,
+            "bias": -0.057679208119710314,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n332": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09656365161985975,
+            "mae": 0.0696583779652921,
+            "bias": -0.04194663683573433,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n342": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1509072860806498,
+            "mae": 0.1028262011210123,
+            "bias": -0.05355173746744798,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n410": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.18429134110695872,
+            "mae": 0.1163963270187381,
+            "bias": -0.04889090061187762,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n415": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1476174347307945,
+            "mae": 0.09982143402099523,
+            "bias": -0.05403296152750592,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n429": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.17813207131122485,
+            "mae": 0.1112027517954511,
+            "bias": -0.044573558171589735,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n458": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.15345984105628233,
+            "mae": 0.10423504829406749,
+            "bias": -0.055782289505005224,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n469": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.07215530112546445,
+            "mae": 0.052426211039225144,
+            "bias": -0.026404202779134245,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n495": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.049960544291488135,
+            "mae": 0.03372615814208905,
+            "bias": -0.00824381510416631,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n506": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08273071853055283,
+            "mae": 0.05972408612569158,
+            "bias": -0.03468236605326277,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n516": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09858515099337808,
+            "mae": 0.0712062104543049,
+            "bias": -0.03800209999084473,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n519": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1372761793734644,
+            "mae": 0.0947432009379073,
+            "bias": -0.05297738393147755,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n549": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11148576074978392,
+            "mae": 0.08079351107279449,
+            "bias": -0.04839438438415522,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n613": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.14500824956111202,
+            "mae": 0.10039216041564918,
+            "bias": -0.056618102391560544,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n636": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12569373196986994,
+            "mae": 0.09151276906331389,
+            "bias": -0.06295886357625324,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n644": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.13115402329793838,
+            "mae": 0.09690256436665907,
+            "bias": -0.06835284868876175,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n679": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11355698967205256,
+            "mae": 0.08748899459838884,
+            "bias": -0.06820564270019529,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n722": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09907211182824566,
+            "mae": 0.07841906229654978,
+            "bias": -0.06976646423339883,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n726": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1076479650870799,
+            "mae": 0.08398042678832951,
+            "bias": -0.06917268753051727,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n740": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.06744019988120023,
+            "mae": 0.056321338017781386,
+            "bias": -0.05339420000712073,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n752": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11161142922319033,
+            "mae": 0.08763622283935597,
+            "bias": -0.07295051574707045,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n769": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09116027661783949,
+            "mae": 0.07174173672993955,
+            "bias": -0.0624101734161376,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p227": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.0029466318623917374,
+            "mae": 0.0025618294051934585,
+            "bias": 0.002362289239864589,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p235": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.003327063227435057,
+            "mae": 0.0029443698414722114,
+            "bias": 0.002691415973678576,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:PUMP_1": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.0025053523824225634,
+            "mae": 0.000515403863625532,
+            "bias": -0.0005075059925688912,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "water_level:T1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.16966730913842198,
+            "mae": 0.14911530196666717,
+            "bias": 0.0009220967690150202,
+            "residual_scale": {
+              "value": 0.1,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          }
+        },
+        "normalized_rmse": 0.8926155102190054
+      },
+      "fitted": {
+        "channels": {
+          "pressure_head:n1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.2001219156497739,
+            "mae": 0.17761476993560787,
+            "bias": 0.004232678413391107,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n4": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.23539065299607195,
+            "mae": 0.2046575037638346,
+            "bias": 0.026364402770996165,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n31": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1873409600235069,
+            "mae": 0.16298333803812662,
+            "bias": -0.01194948514302574,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n54": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1964241545997118,
+            "mae": 0.1066797892252603,
+            "bias": -0.006356239318848249,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n105": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.06723024691681215,
+            "mae": 0.047512477238973304,
+            "bias": -0.017279011408487754,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n114": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.0798865557350017,
+            "mae": 0.058704983393350695,
+            "bias": -0.025023031234741033,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n163": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.135538445363257,
+            "mae": 0.09095047632853175,
+            "bias": -0.03837425231933578,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n188": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.131060604590352,
+            "mae": 0.08810147921244305,
+            "bias": -0.037483975092570176,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n215": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.004047191267133349,
+            "mae": 0.0032221031188973312,
+            "bias": 0.0003030967712380021,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n229": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.14152262950209157,
+            "mae": 0.09826963742574109,
+            "bias": -0.048973385492960965,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n288": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10516759376955856,
+            "mae": 0.07993061383565259,
+            "bias": -0.058231967290242416,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n296": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.07631723228586357,
+            "mae": 0.05912665367126483,
+            "bias": -0.048648945490519235,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n332": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08999479688510323,
+            "mae": 0.06289160728454639,
+            "bias": -0.029739764531453734,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n342": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1433641803794678,
+            "mae": 0.09376998583475753,
+            "bias": -0.036479934056599994,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n410": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.17788426783578504,
+            "mae": 0.1069086138407392,
+            "bias": -0.030091953277588068,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n415": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.14013943807530482,
+            "mae": 0.09064016660054453,
+            "bias": -0.0377794106801345,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n429": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.17242780512184036,
+            "mae": 0.10223200162251815,
+            "bias": -0.026671819686889215,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n458": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.14564566711140284,
+            "mae": 0.09502813021341971,
+            "bias": -0.03868386268615757,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n469": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.06768030402026086,
+            "mae": 0.04783585866292306,
+            "bias": -0.016224842071533335,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n495": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.04865332988688914,
+            "mae": 0.03210361480712809,
+            "bias": -0.0012535413106278999,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n506": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.07708729879768293,
+            "mae": 0.0537935606638588,
+            "bias": -0.023628962834675526,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n516": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09245138748421243,
+            "mae": 0.06444525082906057,
+            "bias": -0.024884309768676765,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n519": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12965735196315425,
+            "mae": 0.08652796427408882,
+            "bias": -0.03719709396362273,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n549": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10408461339783469,
+            "mae": 0.07291112263997397,
+            "bias": -0.03448305765787755,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n613": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.13686207473687675,
+            "mae": 0.0915573660532633,
+            "bias": -0.039810387293497396,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n636": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11680616593049073,
+            "mae": 0.08234554608662936,
+            "bias": -0.04888795534769693,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n644": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.121032798834775,
+            "mae": 0.0873969968159997,
+            "bias": -0.052862078348795936,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n679": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10350860580403318,
+            "mae": 0.07778776486714707,
+            "bias": -0.05489799181620277,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n722": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.0897020373759538,
+            "mae": 0.06999519348144585,
+            "bias": -0.059278430938721094,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n726": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09733808585427901,
+            "mae": 0.07476924896240196,
+            "bias": -0.05652919133504201,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n740": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.061851409001204664,
+            "mae": 0.051236664454142065,
+            "bias": -0.04782935142517086,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n752": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10079811160309148,
+            "mae": 0.07804416656494191,
+            "bias": -0.059886131286621236,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n769": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08254494160013717,
+            "mae": 0.06399806658426914,
+            "bias": -0.05253312746683747,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p227": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.002806304604905397,
+            "mae": 0.002422873777858223,
+            "bias": 0.002208782395792918,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p235": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.003178291068534547,
+            "mae": 0.0027969862396018236,
+            "bias": 0.002528555730873443,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:PUMP_1": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.002505355657237097,
+            "mae": 0.0005160412763176417,
+            "bias": -0.0005068309777278314,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "water_level:T1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.17452068795163908,
+            "mae": 0.15335186103979745,
+            "bias": 0.0015662342309952042,
+            "residual_scale": {
+              "value": 0.1,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          }
+        },
+        "normalized_rmse": 0.8672411695204881
+      }
+    },
+    "validation": {
+      "baseline": {
+        "channels": {
+          "pressure_head:n1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.36987857773459104,
+            "mae": 0.33635472456614185,
+            "bias": -0.06715759118398028,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n4": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.3859279895847263,
+            "mae": 0.3498170312245688,
+            "bias": -0.055349709192911746,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n31": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.3616717114720273,
+            "mae": 0.3266426054636636,
+            "bias": -0.07651844978332549,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n54": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.3148751736269313,
+            "mae": 0.20516852060953772,
+            "bias": -0.021162656148274877,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n105": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08833321059140319,
+            "mae": 0.0682752418518066,
+            "bias": -0.026099459330240826,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n114": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10204509639240845,
+            "mae": 0.08046638170878125,
+            "bias": -0.034251667658488305,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n163": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.19029370588801514,
+            "mae": 0.1467687225341797,
+            "bias": -0.05370835622151734,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n188": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1812375070873974,
+            "mae": 0.1405122216542559,
+            "bias": -0.051665836970011224,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n215": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.005706687415157632,
+            "mae": 0.004484402338664761,
+            "bias": -0.0003095595041927209,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n229": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1920709312243423,
+            "mae": 0.15256172180175773,
+            "bias": -0.06576981862386067,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n288": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.13036638977015189,
+            "mae": 0.11157499631245926,
+            "bias": -0.07285145759582523,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n296": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08941621893858254,
+            "mae": 0.0780140908559166,
+            "bias": -0.05623183886210148,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n332": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1202507782878504,
+            "mae": 0.09563318570454922,
+            "bias": -0.041036806106567646,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n342": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.20631917430122484,
+            "mae": 0.15758826573689774,
+            "bias": -0.053393847147623706,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n410": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.2738005852571539,
+            "mae": 0.19348513126373268,
+            "bias": -0.04544325669606497,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n415": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.20523831843359144,
+            "mae": 0.15322888374328617,
+            "bias": -0.05102999051411924,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n429": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.2662873353431575,
+            "mae": 0.1860175736745203,
+            "bias": -0.04135195732116751,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n458": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.20783203223954222,
+            "mae": 0.15798134167989097,
+            "bias": -0.05351999600728371,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n469": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.0877829643496499,
+            "mae": 0.06812788645426442,
+            "bias": -0.025939146677652847,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n495": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.0665652341184712,
+            "mae": 0.04604956626892095,
+            "bias": -0.0065137577056884055,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n506": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10131216848061322,
+            "mae": 0.08055893262227369,
+            "bias": -0.03438710212707526,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n516": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11885185850827037,
+            "mae": 0.0953942108154296,
+            "bias": -0.039238599141438645,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n519": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.18224138046473856,
+            "mae": 0.1403604507446287,
+            "bias": -0.05139766693115252,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n549": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.135819093191818,
+            "mae": 0.10935450553894081,
+            "bias": -0.04782888730367022,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n613": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.19251266813167078,
+            "mae": 0.14952542304992664,
+            "bias": -0.055648870468139634,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n636": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.156776903817783,
+            "mae": 0.12778729756673135,
+            "bias": -0.06184192657470685,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n644": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1591292557517616,
+            "mae": 0.1308336353302003,
+            "bias": -0.0673733297983808,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n679": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12808714644425767,
+            "mae": 0.10902388572692878,
+            "bias": -0.06751882235209135,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n722": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10447809800499101,
+            "mae": 0.09118522961934383,
+            "bias": -0.06764633496602353,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n726": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11776601355564487,
+            "mae": 0.10100450515747106,
+            "bias": -0.06778320948282908,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n740": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.06621239845157119,
+            "mae": 0.05862484614054327,
+            "bias": -0.051644992828368576,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n752": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12062042087794439,
+            "mae": 0.10400081952412925,
+            "bias": -0.07184074719746943,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n769": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09586605302061071,
+            "mae": 0.08318368593851681,
+            "bias": -0.060923802057901856,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p227": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.003432423878795115,
+            "mae": 0.0030774083520975653,
+            "bias": 0.002575800018360908,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p235": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.0039464844562947425,
+            "mae": 0.0035814443351942352,
+            "bias": 0.003012790147177185,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:PUMP_1": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.005309718773194516,
+            "mae": 0.0023088532039205784,
+            "bias": -0.0002463551294127549,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "water_level:T1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.3311549979893044,
+            "mae": 0.2993415987491608,
+            "bias": -0.07414781530698143,
+            "residual_scale": {
+              "value": 0.1,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          }
+        },
+        "normalized_rmse": 1.3528081420054041
+      },
+      "fitted": {
+        "channels": {
+          "pressure_head:n1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.3744981692156951,
+            "mae": 0.34107108116149915,
+            "bias": -0.0639048067728678,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n4": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.3905056850948328,
+            "mae": 0.35450322786966976,
+            "bias": -0.05201788902282711,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n31": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.36627799668070743,
+            "mae": 0.3312505213419595,
+            "bias": -0.07389878590901722,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n54": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.33619205612990527,
+            "mae": 0.21154273986816388,
+            "bias": 0.0161261685689289,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n105": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08896971003609294,
+            "mae": 0.06512587229410786,
+            "bias": -0.010841782887776633,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n114": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10107361796871692,
+            "mae": 0.07496719996134482,
+            "bias": -0.016392923990885766,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n163": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.19546399767168865,
+            "mae": 0.1433821487426757,
+            "bias": -0.02538867950439494,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n188": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.18551826004944222,
+            "mae": 0.13689908345540358,
+            "bias": -0.024164492289225088,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n215": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.005673136586179965,
+            "mae": 0.004451189041138577,
+            "bias": 1.7073949176419727e-05,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n229": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1960461589858794,
+            "mae": 0.1483760452270507,
+            "bias": -0.036502189636230455,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n288": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12542359313606935,
+            "mae": 0.10401340802510599,
+            "bias": -0.05212716102600101,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n296": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08477338774797705,
+            "mae": 0.07256228129069031,
+            "bias": -0.04269848505655949,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n332": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12076482436125159,
+            "mae": 0.09125228881835934,
+            "bias": -0.021562220255534115,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n342": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.2134395874967766,
+            "mae": 0.15525126775105771,
+            "bias": -0.02340206146240235,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n410": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.28935229139319735,
+            "mae": 0.19504738648732486,
+            "bias": -0.009579141934712432,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n415": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.21304216889017244,
+            "mae": 0.15140213330586758,
+            "bias": -0.02188188870747861,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n429": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.2814503294823804,
+            "mae": 0.18752897580464722,
+            "bias": -0.006698293685913607,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n458": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.2149233289790844,
+            "mae": 0.1552415116628012,
+            "bias": -0.023388338088989435,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n469": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.08854913105707968,
+            "mae": 0.06515806516011564,
+            "bias": -0.01053881645202622,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n495": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.07000836146284513,
+            "mae": 0.0459549077351887,
+            "bias": 0.004523194630940826,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n506": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.10146663387161464,
+            "mae": 0.07638106346130351,
+            "bias": -0.017339220046997134,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n516": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11879688070663563,
+            "mae": 0.09008586883544926,
+            "bias": -0.019005603790283043,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n519": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1879172213487813,
+            "mae": 0.13742623011271146,
+            "bias": -0.024198239644368662,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n549": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.13612045236197082,
+            "mae": 0.10429045677185093,
+            "bias": -0.02571095466613767,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n613": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1971964277255762,
+            "mae": 0.14597286224365233,
+            "bias": -0.02687166849772134,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n636": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.1583069400475394,
+            "mae": 0.12297992070515902,
+            "bias": -0.03820129394531232,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n644": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.15927169783537357,
+            "mae": 0.12539307912190742,
+            "bias": -0.04240542093912788,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n679": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.12474694302035069,
+            "mae": 0.10227601051330559,
+            "bias": -0.04699734052022286,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n722": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09870068574936205,
+            "mae": 0.084665333429972,
+            "bias": -0.05209651629130022,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n726": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11272261465084743,
+            "mae": 0.09387008031209347,
+            "bias": -0.048947664896647446,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n740": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.06086102405352447,
+            "mae": 0.05402812957763651,
+            "bias": -0.04342988332112574,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n752": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.11463990084992029,
+            "mae": 0.09616246859232606,
+            "bias": -0.05247480074564651,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "pressure_head:n769": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.09004247424734288,
+            "mae": 0.07673173586527489,
+            "bias": -0.04635213534037256,
+            "residual_scale": {
+              "value": 1.0,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p227": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.003323134595263534,
+            "mae": 0.0029641270648463874,
+            "bias": 0.0022996181035948994,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:p235": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.003798258702420138,
+            "mae": 0.0034250801263204602,
+            "bias": 0.0027129274059949373,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "volume_flow:PUMP_1": {
+            "valid_samples": 48,
+            "unit": "m3/s",
+            "rmse": 0.005596364069152755,
+            "mae": 0.0025642760152480115,
+            "bias": -0.0005012332440112476,
+            "residual_scale": {
+              "value": 0.001,
+              "unit": "m3/s",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          },
+          "water_level:T1": {
+            "valid_samples": 48,
+            "unit": "m",
+            "rmse": 0.33609244896754276,
+            "mae": 0.30357023040453596,
+            "bias": -0.07376974304517113,
+            "residual_scale": {
+              "value": 0.1,
+              "unit": "m",
+              "source_id": "declared_equal_channel_weight_scales_not_measurement_standard_deviation"
+            }
+          }
+        },
+        "normalized_rmse": 1.3689125034362235
+      },
+      "used_for_parameter_selection": false
+    },
+    "provider_source_digest": "a566d23b445f100082c8c518f1fff41228ed96ad2c0f7a295e68ab67ad88c8c4",
+    "model_evaluations": 51,
+    "evaluations": [
+      {
+        "parameters": {
+          "demand_scale": 1.0,
+          "roughness_scale": 1.0
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "42288c0e1ad249c86b471d914b1c509fba967366134c5c20a21c388e50769006",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.955237860240912e-07,
+            "head_error_m": 1.2889961483603108e-12,
+            "flow_change_m3_s": 9.983293283449545e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6197085389867425e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 1.002,
+          "roughness_scale": 1.0
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "7fb57844cdd1e847dc162a6a85acd44fa791d13b41e86252e01a4dadd0146b8c",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.671469179686466e-07,
+            "head_error_m": 1.7902185499602675e-12,
+            "flow_change_m3_s": 9.864947313925509e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6197085389867425e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.998,
+          "roughness_scale": 1.0
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "f9f3d8495883a08df31a7549331910db20f552a74d90625dd28ca1c522690441",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.85337520474481e-07,
+            "head_error_m": 1.4504812205495821e-12,
+            "flow_change_m3_s": 9.982335816222543e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6193447411060333e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 1.0,
+          "roughness_scale": 1.002
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "bde0a9cf05e9b3b6345b03d79683ba700153bf09d9404916952733aff27cca4c",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.930285177425e-07,
+            "head_error_m": 1.4616027058458452e-12,
+            "flow_change_m3_s": 9.973488680151132e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6197085389867425e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 1.0,
+          "roughness_scale": 0.998
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "612ee12997c9917cfe21d4a78d189c0503545b262a93f43f44adc5093edf123b",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 32.0,
+            "relative_error": 9.843661182149918e-07,
+            "head_error_m": 1.5341623355572986e-12,
+            "flow_change_m3_s": 9.920821696993779e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6200723368674517e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9505455553964773,
+          "roughness_scale": 0.9979289646633601
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "010ec09ffaade50c5e1052a01e38e607b8c5d3294ea5ab03bd321120a7cc8e74",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.57503752924213e-07,
+            "head_error_m": 1.3847481818759361e-12,
+            "flow_change_m3_s": 9.92320862589327e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6135239750146866e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.987628029173091,
+          "roughness_scale": 1.0002475737438508
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "6e26fd2a4ac9f540b27b2de6fb3c02bb63fd2adae47cd4066cfcdab39872ac4c",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 9.57340356634164e-07,
+            "head_error_m": 1.3996072421573735e-12,
+            "flow_change_m3_s": 9.913404101976276e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6175257517024875e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9969070451603026,
+          "roughness_scale": 1.0000637576730735
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "7f657effce1a4f44bb8768572888e2a93ca329a427f630f8c7425b85863d6469",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 8.672831332567654e-07,
+            "head_error_m": 1.254908569767177e-12,
+            "flow_change_m3_s": 9.967152138421747e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9989070451603026,
+          "roughness_scale": 1.0000637576730735
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "d9622f705d6a52d7289f7580e8680e42be6f7c32e3a88449b1e080cd14764492",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 24.0,
+            "relative_error": 9.414268575168179e-07,
+            "head_error_m": 1.8588154923848814e-12,
+            "flow_change_m3_s": 9.845983330567249e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6193447411060333e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9949070451603026,
+          "roughness_scale": 1.0000637576730735
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "59ba0eaf3186e4cb34ccd8d62bf25993ceccd424d093ba296a7beb41bb07ea35",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.903087606573144e-07,
+            "head_error_m": 1.7570721868605645e-12,
+            "flow_change_m3_s": 9.984917218200051e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9969070451603026,
+          "roughness_scale": 1.0020637576730735
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "4ae2f0ff76d6c2b71090b973abd59b69fbc103e3fe596fc5c8bc54dca7fc802d",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.74341423109394e-07,
+            "head_error_m": 1.7204113438865148e-12,
+            "flow_change_m3_s": 9.998029071444037e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9969070451603026,
+          "roughness_scale": 0.9980637576730736
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "a300cda16f196038a07f0ea9342352aae5b123428b15fd45d35cf74472a64919",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 25.0,
+            "relative_error": 9.242858763800933e-07,
+            "head_error_m": 1.269923305055598e-12,
+            "flow_change_m3_s": 9.914725885898925e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9908178997241904,
+          "roughness_scale": 1.0002074071464433
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "a60c5d74d99177b5764f72cc87ab7d5c0d0a08edf26e0e57165007d0aacd7f1c",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 21.0,
+            "relative_error": 9.755190073464736e-07,
+            "head_error_m": 1.7075905895309975e-12,
+            "flow_change_m3_s": 9.988911977615023e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9953847571068997,
+          "roughness_scale": 1.0000995958970273
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "16cac21277b6dfb9ac87db6e3e7a8d398ed9cda96ed50b68ee1add7383d1b0e7",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 25.0,
+            "relative_error": 8.911693172518911e-07,
+            "head_error_m": 1.816779588830744e-12,
+            "flow_change_m3_s": 9.986140566020429e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9973847571068997,
+          "roughness_scale": 1.0000995958970273
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "62a6e197ff3af87586da77c239cbe73b927a1cbdec9c13222724bc287d4f26d1",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 36.0,
+            "relative_error": 9.693202834682868e-07,
+            "head_error_m": 1.7800081845905378e-12,
+            "flow_change_m3_s": 9.997312933159529e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6193447411060333e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9933847571068997,
+          "roughness_scale": 1.0000995958970273
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "7b7d12973898fd5a2040cae495648a3bdf890bffbbe9cf904b8777751f79ae0e",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 28.0,
+            "relative_error": 9.934112986834885e-07,
+            "head_error_m": 1.2908133083244788e-12,
+            "flow_change_m3_s": 9.969176118702441e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6182533474639058e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9953847571068997,
+          "roughness_scale": 1.0020995958970274
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "ac3670f1f82b358d4970e83dd877cd17660faae33100bb6597405472b27ff65c",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 9.98816371920526e-07,
+            "head_error_m": 1.8011658656562574e-12,
+            "flow_change_m3_s": 9.975979221278192e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9953847571068997,
+          "roughness_scale": 0.9980995958970275
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "3b64c20c582f7b62c86f4ea5dbe2014a809b21458c83465ed7d3e06451162e02",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.955397809745871e-07,
+            "head_error_m": 1.6261682491032917e-12,
+            "flow_change_m3_s": 9.988682624680835e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6200723368674517e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9923639614124292,
+          "roughness_scale": 1.0001603933192464
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "e357d79be302fa588eda6f8b18b784bd4df312afb3c0d8ea1bf8eed1a742b20f",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.258391815239149e-07,
+            "head_error_m": 1.948901927264515e-12,
+            "flow_change_m3_s": 9.999137935540414e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9946295608360163,
+          "roughness_scale": 1.000114932675307
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "65597e7f1b127cc93e04ef0dc445d894b4c3121284df6eddd736dbb8af295ced",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.91021508709399e-07,
+            "head_error_m": 1.5754157069000532e-12,
+            "flow_change_m3_s": 9.968467942212068e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9966295608360163,
+          "roughness_scale": 1.000114932675307
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "a538b5e6cd4328ffcd69cf78e8ec7d678ceb3f18a031e1781f42defbbf2e4022",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 21.0,
+            "relative_error": 9.534514085638107e-07,
+            "head_error_m": 1.2704874746000129e-12,
+            "flow_change_m3_s": 9.911794050328436e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9926295608360163,
+          "roughness_scale": 1.000114932675307
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "fdd4461b57c1468cdf163171644e9cbb226c470e4943df3572c08146e02eac85",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.993757244601987e-07,
+            "head_error_m": 1.3999740676624852e-12,
+            "flow_change_m3_s": 9.988379392379398e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9946295608360163,
+          "roughness_scale": 1.002114932675307
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "c214365fabad1ca9ef5989c59cfc7949e535f9d6b869953ab47106acc15087b1",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.326628623389791e-07,
+            "head_error_m": 1.251724375513177e-12,
+            "flow_change_m3_s": 9.893041797964752e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9946295608360163,
+          "roughness_scale": 0.9981149326753068
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "945126afaec8a05843a2ebcc3efd6d5709a20082e9066e2e730861153112881e",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 7.397465476358928e-07,
+            "head_error_m": 1.3759898066009053e-12,
+            "flow_change_m3_s": 9.952468823313021e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6193447411060333e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9939006793024071,
+          "roughness_scale": 1.0014673693953076
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "4cb4e18d805e82bd0066bacaa90e80ea57326b296dd5fb08bc6e822cbba0c2b4",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 9.451855269765634e-07,
+            "head_error_m": 1.22935769064636e-12,
+            "flow_change_m3_s": 9.945147642108309e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618980943225324e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9959006793024071,
+          "roughness_scale": 1.0014673693953076
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "fa06a173f9971a004603d1ee90024f895e5455478c817e4f1e8b3787e5629b65",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 8.575137775520399e-07,
+            "head_error_m": 1.204449648220876e-12,
+            "flow_change_m3_s": 9.987922720512493e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9919006793024071,
+          "roughness_scale": 1.0014673693953076
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "59c4f1b66d24050b2f6f6074ccf504027afccfa2bb323ad3fe60a55be36ee4e0",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.090615947352104e-07,
+            "head_error_m": 1.957690425666693e-12,
+            "flow_change_m3_s": 9.857549887289889e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9939006793024071,
+          "roughness_scale": 1.0034673693953076
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "46bae22f459ed52d8c084e3006c92ee198ea68cce1938927793f60d7772519d8",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 24.0,
+            "relative_error": 9.314076363711432e-07,
+            "head_error_m": 1.7166688901884993e-12,
+            "flow_change_m3_s": 9.982652060788912e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9939006793024071,
+          "roughness_scale": 0.9994673693953076
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "add44e4e18bfe06e8f842e40cf9b10ec20be857ac878827cc91b015f2a97e284",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 9.293121856112699e-07,
+            "head_error_m": 1.5832959147673144e-12,
+            "flow_change_m3_s": 9.855804413693602e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.993177402836674,
+          "roughness_scale": 1.0044474813399487
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "cb34ed1ffeb8b71200145f2b63220d3cb476b4cf3c81ad4141163b9d66747d2b",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.788651432798924e-07,
+            "head_error_m": 1.3159012310142923e-12,
+            "flow_change_m3_s": 9.956345864432254e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6182533474639058e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.995177402836674,
+          "roughness_scale": 1.0044474813399487
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "dd7a0c41f677e68bb8ac3058fd9d2cbf79df45904e073b70d299587fbf13cb0e",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 9.946474204449526e-07,
+            "head_error_m": 1.2883007181885286e-12,
+            "flow_change_m3_s": 9.947396107001022e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.991177402836674,
+          "roughness_scale": 1.0044474813399487
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "81ce2a6f99e40957eae110be3ec6d6b14aede67388253766dcc3a4361aaba56e",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.89364978237558e-07,
+            "head_error_m": 1.4042018032719984e-12,
+            "flow_change_m3_s": 9.99957841595589e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6175257517024875e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.993177402836674,
+          "roughness_scale": 1.0064474813399487
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "722c1028307c3ed6744aab596150aa2e279fc690e45e8659f9b56b4e5324a982",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 26.0,
+            "relative_error": 9.39012851002712e-07,
+            "head_error_m": 1.7712280451088592e-12,
+            "flow_change_m3_s": 9.998672650986133e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.993177402836674,
+          "roughness_scale": 1.0024474813399487
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "d88662e98cd8a2a414fc55306ae959d08ede0d3f7a1cb2a687381a25010f18bd",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 23.0,
+            "relative_error": 9.719934913895049e-07,
+            "head_error_m": 1.403238894873149e-12,
+            "flow_change_m3_s": 9.998843721650874e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.618617145344615e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9924625658008639,
+          "roughness_scale": 1.0104520752674788
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "9c4de1bbfebda30e972b8eb5cdd701e2fa9dbd90a940a61ef21e7f4e0c43e353",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.619598658374124e-07,
+            "head_error_m": 1.2574662041690221e-12,
+            "flow_change_m3_s": 9.937223893222491e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6171619538217783e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9924624737688479,
+          "roughness_scale": 1.0057749019980688
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "2eda90505e6673ce27dd0bfc667347717bd64ce040d764171bf8a86db3bb02e0",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 32.0,
+            "relative_error": 9.972724781696671e-07,
+            "head_error_m": 1.6461829572536418e-12,
+            "flow_change_m3_s": 9.99472573181926e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6182533474639058e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9928041809234474,
+          "roughness_scale": 1.0044539708692788
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "cca304b74010d4bdaf8b7dac8921ca94f748b77083ca1909fdcf556637aeba5f",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.094769329877283e-07,
+            "head_error_m": 1.5194232626638063e-12,
+            "flow_change_m3_s": 9.991047827829337e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6175257517024875e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9948041809234474,
+          "roughness_scale": 1.0044539708692788
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "00c64d6e02c1da7eff5b7759ced66e16018d991f6cf2f14a62864dec11dae951",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 8.321818731648173e-07,
+            "head_error_m": 1.2572130992510867e-12,
+            "flow_change_m3_s": 9.922656890676484e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9908041809234474,
+          "roughness_scale": 1.0044539708692788
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "809062929729621c0a8b30787b0d7c387db20b169a23fd3c56874c69a821c128",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 7.673519925547073e-07,
+            "head_error_m": 1.212179336074204e-12,
+            "flow_change_m3_s": 9.983234181232926e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9928041809234474,
+          "roughness_scale": 1.0064539708692788
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "17963b7cfbba3b46a9f783cf08dac46e1832041630b066849119788defbf6709",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 23.0,
+            "relative_error": 9.114496893604343e-07,
+            "head_error_m": 1.398202305303263e-12,
+            "flow_change_m3_s": 9.981909259779376e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6175257517024875e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9928041809234474,
+          "roughness_scale": 1.0024539708692788
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "6cc303f22ce4ba7dfdfc76cb5ba93520c77f345e091e3a3f82ae8bae555dfaa6",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.925028720918278e-07,
+            "head_error_m": 1.3750986835521403e-12,
+            "flow_change_m3_s": 9.979336414391731e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9924317067931478,
+          "roughness_scale": 1.0044604343078694
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "a1ae657073fbff2b77c77c0a35cfab18d60081d482ec4e613a8138addb151e43",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.528496648868786e-07,
+            "head_error_m": 1.266644088683685e-12,
+            "flow_change_m3_s": 9.922576242864413e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6182533474639058e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9927110531352126,
+          "roughness_scale": 1.0044548853309285
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "25b8e903335973cd78ac02d54db164184bb4523196c21fad9b427e4676f9ce46",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 22.0,
+            "relative_error": 8.00721338475427e-07,
+            "head_error_m": 1.4249627930743025e-12,
+            "flow_change_m3_s": 9.962187127220635e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.9927808987788673,
+          "roughness_scale": 1.0044541777409088
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "77ae6d308fe7c52647fcdfcf3b4c41b86baa251a4bc5b89e78974e63df50b0f5",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.805728406759e-07,
+            "head_error_m": 1.3675365327147705e-12,
+            "flow_change_m3_s": 9.99279686234046e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6182533474639058e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.992798360377134,
+          "roughness_scale": 1.0044540213952502
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "2f8db499f5b60b4db8f12b8cd4aceb0526974994562632abafa0d18ca35b47b4",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 21.0,
+            "relative_error": 9.966663367544416e-07,
+            "head_error_m": 1.38532241549806e-12,
+            "flow_change_m3_s": 9.986751331367062e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6171619538217783e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.994798360377134,
+          "roughness_scale": 1.0044540213952502
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "5241a42cf986f7fd91daa90b502b75ff9871affbd6f8de72270f37c333d47f83",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 20.0,
+            "relative_error": 9.942121149233136e-07,
+            "head_error_m": 1.219184257280548e-12,
+            "flow_change_m3_s": 9.984171039157498e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.990798360377134,
+          "roughness_scale": 1.0044540213952502
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "5695bcbf2c6a8e79027521c3bf4a0b82bb08ae59e015464c20c5a9993ea818be",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 21.0,
+            "relative_error": 9.888504036795522e-07,
+            "head_error_m": 1.2579146099755967e-12,
+            "flow_change_m3_s": 9.975312183495479e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.992798360377134,
+          "roughness_scale": 1.0064540213952502
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "6dd332fee65d0c395b76ff551a47ad00d17fd5f062d7bec5a0c4a1648e526194",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 29.0,
+            "relative_error": 9.879011617468277e-07,
+            "head_error_m": 1.2918291241413583e-12,
+            "flow_change_m3_s": 9.985616843577684e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6171619538217783e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.992798360377134,
+          "roughness_scale": 1.0024540213952502
+        },
+        "time_range_s": [
+          0.0,
+          84600.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "03c865398653cbe64d2a6e01148286a2512569c432f05f84ea49aa928ca8f05a",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.477326504041229e-07,
+            "head_error_m": 1.2875578332682825e-12,
+            "flow_change_m3_s": 9.93604103532475e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6178895495831966e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 1.0,
+          "roughness_scale": 1.0
+        },
+        "time_range_s": [
+          86400.0,
+          171000.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "f3c5176a376bc5ef2a786efdbf38db6d4112144e2f4667bac51b1da0702efaf4",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 19.0,
+            "relative_error": 9.955237860240912e-07,
+            "head_error_m": 1.2889961483603108e-12,
+            "flow_change_m3_s": 9.983293283449545e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.6298948796465993e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      },
+      {
+        "parameters": {
+          "demand_scale": 0.992798360377134,
+          "roughness_scale": 1.0044540213952502
+        },
+        "time_range_s": [
+          86400.0,
+          171000.0
+        ],
+        "requested_rows": 48,
+        "status": "computed",
+        "evaluation_digest": "fdd1a92d06cd772224a97b1a254826ba64d1b35e2f7b44cdd6158f6e1c857430",
+        "diagnostics": {
+          "warning_count": 0,
+          "maximum_native_hydraulic_statistics": {
+            "iterations": 21.0,
+            "relative_error": 9.966663367544416e-07,
+            "head_error_m": 1.517499816693031e-12,
+            "flow_change_m3_s": 9.986751331367062e-09
+          },
+          "effective_hydraulic_options_si": {
+            "maximum_trials": 200.0,
+            "relative_accuracy": 1e-06,
+            "head_error_m": 1e-05,
+            "flow_change_m3_s": 1e-08
+          },
+          "continuity_residual_m3_s": 2.627348294481635e-08,
+          "native_library_sha256": "87fd7456a0b3ada99938e3e581b487248d9312f87a0e00eef56575169159e01d"
+        }
+      }
+    ],
+    "result_digest": "38088cf659b0ee8839af9df92b8628ba2fce7b6b9e93a49fa09e50aa43546656"
+  },
+  "forward_specification": {
+    "duration_s": 171000.0,
+    "hydraulic_timestep_s": 300.0,
+    "report_timestep_s": 300.0,
+    "continuity_tolerance_m3_s": 1e-06,
+    "solver_relative_accuracy": 1e-06,
+    "solver_head_error_m": 1e-05,
+    "solver_flow_change_m3_s": 1e-08,
+    "solver_maximum_trials": 200,
+    "maximum_hydraulic_periods": 1000000
+  },
+  "sensor_mapping": [
+    {
+      "channel_id": "pressure_head:n1",
+      "element_id": "n1",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n4",
+      "element_id": "n4",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n31",
+      "element_id": "n31",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n54",
+      "element_id": "n54",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n105",
+      "element_id": "n105",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n114",
+      "element_id": "n114",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n163",
+      "element_id": "n163",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n188",
+      "element_id": "n188",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n215",
+      "element_id": "n215",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n229",
+      "element_id": "n229",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n288",
+      "element_id": "n288",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n296",
+      "element_id": "n296",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n332",
+      "element_id": "n332",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n342",
+      "element_id": "n342",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n410",
+      "element_id": "n410",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n415",
+      "element_id": "n415",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n429",
+      "element_id": "n429",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n458",
+      "element_id": "n458",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n469",
+      "element_id": "n469",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n495",
+      "element_id": "n495",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n506",
+      "element_id": "n506",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n516",
+      "element_id": "n516",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n519",
+      "element_id": "n519",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n549",
+      "element_id": "n549",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n613",
+      "element_id": "n613",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n636",
+      "element_id": "n636",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n644",
+      "element_id": "n644",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n679",
+      "element_id": "n679",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n722",
+      "element_id": "n722",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n726",
+      "element_id": "n726",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n740",
+      "element_id": "n740",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n752",
+      "element_id": "n752",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "pressure_head:n769",
+      "element_id": "n769",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "volume_flow:p227",
+      "element_id": "p227",
+      "quantity": "volume_flow",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "volume_flow:p235",
+      "element_id": "p235",
+      "quantity": "volume_flow",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "volume_flow:PUMP_1",
+      "element_id": "PUMP_1",
+      "quantity": "volume_flow",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "water_level:T1",
+      "element_id": "T1",
+      "quantity": "water_level",
+      "flow_sign": 1
+    }
+  ],
+  "source_citation": "Stelios G. Vrachimis; Demetrios G. Eliades; Riccardo Taormina; Avi Ostfeld; Zoran Kapelan; Shuming Liu; Marios S. Kyriakou; Pavlos Pavlou; Mengning Qiu; Marios Polycarpou; https://doi.org/10.5281/zenodo.4017659",
+  "license_id": "CC-BY-4.0",
+  "data_origin": "simulation",
+  "independent_field_validation": false,
+  "temporal_holdout_does_not_remove_shared_network_model_bias": true,
+  "leak_labels_or_hidden_generating_network_used": false,
+  "residual_scales_are_measurement_uncertainties": false,
+  "source_engines_modified": false,
+  "raw_or_transformed_external_rows_in_public_summary": false,
+  "implementation_files_sha256": {
+    "inverse.py": "c216deb827e94589adc337c5edd4c45dcfbe6089867700805e9c6f9e9d78ea2e",
+    "water_inverse.py": "ac358a2f860aa828a7013704e1d2f80ceb31433634d6a2c38c81f77a509e40df",
+    "water.py": "b03234476c8c9b4867e01dbeb470fe473d06dd4bdd3414f12063b8d0894d4c6d",
+    "epanet.py": "786ce724b250e4e76b3a9ec69c67683661b46d542258a50481567e5f7b851d64"
+  }
+}

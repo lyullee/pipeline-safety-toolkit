@@ -1,0 +1,90 @@
+{
+  "specification": {
+    "history": {
+      "asset_id": "declared_thin_pipe",
+      "location_id": "uniform_wall",
+      "scenario_id": "two_pressure_excursions",
+      "clock_id": "reference_elapsed",
+      "time_s": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "pressure_pa": [
+        2000000.0,
+        4000000.0,
+        2000000.0,
+        4000000.0,
+        2000000.0
+      ],
+      "pressure_reference": "gauge",
+      "ambient_pressure_pa_abs": 101325.0,
+      "temperature_k": [
+        293.15,
+        293.15,
+        293.15,
+        293.15,
+        293.15
+      ],
+      "valid": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "pressure_origin": "synthetic",
+      "temperature_origin": "user_declared",
+      "source_id": "authored_pressure_fatigue_reference",
+      "source_sha256": "660658e2dc94ece6ed7b769bbf56c8f34548c37a527e682e0928824f2eebb8c8",
+      "temperature_evidence_id": "authored_pressure_fatigue_reference",
+      "binding_digest": "7a29d8543d33f7279e0caba392246de9567cdf2c611b4e925d5b075dbffb1f19"
+    },
+    "geometry": {
+      "mean_radius_m": 0.1,
+      "wall_thickness_m": 0.005,
+      "maximum_thickness_to_radius_ratio": 0.1,
+      "evidence_id": "authored_pressure_fatigue_reference"
+    },
+    "curve": {
+      "reference_stress_range_pa": 40000000.0,
+      "reference_cycles": 1000.0,
+      "basquin_exponent": 3.0,
+      "minimum_stress_range_pa": 1.0,
+      "maximum_stress_range_pa": 100000000.0,
+      "minimum_temperature_k": 290.0,
+      "maximum_temperature_k": 300.0,
+      "minimum_stress_ratio": 0.0,
+      "maximum_stress_ratio": 0.999999999999,
+      "basis": "synthetic_reference",
+      "evidence_id": "authored_pressure_fatigue_reference"
+    },
+    "external_pressure_pa_abs": 101325.0,
+    "external_pressure_evidence_id": "authored_pressure_fatigue_reference",
+    "initial_damage": 0.1,
+    "initial_damage_evidence_id": "authored_pressure_fatigue_reference",
+    "declared_damage_limit": 1.0,
+    "damage_limit_evidence_id": "authored_pressure_fatigue_reference",
+    "maximum_samples": 100000
+  },
+  "context": {
+    "asset_id": "declared_thin_pipe",
+    "scenario_id": "two_pressure_excursions",
+    "clock_id": "reference_elapsed",
+    "origin": "synthetic",
+    "evidence": [
+      {
+        "id": "authored_pressure_fatigue_reference",
+        "citation": "Original demonstration: declared pressure, geometry and artificial fatigue curve",
+        "origin": "synthetic",
+        "locator": "",
+        "sha256": null,
+        "license_id": "MIT",
+        "limitations": []
+      }
+    ],
+    "metadata": {}
+  }
+}

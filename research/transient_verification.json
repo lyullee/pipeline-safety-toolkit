@@ -1,0 +1,26 @@
+{
+  "schema": "pipeline_integrity.transient_reference.v1",
+  "origin": "synthetic",
+  "status": "computed",
+  "joukowsky_head_rise_m": 32.45857516927704,
+  "computed_head_rise_m": 32.458575169277026,
+  "computed_reflected_head_fall_m": 32.458575169277026,
+  "refinement_maximum_difference_m": 0.0,
+  "maximum_volume_residual_m3": 6.938893903907228e-18,
+  "maximum_junction_residual_m3_s": 2.6020852139652106e-18,
+  "grid": {
+    "reference_pipe": {
+      "segments": 40,
+      "wave_speed_m_s": 1000.0,
+      "relative_wave_speed_adjustment": 0.0
+    }
+  },
+  "field_validation_claim": false,
+  "tsnet_probe": {
+    "distribution_version": "0.3.1",
+    "numpy_version": "2.5.4",
+    "wntr_version": "1.5.0",
+    "outcome": "failed_during_discretization",
+    "reason": "NumPy non-scalar-array to int conversion raised TypeError; not adopted or patched."
+  }
+}

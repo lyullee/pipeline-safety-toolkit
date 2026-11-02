@@ -1,0 +1,43 @@
+{
+  "schema": "pipeline_integrity.pressure_tests_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "native_models": {
+    "inspection.pressure_test_load": "1.0.0",
+    "inspection.gas_expansion_energy": "1.0.0",
+    "inspection.gas_pressure_decay": "1.0.0",
+    "inspection.vacuum_rise": "1.0.0"
+  },
+  "new_runtime_dependencies": [],
+  "implementation_policy": "Reuse strict original MaterialJob models and the common checked thermodynamic service. Add complete history, pressure/reference meaning, molar-density R-convention bridge and source metadata guards; no owner law is copied.",
+  "data_rights": {
+    "doi": "10.5281/zenodo.20582921",
+    "registered_version": null,
+    "publisher_page_version": "v1",
+    "creators": [
+      "Milos Mician",
+      "Radoslav Konar"
+    ],
+    "source": "https://zenodo.org/records/20582921",
+    "rights_url": "https://api.datacite.org/dois/10.5281/zenodo.20582921",
+    "license_id": "CC-BY-4.0",
+    "datacite_cache_sha256": "18c9bec00fda6b955a1e04cd860f6b4f29336f4c1cc569b6f7e6adbeecb1fca4",
+    "publisher_metadata_cache_sha256": "7cb696780975d75bc6d95a985f051656ff2bd76204ba70385b82653c26d51b07",
+    "assets_verified": 1,
+    "bytes": 78721,
+    "source_or_transformed_rows_in_release": false
+  },
+  "property_api": "https://coolprop.org/coolprop/HighLevelAPI.html",
+  "native_R_J_mol_K": 8.31446261815324,
+  "property_bridge": "Use source molar density to express Z on the native R basis; verify native integrated moles against density difference times declared volume.",
+  "actual_source_findings": {
+    "capillary_profiles": 10,
+    "source_rows": 310,
+    "no_defect_reference_or_separate_ambient_channel_identified": false,
+    "representative_gas_temperature_role_resolved": false,
+    "volume_ambient_and_compliance_not_supplied": true
+  },
+  "application_scope": "Ten actual profiles withheld for unresolved physical metadata; eight conditional specified-fluid scenarios (including assumed predefined Air) computed under explicit hypotheses, two unknown-composition mixtures withheld. This is not observed leak-rate or field validation.",
+  "supplier_design_tables_or_wording_copied": false,
+  "public_explanations_original": true,
+  "legal_or_field_qualification_claim": false
+}

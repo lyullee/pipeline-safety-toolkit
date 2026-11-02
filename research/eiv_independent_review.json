@@ -1,0 +1,217 @@
+{
+  "status": "passed_bounded_independent_review",
+  "producer_sha256": "9923ffbf89e3bcecb8fa2a20a4a8e4c4b1dad14332a3d15028ba4c7d490e7167",
+  "private_probe_sha256": "37a036855f6f54476248fe1bec911ba08394441de9770fad8e21b779237e85db",
+  "checks": [
+    {
+      "id": "dense_joint_computed",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "independent_eliminated_offset",
+      "passed": true,
+      "observed": {
+        "native": 0.6631143719591321,
+        "reference": 0.6631143724760079
+      }
+    },
+    {
+      "id": "independent_absolute_variance",
+      "passed": true,
+      "observed": {
+        "native": 0.021353317979031394,
+        "reference": 0.021353317979031387
+      }
+    },
+    {
+      "id": "independent_joint_GLS_nuisance_x",
+      "passed": true,
+      "observed": 1.774826952072317e-10
+    },
+    {
+      "id": "full_covariance_receipt_not_diagonalized",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "independent_references_agree",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "absolute_not_residual_scaled",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "cross_axis_common_error_cancels_in_offset",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "cross_axis_common_error_cancels_in_variance",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "exact_x_known_slope_GLS",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "exact_x_no_nuisance_or_variance_invention",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "holdout_native_fit_bitwise_unchanged",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "holdout_covariance_and_parameters_unchanged",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "shared_error_validation_honestly_dependent",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "heldout_covariance_never_used_for_fit",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "actual_cross_covariance_closes_independence_gate",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "unknown_cross_correlation_never_zero_filled",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "active_bound_no_unconstrained_covariance",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "rank_deficient_model_no_covariance",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "prediction_does_not_assume_newinput_covariance_zero",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "observed_support_extrapolation_refused",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "rehashed:latent_x",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "rehashed:absolute_covariance",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "rehashed:original_covariance",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "rehashed:backend",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "rehashed:validation_independence",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "id": "production_source_unchanged",
+      "passed": true,
+      "observed": null
+    }
+  ],
+  "count": 27,
+  "reference_offset": 0.6631143724760079,
+  "reference_absolute_variance": 0.021353317979031387,
+  "cases": {
+    "dense_joint_known_slope": {
+      "status": "computed",
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ],
+      "record_digest": "f72651d95a4e75bde99380fe16e5186f94b96327cdec5ec34e8f82790e5a897b"
+    },
+    "shared_along_line_error": {
+      "status": "computed",
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ],
+      "record_digest": "1179d27153d2bf96a86900339d434dfe3449c22dce6d77f036d19fcba757484c"
+    },
+    "exact_x_dense_y_errors": {
+      "status": "computed",
+      "notes": [
+        "fit-only; independent validation not supplied"
+      ],
+      "record_digest": "8c96311655d9470da3401b5de4511c9595c237ae83e45c2f6da14aad61b270a4"
+    },
+    "shared_error_heldout": {
+      "status": "computed",
+      "notes": [],
+      "record_digest": "c6629a88c4034aada0a1038c502449de111810cd52a41c734b09401a96620a80"
+    },
+    "heldout_value_poison": {
+      "status": "computed",
+      "notes": [],
+      "record_digest": "86c98ae551b385501f563bc41d29a95fc59212b3b0322be763cc5533a531361a"
+    },
+    "heldout_covariance_poison": {
+      "status": "computed",
+      "notes": [],
+      "record_digest": "6ff58c483a9f1e86b14b4144acab608dc244682b68672234375ea56a2873f531"
+    },
+    "claimed_independence_refused": {
+      "status": "out_of_scope",
+      "notes": [
+        "fit and validation measurement errors are correlated; independent validation is unproven"
+      ],
+      "record_digest": "be37f4da85a2cefd0afb7a574ba7cbf2640a9daa224435c99ce1244e154bc19b"
+    },
+    "unknown_cross_axis_covariance": {
+      "status": "needs_data",
+      "notes": [
+        "complete standard joint covariance is required; missing correlations are not zero"
+      ],
+      "record_digest": "ac66788b77738f073f7e6e4cd7009fa907286968527866ce1b71839fa0d6862b"
+    },
+    "active_offset_bound": {
+      "status": "out_of_scope",
+      "notes": [
+        "ValueError: a model derivative cannot be qualified at an active bound"
+      ],
+      "record_digest": "ab17eb898212a17ce5242d3ceff7748f6426cdb84f2f5bd10f60544bdd5df7d4"
+    },
+    "rank_deficient_offset": {
+      "status": "out_of_scope",
+      "notes": [
+        "native convergence, full local rank and inactive bounds are required for calibration covariance"
+      ],
+      "record_digest": "cbb828efdeffaa7644eb20d741588dec4cc4778a9ab52f2869811a0a8478bc99"
+    }
+  }
+}

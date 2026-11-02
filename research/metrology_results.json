@@ -1,0 +1,40 @@
+{
+  "schema": "pipeline_integrity.metrology_verification.v1",
+  "implementation_sha256": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb",
+  "script_sha256": "40d36ad4c31d8b64002c49d4bb5882e2015dfe906e3412c6aa6b4d42c0717944",
+  "example_sha256": "22f28e160f167d630a576430f14fc1fac3c9f2ec3d5ccd52b58b784eacadd2bb",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pint": "0.26.2"
+  },
+  "checks": {
+    "correlated_relative_error_variance": true,
+    "expanded_interval_overlap_is_indeterminate": true,
+    "factor_does_not_supply_probability": true,
+    "roundtrip_reconstruction": true,
+    "missing_correlation_is_withheld": true,
+    "four_rehashed_mutations_rejected": true
+  },
+  "criterion_count": 6,
+  "private_record_count": 107,
+  "all_passed": true,
+  "synthetic_error_estimate": 0.10000000000000009,
+  "synthetic_standard_uncertainty": 0.034117444218463966,
+  "field_validation_performed": false,
+  "custody_transfer_certified": false,
+  "calibration_fit_performed": false,
+  "source_reencoding": {
+    "dataset_id": "vsl_lng_water_calibration",
+    "source_sha256": "e97c896dde7792bae026e47fb8384256a8eff035ecbf1f85719e60069577a276",
+    "license_id": "CC-BY-4.0",
+    "scalar_identity_budgets": 104,
+    "non_error_pulse_factor_summaries_skipped": 19,
+    "maximum_expanded_uncertainty_reencoding_error": 0.0,
+    "all_scalar_identities_passed": true,
+    "actual_component_covariance_status": "needs_data",
+    "component_covariance_inferred": false,
+    "source_time_invented": false,
+    "independent_validation_performed": false
+  }
+}

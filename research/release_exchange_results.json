@@ -1,0 +1,1832 @@
+{
+  "schema": "pipeline_integrity.release_exchange_checks.v1",
+  "sources": {
+    "lh2dt_models": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c",
+      "source_tree_files": 52
+    },
+    "PRISM": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "e3052a317818501fae3a29475b6b057ba5f260b406547354e29f755b0298a0b8",
+      "source_tree_files": 296
+    }
+  },
+  "cases": {
+    "Hydrogen_quality_None_dt_0.005": {
+      "history": {
+        "schema_version": "pipeline_integrity.accident_history.v1",
+        "status": "exchange_checked",
+        "request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "clock_id": "elapsed",
+          "start_time_s": 10.0,
+          "source_id": "synthetic_native_export_reference",
+          "initial_pressure_pa_abs": 1000000.0,
+          "initial_temperature_k": 300.0,
+          "initial_vapour_mass_fraction": null,
+          "wall_temperature_k": 300.0,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "isolation_time_s": null,
+          "post_isolation_observation_s": null,
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": null,
+          "impact_position_enu_m": null,
+          "droplet_diameter_m": null,
+          "maximum_intervals": 100
+        },
+        "build": {
+          "schema_version": "pipeline_integrity.equipment_build.v1",
+          "owner": "lh2dt_models",
+          "status": "ready",
+          "asset_id": "accident_pipe",
+          "model_id": "dynamic_hem_pipe",
+          "parameter_digest": "0ecaa329be2ef3f6582ff1a493e4f9de2d5fb527cbc3f6cdc12e3b86aca0c2f3",
+          "missing_parameters": [],
+          "issues": [],
+          "property_basis": "CoolProp8_HEOS_Hydrogen_default_reference",
+          "fluid": "Hydrogen",
+          "context": {
+            "asset_id": "accident_pipe",
+            "scenario_id": "declared_single_outlet",
+            "clock_id": "elapsed",
+            "origin": "synthetic",
+            "evidence": [],
+            "metadata": {}
+          },
+          "physical_model_validated": false,
+          "parameter_policy": "reviewed_fields_only",
+          "unreviewed_parameter_names": [],
+          "owner_version": null,
+          "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+          "owner_code_digest_scope": "owner_package_python_sources_only"
+        },
+        "provider_request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "initial_pressure_pa_abs": 1000000.0,
+          "initial_temperature_k": 300.0,
+          "wall_temperature_k": 300.0,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "post_pressure_equalization_observation_s": 0.0,
+          "component_id": "accident_pipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "state_snapshot_digest": "56eab00c5caa7943fafad1b30d7e60d8023ffc1b08b3898ea344e7fdc43c8ef9"
+        },
+        "provider_response": {
+          "provider_export_schema": "prism.external_accident_history.v1",
+          "provider_model": "lh2dt.dynamic_pipe.DynamicHEMPipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_state_snapshot_digest": "56eab00c5caa7943fafad1b30d7e60d8023ffc1b08b3898ea344e7fdc43c8ef9",
+          "data": {
+            "event_kind": "accidental_leak",
+            "event_id": "accident_pipe/synthetic_leak",
+            "component_id": "accident_pipe",
+            "port_id": "failed_opening",
+            "duration_s": 0.01,
+            "ambient_pressure_pa_abs": 101325.0,
+            "available_mass_kg": 0.0015776223061701646,
+            "cumulative_mass_out_kg": 3.867481806666646e-06,
+            "cumulative_specific_enthalpy_out_j": 15.31958108881287,
+            "cumulative_static_enthalpy_out_j": 15.31958108881287,
+            "termination_basis": "synthetic_diagnostic_horizon",
+            "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+            "upstream_service": "LH2",
+            "fluid": "Hydrogen",
+            "phase_basis": "gas",
+            "reference_area_m2": 7.853981633974482e-07,
+            "reference_area_provenance": "explicit failed pipe opening area",
+            "droplet_partition_provenance": "DynamicHEMPipe gas outlet at ambient pressure; no liquid partition",
+            "steps": [
+              {
+                "time_s": 0.0,
+                "mass_flow_kg_s": 0.00038703212537066507,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 3962205.072929315,
+                "temperature_k": 300.2741836039255,
+                "density_kg_m3": 0.08176578487108252,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 6026.782570261947,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 999999.9999999999,
+                  "source_temperature_k": 300.0,
+                  "source_density_kg_m3": 0.8034764427488551,
+                  "source_specific_enthalpy_j_kg": 3962205.072929315,
+                  "source_specific_entropy_j_kgk": 44013.20870542226,
+                  "throat_pressure_pa_abs": 517025.0270159457,
+                  "throat_temperature_k": 247.6168609399935,
+                  "throat_density_kg_m3": 0.504564260684398,
+                  "throat_specific_enthalpy_j_kg": 3215912.7521901955,
+                  "throat_mass_flux_kg_m2_s": 616.43312694883,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              },
+              {
+                "time_s": 0.005,
+                "mass_flow_kg_s": 0.00038646423596266417,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 3960044.4874804965,
+                "temperature_k": 300.1232363105195,
+                "density_kg_m3": 0.08180689445652325,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 6014.915382407457,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 998265.0853211851,
+                  "source_temperature_k": 299.84983240685983,
+                  "source_density_kg_m3": 0.8024908735346454,
+                  "source_specific_enthalpy_j_kg": 3960044.4874804965,
+                  "source_specific_entropy_j_kgk": 44013.20870542225,
+                  "throat_pressure_pa_abs": 516386.32897582446,
+                  "throat_temperature_k": 247.52686716381524,
+                  "throat_density_kg_m3": 0.504126008763686,
+                  "throat_specific_enthalpy_j_kg": 3214646.361339735,
+                  "throat_mass_flux_kg_m2_s": 615.5286189207746,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              }
+            ],
+            "provider_meta": {
+              "native_inventory_owner": "DynamicHEMPipe",
+              "initial_mass_kg": 0.0015776223061701646,
+              "final_mass_kg": 0.001573754824363498,
+              "residual_mass_kg": 0.0,
+              "final_pressure_pa_abs": 996533.5866872941,
+              "pressure_equalized": false,
+              "pressure_equalization_time_s": null,
+              "post_pressure_equalization_observation_s": null,
+              "pressure_equalization_success": null,
+              "terminal_source_pressure_pa_abs": null,
+              "ambient_pressure_pa_abs": null,
+              "max_post_pressure_equalization_flow_kg_s": null,
+              "isolation_time_s": null,
+              "post_isolation_observation_s": 0.0,
+              "isolation_success": false,
+              "dynamic_state_closure": {
+                "schema_version": "prism.provider_dynamic_state_closure.v1",
+                "inventory_feedback_closed": true,
+                "pressure_feedback_closed": true,
+                "state_history_digest": "f8fb42ba01c73dce8cb915d34a344f9482122bfabe9128d54324447d4e53824b",
+                "max_abs_inventory_residual_kg": 0.0,
+                "inventory_tolerance_kg": 1e-10,
+                "max_abs_pressure_residual_pa": 0.0,
+                "pressure_tolerance_pa": 9.96533586687294e-05,
+                "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+              },
+              "time_step_s": 0.005,
+              "valve": {
+                "area_m2": 7.853981633974482e-07,
+                "discharge_coefficient": 0.8,
+                "choked_intervals": 2
+              }
+            }
+          }
+        },
+        "audit": {
+          "integrated_internal_energy_and_heat_ledger_supplied": false,
+          "isolation_boundary": null,
+          "interval_count": 2,
+          "duration_s": 0.01,
+          "integrated_mass_kg": 3.867481806666646e-06,
+          "integrated_static_enthalpy_j": 15.319581088812871,
+          "remaining_mass_kg": 0.001573754824363498,
+          "inventory_residual_kg": 0.0,
+          "inventory_tolerance_kg": 1e-10,
+          "maximum_gas_density_relative_disagreement": 0.0,
+          "termination_basis_owner": "synthetic_diagnostic_horizon",
+          "retained_context_start_time_s": 10.0,
+          "retained_context_end_time_s": 10.01,
+          "provider_time_basis": "elapsed_from_declared_start",
+          "property_check_scope": "same_EOS_state_consistency_not_independent_physical_validation"
+        },
+        "issues": [],
+        "provider_response_digest": "22aa1a99ecc2690474faf2cd5a46595b54b73e70dfee92b448760f62ced18003",
+        "envelope_digest": "536347b22e2473546687aeaf66e07b219bb23bad7c297fe297bc0473a922636a",
+        "physical_actuation_or_field_validation": false
+      },
+      "prism_handoff": {
+        "schema": "pipeline_integrity.release_handoff.v1",
+        "native_packet": {
+          "provider_export_schema": "prism.resolved_release.v1",
+          "component_id": "accident_pipe",
+          "port_id": "failed_opening",
+          "event_id": "accident_pipe/synthetic_leak",
+          "event_kind": "accidental_leak",
+          "upstream_service": "LH2",
+          "upstream_service_provenance": "synthetic_native_export_reference",
+          "state_owner": "equipment_twin",
+          "discharge_owner": "equipment_twin",
+          "boundary_kind": "resolved_atmospheric_gas_exit",
+          "enthalpy_convention": "static_exit_enthalpy",
+          "property_basis": {
+            "fluid": "Hydrogen",
+            "backend": "CoolProp-HEOS",
+            "energy_reference": "CoolProp-HEOS:Hydrogen:native"
+          },
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_result_digest": "22aa1a99ecc2690474faf2cd5a46595b54b73e70dfee92b448760f62ced18003",
+          "provider_boundary_reference": "accident-envelope:536347b22e2473546687aeaf66e07b219bb23bad7c297fe297bc0473a922636a",
+          "input_origin": "synthetic",
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "duration_s": 0.01,
+          "available_mass_kg": 0.0015776223061701646,
+          "cumulative_mass_out_kg": 3.867481806666646e-06,
+          "cumulative_static_enthalpy_out_j": 15.31958108881287,
+          "steps": [
+            {
+              "time_s": 0.0,
+              "mass_flow_kg_s": 0.00038703212537066507,
+              "pressure_pa_abs": 101325.0,
+              "specific_enthalpy_j_kg": 3962205.072929315,
+              "temperature_k": 300.2741836039255,
+              "density_kg_m3": 0.08176578487108252,
+              "effective_area_m2": 7.853981633974482e-07,
+              "velocity_m_s": 6026.782570261947,
+              "area_provenance": "explicit failed pipe opening area",
+              "velocity_origin": "mass_continuity_from_declared_area",
+              "provider_source_state": {
+                "source_pressure_pa_abs": 999999.9999999999,
+                "source_temperature_k": 300.0,
+                "source_density_kg_m3": 0.8034764427488551,
+                "source_specific_enthalpy_j_kg": 3962205.072929315,
+                "source_specific_entropy_j_kgk": 44013.20870542226,
+                "throat_pressure_pa_abs": 517025.0270159457,
+                "throat_temperature_k": 247.6168609399935,
+                "throat_density_kg_m3": 0.504564260684398,
+                "throat_specific_enthalpy_j_kg": 3215912.7521901955,
+                "throat_mass_flux_kg_m2_s": 616.43312694883,
+                "choked": true,
+                "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+              },
+              "provider_port_state": null
+            },
+            {
+              "time_s": 0.005,
+              "mass_flow_kg_s": 0.00038646423596266417,
+              "pressure_pa_abs": 101325.0,
+              "specific_enthalpy_j_kg": 3960044.4874804965,
+              "temperature_k": 300.1232363105195,
+              "density_kg_m3": 0.08180689445652325,
+              "effective_area_m2": 7.853981633974482e-07,
+              "velocity_m_s": 6014.915382407457,
+              "area_provenance": "explicit failed pipe opening area",
+              "velocity_origin": "mass_continuity_from_declared_area",
+              "provider_source_state": {
+                "source_pressure_pa_abs": 998265.0853211851,
+                "source_temperature_k": 299.84983240685983,
+                "source_density_kg_m3": 0.8024908735346454,
+                "source_specific_enthalpy_j_kg": 3960044.4874804965,
+                "source_specific_entropy_j_kgk": 44013.20870542225,
+                "throat_pressure_pa_abs": 516386.32897582446,
+                "throat_temperature_k": 247.52686716381524,
+                "throat_density_kg_m3": 0.504126008763686,
+                "throat_specific_enthalpy_j_kg": 3214646.361339735,
+                "throat_mass_flux_kg_m2_s": 615.5286189207746,
+                "choked": true,
+                "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+              },
+              "provider_port_state": null
+            }
+          ],
+          "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+          "termination_basis": "synthetic_diagnostic_horizon",
+          "provider_mass_balance": {
+            "schema_version": "prism.provider_mass_balance.v1",
+            "initial_mass_kg": 0.0015776223061701646,
+            "cumulative_mass_in_kg": null,
+            "cumulative_mass_out_kg": 3.867481806666646e-06,
+            "final_mass_kg": 0.001573754824363498,
+            "reported_residual_mass_kg": 0.0,
+            "derived_accounting_residual_kg": 0.0,
+            "isolation_time_s": null,
+            "post_isolation_observation_s": null,
+            "isolation_success": false,
+            "pressure_equalization_time_s": null,
+            "post_pressure_equalization_observation_s": null,
+            "pressure_equalization_success": null,
+            "terminal_source_pressure_pa_abs": null,
+            "ambient_pressure_pa_abs": null,
+            "max_post_pressure_equalization_flow_kg_s": null,
+            "dynamic_state_closure": {
+              "schema_version": "prism.provider_dynamic_state_closure.v1",
+              "inventory_feedback_closed": true,
+              "pressure_feedback_closed": true,
+              "state_history_digest": "f8fb42ba01c73dce8cb915d34a344f9482122bfabe9128d54324447d4e53824b",
+              "max_abs_inventory_residual_kg": 0.0,
+              "inventory_tolerance_kg": 1e-10,
+              "max_abs_pressure_residual_pa": 0.0,
+              "pressure_tolerance_pa": 9.96533586687294e-05,
+              "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+            }
+          },
+          "vertical_handoff": null,
+          "compressible_plane_handoff": null,
+          "failure_opening_diameter_m": 0.001
+        },
+        "native_packet_digest": "a76de2e3511fb2053e3abda7937222004e9e03b72993f2e4d585482bfb4331ce",
+        "history_envelope_digest": "536347b22e2473546687aeaf66e07b219bb23bad7c297fe297bc0473a922636a",
+        "context": {
+          "asset_id": "accident_pipe",
+          "scenario_id": "declared_single_outlet",
+          "clock_id": "elapsed",
+          "origin": "synthetic",
+          "evidence": [],
+          "metadata": {}
+        },
+        "provider_time_origin_in_context_s": 10.0,
+        "property_basis_id": "CoolProp8_HEOS_Hydrogen_default_reference",
+        "initiating_frequency_or_consequence_calculated": false,
+        "physical_actuation_or_field_validation": false
+      }
+    },
+    "Hydrogen_quality_None_dt_0.0025": {
+      "history": {
+        "schema_version": "pipeline_integrity.accident_history.v1",
+        "status": "exchange_checked",
+        "request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "clock_id": "elapsed",
+          "start_time_s": 10.0,
+          "source_id": "synthetic_native_export_reference",
+          "initial_pressure_pa_abs": 1000000.0,
+          "initial_temperature_k": 300.0,
+          "initial_vapour_mass_fraction": null,
+          "wall_temperature_k": 300.0,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.0025,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "isolation_time_s": null,
+          "post_isolation_observation_s": null,
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": null,
+          "impact_position_enu_m": null,
+          "droplet_diameter_m": null,
+          "maximum_intervals": 100
+        },
+        "build": {
+          "schema_version": "pipeline_integrity.equipment_build.v1",
+          "owner": "lh2dt_models",
+          "status": "ready",
+          "asset_id": "accident_pipe",
+          "model_id": "dynamic_hem_pipe",
+          "parameter_digest": "0ecaa329be2ef3f6582ff1a493e4f9de2d5fb527cbc3f6cdc12e3b86aca0c2f3",
+          "missing_parameters": [],
+          "issues": [],
+          "property_basis": "CoolProp8_HEOS_Hydrogen_default_reference",
+          "fluid": "Hydrogen",
+          "context": {
+            "asset_id": "accident_pipe",
+            "scenario_id": "declared_single_outlet",
+            "clock_id": "elapsed",
+            "origin": "synthetic",
+            "evidence": [],
+            "metadata": {}
+          },
+          "physical_model_validated": false,
+          "parameter_policy": "reviewed_fields_only",
+          "unreviewed_parameter_names": [],
+          "owner_version": null,
+          "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+          "owner_code_digest_scope": "owner_package_python_sources_only"
+        },
+        "provider_request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "initial_pressure_pa_abs": 1000000.0,
+          "initial_temperature_k": 300.0,
+          "wall_temperature_k": 300.0,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.0025,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "post_pressure_equalization_observation_s": 0.0,
+          "component_id": "accident_pipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "state_snapshot_digest": "6d2c7c06a7b21ad57ae1fe70b153cd37ad7b168673fccec5f4bddf90fb49797f"
+        },
+        "provider_response": {
+          "provider_export_schema": "prism.external_accident_history.v1",
+          "provider_model": "lh2dt.dynamic_pipe.DynamicHEMPipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_state_snapshot_digest": "6d2c7c06a7b21ad57ae1fe70b153cd37ad7b168673fccec5f4bddf90fb49797f",
+          "data": {
+            "event_kind": "accidental_leak",
+            "event_id": "accident_pipe/synthetic_leak",
+            "component_id": "accident_pipe",
+            "port_id": "failed_opening",
+            "duration_s": 0.01,
+            "ambient_pressure_pa_abs": 101325.0,
+            "available_mass_kg": 0.0015776223061701646,
+            "cumulative_mass_out_kg": 3.867481806667051e-06,
+            "cumulative_specific_enthalpy_out_j": 15.317493236987811,
+            "cumulative_static_enthalpy_out_j": 15.317493236987811,
+            "termination_basis": "synthetic_diagnostic_horizon",
+            "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+            "upstream_service": "LH2",
+            "fluid": "Hydrogen",
+            "phase_basis": "gas",
+            "reference_area_m2": 7.853981633974482e-07,
+            "reference_area_provenance": "explicit failed pipe opening area",
+            "droplet_partition_provenance": "DynamicHEMPipe gas outlet at ambient pressure; no liquid partition",
+            "steps": [
+              {
+                "time_s": 0.0,
+                "mass_flow_kg_s": 0.0003871742051524713,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 3962205.072929315,
+                "temperature_k": 300.2741836039255,
+                "density_kg_m3": 0.08176578487108252,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 6028.995006637238,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 999999.9999999999,
+                  "source_temperature_k": 300.0,
+                  "source_density_kg_m3": 0.8034764427488551,
+                  "source_specific_enthalpy_j_kg": 3962205.072929315,
+                  "source_specific_entropy_j_kgk": 44013.20870542226,
+                  "throat_pressure_pa_abs": 517025.0270159457,
+                  "throat_temperature_k": 247.6168609399935,
+                  "throat_density_kg_m3": 0.504564260684398,
+                  "throat_specific_enthalpy_j_kg": 3215912.7521901955,
+                  "throat_mass_flux_kg_m2_s": 616.43312694883,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              },
+              {
+                "time_s": 0.0025,
+                "mass_flow_kg_s": 0.0003868900455889414,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 3961124.5793613573,
+                "temperature_k": 300.1986966120538,
+                "density_kg_m3": 0.08178633813064223,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 6023.056133426156,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 999132.1152107208,
+                  "source_temperature_k": 299.9249030947004,
+                  "source_density_kg_m3": 0.8029834772401536,
+                  "source_specific_enthalpy_j_kg": 3961124.5793613573,
+                  "source_specific_entropy_j_kgk": 44013.20870542224,
+                  "throat_pressure_pa_abs": 516705.560577427,
+                  "throat_temperature_k": 247.57185786905575,
+                  "throat_density_kg_m3": 0.504345073370716,
+                  "throat_specific_enthalpy_j_kg": 3215279.461505424,
+                  "throat_mass_flux_kg_m2_s": 615.9807018542582,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              },
+              {
+                "time_s": 0.005,
+                "mass_flow_kg_s": 0.0003866061009271326,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 3960044.4874804965,
+                "temperature_k": 300.1232363105195,
+                "density_kg_m3": 0.08180689445652325,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 6017.12336358036,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 998265.0853211851,
+                  "source_temperature_k": 299.84983240685983,
+                  "source_density_kg_m3": 0.8024908735346454,
+                  "source_specific_enthalpy_j_kg": 3960044.4874804965,
+                  "source_specific_entropy_j_kgk": 44013.20870542225,
+                  "throat_pressure_pa_abs": 516386.32897582446,
+                  "throat_temperature_k": 247.52686716381524,
+                  "throat_density_kg_m3": 0.504126008763686,
+                  "throat_specific_enthalpy_j_kg": 3214646.361339735,
+                  "throat_mass_flux_kg_m2_s": 615.5286189207746,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              },
+              {
+                "time_s": 0.0075,
+                "mass_flow_kg_s": 0.0003863223709982752,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 3958964.7971591176,
+                "temperature_k": 300.0478026902178,
+                "density_kg_m3": 0.08182745384803851,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 6011.196690591437,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 997398.9094426377,
+                  "source_temperature_k": 299.7747879279177,
+                  "source_density_kg_m3": 0.8019986313587091,
+                  "source_specific_enthalpy_j_kg": 3958964.7971591176,
+                  "source_specific_entropy_j_kgk": 44013.20870542224,
+                  "throat_pressure_pa_abs": 516067.3320306938,
+                  "throat_temperature_k": 247.48188882187287,
+                  "throat_density_kg_m3": 0.5039070667943065,
+                  "throat_specific_enthalpy_j_kg": 3214013.4516548086,
+                  "throat_mass_flux_kg_m2_s": 615.0768778796657,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              }
+            ],
+            "provider_meta": {
+              "native_inventory_owner": "DynamicHEMPipe",
+              "initial_mass_kg": 0.0015776223061701646,
+              "final_mass_kg": 0.0015737548243634977,
+              "residual_mass_kg": -2.168404344971009e-19,
+              "final_pressure_pa_abs": 996533.5866872934,
+              "pressure_equalized": false,
+              "pressure_equalization_time_s": null,
+              "post_pressure_equalization_observation_s": null,
+              "pressure_equalization_success": null,
+              "terminal_source_pressure_pa_abs": null,
+              "ambient_pressure_pa_abs": null,
+              "max_post_pressure_equalization_flow_kg_s": null,
+              "isolation_time_s": null,
+              "post_isolation_observation_s": 0.0,
+              "isolation_success": false,
+              "dynamic_state_closure": {
+                "schema_version": "prism.provider_dynamic_state_closure.v1",
+                "inventory_feedback_closed": true,
+                "pressure_feedback_closed": true,
+                "state_history_digest": "faac8033728f6c072d4284d80f81bb272b539da51751764ae064c27f8ac5f449",
+                "max_abs_inventory_residual_kg": 2.168404344971009e-19,
+                "inventory_tolerance_kg": 1e-10,
+                "max_abs_pressure_residual_pa": 0.0,
+                "pressure_tolerance_pa": 9.965335866872934e-05,
+                "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+              },
+              "time_step_s": 0.0025,
+              "valve": {
+                "area_m2": 7.853981633974482e-07,
+                "discharge_coefficient": 0.8,
+                "choked_intervals": 4
+              }
+            }
+          }
+        },
+        "audit": {
+          "integrated_internal_energy_and_heat_ledger_supplied": false,
+          "isolation_boundary": null,
+          "interval_count": 4,
+          "duration_s": 0.01,
+          "integrated_mass_kg": 3.867481806667051e-06,
+          "integrated_static_enthalpy_j": 15.317493236987811,
+          "remaining_mass_kg": 0.0015737548243634977,
+          "inventory_residual_kg": 2.168404344971009e-19,
+          "inventory_tolerance_kg": 1e-10,
+          "maximum_gas_density_relative_disagreement": 0.0,
+          "termination_basis_owner": "synthetic_diagnostic_horizon",
+          "retained_context_start_time_s": 10.0,
+          "retained_context_end_time_s": 10.01,
+          "provider_time_basis": "elapsed_from_declared_start",
+          "property_check_scope": "same_EOS_state_consistency_not_independent_physical_validation"
+        },
+        "issues": [],
+        "provider_response_digest": "f72b7d02166120b62f90cdb9674b99de24fef33a6f3703b405beb76e22a9391e",
+        "envelope_digest": "621db6c89dea8057495bc0db25de46962312342d18f758efe3f233af5f77d1e7",
+        "physical_actuation_or_field_validation": false
+      },
+      "prism_handoff": {
+        "schema": "pipeline_integrity.release_handoff.v1",
+        "native_packet": {
+          "provider_export_schema": "prism.resolved_release.v1",
+          "component_id": "accident_pipe",
+          "port_id": "failed_opening",
+          "event_id": "accident_pipe/synthetic_leak",
+          "event_kind": "accidental_leak",
+          "upstream_service": "LH2",
+          "upstream_service_provenance": "synthetic_native_export_reference",
+          "state_owner": "equipment_twin",
+          "discharge_owner": "equipment_twin",
+          "boundary_kind": "resolved_atmospheric_gas_exit",
+          "enthalpy_convention": "static_exit_enthalpy",
+          "property_basis": {
+            "fluid": "Hydrogen",
+            "backend": "CoolProp-HEOS",
+            "energy_reference": "CoolProp-HEOS:Hydrogen:native"
+          },
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_result_digest": "f72b7d02166120b62f90cdb9674b99de24fef33a6f3703b405beb76e22a9391e",
+          "provider_boundary_reference": "accident-envelope:621db6c89dea8057495bc0db25de46962312342d18f758efe3f233af5f77d1e7",
+          "input_origin": "synthetic",
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "duration_s": 0.01,
+          "available_mass_kg": 0.0015776223061701646,
+          "cumulative_mass_out_kg": 3.867481806667051e-06,
+          "cumulative_static_enthalpy_out_j": 15.317493236987811,
+          "steps": [
+            {
+              "time_s": 0.0,
+              "mass_flow_kg_s": 0.0003871742051524713,
+              "pressure_pa_abs": 101325.0,
+              "specific_enthalpy_j_kg": 3962205.072929315,
+              "temperature_k": 300.2741836039255,
+              "density_kg_m3": 0.08176578487108252,
+              "effective_area_m2": 7.853981633974482e-07,
+              "velocity_m_s": 6028.995006637238,
+              "area_provenance": "explicit failed pipe opening area",
+              "velocity_origin": "mass_continuity_from_declared_area",
+              "provider_source_state": {
+                "source_pressure_pa_abs": 999999.9999999999,
+                "source_temperature_k": 300.0,
+                "source_density_kg_m3": 0.8034764427488551,
+                "source_specific_enthalpy_j_kg": 3962205.072929315,
+                "source_specific_entropy_j_kgk": 44013.20870542226,
+                "throat_pressure_pa_abs": 517025.0270159457,
+                "throat_temperature_k": 247.6168609399935,
+                "throat_density_kg_m3": 0.504564260684398,
+                "throat_specific_enthalpy_j_kg": 3215912.7521901955,
+                "throat_mass_flux_kg_m2_s": 616.43312694883,
+                "choked": true,
+                "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+              },
+              "provider_port_state": null
+            },
+            {
+              "time_s": 0.0025,
+              "mass_flow_kg_s": 0.0003868900455889414,
+              "pressure_pa_abs": 101325.0,
+              "specific_enthalpy_j_kg": 3961124.5793613573,
+              "temperature_k": 300.1986966120538,
+              "density_kg_m3": 0.08178633813064223,
+              "effective_area_m2": 7.853981633974482e-07,
+              "velocity_m_s": 6023.056133426156,
+              "area_provenance": "explicit failed pipe opening area",
+              "velocity_origin": "mass_continuity_from_declared_area",
+              "provider_source_state": {
+                "source_pressure_pa_abs": 999132.1152107208,
+                "source_temperature_k": 299.9249030947004,
+                "source_density_kg_m3": 0.8029834772401536,
+                "source_specific_enthalpy_j_kg": 3961124.5793613573,
+                "source_specific_entropy_j_kgk": 44013.20870542224,
+                "throat_pressure_pa_abs": 516705.560577427,
+                "throat_temperature_k": 247.57185786905575,
+                "throat_density_kg_m3": 0.504345073370716,
+                "throat_specific_enthalpy_j_kg": 3215279.461505424,
+                "throat_mass_flux_kg_m2_s": 615.9807018542582,
+                "choked": true,
+                "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+              },
+              "provider_port_state": null
+            },
+            {
+              "time_s": 0.005,
+              "mass_flow_kg_s": 0.0003866061009271326,
+              "pressure_pa_abs": 101325.0,
+              "specific_enthalpy_j_kg": 3960044.4874804965,
+              "temperature_k": 300.1232363105195,
+              "density_kg_m3": 0.08180689445652325,
+              "effective_area_m2": 7.853981633974482e-07,
+              "velocity_m_s": 6017.12336358036,
+              "area_provenance": "explicit failed pipe opening area",
+              "velocity_origin": "mass_continuity_from_declared_area",
+              "provider_source_state": {
+                "source_pressure_pa_abs": 998265.0853211851,
+                "source_temperature_k": 299.84983240685983,
+                "source_density_kg_m3": 0.8024908735346454,
+                "source_specific_enthalpy_j_kg": 3960044.4874804965,
+                "source_specific_entropy_j_kgk": 44013.20870542225,
+                "throat_pressure_pa_abs": 516386.32897582446,
+                "throat_temperature_k": 247.52686716381524,
+                "throat_density_kg_m3": 0.504126008763686,
+                "throat_specific_enthalpy_j_kg": 3214646.361339735,
+                "throat_mass_flux_kg_m2_s": 615.5286189207746,
+                "choked": true,
+                "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+              },
+              "provider_port_state": null
+            },
+            {
+              "time_s": 0.0075,
+              "mass_flow_kg_s": 0.0003863223709982752,
+              "pressure_pa_abs": 101325.0,
+              "specific_enthalpy_j_kg": 3958964.7971591176,
+              "temperature_k": 300.0478026902178,
+              "density_kg_m3": 0.08182745384803851,
+              "effective_area_m2": 7.853981633974482e-07,
+              "velocity_m_s": 6011.196690591437,
+              "area_provenance": "explicit failed pipe opening area",
+              "velocity_origin": "mass_continuity_from_declared_area",
+              "provider_source_state": {
+                "source_pressure_pa_abs": 997398.9094426377,
+                "source_temperature_k": 299.7747879279177,
+                "source_density_kg_m3": 0.8019986313587091,
+                "source_specific_enthalpy_j_kg": 3958964.7971591176,
+                "source_specific_entropy_j_kgk": 44013.20870542224,
+                "throat_pressure_pa_abs": 516067.3320306938,
+                "throat_temperature_k": 247.48188882187287,
+                "throat_density_kg_m3": 0.5039070667943065,
+                "throat_specific_enthalpy_j_kg": 3214013.4516548086,
+                "throat_mass_flux_kg_m2_s": 615.0768778796657,
+                "choked": true,
+                "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+              },
+              "provider_port_state": null
+            }
+          ],
+          "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+          "termination_basis": "synthetic_diagnostic_horizon",
+          "provider_mass_balance": {
+            "schema_version": "prism.provider_mass_balance.v1",
+            "initial_mass_kg": 0.0015776223061701646,
+            "cumulative_mass_in_kg": null,
+            "cumulative_mass_out_kg": 3.867481806667051e-06,
+            "final_mass_kg": 0.0015737548243634977,
+            "reported_residual_mass_kg": -2.168404344971009e-19,
+            "derived_accounting_residual_kg": 2.168404344971009e-19,
+            "isolation_time_s": null,
+            "post_isolation_observation_s": null,
+            "isolation_success": false,
+            "pressure_equalization_time_s": null,
+            "post_pressure_equalization_observation_s": null,
+            "pressure_equalization_success": null,
+            "terminal_source_pressure_pa_abs": null,
+            "ambient_pressure_pa_abs": null,
+            "max_post_pressure_equalization_flow_kg_s": null,
+            "dynamic_state_closure": {
+              "schema_version": "prism.provider_dynamic_state_closure.v1",
+              "inventory_feedback_closed": true,
+              "pressure_feedback_closed": true,
+              "state_history_digest": "faac8033728f6c072d4284d80f81bb272b539da51751764ae064c27f8ac5f449",
+              "max_abs_inventory_residual_kg": 2.168404344971009e-19,
+              "inventory_tolerance_kg": 1e-10,
+              "max_abs_pressure_residual_pa": 0.0,
+              "pressure_tolerance_pa": 9.965335866872934e-05,
+              "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+            }
+          },
+          "vertical_handoff": null,
+          "compressible_plane_handoff": null,
+          "failure_opening_diameter_m": 0.001
+        },
+        "native_packet_digest": "492387f112168e027ff39cf254466f209ef21192f79ae3d3b357fe8fcca68785",
+        "history_envelope_digest": "621db6c89dea8057495bc0db25de46962312342d18f758efe3f233af5f77d1e7",
+        "context": {
+          "asset_id": "accident_pipe",
+          "scenario_id": "declared_single_outlet",
+          "clock_id": "elapsed",
+          "origin": "synthetic",
+          "evidence": [],
+          "metadata": {}
+        },
+        "provider_time_origin_in_context_s": 10.0,
+        "property_basis_id": "CoolProp8_HEOS_Hydrogen_default_reference",
+        "initiating_frequency_or_consequence_calculated": false,
+        "physical_actuation_or_field_validation": false
+      }
+    },
+    "ParaHydrogen_quality_None_dt_0.005": {
+      "history": {
+        "schema_version": "pipeline_integrity.accident_history.v1",
+        "status": "withheld",
+        "request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "clock_id": "elapsed",
+          "start_time_s": 10.0,
+          "source_id": "synthetic_native_export_reference",
+          "initial_pressure_pa_abs": 1000000.0,
+          "initial_temperature_k": 300.0,
+          "initial_vapour_mass_fraction": null,
+          "wall_temperature_k": 300.0,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "isolation_time_s": null,
+          "post_isolation_observation_s": null,
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": null,
+          "impact_position_enu_m": null,
+          "droplet_diameter_m": null,
+          "maximum_intervals": 100
+        },
+        "build": {
+          "schema_version": "pipeline_integrity.equipment_build.v1",
+          "owner": "lh2dt_models",
+          "status": "ready",
+          "asset_id": "accident_pipe",
+          "model_id": "dynamic_hem_pipe",
+          "parameter_digest": "0ecaa329be2ef3f6582ff1a493e4f9de2d5fb527cbc3f6cdc12e3b86aca0c2f3",
+          "missing_parameters": [],
+          "issues": [],
+          "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+          "fluid": "ParaHydrogen",
+          "context": {
+            "asset_id": "accident_pipe",
+            "scenario_id": "declared_single_outlet",
+            "clock_id": "elapsed",
+            "origin": "synthetic",
+            "evidence": [],
+            "metadata": {}
+          },
+          "physical_model_validated": false,
+          "parameter_policy": "reviewed_fields_only",
+          "unreviewed_parameter_names": [],
+          "owner_version": null,
+          "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+          "owner_code_digest_scope": "owner_package_python_sources_only"
+        },
+        "provider_request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "initial_pressure_pa_abs": 1000000.0,
+          "initial_temperature_k": 300.0,
+          "wall_temperature_k": 300.0,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "post_pressure_equalization_observation_s": 0.0,
+          "component_id": "accident_pipe",
+          "provider_source_digest": "e9197352df7cc94ab74f32345354efead939c735f7e7a28b65adacbaf63e47b9",
+          "state_snapshot_digest": "597b3648ef127b5f07f3d37bf7ae0e3697e3d4562047c5af59be3f43a99e71df"
+        },
+        "provider_response": {
+          "provider_export_schema": "prism.external_accident_history.v1",
+          "provider_model": "lh2dt.dynamic_pipe.DynamicHEMPipe",
+          "provider_source_digest": "e9197352df7cc94ab74f32345354efead939c735f7e7a28b65adacbaf63e47b9",
+          "provider_state_snapshot_digest": "597b3648ef127b5f07f3d37bf7ae0e3697e3d4562047c5af59be3f43a99e71df",
+          "data": {
+            "event_kind": "accidental_leak",
+            "event_id": "accident_pipe/synthetic_leak",
+            "component_id": "accident_pipe",
+            "port_id": "failed_opening",
+            "duration_s": 0.01,
+            "ambient_pressure_pa_abs": 101325.0,
+            "available_mass_kg": 0.0015776279841244023,
+            "cumulative_mass_out_kg": 3.835507690192286e-06,
+            "cumulative_specific_enthalpy_out_j": 17.10087712147036,
+            "cumulative_static_enthalpy_out_j": 17.10087712147036,
+            "termination_basis": "synthetic_diagnostic_horizon",
+            "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+            "upstream_service": "LH2",
+            "fluid": "Hydrogen",
+            "phase_basis": "gas",
+            "reference_area_m2": 7.853981633974482e-07,
+            "reference_area_provenance": "explicit failed pipe opening area",
+            "droplet_partition_provenance": "DynamicHEMPipe gas outlet at ambient pressure; no liquid partition",
+            "steps": [
+              {
+                "time_s": 0.0,
+                "mass_flow_kg_s": 0.0003838336887856218,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 4459624.59967752,
+                "temperature_k": 300.25937277628947,
+                "density_kg_m3": 0.08176983737997452,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 5976.680972134465,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 1000000.0000000008,
+                  "source_temperature_k": 300.0000000000002,
+                  "source_density_kg_m3": 0.8034793345072025,
+                  "source_specific_enthalpy_j_kg": 4459624.59967752,
+                  "source_specific_entropy_j_kgk": 47340.64343334638,
+                  "throat_pressure_pa_abs": 537481.8790245877,
+                  "throat_temperature_k": 253.02098807356705,
+                  "throat_density_kg_m3": 0.5132777649808271,
+                  "throat_specific_enthalpy_j_kg": 3750320.928054027,
+                  "throat_mass_flux_kg_m2_s": 611.3410421624751,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              },
+              {
+                "time_s": 0.005,
+                "mass_flow_kg_s": 0.00038326784925283544,
+                "pressure_pa_abs": 101325.0,
+                "specific_enthalpy_j_kg": 4457512.5905583855,
+                "temperature_k": 300.11709513118046,
+                "density_kg_m3": 0.08180858881439558,
+                "effective_area_m2": 7.853981633974482e-07,
+                "velocity_m_s": 5965.043389288178,
+                "area_provenance": "explicit failed pipe opening area",
+                "velocity_origin": "mass_continuity_from_declared_area",
+                "provider_source_state": {
+                  "source_pressure_pa_abs": 998304.0766044523,
+                  "source_temperature_k": 299.85846884021794,
+                  "source_density_kg_m3": 0.8025019100448757,
+                  "source_specific_enthalpy_j_kg": 4457512.5905583855,
+                  "source_specific_entropy_j_kgk": 47340.64343334635,
+                  "throat_pressure_pa_abs": 536817.3921131787,
+                  "throat_temperature_k": 252.93647123583418,
+                  "throat_density_kg_m3": 0.5128164286920989,
+                  "throat_specific_enthalpy_j_kg": 3749025.750784753,
+                  "throat_mass_flux_kg_m2_s": 610.4397720516232,
+                  "choked": true,
+                  "provider_source_state_provenance": "native DynamicHEMPipe upstream entropy and hydraulic throat result"
+                }
+              }
+            ],
+            "provider_meta": {
+              "native_inventory_owner": "DynamicHEMPipe",
+              "initial_mass_kg": 0.0015776279841244023,
+              "final_mass_kg": 0.00157379247643421,
+              "residual_mass_kg": 0.0,
+              "final_pressure_pa_abs": 996611.5204358544,
+              "pressure_equalized": false,
+              "pressure_equalization_time_s": null,
+              "post_pressure_equalization_observation_s": null,
+              "pressure_equalization_success": null,
+              "terminal_source_pressure_pa_abs": null,
+              "ambient_pressure_pa_abs": null,
+              "max_post_pressure_equalization_flow_kg_s": null,
+              "isolation_time_s": null,
+              "post_isolation_observation_s": 0.0,
+              "isolation_success": false,
+              "dynamic_state_closure": {
+                "schema_version": "prism.provider_dynamic_state_closure.v1",
+                "inventory_feedback_closed": true,
+                "pressure_feedback_closed": true,
+                "state_history_digest": "79d997f92b1b448e92b0d176a2108f6ed9b2f77767f1bfd7cb7f1f6b75110cee",
+                "max_abs_inventory_residual_kg": 0.0,
+                "inventory_tolerance_kg": 1e-10,
+                "max_abs_pressure_residual_pa": 0.0,
+                "pressure_tolerance_pa": 9.966115204358545e-05,
+                "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+              },
+              "time_step_s": 0.005,
+              "valve": {
+                "area_m2": 7.853981633974482e-07,
+                "discharge_coefficient": 0.8,
+                "choked_intervals": 2
+              }
+            }
+          }
+        },
+        "audit": {
+          "integrated_internal_energy_and_heat_ledger_supplied": false,
+          "isolation_boundary": null,
+          "interval_count": 2,
+          "duration_s": 0.01,
+          "integrated_mass_kg": 3.835507690192286e-06,
+          "integrated_static_enthalpy_j": 17.10087712147036,
+          "remaining_mass_kg": 0.00157379247643421,
+          "inventory_residual_kg": 0.0,
+          "inventory_tolerance_kg": 1e-10,
+          "maximum_gas_density_relative_disagreement": 0.0,
+          "termination_basis_owner": "synthetic_diagnostic_horizon",
+          "retained_context_start_time_s": 10.0,
+          "retained_context_end_time_s": 10.01,
+          "provider_time_basis": "elapsed_from_declared_start",
+          "property_check_scope": "same_EOS_state_consistency_not_independent_physical_validation"
+        },
+        "issues": [
+          "provider_fluid_mismatch"
+        ],
+        "provider_response_digest": "547f6e4827f25a85e7d66f760e885414ec96cabfbfb747ee06a07abb20709fac",
+        "envelope_digest": "f53d8cdcca7c58cfbf925bdc87048caaf1bf030f533ca2707eb746027504dde6",
+        "physical_actuation_or_field_validation": false
+      },
+      "rejection": "history verification withheld: provider_fluid_mismatch"
+    },
+    "Hydrogen_quality_0.0_dt_0.005": {
+      "history": {
+        "schema_version": "pipeline_integrity.accident_history.v1",
+        "status": "withheld",
+        "request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "clock_id": "elapsed",
+          "start_time_s": 10.0,
+          "source_id": "synthetic_native_export_reference",
+          "initial_pressure_pa_abs": 500000.0,
+          "initial_temperature_k": 27.242765490392205,
+          "initial_vapour_mass_fraction": 0.0,
+          "wall_temperature_k": 27.242765490392205,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "isolation_time_s": null,
+          "post_isolation_observation_s": null,
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": 0.1,
+          "impact_position_enu_m": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "droplet_diameter_m": 0.001,
+          "maximum_intervals": 100
+        },
+        "build": {
+          "schema_version": "pipeline_integrity.equipment_build.v1",
+          "owner": "lh2dt_models",
+          "status": "ready",
+          "asset_id": "accident_pipe",
+          "model_id": "dynamic_hem_pipe",
+          "parameter_digest": "0ecaa329be2ef3f6582ff1a493e4f9de2d5fb527cbc3f6cdc12e3b86aca0c2f3",
+          "missing_parameters": [],
+          "issues": [],
+          "property_basis": "CoolProp8_HEOS_Hydrogen_default_reference",
+          "fluid": "Hydrogen",
+          "context": {
+            "asset_id": "accident_pipe",
+            "scenario_id": "declared_single_outlet",
+            "clock_id": "elapsed",
+            "origin": "synthetic",
+            "evidence": [],
+            "metadata": {}
+          },
+          "physical_model_validated": false,
+          "parameter_policy": "reviewed_fields_only",
+          "unreviewed_parameter_names": [],
+          "owner_version": null,
+          "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+          "owner_code_digest_scope": "owner_package_python_sources_only"
+        },
+        "provider_request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "initial_pressure_pa_abs": 500000.0,
+          "initial_temperature_k": 27.242765490392205,
+          "wall_temperature_k": 27.242765490392205,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": 0.1,
+          "droplet_diameter_m": 0.001,
+          "component_id": "accident_pipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "state_snapshot_digest": "7f1a848fb33111e6d36f508d449e17721cf28d99b4441fc31c8202925bf16764",
+          "initial_quality": 0.0,
+          "impact_position_m": [
+            2.0,
+            0.0,
+            0.0
+          ]
+        },
+        "provider_response": {
+          "provider_export_schema": "prism.external_accident_history.v1",
+          "provider_model": "lh2dt.dynamic_pipe.DynamicHEMPipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_state_snapshot_digest": "7f1a848fb33111e6d36f508d449e17721cf28d99b4441fc31c8202925bf16764",
+          "data": {
+            "event_kind": "accidental_leak",
+            "event_id": "accident_pipe/synthetic_leak",
+            "component_id": "accident_pipe",
+            "port_id": "failed_opening",
+            "duration_s": 0.01,
+            "ambient_pressure_pa_abs": 101325.0,
+            "available_mass_kg": 0.11947346680962961,
+            "cumulative_mass_out_kg": 1.7623742423713494e-05,
+            "cumulative_specific_enthalpy_out_j": 1.5450162448594549,
+            "cumulative_static_enthalpy_out_j": 1.5450162448594549,
+            "termination_basis": "synthetic_diagnostic_horizon",
+            "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+            "upstream_service": "LH2",
+            "fluid": "Hydrogen",
+            "phase_basis": "liquid",
+            "reference_area_m2": 7.853981633974482e-07,
+            "reference_area_provenance": "explicit failed pipe opening area",
+            "droplet_partition_provenance": "DynamicHEMPipe HEM outlet flash at ambient pressure; ground liquid retained; airborne liquid set to zero",
+            "steps": [
+              {
+                "time_s": 0.0,
+                "total_mass_flow_kg_s": 0.0017624163711973092,
+                "gas_mass_flow_kg_s": 0.00034433180336603707,
+                "ground_liquid_mass_flow_kg_s": 0.001418084567831272,
+                "airborne_liquid_mass_flow_kg_s": 0.0,
+                "specific_enthalpy_j_kg": 87666.92235903081,
+                "gas_pressure_pa_abs": 101325.0,
+                "gas_temperature_k": 20.36890353912107,
+                "gas_density_kg_m3": 6.32847084553795,
+                "gas_effective_area_m2": 7.853981633974482e-07,
+                "gas_velocity_m_s": 69.27690420897295,
+                "gas_velocity_origin": "mass_continuity_from_declared_area",
+                "droplet_class_outcomes": [
+                  {
+                    "ground_liquid_mass_flow_kg_s": 0.001418084567831272,
+                    "airborne_liquid_mass_flow_kg_s": 0.0,
+                    "flight_time_s": 0.1,
+                    "impact_position_m": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    "droplet_diameter_m": 0.001
+                  }
+                ]
+              },
+              {
+                "time_s": 0.005,
+                "total_mass_flow_kg_s": 0.0017623321135453898,
+                "gas_mass_flow_kg_s": 0.00034431399819442085,
+                "ground_liquid_mass_flow_kg_s": 0.001418018115350969,
+                "airborne_liquid_mass_flow_kg_s": 0.0,
+                "specific_enthalpy_j_kg": 87666.58032636052,
+                "gas_pressure_pa_abs": 101325.0,
+                "gas_temperature_k": 20.36890353912107,
+                "gas_density_kg_m3": 6.328493330696785,
+                "gas_effective_area_m2": 7.853981633974482e-07,
+                "gas_velocity_m_s": 69.27307581735882,
+                "gas_velocity_origin": "mass_continuity_from_declared_area",
+                "droplet_class_outcomes": [
+                  {
+                    "ground_liquid_mass_flow_kg_s": 0.001418018115350969,
+                    "airborne_liquid_mass_flow_kg_s": 0.0,
+                    "flight_time_s": 0.1,
+                    "impact_position_m": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    "droplet_diameter_m": 0.001
+                  }
+                ]
+              }
+            ],
+            "provider_meta": {
+              "native_inventory_owner": "DynamicHEMPipe",
+              "initial_mass_kg": 0.11947346680962961,
+              "final_mass_kg": 0.1194558430672059,
+              "residual_mass_kg": 0.0,
+              "final_pressure_pa_abs": 499958.3776745193,
+              "pressure_equalized": false,
+              "pressure_equalization_time_s": null,
+              "post_pressure_equalization_observation_s": null,
+              "pressure_equalization_success": null,
+              "terminal_source_pressure_pa_abs": null,
+              "ambient_pressure_pa_abs": null,
+              "max_post_pressure_equalization_flow_kg_s": null,
+              "isolation_time_s": null,
+              "post_isolation_observation_s": 0.0,
+              "isolation_success": false,
+              "dynamic_state_closure": {
+                "schema_version": "prism.provider_dynamic_state_closure.v1",
+                "inventory_feedback_closed": true,
+                "pressure_feedback_closed": true,
+                "state_history_digest": "d8d4d5623d03c594e1b7653e1bbc1fcd54df93195f95512d640a540d988aec2d",
+                "max_abs_inventory_residual_kg": 0.0,
+                "inventory_tolerance_kg": 1.1947346680962962e-10,
+                "max_abs_pressure_residual_pa": 0.0,
+                "pressure_tolerance_pa": 4.999583776745193e-05,
+                "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+              },
+              "time_step_s": 0.005,
+              "valve": {
+                "area_m2": 7.853981633974482e-07,
+                "discharge_coefficient": 0.8,
+                "choked_intervals": 2
+              }
+            }
+          }
+        },
+        "audit": {
+          "integrated_internal_energy_and_heat_ledger_supplied": false,
+          "isolation_boundary": null,
+          "interval_count": 2,
+          "duration_s": 0.01,
+          "integrated_mass_kg": 1.7623742423713494e-05,
+          "integrated_static_enthalpy_j": 1.5450162448594549,
+          "remaining_mass_kg": 0.1194558430672059,
+          "inventory_residual_kg": 0.0,
+          "inventory_tolerance_kg": 1.1947346680962962e-10,
+          "maximum_gas_density_relative_disagreement": 3.7505136527679834,
+          "termination_basis_owner": "synthetic_diagnostic_horizon",
+          "retained_context_start_time_s": 10.0,
+          "retained_context_end_time_s": 10.01,
+          "provider_time_basis": "elapsed_from_declared_start",
+          "property_check_scope": "same_EOS_state_consistency_not_independent_physical_validation"
+        },
+        "issues": [
+          "provider_changed_impact_position",
+          "gas_branch_property_state_mismatch"
+        ],
+        "provider_response_digest": "ad3840374ab612ee349410d11e303e49431ae214fc9dd2f923a518ba523e6677",
+        "envelope_digest": "691f0b8057bf07953d6ba7de157cdfb4261fff2439bb17ce79acca4f9f9314cf",
+        "physical_actuation_or_field_validation": false
+      },
+      "rejection": "history verification withheld: provider_changed_impact_position, gas_branch_property_state_mismatch"
+    },
+    "Hydrogen_quality_0.1_dt_0.005": {
+      "history": {
+        "schema_version": "pipeline_integrity.accident_history.v1",
+        "status": "withheld",
+        "request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "clock_id": "elapsed",
+          "start_time_s": 10.0,
+          "source_id": "synthetic_native_export_reference",
+          "initial_pressure_pa_abs": 500000.0,
+          "initial_temperature_k": 27.242765490392205,
+          "initial_vapour_mass_fraction": 0.1,
+          "wall_temperature_k": 27.242765490392205,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "isolation_time_s": null,
+          "post_isolation_observation_s": null,
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": 0.1,
+          "impact_position_enu_m": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "droplet_diameter_m": 0.001,
+          "maximum_intervals": 100
+        },
+        "build": {
+          "schema_version": "pipeline_integrity.equipment_build.v1",
+          "owner": "lh2dt_models",
+          "status": "ready",
+          "asset_id": "accident_pipe",
+          "model_id": "dynamic_hem_pipe",
+          "parameter_digest": "0ecaa329be2ef3f6582ff1a493e4f9de2d5fb527cbc3f6cdc12e3b86aca0c2f3",
+          "missing_parameters": [],
+          "issues": [],
+          "property_basis": "CoolProp8_HEOS_Hydrogen_default_reference",
+          "fluid": "Hydrogen",
+          "context": {
+            "asset_id": "accident_pipe",
+            "scenario_id": "declared_single_outlet",
+            "clock_id": "elapsed",
+            "origin": "synthetic",
+            "evidence": [],
+            "metadata": {}
+          },
+          "physical_model_validated": false,
+          "parameter_policy": "reviewed_fields_only",
+          "unreviewed_parameter_names": [],
+          "owner_version": null,
+          "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+          "owner_code_digest_scope": "owner_package_python_sources_only"
+        },
+        "provider_request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "initial_pressure_pa_abs": 500000.0,
+          "initial_temperature_k": 27.242765490392205,
+          "wall_temperature_k": 27.242765490392205,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": 0.1,
+          "droplet_diameter_m": 0.001,
+          "component_id": "accident_pipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "state_snapshot_digest": "faa66c0463dd1bfa681465e67d04ff738b887ec53579a57647235be144fa6992",
+          "initial_quality": 0.1,
+          "impact_position_m": [
+            2.0,
+            0.0,
+            0.0
+          ]
+        },
+        "provider_response": {
+          "provider_export_schema": "prism.external_accident_history.v1",
+          "provider_model": "lh2dt.dynamic_pipe.DynamicHEMPipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_state_snapshot_digest": "faa66c0463dd1bfa681465e67d04ff738b887ec53579a57647235be144fa6992",
+          "data": {
+            "event_kind": "accidental_leak",
+            "event_id": "accident_pipe/synthetic_leak",
+            "component_id": "accident_pipe",
+            "port_id": "failed_opening",
+            "duration_s": 0.01,
+            "ambient_pressure_pa_abs": 101325.0,
+            "available_mass_kg": 0.06289066626991126,
+            "cumulative_mass_out_kg": 1.430513249276584e-05,
+            "cumulative_specific_enthalpy_out_j": 1.7873317809344358,
+            "cumulative_static_enthalpy_out_j": 1.7873317809344358,
+            "termination_basis": "synthetic_diagnostic_horizon",
+            "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+            "upstream_service": "LH2",
+            "fluid": "Hydrogen",
+            "phase_basis": "two_phase",
+            "reference_area_m2": 7.853981633974482e-07,
+            "reference_area_provenance": "explicit failed pipe opening area",
+            "droplet_partition_provenance": "DynamicHEMPipe HEM outlet flash at ambient pressure; ground liquid retained; airborne liquid set to zero",
+            "steps": [
+              {
+                "time_s": 0.0,
+                "total_mass_flow_kg_s": 0.001430579612331317,
+                "gas_mass_flow_kg_s": 0.0003983461478789163,
+                "ground_liquid_mass_flow_kg_s": 0.0010322334644524006,
+                "airborne_liquid_mass_flow_kg_s": 0.0,
+                "specific_enthalpy_j_kg": 124944.09393147271,
+                "gas_pressure_pa_abs": 101325.0,
+                "gas_temperature_k": 20.36890353912107,
+                "gas_density_kg_m3": 4.5619419394685625,
+                "gas_effective_area_m2": 7.853981633974482e-07,
+                "gas_velocity_m_s": 111.17854516829772,
+                "gas_velocity_origin": "mass_continuity_from_declared_area",
+                "droplet_class_outcomes": [
+                  {
+                    "ground_liquid_mass_flow_kg_s": 0.0010322334644524006,
+                    "airborne_liquid_mass_flow_kg_s": 0.0,
+                    "flight_time_s": 0.1,
+                    "impact_position_m": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    "droplet_diameter_m": 0.001
+                  }
+                ]
+              },
+              {
+                "time_s": 0.005,
+                "total_mass_flow_kg_s": 0.0014304468862218513,
+                "gas_mass_flow_kg_s": 0.0003983047165031557,
+                "ground_liquid_mass_flow_kg_s": 0.0010321421697186955,
+                "airborne_liquid_mass_flow_kg_s": 0.0,
+                "specific_enthalpy_j_kg": 124942.690601652,
+                "gas_pressure_pa_abs": 101325.0,
+                "gas_temperature_k": 20.36890353912107,
+                "gas_density_kg_m3": 4.5619898789225735,
+                "gas_effective_area_m2": 7.853981633974482e-07,
+                "gas_velocity_m_s": 111.16581346430323,
+                "gas_velocity_origin": "mass_continuity_from_declared_area",
+                "droplet_class_outcomes": [
+                  {
+                    "ground_liquid_mass_flow_kg_s": 0.0010321421697186955,
+                    "airborne_liquid_mass_flow_kg_s": 0.0,
+                    "flight_time_s": 0.1,
+                    "impact_position_m": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    "droplet_diameter_m": 0.001
+                  }
+                ]
+              }
+            ],
+            "provider_meta": {
+              "native_inventory_owner": "DynamicHEMPipe",
+              "initial_mass_kg": 0.06289066626991126,
+              "final_mass_kg": 0.06287636113741848,
+              "residual_mass_kg": 1.3877787807814457e-17,
+              "final_pressure_pa_abs": 499910.1097557471,
+              "pressure_equalized": false,
+              "pressure_equalization_time_s": null,
+              "post_pressure_equalization_observation_s": null,
+              "pressure_equalization_success": null,
+              "terminal_source_pressure_pa_abs": null,
+              "ambient_pressure_pa_abs": null,
+              "max_post_pressure_equalization_flow_kg_s": null,
+              "isolation_time_s": null,
+              "post_isolation_observation_s": 0.0,
+              "isolation_success": false,
+              "dynamic_state_closure": {
+                "schema_version": "prism.provider_dynamic_state_closure.v1",
+                "inventory_feedback_closed": true,
+                "pressure_feedback_closed": true,
+                "state_history_digest": "039874c1cdb2930567011870e2479944557827c4d11bf9d077564247dbc19b9c",
+                "max_abs_inventory_residual_kg": 1.3877787807814457e-17,
+                "inventory_tolerance_kg": 1e-10,
+                "max_abs_pressure_residual_pa": 0.0,
+                "pressure_tolerance_pa": 4.999101097557471e-05,
+                "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+              },
+              "time_step_s": 0.005,
+              "valve": {
+                "area_m2": 7.853981633974482e-07,
+                "discharge_coefficient": 0.8,
+                "choked_intervals": 2
+              }
+            }
+          }
+        },
+        "audit": {
+          "integrated_internal_energy_and_heat_ledger_supplied": false,
+          "isolation_boundary": null,
+          "interval_count": 2,
+          "duration_s": 0.01,
+          "integrated_mass_kg": 1.430513249276584e-05,
+          "integrated_static_enthalpy_j": 1.7873317809344358,
+          "remaining_mass_kg": 0.06287636113741848,
+          "inventory_residual_kg": -1.3877787807814457e-17,
+          "inventory_tolerance_kg": 1e-10,
+          "maximum_gas_density_relative_disagreement": 2.42447942521967,
+          "termination_basis_owner": "synthetic_diagnostic_horizon",
+          "retained_context_start_time_s": 10.0,
+          "retained_context_end_time_s": 10.01,
+          "provider_time_basis": "elapsed_from_declared_start",
+          "property_check_scope": "same_EOS_state_consistency_not_independent_physical_validation"
+        },
+        "issues": [
+          "provider_changed_impact_position",
+          "gas_branch_property_state_mismatch"
+        ],
+        "provider_response_digest": "cd118bb2b6cbaa075e2b51b09238c1f72f9106bee1d17434689e31bc172d5e40",
+        "envelope_digest": "34c733ec2f5ce3280488821ded3879276640ad8d507e0746ded7457e14c55cf1",
+        "physical_actuation_or_field_validation": false
+      },
+      "rejection": "history verification withheld: provider_changed_impact_position, gas_branch_property_state_mismatch"
+    },
+    "Hydrogen_quality_1.0_dt_0.005": {
+      "history": {
+        "schema_version": "pipeline_integrity.accident_history.v1",
+        "status": "withheld",
+        "request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "clock_id": "elapsed",
+          "start_time_s": 10.0,
+          "source_id": "synthetic_native_export_reference",
+          "initial_pressure_pa_abs": 500000.0,
+          "initial_temperature_k": 27.242765490392205,
+          "initial_vapour_mass_fraction": 1.0,
+          "wall_temperature_k": 27.242765490392205,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "isolation_time_s": null,
+          "post_isolation_observation_s": null,
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": 0.1,
+          "impact_position_enu_m": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "droplet_diameter_m": 0.001,
+          "maximum_intervals": 100
+        },
+        "build": {
+          "schema_version": "pipeline_integrity.equipment_build.v1",
+          "owner": "lh2dt_models",
+          "status": "ready",
+          "asset_id": "accident_pipe",
+          "model_id": "dynamic_hem_pipe",
+          "parameter_digest": "0ecaa329be2ef3f6582ff1a493e4f9de2d5fb527cbc3f6cdc12e3b86aca0c2f3",
+          "missing_parameters": [],
+          "issues": [],
+          "property_basis": "CoolProp8_HEOS_Hydrogen_default_reference",
+          "fluid": "Hydrogen",
+          "context": {
+            "asset_id": "accident_pipe",
+            "scenario_id": "declared_single_outlet",
+            "clock_id": "elapsed",
+            "origin": "synthetic",
+            "evidence": [],
+            "metadata": {}
+          },
+          "physical_model_validated": false,
+          "parameter_policy": "reviewed_fields_only",
+          "unreviewed_parameter_names": [],
+          "owner_version": null,
+          "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+          "owner_code_digest_scope": "owner_package_python_sources_only"
+        },
+        "provider_request": {
+          "event_id": "accident_pipe/synthetic_leak",
+          "port_id": "failed_opening",
+          "initial_pressure_pa_abs": 500000.0,
+          "initial_temperature_k": 27.242765490392205,
+          "wall_temperature_k": 27.242765490392205,
+          "ambient_pressure_pa_abs": 101325.0,
+          "ambient_temperature_k": 288.15,
+          "failure_opening_diameter_m": 0.001,
+          "discharge_coefficient": 0.8,
+          "horizon_s": 0.01,
+          "time_step_s": 0.005,
+          "position_enu_m": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "direction_enu": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "post_pressure_equalization_observation_s": 0.0,
+          "droplet_flight_time_s": 0.1,
+          "droplet_diameter_m": 0.001,
+          "component_id": "accident_pipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "state_snapshot_digest": "f3a6bd360eca4fd264397303b4cdf02e7ab759ba4482c3b5058f3039b76e28b5",
+          "initial_quality": 1.0,
+          "impact_position_m": [
+            2.0,
+            0.0,
+            0.0
+          ]
+        },
+        "provider_response": {
+          "provider_export_schema": "prism.external_accident_history.v1",
+          "provider_model": "lh2dt.dynamic_pipe.DynamicHEMPipe",
+          "provider_source_digest": "0d4ba9a85dbcafca3924b72070dbdb88cb487be941fd2e0a53d5360a29098ae5",
+          "provider_state_snapshot_digest": "f3a6bd360eca4fd264397303b4cdf02e7ab759ba4482c3b5058f3039b76e28b5",
+          "data": {
+            "event_kind": "accidental_leak",
+            "event_id": "accident_pipe/synthetic_leak",
+            "component_id": "accident_pipe",
+            "port_id": "failed_opening",
+            "duration_s": 0.01,
+            "ambient_pressure_pa_abs": 101325.0,
+            "available_mass_kg": 0.011950919016466329,
+            "cumulative_mass_out_kg": 7.207707797335733e-06,
+            "cumulative_specific_enthalpy_out_j": 3.318596791078596,
+            "cumulative_static_enthalpy_out_j": 3.318596791078596,
+            "termination_basis": "synthetic_diagnostic_horizon",
+            "termination_provenance": "DynamicHEMPipe finite-volume state stopped at the caller-declared bounded horizon; residual inventory retained",
+            "upstream_service": "LH2",
+            "fluid": "Hydrogen",
+            "phase_basis": "gas",
+            "reference_area_m2": 7.853981633974482e-07,
+            "reference_area_provenance": "explicit failed pipe opening area",
+            "droplet_partition_provenance": "DynamicHEMPipe HEM outlet flash at ambient pressure; ground liquid retained; airborne liquid set to zero",
+            "steps": [
+              {
+                "time_s": 0.0,
+                "total_mass_flow_kg_s": 0.0007208908582508011,
+                "gas_mass_flow_kg_s": 0.0007208908582508011,
+                "ground_liquid_mass_flow_kg_s": 0.0,
+                "airborne_liquid_mass_flow_kg_s": 0.0,
+                "specific_enthalpy_j_kg": 460438.63808344933,
+                "gas_pressure_pa_abs": 101325.0,
+                "gas_temperature_k": 21.356742230038833,
+                "gas_density_kg_m3": 1.2544450536446172,
+                "gas_effective_area_m2": 7.853981633974482e-07,
+                "gas_velocity_m_s": 731.6914722540101,
+                "gas_velocity_origin": "mass_continuity_from_declared_area",
+                "droplet_class_outcomes": [
+                  {
+                    "ground_liquid_mass_flow_kg_s": 0.0,
+                    "airborne_liquid_mass_flow_kg_s": 0.0,
+                    "flight_time_s": 0.1,
+                    "impact_position_m": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    "droplet_diameter_m": 0.001
+                  }
+                ]
+              },
+              {
+                "time_s": 0.005,
+                "total_mass_flow_kg_s": 0.0007206507012163455,
+                "gas_mass_flow_kg_s": 0.0007206507012163455,
+                "ground_liquid_mass_flow_kg_s": 0.0,
+                "airborne_liquid_mass_flow_kg_s": 0.0,
+                "specific_enthalpy_j_kg": 460408.0072022357,
+                "gas_pressure_pa_abs": 101325.0,
+                "gas_temperature_k": 21.35412988824887,
+                "gas_density_kg_m3": 1.2546365237717578,
+                "gas_effective_area_m2": 7.853981633974482e-07,
+                "gas_velocity_m_s": 731.3360908475332,
+                "gas_velocity_origin": "mass_continuity_from_declared_area",
+                "droplet_class_outcomes": [
+                  {
+                    "ground_liquid_mass_flow_kg_s": 0.0,
+                    "airborne_liquid_mass_flow_kg_s": 0.0,
+                    "flight_time_s": 0.1,
+                    "impact_position_m": [
+                      1.0,
+                      0.0,
+                      0.0
+                    ],
+                    "droplet_diameter_m": 0.001
+                  }
+                ]
+              }
+            ],
+            "provider_meta": {
+              "native_inventory_owner": "DynamicHEMPipe",
+              "initial_mass_kg": 0.011950919016466329,
+              "final_mass_kg": 0.011943711308668992,
+              "residual_mass_kg": 1.734723475976807e-18,
+              "final_pressure_pa_abs": 499627.25562426855,
+              "pressure_equalized": false,
+              "pressure_equalization_time_s": null,
+              "post_pressure_equalization_observation_s": null,
+              "pressure_equalization_success": null,
+              "terminal_source_pressure_pa_abs": null,
+              "ambient_pressure_pa_abs": null,
+              "max_post_pressure_equalization_flow_kg_s": null,
+              "isolation_time_s": null,
+              "post_isolation_observation_s": 0.0,
+              "isolation_success": false,
+              "dynamic_state_closure": {
+                "schema_version": "prism.provider_dynamic_state_closure.v1",
+                "inventory_feedback_closed": true,
+                "pressure_feedback_closed": true,
+                "state_history_digest": "1b9c50ff136ea65526ace11eb241f71834ec532de448411bc3a0a7e6acc5d3bf",
+                "max_abs_inventory_residual_kg": 1.734723475976807e-18,
+                "inventory_tolerance_kg": 1e-10,
+                "max_abs_pressure_residual_pa": 0.0,
+                "pressure_tolerance_pa": 4.996272556242686e-05,
+                "provenance": "DynamicHEMPipe recomputed pressure from its finite-volume mass, internal-energy, and wall-temperature state before every native outlet evaluation; the digest covers the initial and terminal provider state history."
+              },
+              "time_step_s": 0.005,
+              "valve": {
+                "area_m2": 7.853981633974482e-07,
+                "discharge_coefficient": 0.8,
+                "choked_intervals": 2
+              }
+            }
+          }
+        },
+        "audit": {
+          "integrated_internal_energy_and_heat_ledger_supplied": false,
+          "isolation_boundary": null
+        },
+        "issues": [
+          "provider_phase_history_shape_mismatch"
+        ],
+        "provider_response_digest": "90e49c1d87ceeaa6eede5999d69a016af95b8e7eca3236bb5fe69ce83db0773f",
+        "envelope_digest": "b8b37a4c62156c44fc152c21fdc6dd31bede98fb5af67251c1b36ca3a4ba17ba",
+        "physical_actuation_or_field_validation": false
+      },
+      "rejection": "history verification withheld: provider_phase_history_shape_mismatch"
+    }
+  },
+  "gas_timestep_mass_difference_kg": 4.0488174878755556e-19,
+  "gas_timestep_agreement_relative": 1e-07,
+  "gas_timestep_agreement_absolute_kg": 1e-12,
+  "frequency_or_consequence_calculated": false,
+  "independent_field_validation": false,
+  "external_sources_modified": false
+}

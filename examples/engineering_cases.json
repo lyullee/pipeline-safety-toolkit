@@ -1,0 +1,248 @@
+{
+  "context": {
+    "asset_id": "demo_pipe_01",
+    "scenario_id": "declared_parameter_example",
+    "clock_id": "elapsed",
+    "origin": "synthetic"
+  },
+  "cases": {
+    "geometry.pipe": {
+      "inner_diameter_m": 0.2,
+      "outer_diameter_m": 0.22,
+      "length_m": 100,
+      "wall_density_kg_m3": 7850
+    },
+    "hydraulics.liquid_loss": {
+      "diameter_m": 0.2,
+      "length_m": 100,
+      "roughness_m": 4.5e-05,
+      "volume_flow_m3_s": 0.02,
+      "density_kg_m3": 998,
+      "viscosity_pa_s": 0.001
+    },
+    "hydraulics.liquid_head_loss": {
+      "diameter_m": 0.2,
+      "length_m": 100,
+      "roughness_m": 4.5e-05,
+      "volume_flow_m3_s": 0.02,
+      "kinematic_viscosity_m2_s": 1.002e-06
+    },
+    "hydraulics.hydrostatic": {
+      "inlet_pressure_pa_abs": 500000,
+      "density_kg_m3": 998,
+      "outlet_minus_inlet_elevation_m": 10
+    },
+    "hydraulics.gas_correlation": {
+      "method": "Panhandle_A",
+      "relative_density_to_air": 0.6,
+      "mean_temperature_k": 288,
+      "mean_compressibility": 0.9,
+      "length_m": 10000,
+      "diameter_m": 0.5,
+      "inlet_pressure_pa_abs": 5000000,
+      "outlet_pressure_pa_abs": 4500000,
+      "standard_temperature_k": 288.15,
+      "standard_pressure_pa_abs": 101325
+    },
+    "hydraulics.isothermal_gas": {
+      "mean_density_kg_m3": 11.3,
+      "darcy_friction_factor": 0.0185,
+      "inlet_pressure_pa_abs": 1000000,
+      "outlet_pressure_pa_abs": 900000,
+      "length_m": 1000,
+      "diameter_m": 0.5
+    },
+    "transient.wave_speed": {
+      "density_kg_m3": 998,
+      "fluid_bulk_modulus_pa": 2200000000,
+      "pipe_elastic_modulus_pa": 200000000000,
+      "inner_diameter_m": 0.2,
+      "wall_thickness_m": 0.01,
+      "restraint_coefficient": 1
+    },
+    "transient.surge_pulse": {
+      "density_kg_m3": 998,
+      "wave_speed_m_s": 1200,
+      "initial_velocity_m_s": 1,
+      "final_velocity_m_s": 0,
+      "length_m": 1000,
+      "closure_time_s": 0.5
+    },
+    "construction.trench_volume": {
+      "bottom_width_m": 1,
+      "depth_m": 2,
+      "side_slope_horizontal_per_vertical": 0.5,
+      "length_m": 100,
+      "loose_volume_ratio": 1.2
+    },
+    "equipment.pump_power": {
+      "volume_flow_m3_s": 0.02,
+      "density_kg_m3": 998,
+      "head_m": 50,
+      "pump_efficiency": 0.8,
+      "motor_efficiency": 0.95
+    },
+    "equipment.pump_affinity": {
+      "reference_flow_m3_s": 0.02,
+      "reference_head_m": 50,
+      "reference_power_w": 15000,
+      "speed_ratio": 0.9
+    },
+    "equipment.pump_npsh": {
+      "surface_pressure_pa_abs": 101325,
+      "vapour_pressure_pa_abs": 3500,
+      "density_kg_m3": 998,
+      "surface_above_pump_m": 2,
+      "suction_head_loss_m": 1,
+      "vendor_required_npsh_m": 3
+    },
+    "equipment.compression": {
+      "fluid": "Nitrogen",
+      "inlet_pressure_pa_abs": 200000,
+      "inlet_temperature_k": 300,
+      "outlet_pressure_pa_abs": 600000,
+      "mass_flow_kg_s": 1,
+      "isentropic_efficiency": 0.8
+    },
+    "instrument.liquid_dp_meter": {
+      "pipe_diameter_m": 0.2,
+      "opening_diameter_m": 0.1,
+      "pressure_difference_pa": 10000,
+      "density_kg_m3": 998,
+      "discharge_coefficient": 0.61
+    },
+    "inventory.uniform": {
+      "fluid": "Methane",
+      "pressure_pa_abs": 5000000,
+      "temperature_k": 290,
+      "internal_volume_m3": 100,
+      "reference_pressure_pa_abs": 101325,
+      "reference_temperature_k": 288.15
+    },
+    "thermal.flow_cooling": {
+      "inlet_temperature_k": 350,
+      "ambient_temperature_k": 290,
+      "mass_flow_kg_s": 1,
+      "specific_heat_j_kg_k": 4200,
+      "conductance_w_k": 100
+    },
+    "thermal.free_expansion": {
+      "reference_length_m": 100,
+      "linear_expansion_per_k": 1.2e-05,
+      "reference_temperature_k": 290,
+      "operating_temperature_k": 350
+    },
+    "economics.cashflow": {
+      "cashflows": [
+        -100000,
+        40000,
+        40000,
+        40000
+      ],
+      "discount_rate_per_period": 0.05,
+      "period_duration_s": 31557600,
+      "currency": "USD",
+      "price_year": 2026
+    },
+    "economics.energy": {
+      "electrical_power_w": 10000,
+      "operating_duration_s": 3600,
+      "price_per_kwh": 0.1,
+      "emission_kg_co2e_per_kwh": 0.4,
+      "currency": "USD",
+      "factor_source": "caller_declared_demo_not_regional_defaults"
+    },
+    "thermal.internal_convection": {
+      "reynolds": 100000,
+      "prandtl": 7,
+      "diameter_m": 0.2,
+      "conductivity_w_m_k": 0.6,
+      "method": "Gnielinski"
+    },
+    "equipment.control_valve_liquid": {
+      "density_kg_m3": 998,
+      "vapour_pressure_pa_abs": 3500,
+      "critical_pressure_pa_abs": 22064000,
+      "viscosity_pa_s": 0.001,
+      "inlet_pressure_pa_abs": 500000,
+      "outlet_pressure_pa_abs": 300000,
+      "volume_flow_m3_s": 0.01,
+      "inlet_diameter_m": 0.15,
+      "outlet_diameter_m": 0.15,
+      "valve_diameter_m": 0.1,
+      "pressure_recovery_factor": 0.9,
+      "valve_style_factor": 0.46
+    },
+    "equipment.control_valve_gas": {
+      "temperature_k": 300,
+      "molar_mass_kg_mol": 0.0280134,
+      "viscosity_pa_s": 1.8e-05,
+      "heat_capacity_ratio": 1.4,
+      "compressibility": 1,
+      "inlet_pressure_pa_abs": 500000,
+      "outlet_pressure_pa_abs": 300000,
+      "standard_volume_flow_m3_s": 0.1,
+      "reference_temperature_k": 273.15,
+      "reference_pressure_pa_abs": 101325,
+      "inlet_diameter_m": 0.15,
+      "outlet_diameter_m": 0.15,
+      "valve_diameter_m": 0.1,
+      "pressure_recovery_factor": 0.9,
+      "valve_style_factor": 0.46,
+      "terminal_pressure_ratio_factor": 0.7
+    },
+    "equipment.relief_gas": {
+      "mass_flow_kg_s": 1,
+      "temperature_k": 350,
+      "compressibility": 1,
+      "molar_mass_kg_mol": 0.0280134,
+      "heat_capacity_ratio": 1.4,
+      "relieving_pressure_pa_abs": 1000000,
+      "back_pressure_pa_abs": 101325,
+      "discharge_coefficient": 0.975,
+      "back_pressure_factor": 1,
+      "combination_factor": 1
+    },
+    "equipment.pump_system": {
+      "reference_curve": {
+        "volume_flow_m3_s": [
+          0.0,
+          0.01,
+          0.02
+        ],
+        "head_m": [
+          60.0,
+          40.0,
+          20.0
+        ],
+        "source_id": "synthetic_linear_reference"
+      },
+      "static_head_m": 20.0,
+      "resistance_head_s2_m5": 200000.0,
+      "parallel_pumps": 1,
+      "series_pumps": 1,
+      "density_kg_m3": 1000.0,
+      "pump_efficiency": 0.8,
+      "motor_efficiency": 0.9
+    },
+    "inventory.segmented": {
+      "fluid": "Methane",
+      "segments": [
+        {
+          "id": "upstream",
+          "pressure_pa_abs": 6000000.0,
+          "temperature_k": 300.0,
+          "internal_volume_m3": 50.0
+        },
+        {
+          "id": "downstream",
+          "pressure_pa_abs": 4000000.0,
+          "temperature_k": 290.0,
+          "internal_volume_m3": 50.0
+        }
+      ],
+      "reference_pressure_pa_abs": 101325.0,
+      "reference_temperature_k": 288.15
+    }
+  }
+}

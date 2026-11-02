@@ -1,0 +1,7 @@
+{
+  "lh2dt_models": {"project_root": "/REPLACE/WITH/REVIEWED/lh2dt_models", "import_root": "src"},
+  "human_reliability": {"project_root": "/REPLACE/WITH/REVIEWED/human-reliability-toolkit", "import_root": "src"},
+  "process_monitoring": {"project_root": "/REPLACE/WITH/REVIEWED/process-monitoring-toolkit", "import_root": "src"},
+  "materials": {"project_root": "/REPLACE/WITH/REVIEWED/matintegrity", "import_root": "src"},
+  "prism": {"project_root": "/REPLACE/WITH/REVIEWED/prism/lh2-tno", "import_root": "src"}
+}

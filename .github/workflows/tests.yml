@@ -1,0 +1,78 @@
+name: public-release-checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  core-wheel:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install build pytest ruff
+      - name: Syntax and undefined-name checks
+        run: python -m ruff check src tests scripts examples --select E9,F821,F822,F823
+      - name: Generated archive boundary checks
+        run: python scripts/check_publication_boundaries.py
+      - run: python -m build --wheel
+      - name: Fresh core-only environment and installed-wheel validation
+        run: python scripts/check_isolated_core.py
+      - run: python -m build --sdist
+      - run: python scripts/audit_release.py --check-consistency
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: core-wheel-${{ matrix.os }}
+          path: |
+            dist/
+            research/core_installation.json
+            research/release_audit.json
+  portable-engineering:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install ".[engineering,thermo,structural,dev]"
+      - name: Declared portable subset, without private observations or owner checkouts
+        run: python scripts/run_public_checks.py
+      - run: python scripts/run_examples.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portable-engineering-${{ matrix.os }}
+          path: artifacts/public-checks/
+  style-audit:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install ruff
+      - name: Advisory full lint audit (known debt, not a correctness pass)
+        run: python -m ruff check src tests scripts examples --statistics
+      - name: Advisory formatter audit
+        if: always()
+        run: python -m ruff format --check src tests scripts examples

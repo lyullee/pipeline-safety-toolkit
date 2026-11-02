@@ -1,0 +1,154 @@
+{
+  "schema": "pipeline_integrity.hardness_verification.v1",
+  "status": "passed",
+  "native_models": [
+    "testing.brinell",
+    "testing.vickers"
+  ],
+  "native_computed_case_count": 8,
+  "native_model_versions": {
+    "testing.brinell": "1.0.0",
+    "testing.vickers": "1.0.0"
+  },
+  "independent_reference_count": 18,
+  "independent_references": {
+    "testing.brinell:indentation_hardness_Pa": {
+      "actual": 127323954.47351629,
+      "expected": 127323954.47351626,
+      "absolute_error": 2.9802322387695312e-08
+    },
+    "testing.brinell:conventional_HBW": {
+      "actual": 12.983430067710817,
+      "expected": 12.983430067710817,
+      "absolute_error": 0.0
+    },
+    "testing.vickers:indentation_hardness_Pa": {
+      "actual": 4546283773.693693,
+      "expected": 4546283773.693693,
+      "absolute_error": 0.0
+    },
+    "testing.vickers:conventional_HV": {
+      "actual": 463.5919272833937,
+      "expected": 463.5919272833936,
+      "absolute_error": 1.1368683772161603e-13
+    },
+    "ten_kgf_to_newtons": {
+      "actual": 98.06649999999999,
+      "expected": 98.0665,
+      "absolute_error": 1.4210854715202004e-14
+    },
+    "millimetres_to_metres": {
+      "actual": 0.0002,
+      "expected": 0.0002,
+      "absolute_error": 0.0
+    },
+    "testing.brinell:force_scaling:indentation_hardness_Pa": {
+      "actual": 254647908.94703257,
+      "expected": 254647908.9470325,
+      "absolute_error": 5.960464477539063e-08
+    },
+    "testing.brinell:length_scaling:indentation_hardness_Pa": {
+      "actual": 31830988.61837907,
+      "expected": 31830988.618379064,
+      "absolute_error": 7.450580596923828e-09
+    },
+    "testing.brinell:force_scaling:conventional_HBW": {
+      "actual": 25.966860135421634,
+      "expected": 25.966860135421634,
+      "absolute_error": 0.0
+    },
+    "testing.brinell:length_scaling:conventional_HBW": {
+      "actual": 3.245857516927704,
+      "expected": 3.245857516927704,
+      "absolute_error": 0.0
+    },
+    "testing.vickers:force_scaling:indentation_hardness_Pa": {
+      "actual": 9092567547.387386,
+      "expected": 9092567547.387386,
+      "absolute_error": 0.0
+    },
+    "testing.vickers:length_scaling:indentation_hardness_Pa": {
+      "actual": 1136570943.4234233,
+      "expected": 1136570943.4234233,
+      "absolute_error": 0.0
+    },
+    "testing.vickers:force_scaling:conventional_HV": {
+      "actual": 927.1838545667874,
+      "expected": 927.1838545667872,
+      "absolute_error": 2.2737367544323206e-13
+    },
+    "testing.vickers:length_scaling:conventional_HV": {
+      "actual": 115.89798182084843,
+      "expected": 115.8979818208484,
+      "absolute_error": 2.842170943040401e-14
+    },
+    "diagonal_order:indentation_hardness_Pa": {
+      "actual": 4546283773.693693,
+      "expected": 4546283773.693693,
+      "absolute_error": 0.0
+    },
+    "diagonal_order:conventional_HV": {
+      "actual": 463.5919272833937,
+      "expected": 463.5919272833936,
+      "absolute_error": 1.1368683772161603e-13
+    },
+    "small_cap_decimal_reference_Pa": {
+      "actual": 1.2732395447338891e+19,
+      "expected": 1.2732395447338895e+19,
+      "absolute_error": 4096.0
+    },
+    "small_cap_conventional_HBW": {
+      "actual": 1298343006769.783,
+      "expected": 1298343006769.7832,
+      "absolute_error": 0.000244140625
+    }
+  },
+  "withheld_cases": {
+    "testing.brinell:unreviewed": "needs_data",
+    "testing.vickers:unreviewed": "needs_data",
+    "unknown_force": "needs_data",
+    "nested_unknown": "needs_data",
+    "unknown_dwell": "needs_data",
+    "unknown_geometry": "needs_data",
+    "unknown_material_state": "needs_data"
+  },
+  "reviewed_out_of_scope_cases": {
+    "testing.brinell": "out_of_scope",
+    "testing.vickers": "out_of_scope"
+  },
+  "invalid_native_inputs_rejected": 8,
+  "native_geometry_error_is_not_procedure_acceptance": true,
+  "conventional_HV_and_HBW_units": "kgf/mm^2; reporting convention retained alongside Pa",
+  "force_and_dimensions_passed_in_SI": true,
+  "field_indentation_data_used": false,
+  "nominal_material_properties_or_acceptance_limits_inferred": false,
+  "strength_brittleness_or_failure_probability_inferred": false,
+  "welding_hardness_traverse_reimplemented": false,
+  "original_authored_inputs_not_observations": true,
+  "source_record_digests": {
+    "authored_spherical_indentation": "291e3ca96519941b224e385b7cfb5354a51a428a2e1f5cfce934cbd23bb5a3f1",
+    "authored_diamond_indentation": "be357fc8ff38c17fe1573f95eca6fb7555fbc51f6eb9d7dec1e0ddfbc6cee49b",
+    "testing.brinell:double_force": "3320b42f256931337c2e7e7ac9c022b8dcd5feb440b6431b070afe2f57f4a563",
+    "testing.brinell:double_lengths": "d2f1ff5abdf0e17d6568fff674da698a98064d0e01595bf5547f72041d50e79a",
+    "testing.vickers:double_force": "cca91b94a4f0c5027ebf8abfa6c57758fbaf0addd95ca4198ca2fdda126f0714",
+    "testing.vickers:double_lengths": "ef9b0eaf1f51e2ea6db20abeda087e7f81f64c55161dfa6f5b870cd6c0c742a5",
+    "swapped_diagonal_labels": "f20b069991c9cfad93dee09087867e168e5fdb5dfeb7155b7327e16cc7c2e28f",
+    "small_spherical_impression_numeric_reference": "3e26d93fdca3b5b6ad55357a964e6bf3f25c3a9d5b5146da9bb437c4f40e3fe9"
+  },
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "36924f78a468efb07221d1cbbd81b0780b63568268e07d359fbc3faa5e39554c",
+    "source_tree_files": 71
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "36924f78a468efb07221d1cbbd81b0780b63568268e07d359fbc3faa5e39554c",
+    "source_tree_files": 71
+  },
+  "external_source_unchanged": true,
+  "implementation_sha256": "c8b4ed8cf5141efc6748904ca5d885ab598f87dfe9b174f8d7c3cc6ebfe99abe",
+  "script_sha256": "ad721c7a9193a224572c6c63908ffb8684285ad1df914fda2901f91a90fc1b05",
+  "example_sha256": "afa55c4696061ee5f3ce2ff4087a971bf61dd5bc089f2aca86ae7da7492d3f0e"
+}

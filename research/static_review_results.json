@@ -1,0 +1,240 @@
+{
+  "schema": "pipeline_integrity.static_review.v1",
+  "status": "source_crosschecked_and_fixed_numerical_execution_pending",
+  "date": "2026-10-28",
+  "baseline_bundle_sha256": "e4d83a69251af4c349d1c26b91f89f365507ce2d1eeecde129db3d52c179a334",
+  "modules_reviewed": 15,
+  "production_modules_changed": 11,
+  "source_snapshots": [
+    {
+      "group": "thermal_fluid",
+      "module": "pipeline_integrity.pig_motion",
+      "source_path": "src/pipeline_integrity/pig_motion.py",
+      "baseline_sha256": "cd2c6d4ec2ced97df8241f284c60d18f3252890e78eb38d1430a416472e8e6db",
+      "current_sha256": "8f2e138add31f945093537b1767a66ae31bb3962feab2c5a82cf0ab89c37acdd",
+      "source_changed": true
+    },
+    {
+      "group": "thermal_fluid",
+      "module": "pipeline_integrity.heated_transport",
+      "source_path": "src/pipeline_integrity/heated_transport.py",
+      "baseline_sha256": "1070bf109ae7378ea6d07286394963c90a8eb64b29e76b8bcaca974cb816fe57",
+      "current_sha256": "7e8c77fb0c4a92761b3d8e92f2347dd544ce8eff7222e491e9b051eae18f5e7a",
+      "source_changed": true
+    },
+    {
+      "group": "thermal_fluid",
+      "module": "pipeline_integrity.gas_thermal_transient",
+      "source_path": "src/pipeline_integrity/gas_thermal_transient.py",
+      "baseline_sha256": "cd6d5df1e062f914689fe00d2162a2beb196417842e39a306d4dc68768395426",
+      "current_sha256": "33981d6bcdce97d087dfee531b6ecbaa67c74c2218d6236b279da6b239542b8c",
+      "source_changed": true
+    },
+    {
+      "group": "thermal_fluid",
+      "module": "pipeline_integrity.tank_breathing",
+      "source_path": "src/pipeline_integrity/tank_breathing.py",
+      "baseline_sha256": "93dbe6e4d2ce9d4399265613c15e97c5ea967f6414bed20cdc0da768716cbdec",
+      "current_sha256": "325c86e04e1bc006156a88959346380f4fa888749ebc06d640521e8eb7c0c719",
+      "source_changed": true
+    },
+    {
+      "group": "thermal_fluid",
+      "module": "pipeline_integrity.slurry_transport",
+      "source_path": "src/pipeline_integrity/slurry_transport.py",
+      "baseline_sha256": "36359aca58dee8e3a2fc1c71b1200a58cdb524d546e6ec00049d5199c93bd442",
+      "current_sha256": "868b45e31b095ceb59c3527cbe1251314850c0da0f1a256983397f15014a1d0f",
+      "source_changed": true
+    },
+    {
+      "group": "structural_operations",
+      "module": "pipeline_integrity.pulling",
+      "source_path": "src/pipeline_integrity/pulling.py",
+      "baseline_sha256": "98965942fa61038239fbf9bf3064b4bbc77925b40f8cae283cdb4a59cd48634c",
+      "current_sha256": "98965942fa61038239fbf9bf3064b4bbc77925b40f8cae283cdb4a59cd48634c",
+      "source_changed": false
+    },
+    {
+      "group": "structural_operations",
+      "module": "pipeline_integrity.soil_pipe",
+      "source_path": "src/pipeline_integrity/soil_pipe.py",
+      "baseline_sha256": "3ec11f22281a1e502fda3b199890fa88df3b682be0f7188b68b48fc0002827a5",
+      "current_sha256": "3ec11f22281a1e502fda3b199890fa88df3b682be0f7188b68b48fc0002827a5",
+      "source_changed": false
+    },
+    {
+      "group": "structural_operations",
+      "module": "pipeline_integrity.buckling",
+      "source_path": "src/pipeline_integrity/buckling.py",
+      "baseline_sha256": "a7eaa596a39c7542b2e4d04baca41158d4c412824e7f22e8365437c6a1a16366",
+      "current_sha256": "a7eaa596a39c7542b2e4d04baca41158d4c412824e7f22e8365437c6a1a16366",
+      "source_changed": false
+    },
+    {
+      "group": "structural_operations",
+      "module": "pipeline_integrity.route_planning",
+      "source_path": "src/pipeline_integrity/route_planning.py",
+      "baseline_sha256": "14fb7c16777dae7a4fcf6d824ddea98b284af64e117b76783120ea73eef3a511",
+      "current_sha256": "14fb7c16777dae7a4fcf6d824ddea98b284af64e117b76783120ea73eef3a511",
+      "source_changed": false
+    },
+    {
+      "group": "structural_operations",
+      "module": "pipeline_integrity.operating_optimization",
+      "source_path": "src/pipeline_integrity/operating_optimization.py",
+      "baseline_sha256": "a82a730ffe400afecb432d0da06edd0291dfa05766e816231927895a226e6c23",
+      "current_sha256": "e5a7bb81405a5adda09a8107745159bd499a4883eb6c8100efb599dd45c8d15c",
+      "source_changed": true
+    },
+    {
+      "group": "pressure_data_procedures",
+      "module": "pipeline_integrity.pressure_wave",
+      "source_path": "src/pipeline_integrity/pressure_wave.py",
+      "baseline_sha256": "0184cdc8cdbca7912655410085925e38ee48f7f4947730346d834fbabc710478",
+      "current_sha256": "343826770953e07277693a9de54d06b5324924a53bd521bd592e68502d783b1f",
+      "source_changed": true
+    },
+    {
+      "group": "pressure_data_procedures",
+      "module": "pipeline_integrity.pressure_wave_data",
+      "source_path": "src/pipeline_integrity/pressure_wave_data.py",
+      "baseline_sha256": "22c0cfcde78feeb268600c3eec0536b6fd6c65c49f7b30f830015f039eda1cb6",
+      "current_sha256": "90ab53e2facf9abc1d4f0ba3a781a947fe81e2802885bc197345980d1eea1d1d",
+      "source_changed": true
+    },
+    {
+      "group": "pressure_data_procedures",
+      "module": "pipeline_integrity.audio_data",
+      "source_path": "src/pipeline_integrity/audio_data.py",
+      "baseline_sha256": "663308ece1912b0494ee669a1cde5697d1a85717cbaa50228ced764cf6d6f243",
+      "current_sha256": "29a9fea43221651c586179d2fcd6ec8eda7551d424ef7f2182b4c33a8b0e0622",
+      "source_changed": true
+    },
+    {
+      "group": "pressure_data_procedures",
+      "module": "pipeline_integrity.friction_data",
+      "source_path": "src/pipeline_integrity/friction_data.py",
+      "baseline_sha256": "6c4ef5cbe89e247a1d7397601724d9a210b4ccefc36f60584aa798c2e0ec6ac5",
+      "current_sha256": "f28045b65277819d4acc00fddaaa77fb63bcac025ca52343220083919c6abcfa",
+      "source_changed": true
+    },
+    {
+      "group": "pressure_data_procedures",
+      "module": "pipeline_integrity.procedures",
+      "source_path": "src/pipeline_integrity/procedures.py",
+      "baseline_sha256": "8e060b1ea58788c1befc2144a2063a864e00b17fa85e2bd0316b99ddce2cf97a",
+      "current_sha256": "807bc260e76f08e8b7821b016fdf3437a14597c0375049f47065884be1573979",
+      "source_changed": true
+    }
+  ],
+  "added_test_definitions": [
+    {
+      "module": "tests/test_pig_motion.py",
+      "function": "test_terminal_velocity_reset_is_in_physical_energy_and_impulse_budget"
+    },
+    {
+      "module": "tests/test_pig_motion.py",
+      "function": "test_transition_budget_includes_static_window_transitions"
+    },
+    {
+      "module": "tests/test_pig_motion.py",
+      "function": "test_transition_count_matches_retained_transition_records"
+    },
+    {
+      "module": "tests/test_heated_transport.py",
+      "function": "test_internal_plus_pressure_flow_work_is_an_audited_global_ledger"
+    },
+    {
+      "module": "tests/test_gas_thermal_transient.py",
+      "function": "test_native_stage_receipt_retains_optimizer_enthalpy_and_junction_closure_separately"
+    },
+    {
+      "module": "tests/test_tank_breathing.py",
+      "function": "test_event_and_initial_closure_changes_require_actual_context_rebinding"
+    },
+    {
+      "module": "tests/test_slurry_transport.py",
+      "function": "test_zero_flow_yield_interval_retains_positive_branch_when_zero_shear_reference_is_negative"
+    },
+    {
+      "module": "tests/test_operating_optimization.py",
+      "function": "test_existing_performance_receipt_cannot_move_to_another_delivery_boundary"
+    },
+    {
+      "module": "tests/test_operating_optimization.py",
+      "function": "test_forecast_checksum_cannot_conflict_with_selected_evidence"
+    },
+    {
+      "module": "tests/test_operating_optimization.py",
+      "function": "test_performance_supplier_id_is_part_of_the_original_receipt"
+    },
+    {
+      "module": "tests/test_pressure_wave.py",
+      "function": "test_entire_pressure_analysis_policy_is_bound_before_native"
+    },
+    {
+      "module": "tests/test_pressure_wave.py",
+      "function": "test_flat_rate_peak_retains_full_plateau_temporal_support"
+    },
+    {
+      "module": "tests/test_pressure_wave_data.py",
+      "function": "test_absolute_pressure_cannot_be_negative_but_gauge_and_pretrigger_are_preserved"
+    },
+    {
+      "module": "tests/test_pressure_wave_data.py",
+      "function": "test_archive_replacement_during_stdout_extraction_is_rejected"
+    },
+    {
+      "module": "tests/test_pressure_wave_data.py",
+      "function": "test_csv_rehashed_mapping_or_result_change_replayed"
+    },
+    {
+      "module": "tests/test_pressure_wave_data.py",
+      "function": "test_linked_pressure_member_is_rejected_before_extraction"
+    },
+    {
+      "module": "tests/test_audio_data.py",
+      "function": "test_pcm_direct_parser_retains_reader_identity"
+    },
+    {
+      "module": "tests/test_audio_data.py",
+      "function": "test_rehashed_audio_replay_cannot_access_outside_source_root"
+    },
+    {
+      "module": "tests/test_friction_data.py",
+      "function": "test_catalog_version_is_bound_even_if_values_are_unchanged"
+    },
+    {
+      "module": "tests/test_procedures.py",
+      "function": "test_explicit_negative_or_unobserved_is_not_hidden_by_missing_evidence"
+    },
+    {
+      "module": "tests/test_procedures.py",
+      "function": "test_negative_declaration_remains_visible_when_prerequisite_blocks"
+    }
+  ],
+  "test_definition_count_is_not_executed_case_count": true,
+  "pytest_executed": false,
+  "native_or_numerical_execution": false,
+  "independent_field_qualification": false,
+  "findings_fixed": [
+    "operating supplier/window/service/forecast performance binding",
+    "tank event/scenario/initial-state/closure context binding",
+    "pig reset energy/momentum row and transition budget",
+    "slurry nonunique zero-flow positive-pressure support",
+    "heated u+pv=h budget gate",
+    "native gas convergence component/contradictory-success reporting",
+    "full pressure-wave policy binding and plateau support",
+    "pressure archive link/tool/source rechecks",
+    "audio replay root and source identity",
+    "pressure CSV absolute domain and unit mapping/raw replay",
+    "catalog entry and PCM reader provenance",
+    "explicit negative procedure outcome versus readiness"
+  ],
+  "remaining_limitations": [
+    "Numerical/native regression is deferred to Nurion; previous 2403 and pressure-wave33 receipts apply to older sources.",
+    "Unsigned hashes/source rechecks are not source-system authentication or an atomic file snapshot.",
+    "Pressure CSV units/synchronization and PCM physical calibration/event grouping remain unresolved.",
+    "Broad physics/support and owner extension requirements remain partial."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "pipeline_integrity.profile_capacity_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "structural.profile_capacity": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "5e3a768a7b2defc3f462d178228a1811baaf14f08f9541ae2e74c8d38806f50d"
+    }
+  },
+  "native_case_count": 12,
+  "case_status_counts": {
+    "computed": 6,
+    "needs_data": 5,
+    "out_of_scope": 3
+  },
+  "independent_reference_count": 10,
+  "maximum_reference_absolute_error": 1.862645149230957e-09,
+  "refusal_count": 4,
+  "refusals": [
+    "nonmonotonic_positions",
+    "negative_thickness",
+    "below_unit_bulging",
+    "wrong_source_pin"
+  ],
+  "pinned_job_replay_verified": true,
+  "zero_ligament_is_zero_burst_capacity": false,
+  "thicker_measurement_clipped_to_reference": false,
+  "all_nodal_windows_retained_within_declared_provider_support": true,
+  "demand_comparison_is_standard_or_design_acceptance": false,
+  "public_data_calibration_performed": false,
+  "experimental_field_validation": false,
+  "limitations": [
+    "Hypothetical original reference pressure and constant bulging factors verify arithmetic only; they are not engineering standard factors.",
+    "Nodal scans do not establish a continuous-endpoint optimum or account for sizing/detection uncertainty, circumferential extent or crack-like features.",
+    "Capacity and demand are internal-minus-external pressure differences, not absolute process pressure, MAWP, lifetime or failure probability."
+  ],
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_source_unchanged": true,
+  "external_support_files_before": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "external_support_files_after": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "implementation_sha256": "b71bdfd4cbf2cb3afb55036d23631f4707a66f74beff6598ac24b88129a60d46",
+  "source_guard_sha256": "37e1508b2fdcdeb946f999c3989687c5b9499de40f7fb03f7557be92f36198c1",
+  "script_sha256": "7c67bba71b632e939123e581be097516a28c03e8f8fd798176f1a2327877465a",
+  "example_sha256": "9dfc2b53799e9715dcc77dd8465617ba92ce1059bfe0b263e4991cca5aba2e5e"
+}

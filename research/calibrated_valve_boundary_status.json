@@ -1,0 +1,16 @@
+{
+  "schema": "pipeline_integrity.calibrated_valve_boundary_status.v1",
+  "date": "2026-10-29",
+  "state": "implemented_static_validation_pending",
+  "module": "pipeline_integrity.calibrated_valve_boundary",
+  "entrypoints": ["CalibratedValveBoundary", "bind_calibrated_valve_boundary"],
+  "owner_engines_reused": ["calibration_application.verify_calibration_application", "transient.LiquidValve", "transient.History", "transient.simulate_liquid_transient"],
+  "authored_test_functions": 3,
+  "tests_executed": 0,
+  "calibration_uncertainty_propagated": false,
+  "clock_transformed": false,
+  "transient_solver_executed_by_adapter": false,
+  "field_qualification": false,
+  "limitations": ["Caller must review the instrument channel to valve component mapping and ensure the calibrated output means effective CdA in m2.", "All source rows must be valid; gaps are rejected and not interpolated.", "The supplied history must cover the caller-declared transient horizon.", "This boundary does not independently replay source calibration or qualify field performance."],
+  "guide": "docs/CALIBRATED_VALVE_BOUNDARY_KO.md"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "pipeline_integrity.nde_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "dataset": {
+    "id": "tubers_nde",
+    "record": "https://zenodo.org/records/11239514",
+    "metadata": "https://zenodo.org/api/records/11239514",
+    "license_metadata_id": "mit-license",
+    "raw_files_redistributed": false
+  },
+  "method_candidate": {
+    "url": "https://github.com/AFRL-Material-State-Awareness/POD4.5",
+    "inspected_commit": "fd02c69c3ebcd54bbb27e3d02cae701b66856d92",
+    "declared_license": "GPLv3+",
+    "adoption": "reference_only; no code vendored or runtime installed",
+    "reason": "Keep the owned Python material model and source-qualified trials; compare additional estimators after experimental design and independence are established."
+  },
+  "source_prose_or_coefficients_copied": false,
+  "detection_trial_data_gap_retained": true,
+  "extension_request": "PI-X04"
+}

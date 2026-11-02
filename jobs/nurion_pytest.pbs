@@ -1,0 +1,40 @@
+#!/bin/bash
+#PBS -N pipeline-tests
+#PBS -j oe
+#PBS -l walltime=01:00:00
+
+# Supply the current site queue, application/account option and select resources
+# when submitting. This template deliberately contains no invented account ID.
+set -euo pipefail
+: "${PBS_O_WORKDIR:?Submit from the staged source checkout}"
+: "${PBS_NODEFILE:?PBS compute-node allocation is required}"
+: "${PIPELINE_HPC_PYTHON:?Set a compute-node-compatible Linux Python 3.12+ interpreter}"
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+export PYTHONHASHSEED=0
+export PYTHONIOENCODING=utf-8
+NPROCS=$(wc -l < "$PBS_NODEFILE")
+RUN_ROOT="${PIPELINE_HPC_RESULTS:-$PBS_O_WORKDIR/artifacts/hpc/${PBS_JOBID}}"
+mkdir -p "$(dirname "$RUN_ROOT")"
+# Refuse stale receipts from a previous submission rather than merging runs.
+mkdir "$RUN_ROOT"
+PLAN="$RUN_ROOT/manifest.json"
+SOURCE_ARGS=()
+if [ -n "${PIPELINE_HPC_SOURCE_MAP:-}" ]; then
+  SOURCE_ARGS=(--source-map "$PIPELINE_HPC_SOURCE_MAP")
+fi
+DATA_ARGS=()
+if [ -n "${PIPELINE_HPC_DATA_MAP:-}" ]; then
+  DATA_ARGS=(--data-map "$PIPELINE_HPC_DATA_MAP")
+fi
+"$PIPELINE_HPC_PYTHON" scripts/hpc_tests.py prepare --shards "$NPROCS" --manifest "$PLAN" "${SOURCE_ARGS[@]}" "${DATA_ARGS[@]}"
+launch_status=0
+mpirun -np "$NPROCS" -hostfile "$PBS_NODEFILE" "$PIPELINE_HPC_PYTHON" scripts/hpc_tests.py run --manifest "$PLAN" --results "$RUN_ROOT" "${SOURCE_ARGS[@]}" "${DATA_ARGS[@]}" || launch_status=$?
+aggregate_status=0
+"$PIPELINE_HPC_PYTHON" scripts/hpc_tests.py aggregate --manifest "$PLAN" --results "$RUN_ROOT" || aggregate_status=$?
+if [ "$launch_status" -ne 0 ] || [ "$aggregate_status" -ne 0 ]; then
+  exit 1
+fi

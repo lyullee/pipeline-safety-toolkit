@@ -1,0 +1,23 @@
+{
+  "schema": "pipeline_integrity.response_trace_deadline_scenario_status.v1",
+  "entrypoint": "pipeline_integrity.response_trace.trace_response",
+  "inputs": [
+    "HumanResponseScenarioResult",
+    "source-bound HumanResponseClient"
+  ],
+  "owner_replay_required": true,
+  "actual_command_time_preserved_separately": true,
+  "scenario_deadlines_bounded_by_command_and_process_limits": true,
+  "dynamic_risk_probability_inferred": false,
+  "authored_regression_functions": 4,
+  "tests_executed": 0,
+  "nurion_job_submitted": false,
+  "field_qualified": false,
+  "limitations": [
+    "Caller-weighted HRA deadlines remain distinct from observed command and process chronology.",
+    "No dynamic fault tree, competing-event probability, or process accident probability is calculated.",
+    "Scenario-weighted command-deadline mass describes caller-selected availability weights, not empirical command success, HRA failure probability, or dynamic process risk."
+  ],
+  "scenario_command_assessment_added": true,
+  "caller_weighted_scenario_mass_is_not_probability": true
+}

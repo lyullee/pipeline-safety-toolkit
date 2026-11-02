@@ -1,0 +1,50 @@
+{
+  "schema": "pipeline_integrity.valve_data_review.v1",
+  "dataset_id": "hydraulic",
+  "source": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+  "citation": "Condition monitoring of hydraulic systems; https://doi.org/10.24432/C5CW21",
+  "creators": [
+    "Nikolai Helwig",
+    "Eliseo Pignanelli",
+    "Andreas Schütze"
+  ],
+  "license_id": "CC-BY-4.0",
+  "archive_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+  "checksum_basis": "previous_acquisition",
+  "profile_member_sha256": "867987ca884b2f0fd607ad3918329eba887d095af2befa21122cea518eaa584a",
+  "source_notes": {
+    "description.txt": {
+      "sha256": "a115e362976a4532bc7d28c471caa257514584bb3f4f6f06f760ca1236761a63",
+      "text_encoding": "cp1252"
+    },
+    "documentation.txt": {
+      "sha256": "9fe5ce23d5b850df9bf38335588aa98601475b42b7551d10e84b1d075f7b62b4",
+      "text_encoding": "cp1252"
+    }
+  },
+  "cycles": 2205,
+  "profile_columns": 5,
+  "valve_grade_counts": {
+    "73": 360,
+    "80": 360,
+    "90": 360,
+    "100": 1125
+  },
+  "stable_flag_counts": {
+    "0": 1449,
+    "1": 756
+  },
+  "valve_grade_counts_when_other_components_nominal_and_stable": {
+    "73": 10,
+    "80": 10,
+    "90": 10,
+    "100": 10
+  },
+  "sensor_member_count": 17,
+  "label_meaning": "cycle-level component-condition category; not an opening fraction, duration, or failure probability",
+  "physical_valve_transient_validation_status": "needs_corresponding_geometry_command_travel_and_liquid_boundary_evidence",
+  "human_reliability_validation": false,
+  "independent_cycles_established": false,
+  "independent_field_validation": false,
+  "raw_observations_in_code_release": false
+}

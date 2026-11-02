@@ -1,0 +1,17 @@
+{
+  "schema": "pipeline_integrity.control_exchange_figure.v1",
+  "source_sha256": "aa6b2de2d90a72056b86b13e23225bb0a44bd7c6fad5f6d17576bbadda4cf29f",
+  "generator_sha256": "6f092a0a7eb2ddd8c4580391a674da99d0e1de2868b9e1d1bff59965839c1c3a",
+  "figure_sha256": "ffe5af1552bd113413553dd7028ec426c3210f9dfc21da66131e6138838787ff",
+  "authored_reference_files_sha256": {
+    "pressure_base.json": "4984dca9a1b9274bcce8ded182074a926e63edae60d71d4777429041cdb90551",
+    "pressure_refined.json": "4b1bff449b643a7082e3aa15d4c4db8b5ff6ae42077b6136975566531d69cc73",
+    "pressure_data_gap.json": "e5516e2d87e95f63fb1d8c34f0b3f8eb70c6097eccc1c163b16d664ea6f3ac17",
+    "temperature_base.json": "647acdb340ae3471eb730e1f87f9524e83b4d384757bd9625cd8c31cc1da347e",
+    "temperature_refined.json": "fc7daa8483a117118f2a6f6f197fc5d6aaa281a34e94ac509e3f98d4a0e9f472",
+    "temperature_data_gap.json": "e888997772d597e42a3c367cbf8addfc4ece80eb006353b50f5c31c2e8a73a34",
+    "valve_flow.json": "1ff5a3deb7d3b3b95b27d72a1000dddfbeed521cc86cfc53c4e995537cd4d37d"
+  },
+  "experimental_observations_plotted": false,
+  "performance_qualification_claim": false
+}

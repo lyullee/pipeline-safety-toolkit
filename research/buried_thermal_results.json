@@ -1,0 +1,55 @@
+{
+  "schema": "pipeline_integrity.buried_thermal_summary.v1",
+  "scope_state_recommendation": "partial",
+  "qualification": "authored_steady_software_references_only",
+  "case_count": 27,
+  "status_counts": {
+    "computed": 11,
+    "needs_data": 7,
+    "out_of_scope": 9
+  },
+  "calculation_count": 17,
+  "reference_and_contract_check_count": 126,
+  "numeric_or_balance_check_count": 71,
+  "status_metadata_or_unknown_check_count": 55,
+  "reference_checks_passed": true,
+  "invalid_inputs_rejected": 10,
+  "corrupt_receipts_rejected": 7,
+  "documentation_python_blocks_executed": 1,
+  "dependency": {
+    "name": "ht",
+    "version": "1.2.0",
+    "license_metadata": "MIT",
+    "source_file_sha256": "a2ad8509d4d64997c78f2f7c0c236e8c8bef7c986f9aa08d4d9962dbee5ac1fd",
+    "function_source_digests": {
+      "R_cylinder": "68e5410aeebd6523d597339076f6f1b77307f9fe230bb87bf413c341b29958a6",
+      "S_isothermal_pipe_to_plane": "cbe49fd15fb5fdc8ed4c0e115fa35e3c8b2d868b867e3f5b5fa2a81096ea9809",
+      "cooling": "9c1e4f8bd678b7d11e0636ae734eb93ffd6aaec27eb3891f4ee94c2237f05506"
+    },
+    "source_unchanged": true
+  },
+  "producer_unchanged": true,
+  "sources": [
+    "https://ht.readthedocs.io/en/latest/ht.conduction.html"
+  ],
+  "units": {
+    "temperature": "K",
+    "resistance": "K/W",
+    "contact_resistance_per_length": "K*m/W",
+    "heat_from_fluid_to_soil": "W; signed",
+    "axial_NTU": "1"
+  },
+  "limitations": [
+    "Steady single long straight pipe; local radial approximation and isothermal plane.",
+    "No soil moisture, transient storage, multiple-pipe interaction, material calibration or field/standard qualification.",
+    "No measured soil dataset was used; every numerical condition was independently authored."
+  ],
+  "code_sha256": {
+    "src/pipeline_integrity/buried_thermal.py": "72937187bfe8117f0a46528ac175732d349e53cb3b7ef2c17233be8845c0165e",
+    "src/pipeline_integrity/models/thermal.py": "ed415c346a7cb0fb2517c2758a4c1e7cfb5802a2288fac21716b35ccbdc4b131",
+    "examples/buried_thermal.py": "5354cd4e821211f39b2c15be4757d162668429f8f683b05a593b742c4319b3a8",
+    "tests/test_buried_thermal.py": "b6eaf9338419166880019fb86c131865ec3668e2be78d3ae184d6822c87b4a63",
+    "scripts/check_buried_thermal.py": "a9a6c1a543e5e10da759a96cea412a4a4ebe559bd1cb1b4a9050fd01ef4bc393",
+    "docs/BURIED_THERMAL_KO.md": "dd92ffc498283cbf8fa3604bacfc0ce6d082705c883958fe0572e406b01eb1ed"
+  }
+}

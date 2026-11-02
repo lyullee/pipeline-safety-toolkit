@@ -1,0 +1,20 @@
+{
+  "schema": "pipeline_integrity.pressure_wave_pair_gate_status.v1",
+  "date": "2026-10-28",
+  "state": "implemented_static_validation_pending",
+  "consumer": "pipeline_integrity.pressure_wave.evaluate_pressure_wave",
+  "upstream_contract": "pipeline_integrity.pressure_pair_qualification.v1",
+  "policy": {
+    "laboratory_or_measured_pair_requires_qualification": true,
+    "needs_pairing_evidence_prevents_native_feature_search": true,
+    "ready_receipt_requires_source_sensor_reference_and_evidence_match": true,
+    "synthetic_and_simulation_research_paths_preserved": true,
+    "dynamic_perturbation_pressure_reference_supported": true,
+    "leak_cause_probability_or_position_inferred": false
+  },
+  "new_test_functions_written": 3,
+  "new_parameterized_cases_written": 4,
+  "pytest_executed": false,
+  "numerical_model_executed": false,
+  "confirmed_scope_percent_after_change": 67.2
+}

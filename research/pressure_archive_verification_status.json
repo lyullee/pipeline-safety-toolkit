@@ -1,0 +1,30 @@
+{
+  "schema": "pipeline_integrity.pressure_archive_verification_status.v1",
+  "date": "2026-10-28",
+  "dataset_id": "leak_multisensor_transients",
+  "archive_bytes": 717637500,
+  "archive_sha256": "c6d4a68901a145155a58ccb691769753cb7c0960416a375acac12128bedfd881",
+  "supplier_checksum_verified": true,
+  "archive_tool_sha256": "a3ac62fd4cdf619a7c53f71ca3fe5fb42f72020975670ff29afe3603f6416a8e",
+  "allowlisted_dynamic_pressure_csv_count": 80,
+  "allowlisted_dynamic_pressure_uncompressed_bytes": 1883226891,
+  "network_labels": ["Branched", "Looped"],
+  "leak_condition_labels": [
+    "Circumferential Crack",
+    "Gasket Leak",
+    "Longitudinal Crack",
+    "No-leak",
+    "Orifice Leak"
+  ],
+  "background_flow_labels": ["0.18 LPS", "0.47 LPS", "ND", "Transient"],
+  "sensor_labels": ["P1", "P2"],
+  "local_path_recorded": false,
+  "raw_in_code_release": false,
+  "full_archive_extracted": false,
+  "pressure_unit": null,
+  "pressure_reference": null,
+  "clock_unit": null,
+  "common_trigger_verified": false,
+  "numerical_model_executed": false,
+  "note": "Archive identity and allowlisted member inventory were verified from the user-provided original. Filename labels are experimental metadata, not onset, synchronization or arrival-time truth."
+}

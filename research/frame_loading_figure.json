@@ -1,0 +1,9 @@
+{
+  "schema": "pipeline_integrity.frame_loading_figure.v1",
+  "source_sha256": "e9c4a90e6b33f1b9f9ba69b32b6c5833a19fb6e3b87a8bfac8316cd2bf4920d7",
+  "generator_sha256": "68032b5cd101816f312a2b8cb4283e346003c23034621e37845f27a57194eb18",
+  "example_sha256": "0c5df63ffc9982e0c89770a3a7d04b418b856ebd3655d4308fa3fb1ed2a3637b",
+  "figure_sha256": "d9602241fb4325ab024ed2d62be362365bc2ec1bf433123b72e01f20bdfa8a4c",
+  "experimental_observations_plotted": false,
+  "vendor_or_standard_tables_plotted": false
+}

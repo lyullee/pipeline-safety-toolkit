@@ -1,0 +1,1186 @@
+{
+  "schema": "pipeline_integrity.tank_inventory_verification.v1",
+  "cases": {
+    "water_air_example": {
+      "status": "computed",
+      "mass_status": "computed",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 5.28369856716157,
+        "headspace_volume_m3": 8.958188129112157,
+        "total_internal_volume_m3": 14.241886696273728,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.37099709328146857,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": 998.2071504679437,
+        "liquid_mass_kg": 5274.225690657909,
+        "gas_density_kg_m3": 1.2045751824931505,
+        "gas_mass_kg": 10.79081110043325,
+        "total_fluid_mass_kg": 5285.016501758342
+      },
+      "issues": [],
+      "record_sha256": "ea1aab40882ba51359e8cec8cafdc45007cb9011c7344f53c08a2666793f33fc"
+    },
+    "flat_vertical": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 2.5132741228718345,
+        "headspace_volume_m3": 10.053096491487338,
+        "total_internal_volume_m3": 12.566370614359172,
+        "maximum_internal_height_m": 4.0,
+        "fill_volume_fraction": 0.2,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "84dd25fc5dea54b24cbc826c4375a23f39cddfa6ffb90ccd5059943622816224"
+    },
+    "conical_vertical": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 1.6755160819145565,
+        "headspace_volume_m3": 11.728612573401895,
+        "total_internal_volume_m3": 13.404128655316452,
+        "maximum_internal_height_m": 4.800000000000001,
+        "fill_volume_fraction": 0.125,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "faaf196f037bcb90dc2ab16ca969b9950f5e00caa2521bd5ba997dc4ece3ed62"
+    },
+    "ellipsoidal_vertical": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 2.0943951023931957,
+        "headspace_volume_m3": 12.147491593880531,
+        "total_internal_volume_m3": 14.241886696273728,
+        "maximum_internal_height_m": 4.800000000000001,
+        "fill_volume_fraction": 0.1470588235294118,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "337874a39f5ffc57b7a92fbb34fd5b47310c6f5e00460f2e6374bb9aed503ef6"
+    },
+    "spherical_vertical": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 1.9184659137921671,
+        "headspace_volume_m3": 11.971562405279505,
+        "total_internal_volume_m3": 13.890028319071671,
+        "maximum_internal_height_m": 4.800000000000001,
+        "fill_volume_fraction": 0.13811821471652594,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "108b0343f1f3f74475f42a5d4727b26889c2448c5203366023fe9f7a6d0cb8de"
+    },
+    "torispherical_vertical": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 2.0930738772470927,
+        "headspace_volume_m3": 11.913249206159634,
+        "total_internal_volume_m3": 14.006323083406727,
+        "maximum_internal_height_m": 4.72585889125102,
+        "fill_volume_fraction": 0.14943778354839998,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "5e9cb73810dd8a9ee8547b338d80870dba0feb541b451e4e7eef427ccac34188"
+    },
+    "flat_horizontal": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 4.6939169063276465,
+        "headspace_volume_m3": 7.872453708031526,
+        "total_internal_volume_m3": 12.566370614359172,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.373530039052331,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "3219e5f13a5c0b47bc38ed0bc844734b5c0552b978f0b274be9db11ec894315d"
+    },
+    "conical_horizontal": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 4.959479439798512,
+        "headspace_volume_m3": 8.44464921551794,
+        "total_internal_volume_m3": 13.404128655316452,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.36999640687807367,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "3300ee58161c8a2105752c0a862817c9f191a1f567ae915ea3323054b55401e2"
+    },
+    "ellipsoidal_horizontal": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 5.28369856716157,
+        "headspace_volume_m3": 8.958188129112157,
+        "total_internal_volume_m3": 14.241886696273728,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.37099709328146857,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "95ada619963adae56a9b25bf0bb36fb1fe3689efe405f5e9cd63e5f657147581"
+    },
+    "spherical_horizontal": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 5.139776635585102,
+        "headspace_volume_m3": 8.75025168348657,
+        "total_internal_volume_m3": 13.890028319071671,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.3700335605887818,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "8a87d04703b6ec3bbdf8901d5011937e212a5ebd5a963a6e9e1fee426f4d54eb"
+    },
+    "torispherical_horizontal": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 5.197484346026556,
+        "headspace_volume_m3": 8.80883873738017,
+        "total_internal_volume_m3": 14.006323083406727,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.3710812834371934,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 1.1102230246251565e-16,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "b90b47a1691d2060ab5abffb8594d29439ff1a40d1c9c15e926adfb4073fd883"
+    },
+    "guppy_horizontal": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 4.839626200308825,
+        "headspace_volume_m3": 8.564502455007627,
+        "total_internal_volume_m3": 13.404128655316452,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.36105489023259213,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": null,
+        "liquid_mass_kg": null,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "8358957f3b54f38441ad839890f2cdb8f77363710b7ad14b64693d3168facb02"
+    },
+    "calibration_curve": {
+      "status": "computed",
+      "mass_status": "computed",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 0.8,
+        "headspace_volume_m3": 3.2,
+        "total_internal_volume_m3": 4.0,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.2,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": 998.2071504679437,
+        "liquid_mass_kg": 798.565720374355,
+        "gas_density_kg_m3": 1.2045751824931505,
+        "gas_mass_kg": 3.8546405839780817,
+        "total_fluid_mass_kg": 802.420360958333
+      },
+      "issues": [],
+      "record_sha256": "1951ea1bd62cb16ef4c120e0e00e9deecf02b84dcf7bd35368c2b1d7ba75532e"
+    },
+    "negative_level": {
+      "status": "out_of_scope",
+      "mass_status": "needs_data",
+      "values": {},
+      "issues": [
+        "tank_observation_outside_internal_geometry"
+      ],
+      "record_sha256": "c6b78ca8e99b3cc21f01a0ea42080374d8a14d0a7d84065680aa4020bdae6bd9"
+    },
+    "above_tank": {
+      "status": "out_of_scope",
+      "mass_status": "needs_data",
+      "values": {},
+      "issues": [
+        "tank_observation_outside_internal_geometry"
+      ],
+      "record_sha256": "409c4b55c1bb4bd31551c1722648c338d911bfae4e2d32179c397af990923583"
+    },
+    "missing_level": {
+      "status": "needs_data",
+      "mass_status": "needs_data",
+      "values": {},
+      "issues": [
+        "tank_observation_missing_or_invalid"
+      ],
+      "record_sha256": "46f7b542f252d9ff2ed9c1c79d354e4c0ca807b619888dd10eefe45a6d242293"
+    },
+    "saturated_hydrogen": {
+      "status": "computed",
+      "mass_status": "computed",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 5.28369856716157,
+        "headspace_volume_m3": 8.958188129112157,
+        "total_internal_volume_m3": 14.241886696273728,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.37099709328146857,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": 70.84834590663837,
+        "liquid_mass_kg": 374.3413037526725,
+        "gas_density_kg_m3": 1.3321703279411397,
+        "gas_mass_kg": 11.933832417717767,
+        "total_fluid_mass_kg": 386.2751361703903
+      },
+      "issues": [],
+      "record_sha256": "36a9cb05009edf20b32aed30c2ad23757bf58ba5fb628c497d8a859710619482"
+    },
+    "liquid_mass_without_gas_density": {
+      "status": "computed",
+      "mass_status": "needs_data",
+      "values": {
+        "liquid_level_m": 0.8,
+        "liquid_volume_m3": 5.28369856716157,
+        "headspace_volume_m3": 8.958188129112157,
+        "total_internal_volume_m3": 14.241886696273728,
+        "maximum_internal_height_m": 2.0,
+        "fill_volume_fraction": 0.37099709328146857,
+        "volume_residual_m3": 0.0,
+        "height_residual_m": 0.0,
+        "liquid_density_kg_m3": 998.2071504679437,
+        "liquid_mass_kg": 5274.225690657909,
+        "gas_density_kg_m3": null,
+        "gas_mass_kg": null,
+        "total_fluid_mass_kg": null
+      },
+      "issues": [],
+      "record_sha256": "e624d32eddd827a44bd7ad70c9e22bae457779838d7fdc547b6b3b9da13e0638"
+    }
+  },
+  "authored_geometry_profiles": {
+    "flat_vertical": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.0625
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.125
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.1875
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.25
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.3125
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.375
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.4375
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5625
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.625
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.6874999999999999
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.75
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8125000000000001
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.875
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9374999999999999
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "conical_vertical": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.013183593750000005
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.07812500000000001
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.14843750000000003
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.21875000000000003
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.2890625
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.359375
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.42968750000000006
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5000000000000001
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5703125
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6406250000000001
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7109375000000001
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.7812500000000001
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8515625000000001
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9218750000000002
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9868164062500001
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "ellipsoidal_vertical": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.03722426470588238
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.10294117647058826
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.1691176470588236
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.2352941176470589
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.30147058823529416
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.36764705882352955
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.4338235294117649
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5000000000000002
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5661764705882354
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6323529411764707
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.6985294117647061
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.7647058823529413
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8308823529411766
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.897058823529412
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9627757352941178
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "spherical_vertical": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.02748039806996382
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.09288299155609168
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.1607358262967431
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.2285886610373945
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.2964414957780459
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.3642943305186973
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.43214716525934876
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5000000000000001
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5678528347406514
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6357056694813029
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7035585042219543
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.7714113389626057
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8392641737032571
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9071170084439086
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9725196019300363
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "torispherical_vertical": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.03639692218593085
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.10249943490937215
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.16874952909114346
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.2349996232729148
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.3012497174546861
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.3674998116364574
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.43374990581822864
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.49999999999999994
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5662500941817712
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6325001883635426
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.6987502825453139
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.7650003767270852
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8312504709088565
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.8975005650906278
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9636030778140692
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "flat_horizontal": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.026022774371879394
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.07214680640719374
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.12979859905358515
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.19550110947788538
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.2669872706947603
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.34251882123714633
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.4206302498863762
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5793697501136238
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6574811787628538
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7330127293052398
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.8044988905221148
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.870201400946415
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9278531935928063
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9739772256281206
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "conical_horizontal": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.024637116965216612
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.06895309256973658
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.12517747425491757
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.1901616010984744
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.26178850759536954
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.3383445798954037
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.41827053803145553
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.49999999999999994
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5817294619685444
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6616554201045964
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7382114924046306
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.8098383989015256
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8748225257450825
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9310469074302634
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9753628830347834
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "ellipsoidal_horizontal": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.024282503122246526
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.06871409388870037
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.12538525284139868
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.19088333189225182
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.2628633087012591
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.3394467540327762
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.4189959006350379
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5000000000000001
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5810040993649622
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6605532459672241
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7371366912987412
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.8091166681077483
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8746147471586015
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9312859061112997
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9757174968777537
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "spherical_horizontal": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.024061226557616937
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.06793771226589439
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.12411706403698416
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.18936584235234818
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.26139177541201464
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.33829379317806707
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.41836534627644195
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.581634653723558
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.661706206821933
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7386082245879854
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.8106341576476519
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8758829359630159
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9320622877341056
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9759387734423831
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "torispherical_horizontal": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.02457321757071616
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.06915977365925825
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.12580747481400567
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.19120352444985664
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.263069782639721
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.33956020179584895
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.4190437630061237
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.5000000000000001
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5809562369938766
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6604397982063428
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7369302173624709
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.8087964755523358
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.8741925251881869
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9308402263429346
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.9754267824313542
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ],
+    "guppy_horizontal": [
+      {
+        "height_fraction": 0.0,
+        "volume_fraction": 0.0
+      },
+      {
+        "height_fraction": 0.0625,
+        "volume_fraction": 0.02451788070961987
+      },
+      {
+        "height_fraction": 0.125,
+        "volume_fraction": 0.06830879755897168
+      },
+      {
+        "height_fraction": 0.1875,
+        "volume_fraction": 0.12348952194734818
+      },
+      {
+        "height_fraction": 0.25,
+        "volume_fraction": 0.18688659548691983
+      },
+      {
+        "height_fraction": 0.3125,
+        "volume_fraction": 0.25642121346014846
+      },
+      {
+        "height_fraction": 0.375,
+        "volume_fraction": 0.3304796719390701
+      },
+      {
+        "height_fraction": 0.4375,
+        "volume_fraction": 0.4076769700236267
+      },
+      {
+        "height_fraction": 0.5,
+        "volume_fraction": 0.4867370880756754
+      },
+      {
+        "height_fraction": 0.5625,
+        "volume_fraction": 0.5664164702508743
+      },
+      {
+        "height_fraction": 0.625,
+        "volume_fraction": 0.6454420294647777
+      },
+      {
+        "height_fraction": 0.6875,
+        "volume_fraction": 0.7224466720706278
+      },
+      {
+        "height_fraction": 0.75,
+        "volume_fraction": 0.7958843765311492
+      },
+      {
+        "height_fraction": 0.8125,
+        "volume_fraction": 0.863892323840178
+      },
+      {
+        "height_fraction": 0.875,
+        "volume_fraction": 0.9240151847445841
+      },
+      {
+        "height_fraction": 0.9375,
+        "volume_fraction": 0.972472331965861
+      },
+      {
+        "height_fraction": 1.0,
+        "volume_fraction": 1.0
+      }
+    ]
+  },
+  "source_versions": {
+    "lh2dt": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c",
+      "source_tree_files": 52
+    },
+    "monitoring": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+      "source_tree_files": 28
+    }
+  },
+  "geometry_exchanges": {
+    "flat": {
+      "maximum_volume_difference_m3": 0.0,
+      "probe_count": 17,
+      "qualified_scope": "volume_geometry_only"
+    },
+    "ellipsoidal": {
+      "maximum_volume_difference_m3": 3.477765602166727e-07,
+      "probe_count": 17,
+      "qualified_scope": "volume_geometry_only"
+    }
+  },
+  "monitoring": {
+    "rows": 81,
+    "channels": [
+      "tank1_level_m",
+      "tank2_level_m",
+      "pump_command_percent"
+    ],
+    "missing_control_samples": 1,
+    "clock_id_preserved": true,
+    "field_detector_accuracy_established": false
+  },
+  "data": {
+    "source": "https://doi.org/10.5281/zenodo.19856119",
+    "license_id": "CC-BY-4.0",
+    "creators": [
+      "Guilherme Silva",
+      "Marcela Coelho",
+      "Valter Leite"
+    ],
+    "source_status": "needs_data",
+    "source_review_sha256": "7eee44cab7f936e5f71625cd9e0f51915b0601798a5c1cd291e1f4248ff1df1a",
+    "experiment_columns": 10,
+    "level_observations": 1620,
+    "conditional_snapshots": 3240,
+    "missing_command_samples": 10,
+    "conditional_output_sha256": "f296f4719f0348efbad039064be71ece56734e0f0d0135a8b161c3a3ee589bb7",
+    "unit_mapping_receipts_sha256": "ad35f4f22887b08e72fdfb6acaa463a908e3b9eee85c5ea4890ff568e0a49289",
+    "alternative_unit_volume_ratio": 10.0,
+    "nominal_capacity_m3": 0.2,
+    "assumed_diameters_m": [
+      0.4,
+      0.6
+    ],
+    "unit_datum_geometry_temperature_and_pressure_are_hypotheses": true,
+    "physical_mass_balance_validated": false
+  },
+  "module_sha256": "7bc4084d1c2132241152e51c027ccffeb1923ac790b8cadb2377991fa497e4db",
+  "loader_sha256": "acd75bedf52119696e42dab43837d1133204d2e26631cdd7022c2d174e5c858d",
+  "script_sha256": "14c081d347fa2abbc65917b7cd879d105c70674a9611552c76b353298c7b32dd",
+  "field_calibrated": false,
+  "tank_dynamics_solved": false
+}

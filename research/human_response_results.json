@@ -1,0 +1,212 @@
+{
+  "schema": "pipeline_integrity.human_response_verification.v1",
+  "hra": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+    "source_tree_files": 28,
+    "provider": {
+      "id": "human-reliability-toolkit",
+      "version": "0.2.0",
+      "source_digest": "b6ccef70258a46ad7f806f5d955ea72413285b851ca9cf3815f4aef6901863ee",
+      "timing_sha256": "30e9c622e452bec290d48d2dd55e3e79418141b4c5cc7a0282a076ce28642ee4",
+      "dependency_sha256": "545a7f7b7087b3544e4068c98986b0244b1feabeebc80ea93a9c935439dcee97",
+      "methods_sha256": "951b48e7f1f4b1c6c9180856c3208f6e6621c15c35b7bdf27882333ff9ce50f5"
+    }
+  },
+  "cases": {
+    "lognormal_median": {
+      "status": "exchange_checked",
+      "probability": 0.6,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": 1.0,
+      "issues": [],
+      "record_sha256": "f9bc69d9d54dded1791d048888bf1ee77766dd0f866e4d14f4240f01298af4d2"
+    },
+    "shifted_clock": {
+      "status": "exchange_checked",
+      "probability": 0.6,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "dfecf5c48da7f5c7b9c790951627ce8ae9906c587dbaf08410aa2d879578c829"
+    },
+    "shorter_window": {
+      "status": "exchange_checked",
+      "probability": 0.9337371847986412,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "8fb53c4f7f5d8ba1b178a219f4f1323265621328518195b26b1fe08f1f0b5e6c"
+    },
+    "longer_window": {
+      "status": "exchange_checked",
+      "probability": 0.26626281520135864,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "6342a5b7ccbec5fda7202ce6e905d7acd98babcc3b0276334503b78541ea1ee7"
+    },
+    "weibull_reference": {
+      "status": "exchange_checked",
+      "probability": 0.4943035529371539,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "ffa4f79c2c3388093b3f85dbf27461e7f4c3937488f3985f7246fa6d25e433fb"
+    },
+    "km_tied_censor_and_completion": {
+      "status": "exchange_checked",
+      "probability": 0.68,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "aa8aa61c76eaf54dd3bb3fceb3dd628ddee6e36c3908305424af61d5d6fc8cb0"
+    },
+    "km_within_support": {
+      "status": "exchange_checked",
+      "probability": 0.44000000000000006,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": 1.0,
+      "issues": [],
+      "record_sha256": "4bb2356191465238acd1409e13157040dbd38192e2d70a8a2270ba251e81cc2b"
+    },
+    "km_unidentified_tail": {
+      "status": "needs_data",
+      "probability": null,
+      "includes": null,
+      "native_bin_sum": null,
+      "issues": [
+        "native response model unresolved: completion probability beyond censored support is unidentified"
+      ],
+      "record_sha256": "f66ca989a39c2484779a6711270029a9cd139ecf651a34ab37dfedd20ffe1f37"
+    },
+    "km_unidentified_bin": {
+      "status": "needs_data",
+      "probability": null,
+      "includes": null,
+      "native_bin_sum": null,
+      "issues": [
+        "native response model unresolved: completion probability beyond censored support is unidentified"
+      ],
+      "record_sha256": "7057e2022990d8701d2118c6ca29aea932159622e48fd9c3f2bfc1f606ed0d0a"
+    },
+    "wrong_response": {
+      "status": "needs_data",
+      "probability": null,
+      "includes": null,
+      "native_bin_sum": null,
+      "issues": [
+        "wrong responses/unknown outcomes are not ordinary right-censored completions"
+      ],
+      "record_sha256": "b56f74bfe0101b4a4689b30dcd0d184600cfee05e04b8015206d1d65cebebec7"
+    },
+    "unknown": {
+      "status": "needs_data",
+      "probability": null,
+      "includes": null,
+      "native_bin_sum": null,
+      "issues": [
+        "wrong responses/unknown outcomes are not ordinary right-censored completions"
+      ],
+      "record_sha256": "d6c767b8b082506fb62cac7571317299f93ff6497bad5fb46ef529a5f3431d28"
+    },
+    "recovery_quarter": {
+      "status": "exchange_checked",
+      "probability": 0.05,
+      "includes": [
+        "recovery"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "7a5964f79a5f84ff49f6df186d621ccd0eff80014b04a39e5333471d023a54be"
+    },
+    "recovery_always": {
+      "status": "exchange_checked",
+      "probability": 0.0,
+      "includes": [
+        "recovery"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "230a58ffb2d381051becb7108b243747428e88014c901bf423e2447d5da60310"
+    },
+    "recovery_never": {
+      "status": "exchange_checked",
+      "probability": 0.2,
+      "includes": [
+        "recovery"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "cf53a61e6cff32d1575c57fa5564291c8555749e31b31b3a794832d106614a28"
+    },
+    "no_initial_errors": {
+      "status": "exchange_checked",
+      "probability": 0.5,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "1cea51a2cbfa25990e9ac808fb4e70508eba75fcc91bda34cd9d1e609873c1bd"
+    },
+    "all_initial_errors": {
+      "status": "exchange_checked",
+      "probability": 1.0,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "869ac288421a8eb9599c9b59f70a8f67e5003510c20ae2b0f2c1866a739b9c39"
+    },
+    "cognitive_then_deadline": {
+      "status": "exchange_checked",
+      "probability": 0.6399999999999999,
+      "includes": [
+        "timing"
+      ],
+      "native_bin_sum": null,
+      "issues": [],
+      "record_sha256": "5a97f5add34f9b7bc6a6a0b2acf4eb1d310a8b8c04d89da8303533af87bc957b"
+    }
+  },
+  "sacada_scope_guard": {
+    "source_record": "sacada.action.r0003",
+    "source_id": "sacada_2019",
+    "numeric_reuse": "government_public_use",
+    "rejection": "timing/recovery already included; a joint timed-recovery model is not supplied",
+    "pipeline_field_calibration": false
+  },
+  "risk_exchange": {
+    "fault_tree_probability": 0.6,
+    "expected_annual_count": 1.2,
+    "endpoint": "event_occurrence",
+    "physical_loss_of_containment_frequency": false
+  },
+  "independent_references": [
+    "lognormal CDF at its median",
+    "exponential CDF at one scale",
+    "hand-counted KM risk sets with tied censor/completion",
+    "conditional recovery limits"
+  ],
+  "module_sha256": "c12a752d1e236e9ac1dfe758d0840e3a123a2db2b6f2603476b67328e0dfc79c",
+  "script_sha256": "e46e20c23b0415dc144bbc08f3183c9355dd1937b3a20e47b9d1912595a3cbe1",
+  "field_calibrated": false,
+  "work_authorized": false
+}

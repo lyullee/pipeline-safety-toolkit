@@ -1,0 +1,397 @@
+{
+  "schema": "pipeline_integrity.frame_loading_verification.v1",
+  "authored_cases": {
+    "thermal_free": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "65a6ce219a770b30f1e5389ea9574dc713d3fcad21df3a531cadf23de27b4df0",
+      "axial_displacement_m": 0.002,
+      "mean_axial_stress_pa": 0.0,
+      "independent_displacement_m": 0.002,
+      "independent_mean_stress_pa": 0.0,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": -596902.6041820614,
+      "recovered_tension_positive_axial_n": 0.0,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "thermal_fixed": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "810d4f5f402ed6b2ea187e548b08d827011ba8ac8c6deab6a52eeb136f2b233e",
+      "axial_displacement_m": 0.0,
+      "mean_axial_stress_pa": -99999999.99999999,
+      "independent_displacement_m": 0.0,
+      "independent_mean_stress_pa": -99999999.99999999,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 0.0,
+      "recovered_tension_positive_axial_n": -596902.6041820614,
+      "anchor_reaction_n": [
+        596902.6041820614,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "thermal_spring": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "e8f5b6f8c70426b9bbb2cf1ad01213af8ea550726b0e344275a80c33a8fe2cdd",
+      "axial_displacement_m": 0.001498056603277688,
+      "mean_axial_stress_pa": -25097169.83611559,
+      "independent_displacement_m": 0.0014980566032776882,
+      "independent_mean_stress_pa": -25097169.83611559,
+      "displacement_error_m": 2.168404344971009e-19,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": -447096.9438542926,
+      "recovered_tension_positive_axial_n": -149805.66032776877,
+      "anchor_reaction_n": [
+        149805.66032776877,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "thermal_cooling": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "2fb4710df7c246d64ed027dee78da51eec82d39cb2a48673de1fffad83a9851f",
+      "axial_displacement_m": -0.0008,
+      "mean_axial_stress_pa": 0.0,
+      "independent_displacement_m": -0.0008,
+      "independent_mean_stress_pa": 0.0,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 238761.0416728246,
+      "recovered_tension_positive_axial_n": 0.0,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "thermal_zero_change": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "1e4966f3133935faab47e4267c5138b6b8e9b6768e8195cc9620d03f46b9cee0",
+      "axial_displacement_m": 0.0,
+      "mean_axial_stress_pa": -0.0,
+      "independent_displacement_m": 0.0,
+      "independent_mean_stress_pa": 0.0,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 0.0,
+      "recovered_tension_positive_axial_n": -0.0,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "thermal_zero_coefficient": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "8271908d360eac9a4927fccc19f947cc19c632b91146714024bfeca07801dab0",
+      "axial_displacement_m": 0.0,
+      "mean_axial_stress_pa": -0.0,
+      "independent_displacement_m": 0.0,
+      "independent_mean_stress_pa": 0.0,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 0.0,
+      "recovered_tension_positive_axial_n": -0.0,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "pressure_closed_free": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "868290e4c94abde6f64cd24dbfec4155aed2ece3a613800f085efedba316b00a",
+      "axial_displacement_m": 6.399999999999992e-05,
+      "mean_axial_stress_pa": 7999999.999999989,
+      "independent_displacement_m": 6.399999999999993e-05,
+      "independent_mean_stress_pa": 7999999.999999991,
+      "displacement_error_m": 1.3552527156068805e-20,
+      "stress_error_pa": 1.862645149230957e-09,
+      "native_uncorrected_axial_n": -19100.88333382594,
+      "recovered_tension_positive_axial_n": 47752.20833456485,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "pressure_closed_fixed": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "34c0795bc498f09b07fbe3280d0ef49657b26106ea95a27e9abf1a8103c84dc2",
+      "axial_displacement_m": 0.0,
+      "mean_axial_stress_pa": 4799999.9999999935,
+      "independent_displacement_m": 0.0,
+      "independent_mean_stress_pa": 4799999.9999999935,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 0.0,
+      "recovered_tension_positive_axial_n": 28651.32500073891,
+      "anchor_reaction_n": [
+        19100.88333382594,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "pressure_open_free": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "6487a9b3dedfff43ad1ef9538a2ff6889b69031a72fbe2d733853cbc66efadcc",
+      "axial_displacement_m": -9.599999999999987e-05,
+      "mean_axial_stress_pa": 0.0,
+      "independent_displacement_m": -9.599999999999987e-05,
+      "independent_mean_stress_pa": 0.0,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 28651.32500073891,
+      "recovered_tension_positive_axial_n": 0.0,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "pressure_open_fixed": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "afb512104aa7570d9737479f1248b093d132f58eaed3fb076454a61c2d3cf1d4",
+      "axial_displacement_m": 0.0,
+      "mean_axial_stress_pa": 4799999.9999999935,
+      "independent_displacement_m": 0.0,
+      "independent_mean_stress_pa": 4799999.9999999935,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 0.0,
+      "recovered_tension_positive_axial_n": 28651.32500073891,
+      "anchor_reaction_n": [
+        -28651.32500073891,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "pressure_external_dominant": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "b3226f5d2059795fe0f9b83ef0da3e39d0e7daf032df31564e3c779f0c068d0c",
+      "axial_displacement_m": -8.079999999999992e-05,
+      "mean_axial_stress_pa": -10099999.999999989,
+      "independent_displacement_m": -8.079999999999989e-05,
+      "independent_mean_stress_pa": -10099999.999999989,
+      "displacement_error_m": 2.710505431213761e-20,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 24114.865208955256,
+      "recovered_tension_positive_axial_n": -60287.16302238814,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "pressure_hydrostatic": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "ad9bad419887faaef9a869992d30800ebd0dfdb1edd9090a151f936a30773173",
+      "axial_displacement_m": -8.000000000000007e-07,
+      "mean_axial_stress_pa": -99999.99999999996,
+      "independent_displacement_m": -8e-07,
+      "independent_mean_stress_pa": -100000.0,
+      "displacement_error_m": 7.411538288475128e-22,
+      "stress_error_pa": 4.3655745685100555e-11,
+      "native_uncorrected_axial_n": 238.76104167282477,
+      "recovered_tension_positive_axial_n": -596.9026041820612,
+      "anchor_reaction_n": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "combined_free": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "9656c6f08e110b2563ab53711fbd84e9b1f0931b432db99c36a44da28a8324ac",
+      "axial_displacement_m": 0.0020639999999999994,
+      "mean_axial_stress_pa": 7999999.999999964,
+      "independent_displacement_m": 0.002064,
+      "independent_mean_stress_pa": 7999999.999999988,
+      "displacement_error_m": 4.336808689942018e-19,
+      "stress_error_pa": 2.421438694000244e-08,
+      "native_uncorrected_axial_n": -616003.4875158872,
+      "recovered_tension_positive_axial_n": 47752.2083345647,
+      "anchor_reaction_n": [
+        4.729372449219227e-11,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "combined_fixed": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "b2d6228ff0606397fcc293c4cdfc6367e2689dd7d4a89647035b2b54dd1b2b10",
+      "axial_displacement_m": 0.0,
+      "mean_axial_stress_pa": -95200000.00000001,
+      "independent_displacement_m": 0.0,
+      "independent_mean_stress_pa": -95200000.00000001,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 0.0,
+      "native_uncorrected_axial_n": 0.0,
+      "recovered_tension_positive_axial_n": -568251.2791813225,
+      "anchor_reaction_n": [
+        616003.4875158872,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "combined_spring": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "b1d5773ef47d66af2fe562b17c85fd8a436087acc3f5a8af567692fbd4b22e8a",
+      "axial_displacement_m": 0.0015459944145825738,
+      "mean_axial_stress_pa": -17900279.27087132,
+      "independent_displacement_m": 0.001545994414582574,
+      "independent_mean_stress_pa": -17900279.270871304,
+      "displacement_error_m": 2.168404344971009e-19,
+      "stress_error_pa": 1.4901161193847656e-08,
+      "native_uncorrected_axial_n": -461404.0460576299,
+      "recovered_tension_positive_axial_n": -106847.23312369263,
+      "anchor_reaction_n": [
+        154599.44145825744,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "combined_factored": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "ffb2b5420224f6f26328c2a9212640160a0fdcaaf7ef73caab0d41d2609e5711",
+      "axial_displacement_m": 0.0011279999999999999,
+      "mean_axial_stress_pa": 15999999.999999981,
+      "independent_displacement_m": 0.0011279999999999999,
+      "independent_mean_stress_pa": 15999999.999999976,
+      "displacement_error_m": 0.0,
+      "stress_error_pa": 5.587935447692871e-09,
+      "native_uncorrected_axial_n": -336653.06875868264,
+      "recovered_tension_positive_axial_n": 95504.41666912971,
+      "anchor_reaction_n": [
+        -8.003553375601768e-11,
+        0.0,
+        0.0
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "combined_rotated": {
+      "status": "computed",
+      "issues": [],
+      "result_digest": "8057560868a88425416ec96a2e70d1c8a319feed9ecce7036a8ec7476d351dc8",
+      "axial_displacement_m": 0.0020639999999999994,
+      "mean_axial_stress_pa": 7999999.999999964,
+      "independent_displacement_m": 0.002064,
+      "independent_mean_stress_pa": 7999999.999999988,
+      "displacement_error_m": 4.336808689942018e-19,
+      "stress_error_pa": 2.421438694000244e-08,
+      "native_uncorrected_axial_n": -616003.4875158872,
+      "recovered_tension_positive_axial_n": 47752.2083345647,
+      "anchor_reaction_n": [
+        0.0,
+        7.275957614183426e-12,
+        8.36735125631094e-11
+      ],
+      "static_and_nodal_balance_passed": true
+    },
+    "missing_temperature": {
+      "status": "needs_data",
+      "issues": [
+        "uniform thermal definition, coefficient, reference or frame review is unresolved"
+      ],
+      "result_digest": "b738b803da371e2dc247a91d8c9c71528fb74ee4e070768b3e0c0a9ad18506da"
+    },
+    "outside_coefficient_support": {
+      "status": "out_of_scope",
+      "issues": [
+        "thermal reference or current temperature lies outside the declared coefficient support"
+      ],
+      "result_digest": "05eeabf457aad7f97c88ee8ad7a66ae201a7b212f8034791628cc0d30a330382"
+    },
+    "missing_surface_pressure": {
+      "status": "needs_data",
+      "issues": [
+        "source pressure section is not computed"
+      ],
+      "result_digest": "5b8a66823f5dfce897c3cb227da70383a350e5e64aeac3fdcf23a03a82c4810a"
+    }
+  },
+  "primary_temperature_exchange": {
+    "source": "https://data.mendeley.com/datasets/sbcf36976g/1",
+    "creators": [
+      "Lauren B. Tomanek",
+      "Daniel S. Stutts"
+    ],
+    "license_id": "CC-BY-4.0",
+    "archive_sha256": "9226632888404fe792358bc5a33cf2edacbb16e35352a36a6c0c1c4c155e723a",
+    "source_rows": 1937,
+    "consecutive_source_rows_used": 16,
+    "clock_id": "thermal_rod:50cu3:c3eb2665982f5c898ee307382cb40aeb293f1776e78aa1855be56b053815e6c3",
+    "source_temperature_basis": "excess above source ambient",
+    "declared_ambient_and_stress_free_temperature_k": 293.15,
+    "original_time_and_temperature_excess_retained": true,
+    "maximum_hypothetical_fixed_reaction_error_n": 3.2741809263825417e-10,
+    "monitoring_rows": 16,
+    "monitoring_channels": 24,
+    "hra_samples": 16,
+    "source_origin": "laboratory",
+    "predicted_origin": "simulation",
+    "actual_rod_geometry_temperature_uniformity_and_structural_response_qualified": false
+  },
+  "source_versions": {
+    "materials": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "d25685aa1e83aa35b62b5b993ef9998992af8d531e10cdca23a3e74e27ef30e4",
+      "source_tree_files": 65
+    },
+    "monitoring": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+      "source_tree_files": 28
+    },
+    "hra": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    }
+  },
+  "structural_module_sha256": "56470da2e5eada022b820543483f8b90b3dbd173dcbccc5397c340ca97ae084f",
+  "loading_module_sha256": "b58790f7538f0bad502a8092288a3c4fa9927788ab078bc57b5faa34f3c416ea",
+  "example_sha256": "0c5df63ffc9982e0c89770a3a7d04b418b856ebd3655d4308fa3fb1ed2a3637b",
+  "script_sha256": "fc0343f924ac8f92c0a2e89df6398482aa65caa7aa2be789116f9a2fde90b46c",
+  "code_or_field_acceptance": false,
+  "buckling_or_failure_probability_calculated": false
+}

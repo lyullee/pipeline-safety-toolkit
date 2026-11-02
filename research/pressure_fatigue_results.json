@@ -1,0 +1,273 @@
+{
+  "schema": "pipeline_integrity.pressure_fatigue_checks.v1",
+  "materials_source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "68f455514d059c1d92043dad5d35fc19161f08bda8ca82a6ff0b46575b766367",
+    "source_tree_files": 55
+  },
+  "materials_history_sha256": "a46dd20383071ba6a92c6c3a21fa39657f8043f6096708cffee165133e077b8a",
+  "native_runtime": {
+    "matintegrity": "0.1.0.dev0",
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pydantic": "2.14.1",
+    "pint": "0.26.2",
+    "scipy": "1.18.1",
+    "rainflow": "3.2.0"
+  },
+  "rainflow_source_sha256": "28d6fb6bf5e260b8e704ada70f92b113b65b7221b4266157770542f06e501e65",
+  "rainflow_license": "MIT; Piotr Janiszewski",
+  "verification_script_sha256": "33a74ffce5647909dfc0987b8efba8f9a057e181cc407e3b3cce50fed55d3083",
+  "exchange_sha256": "792fd09e28d742da912fcc083b4254b479e7d844442feb3813989e3f2c1df9c9",
+  "reference": {
+    "status": "computed",
+    "result_digest": "65abe0c1c0513fd8b21f5ad937340f785eedceec93d7d0bdbb5d9e147922ad01",
+    "history_digest": "7a29d8543d33f7279e0caba392246de9567cdf2c611b4e925d5b075dbffb1f19",
+    "source_sha256": "660658e2dc94ece6ed7b769bbf56c8f34548c37a527e682e0928824f2eebb8c8",
+    "pressure_origin": "synthetic",
+    "temperature_origin": "user_declared",
+    "native_history_origin": "model_prediction",
+    "curve_basis": "synthetic_reference",
+    "counted_cycles": 2.0,
+    "initial_damage": 0.1,
+    "damage_increment": 0.0020000000000000018,
+    "total_damage": 0.10200000000000001,
+    "counted_cycle_records": 4,
+    "stress_ratio_min": 0.5,
+    "stress_ratio_max": 0.5,
+    "field_validation": false,
+    "failure_probability_calculated": false
+  },
+  "native_model_checks": {
+    "mechanics.thin_cylinder": {
+      "status": "computed",
+      "values": {
+        "hoop_stress_Pa": 80000000.0,
+        "axial_stress_Pa": 40000000.0,
+        "allowable_pressure_difference_Pa": 10000000.0,
+        "hoop_margin_Pa": 120000000.0
+      },
+      "payload_digest": "85bb51157030648c4774b77dfb7423b4d54ee05923e78730c07bce9d515edd6b"
+    },
+    "fatigue.rainflow": {
+      "status": "computed",
+      "values": {
+        "cycles": [
+          {
+            "range": 40000000.0,
+            "mean": 60000000.0,
+            "count": 0.5,
+            "start_index": 0,
+            "end_index": 1
+          },
+          {
+            "range": 40000000.0,
+            "mean": 60000000.0,
+            "count": 0.5,
+            "start_index": 1,
+            "end_index": 2
+          },
+          {
+            "range": 40000000.0,
+            "mean": 60000000.0,
+            "count": 0.5,
+            "start_index": 2,
+            "end_index": 3
+          },
+          {
+            "range": 40000000.0,
+            "mean": 60000000.0,
+            "count": 0.5,
+            "start_index": 3,
+            "end_index": 4
+          }
+        ],
+        "cycle_count": 2.0,
+        "quantity_unit": "Pa"
+      },
+      "payload_digest": "a158ffb5c115a7a89df2e010b7f19504335cc1231063f6751055e9e89ced74d9"
+    },
+    "fatigue.basquin": {
+      "status": "computed",
+      "values": {
+        "cycles_to_failure": 1000.0
+      },
+      "payload_digest": "166170a105062fbf6e6e33c60f461631bc38fd598f4d9843ae20a74dba469f1d"
+    },
+    "fatigue.miner": {
+      "status": "computed",
+      "values": {
+        "damage": 0.002,
+        "damage_margin": 0.998,
+        "fraction_of_declared_limit": 0.002
+      },
+      "payload_digest": "bfe42ab26df835a96a9fb001fe33c55718104af80ff51c9ec4f53a8c692a921a"
+    }
+  },
+  "doubled_range": {
+    "status": "computed",
+    "result_digest": "1bc073048848994fa890cf5da4b98da02c941bf99579fdb504f7379b1a0e07f3",
+    "history_digest": "83c13584a9728a4371318b26530a87c2b80632b5b2449c271dc857c8f0ab0f94",
+    "source_sha256": "660658e2dc94ece6ed7b769bbf56c8f34548c37a527e682e0928824f2eebb8c8",
+    "pressure_origin": "synthetic",
+    "temperature_origin": "user_declared",
+    "native_history_origin": "model_prediction",
+    "curve_basis": "synthetic_reference",
+    "counted_cycles": 2.0,
+    "initial_damage": 0.1,
+    "damage_increment": 0.016000000000000014,
+    "total_damage": 0.11600000000000002,
+    "counted_cycle_records": 4,
+    "stress_ratio_min": 0.3333333333333333,
+    "stress_ratio_max": 0.3333333333333333,
+    "field_validation": false,
+    "failure_probability_calculated": false
+  },
+  "above_one_damage": {
+    "status": "computed",
+    "result_digest": "c023a8a11039de7f588042a22e1d5f34fc9d3df3dede6a07ae08d1c6a093ba2a",
+    "history_digest": "7a29d8543d33f7279e0caba392246de9567cdf2c611b4e925d5b075dbffb1f19",
+    "source_sha256": "660658e2dc94ece6ed7b769bbf56c8f34548c37a527e682e0928824f2eebb8c8",
+    "pressure_origin": "synthetic",
+    "temperature_origin": "user_declared",
+    "native_history_origin": "model_prediction",
+    "curve_basis": "synthetic_reference",
+    "counted_cycles": 2.0,
+    "initial_damage": 0.1,
+    "damage_increment": 2000.0,
+    "total_damage": 2000.1,
+    "counted_cycle_records": 4,
+    "stress_ratio_min": 0.5,
+    "stress_ratio_max": 0.5,
+    "field_validation": false,
+    "failure_probability_calculated": false
+  },
+  "native_domain_rejections": {
+    "stress_range": "out_of_scope",
+    "stress_ratio": "out_of_scope",
+    "temperature": "out_of_scope",
+    "wall_geometry": "out_of_scope",
+    "external_pressure": "out_of_scope"
+  },
+  "actual_cli_result_matches": true,
+  "liquid": {
+    "base": {
+      "status": "computed",
+      "result_digest": "27be56f4c8a7e6c23335c7dca5d91b4e3b208abba1917080cbc5b56f809f488b",
+      "history_digest": "24c758f08aa36e1da5d3b4a3dd58a294fbf1a081ce3b4a618eae7d64e44addf5",
+      "source_sha256": "b551a88af6bc87110f85a971e0c56ef67e6f30f5d2a396bc7ed4803524cbad8e",
+      "pressure_origin": "simulation",
+      "temperature_origin": "user_declared",
+      "native_history_origin": "model_prediction",
+      "curve_basis": "synthetic_reference",
+      "counted_cycles": 1.0,
+      "initial_damage": 0.1,
+      "damage_increment": 1.9419414368171406e-05,
+      "total_damage": 0.10001941941436818,
+      "counted_cycle_records": 2,
+      "stress_ratio_min": 0.5099060196322329,
+      "stress_ratio_max": 0.7549530098161165,
+      "field_validation": false,
+      "failure_probability_calculated": false
+    },
+    "refined": {
+      "status": "computed",
+      "result_digest": "69274233297de1e2bdec87bd66e0a23c8344cf34fea9b7fc69678bfddb11b09e",
+      "history_digest": "6b31b0da3f7cf52dcade7c34ee8cc925399705041954db458fa64372bfca2224",
+      "source_sha256": "55c3037c016664b8fa8925ae0e548bb7914e8a3afc080002b89f43c6518c350d",
+      "pressure_origin": "simulation",
+      "temperature_origin": "user_declared",
+      "native_history_origin": "model_prediction",
+      "curve_basis": "synthetic_reference",
+      "counted_cycles": 1.0,
+      "initial_damage": 0.1,
+      "damage_increment": 1.9419414368171406e-05,
+      "total_damage": 0.10001941941436818,
+      "counted_cycle_records": 2,
+      "stress_ratio_min": 0.5099060196322329,
+      "stress_ratio_max": 0.7549530098161165,
+      "field_validation": false,
+      "failure_probability_calculated": false
+    }
+  },
+  "hydraulic": {
+    "source_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+    "source_citation": "Condition monitoring of hydraulic systems; https://doi.org/10.24432/C5CW21",
+    "creators": [
+      "Nikolai Helwig",
+      "Eliseo Pignanelli",
+      "Andreas Sch\u00fctze"
+    ],
+    "license_id": "CC-BY-4.0",
+    "cycle_index": 0,
+    "pressure_samples": 6000,
+    "sample_rate_hz": 100.0,
+    "pressure_min_bar": 145.83,
+    "pressure_max_bar": 191.51,
+    "unresolved": {
+      "status": "needs_data",
+      "result_digest": "b8a7560c88cbfdc5e5e1bdb58489a3b0f726f68bec4daa9590aa8b6735a9b25b",
+      "history_digest": "9ab7d920799b3f7a2eadf5207c61f1c92b734434dd6b2fa961527d92e60916ae",
+      "source_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+      "pressure_origin": "laboratory",
+      "temperature_origin": "user_declared",
+      "native_history_origin": null,
+      "curve_basis": "synthetic_reference",
+      "counted_cycles": null,
+      "initial_damage": null,
+      "damage_increment": null,
+      "total_damage": null,
+      "counted_cycle_records": 0,
+      "stress_ratio_min": null,
+      "stress_ratio_max": null,
+      "field_validation": false,
+      "failure_probability_calculated": false
+    },
+    "hypothetical_only": {
+      "absolute": {
+        "status": "computed",
+        "result_digest": "1f5f32405e83b49201b04e1be2537ced6105051cdb5a7690a2bc72e38023d749",
+        "history_digest": "1fdc5db9d8682d1d7c48fdcbe988e7412cbb7ccc800db997ddf1a45addd6b4c7",
+        "source_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+        "pressure_origin": "laboratory",
+        "temperature_origin": "user_declared",
+        "native_history_origin": "model_prediction",
+        "curve_basis": "synthetic_reference",
+        "counted_cycles": 1521.5,
+        "initial_damage": 0.1,
+        "damage_increment": 0.014393640039748426,
+        "total_damage": 0.11439364003974843,
+        "counted_cycle_records": 1527,
+        "stress_ratio_min": 0.7602058827775277,
+        "stress_ratio_max": 0.9999474725774025,
+        "field_validation": false,
+        "failure_probability_calculated": false
+      },
+      "gauge": {
+        "status": "computed",
+        "result_digest": "8a653621413ba4755a5963dcffea7efb34b586d3b85058f1d6396a5ffb71b091",
+        "history_digest": "8ad344e97a20da8cac043c7a570c364beae00255b57069ff4f8a466fa7e5ccdf",
+        "source_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+        "pressure_origin": "laboratory",
+        "temperature_origin": "user_declared",
+        "native_history_origin": "model_prediction",
+        "curve_basis": "synthetic_reference",
+        "counted_cycles": 1521.5,
+        "initial_damage": 0.1,
+        "damage_increment": 0.014393640039748426,
+        "total_damage": 0.11439364003974843,
+        "counted_cycle_records": 1527,
+        "stress_ratio_min": 0.761474596626808,
+        "stress_ratio_max": 0.999947750666179,
+        "field_validation": false,
+        "failure_probability_calculated": false
+      }
+    },
+    "same_damage_does_not_resolve_pressure_reference": true,
+    "actual_geometry_temperature_and_material_calibration_missing": true
+  },
+  "original_observation_rows_excluded_from_release": true,
+  "independent_material_or_field_validation": false,
+  "fatigue_damage_is_failure_probability": false
+}

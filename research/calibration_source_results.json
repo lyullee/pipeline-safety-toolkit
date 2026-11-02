@@ -1,0 +1,223 @@
+{
+  "schema": "pipeline_integrity.calibration_source_review.v1",
+  "status": "source_reader_full_covariance_verified_single_campaign",
+  "acquired_groups": 1,
+  "acquired_files": 1,
+  "acquired_bytes": 1406894,
+  "assets": [
+    {
+      "dataset_id": "emue_sonic_nozzle_calibration",
+      "filename": "EMUE-D4-3-SonicNozzles.zip",
+      "bytes": 1406894,
+      "sha256": "351c8f662491ae18394f1ac181f0c7ccdb89a7719faae94cdeb6f8a867d9356c",
+      "expected_checksum": "md5:ffc39a245e2e4361a3337be63a0b21db",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Martens, Steffen; Klauenberg, Katy; Mickan, Bodo; Yardin, Catherine; Fischer, Nicolas; Elster, Clemens (2020), EMUE-D4-3-QuantifyUncertaintiesInCalibration, Version1.0, Zenodo, doi:10.5281/zenodo.4016916",
+      "creators": [
+        "Steffen Martens",
+        "Katy Klauenberg",
+        "Bodo Mickan",
+        "Catherine Yardin",
+        "Nicolas Fischer",
+        "Clemens Elster"
+      ],
+      "version": "1.0; Zenodo record4016916",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.4016916",
+      "source_url": "https://zenodo.org/api/records/4016916/files/EMUE-D4-3-SonicNozzles.zip/content",
+      "dataset_origin": "mixed_compilation"
+    }
+  ],
+  "selected_member_pins": {
+    "data_A223.csv": {
+      "bytes": 2099,
+      "sha256": "6b0917851f00c017c963b6e4dca5dcf59aa48d90cb7fd31138d7bc05c8072239"
+    },
+    "MC_data_A223.xlsx": {
+      "bytes": 34646,
+      "sha256": "09e3b349d7b69ebfea2c67eee99c9276dc877f133bdf00f13579747999e7dfd9"
+    },
+    "Example_A223.pdf": {
+      "bytes": 421358,
+      "sha256": "bca75119b507038a9591dbc4d0f7066d8ea374951fe85cb33e7ec5dbc911d457"
+    },
+    "Example_A223.Rmd": {
+      "bytes": 61703,
+      "sha256": "ac16d6146a736cb8a23a406b49416f77b5f06add3464774c64d1ba781364c4b4"
+    },
+    "Example_A223.tex": {
+      "bytes": 34670,
+      "sha256": "1c3e0f5993819a35441d29a598b84f2eddd1230ba18ff741fbbca5cfd80f6035"
+    }
+  },
+  "source_record_digest": "99c5176eddbd9a909d03aa071c83ea0044ccc7fa49166acd13753f4d594407d0",
+  "primitive_rows": 30,
+  "publisher_MC_intermediate_rows": 30,
+  "supplied_joint_covariance_shape": [
+    60,
+    60
+  ],
+  "supplier_reader_warnings": [
+    "Workbook contains no default style, apply openpyxl's default"
+  ],
+  "source_dimensions": {
+    "Data": {
+      "declared_dimension": "A1:A1",
+      "observed_dimension": "A1:B31",
+      "source_bytes_changed": false
+    },
+    "Var_x": {
+      "declared_dimension": "A1:A1",
+      "observed_dimension": "A1:AD31",
+      "source_bytes_changed": false
+    },
+    "Var_y": {
+      "declared_dimension": "A1:A1",
+      "observed_dimension": "A1:AD31",
+      "source_bytes_changed": false
+    },
+    "Var_xy": {
+      "declared_dimension": "A1:A1",
+      "observed_dimension": "A1:AD31",
+      "source_bytes_changed": false
+    }
+  },
+  "covariance": {
+    "exactly_symmetric": true,
+    "scaled_correlation_minimum_eigenvalue": 0.0019776408201014873,
+    "scaled_correlation_maximum_eigenvalue": 29.99483056290053,
+    "scaled_correlation_rank": 60,
+    "scaled_correlation_condition": 15166.975852248594,
+    "nonzero_offdiagonal_entries": 3540,
+    "repaired": false,
+    "diagonalized": false
+  },
+  "checks": {
+    "original_source_receipt": true,
+    "supplier_md5_and_1406894_bytes": true,
+    "three_reviewed_method_assets": true,
+    "source_primitive_rows30": true,
+    "source_intermediate_rows30": true,
+    "publisher_wrong_declared_dimensions_preserved": true,
+    "actual_xml_dimensions_preserved": true,
+    "joint_covariance_60_by_60": true,
+    "exact_source_covariance_symmetry": true,
+    "strictly_positive_source_standard_variances": true,
+    "all_3540_offdiagonal_values_retained": true,
+    "cross_block_transpose_preserved": true,
+    "source_joint_covariance_order": true,
+    "scaled_source_covariance_positive_definite": true,
+    "scaled_source_covariance_full_rank": true,
+    "covariance_not_repaired_or_diagonalized": true,
+    "primitive_type_A_not_total": true,
+    "source_numeric_domains_available": true,
+    "publisher_MC_origin_retained": true,
+    "no_MC_samples_or_rerun": true,
+    "no_independent_validation_or_fabricated_clock": true,
+    "no_assumed_gas_state": true,
+    "point_order_not_sorted": true,
+    "no_supplier_code_executed": true,
+    "units_are_dimensionless": true,
+    "original_archive_unchanged": true
+  },
+  "source_contract_criteria": 26,
+  "actual_rehashed_source_corruption_refusals": {
+    "primitive_component_becomes_total": true,
+    "MC_estimates_become_raw_observations": true,
+    "mixed_source_becomes_field": true,
+    "invented_measurement_times": true,
+    "invented_independent_validation": true,
+    "cross_point_covariance_zeroed": true,
+    "covariance_order_reversed": true,
+    "dimensionless_x_becomes_mass_flow": true,
+    "covariance_becomes_expanded": true,
+    "invented_source_MC_samples": true,
+    "method_source_pin_changed": true,
+    "source_cells_silently_sorted": true
+  },
+  "supplier_programs_executed": 0,
+  "source_MC_trials_rerun": 0,
+  "native_calibration_fit_calls": 1,
+  "independent_validation_campaigns": 0,
+  "rows_and_detailed_receipts_in_release": false,
+  "field_or_thermodynamic_model_validation": false,
+  "runtime": {
+    "numpy": "2.5.4",
+    "openpyxl": "3.1.5"
+  },
+  "native_source_application": {
+    "status": "published_numerical_reference_reproduced_no_independent_campaign",
+    "actual_requests": 3,
+    "native_fit_calls": 1,
+    "computed_record_native_replays": 1,
+    "source_points": 30,
+    "source_model_calls": 70,
+    "source_status_counts": {
+      "computed": 1,
+      "needs_data": 1,
+      "out_of_scope": 1
+    },
+    "parameters": {
+      "offset": 0.9966305635235851,
+      "slope": -3.5267395836365374
+    },
+    "parameter_standard_uncertainty": [
+      0.0009607332303363187,
+      0.048265233669321096
+    ],
+    "parameter_standard_covariance": [
+      [
+        9.23008339872458e-07,
+        -2.5347247079682374e-05
+      ],
+      [
+        -2.5347247079682374e-05,
+        0.0023295327811541666
+      ]
+    ],
+    "covariance_residual_scaled": false,
+    "source_joint_covariance_diagonalized": false,
+    "independent_validation_campaigns": 0,
+    "prediction_or_field_acceptance_claimed": false,
+    "checks": {
+      "source_fit_original_full_matrix_preserved": true,
+      "source_published_rounded_offset": true,
+      "source_published_rounded_slope": true,
+      "source_published_rounded_offset_standard_uncertainty": true,
+      "source_published_rounded_slope_standard_uncertainty": true,
+      "source_published_rounded_parameter_covariance": true,
+      "supplied_covariance_not_residual_scaled": true,
+      "single_campaign_has_no_independent_validation": true,
+      "unreviewed_case_held_before_native": true,
+      "independently_required_case_refused": true,
+      "fitted_source_receipt_replayed": true
+    },
+    "numerical_reference_and_contract_criteria": 11,
+    "adapter_sha256": "9923ffbf89e3bcecb8fa2a20a4a8e4c4b1dad14332a3d15028ba4c7d490e7167",
+    "factory_sha256": "509026911fe6ab18956761b2d2f837f81868f6a97635a5de34daad1da20b261f",
+    "backend": {
+      "scipy_version": "1.18.1",
+      "numpy_version": "2.5.4",
+      "python_version": "3.12.14",
+      "runtime_platform": "Windows-11-10.0.26200-SP0",
+      "scipy_selected_source_and_binary_sha256": "1c86a18f4e065089950fe865e2dc88fc04a08f1cfb884548a51766f06ad9815c",
+      "scipy_selected_files": 88,
+      "shared_inverse_sha256": "c216deb827e94589adc337c5edd4c45dcfbe6089867700805e9c6f9e9d78ea2e",
+      "shared_contracts_sha256": "32f37a1f61606ee64d48e397268b95ed2523238afad0df3daf06688611d34d4e",
+      "shared_metrology_sha256": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb",
+      "numpy_linalg_module_sha256": "cb491584b896825cd10be0fa03ea70d7ccbfa7a1143d2e7acc772543209cb560",
+      "numpy_linalg_binary_sha256": "03bc9de2d6d8e2d9ea3ec781f3c16bcbc9960095cc02ca588f4229cd1560c661",
+      "numpy_binary_tree_sha256": "9905dddba6933687b1f505d6bb44088c033684dd4989584fe6d060a4906a7297",
+      "numpy_binary_files": 21
+    },
+    "source_record_digest": "99c5176eddbd9a909d03aa071c83ea0044ccc7fa49166acd13753f4d594407d0"
+  },
+  "doc_python_blocks_executed": 1,
+  "project_file_sha256": {
+    "src/pipeline_integrity/calibration_data.py": "4e7e1f84e251a18a3c7e3679b3bfc7814a92d20bca94650e9dbcff7687741d08",
+    "tests/test_calibration_data.py": "17ef7c4024984ef73a7576ba90336ea0a143e97f635972afd0b017ddcce2907e",
+    "scripts/review_calibration_source.py": "8aa5714c1ca660ab35f4e3381468a47e6c69c207fddd44a6cbb5cf518b71f93d",
+    "docs/CALIBRATION_DATA_KO.md": "c000e312af577e385cbf291a54820effd026c761064a64f20adb107231b91f63"
+  }
+}

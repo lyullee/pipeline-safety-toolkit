@@ -1,0 +1,130 @@
+{
+  "schema": "pipeline_integrity.nde_data_review.v1",
+  "source": "https://doi.org/10.5281/zenodo.11239514",
+  "license_id": "MIT",
+  "creators": [
+    "University of Essex",
+    "TWI ELLAS ASTIKI MI KERDOSKOPIKI ETAIREIA"
+  ],
+  "sources": {
+    "Ultrasonic Data.zip": {
+      "sha256": "978e316d28c5c8659edb59dca0a049fb19f18a5707518fae5c0c10a179ac94e1",
+      "bytes": 3937179,
+      "publisher_checksum": "md5:28c2d7dc317f5c4ef784db95219e3481",
+      "publisher_checksum_verified": true
+    },
+    "Visual Data.zip": {
+      "sha256": "92374254eab72399804705a015b68101eccaff6f8b4ae63e8574f627d0b0826d",
+      "bytes": 42344716,
+      "publisher_checksum": "md5:8990393298ff53ae0ad7ce3987fd7690",
+      "publisher_checksum_verified": true
+    }
+  },
+  "waveform_groups": {
+    "Plate_1": {
+      "traces": 59,
+      "samples": 90000,
+      "missing_times": 0,
+      "missing_voltages": 59,
+      "negative_native_times": 3844,
+      "nonincreasing_adjacent_times": 0
+    },
+    "Plate_2": {
+      "traces": 164,
+      "samples": 328000,
+      "missing_times": 0,
+      "missing_voltages": 164,
+      "negative_native_times": 0,
+      "nonincreasing_adjacent_times": 0
+    },
+    "Wedge": {
+      "traces": 8,
+      "samples": 16000,
+      "missing_times": 0,
+      "missing_voltages": 9,
+      "negative_native_times": 0,
+      "nonincreasing_adjacent_times": 4
+    }
+  },
+  "waveforms": 231,
+  "native_header": {
+    "time": "second",
+    "signal": "Volt"
+  },
+  "native_zero_reference": "not_documented",
+  "source_rows_or_signed_times_repaired": false,
+  "visual": {
+    "status": "needs_data",
+    "matched_pairs": 318,
+    "orphan_masks": 7,
+    "orphan_images": 0,
+    "pair_dimensions_px": [
+      [
+        250,
+        250
+      ]
+    ],
+    "physical_pixel_scale_known": false,
+    "mask_class_values_reviewed": false
+  },
+  "detection_trial_fit": {
+    "status": "needs_data",
+    "independent_truth_miss_or_blank_trials_found": false,
+    "known_physical_size_and_procedure_calibration_found": false,
+    "file_count_is_not_trial_count": true
+  },
+  "echo_cases": {
+    "reference": {
+      "status": "exchange_checked",
+      "thickness_m": 0.00295,
+      "native_status": "computed",
+      "issues": [],
+      "record_sha256": "a44ad30f029692f0dbe5293b6da8271996828617d16bf8e39360e56e5f28a861"
+    },
+    "time_zero": {
+      "status": "exchange_checked",
+      "thickness_m": 0.0023599999999999997,
+      "native_status": "computed",
+      "issues": [],
+      "record_sha256": "8b7a90777006bd74fdde532f8336f00816ccf36474c7fc47dd153a3bf43aae81"
+    },
+    "oblique": {
+      "status": "exchange_checked",
+      "thickness_m": 0.0014750000000000004,
+      "native_status": "computed",
+      "issues": [],
+      "record_sha256": "38391330dc35114603bfc8e2686393169ba5e6cc03b676ffc6d2aa2d3d63670d"
+    },
+    "offset_consumes_flight": {
+      "status": "withheld",
+      "thickness_m": null,
+      "native_status": "out_of_scope",
+      "issues": [
+        "native_thickness_unresolved:out_of_scope"
+      ],
+      "record_sha256": "122447da22d8adcff6e4cdbd305f69018b2228293fc83a928aea70339b71dea4"
+    },
+    "missing_tail": {
+      "status": "needs_data",
+      "thickness_m": null,
+      "native_status": null,
+      "issues": [
+        "selected_echo_window_contains_missing_time_or_voltage"
+      ],
+      "record_sha256": "2844154e12ee48f3b469cfa47694f4e91c9ca66cf20785fc9d2be84eb3c27672"
+    }
+  },
+  "echo_picks_speed_and_calibration_are_assumptions": true,
+  "field_thickness_validated": false,
+  "materials": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "cc83518c12875c80352c9b01f7cc4a373e8bcfacaf454d3fa2022b49b6607fb7",
+    "source_tree_files": 60,
+    "version": "0.1.0.dev0"
+  },
+  "module_sha256": "8a1ff25e1f05c82f1c524cea8e1b09019cd6ca11e5a220114f1f4e8ae3a56b40",
+  "script_sha256": "742d930a988343fc66722c614826c5abb995f88bd7611e3d171659fd784841b5",
+  "trace_report_sha256": "89ba6915204e4a57aab44fc0014de2b336d53e9c4cd0f38c45a187213ea188c4",
+  "visual_report_sha256": "beba83bc2b561fd5fab591d2a9e2545ec7802c50d96af3501e8cbddcb36a2b24"
+}

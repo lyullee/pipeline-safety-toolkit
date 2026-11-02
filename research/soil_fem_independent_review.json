@@ -1,0 +1,100 @@
+{
+  "producer_sha256": "e8508917a0aaf944f476f002a781c382005de29297c8c35c48159ebf07d64859",
+  "checks": {
+    "default_gate_is_lazy": true,
+    "independent_new_shear_exact_field": true,
+    "independent_ground_6m_L2m_k1_grad2_exact24W": true,
+    "shared_corner_weak_unknown_retained": true,
+    "new_refinement3_passive_bounds": true,
+    "actual_localtime_plus_offset": true,
+    "physical_gradient_not_weak_reaction": true,
+    "wrong_node_count": true,
+    "wrong_node_value": true,
+    "wrong_clock": true,
+    "physical_as_weak": true,
+    "cell_mean_as_point": true,
+    "wrong_context_clock_export_refused": true,
+    "equal_opposite_local_residual_detected": true,
+    "global_energy_zero_cannot_hide_local_failure": true,
+    "fully_reconstructed_local_failure_cannot_promote": true,
+    "310K_reference_does_not_inflate_local_tolerance": true,
+    "310K_false_computed_export_refused": true,
+    "producer_unchanged": true
+  },
+  "passed": 19,
+  "total": 19,
+  "observations": {
+    "linear": {
+      "shear": 0.625,
+      "refinement": 2,
+      "maximum_temperature_error_K": 2.2737367544323206e-13,
+      "physical_ground_W": 24.000000000000682,
+      "expected_W": 24.0
+    },
+    "passive": {
+      "shear": 0.625,
+      "refinement": 3,
+      "minimum_K": 307.39369169212614,
+      "maximum_K": 310.0,
+      "physical_weak_maximum_difference_W": 186.9079324923349
+    },
+    "balanced_local_attack": {
+      "nodes": [
+        66,
+        92
+      ],
+      "positive_change_K": 0.001,
+      "opposite_change_K": -0.0009999999999999994,
+      "global_energy_residual_J": 7.457146011802251e-12,
+      "maximum_local_residual_W": 0.05150694444819237,
+      "temperature_bound_passed": true,
+      "energy_budget_passed": true,
+      "refusal": {
+        "validator_refused": true,
+        "export_refused": true,
+        "reason": "FEM diagnostic/completion status changed"
+      }
+    },
+    "310K_attack": {
+      "perturbation_K": 2e-06,
+      "global_energy_residual_J": 4.231676734874608e-12,
+      "maximum_local_residual_W": 0.00010301389193045907,
+      "temperature_bound_passed": true,
+      "energy_budget_passed": true,
+      "refusal": {
+        "validator_refused": true,
+        "export_refused": true,
+        "reason": "FEM diagnostic/completion status changed"
+      }
+    }
+  },
+  "direct_mutation_refusals": {
+    "wrong_node_count": {
+      "validator_refused": true,
+      "export_refused": true,
+      "reason": "FEM physical reconstruction failed"
+    },
+    "wrong_node_value": {
+      "validator_refused": true,
+      "export_refused": true,
+      "reason": "FEM fields, geometry, operators or native source differ from reconstruction"
+    },
+    "wrong_clock": {
+      "validator_refused": true,
+      "export_refused": true,
+      "reason": "FEM native clock is not the requested prefix"
+    },
+    "physical_as_weak": {
+      "validator_refused": true,
+      "export_refused": true,
+      "reason": "FEM fields, geometry, operators or native source differ from reconstruction"
+    },
+    "cell_mean_as_point": {
+      "validator_refused": true,
+      "export_refused": true,
+      "reason": "FEM fields, geometry, operators or native source differ from reconstruction"
+    }
+  },
+  "scope": "bounded independent analytic/contract/adversarial review; no field validation",
+  "review_script_sha256": "03749feb88865f4b4382c7598523eff65d98b6a2c79d2303db1345a07cb9fc2d"
+}

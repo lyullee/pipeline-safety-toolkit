@@ -1,0 +1,3783 @@
+{
+  "schema": "pipeline_integrity.datasets.v1",
+  "review_date": "2026-10-27",
+  "datasets": [
+    {
+      "id": "afm_steel_wear",
+      "title": "Asperity level characterisation of abrasive wear using atomic force microscopy",
+      "source": "https://zenodo.org/records/4743140",
+      "citation": "Walker, J., Umer, J., Mohammadpour, M., Theodossiades, S., Bewsher, S. R., Offner, G., Bansal, H., Leighton, M., Braunstingl, M., & Flesch, H.-G. (2021). Asperity level characterisation of abrasive wear using atomic force microscopy [Dataset]. Dryad. https://doi.org/10.5061/dryad.s7h44j16j",
+      "creators": [
+        "Walker, Jack",
+        "Umer, Jamal",
+        "Mohammadpour, Mahdi",
+        "Theodossiades, Stephanos",
+        "Bewsher, Stephen Richard",
+        "Offner, Guenter",
+        "Bansal, Hemant",
+        "Leighton, Michael",
+        "Braunstingl, Michael",
+        "Flesch, Heinz-Georg"
+      ],
+      "version": "2021-05-17; Zenodo record 4743140 revision 4",
+      "origin": "laboratory_experiment",
+      "license_id": "CC0-1.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/4743140",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve AISI 52100 AFM nanoindentation and scratch wear records",
+        "Assess observed load/pass/wear-volume quantities against Archard wear input contracts"
+      ],
+      "limitations": [
+        "Nanoscale AISI 52100 substrate and AFM tip condition are not pipeline sliding contacts",
+        "Figure panels contain distinct methods and test lengths; cannot pool rows as independent specimens",
+        "Removed volume, pile-up volume and degree of wear must remain separate",
+        "Sliding distance and matched hardness must be explicitly supported before native Archard use; no default hardness"
+      ],
+      "split_unit": "complete scratch/test condition and nanoindentation series; passes in one scratch are not independent trials",
+      "assets": [
+        {
+          "filename": "Asperity_Level_Characterisation_of_Abrasive_Wear_Using_Atomic_Force_Microscopy_.csv",
+          "url": "https://zenodo.org/api/records/4743140/files/Asperity_Level_Characterisation_of_Abrasive_Wear_Using_Atomic_Force_Microscopy_.csv/content",
+          "checksum": "md5:6f633b0e84c70d33b6d6d6a1d36d707c",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 99505
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "ahss_hydrogen_permeation",
+      "title": "Hydrogen permeation test on MS AHSS grade 1300",
+      "source": "https://data.mendeley.com/datasets/tnsgf7v76z/1",
+      "citation": "Macoretta, Giuseppe (2025), Hydrogen permeation test on MS AHSS grade 1300, Mendeley Data, V1, doi:10.17632/tnsgf7v76z.1",
+      "creators": [
+        "Giuseppe Macoretta"
+      ],
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/public-api/datasets/tnsgf7v76z/snapshot/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve electrochemical hydrogen permeation chronology and reported temperature",
+        "Assess declared current ramp, specimen thickness and missing concentration/trap/kinetic inputs against native hydrogen transport contracts"
+      ],
+      "limitations": [
+        "MS-AHSS grade 1300 laboratory sheet is not pipeline steel qualification",
+        "Cathodic current ramp is not a fixed lattice concentration or surface kinetic coefficient",
+        "Do not infer lattice diffusivity, trap equilibrium or kinetic coefficients from observed exit current without a declared inverse model"
+      ],
+      "split_unit": "complete specimen permeation experiment; ramp observations are a dependent history",
+      "assets": [
+        {
+          "filename": "Permeation_MS AHSS 1300.xlsx",
+          "url": "https://data.mendeley.com/public-files/datasets/tnsgf7v76z/files/64121556-2ab2-4aec-8a20-4bc51d48ad44/file_downloaded",
+          "checksum": "sha256:117d75a3f8329456732beada95b8f2be8bda688da88e6b8c7c83a9ee49698b3b",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 88885
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "ai4i",
+      "title": "AI4I 2020 Predictive Maintenance Dataset",
+      "source": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+      "citation": "AI4I 2020 Predictive Maintenance Dataset [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5HS5C",
+      "version": "UCI snapshot 2026-10-26",
+      "origin": "simulation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Equipment or process labels are not human failure opportunities.",
+        "Observe source clocks, units, modes and data-group boundaries; no annual leak frequency inferred."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "source.zip",
+          "url": "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip",
+          "checksum": "sha256:f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252",
+          "cache_paths": [
+            "data/raw/ai4i/source.zip",
+            "artifacts/raw/ai4i/source.zip"
+          ],
+          "checksum_origin": "previous_acquisition"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "andean_controlled_leaks",
+      "title": "Data and Code for: Detectability of controlled leaks in an Andean water transmission main: a field evaluation of changepoint methods on flow and pressure signals",
+      "source": "https://zenodo.org/records/23622401",
+      "citation": "Benavides-Muñoz, Holger (2026), Data and Code for: Detectability of controlled leaks in an Andean water transmission main: a field evaluation of changepoint methods on flow and pressure signals, doi:10.5281/zenodo.23622401",
+      "creators": [
+        "Benavides-Muñoz, Holger"
+      ],
+      "version": "Zenodo23622401 immutable record; metadata version label absent",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/23622401",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "controlled field leak campaign source review",
+        "chronological pressure/flow monitoring and independent campaign split"
+      ],
+      "limitations": [
+        "Thirty-second flow/pressure readings are not high-frequency paired arrival-time truth.",
+        "Original unit labels, clock/UTC, physical sensor roles, intervention intervals and sampling support require explicit review; no calibration/model coefficients are inferred.",
+        "Supplier R workflow and outputs are not executed or copied into the code package."
+      ],
+      "split_unit": "separate physical field campaign",
+      "assets": [
+        {
+          "filename": "Q_P_80_Leak1.xlsx",
+          "url": "https://zenodo.org/api/records/23622401/files/Q_P_80_Leak1.xlsx/content",
+          "checksum": "md5:8004a08bd76c84df9d7b301c51393be3",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 13561,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "Q_P_46_Leak2.xlsx",
+          "url": "https://zenodo.org/api/records/23622401/files/Q_P_46_Leak2.xlsx/content",
+          "checksum": "md5:ab676e087ba639f807b17ee207c9f98c",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 11503,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "bam_s355_charpy",
+      "title": "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations",
+      "source": "https://zenodo.org/records/6778336",
+      "citation": "Schilling, M., Glaubitz, S., Matzak, K., Rehmer, B., & Skrotzki, B. (2022). Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations (1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6778336",
+      "creators": [
+        "Schilling, Markus",
+        "Glaubitz, Steffen",
+        "Matzak, Kathrin",
+        "Rehmer, Birgit",
+        "Skrotzki, Birgit"
+      ],
+      "version": "1.0.0",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6778336",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve S355 Charpy specimen dimensions, test temperatures and absorbed energies",
+        "Assess whether declared chemistry and complete transition parameters support native material-quality contracts"
+      ],
+      "limitations": [
+        "One structural steel sheet is not independent validation of pipeline steels",
+        "Charpy observations are not fracture toughness or a universal transition curve",
+        "Vendor declaration and experimental measurements must retain separate origins; do not infer unreported chemistry or transition parameters"
+      ],
+      "split_unit": "physical Charpy specimen within one steel sheet / extraction direction; temperature rows are not independent material populations",
+      "assets": [
+        {
+          "filename": "charpy_test.zip",
+          "url": "https://zenodo.org/records/6778336/files/charpy_test.zip?download=1",
+          "checksum": "md5:d174fcac8acb997793226c38d74c7825",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 151256
+        },
+        {
+          "filename": "Declaration_of_performance_S355_1.0577.pdf",
+          "url": "https://zenodo.org/records/6778336/files/Declaration_of_performance_S355_1.0577.pdf?download=1",
+          "checksum": "md5:800fa842b2f1d869eb8cb095e563f797",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 135887
+        },
+        {
+          "filename": "test_piece_extraction_sketch.pdf",
+          "url": "https://zenodo.org/records/6778336/files/test_piece_extraction_sketch.pdf?download=1",
+          "checksum": "md5:c5538a50e55c7711602de9bb59cfa74d",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 1009187
+        },
+        {
+          "filename": "_steel_sheet_test_data_mission_abstract_content.pdf",
+          "url": "https://zenodo.org/records/6778336/files/_steel_sheet_test_data_mission_abstract_content.pdf?download=1",
+          "checksum": "md5:ffd721056f476f64873ac54e34e91bf7",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 235745
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "battledim",
+      "title": "Dataset of BattLeDIM: Battle of the Leakage Detection and Isolation Methods",
+      "source": "https://zenodo.org/records/4017659",
+      "citation": "Stelios G. Vrachimis; Demetrios G. Eliades; Riccardo Taormina; Avi Ostfeld; Zoran Kapelan; Shuming Liu; Marios S. Kyriakou; Pavlos Pavlou; Mengning Qiu; Marios Polycarpou; https://doi.org/10.5281/zenodo.4017659",
+      "version": "v1",
+      "origin": "simulation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/records/4017659",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "water_network_leak_detection",
+        "network_hydraulics",
+        "sensor_alignment"
+      ],
+      "limitations": [
+        "Hypothetical water network and simulated measurements; not real gas or hydrogen validation.",
+        "Leakage and demand truth are evaluation targets, never blind online model inputs.",
+        "Two years and shared network locations are not independent physical systems."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "2018_Leakages.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_Leakages.csv/content",
+          "checksum": "md5:c2c5fab90420da44f02e29775050abfe",
+          "bytes": 6234468,
+          "default": true
+        },
+        {
+          "filename": "L-TOWN.inp",
+          "url": "https://zenodo.org/api/records/4017659/files/L-TOWN.inp/content",
+          "checksum": "md5:bfbb16b8b463e0576200ba6ad360f68e",
+          "bytes": 412200,
+          "default": true
+        },
+        {
+          "filename": "2019_Leakages.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2019_Leakages.csv/content",
+          "checksum": "md5:e1f0a43683813a90a9fec8562dde599b",
+          "bytes": 10414660,
+          "default": true
+        },
+        {
+          "filename": "2018_SCADA_Levels.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_SCADA_Levels.csv/content",
+          "checksum": "md5:92a512d6749ddf66fd6d99f2bdde6cc4",
+          "bytes": 2721000,
+          "default": true
+        },
+        {
+          "filename": "2018_SCADA.xlsx",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_SCADA.xlsx/content",
+          "checksum": "md5:20c1224db8e379e31eba301d852e5cf7",
+          "bytes": 92174099,
+          "default": false
+        },
+        {
+          "filename": "2018_SCADA_Pressures.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_SCADA_Pressures.csv/content",
+          "checksum": "md5:d389d8541350c19ff0bfc6b80f246d35",
+          "bytes": 22593812,
+          "default": true
+        },
+        {
+          "filename": "2019_SCADA.xlsx",
+          "url": "https://zenodo.org/api/records/4017659/files/2019_SCADA.xlsx/content",
+          "checksum": "md5:80242d5f59d39d0ef2306e2351c28367",
+          "bytes": 92348474,
+          "default": false
+        },
+        {
+          "filename": "2019_SCADA_Levels.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2019_SCADA_Levels.csv/content",
+          "checksum": "md5:e5a8050bd38729e4b7648b9d52abd5b1",
+          "bytes": 2720780,
+          "default": true
+        },
+        {
+          "filename": "2019_SCADA_Flows.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2019_SCADA_Flows.csv/content",
+          "checksum": "md5:28fc99fdcbf80fcd26079e7fe602d6dc",
+          "bytes": 4130511,
+          "default": true
+        },
+        {
+          "filename": "2019_SCADA_Pressures.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2019_SCADA_Pressures.csv/content",
+          "checksum": "md5:5ea1e46d3f2f0a89a3f98d6fd39a851d",
+          "bytes": 22606417,
+          "default": true
+        },
+        {
+          "filename": "2018_SCADA_Demands.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_SCADA_Demands.csv/content",
+          "checksum": "md5:8803afcb1da2428de169237be3d911fb",
+          "bytes": 56499753,
+          "default": true
+        },
+        {
+          "filename": "README.txt",
+          "url": "https://zenodo.org/api/records/4017659/files/README.txt/content",
+          "checksum": "md5:7ad5cdc2eebfe78197a3412e80d07ddc",
+          "bytes": 5303,
+          "default": true
+        },
+        {
+          "filename": "2018_Fixed_Leakages_Report.txt",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_Fixed_Leakages_Report.txt/content",
+          "checksum": "md5:50b1f8b7ba0db5a19cedbb060c63d912",
+          "bytes": 317,
+          "default": true
+        },
+        {
+          "filename": "L-TOWN_Real.inp",
+          "url": "https://zenodo.org/api/records/4017659/files/L-TOWN_Real.inp/content",
+          "checksum": "md5:40fb38de25ed692a5ddd30e0f5fae332",
+          "bytes": 177151894,
+          "default": false
+        },
+        {
+          "filename": "dataset_configuration.yaml",
+          "url": "https://zenodo.org/api/records/4017659/files/dataset_configuration.yaml/content",
+          "checksum": "md5:48486401f5b4d0447023f5ce5d242c52",
+          "bytes": 3926,
+          "default": true
+        },
+        {
+          "filename": "2018_SCADA_Flows.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2018_SCADA_Flows.csv/content",
+          "checksum": "md5:d0602c06946b46287e956f007e4264ee",
+          "bytes": 4023420,
+          "default": true
+        },
+        {
+          "filename": "2019_SCADA_Demands.csv",
+          "url": "https://zenodo.org/api/records/4017659/files/2019_SCADA_Demands.csv/content",
+          "checksum": "md5:b3e111de397a1b06d33b8a9f13bc997d",
+          "bytes": 56499940,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Stelios G. Vrachimis",
+        "Demetrios G. Eliades",
+        "Riccardo Taormina",
+        "Avi Ostfeld",
+        "Zoran Kapelan",
+        "Shuming Liu",
+        "Marios S. Kyriakou",
+        "Pavlos Pavlou",
+        "Mengning Qiu",
+        "Marios Polycarpou"
+      ]
+    },
+    {
+      "id": "canada_pods",
+      "title": "Canadian pipeline occurrence register",
+      "source": "https://open.canada.ca/data/en/dataset/3f273148-3aaf-4194-b846-04fbf524e476",
+      "citation": "Transportation Safety Board of Canada, Pipeline Occurrence Database System",
+      "version": "monthly release observed 2026-10-28",
+      "origin": "incident_register",
+      "license_id": "OGL-Canada-2.0",
+      "rights_evidence_url": "https://open.canada.ca/data/en/dataset/3f273148-3aaf-4194-b846-04fbf524e476",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "incident_scenario_screening",
+        "reporting_coverage_review"
+      ],
+      "limitations": [
+        "Occurrence reports have changing reporting rules and incomplete investigation coverage.",
+        "Counts do not define an annual rate without compatible independent exposure.",
+        "Raw records and personal contact fields are excluded from source releases."
+      ],
+      "split_unit": "occurrence identifier and calendar period",
+      "assets": [
+        {
+          "filename": "PODSdb_MDOTW_VW_OCCURRENCE_PUBLIC.csv",
+          "url": "https://www.tsb.gc.ca/sites/default/files/stats/PODSdb_MDOTW_VW_OCCURRENCE_PUBLIC.csv"
+        },
+        {
+          "filename": "PODSdb_MDOTW_VW_INJURIES_PUBLIC.csv",
+          "url": "https://www.tsb.gc.ca/sites/default/files/stats/PODSdb_MDOTW_VW_INJURIES_PUBLIC.csv"
+        },
+        {
+          "filename": "MDOTW%20-%20PODS%20Master%20dataset%20inventory%20and%20dictionary%20-%20English.csv",
+          "url": "https://www.tsb.gc.ca/sites/default/files/2025-05/MDOTW%20-%20PODS%20Master%20dataset%20inventory%20and%20dictionary%20-%20English.csv"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "cmsx6_creep",
+      "title": "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6",
+      "source": "https://zenodo.org/records/14750432",
+      "citation": "Ávila Calderón, Luis A.; Schriever, Sina; Han, Ying; Olbricht, Juergen; Dolabella Portella, Pedro; Skrotzki, Birgit; https://doi.org/10.5281/zenodo.14750432",
+      "creators": [
+        "Luis A. Avila Calderon",
+        "Sina Schriever",
+        "Ying Han",
+        "Juergen Olbricht",
+        "Pedro Dolabella Portella",
+        "Birgit Skrotzki"
+      ],
+      "version": "1.1 per DOI registration; workbook filename v1.0; DOI 10.5281/zenodo.14750432",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.14750432",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Native specimen/censoring reader, condition-bounded lifetime fitting and reported constant-load trace exchange"
+      ],
+      "limitations": [
+        "One single-crystal CMSX-6 material condition and one test temperature; not steel pipeline or multi-temperature field qualification.",
+        "Initial nominal constant-load stress is not constant true stress. Retain physical specimen IDs, reported rupture versus administrative endpoints and processed-trace conventions.",
+        "Do not infer activation energy from one temperature or treat waveform rows as independent specimens.",
+        "Raw observations, transformed rows and supplier text are excluded from code release."
+      ],
+      "split_unit": "physical test specimen, material condition/orientation, load-control and temperature; waveform rows are not specimens",
+      "assets": [
+        {
+          "filename": "Vh5205_C-97.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-97.LIS/content",
+          "checksum": "md5:c9a1e0cf2430762634b8da84cfe10fdd",
+          "bytes": 360637,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-97.LIS"
+          ]
+        },
+        {
+          "filename": "2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx",
+          "url": "https://zenodo.org/api/records/14750432/files/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx/content",
+          "checksum": "md5:d59a1be8f22264cebe5abfd11ee7ce62",
+          "bytes": 290084,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-89.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-89.LIS/content",
+          "checksum": "md5:91815206431ce302eeab88b3cc3a8f5e",
+          "bytes": 341769,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-89.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-82.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-82.LIS/content",
+          "checksum": "md5:99c704e85e87597ab1f5041144285241",
+          "bytes": 401248,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-82.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-80.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-80.LIS/content",
+          "checksum": "md5:cb48a3a5ef62597e0e9f0b58c5fb144c",
+          "bytes": 321051,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-80.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-91.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-91.LIS/content",
+          "checksum": "md5:89a2e4e8657f19b687a65e90dea16725",
+          "bytes": 565537,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-91.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-99.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-99.LIS/content",
+          "checksum": "md5:56d3b4db93dccd821944dc44fcc5d288",
+          "bytes": 382882,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-99.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-94.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-94.LIS/content",
+          "checksum": "md5:26b49c8c989aeffa5cc4a49c8d37ab82",
+          "bytes": 444859,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-94.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-85.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-85.LIS/content",
+          "checksum": "md5:80f392962b757be4a0e3af5727cb449f",
+          "bytes": 462783,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-85.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-98.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-98.LIS/content",
+          "checksum": "md5:7ac2bdd5961562f26bf2f884636c8190",
+          "bytes": 543744,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-98.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-78.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-78.LIS/content",
+          "checksum": "md5:610326ba69e38a3287d20b173e1629dd",
+          "bytes": 347095,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-78.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-95.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-95.LIS/content",
+          "checksum": "md5:3df58f302a589f6ab334cb66b7880f84",
+          "bytes": 457722,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-95.LIS"
+          ]
+        },
+        {
+          "filename": "Vh5205_C-81.LIS",
+          "url": "https://zenodo.org/api/records/14750432/files/Vh5205_C-81.LIS/content",
+          "checksum": "md5:cddbb74a27ad8b2f1f42b02363fe528f",
+          "bytes": 551167,
+          "default": true,
+          "cache_paths": [
+            "data/raw/cmsx6-creep/Vh5205_C-81.LIS"
+          ]
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "commercial_synthetic",
+      "title": "Commercial corrosion sample",
+      "source": "https://huggingface.co/datasets/xpertsystems/oil027-sample",
+      "citation": "Commercial corrosion sample",
+      "version": "reviewed candidate 2026-10-26",
+      "origin": "mixed_compilation",
+      "license_id": "CC-BY-NC-4.0",
+      "rights_evidence_url": "https://huggingface.co/datasets/xpertsystems/oil027-sample",
+      "rights_review": "unresolved",
+      "acquisition": "metadata_only",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Noncommercial terms do not meet the intended unrestricted reuse policy."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "copper_mechanical",
+      "title": "KupferDigital mechanical testing datasets: Brinell hardness, Vickers hardness, and tensile tests",
+      "source": "https://zenodo.org/records/10820299",
+      "citation": "Hossein Beygi Nasrabadi; Felix Bauer; Ladji Tikana; Patrick Uhlemann; Steffen Thärig; Birgit Rehmer; Birgit Skrotzki; DOI 10.5281/zenodo.10820299; version 2",
+      "creators": [
+        "Hossein Beygi Nasrabadi",
+        "Felix Bauer",
+        "Ladji Tikana",
+        "Patrick Uhlemann",
+        "Steffen Thärig",
+        "Birgit Rehmer",
+        "Birgit Skrotzki"
+      ],
+      "version": "2; DOI 10.5281/zenodo.10820299",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.10820299",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserved copper-alloy specimen metadata, indentation geometry and tensile measurement exchange with the original material owner."
+      ],
+      "limitations": [
+        "Copper-alloy laboratory observations are not steel pipeline, fastener or weld qualification.",
+        "Retain raw versus secondary data, specimen/condition/test identities and missing geometry, clock, gauge and procedure metadata.",
+        "Do not infer cyclic constitutive coefficients, necking validity, material acceptance or failure probabilities from hardness or monotonic tensile observations.",
+        "Raw records, supplier code and transformed observation rows remain outside code distributions."
+      ],
+      "split_unit": "physical specimen, material condition and test acquisition; indentations and within-test rows remain grouped",
+      "assets": [
+        {
+          "filename": "Files.zip",
+          "url": "https://zenodo.org/api/records/10820299/files/Files.zip/content",
+          "checksum": "md5:a6808ba63957e6724c0ab983ae67a9d6",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 1608805,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "copper_wire_corrosion",
+      "title": "Copper Wire Corrosion and Meteorological Conditions in a Hangar",
+      "source": "https://zenodo.org/records/10640939",
+      "citation": "Kuchař, M., & Fišer, J. (2024). Copper Wire Corrosion and Meteorological Conditions in a Hangar (0.2). Zenodo. https://doi.org/10.5281/zenodo.10640939",
+      "creators": [
+        "Michal Kuchař",
+        "Jaromír Fišer"
+      ],
+      "version": "0.2",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/10640939",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve and inspect hourly copper sensor corrosion and environmental chronology",
+        "Assess explicit time/depth applicability to corrosion power-law input contracts"
+      ],
+      "limitations": [
+        "Copper resistance sensor at one Prague hangar is not steel pipeline or aluminum airframe coupon depth",
+        "One location and observation history: hourly rows are not independent specimens",
+        "Exposure zero, units, missingness and observed depth increments require file and primary-method review before fitting",
+        "No pit block maxima or known flaw hit/miss/blank trials; Gumbel and POD need separate data"
+      ],
+      "split_unit": "one sensor history / site; chronological assessment within it is not independent validation",
+      "assets": [
+        {
+          "filename": "procraft_corrosion_kbely_data_v02.csv",
+          "url": "https://zenodo.org/api/records/10640939/files/procraft_corrosion_kbely_data_v02.csv/content",
+          "checksum": "md5:b168dba29ba1e01196d31e4a440dea2c",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 2545534
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "corrosion_images",
+      "title": "A Dataset for Corrosion Defects in Pipelines",
+      "source": "https://zenodo.org/records/10809418",
+      "citation": "Aljalaud, Faten; Alohali, Yousef; https://doi.org/10.5281/zenodo.10809418",
+      "version": "1.0",
+      "origin": "image_collection",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/records/10809418",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "inspection_image_research"
+      ],
+      "limitations": [
+        "Images do not supply calibrated wall thickness, growth rate or field failure exposure."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "data.zip",
+          "url": "https://zenodo.org/api/records/10809418/files/data.zip/content",
+          "checksum": "md5:d630c0c73a87a4b23846e7622f98a39e",
+          "bytes": 3017772,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Aljalaud, Faten",
+        "Alohali, Yousef"
+      ]
+    },
+    {
+      "id": "coupled_tank",
+      "title": "CEFET-MG coupled water tank experiments",
+      "source": "https://doi.org/10.5281/zenodo.19856119",
+      "citation": "Guilherme Silva, Marcela Coelho and Valter Leite (2026), coupled-tank experimental data, v1.0.0, Zenodo, DOI 10.5281/zenodo.19856119.",
+      "creators": [
+        "Guilherme Silva",
+        "Marcela Coelho",
+        "Valter Leite"
+      ],
+      "version": "v1.0.0; record 19856119",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/19856119",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Read repeated water-level experiments preserving units, run identity and clock",
+        "Assess tank geometry/inventory and actuator-command versus measured-flow requirements"
+      ],
+      "limitations": [
+        "Source describes measured tank levels and pump commands; inspect native unit, geometry and datum before computing physical inventory.",
+        "Repeated experiments and full-collection records must not be mixed into independent random-row splits.",
+        "Pump percentage is a command, not calibrated volumetric flow; water temperature, pressure and geometry may require additional evidence.",
+        "The operational-parameter JSON is truncated and contains mm tokens for h3/h4 while README documents h1/h2 in cm; no automatic reconciliation.",
+        "Released level tables have 81 rows; command table has 80 rows and the final unmatched command stays missing.",
+        "Nominal 200-liter capacity does not determine internal diameter/height or bottom-referenced level mapping; physical inventory remains unresolved."
+      ],
+      "split_unit": "complete experiment/run; keep full-collection and derived segments grouped",
+      "assets": [
+        {
+          "filename": "README.md",
+          "url": "https://zenodo.org/api/records/19856119/files/README.md/content",
+          "checksum": "md5:3831e38b7ad09e7cc05035dba7f556b6",
+          "bytes": 2808,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "operational_parameters.json",
+          "url": "https://zenodo.org/api/records/19856119/files/operational_parameters.json/content",
+          "checksum": "md5:3b638b7103bb5cb8a3bb03bc676dea47",
+          "bytes": 134,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "h2.csv",
+          "url": "https://zenodo.org/api/records/19856119/files/h2.csv/content",
+          "checksum": "md5:98a8bfbbfc57b37b5233e8a8f5c8b9d5",
+          "bytes": 13441,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "h1.csv",
+          "url": "https://zenodo.org/api/records/19856119/files/h1.csv/content",
+          "checksum": "md5:978d5f00e2520180c879656a1393aea6",
+          "bytes": 13559,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "complete_data.csv",
+          "url": "https://zenodo.org/api/records/19856119/files/complete_data.csv/content",
+          "checksum": "md5:6731ff9410c084fb0cd3c02f1ac73409",
+          "bytes": 254210,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "U.csv",
+          "url": "https://zenodo.org/api/records/19856119/files/U.csv/content",
+          "checksum": "md5:b3ce5b3db14356df6dbd8b365044ae1e",
+          "bytes": 2759,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "crack_arrest",
+      "title": "C1 and C2 raw crack-arrest machine tests",
+      "source": "https://doi.org/10.17632/g69875w65c.1",
+      "citation": "Gao, Puyi (2023), Raw test data of C1 and C2 crack arrest toughness test, Mendeley Data V1, DOI 10.17632/g69875w65c.1",
+      "creators": [
+        "Puyi Gao"
+      ],
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/g69875w65c/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "source-preserving native crack-arrest reader exchange",
+        "evidence-readiness review for fracture modules"
+      ],
+      "limitations": [
+        "Raw force/displacement/cycle channels and filename-derived temperatures require specimen geometry, crack length, event reduction and validity review.",
+        "Crack-arrest measurements are not automatically crack-initiation toughness, service lower bounds, growth calibration, FAD curves or failure probabilities.",
+        "One file has a complete-header quoting defect; the native reader identifies this representation while numerical values and signs must be preserved.",
+        "Archive SHA-256 comes from prior acquisition, not a publisher checksum. Raw and transformed observations are excluded from code release."
+      ],
+      "split_unit": "physical specimen, test family, loading/temperature and source identity; channels and rows are not specimens",
+      "assets": [
+        {
+          "filename": "g69875w65c-1.zip",
+          "url": "https://data.mendeley.com/public-api/zip/g69875w65c/download/1",
+          "checksum": "sha256:233f70de5d51148b93eab68654297d4ac4aa782864a5c7e43a3520be8ca54bde",
+          "checksum_origin": "previous_acquisition",
+          "bytes": 943565,
+          "default": true,
+          "cache_paths": [
+            "data/raw/crack-arrest-c1-c2/g69875w65c-1.zip"
+          ]
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "cryogenic_ln2_boiling",
+      "title": "Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling",
+      "source": "https://zenodo.org/records/19792024",
+      "citation": "Reza, Mohammad S; Ignatoff, Philip; Almacddissi, Jimmy; Hartwig, Jason; Chung, Jacob; Song, Youngsup (2026), Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling, doi:10.5281/zenodo.19792024",
+      "creators": [
+        "Reza, Mohammad S",
+        "Ignatoff, Philip",
+        "Almacddissi, Jimmy",
+        "Hartwig, Jason",
+        "Chung, Jacob",
+        "Song, Youngsup"
+      ],
+      "version": "Zenodo record 19792024; version label absent in API",
+      "origin": "mixed_compilation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.19792024",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "source meaning and unit/clock review",
+        "conditional equipment-data linkage"
+      ],
+      "limitations": [
+        "LN2 experiments and processed ANSYS spreading corrections remain distinct; no transfer to hydrogen kinetics.",
+        "Raw pressure/time files and corrected curves have separate observation support and uncertainty meanings.",
+        "Third-party comparison columns in the corrected-curve workbook are excluded from model calibration and public numeric aggregates; dataset licensing does not establish new rights in those cited comparisons."
+      ],
+      "split_unit": "physical experiment or chronological operating period",
+      "assets": [
+        {
+          "filename": "All boiling curves_after ANSYS.xlsx",
+          "url": "https://zenodo.org/api/records/19792024/files/All%20boiling%20curves_after%20ANSYS.xlsx/content",
+          "checksum": "md5:b479091886174b1dd6706c4434766449",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 18484,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "LN2 Press and temp_1g experiment.xlsx",
+          "url": "https://zenodo.org/api/records/19792024/files/LN2%20Press%20and%20temp_1g%20experiment.xlsx/content",
+          "checksum": "md5:00b15a25cd0959805faa65f52e210902",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 25619507,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "Uncertainty Data_All curves.xlsx",
+          "url": "https://zenodo.org/api/records/19792024/files/Uncertainty%20Data_All%20curves.xlsx/content",
+          "checksum": "md5:e95154c3e59206aed9c4915c885b75cb",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 20264,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "LN2 Press and temp_ug experiments.xlsx",
+          "url": "https://zenodo.org/api/records/19792024/files/LN2%20Press%20and%20temp_ug%20experiments.xlsx/content",
+          "checksum": "md5:a8980e2b51080656864880ec83f5a070",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 16408114,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "Spreading Coefficient_All curves.xlsx",
+          "url": "https://zenodo.org/api/records/19792024/files/Spreading%20Coefficient_All%20curves.xlsx/content",
+          "checksum": "md5:0f91a41ef7fa57d85eeba193f25b8b09",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 10300,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "ebw_thermal",
+      "title": "Dataset on thermal cycles and cooling times during electron beam welding of high-strength structural Steels",
+      "source": "https://data.mendeley.com/datasets/c7d9mt9h9x/1",
+      "citation": "Raghawendra Pratap Singh Sisodia; Piotr Sliwinski; Marek St. Weglowski; https://doi.org/10.17632/c7d9mt9h9x.1",
+      "creators": [
+        "Raghawendra Pratap Singh Sisodia",
+        "Piotr Sliwinski",
+        "Marek St. Weglowski"
+      ],
+      "version": "1; DOI 10.17632/c7d9mt9h9x.1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/c7d9mt9h9x/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Thermocouple histories, explicit cooling-branch selection and source-reported cooling-time comparison through the original owner model"
+      ],
+      "limitations": [
+        "Five physical electron-beam weld experiments with seven thermocouple traces; not pressure-pipeline weld procedure or metallurgical qualification.",
+        "Retain source sensor distances, heating/reheating/noise and both temperature crossings. Never reconstruct a trace from the cooling-time filename label.",
+        "Source filename S1300Q and sheet S1300QL identifiers are preserved without silently resolving the material label.",
+        "Original/derived sample rows and source workbooks stay outside code releases."
+      ],
+      "split_unit": "physical welding experiment, steel condition and sensor location; sensor traces and time rows from the same experiment remain grouped",
+      "assets": [
+        {
+          "filename": "EBW_ThermalCycle_CoolingTime_Data_HSSS.zip",
+          "url": "https://data.mendeley.com/public-files/datasets/c7d9mt9h9x/files/5b7fc026-439f-432d-9450-23ce751e5983/file_downloaded",
+          "checksum": "sha256:329063f7b187e7df6a245f7fb868972d6a24b7f9ad6fdffc336a270dc2e6be5b",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 368314,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "elvhys_bleve",
+      "title": "ELVHYS 4.3.1 - BLEVE tests with a shock tube filled with LH2 in an A2 vessel",
+      "source": "https://doi.org/10.18710/M5LOLM",
+      "citation": "Torres de Ritter, Eugenio; Friedrich, Andreas; Ferraro Porcel de Peralta, Manuel Ignacio (2026), ELVHYS 4.3.1, DataverseNO V1, doi:10.18710/M5LOLM",
+      "creators": [
+        "Eugenio Torres de Ritter",
+        "Andreas Friedrich",
+        "Manuel Ignacio Ferraro Porcel de Peralta"
+      ],
+      "version": "1.0 (published 2026-10-21)",
+      "origin": "laboratory_experiment",
+      "license_id": "CC0-1.0",
+      "rights_evidence_url": "https://dataverse.no/dataset.xhtml?persistentId=doi:10.18710/M5LOLM",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "cryogenic hydrogen source/transient experimental evidence",
+        "pressure/temperature time alignment"
+      ],
+      "limitations": [
+        "Selected numeric/text assets only; videos are not acquired.",
+        "Shock-tube membrane rupture experiments are not ordinary steady pipeline operation.",
+        "Sensor calibration, references, bandwidth and experimental groups must be reviewed before model validation.",
+        "No human-error probability or annual incident frequency is inferred."
+      ],
+      "split_unit": "independent experiment and membrane configuration",
+      "assets": [
+        {
+          "filename": "00_README_ELVHYS_WP_4_3_1.txt",
+          "url": "https://dataverse.no/api/access/datafile/302501?format=original",
+          "bytes": 17250,
+          "checksum": "md5:1063c13c1458a30db8e2a8740d3850c0",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT011PRESF20260727.csv",
+          "url": "https://dataverse.no/api/access/datafile/301257?format=original",
+          "bytes": 37064619,
+          "checksum": "md5:bcdb5d2e3f95a3d75d4ffa0c74bb817c",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT011PRESS20260727.csv",
+          "url": "https://dataverse.no/api/access/datafile/301261?format=original",
+          "bytes": 4054491,
+          "checksum": "md5:c373db21c5e0867ca9ae43f7ece19909",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT011TEMP20260727.csv",
+          "url": "https://dataverse.no/api/access/datafile/301258?format=original",
+          "bytes": 1566224,
+          "checksum": "md5:053513ec397fd7ab897a30ee5368d969",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT021PRESF20260722.csv",
+          "url": "https://dataverse.no/api/access/datafile/301220?format=original",
+          "bytes": 36849076,
+          "checksum": "md5:05a21f2478ee5db49057f42981426f1b",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT021PRESS20260722.csv",
+          "url": "https://dataverse.no/api/access/datafile/301227?format=original",
+          "bytes": 8330984,
+          "checksum": "md5:1b72dcdac11518826cf5f3794fa0e5d7",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT021TEMP20260722.csv",
+          "url": "https://dataverse.no/api/access/datafile/301222?format=original",
+          "bytes": 5983329,
+          "checksum": "md5:c050086ef05f78ba085b297fe65f30d2",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT031PRESF20260723.csv",
+          "url": "https://dataverse.no/api/access/datafile/301233?format=original",
+          "bytes": 36986230,
+          "checksum": "md5:d1c4e006e03e36a206b2754ee647d1bd",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT031PRESF20260728.csv",
+          "url": "https://dataverse.no/api/access/datafile/301279?format=original",
+          "bytes": 36433929,
+          "checksum": "md5:0bca4dbbf3098d4837bdc759d2b6748c",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT031PRESS20260723.csv",
+          "url": "https://dataverse.no/api/access/datafile/301232?format=original",
+          "bytes": 4300597,
+          "checksum": "md5:ff3b59992ab77be72800494a4552871a",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT031PRESS20260728.csv",
+          "url": "https://dataverse.no/api/access/datafile/301274?format=original",
+          "bytes": 4780561,
+          "checksum": "md5:05d0fb720c85e4cb48272f5389a013a1",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT031TEMP20260723.csv",
+          "url": "https://dataverse.no/api/access/datafile/301235?format=original",
+          "bytes": 3079041,
+          "checksum": "md5:f963afe7ebaff71d357ef57cfff8ecfd",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT031TEMP20260728.csv",
+          "url": "https://dataverse.no/api/access/datafile/301272?format=original",
+          "bytes": 2038839,
+          "checksum": "md5:7ed4fcbc63ff53cba629235ac2292294",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESF20260724.csv",
+          "url": "https://dataverse.no/api/access/datafile/301241?format=original",
+          "bytes": 36785354,
+          "checksum": "md5:fb2ade804239e6644fada0acdb6090b4",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESF20260729.csv",
+          "url": "https://dataverse.no/api/access/datafile/301284?format=original",
+          "bytes": 36731209,
+          "checksum": "md5:5877d20833902d9467b3d021ed1a320e",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESF20260730.csv",
+          "url": "https://dataverse.no/api/access/datafile/301302?format=original",
+          "bytes": 36665238,
+          "checksum": "md5:2f0ba484a8a0460ff7b2565bbed48356",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESF20260731.csv",
+          "url": "https://dataverse.no/api/access/datafile/301306?format=original",
+          "bytes": 36727633,
+          "checksum": "md5:127ad82d0ca47bbe215941f4f881d941",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESS20260724.csv",
+          "url": "https://dataverse.no/api/access/datafile/301244?format=original",
+          "bytes": 5183370,
+          "checksum": "md5:5098995d7e8408914e2d4305fb0d87c6",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESS20260729.csv",
+          "url": "https://dataverse.no/api/access/datafile/301283?format=original",
+          "bytes": 3949303,
+          "checksum": "md5:e206f6efb0225650f196cd816f1bbe44",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESS20260730.csv",
+          "url": "https://dataverse.no/api/access/datafile/301299?format=original",
+          "bytes": 4812890,
+          "checksum": "md5:bc8445bdb3d6283e22c51624c0d5a60d",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041PRESS20260731.csv",
+          "url": "https://dataverse.no/api/access/datafile/301308?format=original",
+          "bytes": 3863050,
+          "checksum": "md5:5f980982bfe1e379371e381f5be5312d",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041TEMP20260724.csv",
+          "url": "https://dataverse.no/api/access/datafile/301243?format=original",
+          "bytes": 3637262,
+          "checksum": "md5:9ffa3209e15abac3c008b2eb499f1461",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041TEMP20260729.csv",
+          "url": "https://dataverse.no/api/access/datafile/301292?format=original",
+          "bytes": 1615823,
+          "checksum": "md5:125ce804eddf18e058f69e0bc7c97fe4",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041TEMP20260731.csv",
+          "url": "https://dataverse.no/api/access/datafile/301312?format=original",
+          "bytes": 1461388,
+          "checksum": "md5:acd2841c243a148aba317bfa509e578e",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT041TEMPL20260730.csv",
+          "url": "https://dataverse.no/api/access/datafile/301303?format=original",
+          "bytes": 1258131,
+          "checksum": "md5:d30ec23017e94c23bf7ac79242d372c5",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT111PRESF20260805.csv",
+          "url": "https://dataverse.no/api/access/datafile/301326?format=original",
+          "bytes": 35775333,
+          "checksum": "md5:d0133ac30001cb3e554a478d26130a55",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT111PRESS20260805.csv",
+          "url": "https://dataverse.no/api/access/datafile/301320?format=original",
+          "bytes": 5327602,
+          "checksum": "md5:dcd4bd38a4e5437d1cf68db957caae80",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT111TEMP20260805.csv",
+          "url": "https://dataverse.no/api/access/datafile/301325?format=original",
+          "bytes": 3168580,
+          "checksum": "md5:5b9964b3484f03a99b37eede4d34e575",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT132PRESF20260805.csv",
+          "url": "https://dataverse.no/api/access/datafile/301335?format=original",
+          "bytes": 36021038,
+          "checksum": "md5:4d59ae3965fe50d412edfd145d2a22f8",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT132PRESS20260805.csv",
+          "url": "https://dataverse.no/api/access/datafile/301330?format=original",
+          "bytes": 4565757,
+          "checksum": "md5:cdf740f717dee18796dada7c95ac1c1a",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT132TEMP20260805.csv",
+          "url": "https://dataverse.no/api/access/datafile/301337?format=original",
+          "bytes": 2493652,
+          "checksum": "md5:1b7b493e535d31a67e2d4c7ef17e6c61",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT141MICR20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301348?format=original",
+          "bytes": 4378575,
+          "checksum": "md5:5df52e0d90826842cccdb652487f9b7e",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT141PRESF20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301339?format=original",
+          "bytes": 36413755,
+          "checksum": "md5:0f78764a2d9289fb1b053bb0c010831a",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT141PRESS20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301343?format=original",
+          "bytes": 4114265,
+          "checksum": "md5:5129e814f26c60825a0db36efd31db56",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT141TEMP20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301346?format=original",
+          "bytes": 2788948,
+          "checksum": "md5:0e5d272d1bbe2d0e73cdced8f956ad5b",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT142MICR20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301357?format=original",
+          "bytes": 4402329,
+          "checksum": "md5:9ffca6d2d0e266bd42fac6217295dd61",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT142PRESF20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301361?format=original",
+          "bytes": 36031028,
+          "checksum": "md5:dacab3dc0cc4613cd48f942a25e5ea5a",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT142PRESS20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301350?format=original",
+          "bytes": 3754102,
+          "checksum": "md5:67ab154d575381d742d5959f1840029f",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KIT142TEMP20260806.csv",
+          "url": "https://dataverse.no/api/access/datafile/301352?format=original",
+          "bytes": 1193967,
+          "checksum": "md5:fa42d7202efa2cccac6b122ea011f903",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ELE431KITMETA.csv",
+          "url": "https://dataverse.no/api/access/datafile/301171?format=original",
+          "bytes": 4893,
+          "checksum": "md5:e796053756c58b7ed284fd7c2a42a5cc",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ObservationELE431KIT011.txt",
+          "url": "https://dataverse.no/api/access/datafile/301259?format=original",
+          "bytes": 128,
+          "checksum": "md5:fcb728e9e62bf0cf7d78677704ba6d9e",
+          "checksum_origin": "publisher_metadata"
+        },
+        {
+          "filename": "ObservationELE431KIT041.txt",
+          "url": "https://dataverse.no/api/access/datafile/301297?format=original",
+          "bytes": 120,
+          "checksum": "md5:0b04f2257b9a56cd95625eb05eb6abcf",
+          "checksum_origin": "publisher_metadata"
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "emue_sonic_nozzle_calibration",
+      "title": "EMUE-D4-3-QuantifyUncertaintiesInCalibration",
+      "source": "https://zenodo.org/records/4016916",
+      "citation": "Martens, Steffen; Klauenberg, Katy; Mickan, Bodo; Yardin, Catherine; Fischer, Nicolas; Elster, Clemens (2020), EMUE-D4-3-QuantifyUncertaintiesInCalibration, Version1.0, Zenodo, doi:10.5281/zenodo.4016916",
+      "creators": [
+        "Steffen Martens",
+        "Katy Klauenberg",
+        "Bodo Mickan",
+        "Catherine Yardin",
+        "Nicolas Fischer",
+        "Clemens Elster"
+      ],
+      "version": "1.0; Zenodo record4016916",
+      "origin": "mixed_compilation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.4016916",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve thirty nozzle measurement estimates and supplied Type A standard uncertainties",
+        "Fit source Monte Carlo intermediate estimates using the complete correlated sixty-dimensional covariance"
+      ],
+      "limitations": [
+        "Intermediate x/y estimates and full covariance are publisher Monte Carlo propagation of laboratory observations, not raw independently measured sensor/reference pairs",
+        "Type A primitive CSV uncertainties are not total uncertainties and cannot replace source joint covariance",
+        "One thirty-point campaign is not independent run validation; no automatic observation-time or deployment inference",
+        "Original XLSX dimensions declare A1:A1 while actual worksheet XML contains complete data; preserve declared and observed extents",
+        "No full thermodynamic/choked-nozzle or field accuracy qualification from calibration-curve fitting"
+      ],
+      "split_unit": "whole thirty-point laboratory campaign with shared-input covariance; no automatic random point split",
+      "assets": [
+        {
+          "filename": "EMUE-D4-3-SonicNozzles.zip",
+          "url": "https://zenodo.org/api/records/4016916/files/EMUE-D4-3-SonicNozzles.zip/content",
+          "bytes": 1406894,
+          "checksum": "md5:ffc39a245e2e4361a3337be63a0b21db",
+          "checksum_origin": "publisher_metadata",
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "fastener_clamping",
+      "title": "Dataset on force and torque for fastener clamping",
+      "source": "https://data.mendeley.com/datasets/jffwrb4pcd/4",
+      "citation": "Farias, Adalto; Leonardi, Fabrizio; Delijaicov, Sérgio (2023), Dataset on force and torque for fastener clamping, Mendeley Data, V4, doi: 10.17632/jffwrb4pcd.4",
+      "creators": [
+        "Adalto Farias",
+        "Fabrizio Leonardi",
+        "Sérgio Delijaicov"
+      ],
+      "version": "v4; DOI 10.17632/jffwrb4pcd.4",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/jffwrb4pcd/4",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "torque_and_clamping_force_source_review"
+      ],
+      "limitations": [
+        "Selected 48 torque and 48 force CSVs and six DOE metadata tables; plots excluded.",
+        "Time/sensor synchronization, units and per-test geometry must be confirmed before preload model application.",
+        "Stick-slip dynamic clamping data must not be treated as a standard torque table, independent validation or prescribed nut factor."
+      ],
+      "split_unit": "physical tightening trial, with shared DOE conditions and repeats preserved",
+      "assets": [
+        {
+          "filename": "raw_data_torque_test_01t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/dc474011-cfdf-4aaf-8e13-ef2f9473b579/file_downloaded",
+          "checksum": "sha256:4d274ebaf0199ed8c8df33f04c2de66649204f6edeb7e770f9084261e36cac24",
+          "bytes": 11670,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_02t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/e2f7d829-3987-4fa4-97a4-06ea2422a9d6/file_downloaded",
+          "checksum": "sha256:84f4040a09ea4a107749887769c86ffd0c4239d2e754b0c6b6bb7429aed08e35",
+          "bytes": 14068,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_03t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/a923db49-3df0-4609-8c40-38f360a6687d/file_downloaded",
+          "checksum": "sha256:1e9b11da581b38a11f806784883909e9d353079de24ab4ee5fb25a5ac8cf901b",
+          "bytes": 22016,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_04t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/cb6ae111-7b98-44b5-9438-686610336d10/file_downloaded",
+          "checksum": "sha256:f7de6caa599223b1645dd982598ac95eab4555116e3c7cdb32e004ba2c2b63db",
+          "bytes": 22063,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_05t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/872aa221-1cca-4022-aa45-35c43effe386/file_downloaded",
+          "checksum": "sha256:759abde143150443fc3e6e12e73c9723f3010b8fc2a42009548b9109d97cbf32",
+          "bytes": 22387,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_06t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/87062355-b799-4bbd-8a8d-7a0c40778277/file_downloaded",
+          "checksum": "sha256:5090d7c499b24b8aa777cd537f389c133e6962fb3428c77e57a01a577d6585ba",
+          "bytes": 16277,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_07t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/9ef13dfa-119c-4369-a945-4e26b1ca0177/file_downloaded",
+          "checksum": "sha256:87984cf4d53be0e736ae07f433d8e74d48cd6f48762cef8394247abc89eb1b16",
+          "bytes": 22385,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_08t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/5c1e58df-aec1-4318-914e-5d7cdb6ebe65/file_downloaded",
+          "checksum": "sha256:6305012488ad0b54a73307b87057f2578c3dd6059ce2c1c94a41f96cd73fdfcf",
+          "bytes": 22498,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_09t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/291bcf69-4a0f-4228-974a-b511319aeb7c/file_downloaded",
+          "checksum": "sha256:6c33c116c43bdc22a39195cb29fc51a8738be66176af78a48651be729aba807b",
+          "bytes": 17871,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_10t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/de635331-b093-4eec-8583-e5b472e78c2d/file_downloaded",
+          "checksum": "sha256:7c6b20b25c0a298d14421516e9e82ef755b37e971b10715097244b31c9cfa3ad",
+          "bytes": 22459,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_11t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/b840541e-f27a-4cb8-bb90-80dcc61cf380/file_downloaded",
+          "checksum": "sha256:4cba684efe32ddcbf59efaebe9870610290febbd62cc901aa85184e06198876e",
+          "bytes": 22209,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_12t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/d0f2f27b-7b05-462a-af17-1253beb90413/file_downloaded",
+          "checksum": "sha256:2ca1635bb61bbb4849242989cb1c1686cd529ac40502513b515b6506cc43b01f",
+          "bytes": 22597,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_13t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/cc0f874f-ea1d-4fcf-a151-5f62cef97984/file_downloaded",
+          "checksum": "sha256:06eeee0ff87211971a35229876ec8bfc3a60886b73a225f02936752b7912d6a1",
+          "bytes": 22217,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_14t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/8d266d99-2e97-4d8c-821e-663138b5607c/file_downloaded",
+          "checksum": "sha256:46670e5ecfb4651325e9108fbcae180341e38dcf01b2e4be095df5ae9a6cf6f6",
+          "bytes": 22401,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_15t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/b9c84b57-8cb7-4e2a-90c1-efc2c8032cc6/file_downloaded",
+          "checksum": "sha256:a346cc843822be8fb3570a30169f9091d29e91f18ff267abf3ed800b22d691d8",
+          "bytes": 22296,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_16t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/2acd4a47-dee0-431a-a44a-b2a399959e03/file_downloaded",
+          "checksum": "sha256:acaa75d237276ce2d41785244091c4abe2571ac5e9d4c7764c68059ce54587b6",
+          "bytes": 14770,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_17t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/e7261555-dad1-4322-8838-d365bfeee0d7/file_downloaded",
+          "checksum": "sha256:0adad09097c0ea652c5fb4b0e34a44f2fbec700128e0d855b5e5db6872c1568a",
+          "bytes": 17429,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_18t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/4c84bea1-b8f1-441d-9292-4e7c8e546b98/file_downloaded",
+          "checksum": "sha256:27cc8a131982c4a86d6cba325f72a1a54a0605ecb656a7dfde5c73ffd86b6077",
+          "bytes": 18088,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_19t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/56b43a70-6423-4571-b539-b9787c226637/file_downloaded",
+          "checksum": "sha256:c66ba05ea91f6696032ea7309088ead6936cc95a793a6533db435f1e2f737d5a",
+          "bytes": 17921,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_20t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/aab9ff0e-60e0-4123-8299-1a07f2d3347d/file_downloaded",
+          "checksum": "sha256:7afbd3db859c7917ef76a999b5fe70cd57ecdf97c5780032b2632b80432b85c6",
+          "bytes": 17895,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_21t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/457b2386-b7a2-4e4a-9c4a-b34cc7d33404/file_downloaded",
+          "checksum": "sha256:eab82b4280adedeb62ab9b481b374d1a6be195152b3625c9f2d741095871a1a1",
+          "bytes": 17696,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_22t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/8bfc9b43-7612-4b83-9c55-1c029c969e62/file_downloaded",
+          "checksum": "sha256:a8fcecdb2cc9c8ae499a7074e9b60cca25df5a2a454a626e21a87f7c056b1853",
+          "bytes": 17949,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_23t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/0d055e3c-bb66-489f-9f2d-4a1cea64419a/file_downloaded",
+          "checksum": "sha256:6037345df51c1788caae1b9e90a38c8349a302032a5413a782f8e0bee67b5eac",
+          "bytes": 17923,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_24t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/61eb31b7-b337-4e58-bdec-f9af556ae883/file_downloaded",
+          "checksum": "sha256:efb2f30199ea11647cecbeb52d6b90beeeeee4c5751bb14b1142ed25240bf640",
+          "bytes": 5466,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_25t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/a88d08eb-d01f-4103-bb90-b6ee2f3c2d96/file_downloaded",
+          "checksum": "sha256:2558b7231400452b3c30077b656ddaec2dcc886fc094bf9e804db679c52cf09e",
+          "bytes": 5143,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_26t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/09811904-8f36-4c26-8993-fae3a02a8dea/file_downloaded",
+          "checksum": "sha256:5d0cbf4585dce14b46970df423ef2689fe49143f7325c7396ccf7b23bf241e67",
+          "bytes": 7844,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_27t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/3cc46241-c82e-45c9-8d28-75a367cc6a06/file_downloaded",
+          "checksum": "sha256:cf7620cd6e81c851fad2750e7437c0975bac0da442023a9d7ef3b540f6729c85",
+          "bytes": 7149,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_28t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/e0f26333-6184-4b8a-a764-481c76c8e7ae/file_downloaded",
+          "checksum": "sha256:53de36c33e6e0d7465262cbed05e4f1e569cabaa0ba649f54a9b47f38f12acdb",
+          "bytes": 7946,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_29t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7d0f77ac-5683-4618-a0b4-23f555ff2a58/file_downloaded",
+          "checksum": "sha256:28acc7715f89fb701acb888cbd174ff228aba7011e6d5ebb6fbf02071db94543",
+          "bytes": 7721,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_30t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/75037554-d7b1-4c1c-aa2a-d21542d5a400/file_downloaded",
+          "checksum": "sha256:e7781573b841f892de3508f97a573c7d9ec254a49d30e562679fff7072358e53",
+          "bytes": 10119,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_31t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/935fff89-15b3-4a30-a80a-f22c835e3b28/file_downloaded",
+          "checksum": "sha256:58807fdce171401a0b525d2a9040a4acbf15373be05c48adfef926ce6d05e2f6",
+          "bytes": 15197,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_32t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/4f738fdb-6765-459c-9abb-cbfd8aa6adbf/file_downloaded",
+          "checksum": "sha256:87692041c367fb8f547195ec21c6770a56cb0babc337572d46d95f30f9f79dc7",
+          "bytes": 13117,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_33t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/9d722f4b-5cc1-40f0-b0f1-558c1a4410fa/file_downloaded",
+          "checksum": "sha256:58e0b709baba56586abdc05e91df94d92c74c031bdbac21f9a162629f55d3450",
+          "bytes": 4434,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_34t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/00cc36cb-40c5-4a1a-aefc-d582c80d9da2/file_downloaded",
+          "checksum": "sha256:5b74f3edb192fb5e39a85b6efa32304b85064454164a3282c9674b0d793cc644",
+          "bytes": 6651,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_35t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/c90d7bdc-74f7-4783-8d92-79fd5a8938cd/file_downloaded",
+          "checksum": "sha256:bafd0cf5e4a412c2ad429217b89406fae2719c4f4f954e89e4e1961f961fb357",
+          "bytes": 4340,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_36t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/73b57e89-2eff-4883-99e0-aaf65d55fd73/file_downloaded",
+          "checksum": "sha256:2681e592ec820157d7be0fa3061f47857d6e9c76be9a6a7845c0b19f2c3ddd22",
+          "bytes": 5921,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_37t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/db0d8466-a3e0-4608-9316-03047f0b9772/file_downloaded",
+          "checksum": "sha256:cc01853e7b0ff576c23dafc40ff862a8a14b3fb124e02c26d6c5686c38eb7a60",
+          "bytes": 10583,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_38t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/9cf254c4-6127-4bee-80c6-9a7894dbbd8d/file_downloaded",
+          "checksum": "sha256:5d2097c267b0164fda6ab7070c9cbd30a5cae7d6fcfbe728f81909682e9cf2be",
+          "bytes": 7853,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_39t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/84eba680-5d60-485a-9aa8-f414022820cd/file_downloaded",
+          "checksum": "sha256:f5314feb0a71a49d37e9ce647692f2b6bc9fbabc7315b019a7f66b9fafde02f4",
+          "bytes": 13523,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_40t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/608f6ecc-2acd-406e-a59d-75c6da6c5954/file_downloaded",
+          "checksum": "sha256:a3ef7fe5193cbb73857bef5f655643c08871aacd88493ce0e2151e2d98e8794c",
+          "bytes": 23177,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_41t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/236607b3-1668-4e96-8049-5576f1f6683b/file_downloaded",
+          "checksum": "sha256:c4c9840e9233a820a01264dd9b8efc0bc09df5b883b7eddb330c7e020bc01144",
+          "bytes": 4684,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_42t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/550b932e-b0fe-4b12-a7e4-0cf8db68d628/file_downloaded",
+          "checksum": "sha256:d0f67560b4eb302f1690d0d79f8cd76d7b9f35792f932c351b82f966678d4ea4",
+          "bytes": 6194,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_43t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/fa749e14-9953-4c58-b32e-9221f2caedab/file_downloaded",
+          "checksum": "sha256:7e60c6fce635db25800671d17d58a8ede3325c92058328f0afe950b9c90ae3f0",
+          "bytes": 3039,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_44t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/2ecee88f-585a-41f9-82af-ff14eef459f0/file_downloaded",
+          "checksum": "sha256:755b72d0e8ba35f0a53a67838a8b6bc077985aec11b3bc4134184ebcf0ae3907",
+          "bytes": 7037,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_45t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/d9d03bfc-bed4-44b5-a2bd-cba1b67b52d9/file_downloaded",
+          "checksum": "sha256:23f977c422e0919442d419d26f97127d773da5e66acd7988141bc23f7b18ab93",
+          "bytes": 7090,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_46t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/0b93469d-8761-427a-89b8-0489e3ecdfd1/file_downloaded",
+          "checksum": "sha256:e14fca149f2eebd3f15a5ed6ddf89be17c9d91c6257c5534158f10f3a788075a",
+          "bytes": 5829,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_47t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/76427cb5-d6ca-4a22-8f7b-d02ef5a77aff/file_downloaded",
+          "checksum": "sha256:ab2c70f83e147cd4acdebde577939d8b3eb9db211fedbac4c092599ecb54adca",
+          "bytes": 6812,
+          "default": true
+        },
+        {
+          "filename": "raw_data_torque_test_48t.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/b478fcf9-a58e-4e51-b504-1002da311682/file_downloaded",
+          "checksum": "sha256:aad3863c9b2651d7fb9883a6c480acfd9ab87b3d398c78bb71ed74b78afe1163",
+          "bytes": 16422,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_01f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/6b52bdf0-23ea-46cb-9919-5e9cdbff8ad3/file_downloaded",
+          "checksum": "sha256:f79fc387092194bffe3f39916aa2b734c8d6d3437a9b2cd32f71de1688fd1671",
+          "bytes": 21057,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_02f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/145a3dd7-4a4c-44af-96eb-4775daf02b7b/file_downloaded",
+          "checksum": "sha256:0ee50f3c2ee4b3d1f1bf477b40771a66a58b98c4b6a5627879314c34b0e3368e",
+          "bytes": 13392,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_03f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/04b70396-041c-434e-807c-f87f3c08aa24/file_downloaded",
+          "checksum": "sha256:612a50059f76d3be23176a3e7363628404728d9217f5052f4844b9346f5e2149",
+          "bytes": 21282,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_04f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/4a6fc504-d643-43af-9b0e-a44727cf4e20/file_downloaded",
+          "checksum": "sha256:c0d0f44ab5f513c0a172d3cb6590f05b9624cd2aa3ce37b162457324e8598c03",
+          "bytes": 22155,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_05f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/3c94e927-12b2-4f21-bfa7-9389b47815f0/file_downloaded",
+          "checksum": "sha256:5f7bf00b9b764ed56c7230396a0754d791db427e613321b2c8ba414f84abe782",
+          "bytes": 17597,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_06f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/60292491-4a52-445a-8082-f34937bfcf45/file_downloaded",
+          "checksum": "sha256:cdf293c57656107c5dedbdffb0c1ee51c84690f5faee0330c64549774dd8ea49",
+          "bytes": 22158,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_07f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7413a6f8-ebff-4a89-b224-038328025b71/file_downloaded",
+          "checksum": "sha256:42adc34444a3662b455aa770650686276c86296fd15f4a8b048df0c4255d4513",
+          "bytes": 13806,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_08f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/ea0fc4f1-fc10-454c-847c-952f30567865/file_downloaded",
+          "checksum": "sha256:762686a89c02186a644e6157c16ae2792547e24d96c2927f81179fbeca46843f",
+          "bytes": 16227,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_09f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/00f98ccb-bd44-4efc-a535-c8b9d8985765/file_downloaded",
+          "checksum": "sha256:c48a820be8330f8697f112cc0f7e6df4e41ac20a57f4149bf5dcd8a30e47a3c8",
+          "bytes": 22533,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_10f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/bc0dd44b-9186-4d56-9743-10d232419b3b/file_downloaded",
+          "checksum": "sha256:ea48064e12cdc86837c6dbd15784e7d8c565d7b0dddc0789ba5c961251aba701",
+          "bytes": 17409,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_11f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/122a8f25-e3dc-4002-ab35-927a2a03ceb6/file_downloaded",
+          "checksum": "sha256:8f2013faa47417f21a269e08a499d4a9d50615710eee317d10ac9b6bbac6517e",
+          "bytes": 20564,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_12f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/3145bd63-d52f-49aa-98dd-0b638bffd470/file_downloaded",
+          "checksum": "sha256:ad4c565be9764d8923451327b627fecfe9694eb6a49525669b3cb2f79236fca5",
+          "bytes": 22856,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_13f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/739bc870-37d1-4da6-8a56-092e2fa82e24/file_downloaded",
+          "checksum": "sha256:5185dc68dd6f81cf9d2f4f896b9206ae097296986db4b97b776854645c5a61d3",
+          "bytes": 21243,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_14f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/d18362b2-a5e4-4507-8824-c2866c5d2cd5/file_downloaded",
+          "checksum": "sha256:04e1be1d471a40612b9f5fb553592c5e13b4a904a2caef9c2c81d8bf225a2a96",
+          "bytes": 19695,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_15f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/66a8b3f2-1e61-4407-b730-2cebf4b62ac7/file_downloaded",
+          "checksum": "sha256:4d5d49f41c57d23e0349d4f418539cb5612e3262b6924b449be1769ddf7f9e42",
+          "bytes": 14192,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_16f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/5abace46-77e0-4780-ae8e-2369b66015fd/file_downloaded",
+          "checksum": "sha256:06b4c9c0914963ef8b89b9319607fb8660a79f9cbb61dd3f24498b54bbc2fb26",
+          "bytes": 17029,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_17f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/4edf6b7a-a9ad-420a-91aa-090ae3b2e460/file_downloaded",
+          "checksum": "sha256:9f2153dfa8d78213c4a8abbd9424dd9a47e24008956ec8ed6eda305c4714efc0",
+          "bytes": 14849,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_18f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/03586ca1-8abb-48f5-9b8f-16ada8856ce4/file_downloaded",
+          "checksum": "sha256:2998a49739628709c97cb1026a9f24f51fa8947232115a703deba7eea5be474d",
+          "bytes": 15394,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_19f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/e1da670f-edb3-4457-a802-01587febbbf8/file_downloaded",
+          "checksum": "sha256:85bcdcc95ea22c85b20f04a264cc2e0549d415aab8c6abcaaf9a8f8fcfe4c2d7",
+          "bytes": 14695,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_20f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/27701dda-0ef0-4358-8954-569e804ec574/file_downloaded",
+          "checksum": "sha256:105140edbdc9cda7a7b15c5a74332ef43abd209bfa583c52eaa147cb8427a48f",
+          "bytes": 14582,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_21f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/624f575b-cc46-4bfc-bf17-ae898f7dcfa5/file_downloaded",
+          "checksum": "sha256:a2245fe68c3942978d7a3632c78dc1902359d4c2a88ee2d32dd2fe7b729ce748",
+          "bytes": 17985,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_22f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7f48b70f-0f1d-4bca-bd33-087ce35e932d/file_downloaded",
+          "checksum": "sha256:9b0a20e83cf2b2de61d1d9283c38aae642d656eb8abab86ed884b80507b9d0c4",
+          "bytes": 17896,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_23f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7c2189cf-8887-47e3-bef5-5787f8bc44be/file_downloaded",
+          "checksum": "sha256:f62d5b5e80c3685c77a154e5d0e44ce0fd42ec169f831bd6c4fa56f7eda3464d",
+          "bytes": 18121,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_24f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/fe2d7509-bdfb-4893-81d0-f7da933ded99/file_downloaded",
+          "checksum": "sha256:c91aecefc03795c94e57fe6e6a6bc880ccb6fd1f679d582b5c2af379ca89d692",
+          "bytes": 2379,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_25f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/95bb49ce-25b8-4b35-9ead-e5e8843290e9/file_downloaded",
+          "checksum": "sha256:f53e8fe1b430a360c6d85360963192a3c321057b44402ae5b68755517f3279b9",
+          "bytes": 5317,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_26f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/15758f63-c554-4e17-a2f1-b5877e0a00b9/file_downloaded",
+          "checksum": "sha256:235f4db1137ae324dc0a768911132ead651d91dcdff230426635ea0af1659ea0",
+          "bytes": 8435,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_27f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/98a6e031-fce3-436a-9de6-5c79a324768b/file_downloaded",
+          "checksum": "sha256:963eee6202a6e5660a8ed33ac72569a028a7f36358684a1b9ab63049b76514a0",
+          "bytes": 8422,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_28f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/a18afd7a-fa74-4b4e-a5f0-efd2ff5cc51a/file_downloaded",
+          "checksum": "sha256:8208f3eead5d1721cc71d5ac2d1d123bfd2d50a1badf907aef20a7c0ca6776f8",
+          "bytes": 9529,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_29f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/a4f7cacd-e341-43b2-9b59-d187c7a54a6e/file_downloaded",
+          "checksum": "sha256:1f0bae41a2286f7dcd86f431c304d0c7b2059df2fca91a0922d27e9dc64d37ee",
+          "bytes": 8863,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_30f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/377276c7-bbc3-4f70-bd85-0d693f06f25f/file_downloaded",
+          "checksum": "sha256:9f96515a5bc84cf99d6bb359f9c24f78cc7a356546bff018303df319b9fcdf85",
+          "bytes": 9735,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_31f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/0762badd-8364-4368-8074-83b0fa2e12d5/file_downloaded",
+          "checksum": "sha256:0259fad8df61f1b7561967bfaf85578f7b3a3145b301eaf2398db24349cb90c8",
+          "bytes": 9463,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_32f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/4141acb8-56be-4832-b405-07bc8a8bb3c7/file_downloaded",
+          "checksum": "sha256:cd8b8e143583d898a02b0bc2c4935e26e4a07267a8f8298814cf26bcfd2fd7e9",
+          "bytes": 9515,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_33f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/3bd5bea8-439b-472f-aa4c-8244f55e8498/file_downloaded",
+          "checksum": "sha256:4ad24a599396ac09a56fa8e4946645b0c32cc98b960f72a97c8a86f6126b2ec4",
+          "bytes": 9070,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_34f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/06702249-6d0f-4f47-a5d1-39edaacc2813/file_downloaded",
+          "checksum": "sha256:ace831597fe5c065a27c0f98e1b827645dbb27388bfcc72e5f8685dcea62d23b",
+          "bytes": 9428,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_35f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/c2f57396-f274-461e-93f6-0a87c501d234/file_downloaded",
+          "checksum": "sha256:8ceca0ce533476209d14bbc8aea7b08962fb1407d867d3771395b4036289006f",
+          "bytes": 9600,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_36f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/e585f24c-a70e-49f6-ae6f-3d84c26e2eb5/file_downloaded",
+          "checksum": "sha256:206551cb97e92478ffea106ddeafa8834faf7ead8cc6058292edcf5c05f9dfb7",
+          "bytes": 8643,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_37f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/55d006fd-b5f6-4f0c-bf7d-ee385f324ac1/file_downloaded",
+          "checksum": "sha256:4cd9c5a5f431e0bc387f59033c78bb6844e88b27092929dc44c270133d2b8f84",
+          "bytes": 8537,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_38f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/0d0791d2-0b98-4928-852b-e46ad37661e8/file_downloaded",
+          "checksum": "sha256:f5e206da9045900763af5c008a24e09cf375b07dc8e3235dfe3802330c00c1b4",
+          "bytes": 9509,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_39f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/d70238f2-245a-4cf7-86ea-7f1aba558043/file_downloaded",
+          "checksum": "sha256:0f6a071d5aa23af135ad879448eec6d490b02115ea96404a9f3ce213fd947a86",
+          "bytes": 9174,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_40f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7882e81a-4f67-4b36-8af9-347bb8fae05a/file_downloaded",
+          "checksum": "sha256:0020a4783977702efb4106b49ddc3203f7dc2cf35362690460e6d257759d9dce",
+          "bytes": 7691,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_41f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7a46762c-227b-4843-9e10-7c402165e502/file_downloaded",
+          "checksum": "sha256:17c5a7bbcfc09bb43e5df058a89f4c5da980b13c23505481f9dbb0838072b9de",
+          "bytes": 9618,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_42f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/7d026557-2b18-49a2-a516-05eb7ea8490f/file_downloaded",
+          "checksum": "sha256:fcc81534b266fee6098ae0ab918bbdae3a392f4c0563b230b3e2a66d4bbb28d6",
+          "bytes": 9722,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_43f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/5e8d4b21-7f91-4df0-ac91-43f9fa314117/file_downloaded",
+          "checksum": "sha256:371d4ec067d94dd0ab5db731691813b0d64f7b38ce899c513f2a363f07e91f00",
+          "bytes": 1967,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_44f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/1ffac3d6-8b0f-4e80-8907-e84ea8346985/file_downloaded",
+          "checksum": "sha256:e9be637c0b02254c44b07d35c2c23fcec8f5f95b96081eb810aeb140dc27f2b2",
+          "bytes": 7077,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_45f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/a3c95f79-578c-47f1-83f6-6cd0730d37e3/file_downloaded",
+          "checksum": "sha256:fbb2a35c17a5dbe9a9132bacb031e3e0de50779551dec457aea5171f915bbb46",
+          "bytes": 6174,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_46f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/bca92280-c076-4519-b105-013703b6114d/file_downloaded",
+          "checksum": "sha256:c90c988b563072d6368fddc4abd8e829708fb33a5890f99096aeab473c7eb794",
+          "bytes": 9030,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_47f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/91de6ab0-7f88-4bd1-8e6b-44ae79b1e787/file_downloaded",
+          "checksum": "sha256:4b26df7803d2d46da9c979ce7fe008de070e40ddd23e87e02aac36fe9e27342e",
+          "bytes": 6628,
+          "default": true
+        },
+        {
+          "filename": "raw_data_force_test_48f.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/df9bae9f-e876-4793-9988-469df4d3230a/file_downloaded",
+          "checksum": "sha256:1b082f66042ad2d1d510b205b51cc89aea5111ad585757ae1d935ee3c74fb93d",
+          "bytes": 7810,
+          "default": true
+        },
+        {
+          "filename": "table_1.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/41a5957f-e24d-4252-9d99-46712e5f47f0/file_downloaded",
+          "checksum": "sha256:dbd504b9274a0c017c5251076f1992fd370b9fd165b8a21627d7132c53830c89",
+          "bytes": 107,
+          "default": true
+        },
+        {
+          "filename": "table_2.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/dd33485f-a5fe-4b44-9328-e6a91fd3239f/file_downloaded",
+          "checksum": "sha256:72f431baa08c133bd1f8241aeb249ceb8ddad74b3786168d56be349e42d96a85",
+          "bytes": 1685,
+          "default": true
+        },
+        {
+          "filename": "table_3.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/93c80838-1d33-4cd8-9ec9-9906e1d67cc7/file_downloaded",
+          "checksum": "sha256:a8f4110d92c36a0f432ce2542243ddefada6bb6a7e65eec3f8ee482f5563bbc5",
+          "bytes": 1129,
+          "default": true
+        },
+        {
+          "filename": "table_4.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/6774c64e-c47c-4fac-a214-4ee3d479b207/file_downloaded",
+          "checksum": "sha256:8f45521023854edcb3158eb86fee8db23a63883c2526b90e329a8fffa5c5ce2a",
+          "bytes": 1095,
+          "default": true
+        },
+        {
+          "filename": "table_5.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/9ac823fe-2fbc-4ec6-9a63-b06174c5dad6/file_downloaded",
+          "checksum": "sha256:19a6112efd111e4c9b7a077483d92d00f7f9d64d03452c8cd4662706095cf42d",
+          "bytes": 1007,
+          "default": true
+        },
+        {
+          "filename": "table_6.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/jffwrb4pcd/files/fb6dfce2-1816-4335-9cb4-3f48348e80ea/file_downloaded",
+          "checksum": "sha256:037e59d57fc77661fd75d08b4d0162f124091798cc37350d985306e716699f9e",
+          "bytes": 331,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "fracture_transition_compilation",
+      "title": "Compiled transition-toughness observations for a training/testing comparison",
+      "source": "https://doi.org/10.17632/2vkgrbsy8j.1",
+      "citation": "Meshii, Ishihara, Takagishi, Yakushi and Fujimoto (2020), Mendeley Data V1, DOI 10.17632/2vkgrbsy8j.1",
+      "creators": [
+        "Toshiyuki Meshii",
+        "Kenichi Ishihara",
+        "Yoichi Takagishi",
+        "Goh Yakushi",
+        "Yohei Fujimoto"
+      ],
+      "version": "1",
+      "origin": "mixed_compilation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/2vkgrbsy8j/1",
+      "rights_review": "unresolved",
+      "acquisition": "metadata_only",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "metadata and source-lineage review only"
+      ],
+      "limitations": [
+        "The publisher declares dataset-level CC BY 4.0; individual compiled observation rights and source relationships are not established in this project.",
+        "Provider training/testing labels do not demonstrate physical-specimen independence.",
+        "Toughness definition, temperature/dimension interpretation, constraint, censoring and applicability need review before service-property use.",
+        "No archive or rowwise observations were acquired for this candidate in this project; it is not used to assign initiation toughness or crack-growth calibration."
+      ],
+      "split_unit": "underlying physical specimens, material conditions and source publications remain to be established",
+      "assets": [],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "galvanized_polarization",
+      "title": "Low carbon steel formed by DRECE method with hot dip zinc galvanizing and potentiodynamic polarization tests to study its corrosion behavior",
+      "source": "https://zenodo.org/records/13886478",
+      "citation": "Vontorová, Jiřina; Novák, Vlastimil; Váňová, Petra; https://doi.org/10.5281/zenodo.13886478",
+      "creators": [
+        "Jiřina Vontorová",
+        "Vlastimil Novák",
+        "Petra Váňová"
+      ],
+      "version": "v3; DOI 10.5281/zenodo.13886478",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.13886478",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve signed polarization and reported Tafel summaries, source units and specimen/electrolyte identities; conditional native corrosion-model exchange"
+      ],
+      "limitations": [
+        "Zinc-coated/DRECE steel in declared laboratory electrolytes; not pipeline field corrosion calibration.",
+        "Summary polarization resistance is reported in ohms, not ohm square metres; electrode area and reference conditions must not be invented.",
+        "Reported plus/minus summaries do not specify independent specimen count or an uncertainty distribution.",
+        "No rows, source workbook, supplier text or article are included in code release."
+      ],
+      "split_unit": "physical specimen, coating/deformation state, electrolyte and scan/branch; rows are not independent experiments",
+      "assets": [
+        {
+          "filename": "metals-3156094_potentiodynamic_polarization_HCl_data.xlsx",
+          "url": "https://zenodo.org/api/records/13886478/files/metals-3156094_potentiodynamic_polarization_HCl_data.xlsx/content",
+          "checksum": "md5:b6b314cc923aed381ac5dc5d06b7ac00",
+          "bytes": 97931,
+          "default": true,
+          "cache_paths": [
+            "data/raw/galvanized-polarization/metals-3156094_potentiodynamic_polarization_HCl_data.xlsx"
+          ]
+        },
+        {
+          "filename": "metals-3156094_potentiodynamic_polarization_H2SO4_data.xlsx",
+          "url": "https://zenodo.org/api/records/13886478/files/metals-3156094_potentiodynamic_polarization_H2SO4_data.xlsx/content",
+          "checksum": "md5:fb36966daeba2c6dc4ee76f22658db9b",
+          "bytes": 98400,
+          "default": true,
+          "cache_paths": [
+            "data/raw/galvanized-polarization/metals-3156094_potentiodynamic_polarization_H2SO4_data.xlsx"
+          ]
+        },
+        {
+          "filename": "metals-3156094_data.xlsx",
+          "url": "https://zenodo.org/api/records/13886478/files/metals-3156094_data.xlsx/content",
+          "checksum": "md5:6b59a1e964b9b410d1824d429501c62b",
+          "bytes": 15554,
+          "default": true,
+          "cache_paths": [
+            "data/raw/galvanized-polarization/metals-3156094_data.xlsx"
+          ]
+        },
+        {
+          "filename": "metals-3156094_potentiodynamic_polarization_NaCl_data.xlsx",
+          "url": "https://zenodo.org/api/records/13886478/files/metals-3156094_potentiodynamic_polarization_NaCl_data.xlsx/content",
+          "checksum": "md5:735fe2203dc995219334d6776f2455b3",
+          "bytes": 102557,
+          "default": true,
+          "cache_paths": [
+            "data/raw/galvanized-polarization/metals-3156094_potentiodynamic_polarization_NaCl_data.xlsx"
+          ]
+        },
+        {
+          "filename": "ReadMe.txt",
+          "url": "https://zenodo.org/api/records/13886478/files/ReadMe.txt/content",
+          "checksum": "md5:d71d0282c53f8ede3ff7cf17f27991ce",
+          "bytes": 1079,
+          "default": true,
+          "cache_paths": [
+            "data/raw/galvanized-polarization/ReadMe.txt"
+          ]
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "gas_turbine",
+      "title": "Gas Turbine CO and NOx Emission Data Set",
+      "source": "https://archive.ics.uci.edu/dataset/551/gas+turbine+co+and+nox+emission+data+set",
+      "citation": "Gas Turbine CO and NOx Emission Data Set [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5WC95",
+      "version": "UCI snapshot 2026-10-26",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://archive.ics.uci.edu/dataset/551/gas+turbine+co+and+nox+emission+data+set",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Equipment or process labels are not human failure opportunities.",
+        "Observe source clocks, units, modes and data-group boundaries; no annual leak frequency inferred."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "source.zip",
+          "url": "https://archive.ics.uci.edu/static/public/551/gas+turbine+co+and+nox+emission+data+set.zip",
+          "checksum": "sha256:55fdb1acc25f05bd9c77aac285c424e9154ffb0dbf1bbadb56b69a1142231295",
+          "cache_paths": [
+            "data/raw/gas_turbine/source.zip",
+            "artifacts/raw/gas_turbine/source.zip"
+          ],
+          "checksum_origin": "previous_acquisition"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "gaslib11",
+      "title": "GasLib-11 versioned stationary gas-network test instance",
+      "source": "https://gaslib.zib.de/testData.html",
+      "citation": "Schmidt et al. (2017), GasLib - A Library of Gas Network Instances, DOI 10.3390/data2040040; Pfetsch et al., ZIB Report 12-41 (2012), as required by the source files",
+      "creators": [
+        "Martin Schmidt",
+        "Denis Aßmann",
+        "Robert Burlacu",
+        "Jesco Humpola",
+        "Imke Joormann",
+        "Nikolaos Kanelakis",
+        "Thorsten Koch",
+        "Djamal Oucherif",
+        "Marc E. Pfetsch",
+        "Lars Schewe",
+        "Robert Schwarz",
+        "Mathias Sirvent"
+      ],
+      "version": "GasLib-11-v1-20211130",
+      "origin": "simulation",
+      "license_id": "CC-BY-3.0",
+      "rights_evidence_url": "https://gaslib.zib.de/download/testData/GasLib-11-v1-20211130.net",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "stationary_gas_network_geometry",
+        "nomination_contract_review"
+      ],
+      "limitations": [
+        "Publisher identifies this family as test data without realistic-network claims.",
+        "Gas properties are aggregate source metadata, not a resolved CoolProp composition.",
+        "Compressor configurations, valve state, pressure-reference meaning, thermal boundary and nomination units need explicit mappings.",
+        "Not a measured process history, leak-frequency sample or human-failure opportunity set."
+      ],
+      "split_unit": "network topology and associated complete nomination; not independent sensor trials",
+      "assets": [
+        {
+          "filename": "GasLib-11-v1-20211130.zip",
+          "url": "https://gaslib.zib.de/download/testData/GasLib-11-v1-20211130.zip",
+          "checksum": "sha256:d264a3de986152a3c8e31e969ee9f492659828dfde8438ed2feffa9b31de43fb",
+          "checksum_origin": "previous_acquisition",
+          "bytes": 7022
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "h2safe",
+      "title": "Dataset for H2SAFE - Controlled Gas Releases and Sensor-Response for Indoor Hydrogen Safety",
+      "source": "https://data.openei.org/submissions/8799",
+      "citation": "Peaslee, David et al. (2026), Dataset for H2SAFE - Controlled Gas Releases and Sensor-Response for Indoor Hydrogen Safety, OEDI submission 8799.",
+      "creators": [
+        "David Peaslee",
+        "Munjal Purnkant Shah",
+        "Ian Palin",
+        "John Drumm",
+        "Umang Patel",
+        "James  Stewart",
+        "Donggyu Jang",
+        "Adam Bailey",
+        "William Buttner"
+      ],
+      "version": "published 2026-10-05; retrieved snapshot 2026-10-26",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.openei.org/submissions/8799",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "hydrogen gas detection and dispersion experiments",
+        "sensor placement and ventilation assessment"
+      ],
+      "limitations": [
+        "Indoor laboratory releases differ from outdoor pipeline dispersion.",
+        "Source conditions, HVAC and sensor coordinate frames must be retained.",
+        "Raw signals and evaluation labels must remain separate; no HEP inference.",
+        "Data license is distinct from linked software; linked repository code is not bundled."
+      ],
+      "split_unit": "independent release experiment, laboratory, source and ventilation setting",
+      "assets": [
+        {
+          "filename": "dataset.zip",
+          "url": "https://data.nlr.gov/system/files/330/1787856683-Dataset.zip",
+          "bytes": 3766528
+        },
+        {
+          "filename": "hvac_information.docx",
+          "url": "https://data.nlr.gov/system/files/330/1788206575-HVAC_information.docx"
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "hai",
+      "title": "HAI industrial control data",
+      "source": "https://github.com/icsdataset/hai",
+      "citation": "HAI industrial control data",
+      "version": "reviewed candidate 2026-10-26",
+      "origin": "mixed_compilation",
+      "license_id": "LicenseRef-version-review",
+      "rights_evidence_url": "https://github.com/icsdataset/hai",
+      "rights_review": "unresolved",
+      "acquisition": "metadata_only",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Exact data-version terms have not been resolved in this project."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "human_control_room",
+      "title": "Human-in-the-Loop Decision Support in Process Control Room Dataset",
+      "source": "https://zenodo.org/records/13984198",
+      "citation": "Amazu et al. (2024), Experiment Data: Human-in-the-loop Decision Support in Process Control Rooms, Data in Brief, article 110170; Zenodo v1.1.2, https://doi.org/10.5281/zenodo.13984198",
+      "creators": [
+        "Ammar N. Abbas",
+        "Winniewelsh"
+      ],
+      "version": "Zenodo v1.1.2 (record 13984198)",
+      "origin": "human_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/13984198",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "source-pinned exploratory analysis of human-in-the-loop process-control scenario, workload, situation-awareness and reported performance records",
+        "caller-reviewed mappings from released task outcomes to human-response trial records when outcome semantics support the mapping"
+      ],
+      "limitations": [
+        "The archive describes a controlled formaldehyde-plant simulator experiment; it is not a pipeline field campaign.",
+        "Repeated scenarios are nested within participants; use participant-level grouping for held-out analysis and cluster-aware uncertainty.",
+        "The published archive includes normalized and heterogeneous behavioral, physiological and self-report materials; preserve original tables and distinguish transformed measures from physical process measurements.",
+        "Do not derive human failure probabilities, causal effects, or pipeline field transfer from workload or situation-awareness scores alone.",
+        "Task-specific outcome definitions, event-time alignment, missingness, cohort composition and factor coding require inspection and caller review before constructing HRA trials.",
+        "Raw observations and participant-level records remain outside the public source-code release.",
+        "The archive also contains a separate MIT LICENSE file for the bundled repository; this catalog records the Zenodo file-level CC BY 4.0 declaration and does not treat the embedded software notice as interchangeable."
+      ],
+      "split_unit": "participant; all scenarios and repeated measures for a participant stay in one evaluation split",
+      "guide": "docs/HUMAN_CONTROL_ROOM_DATA_KO.md",
+      "assets": [
+        {
+          "filename": "dataset-v1.1.2.zip",
+          "url": "https://zenodo.org/api/records/13984198/files/CISC-LIVE-LAB-3/dataset-v1.1.2.zip/content",
+          "checksum": "md5:22c0303c109ea5f00e4cfe22ca954db0",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 116494,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "hydraulic",
+      "title": "Condition monitoring of hydraulic systems",
+      "source": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+      "citation": "Condition monitoring of hydraulic systems; https://doi.org/10.24432/C5CW21",
+      "version": "UCI snapshot 2026-10-26",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Equipment or process labels are not human failure opportunities.",
+        "Observe source clocks, units, modes and data-group boundaries; no annual leak frequency inferred."
+      ],
+      "split_unit": "laboratory cycle grouped by fault combination and chronology; independent trials not established",
+      "assets": [
+        {
+          "filename": "source.zip",
+          "url": "https://archive.ics.uci.edu/static/public/447/condition+monitoring+of+hydraulic+systems.zip",
+          "checksum": "sha256:24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+          "cache_paths": [
+            "data/raw/hydraulic/source.zip",
+            "artifacts/raw/hydraulic/source.zip"
+          ],
+          "checksum_origin": "previous_acquisition"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Nikolai Helwig",
+        "Eliseo Pignanelli",
+        "Andreas Schütze"
+      ]
+    },
+    {
+      "id": "ili",
+      "title": "Cross-country pipeline inspection and degradation data",
+      "source": "https://data.mendeley.com/datasets/c2h2jf5c54/1",
+      "citation": "https://doi.org/10.17632/c2h2jf5c54.1",
+      "version": "1",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/c2h2jf5c54/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "inspection_history",
+        "degradation_model_exchange"
+      ],
+      "limitations": [
+        "Retain repeat-inspection matching, defect identity, measurement error and source units.",
+        "Companion scripts are not executed or incorporated; data interpretation is reviewed separately."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "ili-v1.zip",
+          "url": "https://data.mendeley.com/public-api/zip/c2h2jf5c54/download/1"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Rioshar Yarveisy",
+        "Faisal Khan",
+        "Rouzbeh Abbassi"
+      ]
+    },
+    {
+      "id": "leak_multisensor_transients",
+      "title": "Dataset of Leak Simulations in Experimental Testbed Water Network",
+      "source": "https://data.mendeley.com/datasets/xw44wv2g88/1",
+      "citation": "Aghashahi, Mohsen; Sela, Lina; Banks, M. Katherine (2022), Dataset of Leak Simulations in Experimental Testbed Water Network, Mendeley Data V1, doi:10.17632/xw44wv2g88.1",
+      "creators": [
+        "Mohsen Aghashahi",
+        "Lina Sela",
+        "M. Katherine Banks"
+      ],
+      "version": "Mendeley V1; doi:10.17632/xw44wv2g88.1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/xw44wv2g88/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "paired dynamic pressure/source timing review",
+        "background-flow transient versus leak-cause separation"
+      ],
+      "limitations": [
+        "The original single 717637500-byte 7z was manually provided and supplier-SHA verified; selected pressure CSV members require separate format/unit/clock qualification.",
+        "Controlled physical leak configurations and a scheduled background-flow switch are not exact leak-onset, synchronization or independent arrival-time truth.",
+        "The companion CC BY 4.0 data article reports PCB 102B16 sensors, NI-9234 acquisition and 51.2 kHz measurement frequency, but the CSV Value unit/reference, Sample conversion, common trigger and channel alignment remain unresolved.",
+        "The supplier hydrophone conversion program is not executed or bundled."
+      ],
+      "split_unit": "physical experiment and network/flow/noise configuration",
+      "assets": [
+        {
+          "filename": "Dataset of Leak Simulations in Experimental Testbed Water Network.7z",
+          "url": "https://data.mendeley.com/public-files/datasets/xw44wv2g88/files/fac4a40a-7a25-4e48-aab6-11903181c85d/file_downloaded",
+          "checksum": "sha256:c6d4a68901a145155a58ccb691769753cb7c0960416a375acac12128bedfd881",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 717637500,
+          "default": true,
+          "cache_paths": [
+            "Dataset of Leak Simulations in Experimental Testbed Water Network (1).7z"
+          ]
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "leak_testbed",
+      "title": "Experimental water-pipe leak detection and localization",
+      "source": "https://data.mendeley.com/datasets/tbrnp6vrnj/1",
+      "citation": "https://doi.org/10.17632/tbrnp6vrnj.1",
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/tbrnp6vrnj/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "water_leak_signals",
+        "sensor_response"
+      ],
+      "limitations": [
+        "Controlled water-pipe experiments; not hydrogen release qualification.",
+        "Split by physical configuration and induced leak condition; preserve sensor rate and physical units.",
+        "Strong publisher-metadata overlap with the acquired xw44wv2g88.1 record: authors, 280-signal description, testbed, sensor set and experimental factors align. Archive/file-level equivalence is unverified; do not count this record as an independent family or trial until crosswalk review is complete."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "leak_testbed-v1.zip",
+          "url": "https://data.mendeley.com/public-api/zip/tbrnp6vrnj/download/1",
+          "checksum": "sha256:a8954b3cec0a0773a956177fed388fb891b25ef2cdf2d264b4b9557cf2a271a1",
+          "checksum_origin": "previous_acquisition",
+          "bytes": 1080066320,
+          "cache_paths": [
+            "data/raw/leak_testbed/leak_testbed-v1.zip"
+          ]
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Mohsen Aghashahi",
+        "Lina Sela",
+        "M. Katherine Banks"
+      ]
+    },
+    {
+      "id": "leakdb",
+      "title": "LeakDB Dataset",
+      "source": "https://zenodo.org/records/13985057",
+      "citation": "Stelios G. Vrachimis; Marios S. Kyriakou; Demetrios G. Eliades; Marios M. Polycarpou; https://doi.org/10.5281/zenodo.13985057",
+      "version": "v1",
+      "origin": "simulation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/13985057",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "future_water_leak_scenario_benchmark"
+      ],
+      "limitations": [
+        "Official Zenodo API verifies CC BY 4.0 and supplier MD5 for the 13,888,061,642-byte archive; it is not yet acquired or inspected.",
+        "Large-file acquisition is deferred for user download handoff; comparable smaller water-network datasets are already acquired.",
+        "Keep dataset license distinct from generation-tool license."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "LeakDB.zip",
+          "url": "https://zenodo.org/api/records/13985057/files/LeakDB.zip/content",
+          "checksum": "md5:d607929ef7caea432e663aee8071f2d7",
+          "bytes": 13888061642,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Stelios G. Vrachimis",
+        "Marios S. Kyriakou",
+        "Demetrios G. Eliades",
+        "Marios M. Polycarpou"
+      ]
+    },
+    {
+      "id": "metropt3",
+      "title": "MetroPT-3 Dataset",
+      "source": "https://archive.ics.uci.edu/dataset/791/metropt+3+dataset",
+      "citation": "MetroPT-3 Dataset; https://doi.org/10.24432/C5VW3R",
+      "version": "UCI snapshot 2026-10-26",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://archive.ics.uci.edu/dataset/791/metropt+3+dataset",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Equipment or process labels are not human failure opportunities.",
+        "Observe source clocks, units, modes and data-group boundaries; no annual leak frequency inferred."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "source.zip",
+          "url": "https://archive.ics.uci.edu/static/public/791/metropt+3+dataset.zip",
+          "checksum": "sha256:aab991a970e58210de853bb8078ce0e63abb4d9412fdc5c79792dae3d8e1721a",
+          "cache_paths": [
+            "data/raw/metropt3/source.zip",
+            "artifacts/raw/metropt3/source.zip"
+          ],
+          "checksum_origin": "previous_acquisition"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Narjes Davari",
+        "Bruno Veloso",
+        "Rita Ribeiro",
+        "Joao Gama"
+      ]
+    },
+    {
+      "id": "nasa_lh2_d4171",
+      "title": "Normal Gravity Self-Pressurization of 9-Inch- /23 Cm/ Diameter Spherical Liquid Hydrogen Tankage",
+      "source": "https://ntrs.nasa.gov/citations/19670028965",
+      "citation": "Aydelott, John C. (1967), NASA TN D-4171, Normal Gravity Self-Pressurization of 9-Inch (23 cm) Diameter Spherical Liquid Hydrogen Tankage, NTRS19670028965",
+      "creators": [
+        "John C Aydelott"
+      ],
+      "version": "NASA-TN-D-4171; NTRS19670028965",
+      "origin": "laboratory_experiment",
+      "license_id": "US-GOV-PUBLIC-USE-PERMITTED",
+      "rights_evidence_url": "https://ntrs.nasa.gov/api/citations/19670028965",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "original tank experiment scope and conditions",
+        "source-table and unit qualification"
+      ],
+      "limitations": [
+        "No publisher checksum; local SHA-256 is a prior-acquisition integrity pin, not supplier verification.",
+        "Tank self-pressurization is not an independent validation of a local interface closure, compressor or arbitrary pipe-boiling model.",
+        "Fulltext/OCR layout and table cells require visual source comparison; no figure digitization."
+      ],
+      "split_unit": "physical tank experimental run",
+      "assets": [
+        {
+          "filename": "19670028965.pdf",
+          "url": "https://ntrs.nasa.gov/api/citations/19670028965/downloads/19670028965.pdf",
+          "checksum": "sha256:bf2fa1d3a4c7b0248cf26cee18ebfdd89f21a0f34a769f04a10731c97d711893",
+          "checksum_origin": "previous_acquisition",
+          "bytes": 2537004,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "19670028965.txt",
+          "url": "https://ntrs.nasa.gov/api/citations/19670028965/downloads/19670028965.txt",
+          "checksum": "sha256:a1610c69e4c1a89dfead3febd3098f12c071f163de0d8cc92e30f0e9741da985",
+          "checksum_origin": "previous_acquisition",
+          "bytes": 72573,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "pe100_pressure_decay",
+      "title": "Leak test, Temeratures and Pressure",
+      "source": "https://zenodo.org/records/20582921",
+      "citation": "Milos Mician; Radoslav Konar; https://doi.org/10.5281/zenodo.20582921",
+      "creators": [
+        "Milos Mician",
+        "Radoslav Konar"
+      ],
+      "version": "v1 per publisher page; DOI 10.5281/zenodo.20582921",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.20582921",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Pressure/temperature history parsing and explicit net inventory/pressure-test exchange with the original material engine"
+      ],
+      "limitations": [
+        "PE100RC laboratory assemblies and capillary configurations are not field leak-rate validation.",
+        "Source pressure is gauge. Do not invent ambient pressure, gas volume, rigidity, mixture composition, calibration or reference conditions.",
+        "Net inventory change does not isolate leak-path flow from permeation, outgassing, thermal gradients or compliance.",
+        "Raw observations and transformed rows remain outside code releases.",
+        "The checked workbook has ten capillary profiles and one reported temperature column per profile; metadata-only no-defect profiles and separate ambient-temperature channels are not manufactured."
+      ],
+      "split_unit": "physical gas/configuration test record; time rows are not independent tests",
+      "assets": [
+        {
+          "filename": "DataSet Temperatue-Pressure.xlsx",
+          "url": "https://zenodo.org/api/records/20582921/files/DataSet%20Temperatue-Pressure.xlsx/content",
+          "checksum": "md5:6ac71c66d5bdb45c508f73b4aa7f56b1",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 78721,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "percussion",
+      "title": "Pipe percussion signals under induced corrosion conditions",
+      "source": "https://data.mendeley.com/datasets/csyshmrpvg/1",
+      "citation": "https://doi.org/10.17632/csyshmrpvg.1",
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/csyshmrpvg/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "inspection_signals",
+        "materials_exchange"
+      ],
+      "limitations": [
+        "Two experimental pipes with repeated tapping; recordings are not independent field assets.",
+        "Electrochemical exposure is not a universal calendar corrosion-growth relation.",
+        "The 5,426,985,868-byte supplier RAR was acquired from a user-provided local copy and its SHA-256 matches publisher metadata.",
+        "Member inventory is pending a compatible RAR listing tool; no members have been extracted or analyzed."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "url": "https://data.mendeley.com/public-files/datasets/csyshmrpvg/files/40a6a5e8-50d1-4e8c-992d-29919a84b9a9/file_downloaded",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 5426985868,
+          "checksum": "sha256:f22a5d01347a2dce8830763954a6cb99ba3914ec97070277096370f52e0529c6",
+          "filename": "Pipe percussion dataset.rar"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Dan Yang",
+        "Songlin Ji",
+        "Tao Wang",
+        "Xiantao Shu",
+        "Guangtao Lu"
+      ]
+    },
+    {
+      "id": "phmsa_flagged",
+      "title": "PHMSA flagged pipeline incidents",
+      "source": "https://www.phmsa.dot.gov/data-and-statistics/pipeline/pipeline-incident-flagged-files",
+      "citation": "U.S. Department of Transportation, Pipeline and Hazardous Materials Safety Administration",
+      "version": "snapshot 2026-10-26",
+      "origin": "incident_register",
+      "license_id": "LicenseRef-US-public-access-analysis",
+      "rights_evidence_url": "https://data.transportation.gov/api/views/qdme-9bbm.json",
+      "rights_review": "public_access_analysis_only",
+      "acquisition": "metadata_only",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "incident_cause_screening",
+        "exposure_pairing_research"
+      ],
+      "limitations": [
+        "Official metadata states public access; no blanket clearance of all operator-submitted contributions is inferred.",
+        "Raw and pointwise derived records are not redistributed in the code release.",
+        "Retain reporting criteria, revisions and matching exposure; incident share is not HEP."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "flagged_incidents.zip",
+          "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/data_statistics/pipeline/PHMSA_Pipeline_Safety_Flagged_Incidents.zip"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "pipe_friction_roughness",
+      "title": "Friction and Roughness: Dataset and Software",
+      "source": "https://zenodo.org/records/20025373",
+      "citation": "Santos-Ruiz, Ildeberto; Pérez-Pérez, Esvan de Jesús; López-Estrada, Francisco Ronay; Puig, Vicenç; Valencia-Palomo, Guillermo; Friction and Roughness: Dataset and Software; doi:10.5281/zenodo.20025373",
+      "creators": [
+        "Santos-Ruiz, Ildeberto",
+        "Pérez-Pérez, Esvan de Jesús",
+        "López-Estrada, Francisco Ronay",
+        "Puig, Vicenç",
+        "Valencia-Palomo, Guillermo"
+      ],
+      "version": "immutable record 20025373",
+      "origin": "laboratory_experiment",
+      "license_id": "MIT",
+      "rights_evidence_url": "https://zenodo.org/api/records/20025373",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "measured pressure/flow versus property basis review",
+        "finite operating-point roughness reference"
+      ],
+      "limitations": [
+        "Small physical pilot-pipe dataset; viscosity is temperature-derived rather than independently measured.",
+        "Source MATLAB programs are not acquired or executed. Data and license notice remain outside the source release.",
+        "Geometry, units and pressure support must be reviewed from metadata before calibration."
+      ],
+      "split_unit": "physical experiment/site/device group; not arbitrary derived windows",
+      "assets": [
+        {
+          "filename": "metadata.yml",
+          "url": "https://zenodo.org/api/records/20025373/files/metadata.yml/content",
+          "checksum": "md5:060dd533757dd17c91f2cdb5efe3782a",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 4938,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "LICENSE",
+          "url": "https://zenodo.org/api/records/20025373/files/LICENSE/content",
+          "checksum": "md5:0d1c27fede8fca2c129938fdc353c5d4",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 1085,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "dataset.csv",
+          "url": "https://zenodo.org/api/records/20025373/files/dataset.csv/content",
+          "checksum": "md5:d0d9f2de7cf95294d7e84a99be1c5d01",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 223,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "README.md",
+          "url": "https://zenodo.org/api/records/20025373/files/README.md/content",
+          "checksum": "md5:bd985cf172a4ad770a2512c50f3bda82",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 6094,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "potash_cp",
+      "title": "Current Density to Protect AISI 1018 Carbon Steel in Saturated Potash Brine",
+      "source": "https://data.mendeley.com/datasets/z6m27978vj/2",
+      "citation": "Michael Trask (2020), Mendeley Data V2, DOI 10.17632/z6m27978vj.2",
+      "creators": [
+        "Michael Trask"
+      ],
+      "version": "2",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/z6m27978vj/2",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "Protection-current metadata and future raw-file acquisition review"
+      ],
+      "limitations": [
+        "Mendeley public metadata lists one 15,345-byte DOCX and supplier SHA-256; downloaded bytes match both.",
+        "The staged source reader has not been replayed on the original DOCX; no field-anode design or protection qualification is claimed.",
+        "Protective current is not metal-dissolution current; temperature, reference potential, exposed area, units, clock and protection criterion need raw review."
+      ],
+      "split_unit": "physical pipe/electrolyte exposure and original experiment; samples are not field opportunities",
+      "assets": [
+        {
+          "filename": "Current Density to Protect Carbon Steel in Saturated Brine.docx",
+          "url": "https://data.mendeley.com/public-files/datasets/z6m27978vj/files/db055730-df3f-4a84-99b6-b7697925ad0d/file_downloaded",
+          "checksum": "sha256:de262b94567fb6d72c6ed520cdbecb5660d68579e266e33d0b33c023def9ed2f",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 15345,
+          "default": true,
+          "cache_paths": [
+            "data/raw/potash_cp/Current Density to Protect Carbon Steel in Saturated Brine.docx"
+          ]
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "potash_elbow_cp_slurry",
+      "title": "Protection current density for AISI 1018 elbows in potash and sand slurry",
+      "source": "https://data.mendeley.com/datasets/gkwrx7tz2k/3",
+      "citation": "Michael Trask (2020), Mendeley Data V3, DOI 10.17632/gkwrx7tz2k.3",
+      "creators": [
+        "Michael Trask"
+      ],
+      "version": "3",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/gkwrx7tz2k/3",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "Study how declared flow velocity and abrasive sand loading change observed protective-current demand for this specific potash-brine elbow experiment.",
+        "Compare measurement provenance with existing owner cathodic-protection and erosion/corrosion APIs without treating current as corrosion loss."
+      ],
+      "limitations": [
+        "A single material, brine, elbow geometry, vertical flow-loop family and 1.05 mm sand are represented; no field transfer or generic design current is qualified.",
+        "Protective-current demand does not by itself establish adequate protection potential, corrosion rate, remaining wall, or anode lifetime.",
+        "The 4 velocity conditions and stepped sand-loading records belong to the same experimental apparatus/campaign and are not independent population samples.",
+        "The DOCX source is kept outside source-code payloads; only structural metadata and source hashes are recorded here."
+      ],
+      "split_unit": "physical elbow and complete flow-loop experimental campaign; no row-wise random split",
+      "assets": [
+        {
+          "filename": "Current Density Required to Protect AISI 1018 CS in Saturated Potash Brine in Various Slurry Concentrations.docx",
+          "url": "https://data.mendeley.com/public-files/datasets/gkwrx7tz2k/files/878a62ae-5bc8-47e2-b0d1-333b4561a45d/file_downloaded",
+          "bytes": 34410,
+          "sha256": "9b6ba2bd756d402596783353c9dfb7ecad951fb6f3780e67e239acc7f9aa5103"
+        }
+      ],
+      "raw_in_code_release": false,
+      "guide": "docs/POTASH_ELBOW_CP_DATA_KO.md"
+    },
+    {
+      "id": "probabilistic_leak_localization",
+      "title": "Data for probabilistic leak localization in water distribution networks",
+      "source": "https://zenodo.org/records/7255403",
+      "citation": "Ganjour Mazaev, Michael Weyns, Filip Vancoillie, Guido Vaes, Femke Ongenae and Sofie Van Hoecke (2022), Data for replication of the publication: Probabilistic leak localization in water distribution networks using a hybrid data-driven and model-based approach, v0.2.0, Zenodo, DOI 10.5281/zenodo.7255403.",
+      "creators": [
+        "Ganjour Mazaev",
+        "Michael Weyns",
+        "Filip Vancoillie",
+        "Guido Vaes",
+        "Femke Ongenae",
+        "Sofie Van Hoecke"
+      ],
+      "version": "0.2.0",
+      "origin": "mixed_compilation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/7255403",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "probabilistic leak localization under uncalibrated hydraulic-model conditions",
+        "uncertainty-aware evaluation in networks with weak leak sensitivity"
+      ],
+      "limitations": [
+        "The archive combines simulated pressure heads and data from in-field leak experiments; preserve their distinct origin and grouping.",
+        "This localization dataset is not transient pressure-wave ground truth or a leak-occurrence frequency sample.",
+        "Inspect native archive labels, network identities and experiment groups before transformation or held-out splitting.",
+        "Only the dataset license is recorded here; publication figures, manuscript text and any separate software retain their own rights.",
+        "The associated replication repository limits its software to non-commercial manuscript review; no code from it is copied or packaged here."
+      ],
+      "split_unit": "network and physical leak experiment groups; never random rows or derived windows",
+      "assets": [
+        {
+          "filename": "data.zip",
+          "url": "https://zenodo.org/api/records/7255403/files/data.zip/content",
+          "checksum": "md5:2a79f0f02000d9d6fecf33eab02a87e3",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 195518700,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "refinery_compressor_process",
+      "title": "Refinery Compressor Sensor Data, One-Year Dataset",
+      "source": "https://zenodo.org/records/14866092",
+      "citation": "Ntafalias, Aristotelis; Chrysovalantis, Savvidis; Lamprinoudakis, Pantelis; Kitsatoglou, Alkis (2025), Refinery Compressor Sensor Data, One-Year Dataset, doi:10.5281/zenodo.14866092",
+      "creators": [
+        "Ntafalias, Aristotelis",
+        "Chrysovalantis, Savvidis",
+        "Lamprinoudakis, Pantelis",
+        "Kitsatoglou, Alkis"
+      ],
+      "version": "Zenodo record 14866092; version label absent in API",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.14866092",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "source meaning and unit/clock review",
+        "conditional equipment-data linkage"
+      ],
+      "limitations": [
+        "DCS condition observations are not a performance map or independent surge truth.",
+        "Sensor units, process-fluid composition, pressure reference, clock timezone, total/static stations, flow and efficiency require explicit review."
+      ],
+      "split_unit": "physical experiment or chronological operating period",
+      "assets": [
+        {
+          "filename": "Centrifugal compressor _2022.xlsx",
+          "url": "https://zenodo.org/api/records/14866092/files/Centrifugal%20compressor%20_2022.xlsx/content",
+          "checksum": "md5:9ebf0bf829d2567f279f385523a765c5",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 11051153,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "secom",
+      "title": "SECOM",
+      "source": "https://archive.ics.uci.edu/dataset/179/secom",
+      "citation": "SECOM; https://doi.org/10.24432/C54305",
+      "version": "UCI snapshot 2026-10-26",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://archive.ics.uci.edu/dataset/179/secom",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Equipment or process labels are not human failure opportunities.",
+        "Observe source clocks, units, modes and data-group boundaries; no annual leak frequency inferred."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "source.zip",
+          "url": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+          "checksum": "sha256:eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+          "cache_paths": [
+            "data/raw/secom/source.zip",
+            "artifacts/raw/secom/source.zip"
+          ],
+          "checksum_origin": "previous_acquisition"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Michael McCann",
+        "Adrian Johnston"
+      ]
+    },
+    {
+      "id": "sheffield_acoustic",
+      "title": "Acoustic data for the leakage experiments in the CID Lab, University of Sheffield",
+      "source": "https://orda.shef.ac.uk/articles/dataset/_b_Acoustic_data_for_the_leakage_experiments_in_the_CID_Lab_University_of_Sheffield_b_/32229270",
+      "citation": "Shekofteh, Mohammad Reza (2026). Acoustic data for the leakage experiments in the CID Lab, University of Sheffield. The University of Sheffield. Dataset. https://doi.org/10.15131/shef.data.32229270.v1",
+      "creators": [
+        "Mohammad Reza Shekofteh"
+      ],
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://orda.shef.ac.uk/articles/dataset/_b_Acoustic_data_for_the_leakage_experiments_in_the_CID_Lab_University_of_Sheffield_b_/32229270",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "paired_pipe_wall_vibration",
+        "delay_and_attenuation_methods"
+      ],
+      "limitations": [
+        "MDPE water-pipe laboratory; not hydrogen or arbitrary network qualification.",
+        "Sensor simultaneity, file channel units, geometry and propagation speed must be established separately before location inference.",
+        "Do not mix the same experiment across training or tuning and independent evaluation."
+      ],
+      "split_unit": "independent physical run, leak geometry and pressure/distance condition",
+      "assets": [
+        {
+          "filename": "sheffield-acoustic-v1.zip",
+          "url": "https://ndownloader.figshare.com/files/64402239",
+          "checksum": "md5:ad5a78bb4f28ccf53c70be048fadb001",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 492926144,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "skab",
+      "title": "SKAB",
+      "source": "https://github.com/waico/SKAB",
+      "citation": "SKAB",
+      "version": "reviewed candidate 2026-10-26",
+      "origin": "mixed_compilation",
+      "license_id": "GPL-3.0",
+      "rights_evidence_url": "https://github.com/waico/SKAB",
+      "rights_review": "unresolved",
+      "acquisition": "metadata_only",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Separate data license has not been qualified for the current release boundary."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "soil_borehole_heating",
+      "title": "Estimation of groundwater flow rate by an actively heated fiber optics based thermal response test in a grouted borehole",
+      "source": "https://zenodo.org/records/6480800",
+      "citation": "Bo Zhang; Kai Gu; Peter Bayer; Haibo Qi; Bin Shi; Baojun Wang; Yuehua Jiang; Quanping Zhou (2022), Estimation of groundwater flow rate by an actively heated fiber optics based thermal response test in a grouted borehole, Zenodo, doi:10.5281/zenodo.6480800",
+      "creators": [
+        "Bo Zhang",
+        "Kai Gu",
+        "Peter Bayer",
+        "Haibo Qi",
+        "Bin Shi",
+        "Baojun Wang",
+        "Yuehua Jiang",
+        "Quanping Zhou"
+      ],
+      "version": "1.0",
+      "origin": "mixed_compilation",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6480800",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve measured temperature chronology and source depth/clock/condition metadata",
+        "Assess explicit thermal-boundary and missing geometry/property conditions without imputation"
+      ],
+      "limitations": [
+        "No pipeline or soil model field qualification from source acquisition",
+        "Clock timezone, sensor geometry, material properties and model boundary support must be separately reviewed",
+        "Numerical simulation outputs and measured or processed observations remain distinct"
+      ],
+      "split_unit": "complete physical experiment or field heating history; adjacent time/depth observations are dependent",
+      "assets": [
+        {
+          "filename": "data_process.mlx",
+          "url": "https://zenodo.org/api/records/6480800/files/data_process.mlx/content",
+          "checksum": "md5:a8ac3c1bdf4d66c3abc4736e34533a2b",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 6359,
+          "default": true
+        },
+        {
+          "filename": "insitu_measurements.mat",
+          "url": "https://zenodo.org/api/records/6480800/files/insitu_measurements.mat/content",
+          "checksum": "md5:02e88e184c13af98b165d4bd0f7d6b60",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 329832492,
+          "default": false
+        },
+        {
+          "filename": "estimation_process.mlx",
+          "url": "https://zenodo.org/api/records/6480800/files/estimation_process.mlx/content",
+          "checksum": "md5:481247a78e5f0fd7dc84e4c94f304c32",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 4560,
+          "default": true
+        },
+        {
+          "filename": "numerical_data.mat",
+          "url": "https://zenodo.org/api/records/6480800/files/numerical_data.mat/content",
+          "checksum": "md5:d7467a964517965524d1aaa4d9dac393",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 266721,
+          "default": false
+        },
+        {
+          "filename": "estimation_data.mat",
+          "url": "https://zenodo.org/records/6480800/files/estimation_data.mat?download=1",
+          "checksum": "md5:90804a48b444e1912ec52f31b0ba895f",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 2047895,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "soil_hydrothermal_covers",
+      "title": "Soil hydrothermal dynamics under varying surface covers",
+      "source": "https://zenodo.org/records/16415302",
+      "citation": "Wu, Bing; Zhu, Hong-Hu (2025), Soil hydrothermal dynamics under varying surface covers, Zenodo, doi:10.5281/zenodo.16415302",
+      "creators": [
+        "Wu, Bing",
+        "Zhu, Hong-Hu"
+      ],
+      "version": "record 16415302; first published version, API version label absent",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.16415302",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve measured temperature chronology and source depth/clock/condition metadata",
+        "Assess explicit thermal-boundary and missing geometry/property conditions without imputation"
+      ],
+      "limitations": [
+        "No pipeline or soil model field qualification from source acquisition",
+        "Clock timezone, sensor geometry, material properties and model boundary support must be separately reviewed",
+        "Numerical simulation outputs and measured or processed observations remain distinct"
+      ],
+      "split_unit": "complete physical experiment or field heating history; adjacent time/depth observations are dependent",
+      "assets": [
+        {
+          "filename": "Climate data of experiment.xlsx",
+          "url": "https://zenodo.org/api/records/16415302/files/Climate%20data%20of%20experiment.xlsx/content",
+          "checksum": "md5:f5d7effb892aed2dadf86d9d0d884c75",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 129316,
+          "default": true
+        },
+        {
+          "filename": "Suction.xlsx",
+          "url": "https://zenodo.org/records/16415302/files/Suction.xlsx?download=1",
+          "checksum": "md5:aade3b073fe8d83c43accdcfafa735c9",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 4044309,
+          "default": true
+        },
+        {
+          "filename": "Water content.xlsx",
+          "url": "https://zenodo.org/records/16415302/files/Water%20content.xlsx?download=1",
+          "checksum": "md5:f45ea931c0459fadc6494a51e70b48d0",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 1518567,
+          "default": true
+        },
+        {
+          "filename": "Modeling suction.xlsx",
+          "url": "https://zenodo.org/api/records/16415302/files/Modeling%20suction.xlsx/content",
+          "checksum": "md5:72ea29f938f22a4472c0e8bde238ac93",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 713705,
+          "default": false
+        },
+        {
+          "filename": "Soil temperature.xlsx",
+          "url": "https://zenodo.org/api/records/16415302/files/Soil%20temperature.xlsx/content",
+          "checksum": "md5:f5e24ddcd843ed4d6bf6fa1a4e169152",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 71885,
+          "default": true
+        },
+        {
+          "filename": "Modeling water saturetion.xlsx",
+          "url": "https://zenodo.org/api/records/16415302/files/Modeling%20water%20saturetion.xlsx/content",
+          "checksum": "md5:1bfd719ac9e306c8eadf78d443844f8a",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 694393,
+          "default": false
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "swat",
+      "title": "SWaT",
+      "source": "https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/",
+      "citation": "SWaT",
+      "version": "reviewed candidate 2026-10-26",
+      "origin": "mixed_compilation",
+      "license_id": "LicenseRef-access-agreement",
+      "rights_evidence_url": "https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/",
+      "rights_review": "unresolved",
+      "acquisition": "metadata_only",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Registration and source-specific access terms require their own workflow."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [],
+      "raw_in_code_release": false,
+      "creators": []
+    },
+    {
+      "id": "tandem_gmaw",
+      "title": "Tandem-GMAW: advanced pulsed and short-circuiting process mode experimental data",
+      "source": "https://zenodo.org/records/21824586",
+      "citation": "Prashant Kumar Chaurasia; Cagtay Fabry; Andreas Pittner; Michael Rethmeier; https://doi.org/10.5281/zenodo.21824586",
+      "creators": [
+        "Prashant Kumar Chaurasia",
+        "Cagtay Fabry",
+        "Andreas Pittner",
+        "Michael Rethmeier"
+      ],
+      "version": "v2.0.0; DOI 10.5281/zenodo.21824586",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.21824586",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Synchronized voltage/current and robot-travel integrity, waveform energy and specimen/layer metadata exchange"
+      ],
+      "limitations": [
+        "The selected root and second layers of WID631 are a subset, not all thirty weld passes.",
+        "Do not infer thermal efficiency, melted masses, chemistry, hardness or procedure acceptance from nominal material grades or electrical recordings.",
+        "Preserve channel polarity, sampling clocks, trigger and robot/process alignment; no hidden resampling or guessed seam length.",
+        "Raw records, scans, videos, source notebooks and transformed sample rows are excluded from code release."
+      ],
+      "split_unit": "workpiece and layer; shared workpiece passes and time samples are not independent trials",
+      "assets": [
+        {
+          "filename": "experiment_list.csv",
+          "url": "https://zenodo.org/api/records/21824586/files/experiment_list.csv/content",
+          "checksum": "md5:905ed65e9a795ffe7b982e0db092229e",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 8998,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "WID631_L1.zip",
+          "url": "https://zenodo.org/records/21824586/files/WID631_L1.zip?download=1",
+          "checksum": "md5:7a7496025f0b9b3ebefaaf4ebd8a6a13",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 123909469,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "WID631_L2.zip",
+          "url": "https://zenodo.org/records/21824586/files/WID631_L2.zip?download=1",
+          "checksum": "md5:7c761e6b8da5ccbd2ee4c277dcd573eb",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 107795436,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "tep",
+      "title": "Additional Tennessee Eastman Process Simulation Data for Anomaly Detection Evaluation",
+      "source": "https://doi.org/10.7910/DVN/6C3JR1",
+      "citation": "Rieth, Amsel, Tran and Cook (2017), https://doi.org/10.7910/DVN/6C3JR1",
+      "version": "1.0",
+      "origin": "simulation",
+      "license_id": "LicenseRef-TEP-public-domain-dedication",
+      "rights_evidence_url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/6C3JR1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Custom public-domain dedication with separate retained patent, trademark and other-person rights; no implied endorsement.",
+        "A simulation benchmark; fault number and run seed must not leak into a blind detector.",
+        "Retain train/test roles, run identity and fault timing; no field-calibration claim."
+      ],
+      "split_unit": "simulationRun, with original train/test file roles",
+      "assets": [
+        {
+          "filename": "TEP_FaultFree_Testing.RData",
+          "url": "https://dataverse.harvard.edu/api/access/datafile/3031240",
+          "checksum": "md5:38ad9810fc871026157086ae2c2f0ee9",
+          "bytes": 47327663,
+          "cache_paths": [
+            "data/raw/tep/TEP_FaultFree_Testing.RData"
+          ]
+        },
+        {
+          "filename": "TEP_FaultFree_Training.RData",
+          "url": "https://dataverse.harvard.edu/api/access/datafile/3031241",
+          "checksum": "md5:ec126484534331f85001d8c4ebce6d17",
+          "bytes": 24678017,
+          "cache_paths": [
+            "data/raw/tep/TEP_FaultFree_Training.RData"
+          ]
+        },
+        {
+          "filename": "TEP_Faulty_Testing.RData",
+          "url": "https://dataverse.harvard.edu/api/access/datafile/3031243",
+          "checksum": "md5:556bdb64c83021bc0c5f92e427753565",
+          "bytes": 836882037,
+          "cache_paths": [
+            "data/raw/tep/TEP_Faulty_Testing.RData"
+          ]
+        },
+        {
+          "filename": "TEP_Faulty_Training.RData",
+          "url": "https://dataverse.harvard.edu/api/access/datafile/3031242",
+          "checksum": "md5:c5f594d54c47e620ff877feb58407fda",
+          "bytes": 494063194,
+          "cache_paths": [
+            "data/raw/tep/TEP_Faulty_Training.RData"
+          ]
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Rieth, Cory A.",
+        "Amsel, Ben D.",
+        "Tran, Randy",
+        "Cook, Maia B."
+      ]
+    },
+    {
+      "id": "thermal_rod",
+      "title": "One-dimensional transient heating and lateral-convection rod experiments",
+      "source": "https://doi.org/10.17632/sbcf36976g.1",
+      "citation": "Tomanek, Lauren B.; Stutts, Daniel S. (2021), Mendeley Data V1, DOI 10.17632/sbcf36976g.1",
+      "creators": [
+        "Lauren B. Tomanek",
+        "Daniel S. Stutts"
+      ],
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/datasets/sbcf36976g/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "native material-engine thermal reader exchange",
+        "declared boundary-conditioned thermal scenarios"
+      ],
+      "limitations": [
+        "Six thermocouple excess-temperature channels are differences above an ambient reference, not absolute temperatures.",
+        "Controller counts on a 1023 scale are not heat input in watts. Sensor positions, dimensions, ambient, heat efficiency and specimen state require review.",
+        "Source fitted results are estimates from the same observations and do not establish independent validation.",
+        "Raw rod-axis observations cannot be relabelled as a pipe through-wall temperature field or structural stress validation.",
+        "The pinned archive SHA-256 comes from previous acquisition, not a publisher checksum; raw and transformed rows are excluded from release."
+      ],
+      "split_unit": "physical rod, run family and repetition; channels are not independent specimens",
+      "assets": [
+        {
+          "filename": "sbcf36976g-1.zip",
+          "url": "https://data.mendeley.com/public-api/zip/sbcf36976g/download/1",
+          "checksum": "sha256:9226632888404fe792358bc5a33cf2edacbb16e35352a36a6c0c1c4c155e723a",
+          "checksum_origin": "previous_acquisition",
+          "bytes": 2099328,
+          "default": true,
+          "cache_paths": [
+            "data/raw/thermal-rod-transient/sbcf36976g-1.zip"
+          ]
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "tubers_nde",
+      "title": "TUBERS ultrasonic and synthetic crack collections",
+      "source": "https://doi.org/10.5281/zenodo.11239514",
+      "citation": "University of Essex and TWI ELLAS ASTIKI MI KERDOSKOPIKI ETAIREIA (2023), TUBERS data, v1, Zenodo, DOI 10.5281/zenodo.11239514.",
+      "creators": [
+        "University of Essex",
+        "TWI ELLAS ASTIKI MI KERDOSKOPIKI ETAIREIA"
+      ],
+      "version": "v1; record 11239514",
+      "origin": "mixed_compilation",
+      "license_id": "MIT",
+      "rights_evidence_url": "https://zenodo.org/api/records/11239514",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Inspect ultrasonic signal/geometry mappings and public pipeline NDE data requirements",
+        "Assess annotations and specimen grouping before evaluating detection models"
+      ],
+      "limitations": [
+        "Publisher title distinguishes ultrasonic and synthetic visual data; file-level acquisition origin and units require inspection.",
+        "Do not infer independent human hit/miss trials, blank opportunities or physical size calibration from images or filenames.",
+        "Native records and transformed observations are excluded from source releases; preserve publisher attribution and license metadata.",
+        "231 waveform CSVs retain signed times, 232 missing voltages and four nonincreasing adjacent times.",
+        "318 native filename image/mask pairs have 250-by-250 headers; seven masks have no paired source image.",
+        "The archives do not establish independent hit/miss/blank trials or a calibrated physical echo/size mapping."
+      ],
+      "split_unit": "specimen or generated source case; related scans and derived crops must remain grouped",
+      "assets": [
+        {
+          "filename": "Ultrasonic Data.zip",
+          "url": "https://zenodo.org/api/records/11239514/files/Ultrasonic%20Data.zip/content",
+          "checksum": "md5:28c2d7dc317f5c4ef784db95219e3481",
+          "bytes": 3937179,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "Visual Data.zip",
+          "url": "https://zenodo.org/api/records/11239514/files/Visual%20Data.zip/content",
+          "checksum": "md5:8990393298ff53ae0ad7ce3987fd7690",
+          "bytes": 42344716,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "vortex_air_meter_experiment",
+      "title": "Ranque-Hilsch vortex tube as an educational tool for classical thermodynamics teaching: research data",
+      "source": "https://data.mendeley.com/datasets/8zktfd9k9n/1",
+      "citation": "Zavaleta Aguilar, Eli Wilfredo; Narváez-Romo, Beethoven; Simoes-Moreira, Jose R (2023), Ranque-Hilsch vortex tube as an educational tool for classical thermodynamics teaching: research data, Mendeley Data V1, doi:10.17632/8zktfd9k9n.1",
+      "creators": [
+        "Eli Wilfredo Zavaleta Aguilar",
+        "Beethoven Narváez-Romo",
+        "Jose R Simoes-Moreira"
+      ],
+      "version": "1",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://data.mendeley.com/public-api/datasets/8zktfd9k9n/snapshot/1",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Preserve compressed-air orifice pressure/temperature observations and reported atmospheric pressure",
+        "Assess reported geometry/tap/gas-basis completeness without assuming independent flow calibration"
+      ],
+      "limitations": [
+        "No independent flow reference, geometry, tap dimensions, gas composition, timing or measurement uncertainty supplied in the selected file",
+        "Nominal compressed air is not an explicitly resolved dry-gas mixture or reference volume basis",
+        "No heat/mass conservation or meter field qualification from table acquisition alone"
+      ],
+      "split_unit": "complete physical vortex-tube operating run; branch observations within a run are dependent",
+      "assets": [
+        {
+          "filename": "Research data.pdf",
+          "url": "https://data.mendeley.com/public-files/datasets/8zktfd9k9n/files/b685af11-aa0f-4e45-9f2e-ae02b072977f/file_downloaded",
+          "checksum": "sha256:8c73b8be87add5f4c8763579c7c0e7bfeb1ab0be0f81cdca0c57f371da28c67a",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 183183,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "vsl_lng_water_calibration",
+      "title": "SI-traceable calibration dataset containing flow meter errors with LNG and water",
+      "source": "https://zenodo.org/records/22274102",
+      "citation": "Abdulrahman, Ara; Schakel, Menne (2026), SI-traceable calibration dataset containing flow meter errors with LNG and water, Zenodo record22274102, doi:10.5281/zenodo.22274102",
+      "creators": [
+        "Abdulrahman, Ara",
+        "Schakel, Menne"
+      ],
+      "version": "record 22274102; API version label absent",
+      "origin": "laboratory_experiment",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.22274102",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-27",
+      "intended_uses": [
+        "Review published SI-traceable flowmeter calibration errors and stated conditions/uncertainties",
+        "Preserve meter/test identity and separate liquid LNG/water from dry-gas orifice predictions"
+      ],
+      "limitations": [
+        "No gas orifice geometry or dry-gas reference conditions inferred from liquid meter calibration",
+        "Detailed LNG rows are individual repetition averages; water is available as setpoint summaries only; summary rows and component repetitions are dependent",
+        "No field acceptance or transfer across fluids without separate applicability evidence"
+      ],
+      "split_unit": "complete meter/fluid/calibration campaign; adjacent setpoints are dependent",
+      "assets": [
+        {
+          "filename": "SI-traceable calibration dataset containing flow meter errors with LNG and water.xlsx",
+          "url": "https://zenodo.org/api/records/22274102/files/SI-traceable%20calibration%20dataset%20containing%20flow%20meter%20errors%20with%20LNG%20and%20water.xlsx/content",
+          "checksum": "md5:a3c75510e4765c1d207b65a47d9ea795",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 116295,
+          "default": true
+        },
+        {
+          "filename": "ReadMe.pdf",
+          "url": "https://zenodo.org/api/records/22274102/files/ReadMe.pdf/content",
+          "checksum": "md5:1c857ea8fa484f9b966bdbbf4afb45c9",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 247851,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "water_acoustic_training_base",
+      "title": "Acoustic data for the manuscript entitled 'Self-supervised acoustic leakage detection for water distribution systems: A real-time diagnosis framework under data scarcity'",
+      "source": "https://zenodo.org/records/18631450",
+      "citation": "WANG, QI; Mei, Zhongyi; Zhan, Fan; Chen, Jiongxi; Acoustic data for the manuscript entitled 'Self-supervised acoustic leakage detection for water distribution systems: A real-time diagnosis framework under data scarcity'; doi:10.5281/zenodo.18631450",
+      "creators": [
+        "WANG, QI",
+        "Mei, Zhongyi",
+        "Zhan, Fan",
+        "Chen, Jiongxi"
+      ],
+      "version": "v1",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/18631450",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "group-aware acoustic source inspection",
+        "controlled-site leak versus no-leak monitoring"
+      ],
+      "limitations": [
+        "Environmental-noise archive is deliberately excluded because the depositor identifies third-party web audio without resolving original licenses.",
+        "Selected leak/no-leak recordings are described as on-site collected; published label semantics and event/site/device grouping need review.",
+        "Acoustic categories are not DAS gauge-length signals or pressure-arrival ground truth; no field detection performance or probabilities inferred."
+      ],
+      "split_unit": "physical experiment/site/device group; not arbitrary derived windows",
+      "assets": [
+        {
+          "filename": "no leak acoustic data.rar",
+          "url": "https://zenodo.org/api/records/18631450/files/no%20leak%20acoustic%20data.rar/content",
+          "checksum": "md5:d6b9fcd8a730f33fa6c155191b32f2a2",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 2080632,
+          "default": true,
+          "cache_paths": []
+        },
+        {
+          "filename": "leak acoustic data.rar",
+          "url": "https://zenodo.org/api/records/18631450/files/leak%20acoustic%20data.rar/content",
+          "checksum": "md5:2ec7cef54b0cbc09adab0047761fe9b2",
+          "checksum_origin": "publisher_metadata",
+          "bytes": 2920288,
+          "default": true,
+          "cache_paths": []
+        }
+      ],
+      "raw_in_code_release": false
+    },
+    {
+      "id": "water_pilot",
+      "title": "Hourly Anomaly Scores and Leak Labels from a Multi-Source Urban Water Distribution Network Dataset",
+      "source": "https://zenodo.org/records/15096167",
+      "citation": "Jan, Babela; Munk, Michal; Munkova, Dasa; https://doi.org/10.5281/zenodo.15096167",
+      "version": "v1",
+      "origin": "derived_scores",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/records/15096167",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-29",
+      "intended_uses": [
+        "descriptive association and threshold-screen comparisons of published anomaly scores against the publisher's leak-proximity label"
+      ],
+      "limitations": [
+        "The CSV contains already-derived anomaly scores, not raw process channels or mechanistic validation.",
+        "Scores are dimensionless standardized indices, not physical sensor values; do not label them as measured pressure, flow, vibration or temperature.",
+        "The binary label indicates a recorded leak within a plus/minus seven-day window, not the event instant; event lead time and causal direction cannot be recovered from this label alone.",
+        "Rows near the same leak window are temporally dependent. Use chronological blocks with an explicit purge and seek original event identities before claiming independent evaluation.",
+        "The released feature set was selected using association with the leak label; score-label metrics are descriptive and do not independently validate the upstream scoring algorithms.",
+        "A zero label means no leak was recorded within the label rule, not proof of leak-free operation; one anonymized zone and one year do not establish transferability.",
+        "Raw CSV and row-level derived records remain outside the source-code release."
+      ],
+      "split_unit": "chronological blocks with a documented purge at least as wide as the label window; original leak episodes are not separately identified",
+      "assets": [
+        {
+          "filename": "input_model_potenc_predXfault7_A.csv",
+          "url": "https://zenodo.org/api/records/15096167/files/input_model_potenc_predXfault7_A.csv/content",
+          "checksum": "md5:ae08cf142a6128f9ddc205a2ccbf80a9",
+          "bytes": 818525,
+          "default": true
+        },
+        {
+          "filename": "README.txt",
+          "url": "https://zenodo.org/api/records/15096167/files/README.txt/content",
+          "checksum": "md5:850d7486a5ad81d87021b6e162e17a19",
+          "bytes": 1441,
+          "default": true
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Jan, Babela",
+        "Munk, Michal",
+        "Munkova, Dasa"
+      ]
+    },
+    {
+      "id": "water_treatment",
+      "title": "Water Treatment Plant",
+      "source": "https://archive.ics.uci.edu/dataset/106/water+treatment+plant",
+      "citation": "Water Treatment Plant; https://doi.org/10.24432/C5FS4C",
+      "version": "UCI snapshot 2026-10-26",
+      "origin": "measured_process",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://archive.ics.uci.edu/dataset/106/water+treatment+plant",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-26",
+      "intended_uses": [
+        "process_context"
+      ],
+      "limitations": [
+        "Equipment or process labels are not human failure opportunities.",
+        "Observe source clocks, units, modes and data-group boundaries; no annual leak frequency inferred."
+      ],
+      "split_unit": "independent episode or physical source unit",
+      "assets": [
+        {
+          "filename": "source.zip",
+          "url": "https://archive.ics.uci.edu/static/public/106/water+treatment+plant.zip",
+          "checksum": "sha256:44e8cc2b294ce8d2d2c7c6a9bbb33dde463591c47add23f85e83ae67a94a0f31",
+          "cache_paths": [
+            "data/raw/water_treatment/source.zip",
+            "artifacts/raw/water_treatment/source.zip"
+          ],
+          "checksum_origin": "previous_acquisition"
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Manel Poch"
+      ]
+    },
+    {
+      "id": "wds_event_db",
+      "title": "WDSEventDB: real-time event diagnosis data for water distribution networks",
+      "source": "https://zenodo.org/records/17547955",
+      "citation": "Raza, N.; Iwakin, O.; Vilacres, D.; Putri, S.; Moazeni, F. WDSEventDB: A real-time benchmark dataset for event diagnosis in water distribution networks. Data set, Zenodo record 17547955 (2025); https://doi.org/10.5281/zenodo.17547955",
+      "version": "Zenodo v1; GitHub main at b9a3b54fbfce153e0728ec7c7e9f1e18414a0c19",
+      "origin": "laboratory_experiment",
+      "license_id": "CC0-1.0",
+      "rights_evidence_url": "https://github.com/Moazeni-s-Concise-Lab/WDSEventDB/blob/b9a3b54fbfce153e0728ec7c7e9f1e18414a0c19/LICENSE",
+      "rights_review": "reviewed_license",
+      "acquisition": "allowed",
+      "checked_on": "2026-10-28",
+      "intended_uses": [
+        "source-faithful ingestion and descriptive analysis of lab water-network leak, sensor-failure and cyberattack event runs after caller review of measurement semantics"
+      ],
+      "limitations": [
+        "Workbook rows have no documented physical timestamp column; source row order is preserved but must not be converted into seconds or a common clock without external evidence.",
+        "Pressure, flow, drive-frequency and valve channels have no verified engineering units or calibration mapping in the archive README; values remain raw source cells.",
+        "Excel formulas are retained as formula text and are never evaluated or replaced by cached values.",
+        "Event-folder and label cells identify dataset annotations only; they do not establish field failure rates, causal attribution, leak onset precision or sensor fault mechanisms.",
+        "Use complete workbook/event runs as grouping units until overlap and chronological independence are reviewed; do not randomly split rows.",
+        "Raw workbook cells and archive are excluded from the code distribution."
+      ],
+      "split_unit": "complete workbook/event run; chronological and cross-workbook overlap must be reviewed before evaluation",
+      "assets": [
+        {
+          "filename": "WDSEventDB.zip",
+          "url": "https://raw.githubusercontent.com/Moazeni-s-Concise-Lab/WDSEventDB/b9a3b54fbfce153e0728ec7c7e9f1e18414a0c19/WDSEventDB.zip",
+          "checksum": "md5:4ac57517151a5958ebc2226954254f8d",
+          "bytes": 2265766,
+          "sha256": "d1452c4a311f2c3132ddda1b78caab4c782f5c658553c5e32266cee230db459c",
+          "repository_blob_sha": "2e796d1727c638b73c68aa3c2dfea9a30b898102",
+          "checksum_origin": "publisher_metadata",
+          "default": true,
+          "cache_paths": [
+            "data/raw/wds_event_db/WDSEventDB.zip"
+          ],
+          "checksum_note": "Zenodo publisher record; the mirrored archive matched."
+        }
+      ],
+      "raw_in_code_release": false,
+      "creators": [
+        "Raza, Nazia",
+        "Iwakin, Oluwabunmi",
+        "Vilacres, Daniela",
+        "Putri, Saskia Anindya",
+        "Moazeni, Faegheh"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "pipeline_integrity.dataset_crosswalk.v1",
+  "reviewed_on": "2026-10-29",
+  "expected_dataset_ids": [
+    "leak_multisensor_transients",
+    "leak_testbed",
+    "potash_cp"
+  ],
+  "records": [
+    {
+      "dataset_id": "potash_cp",
+      "doi": "10.17632/z6m27978vj.2",
+      "version": "2",
+      "publisher_page": "https://data.mendeley.com/datasets/z6m27978vj/2",
+      "license_id": "CC-BY-4.0",
+      "catalog_archive_asset": "Current Density to Protect Carbon Steel in Saturated Brine.docx",
+      "catalog_asset_sha256": "de262b94567fb6d72c6ed520cdbecb5660d68579e266e33d0b33c023def9ed2f",
+      "catalog_asset_bytes": 15345,
+      "local_acquisition_state": "acquired_supplier_sha256_verified",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true
+    },
+    {
+      "dataset_id": "leak_testbed",
+      "doi": "10.17632/tbrnp6vrnj.1",
+      "version": "1",
+      "publisher_page": "https://data.mendeley.com/datasets/tbrnp6vrnj/1",
+      "license_id": "CC-BY-4.0",
+      "catalog_archive_asset": "leak_testbed-v1.zip",
+      "catalog_asset_sha256": "a8954b3cec0a0773a956177fed388fb891b25ef2cdf2d264b4b9557cf2a271a1",
+      "catalog_asset_bytes": 1080066320,
+      "local_acquisition_state": "user_provided_public_aggregate_zip_locally_sha256_pinned",
+      "checksum_origin": "previous_acquisition",
+      "supplier_checksum_verified": false,
+      "outer_asset_count": 4,
+      "sensor_member_count": 282,
+      "member_path_and_size_crosswalk": "exact_match_to_xw44wv2g88.1",
+      "content_hash_crosswalk": "pending_nurion"
+    },
+    {
+      "dataset_id": "leak_multisensor_transients",
+      "doi": "10.17632/xw44wv2g88.1",
+      "version": "1",
+      "publisher_page": "https://data.mendeley.com/datasets/xw44wv2g88/1",
+      "license_id": "CC-BY-4.0",
+      "catalog_archive_asset": "Dataset of Leak Simulations in Experimental Testbed Water Network.7z",
+      "catalog_asset_sha256": "c6d4a68901a145155a58ccb691769753cb7c0960416a375acac12128bedfd881",
+      "catalog_asset_bytes": 717637500,
+      "local_acquisition_state": "user_provided_and_publisher_sha256_verified",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true
+    }
+  ],
+  "metadata_overlap": {
+    "shared_creators": [
+      "Mohsen Aghashahi",
+      "Lina Sela",
+      "M. Katherine Banks"
+    ],
+    "shared_publisher_description": [
+      "280 recorded signals",
+      "47 m laboratory water-distribution testbed with 152.4 mm PVC",
+      "two accelerometers, two hydrophones and two dynamic-pressure sensors",
+      "four induced-leak classes plus no-leak; looped/branched layouts and varied flow/noise conditions"
+    ],
+    "assessment": "strong_metadata_overlap_possible_duplicate_or_related_deposits",
+    "equivalence_established": false,
+    "data_independence_established": false
+  },
+  "unresolved": [
+    "No normalized member-hash or row-level comparison has established whether tbrnp6vrnj and xw44wv2g88 contain identical or overlapping observations.",
+    "Member-level SHA-256 comparison of all 282 sensor files in tbrnp6vrnj.1 and xw44wv2g88.1 remains pending; matching paths and byte counts alone do not establish content equality."
+  ],
+  "handling": {
+    "do_not_redownload_as_a_separate_family_until_archive_identity_is_resolved": true,
+    "do_not_count_the_two_records_as_independent_physical_experiments": true,
+    "existing_xw44wv2g88_acquisition_counts_unchanged": true,
+    "raw_observations_copied": false
+  }
+}

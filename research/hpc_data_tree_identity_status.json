@@ -1,0 +1,14 @@
+{
+  "schema": "pipeline_integrity.hpc_data_tree_identity_status.v1",
+  "implementation": "scripts/hpc_data.py:check",
+  "behavior": "Pins no-follow identities for the raw root and every existing in-root directory and rechecks them after hashing all planned files.",
+  "verification_semantics": "A directory identity change forces verified=false even if individual file hashes match.",
+  "authored_regression_functions": 1,
+  "numerical_tests_executed": 0,
+  "nurion_job_submitted": false,
+  "limitations": [
+    "Does not guarantee immutability after check returns.",
+    "Does not establish filesystem or storage trustworthiness.",
+    "Does not grant redistribution rights."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "pipeline_integrity.spatial_independent_review.v1",
+  "producer_sha256": "00f1ab582e88ba4f92eb06fc22df3477efd4885c70199f0d32291fff24f4f810",
+  "reviews": {
+    "native_and_accounting": {
+      "checks": {
+        "actual_owner_baseline_computed": true,
+        "fixed_presence_person_once": true,
+        "same_mean_different_fn": true,
+        "impossible_integer_per_cell_means_refused": true,
+        "unknown_harm_not_zero": true,
+        "partial_export_unknown_invalid": true,
+        "retained_native_baseline_computed": true,
+        "original_attack_refused:ignition_request_result_changed_case_unchanged": true,
+        "original_attack_refused:ignition_request_native_digest_changed_case_unchanged": true,
+        "original_attack_refused:receptor_height_changed_native_facility_digest_stale": true,
+        "original_attack_refused:receptor_height_changed_rehashed_facility": true,
+        "original_attack_refused:known_domain_truncation_promoted": true,
+        "original_attack_refused:native_failed_ok_false_promoted": true,
+        "original_attack_refused:branch_harm_changed_thermal_harm_unchanged": true,
+        "actual_withheld_partial_not_zero": true,
+        "actual_withheld_fn_unknown": true,
+        "actual_withheld_export_values_unknown_invalid": true,
+        "actual_withheld_default_export_refused": true,
+        "common_frame_mismatch_refused": true,
+        "representative_receptor_height_mismatch_refused": true,
+        "actual_native_field_support_bounds_refused": true,
+        "producer_hash_stable": true
+      },
+      "passed": 22,
+      "total": 22,
+      "no_production_edits": true
+    },
+    "source_fluid_port_context": {
+      "checks": {
+        "positive_native_computed": true,
+        "positive_native_IR_unchanged": true,
+        "positive_native_receipt_replay": true,
+        "facility_property_basis_changed_refused": true,
+        "facility_port_position_changed_refused": true,
+        "source_asset_context_changed_refused": true,
+        "actual_withheld_partial_None": true,
+        "actual_withheld_export_None_invalid": true,
+        "producer_unchanged": true
+      },
+      "passed": 9,
+      "total": 9,
+      "no_production_edits": true
+    }
+  },
+  "criteria_may_overlap_and_are_not_independent_field_observations": true,
+  "reproduction": [
+    "python scripts/check_spatial_risk.py --help",
+    "python -m pytest tests/test_spatial_risk.py -q"
+  ],
+  "native_primitive_to_harm_replay_only": true,
+  "full_geometry_dispersion_fire_replay": false,
+  "field_qualified": false
+}

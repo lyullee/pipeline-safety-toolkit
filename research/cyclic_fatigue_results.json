@@ -1,0 +1,58 @@
+{
+  "schema": "pipeline_integrity.cyclic_fatigue_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "fatigue.goodman": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "8323d0a979737ec119318754b50fef61b9d6f761eebcb9311a912edf692433c3"
+    },
+    "fatigue.hysteresis_path": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "f97e858105d34746291e1633cd96748477b77b1303f2eaf651f3f7f28107d054"
+    },
+    "fatigue.strain_life": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "f7585da1f1341ccc90e88b26729265892fc9b7084039572d37cd3e334d6ff370"
+    }
+  },
+  "native_case_count": 16,
+  "case_status_counts": {
+    "computed": 12,
+    "needs_data": 4,
+    "out_of_scope": 4
+  },
+  "independent_reference_count": 10,
+  "maximum_reference_absolute_error": 7.275957614183426e-12,
+  "refusal_count": 11,
+  "pinned_job_replay_verified": true,
+  "signed_work_unknown_closure_and_source_order_preserved": true,
+  "cycles_and_reversals_distinct": true,
+  "experimental_field_validation": false,
+  "failure_probability_or_remaining_service_life_inferred": false,
+  "public_data_calibration_performed": false,
+  "limitations": [
+    "Authored arithmetic and root references are software verification only.",
+    "Material support and population declarations are caller reviews, not independent qualification.",
+    "No mean-stress correction is automatically chained into strain life.",
+    "Path energy is neither accumulated fatigue damage nor a failure probability."
+  ],
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_source_unchanged": true,
+  "external_source_license_sha256": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+  "external_source_notices_sha256": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+  "implementation_sha256": "5c8a47eeff2604ef965b9df29ee88108ac569fa16010c9991e83da91fe405bc7",
+  "source_guard_sha256": "37e1508b2fdcdeb946f999c3989687c5b9499de40f7fb03f7557be92f36198c1",
+  "script_sha256": "453cfd270eb32e4fa0e2cdd2de110fe5885840b716be212d6fa794a70972a68b",
+  "example_sha256": "460fcf054cdefea36acac807bd7feed4152666a6a05277c6f51daff7edb5397b"
+}

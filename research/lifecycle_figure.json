@@ -1,0 +1,8 @@
+{
+  "schema": "pipeline_integrity.lifecycle_figure.v1",
+  "source_sha256": "9e3dbf604e05df7e2f0dbdea10108c3abfe59eec6fe9a8281bdb8002d938c3e0",
+  "generator_sha256": "afcfd598061c35a095a4154336dd6fcac909ef1184e60e500204748e703e3a0a",
+  "figure_sha256": "a62326898df3830f5fe520c8f96fec498dbcd6706972b5044f777fcee837c536",
+  "observed_power_samples_plotted": false,
+  "market_prices_or_discount_rates_recommended": false
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "pipeline_integrity.lifting_verification.v1",
+  "checks": {
+    "replay:symmetric": true,
+    "closed_form_two_leg_tension": true,
+    "computed_not_field_qualified": true,
+    "shared_hook_resultant_not_sum_of_tension_magnitudes": true,
+    "five_hardware_checks": true,
+    "force_and_moment_residuals": true,
+    "signal_computation_origin_clock": true,
+    "replay:unreviewed": true,
+    "default_no_solve": true,
+    "replay:missing_capacity": true,
+    "capacity_unknown_keeps_nominal_and_withholds_acceptance": true,
+    "replay:overload": true,
+    "overload_not_solver_failure_or_approval": true,
+    "replay:unknown_mass": true,
+    "unknown_mass_no_solver": true,
+    "replay:redundant_sling": true,
+    "redundant_no_minimum_norm_sharing": true,
+    "replay:unbalanced": true,
+    "least_squares_residual_not_accepted_as_equilibrium": true,
+    "replay:anchor_wrong_direction": true,
+    "wrong_anchor_capacity_direction_withheld": true,
+    "rehashed_refusal:tension": true,
+    "rehashed_refusal:anchor": true,
+    "rehashed_refusal:acceptance": true,
+    "rehashed_refusal:stability": true,
+    "rehashed_refusal:runtime": true
+  },
+  "passed": 26,
+  "total": 26,
+  "records": 8,
+  "statuses": {
+    "computed": 2,
+    "needs_data": 3,
+    "out_of_scope": 3
+  },
+  "rehashed_mutations_refused": 5,
+  "file_sha256": {
+    "src/pipeline_integrity/lifting.py": "62e1f6316a02cad55946926426f415f4e5417aad46dde7926c79e5250b5c4c0e",
+    "tests/test_lifting.py": "e3526224116815f5f83d12607ef37e9195d46fc4a9915f83796c20ebad60c578",
+    "examples/lifting.py": "03394482461f4bea8a3b26d35356e8c5befed6f98cb7715794bd28e7631140ba",
+    "scripts/check_lifting.py": "fb94abe6c50e2e9a5a956f3ece57156c699cee5416a8c7ee6d46aa487b580b89",
+    "docs/LIFTING_KO.md": "b7ffa62fd52ee07c36dae831d622b465d344e29794bffac46d7ba1b985ddadc6"
+  },
+  "criteria_mix_contract_numeric_and_replay_checks": true,
+  "actual_supplier_or_field_data_applied": false,
+  "configuration_stability_or_dynamics_qualified": false
+}

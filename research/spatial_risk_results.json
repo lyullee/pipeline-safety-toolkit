@@ -1,0 +1,912 @@
+{
+  "schema": "pipeline_integrity.spatial_risk_research.v1",
+  "status": "passed_bounded_native_accounting_not_field_qualification",
+  "provider": {
+    "packages": {
+      "lh2_tno": {
+        "python_files": 190,
+        "source_sha256": "44dddf6176e559d39d7a1926d7bbf6b5f92bc710301a451a041857d2067f285c",
+        "version": "0.6.8",
+        "license": "MIT",
+        "license_sha256": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4"
+      },
+      "prism_qra": {
+        "python_files": 94,
+        "source_sha256": "27b506d6586ac564a43e198343a99319f44a9a9aa0d0fb9363de22dd1d891d25",
+        "version": "bundled_in_prism-risk",
+        "license": "MIT",
+        "license_sha256": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4"
+      },
+      "human_reliability": {
+        "python_files": 28,
+        "source_sha256": "f7d2f6ee821fd92640a2aa0a059f0ec993d50b49c0eb0a4dc23a4054adc51e20",
+        "version": "0.2.0",
+        "license": "MIT",
+        "license_sha256": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4"
+      }
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pydantic": "2.14.1"
+    },
+    "operations": [
+      "lh2_tno.risk.annual_risk",
+      "prism_qra.risk.fn_curve:expected_death_threshold",
+      "human_reliability.event_tree.event_tree",
+      "human_reliability.event_tree.fn_curve:integer_casualty_exceedance"
+    ]
+  },
+  "records": [
+    {
+      "id": "two_cell_joint_reference",
+      "status": "computed_diagnostic",
+      "sha256": "b83e48f8876867c30976732668fd21c6e6e36415fa5e1de529713e8a704a6b94",
+      "result_digest": "9d30a89422e77446feb381ab2770b6d089e420b05a75a4ac02bcc9d00ee5aeac",
+      "path": "artifacts/spatial_risk/two_cell_joint_reference.json"
+    },
+    {
+      "id": "same_marginals_different_dependence",
+      "status": "computed_diagnostic",
+      "sha256": "264b36a6bc395d7cdd51771612cde1b0c52c28c48c0d1d3fb2a0c2fae709635b",
+      "result_digest": "7470d4f39ee9e88380925fdac44b774f4e518ebc4e6aad9cc1db6a58daafd031",
+      "path": "artifacts/spatial_risk/same_marginals_different_dependence.json"
+    },
+    {
+      "id": "measured_context_derived_signal",
+      "status": "computed_diagnostic",
+      "sha256": "6000621715edc42f4a320805ec202b67dbc4dc52acb3069948759939c58fec32",
+      "result_digest": "b375407a310beca13158c8c5c3ea41d13c41ed4a9e896f29be0d2ce62ce67d72",
+      "path": "artifacts/spatial_risk/measured_context_derived_signal.json"
+    },
+    {
+      "id": "no_joint_distribution",
+      "status": "computed_diagnostic",
+      "sha256": "0fc85ec6e48048843639e94c04b48f268a6439f22cc0416c59f46f4ce5ac5cc2",
+      "result_digest": "938eabbae262295ee6c4f0d8ab7cdd1462905e93eea98fa239ad83d03df17588",
+      "path": "artifacts/spatial_risk/no_joint_distribution.json"
+    },
+    {
+      "id": "unknown_persons",
+      "status": "partial",
+      "sha256": "cf2f83a4608a6730f6243b77061c2dc8ed9ce42f5503e3b575249df83c719d1a",
+      "result_digest": "8a0f51e4c341772840d0e1541d678be78161afb3884ce7bb8d974e6418cde887",
+      "path": "artifacts/spatial_risk/unknown_persons.json"
+    },
+    {
+      "id": "unknown_presence_probability",
+      "status": "partial",
+      "sha256": "e8a972b5a23947349341e09ac4683d442326676b1b22ebca2a4fe1599330a442",
+      "result_digest": "33d166ff6269af5563848016e86c1e9baa5b278935527d95cbbfc04ebb541347",
+      "path": "artifacts/spatial_risk/unknown_presence_probability.json"
+    },
+    {
+      "id": "unknown_receptor_id",
+      "status": "partial",
+      "sha256": "bac69dd0313a4098dfdbfe617b872551001cbb35d9ee0abc8f8c7eb185ac626f",
+      "result_digest": "8dda5de9431a96a86e35d1fe35c43b366e16092cc64bdb48a290f7648914f07d",
+      "path": "artifacts/spatial_risk/unknown_receptor_id.json"
+    },
+    {
+      "id": "unknown_harm",
+      "status": "partial",
+      "sha256": "fc4d0306630faf6085e621c4fc0689263e1d9e31833db2526e8cf53c8a28677c",
+      "result_digest": "657077191e4636be5b18007a41851dffe49497d8bfa74c243ce13bd506fa62aa",
+      "path": "artifacts/spatial_risk/unknown_harm.json"
+    },
+    {
+      "id": "missing_initiating_rate",
+      "status": "partial",
+      "sha256": "5ab39126c9722fbe55e41f4432408e427b2f7dd51df4df7a34bdc017001d7ab0",
+      "result_digest": "7ac636a4dd1aaad74d281e3292f99687888c1ac38ba740086c3f0e7671194da7",
+      "path": "artifacts/spatial_risk/missing_initiating_rate.json"
+    },
+    {
+      "id": "zero_presence",
+      "status": "computed_diagnostic",
+      "sha256": "aa279832038ec6df7665f3d7ea2662d1547e392cb91852ce2688d5f3d6316f8e",
+      "result_digest": "4c4bd94eb559bd4dde862041f492c8bf62398ba66aa26ecb9214b413126285c2",
+      "path": "artifacts/spatial_risk/zero_presence.json"
+    },
+    {
+      "id": "double_population",
+      "status": "computed_diagnostic",
+      "sha256": "a73cfcf1e4607456c4977caab1cc6f94a30ca01c1f2f78adbecaf4554b9c3fe5",
+      "result_digest": "03c06431721f285d24a3127fd535ee86bb0d76fe5c6e7837189d5843f65ba4ab",
+      "path": "artifacts/spatial_risk/double_population.json"
+    },
+    {
+      "id": "double_cell_area_same_counts",
+      "status": "computed_diagnostic",
+      "sha256": "b036ec18bd0970baf6cc06eb53171cce50c1ffad18a88feab99adc53a3c9a9c8",
+      "result_digest": "15bb63cb2b176e5c12b03a0081299f27a268b958edbc6780795322586241576c",
+      "path": "artifacts/spatial_risk/double_cell_area_same_counts.json"
+    },
+    {
+      "id": "rate_not_probability",
+      "status": "computed_diagnostic",
+      "sha256": "c3b6b064732e99f3c22cb713c249aac7d320cbb2688d681a42cff0808b4332d3",
+      "result_digest": "96f390b3ccf9c0db866fb701d03f0080a0c1f744561fdaf1fba8f4000e73c448",
+      "path": "artifacts/spatial_risk/rate_not_probability.json"
+    },
+    {
+      "id": "withheld_before_optional",
+      "status": "needs_data",
+      "sha256": "1a9e6b4d267a3c7402c3a6feab7865c5946835c2cde7ca3dfc72e5999f272faa",
+      "result_digest": "def42afb001474754c2060ba5b552687cbac9e19799dfd024f8279737ce12033",
+      "path": "artifacts/spatial_risk/withheld_before_optional.json"
+    },
+    {
+      "id": "retained_process_wind_270",
+      "status": "computed_diagnostic",
+      "sha256": "c5920d87662f4763ad85620b2a84dfe4dcdad4821569770e365af3b224062aa0",
+      "result_digest": "37f3f15c98b8add23f48adb7565722b02d8282907f7254c8a253957ca20d56bc",
+      "path": "artifacts/spatial_risk/retained_process_wind_270.json"
+    },
+    {
+      "id": "retained_process_wind_180",
+      "status": "partial",
+      "sha256": "9ada456ab3c529757991284bec7f2e2aa3b807ebf720a91b8767cd1e429dcf99",
+      "result_digest": "44b0b6a2f9c002c4de603dc84cac90a3a4fba92253b9a4f51761fe0eadf4e70d",
+      "path": "artifacts/spatial_risk/retained_process_wind_180.json"
+    },
+    {
+      "id": "retained_process_unadapted",
+      "status": "partial",
+      "sha256": "7c4a39ba35498facbb35bf86e8b23641f9fb25397905b37c7745ffc3a20fab26",
+      "result_digest": "1dc4c08491fa0733fa7b95f529bf2affb8540107662e06dc0aaf3d3efdf39c4c",
+      "path": "artifacts/spatial_risk/retained_process_unadapted.json"
+    }
+  ],
+  "counts": {
+    "records": 17,
+    "statuses": {
+      "computed_diagnostic": 9,
+      "partial": 7,
+      "needs_data": 1
+    },
+    "criteria": 78,
+    "criteria_kinds": {
+      "contract_replay": 17,
+      "independent_authored_scalar": 9,
+      "independent_integer_joint_law": 4,
+      "independent_expected_threshold": 1,
+      "independent_joint_feasibility_counterexample": 1,
+      "contract_export": 5,
+      "unknown_meaning": 9,
+      "independent_geometry_and_count_units": 1,
+      "actual_native_projection_not_independent_physics": 3,
+      "original_native_source_semantic_refusal": 16,
+      "semantic_adversarial_replay": 11,
+      "source_and_runtime_integrity": 1
+    },
+    "adversarial_refusals": 27
+  },
+  "criteria": [
+    {
+      "id": "two_cell_joint_reference:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "independent:cell:0:0:fixed_location_ir_per_year",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": 0.01
+    },
+    {
+      "id": "independent:cell:0:0:present_person_ir_per_year",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": 0.00625
+    },
+    {
+      "id": "independent:cell:0:0:expected_fatalities_per_year",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": 0.0125
+    },
+    {
+      "id": "independent:cell:0:1:fixed_location_ir_per_year",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": 0.02
+    },
+    {
+      "id": "independent:cell:0:1:present_person_ir_per_year",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": 0.0025
+    },
+    {
+      "id": "independent:cell:0:1:expected_fatalities_per_year",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": 0.0025
+    },
+    {
+      "id": "independent:integer_FN:1",
+      "passed": true,
+      "kind": "independent_integer_joint_law",
+      "observed": 0.01125
+    },
+    {
+      "id": "independent:integer_FN:2",
+      "passed": true,
+      "kind": "independent_integer_joint_law",
+      "observed": 0.00375
+    },
+    {
+      "id": "independent:integer_FN:3",
+      "passed": true,
+      "kind": "independent_integer_joint_law",
+      "observed": 0.0
+    },
+    {
+      "id": "independent:expected_death_threshold_is_different",
+      "passed": true,
+      "kind": "independent_expected_threshold",
+      "observed": {
+        "expected_deaths": [
+          1.5
+        ],
+        "frequency_per_year": [
+          0.005
+        ]
+      }
+    },
+    {
+      "id": "same_marginals_different_dependence:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "independent:joint_dependence_FN",
+      "passed": true,
+      "kind": "independent_integer_joint_law",
+      "observed": null
+    },
+    {
+      "id": "independent:impossible_joint_correct_global_mean_refused",
+      "passed": true,
+      "kind": "independent_joint_feasibility_counterexample",
+      "observed": null
+    },
+    {
+      "id": "signal:actual_clock_units_origin",
+      "passed": true,
+      "kind": "contract_export",
+      "observed": null
+    },
+    {
+      "id": "measured_context_derived_signal:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "signal:derived_origin_and_asset",
+      "passed": true,
+      "kind": "contract_export",
+      "observed": null
+    },
+    {
+      "id": "no_joint_distribution:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "no_joint:FN_withheld_expected_available",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "unknown_persons:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "unknown:persons:not_zero",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "unknown:persons:partial_signal",
+      "passed": true,
+      "kind": "contract_export",
+      "observed": null
+    },
+    {
+      "id": "unknown_presence_probability:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "unknown:presence_probability:not_zero",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "unknown:presence_probability:partial_signal",
+      "passed": true,
+      "kind": "contract_export",
+      "observed": null
+    },
+    {
+      "id": "unknown_receptor_id:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "unknown:receptor_id:not_zero",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "unknown:receptor_id:partial_signal",
+      "passed": true,
+      "kind": "contract_export",
+      "observed": null
+    },
+    {
+      "id": "unknown_harm:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "unknown:conditional_harm_not_zero",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "missing_initiating_rate:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "unknown:missing_rate_withheld",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "zero_presence:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "zero_presence:fixed_ir_unchanged",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": null
+    },
+    {
+      "id": "double_population:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "population:counts_not_occupancy_squared",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": null
+    },
+    {
+      "id": "double_cell_area_same_counts:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "area:persons_not_density",
+      "passed": true,
+      "kind": "independent_geometry_and_count_units",
+      "observed": null
+    },
+    {
+      "id": "rate_not_probability:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "rate:greater_than_one_is_not_clipped",
+      "passed": true,
+      "kind": "independent_authored_scalar",
+      "observed": null
+    },
+    {
+      "id": "withheld_before_optional:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "retained_process_wind_270:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "native_process:wind_270:projection",
+      "passed": true,
+      "kind": "actual_native_projection_not_independent_physics",
+      "observed": {
+        "harm": 0.28,
+        "rate": 0.005600000000000001
+      }
+    },
+    {
+      "id": "native_process:wind_270:joint_not_inferred",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:ignition_and_harm_coherent",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:harm_only",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:receptor_position",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:source_clock",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:presence_already_applied",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:provider_version",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:ignition_request_result_changed_case_unchanged",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:ignition_request_native_digest_changed_case_unchanged",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:receptor_height_changed_native_facility_digest_stale",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:receptor_height_changed_rehashed_facility",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:known_domain_truncation_promoted",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:native_failed_ok_false_promoted",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:branch_harm_changed_thermal_harm_unchanged",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:facility_property_basis_changed",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:facility_port_position_changed",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "rehashed_native:source_asset_context_changed",
+      "passed": true,
+      "kind": "original_native_source_semantic_refusal",
+      "observed": null
+    },
+    {
+      "id": "retained_process_wind_180:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "native_process:wind_180:projection",
+      "passed": true,
+      "kind": "actual_native_projection_not_independent_physics",
+      "observed": {
+        "harm": null,
+        "rate": null
+      }
+    },
+    {
+      "id": "native_process:wind_180:joint_not_inferred",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "retained_process_unadapted:semantic_replay",
+      "passed": true,
+      "kind": "contract_replay",
+      "observed": null
+    },
+    {
+      "id": "native_process:unadapted:projection",
+      "passed": true,
+      "kind": "actual_native_projection_not_independent_physics",
+      "observed": {
+        "harm": null,
+        "rate": null
+      }
+    },
+    {
+      "id": "native_process:unadapted:joint_not_inferred",
+      "passed": true,
+      "kind": "unknown_meaning",
+      "observed": null
+    },
+    {
+      "id": "rehashed:map",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:event_ledger",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:integer_FN",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:expected_curve",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:geometry",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:source_pin",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:meaning",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:qualification",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:population",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:clock",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "rehashed:status",
+      "passed": true,
+      "kind": "semantic_adversarial_replay",
+      "observed": null
+    },
+    {
+      "id": "native_pins:before_after",
+      "passed": true,
+      "kind": "source_and_runtime_integrity",
+      "observed": null
+    }
+  ],
+  "adversarial": [
+    {
+      "id": "map",
+      "refused": true
+    },
+    {
+      "id": "event_ledger",
+      "refused": true
+    },
+    {
+      "id": "integer_FN",
+      "refused": true
+    },
+    {
+      "id": "expected_curve",
+      "refused": true
+    },
+    {
+      "id": "geometry",
+      "refused": true
+    },
+    {
+      "id": "source_pin",
+      "refused": true
+    },
+    {
+      "id": "meaning",
+      "refused": true
+    },
+    {
+      "id": "qualification",
+      "refused": true
+    },
+    {
+      "id": "population",
+      "refused": true
+    },
+    {
+      "id": "clock",
+      "refused": true
+    },
+    {
+      "id": "status",
+      "refused": true
+    }
+  ],
+  "original_native_adversarial": [
+    {
+      "id": "ignition_and_harm_coherent",
+      "refused": true
+    },
+    {
+      "id": "harm_only",
+      "refused": true
+    },
+    {
+      "id": "receptor_position",
+      "refused": true
+    },
+    {
+      "id": "source_clock",
+      "refused": true
+    },
+    {
+      "id": "presence_already_applied",
+      "refused": true
+    },
+    {
+      "id": "provider_version",
+      "refused": true
+    },
+    {
+      "id": "ignition_request_result_changed_case_unchanged",
+      "refused": true
+    },
+    {
+      "id": "ignition_request_native_digest_changed_case_unchanged",
+      "refused": true
+    },
+    {
+      "id": "receptor_height_changed_native_facility_digest_stale",
+      "refused": true
+    },
+    {
+      "id": "receptor_height_changed_rehashed_facility",
+      "refused": true
+    },
+    {
+      "id": "known_domain_truncation_promoted",
+      "refused": true
+    },
+    {
+      "id": "native_failed_ok_false_promoted",
+      "refused": true
+    },
+    {
+      "id": "branch_harm_changed_thermal_harm_unchanged",
+      "refused": true
+    },
+    {
+      "id": "facility_property_basis_changed",
+      "refused": true
+    },
+    {
+      "id": "facility_port_position_changed",
+      "refused": true
+    },
+    {
+      "id": "source_asset_context_changed",
+      "refused": true
+    }
+  ],
+  "retained_native_process_applications": [
+    {
+      "id": "wind_270",
+      "original_result_digest": "c40a589b44822653aafce08b36b56ffda9f06353950ac098ce73755e51be4ab1",
+      "original_status": "computed_diagnostic",
+      "original_issues": [],
+      "source_file_sha256": "7881e830532cf0263171fbca84a2eb614a62cb79df317cbe6c66ecbf4978b534",
+      "original_provider": {
+        "id": "PRISM/lh2-tno",
+        "version": "0.6.8",
+        "source_sha256": "44dddf6176e559d39d7a1926d7bbf6b5f92bc710301a451a041857d2067f285c",
+        "backend_packages": [
+          {
+            "name": "prism_qra",
+            "source_sha256": "27b506d6586ac564a43e198343a99319f44a9a9aa0d0fb9363de22dd1d891d25"
+          },
+          {
+            "name": "prism_lh2_models",
+            "source_sha256": "86e43d526f7eaf838f32dfd824a1adfab5ab45bacbaecfcf84c0fc5c3074e45c"
+          },
+          {
+            "name": "slabx",
+            "source_sha256": "569c97642f882e94a93d71a45dd5592027b479569d8cfaed3b70e5b16f085163"
+          },
+          {
+            "name": "slabx_lh2",
+            "source_sha256": "9a8bcd969c5db54ceb19bb3a3fbdb061222e0b3156108927a3d869c3f4b7b9a7"
+          }
+        ],
+        "required_versions": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "CoolProp": "8.0.0",
+          "pydantic": "2.14.1"
+        }
+      }
+    },
+    {
+      "id": "wind_180",
+      "original_result_digest": "e6932bfbb46b40fe05bfa63002627f6c60cc8839b8a3df755c08be0f7f3f1c80",
+      "original_status": "withheld",
+      "original_issues": [
+        "owner_consequence_execution_failed"
+      ],
+      "source_file_sha256": "23c45b9e5a6bf773d48757089d9624508ab98d503d3205a2ad345586faa2fd57",
+      "original_provider": {
+        "id": "PRISM/lh2-tno",
+        "version": "0.6.8",
+        "source_sha256": "44dddf6176e559d39d7a1926d7bbf6b5f92bc710301a451a041857d2067f285c",
+        "backend_packages": [
+          {
+            "name": "prism_qra",
+            "source_sha256": "27b506d6586ac564a43e198343a99319f44a9a9aa0d0fb9363de22dd1d891d25"
+          },
+          {
+            "name": "prism_lh2_models",
+            "source_sha256": "86e43d526f7eaf838f32dfd824a1adfab5ab45bacbaecfcf84c0fc5c3074e45c"
+          },
+          {
+            "name": "slabx",
+            "source_sha256": "569c97642f882e94a93d71a45dd5592027b479569d8cfaed3b70e5b16f085163"
+          },
+          {
+            "name": "slabx_lh2",
+            "source_sha256": "9a8bcd969c5db54ceb19bb3a3fbdb061222e0b3156108927a3d869c3f4b7b9a7"
+          }
+        ],
+        "required_versions": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "CoolProp": "8.0.0",
+          "pydantic": "2.14.1"
+        }
+      }
+    },
+    {
+      "id": "unadapted",
+      "original_result_digest": "632ba7d24b8045e0e9dcab4e5a617407c221a838b9483b3175203f6801efbcf1",
+      "original_status": "withheld",
+      "original_issues": [
+        "owner_consequence_execution_failed"
+      ],
+      "source_file_sha256": "ee7a1a2eb3a6b729ec6b1dd331799a8a9766d9b17ae59966ad154c5bf985efa9",
+      "original_provider": {
+        "id": "PRISM/lh2-tno",
+        "version": "0.6.8",
+        "source_sha256": "44dddf6176e559d39d7a1926d7bbf6b5f92bc710301a451a041857d2067f285c",
+        "backend_packages": [
+          {
+            "name": "prism_qra",
+            "source_sha256": "27b506d6586ac564a43e198343a99319f44a9a9aa0d0fb9363de22dd1d891d25"
+          },
+          {
+            "name": "prism_lh2_models",
+            "source_sha256": "86e43d526f7eaf838f32dfd824a1adfab5ab45bacbaecfcf84c0fc5c3074e45c"
+          },
+          {
+            "name": "slabx",
+            "source_sha256": "569c97642f882e94a93d71a45dd5592027b479569d8cfaed3b70e5b16f085163"
+          },
+          {
+            "name": "slabx_lh2",
+            "source_sha256": "9a8bcd969c5db54ceb19bb3a3fbdb061222e0b3156108927a3d869c3f4b7b9a7"
+          }
+        ],
+        "required_versions": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "CoolProp": "8.0.0",
+          "pydantic": "2.14.1"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "local ENU rectangular representative cells only; no continuous contour interpolation",
+    "population is authored disjoint integer counts, not a calibrated public exposure map",
+    "true FN needs an externally supplied reviewed joint integer per-cell count law with each cell mean matching its own presence and harm marginals; dependence is never inferred",
+    "finite-window harm annualized by supplied occurrence rate; no full-facility QRA qualification",
+    "WorldPop WGS84 fractional modeled people/pixel is not silently converted or rounded into this integer/local-metre contract"
+  ],
+  "code_sha256": {
+    "src/pipeline_integrity/spatial_risk.py": "00f1ab582e88ba4f92eb06fc22df3477efd4885c70199f0d32291fff24f4f810",
+    "tests/test_spatial_risk.py": "d45fed05a0584c812f2158e0aaf5056b1325c1c25ca6c6cec5ac0066d640f430",
+    "examples/spatial_risk.py": "6b81ba58e37e5a3f6dc0e409c796769f8728d35943fc78357f8e29f1a4b9cbd8",
+    "scripts/check_spatial_risk.py": "9846b1c07bd934edc25a7ddf951eac1ea326492cc12c4a34619b09273a68fd49",
+    "docs/SPATIAL_RISK_KO.md": "318cc665baab2e943bc7271a682d20a80f9e76a428e42e396b755ee1e402db3a"
+  }
+}

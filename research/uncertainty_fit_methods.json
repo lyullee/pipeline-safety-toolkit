@@ -1,0 +1,35 @@
+{
+  "schema": "pipeline_integrity.uncertainty_fit_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "runtime": {"numpy": "2.5.4", "scipy": "1.18.1"},
+  "added_runtime_dependencies": [],
+  "references": [
+    {
+      "title": "SciPy lognorm and distribution fitting",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html",
+      "decision": "Fit only predeclared normal/lognormal marginals on training rows; fix lognormal location at zero; withhold unresolved support or scale."
+    },
+    {
+      "title": "SciPy rankdata",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.rankdata.html",
+      "decision": "Retain ties using average ranks and finite plotting positions; estimate latent normal-score correlation without reading holdout values."
+    },
+    {
+      "title": "Gneiting and Raftery (2007), Strictly Proper Scoring Rules, Prediction, and Estimation",
+      "url": "https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf",
+      "decision": "Independently implement the finite weighted energy-score loss using SciPy pairwise distances and caller-declared variable scales. No wording, figures, tables or software were copied."
+    },
+    {
+      "title": "Helwig, Pignanelli and Schuetze, Condition monitoring of hydraulic systems, DOI 10.24432/C5CW21",
+      "url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+      "license_id": "CC-BY-4.0",
+      "decision": "Read all source cycles without treating profile labels as independent field trials or error opportunities; retain full condition and original source-order blocks."
+    }
+  ],
+  "family_or_scale_selected_using_holdout": false,
+  "single_score_implies_distribution_or_field_qualification": false,
+  "source_or_derived_observation_rows_in_release": false,
+  "code_comments_and_explanations_original": true,
+  "upstream_package_notices_retained": true,
+  "automated_review_is_not_legal_clearance": true
+}

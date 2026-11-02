@@ -1,0 +1,139 @@
+{
+  "schema": "pipeline_integrity.kinematic_head_status.v1",
+  "kind": "shared_head_pressure_code_and_static_inverse_review_not_numerical_execution",
+  "baseline_bundle_sha256": "2d7ef38524a4a7bfa2b1c9bcfb5adadd46ae1b0d08c781dff896743534675ad0",
+  "source_changes": [
+    {
+      "source_path": "src/pipeline_integrity/models/hydraulics.py",
+      "baseline_sha256": "b34c7a12f870602594edce2b22ab69fa829b11f4b4ffb52fd9acc2690f76a11f",
+      "current_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/friction_study.py",
+      "baseline_sha256": "85d9822b54a7d247021690eb130ab28fbec7980dff23adc37b48fb941432f3ab",
+      "current_sha256": "118b81b4c7f8da86e60ef5dac700e1412f55f750c18b98db41d64cd87ce8dfb5",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/inverse.py",
+      "baseline_sha256": "1d1b27981d6f1759dfeeb0c9e5f260ed8f72bfc88cf7ec78a355fc997a84dc09",
+      "current_sha256": "82cea7b02bf6b1259c91221dc0ed1ddf77829709630fef3efdd89d0116e93228",
+      "change": "modified"
+    },
+    {
+      "source_path": "src/pipeline_integrity/registry.py",
+      "baseline_sha256": "66bb1807cf59ea41b7dd8edd0b2ae64760a4fd9587d5b8298a79573f20c4dbda",
+      "current_sha256": "c44f742b1544917ab1f12872be16b3a2146b1227e61900817954c7444faa422e",
+      "change": "modified"
+    },
+    {
+      "source_path": "scripts/inspect_pressure_source_prefix.py",
+      "baseline_sha256": null,
+      "current_sha256": "eacfec5f53fd2d06ba637b608e5397f84ae909d5bc5749ccbeb5791cfaa2e9e9",
+      "change": "added"
+    }
+  ],
+  "head_density_fabricated": false,
+  "pressure_mass_and_power_without_density_computed": false,
+  "source_fingerprint_schema": "pipeline_integrity.model_source.v2",
+  "prefix_format_review": "research/pressure_prefix_review_status.json",
+  "added_unexecuted_test_functions": [
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_density_free_laminar_head_matches_independent_hagen_poiseuille_reference"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_head_does_not_invent_density_and_revalidates_copied_inputs"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_known_zero_flow_static_mapping_does_not_require_representable_viscosity_ratio"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_mapping_specific_overflow_withholds_only_unrepresentable_outputs"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_signed_friction_and_zero_flow_keep_geometric_elevation_direction"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_supplied_density_pressure_contract_is_consistent_with_shared_head_kernel"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_transition_policy_is_the_same_shared_owner_domain"
+    },
+    {
+      "source_path": "tests/test_liquid_head.py",
+      "function": "test_turbulent_head_uses_existing_darcy_colebrook_owner"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_density_free_head_forward_has_no_invented_viscosity_pressure_or_power"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_density_independent_head_matches_supplied_density_pressure_mapping"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_point_inverse_uses_source_kinematic_state_without_density"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_large_finite_physical_rmse_does_not_overflow_intermediate_square"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_point_identity_mutation_is_a_contract_error_not_a_dictionary_key_error"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_previous_parameter_alias_does_not_rewrite_evaluation_trace"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_provider_cannot_change_requested_parameter_dictionary"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_shared_mutable_prediction_does_not_change_earlier_cached_evaluations"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_time_context_mutation_is_rejected_without_changing_callers_context"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_time_model_copy_is_revalidated_before_optional_solver_import"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_time_predictions_are_revalidated_and_withheld_axis_is_bound"
+    },
+    {
+      "source_path": "tests/test_inverse.py",
+      "function": "test_withheld_prediction_cannot_hide_a_changed_provider_source"
+    },
+    {
+      "source_path": "tests/test_registry_sources.py",
+      "function": "test_same_public_function_detects_helper_module_change"
+    },
+    {
+      "source_path": "tests/test_registry_sources.py",
+      "function": "test_source_identity_change_during_evaluation_rejected"
+    },
+    {
+      "source_path": "tests/test_registry_sources.py",
+      "function": "test_source_unavailable_is_explicit_without_inventing_a_module_pin"
+    }
+  ],
+  "function_count_is_not_executed_case_count": true,
+  "pytest_scientific_native_mpi_pbs_executions": 0,
+  "actual_archive_decoder_used_for_format_only": true,
+  "independent_field_validation": false
+}

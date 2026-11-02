@@ -1,0 +1,239 @@
+{
+  "schema": "pipeline_integrity.adapter_job_inventory.v1",
+  "kind": "static_source_allowlist_not_runtime_validation",
+  "adapters": [
+    {
+      "id": "construction.pull",
+      "module": "pipeline_integrity.pulling",
+      "parameters_contract": "PullingRequest",
+      "evaluate": "evaluate_pulling",
+      "verify": "verify_pulling_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "98965942fa61038239fbf9bf3064b4bbc77925b40f8cae283cdb4a59cd48634c",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "leak.sensor_placement",
+      "module": "pipeline_integrity.sensor_placement",
+      "parameters_contract": "SensorPlacementRequest",
+      "evaluate": "plan_sensor_placement",
+      "verify": "verify_sensor_placement_record",
+      "provider_roles": [
+        "backend"
+      ],
+      "payload_contracts": {},
+      "consumer_source_sha256": "4071c6c0e02f25ff790d1c868d5000afb7e83e82db0843101c11dcb8952d30c9",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "tanks.breathing",
+      "module": "pipeline_integrity.tank_breathing",
+      "parameters_contract": "TankBreathingRequest",
+      "evaluate": "evaluate_tank_breathing",
+      "verify": "verify_tank_breathing_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "325c86e04e1bc006156a88959346380f4fa888749ebc06d640521e8eb7c0c719",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "construction.route",
+      "module": "pipeline_integrity.route_planning",
+      "parameters_contract": "RoutePlanningRequest",
+      "evaluate": "evaluate_routes",
+      "verify": "verify_route_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "14fb7c16777dae7a4fcf6d824ddea98b284af64e117b76783120ea73eef3a511",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "leak.inverse_localization",
+      "module": "pipeline_integrity.inverse_localization",
+      "parameters_contract": "LocalizationRequest",
+      "evaluate": "localize_leak",
+      "verify": "verify_inverse_localization_record",
+      "provider_roles": [
+        "provider"
+      ],
+      "payload_contracts": {},
+      "consumer_source_sha256": "b7e3f30cc7efeccc704ada3f303ee036f8e003ea2de5b3f66b9a0851fb7da254",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "transport.pig_motion",
+      "module": "pipeline_integrity.pig_motion",
+      "parameters_contract": "PigMotionRequest",
+      "evaluate": "evaluate_pig_motion",
+      "verify": "verify_pig_motion_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "8f2e138add31f945093537b1767a66ae31bb3962feab2c5a82cf0ab89c37acdd",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "economics.optimization",
+      "module": "pipeline_integrity.operating_optimization",
+      "parameters_contract": "OperatingOptimizationRequest",
+      "evaluate": "optimize_operating_plans",
+      "verify": "verify_operating_optimization_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "e5a7bb81405a5adda09a8107745159bd499a4883eb6c8100efb599dd45c8d15c",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "leak.external_sensing",
+      "module": "pipeline_integrity.external_sensing",
+      "parameters_contract": "ExternalSensingRequest",
+      "evaluate": "adapt_external_sensing",
+      "verify": "verify_external_sensing_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "495bf2bf6c361cb8ad3ded8a13d599fbb29480d8755b4ecd2f485c8d463358be",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "thermal.heated_oil",
+      "module": "pipeline_integrity.heated_transport",
+      "parameters_contract": "HeatedTransportRequest",
+      "evaluate": "evaluate_heated_transport",
+      "verify": "verify_heated_transport_record",
+      "provider_roles": [
+        "property_provider"
+      ],
+      "payload_contracts": {},
+      "consumer_source_sha256": "7e8c77fb0c4a92761b3d8e92f2347dd544ce8eff7222e491e9b051eae18f5e7a",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "structural.soil_pipe",
+      "module": "pipeline_integrity.soil_pipe",
+      "parameters_contract": "SoilPipeRequest",
+      "evaluate": "evaluate_soil_pipe",
+      "verify": "verify_soil_pipe_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "f2929f38f5395bb5b40409656380bab66e2436f1a3530fdb2d7de366a2429cce",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "transport.slurry",
+      "module": "pipeline_integrity.slurry_transport",
+      "parameters_contract": "SlurryTransportRequest",
+      "evaluate": "evaluate_slurry_transport",
+      "verify": "verify_slurry_transport_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "868b45e31b095ceb59c3527cbe1251314850c0da0f1a256983397f15014a1d0f",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "structural.fracture_arrest",
+      "module": "pipeline_integrity.fracture_arrest",
+      "parameters_contract": "FractureArrestRequest",
+      "evaluate": "assess_fracture_arrest",
+      "verify": "verify_fracture_arrest_record",
+      "provider_roles": [
+        "provider"
+      ],
+      "payload_contracts": {
+        "trajectory": "ArrestTrajectory"
+      },
+      "consumer_source_sha256": "ef609e4c444376229026006d42f3ad056e91d780202c06ac8005657f605d5657",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "transient.gas_nonisothermal",
+      "module": "pipeline_integrity.gas_thermal_transient",
+      "parameters_contract": "GasThermalTransientRequest",
+      "evaluate": "evaluate_gas_thermal_transient",
+      "verify": "verify_gas_thermal_transient_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "33981d6bcdce97d087dfee531b6ecbaa67c74c2218d6236b279da6b239542b8c",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "structural.buckling",
+      "module": "pipeline_integrity.buckling",
+      "parameters_contract": "BucklingRequest",
+      "evaluate": "evaluate_buckling",
+      "verify": "verify_buckling_record",
+      "provider_roles": [
+        "provider"
+      ],
+      "payload_contracts": {},
+      "consumer_source_sha256": "1ed70f7a2a1afde40bb3d5c2daeea646409bc0c523c21692a044986d80c1d5f5",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "transport.hydrate",
+      "module": "pipeline_integrity.deposition_risk",
+      "parameters_contract": "DepositionRequest",
+      "evaluate": "assess_deposition",
+      "verify": "verify_deposition_record",
+      "provider_roles": [
+        "provider"
+      ],
+      "payload_contracts": {
+        "envelope": "DepositionEnvelope"
+      },
+      "consumer_source_sha256": "643a80298ce0ceaccb4d5daf125fdd2e086768bd5566c43056299521b975e6fd",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "leak.negative_pressure_wave",
+      "module": "pipeline_integrity.pressure_wave",
+      "parameters_contract": "PressureWaveRequest",
+      "evaluate": "evaluate_pressure_wave",
+      "verify": "verify_pressure_wave_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "343826770953e07277693a9de54d06b5324924a53bd521bd592e68502d783b1f",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "equipment.compressor_map",
+      "module": "pipeline_integrity.compressor_train",
+      "parameters_contract": "CompressorTrainRequest",
+      "evaluate": "evaluate_compressor_train",
+      "verify": "verify_compressor_train_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "0323f3086ef68767e7fc686ef044fff47b549be802b5289260f63dba9d31df68",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    },
+    {
+      "id": "thermal.phase_change",
+      "module": "pipeline_integrity.phase_change_exchange",
+      "parameters_contract": "PhaseChangeRequest",
+      "evaluate": "evaluate_phase_change",
+      "verify": "verify_phase_change_record",
+      "provider_roles": [],
+      "payload_contracts": {},
+      "consumer_source_sha256": "9f467f00524d299f9b232dd3c4f96edcc36d6f71b3fc30ecb358f7c40f76ffd6",
+      "signature_check": "static_ast_only",
+      "native_execution_verified": false
+    }
+  ],
+  "tests_executed": 0
+}

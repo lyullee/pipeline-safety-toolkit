@@ -1,0 +1,90 @@
+{
+  "schema_version": "pipeline_integrity.knowledge_summary.v1",
+  "capability": "knowledge.assistance",
+  "qualification": "offline_library_interface_only",
+  "recommended_scope_state": "partial",
+  "synthetic_corpus": {
+    "sources": 2,
+    "passages": 4,
+    "license_id": "MIT",
+    "corpus_sha256": "bcd0cefea4202dd374378e70b09ffcd0d915d81e10e904aaf7f393b903124bea"
+  },
+  "executed_requests": 8,
+  "withheld_before_native": 2,
+  "status_counts": {
+    "computed": 6,
+    "needs_data": 4
+  },
+  "independent_contract_checks": 28,
+  "corrupted_receipts_rejected": 33,
+  "documentation_python_blocks_executed": 1,
+  "checks_passed": true,
+  "original_checkout_unchanged": true,
+  "source_fingerprint": {
+    "source_sha256": "572eca2cd0bfae7363920a2680b2559a10a1d2797922fc084b447ed5d7545ffd",
+    "files": {
+      "CITATION.cff": "81e0343690090dfdb72f6cd5454d7a0952c8f85682c6ed65f96766d07f89d2db",
+      "LICENSE": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4",
+      "pyproject.toml": "cf6f5c32df30f7a303588fd05b9094b208e97064a1bf726d388d87a878bb05d8",
+      "python/saga/__init__.py": "e9f2b741608dd20f8f2368c7e08ff096d0cb8b10277582bd2b0c2650a3afef28",
+      "python/saga/api.py": "12b7a5a76e5975ff4037b8f714b4dd25b1b2010ba7c9873ae25b8646b7d91628",
+      "python/saga/cli.py": "398719a3c148278f8c518ec2ccb4235d59e770ed3ecd5f83c9924f8d113b63f1",
+      "python/saga/config.py": "2ebf6933274f9f6b955e8a0c48581663fdfe8401414a512569b8ca64e0d7e301",
+      "python/saga/database.py": "f6bcbcd2fa548ef1089a4f10bb0d573d1f0f48cabe7a9667ecc1779ab1b6e7a0",
+      "python/saga/external_sources.py": "27f2924d837207723c539785fc2a79910f384dcf2c9ac947ddbd1f8d28ce497a",
+      "python/saga/hazop.py": "c55004574523a21c2417ce513b5e20eff8b8f4d3417c065c6e8be7cb8b086c3b",
+      "python/saga/indexer.py": "ea3172aabae9fba66da77c5720ef0b6f865003c6d40ba5652048b75979ac0746",
+      "python/saga/law_api.py": "ed20ea74ce640eee3aca0e4736ae83a9dcb825c7a675bf1b0192e147b2aadabc",
+      "python/saga/legacy_corpus.py": "eab5f9aca474bd2fe29e4a83ce5925ddfe7db4d7d71a0c6410ce78cafee521f8",
+      "python/saga/rag.py": "5dee3d680896460601ab02cc589788090ddd1986e57d58e00d428a38f7ad010c",
+      "python/saga/schemas.py": "4e88b0065b1b5c23c59cd5b0edba283f4a3595d720dc62ee7386b3db4b9a4534",
+      "python/saga/service_hub_client.py": "a3446e0bac71d8c61886952de0a26cecf481d6cbf2617510595849d8a86de8df",
+      "python/saga/service_hub_ocr.py": "3ebe0d5e8e714910b62c83e449a73c71c6eb11cd888c704b75e2168a98730118",
+      "python/saga/text.py": "6fc0a322d45959f16cbd73d2671e5e2fcd4b9e3884aff68d1d1276e15f6c6374",
+      "python/saga/vector_index.py": "e939c009d63e9dfc39a06307e12ce8ec129f056fab12892cf52e872988a1a1cb",
+      "README.md": "fa9deca2c78788bac5532b8060f0d8a1f56d89fe1aeff24732eb3793a23b8247",
+      "term_aliases.json": "b055bb6b60ce913796bcb40a92774e91f11b5e1e9842569d61bf0fba3a1425fb"
+    }
+  },
+  "owner_version": {
+    "package": "2.0.0",
+    "project": "2.0.1",
+    "vector_model": "hash-ngram-v1"
+  },
+  "runtime": {
+    "pydantic": "2.14.1",
+    "pydantic-settings": "2.16.1",
+    "openai": "2.54.0",
+    "pymupdf": "1.28.2"
+  },
+  "schema_digests": {
+    "Citation": "2fef58a155c6c42d70d8e1c315e43ce3c6fbe9577c8e617911d1056586f22662",
+    "ChatRequest": "2ce8b1cd998e67665deb55d45c002147cea633d712ea0895889b47f84d8145a8",
+    "AnswerReview": "956a771cef4f64ce3c7e59861eed64636b9f3d00e29563cfc24e1fd54dc80f18",
+    "DigitalTwinHazopRequest": "31e8fc813a9a2139d3ddd120639b9c52875fd14eed3f59fb6aba1ef2ace94a33",
+    "HazopRuleInput": "27d3d18d964750dd649138dab74e334f417a5155aaa7d7d133231e7c9abd3b28",
+    "HazopThresholdProposalRequest": "fb0bdb0f4c3358e33bf8c5eb150f001c052d3722088ef6a36568dd0791eeb4f3",
+    "HazopThresholdProposalResponse": "24c9468966ff11a69cce9577866a57f3a1fc100c62b265bf229862fd78c930a1",
+    "GroundedClaims": "bce282df41e0ecb08c9cc18ab95d48f981e9c9859b1d0ba75e7a1550bc551c30"
+  },
+  "input_units": {
+    "as_of_utc": "timezone-aware instant",
+    "threshold_value": "caller-declared SI unit",
+    "retrieval_score": "owner ranking score; not probability"
+  },
+  "original_license_sha256": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4",
+  "limitations": [
+    "Original synthetic corpus only; no regulatory correctness or field validation.",
+    "No external LLM, provider API, human messaging or operational control was executed.",
+    "Grounded answering and threshold reasoning remain needs_data.",
+    "SAGA package version 2.0.0 and project version 2.0.1 are retained separately."
+  ],
+  "code_sha256": {
+    "src/pipeline_integrity/knowledge_exchange.py": "3e00ca70f237268cd23b9a4ad2f3c01f4c03bf2c22d63c3a91f0b029a9e354ba",
+    "src/pipeline_integrity/knowledge_worker.py": "9352893efbd1b3e0d00023548239776365f7bc87cf3f6bfe98f3a5723e61c906",
+    "tests/test_knowledge_exchange.py": "91e4327f61358b1a85389ff943607d1959426a65959d02840486241c44406626",
+    "examples/knowledge_exchange.py": "b8b26eff6e22a2841f4da7bc760da55ba0490d32be3170ff9a941071efc4a088",
+    "scripts/check_knowledge_exchange.py": "a9a4156fa720cffba81724d02a75a8bb251f18324e78217c6e53a9b39d0c345d",
+    "docs/KNOWLEDGE_EXCHANGE_KO.md": "3b925550af0ea5373924f553901354144a5d4110c4be4148c7b2ad0d35892b7e"
+  }
+}

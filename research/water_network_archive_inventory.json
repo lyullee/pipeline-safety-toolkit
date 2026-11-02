@@ -1,0 +1,867 @@
+{
+  "schema": "pipeline_integrity.water_network_archive_inventory.v1",
+  "dataset_id": "probabilistic_leak_localization",
+  "provenance": {
+    "dataset_id": "probabilistic_leak_localization",
+    "citation": "Ganjour Mazaev, Michael Weyns, Filip Vancoillie, Guido Vaes, Femke Ongenae and Sofie Van Hoecke (2022), Data for replication of the publication: Probabilistic leak localization in water distribution networks using a hybrid data-driven and model-based approach, v0.2.0, Zenodo, DOI 10.5281/zenodo.7255403.",
+    "license_id": "CC-BY-4.0",
+    "source_version": "0.2.0",
+    "archive_filename": "data.zip",
+    "archive_bytes": 195518700,
+    "archive_sha256": "51474a77a35414dfdc0c2748450729fc4ea78fc2bf8c7b2f4cc3e56b6e3f7374",
+    "supplier_checksum": "md5:2a79f0f02000d9d6fecf33eab02a87e3",
+    "checksum_origin": "publisher_metadata",
+    "supplier_checksum_verified": true,
+    "member_count": 82,
+    "uncompressed_bytes": 387795053
+  },
+  "members": [
+    {
+      "name": "data/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": null,
+      "run_id": null,
+      "source_stage": null
+    },
+    {
+      "name": "data/simulated/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": null,
+      "run_id": null,
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/input/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": null,
+      "run_id": null,
+      "source_stage": "input"
+    },
+    {
+      "name": "data/processed/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": null,
+      "run_id": null,
+      "source_stage": "processed"
+    },
+    {
+      "name": "data/raw/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": null,
+      "run_id": null,
+      "source_stage": "raw"
+    },
+    {
+      "name": "data/simulated/BKTown/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/input/BKTown/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "input"
+    },
+    {
+      "name": "data/raw/BKTown/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_08/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/simulated/BKTown/local_run_06/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "local_run_06",
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_04/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_05/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/simulated/BKTown/local_run_04/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "local_run_04",
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/simulated/BKTown/local_run_02/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "local_run_02",
+      "source_stage": "simulated"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_08/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "input"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_04/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "input"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_05/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "input"
+    },
+    {
+      "name": "data/raw/BKTown/experiments/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw"
+    },
+    {
+      "name": "data/raw/BKTown/pressure_meas/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "kind": "directory",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_08/BKTown_scenarios.pkl",
+      "bytes": 15082177,
+      "crc32": "7aa0680e",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_08/head_results.pkl",
+      "bytes": 30802937,
+      "crc32": "2fd971c3",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/local_run_06/head_results_leakfree.pkl",
+      "bytes": 450874,
+      "crc32": "280d2e70",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "local_run_06",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_04/BKTown_scenarios.pkl",
+      "bytes": 46527541,
+      "crc32": "7de77647",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_04/head_results.pkl",
+      "bytes": 150762033,
+      "crc32": "d814c0a2",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_05/BKTown_scenarios.pkl",
+      "bytes": 15082177,
+      "crc32": "7aa0680e",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/HPC_run_05/head_results.pkl",
+      "bytes": 30802937,
+      "crc32": "a920d557",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/local_run_04/head_results_leakfree.pkl",
+      "bytes": 450874,
+      "crc32": "bdbb6c11",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "local_run_04",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/simulated/BKTown/local_run_02/head_results_leakfree.pkl",
+      "bytes": 2552156,
+      "crc32": "7b1576d0",
+      "kind": "pkl",
+      "network_id": "BKTown",
+      "run_id": "local_run_02",
+      "source_stage": "simulated",
+      "interpretation": "opaque pickle; deliberately not deserialized or executed"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_08/BKTown_original_WDN_8Dec2020_17Dec2020_uncalibrated.inp",
+      "bytes": 1924783,
+      "crc32": "1165a3d6",
+      "kind": "inp",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "input"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_08/hydrants_asset_id.csv",
+      "bytes": 3200,
+      "crc32": "62955686",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "input",
+      "csv_profile": {
+        "header": [
+          "ID"
+        ],
+        "row_count": 360,
+        "nonempty_cells_by_column": [
+          360
+        ],
+        "blank_cells_by_column": [
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_08/pressure_loggers_asset_id.csv",
+      "bytes": 302,
+      "crc32": "657ae9e9",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_08",
+      "source_stage": "input",
+      "csv_profile": {
+        "header": [
+          "asset_id"
+        ],
+        "row_count": 37,
+        "nonempty_cells_by_column": [
+          37
+        ],
+        "blank_cells_by_column": [
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_04/BKTown_extended_WDN_01Jul2020_31Aug2020_calibrated.inp",
+      "bytes": 1924783,
+      "crc32": "4c35bb04",
+      "kind": "inp",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "input"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_04/hydrants_asset_id.csv",
+      "bytes": 9614,
+      "crc32": "23bf88d7",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "input",
+      "csv_profile": {
+        "header": [
+          "G3E_FID"
+        ],
+        "row_count": 1115,
+        "nonempty_cells_by_column": [
+          1115
+        ],
+        "blank_cells_by_column": [
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_04/pressure_loggers_asset_id.csv",
+      "bytes": 307,
+      "crc32": "4ff97265",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_04",
+      "source_stage": "input",
+      "csv_profile": {
+        "header": [
+          "asset_id"
+        ],
+        "row_count": 39,
+        "nonempty_cells_by_column": [
+          39
+        ],
+        "blank_cells_by_column": [
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_05/hydrants_asset_id.csv",
+      "bytes": 3200,
+      "crc32": "62955686",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "input",
+      "csv_profile": {
+        "header": [
+          "ID"
+        ],
+        "row_count": 360,
+        "nonempty_cells_by_column": [
+          360
+        ],
+        "blank_cells_by_column": [
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_05/BKTown_original_WDN_8Dec2020_17Dec2020_calibrated.inp",
+      "bytes": 1924783,
+      "crc32": "0d6bce49",
+      "kind": "inp",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "input"
+    },
+    {
+      "name": "data/input/BKTown/HPC_run_05/pressure_loggers_asset_id.csv",
+      "bytes": 302,
+      "crc32": "657ae9e9",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": "HPC_run_05",
+      "source_stage": "input",
+      "csv_profile": {
+        "header": [
+          "asset_id"
+        ],
+        "row_count": 37,
+        "nonempty_cells_by_column": [
+          37
+        ],
+        "blank_cells_by_column": [
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/raw/BKTown/experiments/infield_logging_leaks_MC_3.csv",
+      "bytes": 420,
+      "crc32": "36fb9bfb",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw",
+      "csv_profile": {
+        "header": [
+          "Datum",
+          "Beginuur",
+          "Einduur",
+          "Locatie",
+          "3GE FID",
+          "Opmerkingen"
+        ],
+        "row_count": 9,
+        "nonempty_cells_by_column": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "blank_cells_by_column": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      },
+      "event_table_summary": {
+        "observation_count": 9,
+        "member_sha256": "af3b69966fea7af71c329e99fd7d853f0be70392247a95eb1b929f5b2af12ecb",
+        "source_cells_embedded": false
+      }
+    },
+    {
+      "name": "data/raw/BKTown/experiments/infield_logging_leaks_10_m3h.csv",
+      "bytes": 404,
+      "crc32": "96a95131",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw",
+      "csv_profile": {
+        "header": [
+          "Datum",
+          "Beginuur",
+          "Einduur",
+          "Locatie",
+          "3GE FID",
+          "Opmerkingen"
+        ],
+        "row_count": 8,
+        "nonempty_cells_by_column": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "blank_cells_by_column": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      },
+      "event_table_summary": {
+        "observation_count": 8,
+        "member_sha256": "20b26f88ad4ef02078b4e9d5d3ce317d95dd3d038b47e4e5c86a525ade83d624",
+        "source_cells_embedded": false
+      }
+    },
+    {
+      "name": "data/raw/BKTown/pressure_meas/mobile_pressure_data-08072020_17112020-UTCp01h00.csv",
+      "bytes": 58102108,
+      "crc32": "9d92c26e",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw",
+      "csv_profile": {
+        "header": [
+          "datetime",
+          "1135866",
+          "1138102",
+          "1151599",
+          "1160964",
+          "1161577",
+          "1171286",
+          "1249368",
+          "1251053",
+          "1256995",
+          "1257142",
+          "1260304",
+          "1267265",
+          "1377059",
+          "1618407",
+          "1620451",
+          "1628166",
+          "1629341",
+          "1983396",
+          "2018747",
+          "2179206",
+          "2288344",
+          "2426841",
+          "2427371",
+          "2901330",
+          "2902689",
+          "3085780",
+          "366014",
+          "367398",
+          "402436",
+          "772093",
+          "773117",
+          "775700",
+          "776019",
+          "776884",
+          "780007",
+          "923397",
+          "932942",
+          "938205",
+          "938607",
+          "938903"
+        ],
+        "row_count": 190101,
+        "nonempty_cells_by_column": [
+          190101,
+          188342,
+          188407,
+          162190,
+          188283,
+          126541,
+          142279,
+          188448,
+          133204,
+          162416,
+          188580,
+          186967,
+          188483,
+          76164,
+          162360,
+          131914,
+          35458,
+          104990,
+          179676,
+          188471,
+          188292,
+          123334,
+          89724,
+          175220,
+          172428,
+          189809,
+          189837,
+          189550,
+          189818,
+          184055,
+          127783,
+          74727,
+          178582,
+          143954,
+          189937,
+          189846,
+          189654,
+          132161,
+          91377,
+          189801,
+          109566
+        ],
+        "blank_cells_by_column": [
+          0,
+          1759,
+          1694,
+          27911,
+          1818,
+          63560,
+          47822,
+          1653,
+          56897,
+          27685,
+          1521,
+          3134,
+          1618,
+          113937,
+          27741,
+          58187,
+          154643,
+          85111,
+          10425,
+          1630,
+          1809,
+          66767,
+          100377,
+          14881,
+          17673,
+          292,
+          264,
+          551,
+          283,
+          6046,
+          62318,
+          115374,
+          11519,
+          46147,
+          164,
+          255,
+          447,
+          57940,
+          98724,
+          300,
+          80535
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    },
+    {
+      "name": "data/raw/BKTown/pressure_meas/mobile_pressure_data-08122020_15022021-UTCp01h00.csv",
+      "bytes": 31378349,
+      "crc32": "5497bf3c",
+      "kind": "csv",
+      "network_id": "BKTown",
+      "run_id": null,
+      "source_stage": "raw",
+      "csv_profile": {
+        "header": [
+          "datetime",
+          "1130816",
+          "1239222",
+          "1240717",
+          "1249368",
+          "1249408",
+          "1249633",
+          "1250189",
+          "1251053",
+          "1256995",
+          "1257142",
+          "1257639",
+          "1258609",
+          "1259881",
+          "1260304",
+          "1261324",
+          "1267649",
+          "1269161",
+          "1368299",
+          "1374298",
+          "1377059",
+          "1422947",
+          "1627949",
+          "1628550",
+          "1628842",
+          "1629354",
+          "1630543",
+          "1631265",
+          "1658112",
+          "1773936",
+          "1987738",
+          "2018688",
+          "2018705",
+          "2288344",
+          "2933990",
+          "2940654",
+          "402436",
+          "541993"
+        ],
+        "row_count": 100800,
+        "nonempty_cells_by_column": [
+          100800,
+          69070,
+          100739,
+          90002,
+          93537,
+          100728,
+          70306,
+          100200,
+          69677,
+          100756,
+          47708,
+          100728,
+          78996,
+          68641,
+          96755,
+          97254,
+          90344,
+          100733,
+          77499,
+          100761,
+          54897,
+          32947,
+          99124,
+          56273,
+          52612,
+          100206,
+          69637,
+          22836,
+          95984,
+          77571,
+          100720,
+          5157,
+          72492,
+          74148,
+          51585,
+          74755,
+          36889,
+          18823
+        ],
+        "blank_cells_by_column": [
+          0,
+          31730,
+          61,
+          10798,
+          7263,
+          72,
+          30494,
+          600,
+          31123,
+          44,
+          53092,
+          72,
+          21804,
+          32159,
+          4045,
+          3546,
+          10456,
+          67,
+          23301,
+          39,
+          45903,
+          67853,
+          1676,
+          44527,
+          48188,
+          594,
+          31163,
+          77964,
+          4816,
+          23229,
+          80,
+          95643,
+          28308,
+          26652,
+          49215,
+          26045,
+          63911,
+          81977
+        ],
+        "source_order_preserved": true,
+        "interpretation": "raw text only; no unit, clock, missingness or event semantics assigned"
+      }
+    }
+  ],
+  "network_id_coverage": [
+    {
+      "run_id": "HPC_run_08",
+      "sensor_asset_count": 37,
+      "sensor_ids_in_junction_section": 37,
+      "sensor_ids_in_coordinate_section": 37,
+      "event_node_count": 9,
+      "event_ids_in_junction_section": 9,
+      "event_ids_in_coordinate_section": 9,
+      "identity_basis": "exact source strings only; no field-port, coordinate-frame, axis or length unit assigned",
+      "source_members": {
+        "run_id": "HPC_run_08",
+        "input": "data/input/BKTown/HPC_run_08/BKTown_original_WDN_8Dec2020_17Dec2020_uncalibrated.inp",
+        "sensors": "data/input/BKTown/HPC_run_08/pressure_loggers_asset_id.csv",
+        "events": "data/raw/BKTown/experiments/infield_logging_leaks_MC_3.csv"
+      }
+    },
+    {
+      "run_id": "HPC_run_05",
+      "sensor_asset_count": 37,
+      "sensor_ids_in_junction_section": 37,
+      "sensor_ids_in_coordinate_section": 37,
+      "event_node_count": 9,
+      "event_ids_in_junction_section": 9,
+      "event_ids_in_coordinate_section": 9,
+      "identity_basis": "exact source strings only; no field-port, coordinate-frame, axis or length unit assigned",
+      "source_members": {
+        "run_id": "HPC_run_05",
+        "input": "data/input/BKTown/HPC_run_05/BKTown_original_WDN_8Dec2020_17Dec2020_calibrated.inp",
+        "sensors": "data/input/BKTown/HPC_run_05/pressure_loggers_asset_id.csv",
+        "events": "data/raw/BKTown/experiments/infield_logging_leaks_MC_3.csv"
+      }
+    },
+    {
+      "run_id": "HPC_run_04",
+      "sensor_asset_count": 39,
+      "sensor_ids_in_junction_section": 39,
+      "sensor_ids_in_coordinate_section": 39,
+      "event_node_count": 8,
+      "event_ids_in_junction_section": 8,
+      "event_ids_in_coordinate_section": 8,
+      "identity_basis": "exact source strings only; no field-port, coordinate-frame, axis or length unit assigned",
+      "source_members": {
+        "run_id": "HPC_run_04",
+        "input": "data/input/BKTown/HPC_run_04/BKTown_extended_WDN_01Jul2020_31Aug2020_calibrated.inp",
+        "sensors": "data/input/BKTown/HPC_run_04/pressure_loggers_asset_id.csv",
+        "events": "data/raw/BKTown/experiments/infield_logging_leaks_10_m3h.csv"
+      }
+    }
+  ],
+  "file_count": 22,
+  "csv_count": 10,
+  "pickle_count": 9,
+  "source_hash": "51474a77a35414dfdc0c2748450729fc4ea78fc2bf8c7b2f4cc3e56b6e3f7374",
+  "reader_sha256": "050a235db591b85862a9ae2a788488406b5dd3e36c10deb6dbbfb2af1c3b9776",
+  "extracted": false,
+  "archive_members_executed": false,
+  "record_digest": "bce3174ea710aa0fe0ac3e3b4257cbdfce7d4810bb85b5d3af59d49c1d2622f6"
+}

@@ -1,0 +1,922 @@
+{
+  "cases": [
+    {
+      "canonical_unit": "anchor_group_reaction",
+      "contract": "pipeline_integrity.anchor_row_demand.AnchorRowDemandRequest",
+      "payload_json": "{\"total_anchor_count\":4,\"tension_row_anchor_count\":2,\"bending_moment_magnitude_nm\":800.0,\"resultant_shear_n\":[200.0,-100.0],\"tension_row_to_compression_resultant_lever_arm_m\":0.2,\"compression_resultant_basis_id\":\"reviewed-bearing-line\",\"pure_moment_equal_tension_row_equal_shear_and_bearing_location_reviewed\":true}",
+      "invalid_field": "total_anchor_count",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_anchor_row_demand_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "31ac836a1278945fcfd663106c4b3f6e9d2810bb7a77ed4b6d66a1940192acd9",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "beam.linear_dynamic_euler_bernoulli",
+      "contract": "pipeline_integrity.frame_modal.FrameModalRequest",
+      "payload_json": "{\"frame\":{\"asset_id\":\"authored-frame\",\"clock_id\":\"declared-snapshot\",\"time_s\":0.0,\"coordinate_basis\":\"declared_cartesian_metres\",\"nodes\":[{\"id\":\"anchor\",\"position_m\":[0.0,0.0,0.0]},{\"id\":\"n1\",\"position_m\":[0.5,0.0,0.0]},{\"id\":\"n2\",\"position_m\":[1.0,0.0,0.0]},{\"id\":\"n3\",\"position_m\":[1.5,0.0,0.0]},{\"id\":\"n4\",\"position_m\":[2.0,0.0,0.0]},{\"id\":\"n5\",\"position_m\":[2.5,0.0,0.0]},{\"id\":\"n6\",\"position_m\":[3.0,0.0,0.0]},{\"id\":\"n7\",\"position_m\":[3.5,0.0,0.0]},{\"id\":\"tip\",\"position_m\":[4.0,0.0,0.0]}],\"members\":[{\"id\":\"e0\",\"i_node\":\"anchor\",\"j_node\":\"n1\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e1\",\"i_node\":\"n1\",\"j_node\":\"n2\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e2\",\"i_node\":\"n2\",\"j_node\":\"n3\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e3\",\"i_node\":\"n3\",\"j_node\":\"n4\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e4\",\"i_node\":\"n4\",\"j_node\":\"n5\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e5\",\"i_node\":\"n5\",\"j_node\":\"n6\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e6\",\"i_node\":\"n6\",\"j_node\":\"n7\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"e7\",\"i_node\":\"n7\",\"j_node\":\"tip\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]}],\"sections\":[{\"id\":\"annulus\",\"area_m2\":0.005969026041820614,\"iy_m4\":0.000027009842839238267,\"iz_m4\":0.000027009842839238267,\"torsion_constant_m4\":0.000054019685678476534,\"evidence_id\":\"reference\"}],\"materials\":[{\"id\":\"declared-elastic\",\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"evidence_id\":\"reference\"}],\"supports\":[{\"node_id\":\"anchor\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\",\"DY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n1\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n2\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n3\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n4\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n5\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n6\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n7\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"tip\",\"fixed_dofs\":[\"DX\",\"DZ\",\"RX\",\"RY\",\"DY\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false}],\"load_cases\":[\"point\"],\"node_loads\":[],\"line_loads\":[],\"initial_strains\":[],\"initial_curvatures\":[],\"combinations\":[{\"id\":\"service\",\"factors\":{\"point\":1.0},\"evidence_id\":\"reference\"}],\"geometry_evidence_id\":\"reference\",\"geometry_and_connectivity_reviewed\":true,\"stiffness_and_loads_reviewed\":true,\"supports_reviewed\":true,\"linear_small_displacement_applicability_reviewed\":true,\"absolute_force_tolerance_n\":1e-6,\"absolute_moment_tolerance_nm\":1e-6,\"relative_balance_tolerance\":1e-8,\"maximum_translation_to_member_length\":0.05,\"maximum_node_rotation_rad\":0.05,\"maximum_axial_strain_magnitude\":0.01,\"maximum_initial_curvature_rotation_rad\":0.05,\"support_active_set_max_iterations\":100,\"support_switch_displacement_tolerance_m\":0.0,\"moment_reference_point_m\":[0.0,0.0,0.0]},\"density_by_material_kg_m3\":{\"declared-elastic\":7800.0},\"nodal_concentrated_mass_kg\":{},\"gravity_for_native_weight_to_mass_m_s2\":9.81,\"requested_modes\":3,\"maximum_full_dofs\":600,\"relative_eigen_residual_tolerance\":1e-8,\"unloaded_linear_frame_and_consistent_mass_reviewed\":true}",
+      "invalid_field": "gravity_for_native_weight_to_mass_m_s2",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_frame_modal_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "751650c3039f128722e197c2dca7365e8b82c5f56f20180f961cb2ad961c18ae",
+      "relational_validator_names": [
+        "frame_domain"
+      ]
+    },
+    {
+      "canonical_unit": "beam.linear_static_euler_bernoulli",
+      "contract": "pipeline_integrity.structural.FrameRequest",
+      "payload_json": "{\"asset_id\":\"authored-frame\",\"clock_id\":\"declared-snapshot\",\"time_s\":0.0,\"coordinate_basis\":\"declared_cartesian_metres\",\"nodes\":[{\"id\":\"anchor\",\"position_m\":[0.0,0.0,0.0]},{\"id\":\"tip\",\"position_m\":[4.0,0.0,0.0]}],\"members\":[{\"id\":\"pipe\",\"i_node\":\"anchor\",\"j_node\":\"tip\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]}],\"sections\":[{\"id\":\"annulus\",\"area_m2\":0.005969026041820614,\"iy_m4\":0.000027009842839238267,\"iz_m4\":0.000027009842839238267,\"torsion_constant_m4\":0.000054019685678476534,\"evidence_id\":\"reference\"}],\"materials\":[{\"id\":\"declared-elastic\",\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"evidence_id\":\"reference\"}],\"supports\":[{\"node_id\":\"anchor\",\"fixed_dofs\":[\"DX\",\"DY\",\"DZ\",\"RX\",\"RY\",\"RZ\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false}],\"load_cases\":[\"point\"],\"node_loads\":[{\"node_id\":\"tip\",\"direction\":\"FY\",\"value\":-1000.0,\"case_id\":\"point\",\"evidence_id\":\"reference\"}],\"line_loads\":[],\"initial_strains\":[],\"initial_curvatures\":[],\"combinations\":[{\"id\":\"service\",\"factors\":{\"point\":1.0},\"evidence_id\":\"reference\"}],\"geometry_evidence_id\":\"reference\",\"geometry_and_connectivity_reviewed\":true,\"stiffness_and_loads_reviewed\":true,\"supports_reviewed\":true,\"linear_small_displacement_applicability_reviewed\":true,\"absolute_force_tolerance_n\":1e-6,\"absolute_moment_tolerance_nm\":1e-6,\"relative_balance_tolerance\":1e-8,\"maximum_translation_to_member_length\":0.05,\"maximum_node_rotation_rad\":0.05,\"maximum_axial_strain_magnitude\":0.01,\"maximum_initial_curvature_rotation_rad\":0.05,\"support_active_set_max_iterations\":100,\"support_switch_displacement_tolerance_m\":0.0,\"moment_reference_point_m\":[0.0,0.0,0.0]}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\pipe_frame.py",
+      "origin_factory": "make_case",
+      "origin_sha256": "d375896a860ade024df788541650edb255ba467520f415d341154a8cfcd29bd7",
+      "relational_validator_names": [
+        "topology"
+      ]
+    },
+    {
+      "canonical_unit": "branch_intersection_limit_pressure",
+      "contract": "pipeline_integrity.branch_pressure_coordinate.BranchPressureCoordinateRequest",
+      "payload_json": "{\"header_outside_diameter_m\":0.3,\"branch_outside_diameter_m\":0.1,\"header_wall_thickness_m\":0.01,\"branch_wall_thickness_m\":0.005,\"supplied_header_yield_stress_pa\":250000000.0,\"supplied_header_ultimate_stress_pa\":400000000.0,\"supplied_numerator_coefficients\":[1.0,1.0,1.0,1.0],\"supplied_denominator_coefficients\":[1.0,1.0,1.0,1.0],\"supplied_burst_multiplier\":1.0,\"supplied_burst_normalized_limit_exponent\":1.0,\"right_angle_geometry_material_and_coefficient_basis_id\":\"geometry-material\",\"right_angle_unreinforced_branch_correlation_support_reviewed\":false}",
+      "invalid_field": "header_outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "BranchPressureCoordinateRequest",
+      "origin_sha256": "01c408df94b0b0301aad5843e0a2549735e8a5c7f59752959ab5f4468a872bc7",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "buckle_propagation_arrester",
+      "contract": "pipeline_integrity.buckle_arrester_coordinate.BuckleArresterRequest",
+      "payload_json": "{\"pipe_outside_diameter_m\":0.2,\"pipe_wall_thickness_m\":0.01,\"arrester_outside_diameter_m\":0.25,\"arrester_wall_thickness_m\":0.02,\"arrester_length_m\":0.5,\"supplied_pipe_yield_stress_pa\":250000000.0,\"supplied_arrester_yield_stress_pa\":250000000.0,\"supplied_pipe_propagation_coefficient\":2.0,\"supplied_pipe_thickness_exponent\":2.0,\"supplied_arrester_propagation_coefficient\":2.0,\"supplied_arrester_thickness_exponent\":2.0,\"supplied_length_transfer_coefficient\":1.0,\"target_external_differential_pressure_pa\":null,\"material_geometry_coefficient_and_postbuckled_basis_id\":\"calibration\",\"propagation_and_arrester_correlation_applicability_reviewed\":false}",
+      "invalid_field": "pipe_outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "BuckleArresterRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "buried_upheaval_buckling",
+      "contract": "pipeline_integrity.buckling.BucklingRequest",
+      "payload_json": "{\"id\":\"authored_eigen_column\",\"frame_id\":\"local_xyz\",\"coordinate_definition_id\":\"right_handed_xyz_m\",\"source_port_id\":\"base\",\"target_port_id\":\"loaded_end\",\"reference_load_definition_id\":\"authored_proportional_axial_pattern\",\"frame\":{\"asset_id\":\"authored_column\",\"clock_id\":\"reference_load_snapshot\",\"time_s\":0.0,\"coordinate_basis\":\"declared_cartesian_metres\",\"nodes\":[{\"id\":\"n0\",\"position_m\":[0.0,0.0,0.0]},{\"id\":\"n1\",\"position_m\":[0.5,0.0,0.0]},{\"id\":\"n2\",\"position_m\":[1.0,0.0,0.0]},{\"id\":\"n3\",\"position_m\":[1.5,0.0,0.0]},{\"id\":\"n4\",\"position_m\":[2.0,0.0,0.0]},{\"id\":\"n5\",\"position_m\":[2.5,0.0,0.0]},{\"id\":\"n6\",\"position_m\":[3.0,0.0,0.0]},{\"id\":\"n7\",\"position_m\":[3.5,0.0,0.0]},{\"id\":\"n8\",\"position_m\":[4.0,0.0,0.0]}],\"members\":[{\"id\":\"m0\",\"i_node\":\"n0\",\"j_node\":\"n1\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m1\",\"i_node\":\"n1\",\"j_node\":\"n2\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m2\",\"i_node\":\"n2\",\"j_node\":\"n3\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m3\",\"i_node\":\"n3\",\"j_node\":\"n4\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m4\",\"i_node\":\"n4\",\"j_node\":\"n5\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m5\",\"i_node\":\"n5\",\"j_node\":\"n6\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m6\",\"i_node\":\"n6\",\"j_node\":\"n7\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m7\",\"i_node\":\"n7\",\"j_node\":\"n8\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]}],\"sections\":[{\"id\":\"annulus\",\"area_m2\":0.0014922565104551536,\"iy_m4\":1.6881151774523917e-6,\"iz_m4\":1.6881151774523917e-6,\"torsion_constant_m4\":3.3762303549047834e-6,\"evidence_id\":\"authored\"}],\"materials\":[{\"id\":\"elastic\",\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"evidence_id\":\"authored\"}],\"supports\":[{\"node_id\":\"n0\",\"fixed_dofs\":[\"DX\",\"DY\",\"DZ\",\"RX\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"authored\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n8\",\"fixed_dofs\":[\"DY\",\"DZ\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"authored\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false}],\"load_cases\":[\"reference\"],\"node_loads\":[{\"node_id\":\"n8\",\"direction\":\"FX\",\"value\":-1000.0,\"case_id\":\"reference\",\"evidence_id\":\"authored\"}],\"line_loads\":[],\"initial_strains\":[],\"initial_curvatures\":[],\"combinations\":[{\"id\":\"pattern\",\"factors\":{\"reference\":1.0},\"evidence_id\":\"authored\"}],\"geometry_evidence_id\":\"authored\",\"geometry_and_connectivity_reviewed\":false,\"stiffness_and_loads_reviewed\":false,\"supports_reviewed\":false,\"linear_small_displacement_applicability_reviewed\":false,\"absolute_force_tolerance_n\":1e-6,\"absolute_moment_tolerance_nm\":1e-6,\"relative_balance_tolerance\":1e-8,\"maximum_translation_to_member_length\":0.05,\"maximum_node_rotation_rad\":0.05,\"maximum_axial_strain_magnitude\":0.01,\"maximum_initial_curvature_rotation_rad\":0.05,\"support_active_set_max_iterations\":100,\"support_switch_displacement_tolerance_m\":0.0,\"moment_reference_point_m\":[0.0,0.0,0.0]},\"combination_id\":\"pattern\",\"provider_id\":\"pynite_native_frame\",\"expected_provider_sha256\":null,\"translation_gauge_m\":1.0,\"rotation_gauge_rad\":1.0,\"requested_modes\":5,\"maximum_full_dofs\":240,\"relative_symmetry_tolerance\":1e-10,\"relative_positive_stiffness_floor\":1e-14,\"relative_eigen_residual_tolerance\":1e-8,\"relative_imaginary_tolerance\":1e-9,\"absolute_prebuckling_translation_tolerance_m\":1e-10,\"absolute_prebuckling_rotation_tolerance_rad\":1e-10,\"conservative_proportional_reference_load_reviewed\":false,\"perfect_linear_elastic_frame_model_reviewed\":false,\"stiffness_provider_and_dof_basis_reviewed\":false,\"evidence_id\":\"authored\"}",
+      "invalid_field": "translation_gauge_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\buckling.py",
+      "origin_factory": "make_case",
+      "origin_sha256": "bffead5ebe61a13684723d6d36c52798576f65d1c4133bbc735d989ca634aa96",
+      "relational_validator_names": [
+        "supported_model"
+      ]
+    },
+    {
+      "canonical_unit": "contact.prescribed_pressure_coulomb_axial",
+      "contract": "pipeline_integrity.axial_contact_friction.AxialContactFrictionRequest",
+      "payload_json": "{\"asset_id\":\"pipe\",\"clock_id\":\"snapshot\",\"contact_pressure_basis_id\":\"prescribed-contact\",\"outside_diameter_m\":0.5,\"contact_length_m\":12.0,\"supplied_friction_coefficient\":0.3,\"coefficient_basis\":\"kinetic\",\"mode\":\"sliding\",\"signed_axial_sliding_direction\":1,\"uniform_axial_slip_speed_m_s\":null,\"angle_breakpoints_rad\":[],\"axial_breakpoints_m\":[],\"absolute_normal_force_tolerance_N\":1e-7,\"relative_quadrature_tolerance\":1e-9,\"maximum_subdivisions\":200,\"known_normal_pressure_full_cylindrical_surface_coulomb_and_no_adhesion_reviewed\":true}",
+      "invalid_field": "outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_axial_contact_friction_individual.py",
+      "origin_factory": "request",
+      "origin_sha256": "fd3acd4e1a1da057f55213e84ea80aee1c2a7ee5f24e3de07a70b6b902cab4ee",
+      "relational_validator_names": [
+        "selected_observation"
+      ]
+    },
+    {
+      "canonical_unit": "cylindrical_local_load_attenuation",
+      "contract": "pipeline_integrity.cylindrical_edge_attenuation.CylindricalEdgeMomentRequest",
+      "payload_json": "{\"edge_moment_per_circumference_n\":120.0,\"inverse_decay_length_per_m\":2.0,\"distance_from_edge_m\":[0.0,0.1,1.0,3.0],\"shell_decay_provider_basis_id\":\"authored-reviewed-shell-decay\",\"uniform_edge_moment_zero_edge_shear_semi_infinite_shell_reviewed\":true}",
+      "invalid_field": "inverse_decay_length_per_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_cylindrical_edge_attenuation_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "aa5031c38c7effb45947504f4fc7b0b7734893edd44ed430ef4de5cff00b8436",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "damage.circumferential_tensile_section",
+      "contract": "pipeline_integrity.circumferential_loss_tension.CircumferentialLossTensionRequest",
+      "payload_json": "{\"nominal_wall_thickness_m\":0.01,\"loss_depth_m\":0.003,\"circumferential_loss_width_m\":0.02,\"supplied_reference_failure_stress_pa\":400000000.0,\"geometry_material_and_tension_only_basis_id\":\"authored-ligament-limit\",\"isolated_blunt_loss_away_from_discontinuities_and_tension_only_reviewed\":true}",
+      "invalid_field": "nominal_wall_thickness_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_circumferential_loss_tension_independent.py",
+      "origin_factory": "req",
+      "origin_sha256": "a2e750d1b7f8df4f1ed46c8fa68d1396881c8edd27076790ea9d8eefc5ccdf9b",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "damage.supplied_profile_pressure_capacity",
+      "contract": "pipeline_integrity.profile_capacity.ProfileCapacityRequest",
+      "payload_json": "{\"asset_id\":\"authored_profile_asset\",\"location_id\":\"one_axial_track\",\"clock_id\":\"one_static_inspection\",\"geometry_id\":\"authored_geometry\",\"material_condition_id\":\"authored_material\",\"profile_id\":\"authored_three_points\",\"coordinate_basis_id\":\"axial_positive_on_declared_track\",\"source_observation_id\":\"authored_inspection\",\"source_point_ids\":[\"point-0\",\"point-1\",\"point-2\"],\"parameters\":{\"geometry_id\":\"authored_geometry\",\"material_condition_id\":\"authored_material\",\"reference_wall_thickness_m\":0.01,\"axial_position_m\":[0.0,0.5,1.0],\"measured_remaining_thickness_m\":[0.008,0.008,0.008],\"reference_capacity\":{\"geometry_id\":\"authored_geometry\",\"material_condition_id\":\"authored_material\",\"reference_pressure_difference_Pa\":10000000.0,\"capacity_basis\":\"authored hypothetical differential-pressure reference\",\"evidence\":[{\"source_id\":\"authored\",\"origin\":\"synthetic\",\"citation\":\"Original hypothetical profile and provider inputs\",\"license_id\":\"MIT\",\"sha256\":null}]},\"bulging_table\":{\"geometry_id\":\"authored_geometry\",\"material_condition_id\":\"authored_material\",\"window_length_m\":[0.0,1.0],\"factor\":[2.0,2.0],\"validity_description\":\"Original constant hypothetical factor for scalar verification only\",\"evidence\":[{\"source_id\":\"authored\",\"origin\":\"synthetic\",\"citation\":\"Original hypothetical profile and provider inputs\",\"license_id\":\"MIT\",\"sha256\":null}]},\"maximum_supported_depth_fraction\":0.7,\"full_axial_extent_confirmed\":true,\"blunt_metal_loss_confirmed\":true,\"internal_pressure_dominant_confirmed\":true,\"provider_applicability_reviewed\":true},\"input_units\":{\"reference_wall_thickness_m\":\"m\",\"axial_position_m\":\"m\",\"measured_remaining_thickness_m\":\"m\",\"reference_capacity.reference_pressure_difference_Pa\":\"Pa\",\"bulging_table.window_length_m\":\"m\",\"bulging_table.factor\":\"1\",\"maximum_supported_depth_fraction\":\"1\"},\"demand\":{\"value\":5.0,\"unit\":\"MPa\",\"reference\":\"differential\",\"ambient_pa_abs\":null},\"demand_evidence_id\":\"authored\",\"applicability_reviews\":{\"profile_coordinates_reference_wall_and_sizing_basis\":true,\"complete_axial_extent_blunt_loss_and_internal_pressure_scope\":true,\"licensed_reference_capacity_and_bulging_provider_support\":true},\"review_evidence_ids\":{\"profile_coordinates_reference_wall_and_sizing_basis\":\"authored\",\"complete_axial_extent_blunt_loss_and_internal_pressure_scope\":\"authored\",\"licensed_reference_capacity_and_bulging_provider_support\":\"authored\"},\"evidence_ids\":[\"authored\"],\"maximum_points\":500,\"maximum_provider_knots\":5000,\"maximum_nodal_windows\":124750,\"owner_source_tree_sha256\":null}",
+      "invalid_field": "maximum_points",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\profile_capacity.py",
+      "origin_factory": "make_case",
+      "origin_sha256": "9dfc2b53799e9715dcc77dd8465617ba92ce1059bfe0b263e4991cca5aba2e5e",
+      "relational_validator_names": [
+        "fields"
+      ]
+    },
+    {
+      "canonical_unit": "dent_rebound_fatigue",
+      "contract": "pipeline_integrity.dent_rebound_coordinate.DentReboundRequest",
+      "payload_json": "{\"observed_pressurized_dent_depth_m\":0.003,\"operating_hoop_stress_pa\":100000000.0,\"supplied_flow_stress_pa\":300000000.0,\"supplied_rebound_log_coefficient\":0.4,\"minimum_reviewed_hoop_to_flow_ratio\":0.1,\"maximum_reviewed_hoop_to_flow_ratio\":0.9,\"plain_dent_material_pressure_and_calibration_basis_id\":\"material\",\"plain_dent_rebound_correlation_applicability_reviewed\":false,\"pressure_cycle_range_pa\":null,\"supplied_dent_pressure_to_stress_range_factor\":null,\"fatigue_curve\":null}",
+      "invalid_field": "observed_pressurized_dent_depth_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "DentReboundRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "dynamics.linear_sdof",
+      "contract": "pipeline_integrity.piecewise_force_response.GeneralizedResponseRequest",
+      "payload_json": "{\"mass_kg\":2.0,\"stiffness_n_m\":18.0,\"damping_n_s_m\":0.0,\"initial_displacement_m\":0.0,\"initial_velocity_m_s\":0.0,\"force_stages\":[{\"start_s\":0.0,\"force_n\":6.0},{\"start_s\":0.2,\"force_n\":0.0}],\"output_times_s\":[0.0,0.1,0.2,1.0],\"load_and_coordinate_basis_id\":\"authored-generalized-mode\",\"linear_generalized_coordinate_and_held_force_basis_reviewed\":true}",
+      "invalid_field": "mass_kg",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_piecewise_force_response_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "fdc900ef0123b52f1fb58735a3041d4d0f94bdfba9fcbc38095b60cb0b6ef1e6",
+      "relational_validator_names": [
+        "times"
+      ]
+    },
+    {
+      "canonical_unit": "elastic_thermal_compression_buckling_variant",
+      "contract": "pipeline_integrity.buckling.BucklingRequest",
+      "payload_json": "{\"id\":\"authored_eigen_column\",\"frame_id\":\"local_xyz\",\"coordinate_definition_id\":\"right_handed_xyz_m\",\"source_port_id\":\"base\",\"target_port_id\":\"loaded_end\",\"reference_load_definition_id\":\"authored_proportional_axial_pattern\",\"frame\":{\"asset_id\":\"authored_column\",\"clock_id\":\"reference_load_snapshot\",\"time_s\":0.0,\"coordinate_basis\":\"declared_cartesian_metres\",\"nodes\":[{\"id\":\"n0\",\"position_m\":[0.0,0.0,0.0]},{\"id\":\"n1\",\"position_m\":[0.5,0.0,0.0]},{\"id\":\"n2\",\"position_m\":[1.0,0.0,0.0]},{\"id\":\"n3\",\"position_m\":[1.5,0.0,0.0]},{\"id\":\"n4\",\"position_m\":[2.0,0.0,0.0]},{\"id\":\"n5\",\"position_m\":[2.5,0.0,0.0]},{\"id\":\"n6\",\"position_m\":[3.0,0.0,0.0]},{\"id\":\"n7\",\"position_m\":[3.5,0.0,0.0]},{\"id\":\"n8\",\"position_m\":[4.0,0.0,0.0]}],\"members\":[{\"id\":\"m0\",\"i_node\":\"n0\",\"j_node\":\"n1\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m1\",\"i_node\":\"n1\",\"j_node\":\"n2\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m2\",\"i_node\":\"n2\",\"j_node\":\"n3\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m3\",\"i_node\":\"n3\",\"j_node\":\"n4\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m4\",\"i_node\":\"n4\",\"j_node\":\"n5\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m5\",\"i_node\":\"n5\",\"j_node\":\"n6\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m6\",\"i_node\":\"n6\",\"j_node\":\"n7\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]},{\"id\":\"m7\",\"i_node\":\"n7\",\"j_node\":\"n8\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]}],\"sections\":[{\"id\":\"annulus\",\"area_m2\":0.0014922565104551536,\"iy_m4\":1.6881151774523917e-6,\"iz_m4\":1.6881151774523917e-6,\"torsion_constant_m4\":3.3762303549047834e-6,\"evidence_id\":\"authored\"}],\"materials\":[{\"id\":\"elastic\",\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"evidence_id\":\"authored\"}],\"supports\":[{\"node_id\":\"n0\",\"fixed_dofs\":[\"DX\",\"DY\",\"DZ\",\"RX\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"authored\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false},{\"node_id\":\"n8\",\"fixed_dofs\":[\"DY\",\"DZ\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"authored\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false}],\"load_cases\":[\"reference\"],\"node_loads\":[{\"node_id\":\"n8\",\"direction\":\"FX\",\"value\":-1000.0,\"case_id\":\"reference\",\"evidence_id\":\"authored\"}],\"line_loads\":[],\"initial_strains\":[],\"initial_curvatures\":[],\"combinations\":[{\"id\":\"pattern\",\"factors\":{\"reference\":1.0},\"evidence_id\":\"authored\"}],\"geometry_evidence_id\":\"authored\",\"geometry_and_connectivity_reviewed\":false,\"stiffness_and_loads_reviewed\":false,\"supports_reviewed\":false,\"linear_small_displacement_applicability_reviewed\":false,\"absolute_force_tolerance_n\":1e-6,\"absolute_moment_tolerance_nm\":1e-6,\"relative_balance_tolerance\":1e-8,\"maximum_translation_to_member_length\":0.05,\"maximum_node_rotation_rad\":0.05,\"maximum_axial_strain_magnitude\":0.01,\"maximum_initial_curvature_rotation_rad\":0.05,\"support_active_set_max_iterations\":100,\"support_switch_displacement_tolerance_m\":0.0,\"moment_reference_point_m\":[0.0,0.0,0.0]},\"combination_id\":\"pattern\",\"provider_id\":\"pynite_native_frame\",\"expected_provider_sha256\":null,\"translation_gauge_m\":1.0,\"rotation_gauge_rad\":1.0,\"requested_modes\":5,\"maximum_full_dofs\":240,\"relative_symmetry_tolerance\":1e-10,\"relative_positive_stiffness_floor\":1e-14,\"relative_eigen_residual_tolerance\":1e-8,\"relative_imaginary_tolerance\":1e-9,\"absolute_prebuckling_translation_tolerance_m\":1e-10,\"absolute_prebuckling_rotation_tolerance_rad\":1e-10,\"conservative_proportional_reference_load_reviewed\":false,\"perfect_linear_elastic_frame_model_reviewed\":false,\"stiffness_provider_and_dof_basis_reviewed\":false,\"evidence_id\":\"authored\"}",
+      "invalid_field": "translation_gauge_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\buckling.py",
+      "origin_factory": "make_case",
+      "origin_sha256": "bffead5ebe61a13684723d6d36c52798576f65d1c4133bbc735d989ca634aa96",
+      "relational_validator_names": [
+        "supported_model"
+      ]
+    },
+    {
+      "canonical_unit": "elasticity.closed_pressure_cylinder",
+      "contract": "pipeline_integrity.material_exchange.PressureSection",
+      "payload_json": "{\"asset_id\":\"reference-wall\",\"location_id\":\"annulus\",\"clock_id\":\"elapsed\",\"time_s\":0.0,\"inner_radius_m\":0.05,\"outer_radius_m\":0.060000000000000005,\"evaluation_radii_m\":[0.05,0.0503125,0.050625,0.050937500000000004,0.051250000000000004,0.051562500000000004,0.051875000000000004,0.052187500000000005,0.052500000000000005,0.052812500000000005,0.053125000000000006,0.053437500000000006,0.053750000000000006,0.0540625,0.05437500000000001,0.0546875,0.055,0.0553125,0.055625,0.0559375,0.05625,0.0565625,0.056875,0.0571875,0.0575,0.0578125,0.058125,0.0584375,0.058750000000000004,0.059062500000000004,0.059375000000000004,0.059687500000000004,0.060000000000000005],\"internal_pressure\":{\"value\":2000000.0,\"unit\":\"Pa\",\"reference\":\"absolute\",\"ambient_pa_abs\":null},\"external_pressure\":{\"value\":100000.0,\"unit\":\"Pa\",\"reference\":\"absolute\",\"ambient_pa_abs\":null},\"pressure_loaded_closed_ends\":true,\"geometry_evidence_id\":\"authored\",\"pressure_evidence_id\":\"authored\",\"absolute_stress_tolerance_pa\":1e-6}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\material_sections.py",
+      "origin_factory": "pressure_case",
+      "origin_sha256": "f3e35ccbdf4e7b67edadc2922866887f5ae82584310a828837cd3fa13ed98800",
+      "relational_validator_names": [
+        "profile"
+      ]
+    },
+    {
+      "canonical_unit": "elasticity.incremental_pipe_compliance",
+      "contract": "pipeline_integrity.pipe_pressure_compliance.PressureDiameterRequest",
+      "payload_json": "{\"reference_internal_diameter_m\":0.4,\"wall_thickness_m\":0.008,\"young_modulus_pa\":200000000000.0,\"differential_pressure_increment_pa\":500000.0,\"axial_condition\":\"zero_axial_stress\",\"poisson_ratio\":null,\"maximum_absolute_hoop_strain\":0.01,\"thin_wall_linear_elastic_and_operating_stability_reviewed\":true}",
+      "invalid_field": "reference_internal_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_pressure_diameter_individual.py",
+      "origin_factory": "constructor-at-line-50",
+      "origin_sha256": "340d1998a958cc4084f68c834e6b5a12228df0360f9fd7b5acd3c1ceb4cbe6e9",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "elasticity.supplied_pipe_area_observation",
+      "contract": "pipeline_integrity.pipe_thermoelastic_area.ThermoelasticAreaRequest",
+      "payload_json": "{\"pressure\":{\"reference_internal_diameter_m\":0.5,\"wall_thickness_m\":0.01,\"young_modulus_pa\":200000000000.0,\"differential_pressure_increment_pa\":1000000.0,\"axial_condition\":\"zero_axial_stress\",\"poisson_ratio\":0.3,\"maximum_absolute_hoop_strain\":0.005,\"thin_wall_linear_elastic_and_operating_stability_reviewed\":true},\"reference_temperature_K\":300.0,\"temperature_K\":320.0,\"thermal_expansion_curve\":{\"id\":\"authored\",\"material_id\":\"synthetic\",\"knots\":[{\"temperature_K\":250.0,\"tangent_expansion_per_K\":0.00001},{\"temperature_K\":400.0,\"tangent_expansion_per_K\":0.00001}],\"evidence_id\":\"authored\",\"tangent_small_engineering_strain_basis_reviewed\":true},\"coefficient_basis\":\"free_linear_engineering\",\"maximum_absolute_total_hoop_strain\":0.005,\"uniform_temperature_isotropic_linear_thermoelasticity_reviewed\":true}",
+      "invalid_field": "reference_temperature_K",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_pipe_thermoelastic_area_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "5ababfa689678f9c16057eabb12e2d0f2276cf976d418aecc028d456c39e8c41",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "engineering.target.constant_stress_viscoelastic_strain",
+      "contract": "pipeline_integrity.viscoelastic_strain.ConstantStressStrain",
+      "payload_json": "{\"tensile_stress_pa\":0.0,\"instantaneous_modulus_pa\":200000000000.0,\"delayed_modulus_pa\":100000000000.0,\"retardation_time_s\":10.0,\"viscous_resistance_pa_s\":10000000000000.0,\"elapsed_times_s\":[0.0,10.0,100.0]}",
+      "invalid_field": "tensile_stress_pa",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_viscoelastic_energy_dissipation_supplement.py",
+      "origin_factory": "constructor-at-line-42",
+      "origin_sha256": "5643e595a1653671acbea913ecc534cc0f210b178b9d87e36d54eaf1245573c0",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "engineering.target.covered_pipe_flotation_balance",
+      "contract": "pipeline_integrity.covered_pipe_uplift.CoveredPipeUpliftRequest",
+      "payload_json": "{\"outer_diameter_m\":0.2,\"inner_diameter_m\":0.18,\"pipe_material_unit_weight_n_m3\":78000.0,\"water_unit_weight_n_m3\":9800.0,\"cover_depth_m\":1.0,\"dry_backfill_unit_weight_n_m3\":18000.0,\"backfill_particle_relative_density\":2.6,\"supplied_uplift_load_factor\":1.2,\"fully_submerged_bare_pipe_and_cover_prism_reviewed\":false}",
+      "invalid_field": "outer_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "CoveredPipeUpliftRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": [
+        "annular_geometry"
+      ]
+    },
+    {
+      "canonical_unit": "engineering.target.local_wind_pressure_force",
+      "contract": "pipeline_integrity.wind_screening.WindLoadInput",
+      "payload_json": "{\"air_density_kg_m3\":1.2,\"wind_speed_m_s\":15.0,\"drag_coefficient\":1.0,\"projected_area_m2\":2.0,\"pressure_multiplier\":1.0,\"force_multiplier\":1.0}",
+      "invalid_field": "air_density_kg_m3",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "WindLoadInput",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "engineering.target.nut_factor_torque_preload",
+      "contract": "pipeline_integrity.fabrication_exchange.FabricationRequest",
+      "payload_json": "{\"method\":\"fabrication.bolt_preload\",\"asset_id\":\"pipe\",\"location_id\":\"bolt\",\"clock_id\":\"elapsed\",\"material_condition_id\":\"material\",\"parameters\":{\"torque_N_m\":100.0,\"nominal_diameter_m\":0.02,\"nut_factor\":0.2,\"tensile_area_m2\":0.0002},\"input_units\":{\"torque_N_m\":\"N*m\",\"nominal_diameter_m\":\"m\",\"nut_factor\":\"1\",\"tensile_area_m2\":\"m2\"},\"applicability_reviews\":{\"torque_is_applied_tightening_torque\":true,\"nut_factor_matches_thread_bearing_lubrication\":true,\"effective_tensile_area_basis\":true},\"review_evidence_ids\":{},\"parameter_evidence_ids\":{},\"evidence_ids\":[\"calibration\"],\"requirements\":[]}",
+      "invalid_field": "asset_id",
+      "invalid_value": "",
+      "unit_string_value": null,
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "FabricationRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": [
+        "meanings"
+      ]
+    },
+    {
+      "canonical_unit": "engineering.target.seabed_static_margin",
+      "contract": "pipeline_integrity.seabed_balance.SeabedContactBalance",
+      "payload_json": "{\"submerged_weight_n_m\":1000.0,\"lift_upward_n_m\":200.0,\"drag_horizontal_n_m\":240.0,\"inertia_horizontal_n_m\":-40.0,\"static_friction_coefficient\":0.4,\"passive_lateral_resistance_n_m\":30.0}",
+      "invalid_field": "submerged_weight_n_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_seabed_balance_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "8d26dee6d5d2c54d1e0659fa2ee7bcacc3c17546e7f7e74306056f1b493180f6",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "engineering.target.soil_prism_overburden",
+      "contract": "pipeline_integrity.soil_prism_load.SoilPrismLoadRequest",
+      "payload_json": "{\"burial_depth_m\":2.0,\"dry_bulk_unit_weight_n_m3\":18000.0,\"water_head_m\":1.0,\"submerged_soil_weight_reduction_fraction\":0.5,\"water_unit_weight_n_m3\":9800.0,\"loaded_width_m\":0.2,\"uniform_prism_and_water_basis_reviewed\":false}",
+      "invalid_field": "burial_depth_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "SoilPrismLoadRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": [
+        "water_position"
+      ]
+    },
+    {
+      "canonical_unit": "engineering.target.stationary_section_hydrodynamic_load",
+      "contract": "pipeline_integrity.cylinder_hydrodynamics.StationaryCylinderLoad",
+      "payload_json": "{\"fluid_density_kg_m3\":1000.0,\"outside_diameter_m\":0.4,\"transverse_velocity_m_s\":2.0,\"transverse_acceleration_m_s2\":0.0,\"drag_coefficient\":1.2,\"lift_coefficient_upward\":0.5,\"inertia_coefficient\":2.0,\"inertia_coefficient_kind\":\"total_inertia\"}",
+      "invalid_field": "fluid_density_kg_m3",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_cylinder_hydrodynamics_individual_local.py",
+      "origin_factory": "request",
+      "origin_sha256": "8aaa254a3801dbaa583a1ec2a21ac194ed6f79c386fd1d37cdf5442beb1f9edd",
+      "relational_validator_names": [
+        "common_coefficient_domain"
+      ]
+    },
+    {
+      "canonical_unit": "engineering.target.strouhal_frequency_screen",
+      "contract": "pipeline_integrity.wind_screening.VortexFrequencyInput",
+      "payload_json": "{\"cross_flow_speed_m_s\":10.0,\"outside_diameter_m\":0.5,\"strouhal_number\":0.25,\"natural_frequency_Hz\":4.0,\"relative_nearness_band\":0.25}",
+      "invalid_field": "cross_flow_speed_m_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_wind_screening_independent_local_20261101.py",
+      "origin_factory": "constructor-at-line-59",
+      "origin_sha256": "a7a2a1f24eb777daf363060b6f88fb00c114ee39fecb6335390ccef1f7616755",
+      "relational_validator_names": [
+        "paired_screen_inputs"
+      ]
+    },
+    {
+      "canonical_unit": "engineering.target.supplied_gasket_required_preload",
+      "contract": "pipeline_integrity.gasket_bolt_demand.GasketBoltDemandRequest",
+      "payload_json": "{\"pressure_difference_pa\":1000000.0,\"reaction_diameter_m\":0.2,\"effective_width_m\":0.01,\"operating_gasket_factor\":2.0,\"seating_stress_pa\":20000000.0,\"effective_geometry_and_gasket_data_reviewed\":false}",
+      "invalid_field": "pressure_difference_pa",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "GasketBoltDemandRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fatigue.supplied_stress_life",
+      "contract": "pipeline_integrity.stress_life_coordinate.StressLifeCoordinateRequest",
+      "payload_json": "{\"asset_id\":\"curve_coordinate\",\"location_id\":\"component\",\"clock_id\":\"cycles\",\"time_s\":0.0,\"coordinate_semantics\":\"effective_amplitude\",\"query_stress_coordinate_pa\":200000000.0,\"reference_stress_coordinate_pa\":1000000000.0,\"reference_life_cycles\":1.0,\"positive_inverse_log_slope\":5.0,\"supplied_query_stress_multiplier\":1.0,\"calibration_basis_id\":\"authored_constant_amplitude_curve\",\"curve_evidence_id\":\"curve\",\"curve_and_cycle_coordinate_reviewed\":true}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_stress_life_coordinate_independent.py",
+      "origin_factory": "make",
+      "origin_sha256": "161d6d0ef05984f9119d56c8a5456ab187fb7cd86ffedf785054793ffb56e3d1",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fatigue_mean_stress_correction",
+      "contract": "pipeline_integrity.mean_stress_coordinate.MeanStressCoordinateRequest",
+      "payload_json": "{\"asset_id\":\"cycle\",\"location_id\":\"section\",\"clock_id\":\"whole_cycles\",\"time_s\":0.0,\"correction\":\"goodman\",\"alternating_amplitude_pa\":80000000.0,\"tensile_mean_stress_pa\":100000000.0,\"yield_stress_pa\":300000000.0,\"ultimate_strength_pa\":500000000.0,\"maximum_supported_equivalent_amplitude_pa\":250000000.0,\"calibration_basis_id\":\"authored-curve-coordinate\",\"calibration_evidence_id\":\"calibration\",\"elastic_tensile_mean_and_correction_calibration_reviewed\":true}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_mean_stress_coordinate_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "f4583c0e7899fc945f8de7aefae23f926c16d5c6fa17908479ad508df35346f8",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "flange_external_load_bolt_stress",
+      "contract": "pipeline_integrity.elastic_bolt_group.ElasticBoltGroupRequest",
+      "payload_json": "{\"asset_id\":\"joint\",\"location_id\":\"flange\",\"clock_id\":\"static\",\"bolts\":[{\"id\":\"b0\",\"position_yz_m\":[0.25,0.0],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b1\",\"position_yz_m\":[0.1767766952966369,0.1767766952966369],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b2\",\"position_yz_m\":[1.5308084989341915e-17,0.25],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b3\",\"position_yz_m\":[-0.17677669529663687,0.1767766952966369],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b4\",\"position_yz_m\":[-0.25,3.061616997868383e-17],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b5\",\"position_yz_m\":[-0.17677669529663692,-0.17677669529663687],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b6\",\"position_yz_m\":[-4.592425496802574e-17,-0.25],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0},{\"id\":\"b7\",\"position_yz_m\":[0.17677669529663684,-0.17677669529663692],\"tensile_area_m2\":0.0003,\"shear_area_m2\":0.00035,\"normal_bolt_stiffness_n_m\":200000000.0,\"normal_clamped_member_stiffness_n_m\":800000000.0,\"tangential_bolt_stiffness_n_m\":100000000.0,\"initial_bolt_tension_and_clamp_compression_n\":40000.0}],\"external_force_xyz_n\":[2000.0,3000.0,-1500.0],\"external_moment_xyz_nm\":[400.0,-500.0,600.0],\"geometry_stiffness_preload_evidence_id\":\"authored\",\"rigid_faces_bilateral_shear_and_preloaded_contact_reviewed\":true}",
+      "invalid_field": "asset_id",
+      "invalid_value": "",
+      "unit_string_value": null,
+      "origin_file": "tests\\test_elastic_bolt_group_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "ee7cef041f5b371630f2fb06eeece9fae7bc7e1634cbcadfc2d336a1b9eaf3e5",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fracture.elastic_energy_release",
+      "contract": "pipeline_integrity.elastic_fracture_energy.ElasticFractureEnergyRequest",
+      "payload_json": "{\"mode_i_intensity_pa_sqrt_m\":0.0,\"elastic_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"plane_state\":\"plane_strain\",\"isotropic_mode_i_linear_elastic_plane_state_reviewed\":true}",
+      "invalid_field": "mode_i_intensity_pa_sqrt_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_elastic_fracture_energy_independent.py",
+      "origin_factory": "constructor-at-line-41",
+      "origin_sha256": "aa58af03638c93ea76f5742071f7004386c8a16dde35a0e6243002b77b7356f9",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fracture.growth_threshold_critical_modifiers",
+      "contract": "pipeline_integrity.crack_growth_modifiers.CrackGrowthModifierRequest",
+      "payload_json": "{\"baseline_rate_m_cycle\":1e-8,\"intensity_range_pa_sqrt_m\":20000000.0,\"maximum_intensity_pa_sqrt_m\":30000000.0,\"threshold_range_pa_sqrt_m\":4000000.0,\"critical_intensity_pa_sqrt_m\":80000000.0,\"threshold_exponent\":2.0,\"critical_exponent\":1.5,\"calibration_basis_id\":\"authored-calibration\",\"baseline_and_modifiers_same_calibration_reviewed\":true}",
+      "invalid_field": "baseline_rate_m_cycle",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_crack_growth_modifiers_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "40e381b39c43c8fbbb6a1bc8b2147cfcd5950133ecf150844a8738ea6659b454",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fracture.local_energy_arrest",
+      "contract": "pipeline_integrity.local_crack_arrest_energy.LocalCrackArrestEnergyRequest",
+      "payload_json": "{\"tensile_opening_stress_pa\":100000000.0,\"pipe_reference_radius_m\":0.3,\"elastic_modulus_pa\":200000000000.0,\"supplied_impact_energy_j\":100.0,\"impact_specimen_net_section_area_m2\":0.0001,\"supplied_impact_to_crack_area_energy_factor\":0.7,\"opening_stress_geometry_and_energy_transfer_basis_id\":\"authored-elastic-work-no-charpy-calibration\",\"elastic_driving_coordinate_and_impact_energy_transfer_reviewed\":true}",
+      "invalid_field": "tensile_opening_stress_pa",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_local_crack_arrest_energy_independent.py",
+      "origin_factory": "req",
+      "origin_sha256": "16798a29c45066f84655eb55e0268362baafcbc3f315c8487ac3304c5c3f3ce6",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fracture.mode_i_coordinate",
+      "contract": "pipeline_integrity.fracture_exchange.ModeIRequest",
+      "payload_json": "{\"asset_id\":\"reference-wall\",\"location_id\":\"annulus\",\"clock_id\":\"elapsed\",\"material_condition_id\":\"authored-material\",\"flaw_id\":\"authored-crack\",\"evidence_ids\":[\"authored\"],\"time_s\":0.0,\"crack_depth_m\":0.001,\"wall_thickness_m\":0.01,\"effective_opening_stress_pa\":40000000.0,\"opening_stress_definition\":\"Authored uniform effective opening traction\",\"opening_stress_receipt_digest\":null,\"geometry_factor\":1.0,\"minimum_supported_depth_m\":0.0005,\"maximum_supported_depth_m\":0.004,\"temperature_k\":293.15,\"resistance\":{\"material_condition_id\":\"authored-material\",\"value_pa_sqrt_m\":5000000.0,\"kind\":\"synthetic_reference\",\"definition\":\"Artificial Mode-I resistance for code references\",\"minimum_temperature_k\":280.0,\"maximum_temperature_k\":320.0,\"evidence_id\":\"authored\",\"applicability_reviewed\":true},\"reviews\":{\"geometry_and_stress_solution_reviewed\":true,\"linear_elastic_regime_reviewed\":true,\"loading_and_environment_reviewed\":true}}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\fracture_screen.py",
+      "origin_factory": "make_mode_i",
+      "origin_sha256": "6ac64177b72b5f398ae5d5ad56a5feedd3b97b6305888460e45d8a633f5a3240",
+      "relational_validator_names": [
+        "support"
+      ]
+    },
+    {
+      "canonical_unit": "fracture.paris_growth",
+      "contract": "pipeline_integrity.paris_region_rate.ParisRegionRateRequest",
+      "payload_json": "{\"id\":\"authored-rate\",\"material_condition_id\":\"authored-material\",\"intensity_range_pa_sqrt_m\":3000000.0,\"temperature_k\":293.0,\"stress_ratio\":0.3,\"calibration\":{\"material_condition_id\":\"authored-material\",\"coefficient_m_cycle_per_pa_sqrt_m_power\":1e-22,\"exponent\":2.0,\"threshold_delta_k_pa_sqrt_m\":0.0,\"minimum_delta_k_pa_sqrt_m\":1e-20,\"maximum_delta_k_pa_sqrt_m\":1000000000.0,\"minimum_stress_ratio\":0.0,\"maximum_stress_ratio\":0.9,\"minimum_temperature_k\":280.0,\"maximum_temperature_k\":320.0,\"evidence_id\":\"authored\",\"applicability_reviewed\":true},\"region_ii_mode_i_opening_and_same_calibration_reviewed\":true}",
+      "invalid_field": "intensity_range_pa_sqrt_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_paris_region_rate_individual.py",
+      "origin_factory": "request",
+      "origin_sha256": "7adab86ad936389fc171d596ab780f50a5c9e6a2ef7e5f452e47eae658b54ba6",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "fragmentation.supplied_empirical_capacity",
+      "contract": "pipeline_integrity.plastic_impulse_budget.PlasticImpulseBudgetRequest",
+      "payload_json": "{\"wall_thickness_m\":0.01,\"material_mass_density_kg_m3\":7800.0,\"supplied_flow_stress_pa\":300000000.0,\"supplied_failure_work_strain\":0.1,\"pressure_pulse_duration_s\":0.002,\"supplied_impulse_to_peak_pressure_duration_factor\":1.0,\"material_work_strain_pulse_shape_and_unit_basis_id\":\"authored-constant-flow-sheet\",\"uniform_areal_mass_constant_flow_stress_and_strain_work_reviewed\":true}",
+      "invalid_field": "wall_thickness_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_plastic_impulse_budget_independent.py",
+      "origin_factory": "req",
+      "origin_sha256": "dbad699b614bbcb2a874037bbf76c2c4ef1cb12ba23c1122a5b6287ce3fc6d2f",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "ground_movement_pipe_response",
+      "contract": "pipeline_integrity.soil_pipe.SoilPipeRequest",
+      "payload_json": "{\"id\":\"authored_soil_pipe\",\"frame_id\":\"local_xyz\",\"coordinate_definition_id\":\"right_handed_xyz_m\",\"source_port_id\":\"anchor_port\",\"target_port_id\":\"tip_port\",\"ground_event_id\":\"authored_settlement\",\"frame\":{\"asset_id\":\"authored_pipe\",\"clock_id\":\"ground_snapshot\",\"time_s\":0.0,\"coordinate_basis\":\"declared_cartesian_metres\",\"nodes\":[{\"id\":\"anchor\",\"position_m\":[0.0,0.0,0.0]},{\"id\":\"tip\",\"position_m\":[2.0,0.0,0.0]}],\"members\":[{\"id\":\"pipe\",\"i_node\":\"anchor\",\"j_node\":\"tip\",\"section_id\":\"annulus\",\"material_id\":\"elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]}],\"sections\":[{\"id\":\"annulus\",\"area_m2\":0.0014922565104551536,\"iy_m4\":1.6881151774523917e-6,\"iz_m4\":1.6881151774523917e-6,\"torsion_constant_m4\":3.3762303549047834e-6,\"evidence_id\":\"authored\"}],\"materials\":[{\"id\":\"elastic\",\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"evidence_id\":\"authored\"}],\"supports\":[{\"node_id\":\"anchor\",\"fixed_dofs\":[\"DX\",\"DY\",\"DZ\",\"RX\",\"RY\",\"RZ\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"authored\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false}],\"load_cases\":[\"physical\"],\"node_loads\":[],\"line_loads\":[],\"initial_strains\":[],\"initial_curvatures\":[],\"combinations\":[{\"id\":\"snapshot\",\"factors\":{\"physical\":1.0},\"evidence_id\":\"authored\"}],\"geometry_evidence_id\":\"authored\",\"geometry_and_connectivity_reviewed\":false,\"stiffness_and_loads_reviewed\":false,\"supports_reviewed\":false,\"linear_small_displacement_applicability_reviewed\":false,\"absolute_force_tolerance_n\":1e-6,\"absolute_moment_tolerance_nm\":1e-6,\"relative_balance_tolerance\":1e-8,\"maximum_translation_to_member_length\":0.05,\"maximum_node_rotation_rad\":0.05,\"maximum_axial_strain_magnitude\":0.01,\"maximum_initial_curvature_rotation_rad\":0.05,\"support_active_set_max_iterations\":100,\"support_switch_displacement_tolerance_m\":0.0,\"moment_reference_point_m\":[0.0,0.0,0.0]},\"soil_supports\":[{\"node_id\":\"tip\",\"stiffness_N_m\":{\"DY\":100000.0},\"ground_displacement_m\":[0.0,-0.001,0.0],\"behavior\":\"unreviewed\",\"stiffness_definition_id\":\"discrete_tip_N_per_m\",\"evidence_id\":\"authored\",\"reviewed\":false}],\"body_states\":[{\"member_id\":\"pipe\",\"outer_diameter_m\":0.1,\"inner_diameter_m\":0.09,\"pipe_and_attached_mass_kg_m\":0.0,\"contents_mass_kg_m\":0.0,\"displaced_area_m2\":0.0,\"immersed_fraction\":0.0,\"external_density_kg_m3\":0.0,\"evidence_id\":\"authored\",\"reviewed\":false}],\"gravity_m_s2\":[0.0,-9.80665,0.0],\"bilateral_discrete_soil_model_reviewed\":false,\"geometry_material_and_buoyancy_basis_reviewed\":false,\"evidence_id\":\"authored\"}",
+      "invalid_field": "id",
+      "invalid_value": "",
+      "unit_string_value": null,
+      "origin_file": "examples\\soil_pipe.py",
+      "origin_factory": "make_case",
+      "origin_sha256": "56d8ff7240b931207eb5185f6b3ee52631a8dc7242d7d50c2abad88dd1b67ae9",
+      "relational_validator_names": [
+        "topology"
+      ]
+    },
+    {
+      "canonical_unit": "impact.elastic_energy_bound",
+      "contract": "pipeline_integrity.elastic_drop_energy_bound.ElasticDropEnergyBoundRequest",
+      "payload_json": "{\"falling_mass_kg\":5.0,\"supported_gravity_mass_kg\":3.0,\"lumped_dynamic_mass_kg\":12.0,\"target_stiffness_n_m\":20000.0,\"gravity_m_s2\":9.81,\"fall_height_above_undeflected_target_m\":0.2,\"maximum_reviewed_linear_target_deflection_m\":1.0,\"linear_target_and_energy_equivalent_envelope_reviewed\":true}",
+      "invalid_field": "falling_mass_kg",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_elastic_drop_energy_bound_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "f34ada73b5cadb9ea38cf31b5f33b4c19b32d216d6817fd43b83dab1b5dbb630",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "impact_to_fracture_toughness_correlation",
+      "contract": "pipeline_integrity.fracture_property_coordinates.NormalizedImpactToughnessRequest",
+      "payload_json": "{\"impact_energy_over_yield_strength_m3\":2e-7,\"supplied_energy_strength_coefficient_per_m2\":1000000.0,\"supplied_squared_toughness_over_strength_offset_m\":0.01,\"material_temperature_specimen_and_unit_basis_id\":\"material\",\"impact_to_elastic_toughness_correlation_support_reviewed\":false}",
+      "invalid_field": "impact_energy_over_yield_strength_m3",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "NormalizedImpactToughnessRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "local_pipe_indentation",
+      "contract": "pipeline_integrity.local_indentation_coordinate.LocalIndentationRequest",
+      "payload_json": "{\"coordinate_basis\":\"square_root_force_law\",\"pipe_wall_thickness_m\":0.012,\"supplied_yield_stress_pa\":220000000.0,\"supplied_contact_coefficient\":3.7,\"force_magnitude_n\":4000.0,\"impact_energy_j\":null,\"pipe_outside_diameter_m\":0.6,\"maximum_reviewed_indentation_m\":0.02,\"edge_material_geometry_and_coefficient_basis_id\":\"manufactured-bearing-only\",\"selected_coordinate_and_contact_applicability_reviewed\":true}",
+      "invalid_field": "pipe_wall_thickness_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_local_indentation_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "20405bc733cc1f87f787fd1ef285546ceb08fe78fd18fda881bb4df6bba7e30e",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "mechanical.prescribed_pressure_work_actuation",
+      "contract": "pipeline_integrity.ideal_actuation_observers.IdealPistonRequest",
+      "payload_json": "{\"id\":\"piston\",\"bore_diameter_m\":0.1,\"rod_diameter_m\":0.02,\"cap_pressure_pa_abs\":1000000.0,\"rod_chamber_pressure_pa_abs\":100000.0,\"exterior_pressure_pa_abs\":100000.0,\"signed_extension_m\":0.01,\"measured_chamber\":\"cap\",\"signed_volume_inflow_m3_s\":0.001,\"positive_extension_axis\":[1.0,0.0,0.0],\"load_observation_direction\":[1.0,0.0,0.0],\"uniform_pressure_rigid_piston_incompressible_kinematics_reviewed\":false}",
+      "invalid_field": "bore_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "IdealPistonRequest",
+      "origin_sha256": "01c408df94b0b0301aad5843e0a2549735e8a5c7f59752959ab5f4468a872bc7",
+      "relational_validator_names": [
+        "geometry"
+      ]
+    },
+    {
+      "canonical_unit": "mechanical.supplied_uniform_shear_cut_load",
+      "contract": "pipeline_integrity.ideal_actuation_observers.UniformShearCutRequest",
+      "payload_json": "{\"id\":\"unknown\",\"actual_cut_perimeter_m\":1.0,\"uniform_sheet_thickness_m\":1.0,\"supplied_uniform_shear_strength_pa\":1.0,\"material_basis_id\":\"caller\",\"uniform_simultaneous_shear_area_basis_reviewed\":false}",
+      "invalid_field": "actual_cut_perimeter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_ideal_actuation_observers_independent.py",
+      "origin_factory": "constructor-at-line-63",
+      "origin_sha256": "0258a3cf34f5cb121231e20b893b796b765f9bd518129eb0532b9dd162e3b205",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "mechanics.key_shear_bearing",
+      "contract": "pipeline_integrity.key_loads.KeyLoadRequest",
+      "payload_json": "{\"shaft_diameter_m\":0.04,\"applied_torque_N_m\":100.0,\"keys\":[{\"id\":\"key\",\"shear_width_m\":0.005,\"engaged_length_m\":0.1,\"actual_bearing_height_m\":0.0025,\"torque_share\":1.0}],\"nominal_radius_engagement_and_load_sharing_reviewed\":true}",
+      "invalid_field": "shaft_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_key_loads_individual.py",
+      "origin_factory": "make",
+      "origin_sha256": "eeebf7d39d0b88b6646a3b54dd8fdcd577de4457eaae03432bc81aa1a39d5b72",
+      "relational_validator_names": [
+        "identities"
+      ]
+    },
+    {
+      "canonical_unit": "mechanics.relief_jet_reaction",
+      "contract": "pipeline_integrity.slug_elbow_load.SlugElbowLoadRequest",
+      "payload_json": "{\"coordinate_frame_id\":\"laboratory\",\"slug_density_kg_m3\":980.0,\"flow_area_m2\":0.03,\"signed_path_velocity_m_s\":2.0,\"incoming_path_unit_direction\":[1.0,0.0,0.0],\"outgoing_path_unit_direction\":[0.0,1.0,0.0],\"incoming_pressure_Pa_abs\":100000.0,\"outgoing_pressure_Pa_abs\":100000.0,\"ambient_pressure_Pa_abs\":100000.0,\"uniform_full_bore_slug_port_states_reviewed\":true,\"complete_steady_control_volume_reviewed\":false,\"body_force_on_fluid_N\":null,\"absolute_mass_balance_tolerance_kg_s\":null}",
+      "invalid_field": "slug_density_kg_m3",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_slug_elbow_load_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "82c860b63c7102bc80f9559f9756c2609b1d1d516c18b7f39d29fef001082417",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "notch_threshold_correlation",
+      "contract": "pipeline_integrity.fracture_property_coordinates.NotchThresholdRequest",
+      "payload_json": "{\"notch_root_radius_m\":0.001,\"yield_stress_pa\":250000000.0,\"reference_notch_radius_m\":0.001,\"reference_yield_stress_pa\":250000000.0,\"supplied_reference_threshold_pa_sqrt_m\":50000000.0,\"supplied_radius_strength_exponent\":0.5,\"material_temperature_notch_and_unit_basis_id\":\"material\",\"notch_threshold_correlation_support_reviewed\":false}",
+      "invalid_field": "notch_root_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "NotchThresholdRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "pendulum_swing_response",
+      "contract": "pipeline_integrity.pendulum_spectral_coordinate.PendulumSpectralRequest",
+      "payload_json": "{\"suspension_length_m\":2.0,\"gravity_m_s2\":9.81,\"spectral_acceleration_at_natural_frequency_m_s2\":0.1,\"supplied_spectral_displacement_multiplier\":1.3,\"maximum_reviewed_small_angle_rad\":0.1,\"spectrum_ordinate_frequency_damping_and_small_angle_reviewed\":true}",
+      "invalid_field": "suspension_length_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_pendulum_spectral_coordinate_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "3f5a0403be0c2cdcee3861993ca88fd60dabd1f0f7fc372383d53b2f00e2a0da",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "pipeline.buried_aboveground_transition",
+      "contract": "pipeline_integrity.soil_transition_observer.SoilTransitionRequest",
+      "payload_json": "{\"id\":\"transition\",\"cylinder\":{\"asset_id\":\"authored-transition\",\"location_id\":\"wall\",\"clock_id\":\"static\",\"inner_radius_m\":0.15,\"outer_radius_m\":0.16,\"internal_pressure_relative_zero_exterior_pa\":3000000.0,\"elastic_modulus_pa\":205000000000.0,\"poisson_ratio\":0.28,\"expansion_coefficient_per_k\":0.000012,\"uniform_temperature_change_k\":30.0,\"material_evidence_id\":\"reviewed-inputs\",\"isotropic_elastic_uniform_temperature_zero_axial_strain_reviewed\":true},\"supplied_constant_axial_resistance_n_m\":2400.0,\"resistance_evidence_id\":\"reviewed-inputs\",\"uniform_section_constant_opposing_resistance_far_field_transition_reviewed\":true}",
+      "invalid_field": "supplied_constant_axial_resistance_n_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_soil_transition_individual.py",
+      "origin_factory": "request",
+      "origin_sha256": "3615e29a6e9d0c03344e19343c1d87496f77723160adb0bd50136a719baff8d0",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "pipeline.lowering_elastic_compatibility",
+      "contract": "pipeline_integrity.lowering_axial_compatibility.LoweringAxialCompatibilityRequest",
+      "payload_json": "{\"id\":\"authored-material-line\",\"initial_stress_free_material_line\":{\"straight_lengths_m\":[100.0],\"circular_arcs\":[]},\"final_prescribed_material_line\":{\"straight_lengths_m\":[100.02],\"circular_arcs\":[]},\"young_modulus_pa\":204000000000.0,\"maximum_reviewed_absolute_engineering_strain\":0.002,\"signed_initial_uniform_axial_stress_pa\":0.0,\"uniform_linear_elastic_same_material_no_feed_or_slip_reviewed\":true,\"thermal_and_pressure_state_unchanged_reviewed\":true}",
+      "invalid_field": "young_modulus_pa",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_lowering_axial_compatibility_individual.py",
+      "origin_factory": "request",
+      "origin_sha256": "80aefec83884dec594068f9965feeab8e03836f16ba236009050f7c212719e93",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "plasticity.hardening_membrane_pressure_turn",
+      "contract": "pipeline_integrity.hardening_membrane_limit.HardeningMembraneLimitRequest",
+      "payload_json": "{\"transformation_model\":\"j2_plane_strain\",\"reference_diameter_m\":0.5,\"reference_wall_m\":0.005,\"strength_coefficient_pa\":800000000.0,\"hardening_exponent\":0.2,\"supplied_transformation_factor\":null,\"transformation_basis_id\":null,\"calibration_basis_id\":\"authored-power-law\",\"maximum_supported_equivalent_strain\":1.0,\"maximum_reviewed_wall_diameter_ratio\":0.02,\"diameter_is_reference_membrane_coordinate\":true,\"incompressible_plane_strain_power_hardening_reviewed\":true}",
+      "invalid_field": "reference_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_hardening_membrane_limit_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "18cf975e2b4d21c90c19423b431f34140174ac706bdc98c2ec225f037d396111",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "plasticity.perfect_plastic_cylinder",
+      "contract": "pipeline_integrity.perfect_plastic_cylinder.PerfectPlasticCylinderRequest",
+      "payload_json": "{\"axial_condition\":\"closed_ends_zero_axial_plastic_strain\",\"inside_radius_m\":0.1,\"outside_radius_m\":0.2,\"yield_stress_pa\":300000000.0,\"sample_radii_m\":[0.1,0.10010000000000001,0.10020000000000001,0.1003,0.1004,0.1005,0.10060000000000001,0.10070000000000001,0.1008,0.1009,0.101,0.10110000000000001,0.10120000000000001,0.1013,0.1014,0.1015,0.10160000000000001,0.10170000000000001,0.1018,0.1019,0.10200000000000001,0.10210000000000001,0.1022,0.1023,0.1024,0.10250000000000001,0.10260000000000001,0.1027,0.1028,0.1029,0.10300000000000001,0.10310000000000001,0.1032,0.1033,0.1034,0.10350000000000001,0.10360000000000001,0.1037,0.1038,0.1039,0.10400000000000001,0.10410000000000001,0.1042,0.1043,0.1044,0.10450000000000001,0.1046,0.1047,0.1048,0.10490000000000001,0.10500000000000001,0.1051,0.1052,0.1053,0.10540000000000001,0.10550000000000001,0.1056,0.1057,0.1058,0.10590000000000001,0.10600000000000001,0.1061,0.1062,0.1063,0.10640000000000001,0.10650000000000001,0.1066,0.1067,0.1068,0.10690000000000001,0.10700000000000001,0.1071,0.1072,0.1073,0.10740000000000001,0.10750000000000001,0.1076,0.1077,0.1078,0.10790000000000001,0.10800000000000001,0.1081,0.1082,0.10830000000000001,0.10840000000000001,0.10850000000000001,0.1086,0.1087,0.10880000000000001,0.10890000000000001,0.10900000000000001,0.1091,0.1092,0.10930000000000001,0.10940000000000001,0.1095,0.1096,0.1097,0.10980000000000001,0.10990000000000001,0.11,0.1101,0.1102,0.11030000000000001,0.11040000000000001,0.1105,0.1106,0.1107,0.11080000000000001,0.1109,0.111,0.1111,0.11120000000000001,0.11130000000000001,0.1114,0.1115,0.1116,0.11170000000000001,0.11180000000000001,0.1119,0.112,0.1121,0.11220000000000001,0.11230000000000001,0.1124,0.1125,0.1126,0.11270000000000001,0.11280000000000001,0.1129,0.113,0.1131,0.11320000000000001,0.11330000000000001,0.1134,0.1135,0.1136,0.11370000000000001,0.11380000000000001,0.1139,0.114,0.11410000000000001,0.11420000000000001,0.11430000000000001,0.1144,0.1145,0.11460000000000001,0.11470000000000001,0.11480000000000001,0.1149,0.115,0.11510000000000001,0.11520000000000001,0.11530000000000001,0.1154,0.1155,0.11560000000000001,0.11570000000000001,0.11580000000000001,0.1159,0.116,0.11610000000000001,0.1162,0.11630000000000001,0.1164,0.1165,0.11660000000000001,0.1167,0.11680000000000001,0.1169,0.117,0.11710000000000001,0.1172,0.1173,0.1174,0.11750000000000001,0.11760000000000001,0.1177,0.1178,0.1179,0.11800000000000001,0.11810000000000001,0.1182,0.1183,0.1184,0.11850000000000001,0.11860000000000001,0.1187,0.1188,0.1189,0.11900000000000001,0.11910000000000001,0.1192,0.1193,0.1194,0.11950000000000001,0.11960000000000001,0.1197,0.1198,0.1199,0.12000000000000001,0.12010000000000001,0.1202,0.1203,0.12040000000000001,0.12050000000000001,0.12060000000000001,0.1207,0.1208,0.12090000000000001,0.12100000000000001,0.12110000000000001,0.1212,0.1213,0.12140000000000001,0.12150000000000001,0.12160000000000001,0.1217,0.1218,0.12190000000000001,0.12200000000000001,0.12210000000000001,0.1222,0.1223,0.12240000000000001,0.12250000000000001,0.12260000000000001,0.1227,0.1228,0.12290000000000001,0.123,0.12310000000000001,0.1232,0.1233,0.12340000000000001,0.1235,0.1236,0.1237,0.12380000000000001,0.12390000000000001,0.124,0.1241,0.1242,0.12430000000000001,0.12440000000000001,0.1245,0.1246,0.1247,0.12480000000000001,0.12490000000000001,0.125,0.12510000000000002,0.1252,0.1253,0.1254,0.1255,0.12560000000000002,0.1257,0.1258,0.1259,0.126,0.12610000000000002,0.1262,0.1263,0.1264,0.1265,0.12660000000000002,0.1267,0.1268,0.1269,0.127,0.12710000000000002,0.1272,0.1273,0.1274,0.1275,0.12760000000000002,0.1277,0.1278,0.1279,0.128,0.1281,0.1282,0.1283,0.12840000000000001,0.1285,0.1286,0.1287,0.1288,0.12890000000000001,0.129,0.1291,0.1292,0.1293,0.12940000000000002,0.1295,0.1296,0.1297,0.1298,0.12990000000000002,0.13,0.1301,0.1302,0.1303,0.13040000000000002,0.1305,0.1306,0.1307,0.1308,0.13090000000000002,0.131,0.1311,0.1312,0.1313,0.13140000000000002,0.1315,0.1316,0.1317,0.1318,0.13190000000000002,0.132,0.1321,0.1322,0.1323,0.13240000000000002,0.1325,0.1326,0.1327,0.1328,0.13290000000000002,0.133,0.1331,0.1332,0.1333,0.13340000000000002,0.1335,0.1336,0.1337,0.1338,0.13390000000000002,0.134,0.1341,0.1342,0.1343,0.13440000000000002,0.1345,0.1346,0.13470000000000001,0.1348,0.13490000000000002,0.135,0.1351,0.13520000000000001,0.1353,0.13540000000000002,0.1355,0.1356,0.13570000000000002,0.1358,0.13590000000000002,0.136,0.1361,0.13620000000000002,0.1363,0.13640000000000002,0.1365,0.1366,0.13670000000000002,0.1368,0.13690000000000002,0.137,0.1371,0.13720000000000002,0.1373,0.13740000000000002,0.1375,0.1376,0.13770000000000002,0.1378,0.13790000000000002,0.138,0.1381,0.13820000000000002,0.1383,0.13840000000000002,0.1385,0.1386,0.13870000000000002,0.1388,0.13890000000000002,0.139,0.1391,0.1392,0.1393,0.13940000000000002,0.1395,0.1396,0.1397,0.1398,0.13990000000000002,0.14,0.1401,0.1402,0.1403,0.14040000000000002,0.1405,0.1406,0.1407,0.1408,0.1409,0.14100000000000001,0.1411,0.1412,0.1413,0.1414,0.14150000000000001,0.1416,0.1417,0.1418,0.1419,0.14200000000000002,0.1421,0.1422,0.1423,0.1424,0.14250000000000002,0.1426,0.1427,0.1428,0.1429,0.14300000000000002,0.1431,0.1432,0.1433,0.1434,0.14350000000000002,0.1436,0.1437,0.1438,0.1439,0.14400000000000002,0.1441,0.1442,0.1443,0.1444,0.14450000000000002,0.1446,0.1447,0.1448,0.1449,0.14500000000000002,0.1451,0.1452,0.1453,0.1454,0.14550000000000002,0.1456,0.1457,0.1458,0.1459,0.14600000000000002,0.1461,0.1462,0.1463,0.1464,0.14650000000000002,0.1466,0.1467,0.1468,0.1469,0.14700000000000002,0.1471,0.1472,0.14730000000000001,0.1474,0.14750000000000002,0.1476,0.1477,0.14780000000000001,0.1479,0.14800000000000002,0.1481,0.1482,0.14830000000000002,0.1484,0.14850000000000002,0.1486,0.1487,0.14880000000000002,0.1489,0.14900000000000002,0.1491,0.1492,0.14930000000000002,0.1494,0.14950000000000002,0.1496,0.1497,0.14980000000000002,0.1499,0.15000000000000002,0.1501,0.1502,0.15030000000000002,0.1504,0.15050000000000002,0.1506,0.1507,0.15080000000000002,0.1509,0.15100000000000002,0.1511,0.1512,0.15130000000000002,0.1514,0.15150000000000002,0.1516,0.1517,0.15180000000000002,0.1519,0.15200000000000002,0.1521,0.1522,0.1523,0.1524,0.15250000000000002,0.1526,0.1527,0.1528,0.1529,0.15300000000000002,0.1531,0.1532,0.1533,0.1534,0.15350000000000003,0.15360000000000001,0.1537,0.1538,0.1539,0.154,0.15410000000000001,0.1542,0.1543,0.1544,0.1545,0.15460000000000002,0.1547,0.1548,0.1549,0.155,0.15510000000000002,0.1552,0.1553,0.1554,0.1555,0.15560000000000002,0.1557,0.1558,0.1559,0.156,0.15610000000000002,0.1562,0.1563,0.1564,0.1565,0.15660000000000002,0.1567,0.1568,0.1569,0.157,0.15710000000000002,0.1572,0.1573,0.1574,0.1575,0.15760000000000002,0.1577,0.1578,0.1579,0.158,0.15810000000000002,0.1582,0.1583,0.1584,0.1585,0.15860000000000002,0.1587,0.1588,0.1589,0.159,0.15910000000000002,0.1592,0.1593,0.15940000000000001,0.1595,0.15960000000000002,0.1597,0.1598,0.15990000000000001,0.16,0.16010000000000002,0.1602,0.1603,0.16040000000000001,0.1605,0.16060000000000002,0.1607,0.1608,0.16090000000000002,0.161,0.16110000000000002,0.1612,0.1613,0.16140000000000002,0.1615,0.16160000000000002,0.1617,0.1618,0.16190000000000002,0.162,0.16210000000000002,0.1622,0.1623,0.16240000000000002,0.1625,0.16260000000000002,0.1627,0.1628,0.1629,0.163,0.16310000000000002,0.1632,0.1633,0.1634,0.1635,0.16360000000000002,0.1637,0.1638,0.1639,0.164,0.16410000000000002,0.1642,0.1643,0.1644,0.1645,0.16460000000000002,0.1647,0.1648,0.1649,0.165,0.16510000000000002,0.1652,0.1653,0.1654,0.1655,0.16560000000000002,0.16570000000000001,0.1658,0.1659,0.166,0.16610000000000003,0.16620000000000001,0.1663,0.1664,0.1665,0.16660000000000003,0.16670000000000001,0.1668,0.1669,0.167,0.16710000000000003,0.16720000000000002,0.1673,0.1674,0.1675,0.16760000000000003,0.16770000000000002,0.1678,0.1679,0.168,0.16810000000000003,0.16820000000000002,0.1683,0.1684,0.1685,0.16860000000000003,0.16870000000000002,0.1688,0.1689,0.169,0.16910000000000003,0.16920000000000002,0.1693,0.1694,0.1695,0.16960000000000003,0.16970000000000002,0.1698,0.1699,0.17,0.17010000000000003,0.17020000000000002,0.1703,0.1704,0.1705,0.17060000000000003,0.17070000000000002,0.1708,0.1709,0.171,0.1711,0.17120000000000002,0.1713,0.1714,0.1715,0.1716,0.17170000000000002,0.1718,0.1719,0.17200000000000001,0.1721,0.17220000000000002,0.1723,0.1724,0.17250000000000001,0.1726,0.17270000000000002,0.1728,0.1729,0.17300000000000001,0.1731,0.17320000000000002,0.1733,0.1734,0.17350000000000002,0.1736,0.17370000000000002,0.1738,0.1739,0.17400000000000002,0.1741,0.17420000000000002,0.1743,0.1744,0.1745,0.1746,0.17470000000000002,0.1748,0.1749,0.175,0.1751,0.17520000000000002,0.1753,0.1754,0.1755,0.1756,0.17570000000000002,0.1758,0.1759,0.176,0.1761,0.17620000000000002,0.1763,0.1764,0.1765,0.1766,0.17670000000000002,0.1768,0.1769,0.177,0.1771,0.17720000000000002,0.1773,0.1774,0.1775,0.1776,0.17770000000000002,0.1778,0.1779,0.178,0.1781,0.17820000000000003,0.17830000000000001,0.1784,0.1785,0.1786,0.17870000000000003,0.17880000000000001,0.1789,0.179,0.1791,0.17920000000000003,0.17930000000000001,0.1794,0.1795,0.1796,0.17970000000000003,0.17980000000000002,0.1799,0.18,0.1801,0.18020000000000003,0.18030000000000002,0.1804,0.1805,0.1806,0.18070000000000003,0.18080000000000002,0.1809,0.181,0.1811,0.18120000000000003,0.18130000000000002,0.1814,0.1815,0.1816,0.18170000000000003,0.18180000000000002,0.1819,0.182,0.1821,0.18220000000000003,0.18230000000000002,0.1824,0.1825,0.1826,0.18270000000000003,0.18280000000000002,0.1829,0.183,0.1831,0.18320000000000003,0.18330000000000002,0.1834,0.1835,0.1836,0.18370000000000003,0.18380000000000002,0.1839,0.184,0.1841,0.18420000000000003,0.18430000000000002,0.1844,0.1845,0.18460000000000001,0.1847,0.18480000000000002,0.1849,0.185,0.18510000000000001,0.1852,0.18530000000000002,0.1854,0.1855,0.18560000000000001,0.1857,0.18580000000000002,0.1859,0.186,0.18610000000000002,0.1862,0.18630000000000002,0.1864,0.1865,0.18660000000000002,0.1867,0.18680000000000002,0.1869,0.187,0.18710000000000002,0.1872,0.18730000000000002,0.1874,0.1875,0.1876,0.1877,0.18780000000000002,0.1879,0.188,0.1881,0.1882,0.18830000000000002,0.1884,0.1885,0.1886,0.1887,0.18880000000000002,0.1889,0.189,0.1891,0.1892,0.18930000000000002,0.1894,0.1895,0.1896,0.1897,0.18980000000000002,0.1899,0.19,0.1901,0.1902,0.19030000000000002,0.1904,0.1905,0.1906,0.1907,0.19080000000000003,0.19090000000000001,0.191,0.1911,0.1912,0.19130000000000003,0.19140000000000001,0.1915,0.1916,0.1917,0.19180000000000003,0.19190000000000002,0.192,0.1921,0.1922,0.19230000000000003,0.19240000000000002,0.1925,0.1926,0.1927,0.19280000000000003,0.19290000000000002,0.193,0.1931,0.1932,0.19330000000000003,0.19340000000000002,0.1935,0.1936,0.1937,0.19380000000000003,0.19390000000000002,0.194,0.1941,0.1942,0.19430000000000003,0.19440000000000002,0.1945,0.1946,0.1947,0.19480000000000003,0.19490000000000002,0.195,0.1951,0.1952,0.19530000000000003,0.19540000000000002,0.1955,0.1956,0.1957,0.19580000000000003,0.19590000000000002,0.196,0.1961,0.1962,0.19630000000000003,0.19640000000000002,0.1965,0.1966,0.1967,0.19680000000000003,0.19690000000000002,0.197,0.1971,0.19720000000000001,0.19730000000000003,0.19740000000000002,0.1975,0.1976,0.19770000000000001,0.1978,0.19790000000000002,0.198,0.1981,0.19820000000000002,0.1983,0.19840000000000002,0.1985,0.1986,0.19870000000000002,0.1988,0.19890000000000002,0.199,0.1991,0.19920000000000002,0.1993,0.19940000000000002,0.1995,0.1996,0.19970000000000002,0.1998,0.19990000000000002,0.2],\"homogeneous_isotropic_associated_j2_fixed_geometry_reviewed\":true}",
+      "invalid_field": "inside_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_perfect_plastic_cylinder_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "5847d0f1acca8ab89e00d1414df91ded2abff85818919607e8d96eac8407d304",
+      "relational_validator_names": [
+        "geometry"
+      ]
+    },
+    {
+      "canonical_unit": "plate.clamped_circular_elastic_pressure",
+      "contract": "pipeline_integrity.circular_plate.ClampedCircularPlateRequest",
+      "payload_json": "{\"support_radius_m\":0.1,\"effective_thickness_m\":0.003,\"differential_pressure_Pa\":1000.0,\"elastic_modulus_Pa\":200000000000.0,\"poisson_ratio\":0.3,\"query_radii_m\":[0.0,0.04,0.1],\"maximum_reviewed_thickness_to_radius\":0.1,\"maximum_reviewed_center_deflection_to_thickness\":0.2,\"uniform_pressure_linear_elastic_small_deflection_clamp_reviewed\":true}",
+      "invalid_field": "support_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_circular_plate_individual.py",
+      "origin_factory": "make",
+      "origin_sha256": "cdba736ded9d83300aca644ec515a8d6c760e853af8dcff861fda55b660febfd",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "pressure.nominal_membrane",
+      "contract": "pipeline_integrity.pressure_bending_budget.PressureBendingBudgetRequest",
+      "payload_json": "{\"id\":\"authored\",\"inside_pressure_pa_abs\":4100000.0,\"exterior_pressure_pa_abs\":100000.0,\"actual_outside_diameter_m\":0.3,\"actual_wall_thickness_m\":0.009,\"pressure_diameter_basis\":\"outside\",\"young_modulus_pa\":190000000000.0,\"supplied_longitudinal_tensile_stress_ceiling_pa\":220000000.0,\"signed_prescribed_curvature_per_m\":0.001,\"supplied_allowable_and_membrane_free_closed_caps_elastic_bending_reviewed\":true,\"stress_ceiling_evidence_id\":\"caller-authored\"}",
+      "invalid_field": "inside_pressure_pa_abs",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_pressure_bending_budget_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "59612368870e74f2913007491d8e740db233902074d50da19ad839af007ffb65",
+      "relational_validator_names": [
+        "geometry"
+      ]
+    },
+    {
+      "canonical_unit": "rigging.prescribed_guy_equilibrium",
+      "contract": "pipeline_integrity.guy_projection.GuyProjectionRequest",
+      "payload_json": "{\"id\":\"guy\",\"coordinate_frame_id\":\"xyz\",\"attachment_point_m\":[0.0,0.0,10.0],\"anchorage_point_m\":[5.0,0.0,0.0],\"external_force_n\":[-1000.0,0.0,0.0],\"horizontal_axis_in_load_plane\":[1.0,0.0,0.0],\"upward_vertical_axis\":[0.0,0.0,1.0],\"external_force_application_point_m\":[0.0,0.0,10.0],\"reaction_reference_point_m\":[0.0,0.0,0.0],\"external_applied_couple_nm\":[0.0,0.0,0.0],\"reaction_model\":\"required_reaction\",\"distribution\":{\"mode\":\"single_coplanar_guy\",\"guy_count\":1,\"basis_id\":\"single\",\"maximum_individual_increment_to_coplanar_pull_factor\":null,\"uniform_spacing_equal_erection_tension_and_factor_domain_reviewed\":false,\"supplied_initial_individual_tension_n\":null},\"coplanar_incremental_load_and_selected_reaction_direction_reviewed\":false,\"absolute_out_of_plane_distance_tolerance_m\":1e-10,\"absolute_out_of_plane_force_tolerance_n\":1e-9,\"minimum_absolute_horizontal_direction_cosine\":1e-8,\"absolute_pin_couple_tolerance_nm\":1e-7}",
+      "invalid_field": "absolute_out_of_plane_distance_tolerance_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "GuyProjectionRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": [
+        "axes"
+      ]
+    },
+    {
+      "canonical_unit": "rigging.pulley_mechanical_advantage",
+      "contract": "pipeline_integrity.reeved_hoist.ReevedHoistRequest",
+      "payload_json": "{\"supported_load_N\":1200.0,\"working_rope_parts\":4,\"per_sheave_efficiency\":0.9,\"load_rise_m\":2.0,\"successive_loaded_leg_loss_and_direct_hoist_route_reviewed\":true}",
+      "invalid_field": "supported_load_N",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_reeved_hoist_individual.py",
+      "origin_factory": "make",
+      "origin_sha256": "19c10e5538d67dc6d413ebc6f2c272739df86a92fb812d05d3d2d199e4902984",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "saddle_local_capacity",
+      "contract": "pipeline_integrity.saddle_capacity_coordinate.SaddleCapacityRequest",
+      "payload_json": "{\"wall_thickness_m\":0.005,\"pipe_reference_radius_m\":0.1,\"supplied_yield_stress_pa\":250000000.0,\"supplied_contact_geometry_coefficient\":1.0,\"maximum_reviewed_wall_thickness_to_radius\":0.1,\"material_contact_angle_and_geometry_basis_id\":\"material\",\"local_saddle_correlation_applicability_reviewed\":false}",
+      "invalid_field": "wall_thickness_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "SaddleCapacityRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "shell.elastic_ring_pressure_instability",
+      "contract": "pipeline_integrity.elastic_shell_ring.ElasticShellRingRequest",
+      "payload_json": "{\"id\":\"ring\",\"asset_id\":\"unit\",\"clock_id\":\"seconds\",\"cross_section_id\":\"section\",\"coordinate_frame_id\":\"xy\",\"mean_reference_centerline_radius_m\":1.0,\"wall_thickness_m\":0.01,\"axial_strip_width_m\":0.2,\"young_modulus_Pa\":200000000000.0,\"poisson_ratio\":0.3,\"axial_constraint\":\"plane_stress_ring\",\"initial_diameter_ovality_fraction\":0.0,\"external_minus_internal_pressure_Pa\":[0.0,100.0],\"maximum_cartesian_harmonic\":5,\"quadrature_points\":256,\"maximum_thickness_to_radius_ratio\":0.05,\"maximum_axial_extension_strain_magnitude\":0.01,\"maximum_bending_surface_strain_magnitude\":0.01,\"maximum_shape_change_per_step_over_radius\":0.1,\"maximum_second_moment_ellipse_ovality_fraction\":0.5,\"absolute_equilibrium_force_tolerance_N\":0.00001,\"relative_equilibrium_force_tolerance\":1e-8,\"absolute_pressure_work_tolerance_J\":0.0001,\"relative_pressure_work_tolerance\":0.0001,\"positive_tangent_stiffness_tolerance_N_m\":0.00001,\"absolute_quadrature_stiffness_tolerance_N_m\":0.00001,\"relative_quadrature_stiffness_tolerance\":1e-6,\"relative_equilibrium_coordinate_tolerance\":1e-10,\"minimum_pressure_step_Pa\":0.01,\"pressure_event_tolerance_Pa\":0.01,\"maximum_equilibrium_evaluations\":10000,\"maximum_steps\":1000,\"maximum_event_refinements\":60,\"native_backend_pins\":{},\"geometry_evidence_id\":\"review\",\"material_evidence_id\":\"review\",\"pressure_evidence_id\":\"review\",\"scope_review_evidence_id\":\"review\",\"reference_ovality_is_stress_free_geometry_reviewed\":false,\"homogeneous_linear_elastic_thin_unshearable_ring_reviewed\":false,\"axial_constraint_and_omitted_finite_length_modes_reviewed\":false,\"conservative_uniform_differential_pressure_reviewed\":false,\"maximum_result_bytes\":30000000}",
+      "invalid_field": "mean_reference_centerline_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_new_physics_reference.py",
+      "origin_factory": "constructor-at-line-82",
+      "origin_sha256": "2c822d3ce0774959836e1fdc5828bf319f8f20ef1e563466afd8fbc8b1ba5673",
+      "relational_validator_names": [
+        "support"
+      ]
+    },
+    {
+      "canonical_unit": "shell.linear_radial_pressure_dynamics",
+      "contract": "pipeline_integrity.cylindrical_modal_projection.CylindricalModalProjectionRequest",
+      "payload_json": "{\"mean_radius_m\":0.5,\"wall_thickness_m\":0.005,\"axial_length_m\":4.0,\"elastic_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"material_density_kg_m3\":7800.0,\"radial_axial_constraint\":\"plane_strain_axially_uniform_shell\",\"maximum_thickness_to_radius_ratio\":0.05,\"quadrature_points\":96,\"isotropic_thin_uniform_shell_modal_fields_and_free_axial_mode_reviewed\":true}",
+      "invalid_field": "mean_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_cylindrical_modal_projection_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "436988341a76be2537f03d6295b6de2e4f0a0024d3d35c5cc51ededc22389de0",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "shell.local_normal_membrane_equilibrium",
+      "contract": "pipeline_integrity.principal_membrane_equilibrium.PrincipalMembraneRequest",
+      "payload_json": "{\"id\":\"authored\",\"pressure_on_negative_normal_side_pa_abs\":140000.0,\"pressure_on_positive_normal_side_pa_abs\":100000.0,\"principal_curvature_1_per_m\":0.5,\"principal_curvature_2_per_m\":0.5,\"mode\":\"equal_resultants\",\"supplied_resultant_1_n_m\":null,\"supplied_resultant_2_n_m\":null,\"supplied_uniform_membrane_thickness_m\":null,\"equilibrium_absolute_tolerance_pa\":1e-8,\"geometry_load_and_membrane_normal_convention_reviewed\":true,\"additional_constraint_evidence_id\":\"caller-declared-local-constraint\"}",
+      "invalid_field": "pressure_on_negative_normal_side_pa_abs",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_principal_membrane_equilibrium_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "a5bc53cc1879efeacd30860dcb7d3053c6089fd2b95be261bab35081a4be9b11",
+      "relational_validator_names": [
+        "no_ignored_unknowns"
+      ]
+    },
+    {
+      "canonical_unit": "shell.short_stiff_pipe_supplied_membrane_yield_reference",
+      "contract": "pipeline_integrity.shell_pressure_references.ShortPipeHoopReferenceRequest",
+      "payload_json": "{\"outside_diameter_m\":0.4,\"wall_thickness_m\":0.008,\"supplied_compressive_hoop_limit_pa\":250000000.0,\"short_stiffened_regime_reviewed\":true}",
+      "invalid_field": "outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_shell_pressure_references_independent.py",
+      "origin_factory": "short",
+      "origin_sha256": "7555725e759761777f706aeeec75f5db13a9dfc1b78bc730c5c293a4ec47799d",
+      "relational_validator_names": [
+        "hollow"
+      ]
+    },
+    {
+      "canonical_unit": "shell.supplied_intermediate_collapse_correlation",
+      "contract": "pipeline_integrity.shell_pressure_references.IntermediateShellReferenceRequest",
+      "payload_json": "{\"outside_diameter_m\":0.4,\"wall_thickness_m\":0.008,\"length_m\":2.0,\"young_modulus_pa\":200000000000.0,\"supplied_correlation_coefficient\":2.6,\"intermediate_length_and_coefficient_basis_reviewed\":true}",
+      "invalid_field": "outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_shell_pressure_references_independent.py",
+      "origin_factory": "intermediate",
+      "origin_sha256": "7555725e759761777f706aeeec75f5db13a9dfc1b78bc730c5c293a4ec47799d",
+      "relational_validator_names": [
+        "hollow"
+      ]
+    },
+    {
+      "canonical_unit": "shell.supplied_oval_pressure_interaction",
+      "contract": "pipeline_integrity.shell_pressure_references.OvalShellInteractionRequest",
+      "payload_json": "{\"elastic_reference_pressure_pa\":1000000.0,\"plastic_hoop_reference_pressure_pa\":2000000.0,\"reference_radius_m\":0.2,\"radius_basis_id\":\"declared_nominal_radius\",\"wall_thickness_m\":0.002,\"major_diameter_over_nominal_minus_one\":0.003,\"reviewed_ovality_upper_bound\":0.05,\"relative_equation_residual_tolerance\":1e-10,\"interaction_and_reference_pressure_bases_reviewed\":true}",
+      "invalid_field": "elastic_reference_pressure_pa",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_shell_pressure_references_independent.py",
+      "origin_factory": "oval",
+      "origin_sha256": "7555725e759761777f706aeeec75f5db13a9dfc1b78bc730c5c293a4ec47799d",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "sleeve_end_fillet_stress",
+      "contract": "pipeline_integrity.sleeve_fillet_nominal_stress.SleeveFilletStressRequest",
+      "payload_json": "{\"header_outside_diameter_m\":0.3,\"radial_header_to_sleeve_outer_surface_distance_m\":0.005,\"radial_header_to_sleeve_inner_surface_gap_m\":0.002,\"longitudinal_joint_transfer_force_n\":1000.0,\"supplied_peak_shear_to_nominal_factor\":1.0,\"supplied_peak_principal_to_nominal_factor\":1.0,\"maximum_reviewed_effective_width_to_diameter\":0.05,\"peak_factor_geometry_material_support_basis_id\":\"authored-uniform-shear-not-actual-fillet\",\"thin_joint_geometry_transfer_force_and_peak_factor_support_reviewed\":true}",
+      "invalid_field": "header_outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_sleeve_fillet_nominal_stress_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "620a3c78db7986f32d8d38a2fbee76eacd1a171660fbfd76bfa956b58c42749f",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "smooth_specimen_strain_life",
+      "contract": "pipeline_integrity.strain_life_coordinate.StrainLifeCoordinateRequest",
+      "payload_json": "{\"asset_id\":\"pipe\",\"location_id\":\"section\",\"clock_id\":\"elapsed\",\"coordinate\":\"total_strain_amplitude\",\"value\":0.001,\"elastic_modulus_pa\":200000000000.0,\"fatigue_strength_coefficient_pa\":1000000000.0,\"fatigue_strength_exponent\":-0.1,\"fatigue_ductility_coefficient\":0.5,\"fatigue_ductility_exponent\":-0.5,\"minimum_valid_cycles\":1.0,\"maximum_valid_cycles\":10000000.0,\"calibration_basis_id\":\"material\",\"calibration_evidence_id\":\"calibration\",\"fully_reversed_same_measure_modern_calibration_reviewed\":false}",
+      "invalid_field": "value",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "StrainLifeCoordinateRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "soil.surface_load_and_pipe_contact",
+      "contract": "pipeline_integrity.structural.FrameRequest",
+      "payload_json": "{\"asset_id\":\"authored-frame\",\"clock_id\":\"declared-snapshot\",\"time_s\":0.0,\"coordinate_basis\":\"declared_cartesian_metres\",\"nodes\":[{\"id\":\"anchor\",\"position_m\":[0.0,0.0,0.0]},{\"id\":\"tip\",\"position_m\":[4.0,0.0,0.0]}],\"members\":[{\"id\":\"pipe\",\"i_node\":\"anchor\",\"j_node\":\"tip\",\"section_id\":\"annulus\",\"material_id\":\"declared-elastic\",\"rotation_deg\":0.0,\"rotation_releases\":[],\"sample_fractions\":[0.0,0.25,0.5,0.75,1.0]}],\"sections\":[{\"id\":\"annulus\",\"area_m2\":0.005969026041820614,\"iy_m4\":0.000027009842839238267,\"iz_m4\":0.000027009842839238267,\"torsion_constant_m4\":0.000054019685678476534,\"evidence_id\":\"reference\"}],\"materials\":[{\"id\":\"declared-elastic\",\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"evidence_id\":\"reference\"}],\"supports\":[{\"node_id\":\"anchor\",\"fixed_dofs\":[\"DX\",\"DY\",\"DZ\",\"RX\",\"RY\",\"RZ\"],\"translation_springs_n_m\":{},\"rotation_springs_nm_rad\":{},\"imposed_translations_m\":{},\"imposed_rotations_rad\":{},\"evidence_id\":\"reference\",\"one_way_translation_directions\":{},\"zero_gap_one_way_support_applicability_reviewed\":false}],\"load_cases\":[\"point\"],\"node_loads\":[{\"node_id\":\"tip\",\"direction\":\"FY\",\"value\":-1000.0,\"case_id\":\"point\",\"evidence_id\":\"reference\"}],\"line_loads\":[],\"initial_strains\":[],\"initial_curvatures\":[],\"combinations\":[{\"id\":\"service\",\"factors\":{\"point\":1.0},\"evidence_id\":\"reference\"}],\"geometry_evidence_id\":\"reference\",\"geometry_and_connectivity_reviewed\":true,\"stiffness_and_loads_reviewed\":true,\"supports_reviewed\":true,\"linear_small_displacement_applicability_reviewed\":true,\"absolute_force_tolerance_n\":1e-6,\"absolute_moment_tolerance_nm\":1e-6,\"relative_balance_tolerance\":1e-8,\"maximum_translation_to_member_length\":0.05,\"maximum_node_rotation_rad\":0.05,\"maximum_axial_strain_magnitude\":0.01,\"maximum_initial_curvature_rotation_rad\":0.05,\"support_active_set_max_iterations\":100,\"support_switch_displacement_tolerance_m\":0.0,\"moment_reference_point_m\":[0.0,0.0,0.0]}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "examples\\pipe_frame.py",
+      "origin_factory": "make_case",
+      "origin_sha256": "d375896a860ade024df788541650edb255ba467520f415d341154a8cfcd29bd7",
+      "relational_validator_names": [
+        "topology"
+      ]
+    },
+    {
+      "canonical_unit": "strain_rate_strength_correlation",
+      "contract": "pipeline_integrity.reviewed_dynamic_correlations.DynamicStrengthCoordinateRequest",
+      "payload_json": "{\"law\":\"log_rate_ratio\",\"strain_rate_magnitude_per_s\":0.001,\"reference_strain_rate_per_s\":0.001,\"minimum_reviewed_rate_per_s\":0.0001,\"maximum_reviewed_rate_per_s\":100.0,\"supplied_static_reference_strength_pa\":250000000.0,\"supplied_ratio_intercept\":1.0,\"supplied_ratio_multiplier\":0.1,\"supplied_power_exponent\":null,\"material_temperature_rate_and_strength_kind_basis_id\":\"material\",\"material_temperature_rate_law_and_units_reviewed\":false}",
+      "invalid_field": "strain_rate_magnitude_per_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "DynamicStrengthCoordinateRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "thermoelasticity.radial_cylinder",
+      "contract": "pipeline_integrity.cylindrical_thermal_stress.CylindricalThermalStressRequest",
+      "payload_json": "{\"radial_temperature_positions_m\":[0.5,0.8],\"temperature_k\":[313.0,313.0],\"stress_free_reference_temperature_k\":293.0,\"young_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"thermal_expansion_coefficient_per_k\":0.000012,\"material_property_supported_temperature_k\":[200.0,500.0],\"inner_pressure_traction_pa\":1000000.0,\"outer_pressure_traction_pa\":200000.0,\"axial_boundary\":\"prescribed_axial_force\",\"supplied_axial_strain\":0.0,\"supplied_axial_force_tension_positive_n\":0.0,\"query_radii_m\":[0.5,0.503,0.506,0.509,0.512,0.515,0.518,0.521,0.524,0.527,0.53,0.533,0.536,0.539,0.542,0.545,0.548,0.551,0.554,0.557,0.56,0.5630000000000001,0.5660000000000001,0.569,0.5720000000000001,0.575,0.5780000000000001,0.581,0.5840000000000001,0.587,0.59,0.593,0.596,0.599,0.602,0.605,0.608,0.611,0.614,0.617,0.62,0.623,0.626,0.629,0.632,0.635,0.638,0.641,0.644,0.647,0.65,0.653,0.656,0.659,0.662,0.665,0.668,0.671,0.674,0.677,0.68,0.683,0.686,0.6890000000000001,0.6920000000000001,0.6950000000000001,0.6980000000000001,0.7010000000000001,0.7040000000000001,0.7070000000000001,0.7100000000000001,0.7130000000000001,0.716,0.7190000000000001,0.722,0.7250000000000001,0.728,0.7310000000000001,0.734,0.7370000000000001,0.74,0.7430000000000001,0.746,0.7490000000000001,0.752,0.7550000000000001,0.758,0.7610000000000001,0.764,0.7670000000000001,0.77,0.773,0.776,0.779,0.782,0.785,0.788,0.791,0.794,0.797,0.8],\"maximum_sampled_absolute_small_strain\":0.01,\"relative_boundary_residual_tolerance\":1e-9,\"maximum_linear_system_condition_number\":1000000000000.0,\"strain_check_radial_points\":201,\"geometry_temperature_traction_axial_and_material_basis_id\":\"authored-isotropic-annulus\",\"axisymmetric_constant_property_small_strain_thermoelasticity_reviewed\":true}",
+      "invalid_field": "stress_free_reference_temperature_k",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_cylindrical_thermal_stress_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "48c2aaa6b311c235c824759ff0ba97595d9c236607df4ff584083a444e7b5a21",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "thermoelasticity.restrained_cylinder",
+      "contract": "pipeline_integrity.fully_restrained_cylinder.RestrainedCylinderRequest",
+      "payload_json": "{\"asset_id\":\"authored_cyclic_material\",\"location_id\":\"straight-cylinder\",\"clock_id\":\"source_cycle_record\",\"inner_radius_m\":0.5,\"outer_radius_m\":0.65,\"internal_pressure_relative_zero_exterior_pa\":2000000.0,\"elastic_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"expansion_coefficient_per_k\":0.000012,\"uniform_temperature_change_k\":40.0,\"material_evidence_id\":\"authored\",\"isotropic_elastic_uniform_temperature_zero_axial_strain_reviewed\":true}",
+      "invalid_field": "inner_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_fully_restrained_cylinder_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "cfd16a09f0b0ead46c7fc636d8f066d4fd7d78d29bf433b9291fa45c77869f53",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "torsion.annular_elastic_section",
+      "contract": "pipeline_integrity.shaft_torsion_observer.ShaftTorsionRequest",
+      "payload_json": "{\"id\":\"authored-shaft\",\"outside_diameter_m\":0.08,\"inside_diameter_m\":0.04,\"signed_torque_nm\":120.0,\"signed_angular_velocity_rad_s\":25.0,\"supplied_shear_stress_ceiling_pa\":55000000.0,\"ceiling_evidence_id\":\"caller-reviewed-ceiling\",\"length_m\":1.5,\"shear_modulus_pa\":79000000000.0,\"homogeneous_circular_saint_venant_torsion_reviewed\":true,\"supplied_ceiling_basis_reviewed\":true,\"signed_bending_moment_nm\":0.0,\"combined_bending_and_torsion_reviewed\":false,\"combined_equivalent_stress_basis\":\"von_mises\",\"supplied_combined_equivalent_stress_ceiling_pa\":null,\"combined_ceiling_evidence_id\":null}",
+      "invalid_field": "outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_shaft_torsion_individual.py",
+      "origin_factory": "request",
+      "origin_sha256": "c4062aa1737e95bf9158a05f22caf1941229922d6b59b2d0659a2342fd19540b",
+      "relational_validator_names": [
+        "consistent"
+      ]
+    },
+    {
+      "canonical_unit": "uniaxial_constitutive_coordinate",
+      "contract": "pipeline_integrity.normalized_constitutive_coordinate.NormalizedConstitutiveRequest",
+      "payload_json": "{\"asset_id\":\"tensile\",\"location_id\":\"specimen\",\"clock_id\":\"load\",\"time_s\":0.0,\"strain_measure\":\"engineering\",\"tensile_stress_pa\":200000000.0,\"elastic_modulus_pa\":200000000000.0,\"reference_stress_pa\":300000000.0,\"normalized_power_coefficient\":3.0,\"normalized_power_exponent\":4.0,\"maximum_supported_tensile_stress_pa\":600000000.0,\"calibration_basis_id\":\"authored-monotonic\",\"calibration_evidence_id\":\"curve\",\"monotonic_stress_strain_coordinate_and_calibration_reviewed\":true}",
+      "invalid_field": "time_s",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_normalized_constitutive_coordinate_independent.py",
+      "origin_factory": "calc",
+      "origin_sha256": "b98426af131a54d7791c0edf6037dabbd48294e325c76b59fa0dcd15be9263e4",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "vortex_lock_in_response",
+      "contract": "pipeline_integrity.vortex_lockin_coordinate.VortexLockinCoordinateRequest",
+      "payload_json": "{\"obstruction_outside_diameter_m\":0.1,\"strouhal_number\":0.2,\"damping_ratio\":0.01,\"obstruction_and_displaced_fluid_mass_kg_m\":20.0,\"fluid_density_kg_m3\":1000.0,\"supplied_amplitude_numerator\":1.0,\"supplied_amplitude_denominator_offset\":1.0,\"supplied_bending_recovery_multiplier\":1.0,\"elastic_modulus_pa\":200000000000.0,\"bending_second_moment_m4\":1e-6,\"free_span_m\":4.0,\"section_modulus_m3\":0.00002,\"geometry_added_mass_damping_and_lockin_calibration_basis_id\":\"geometry\",\"lockin_amplitude_and_bending_recovery_support_reviewed\":false}",
+      "invalid_field": "obstruction_outside_diameter_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "VortexLockinCoordinateRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "waves.cylindrical_scalar_wave",
+      "contract": "pipeline_integrity.cylindrical_scalar_wave_mode.CylindricalScalarWaveModeRequest",
+      "payload_json": "{\"outer_zero_displacement_radius_m\":2.0,\"wave_speed_m_s\":300.0,\"mode_number\":1,\"initial_axis_velocity_m_s\":2.0,\"query_radii_m\":[0.0,2.0],\"query_times_s\":[0.0,0.01],\"maximum_output_points\":100000,\"scalar_wave_geometry_and_boundary_basis_id\":\"authored-cylindrical-wave\",\"regular_axis_scalar_wave_and_outer_zero_boundary_reviewed\":true}",
+      "invalid_field": "outer_zero_displacement_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_cylindrical_scalar_wave_mode_independent.py",
+      "origin_factory": "req",
+      "origin_sha256": "1fee70c75885cb8de50b38e155de7ad473fb6de17cf88270fb484ce8701c1e32",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "weld_group_section_stress",
+      "contract": "pipeline_integrity.weld_line_group.WeldLineGroupRequest",
+      "payload_json": "{\"segments\":[{\"start_m\":[0.0,0.0],\"end_m\":[1.0,0.0]},{\"start_m\":[1.0,0.0],\"end_m\":[1.0,1.0]},{\"start_m\":[1.0,1.0],\"end_m\":[0.0,1.0]},{\"start_m\":[0.0,1.0],\"end_m\":[0.0,0.0]}],\"force_n\":[1000.0,0.0,0.0],\"moment_about_line_centroid_nm\":[0.0,0.0,10.0],\"uniform_effective_throat_m\":0.004,\"planar_equal_stiffness_elastic_line_group_reviewed\":false}",
+      "invalid_field": "uniform_effective_throat_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "authored-constructor-only-input",
+      "origin_factory": "WeldLineGroupRequest",
+      "origin_sha256": "c218ba94601aef4fc8ee0a180628a44dcb19557f4680eb01afe4e2e8e07e2228",
+      "relational_validator_names": []
+    },
+    {
+      "canonical_unit": "yield.pressurized_isotropic_cylinder",
+      "contract": "pipeline_integrity.fully_restrained_cylinder.RestrainedCylinderRequest",
+      "payload_json": "{\"asset_id\":\"authored_cyclic_material\",\"location_id\":\"straight-cylinder\",\"clock_id\":\"source_cycle_record\",\"inner_radius_m\":0.5,\"outer_radius_m\":0.65,\"internal_pressure_relative_zero_exterior_pa\":2000000.0,\"elastic_modulus_pa\":200000000000.0,\"poisson_ratio\":0.3,\"expansion_coefficient_per_k\":0.000012,\"uniform_temperature_change_k\":40.0,\"material_evidence_id\":\"authored\",\"isotropic_elastic_uniform_temperature_zero_axial_strain_reviewed\":true}",
+      "invalid_field": "inner_radius_m",
+      "invalid_value": -1.0,
+      "unit_string_value": "3 mm",
+      "origin_file": "tests\\test_fully_restrained_cylinder_independent.py",
+      "origin_factory": "request",
+      "origin_sha256": "cfd16a09f0b0ead46c7fc636d8f066d4fd7d78d29bf433b9291fa45c77869f53",
+      "relational_validator_names": []
+    }
+  ],
+  "excluded_prior_or_root": [
+    "damage.prescribed_constant_loss_time",
+    "fabrication.supplied_neutral_axis_curvature",
+    "fracture.surface_flaw_proof_survival",
+    "shaft.material_capacity",
+    "thermal.free_linear_expansion",
+    "welding.supplied_burnthrough_limit"
+  ],
+  "special_native_cases": [
+    "damage.creep_rupture_fraction",
+    "damage.fatigue_cycle_fraction",
+    "support_force_movement"
+  ],
+  "unresolved": []
+}

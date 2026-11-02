@@ -1,0 +1,11 @@
+{
+  "schema": "pipeline_integrity.uncertainty_fit_figure.v1",
+  "source": "research/uncertainty_fit_results.json",
+  "source_sha256": "833d5009ca11ef21e43469fca67afaaa23256397e9061d32fe0052c51f1d9c86",
+  "figure": "docs/images/uncertainty_fit_reference.png",
+  "figure_sha256": "2fe6023227b4d8628932ff6be9e76ae2d976078ae1f285b7777888d18a99dfb9",
+  "script_sha256": "ad3417273642697d9c43c2cf0d8ff0f5e81a490bbad8f2fd39a30824f08e4a20",
+  "displayed_values": "aggregate candidate scores and marginal coverage only",
+  "original_or_derived_cycle_rows_plotted": false,
+  "caption": "Dependent source-order diagnostic evaluation; independence counterfactual and authored criteria, not field qualification."
+}

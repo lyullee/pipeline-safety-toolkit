@@ -1,0 +1,17 @@
+{
+  "schema": "pipeline_integrity.publication_editorial_review.v1",
+  "release": "0.1.0a1",
+  "distribution": "pipeline-safety-toolkit",
+  "public_text_files_reviewed": 1756,
+  "long_verbatim_candidate_hits": 0,
+  "normalization": "English word normalization; twelve-word phrases of at least65 characters and sentences with8–100 words/at least50 characters. Required third-party legal notices are retained.",
+  "limitations": [
+    "This is an editorial similarity and packaging check, not a guarantee of legal clearance.",
+    "Short technical terminology, equations, numeric applicability and non-text material require separate review."
+  ],
+  "raw_and_private_materials_distributed": false,
+  "required_licenses_retained": true,
+  "correctness_ruff_findings": 0,
+  "advisory_full_style_findings": 6593,
+  "new_document_link_errors": []
+}

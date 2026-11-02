@@ -1,0 +1,8 @@
+{
+  "transfer_plan": "/REPLACE/WITH/TRANSFER/PLAN.json",
+  "raw_root": "/REPLACE/WITH/VERIFIED/data/raw",
+  "test_files": [
+    "tests/test_friction_study.py"
+  ],
+  "maximum_stage_bytes": 12340
+}

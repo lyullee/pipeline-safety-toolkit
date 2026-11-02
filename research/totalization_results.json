@@ -1,0 +1,51 @@
+{
+  "schema": "pipeline_integrity.totalization_verification.v1",
+  "checks": {
+    "point_linear:nominal": true,
+    "point_linear:joint_variance": true,
+    "point_linear:replay": true,
+    "interval_mean:nominal": true,
+    "interval_mean:joint_variance": true,
+    "interval_mean:replay": true,
+    "cumulative_counter:nominal": true,
+    "cumulative_counter:joint_variance": true,
+    "cumulative_counter:replay": true,
+    "missing_covariance_preserves_nominal_and_withholds_uncertainty": true,
+    "gap_not_filled": true,
+    "five_rehashed_mutations_refused": true,
+    "actual_274_periods_224_nominal_50_unknown": true
+  },
+  "passed": 13,
+  "total": 13,
+  "rehashed_corruptions_refused": 5,
+  "authored_records": 3,
+  "source_application": {
+    "dataset_id": "vsl_lng_water_calibration",
+    "source_sha256": "e97c896dde7792bae026e47fb8384256a8eff035ecbf1f85719e60069577a276",
+    "actual_requests": 274,
+    "nominal_counter_periods": 224,
+    "mass_periods": 160,
+    "local_liquid_volume_periods": 64,
+    "missing_periods_not_filled": 50,
+    "status_counts": {
+      "needs_data": 274
+    },
+    "reading_time_covariance_inferred": false,
+    "calendar_clock_invented": false,
+    "separate_periods_summed_as_inventory": false,
+    "independent_validation_performed": false
+  },
+  "file_sha256": {
+    "src/pipeline_integrity/totalization.py": "0ec0215e05bd3bdaa3d655dc60d5d4928c0c7546e983d46c518f2bbd40a854fb",
+    "src/pipeline_integrity/totalization_data.py": "124551e9a30b8c0457be7d625d2c913593f64e86a250b7eea477d7caa87bf878",
+    "src/pipeline_integrity/quadrature.py": "6ac83808c54d31989f1e32ef688738df8df8f75d0a00a799b17068688fc89325",
+    "src/pipeline_integrity/contracts.py": "32f37a1f61606ee64d48e397268b95ed2523238afad0df3daf06688611d34d4e",
+    "src/pipeline_integrity/metrology.py": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb",
+    "tests/test_totalization.py": "59967fed042ca1d871257f75a25a85b2b55fa670b7ae96867b83da90e13ff953",
+    "examples/totalization.py": "ecc1931682007b4efafb6de1ad25885b1d497ab05d76e500ca0225e3ad60b55d",
+    "scripts/check_totalization.py": "dff6d2b3b0a6dbe62fb31666166ba9bbf6d85f2b67074f39cd000a0f31e1d378"
+  },
+  "missing_intervals_filled": false,
+  "field_qualified": false,
+  "custody_transfer_certified": false
+}

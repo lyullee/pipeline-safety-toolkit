@@ -1,0 +1,30 @@
+{
+  "schema": "pipeline_integrity.pump_transient_adapter_status.v1",
+  "date": "2026-10-28",
+  "capability_id": "transient.liquid_moc",
+  "state": "implemented_static_validation_pending",
+  "entrypoints": [
+    "pipeline_integrity.pump_transient.PumpCoastdownRequest",
+    "pipeline_integrity.pump_transient.PumpTransientProvider",
+    "pipeline_integrity.pump_transient.evaluate_pump_coastdown",
+    "pipeline_integrity.pump_transient.verify_pump_coastdown_record"
+  ],
+  "owner_pump_dynamics_reimplemented": false,
+  "direct_liquid_moc_coupling_implemented": false,
+  "checks": [
+    "source-bound provider identity and request digest",
+    "elapsed clock and finite bounded response fields",
+    "rho*g*Q*H hydraulic power consistency",
+    "power-history integration against energy ledger",
+    "initial and final 0.5*I*omega^2 rotor energy",
+    "full signed rotor energy balance",
+    "numerical adjustment cap and provider convergence",
+    "deterministic replay"
+  ],
+  "new_test_functions_written": 5,
+  "new_parameterized_cases_written": 4,
+  "pytest_executed": false,
+  "field_validation": false,
+  "owner_extension_request": "PIPE-EXT-014",
+  "confirmed_scope_percent_after_change": 67.2
+}

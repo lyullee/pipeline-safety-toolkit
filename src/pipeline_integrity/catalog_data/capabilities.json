@@ -1,0 +1,3680 @@
+{
+  "schema": "pipeline_integrity.capability_catalog.v1",
+  "review_date": "2026-10-27",
+  "capabilities": [
+    {
+      "id": "geometry.pipe",
+      "title_ko": "관 단면·재고 체적·중량",
+      "category": "geometry",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('geometry.pipe', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "hydraulics.liquid_loss",
+      "title_ko": "액체 압력손실과 고도 수지",
+      "category": "hydraulics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('hydraulics.liquid_loss', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "hydraulics.liquid_head_loss",
+      "title_ko": "액체 수두 손실과 고도 수지",
+      "category": "hydraulics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('hydraulics.liquid_head_loss', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "정상 단상 뉴턴 유체와 선언된 동점도 범위에 한정한다. 밀도나 절대압력을 추정하지 않는다.",
+        "계산 결과는 요구 수두차이며 현장 적합성 또는 설계 승인을 의미하지 않는다."
+      ],
+      "next_step": "기존 액체 압력손실 모델과 독립 기준값을 사용해 적용 영역을 별도 검증"
+    },
+    {
+      "id": "hydraulics.hydrostatic",
+      "title_ko": "정수압",
+      "category": "hydraulics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('hydraulics.hydrostatic', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "hydraulics.gas_correlation",
+      "title_ko": "가스 수송 경험 상관식 선택",
+      "category": "hydraulics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('hydraulics.gas_correlation', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "hydraulics.isothermal_gas",
+      "title_ko": "등온 가스 질량유량",
+      "category": "hydraulics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('hydraulics.isothermal_gas', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "transient.wave_speed",
+      "title_ko": "탄성 관의 압력파 속도",
+      "category": "transient",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('transient.wave_speed', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "transient.surge_pulse",
+      "title_ko": "급격한 유속 변화의 압력파 규모",
+      "category": "transient",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('transient.surge_pulse', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "construction.trench_volume",
+      "title_ko": "굴착 단면과 토량",
+      "category": "construction",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('construction.trench_volume', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.pump_power",
+      "title_ko": "펌프 동력 수지",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.pump_power', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.pump_affinity",
+      "title_ko": "상사 펌프 운전점 환산",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.pump_affinity', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.pump_npsh",
+      "title_ko": "흡입 여유와 공급자 요구값 비교",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.pump_npsh', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.compression",
+      "title_ko": "실제 유체 압축 동력과 출구 상태",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.compression', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "instrument.liquid_dp_meter",
+      "title_ko": "차압식 액체 유량계",
+      "category": "instrument",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('instrument.liquid_dp_meter', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "inventory.uniform",
+      "title_ko": "단상 유체 재고와 기준 체적",
+      "category": "inventory",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('inventory.uniform', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "thermal.flow_cooling",
+      "title_ko": "유동 중 온도 변화",
+      "category": "thermal",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('thermal.flow_cooling', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "thermal.free_expansion",
+      "title_ko": "자유 열팽창",
+      "category": "thermal",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('thermal.free_expansion', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "economics.cashflow",
+      "title_ko": "기간별 할인 현금 흐름",
+      "category": "economics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('economics.cashflow', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "economics.energy",
+      "title_ko": "운영 에너지·비용·선언 배출계수",
+      "category": "economics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('economics.energy', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "thermal.internal_convection",
+      "title_ko": "관 내부 대류 상관식",
+      "category": "thermal",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('thermal.internal_convection', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.control_valve_liquid",
+      "title_ko": "액체 제어밸브 크기 산정",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.control_valve_liquid', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.control_valve_gas",
+      "title_ko": "기체 제어밸브 크기 산정",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.control_valve_gas', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "equipment.relief_gas",
+      "title_ko": "기체 방출장치 필요 면적",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.relief_gas', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_physics.py"
+      ],
+      "limitations": [
+        "입력 스키마·모델별 가정을 적용한다. 수치 계산 완료가 현장 적합성 또는 설계 승인이라는 의미는 아니다."
+      ],
+      "next_step": "대상 유체·설비·운전영역에 대한 별도 독립 검증"
+    },
+    {
+      "id": "materials_engine.corrosion.charge_to_loss",
+      "title_ko": "corrosion.charge_to_loss",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 corrosion.charge_to_loss의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.coupon_loss",
+      "title_ko": "corrosion.coupon_loss",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 corrosion.coupon_loss의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.faraday",
+      "title_ko": "corrosion.faraday",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 corrosion.faraday의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.galvanic_linear",
+      "title_ko": "corrosion.galvanic_linear",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 corrosion.galvanic_linear의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.gumbel_area_maximum",
+      "title_ko": "corrosion.gumbel_area_maximum",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.corrosion_wear.evaluate_corrosion_wear(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/corrosion_wear_results.json",
+        "tests/test_corrosion_wear.py",
+        "docs/CORROSION_WEAR_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.power_law",
+      "title_ko": "corrosion.power_law",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.corrosion_wear.evaluate_corrosion_wear(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/corrosion_wear_results.json",
+        "tests/test_corrosion_wear.py",
+        "docs/CORROSION_WEAR_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.stern_geary",
+      "title_ko": "corrosion.stern_geary",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 corrosion.stern_geary의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.corrosion.thickness_trend",
+      "title_ko": "corrosion.thickness_trend",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('corrosion.thickness_trend', parameters, context, location_id=...)",
+      "evidence": [
+        "research/ili_application.json",
+        "docs/INTEGRATION_KO.md"
+      ],
+      "limitations": [
+        "알려진 위치 변환·선형 손실·시간·오차를 갖춘 합성 경로를 실제 재료 API에 전달해 해석 손실률과 비교했다.",
+        "실제 ILI 자료의 정합 검토·초 단위 시각·오차 한계는 미확정이므로 현장 부식 성장률 검증은 아니다."
+      ],
+      "next_step": "검토된 실제 동일 결함 경로·계측 오차·시간을 확보해 독립 성장 검증"
+    },
+    {
+      "id": "materials_engine.corrosion.uniform_forecast",
+      "title_ko": "corrosion.uniform_forecast",
+      "category": "corrosion",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('corrosion.uniform_forecast', parameters, context, location_id=...)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다."
+      ],
+      "next_step": "소유 프로젝트의 입력 스키마를 확인하고 적용 사례별 수치 검증 추가"
+    },
+    {
+      "id": "materials_engine.creep.conditional_life",
+      "title_ko": "creep.conditional_life",
+      "category": "creep",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 creep.conditional_life의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.creep.larson_miller",
+      "title_ko": "creep.larson_miller",
+      "category": "creep",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 creep.larson_miller의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.creep.lognormal_life_fit",
+      "title_ko": "creep.lognormal_life_fit",
+      "category": "creep",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 creep.lognormal_life_fit의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.creep.norton",
+      "title_ko": "creep.norton",
+      "category": "creep",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 creep.norton의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.creep.time_fraction",
+      "title_ko": "creep.time_fraction",
+      "category": "creep",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 creep.time_fraction의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.degradation.archard_wear",
+      "title_ko": "degradation.archard_wear",
+      "category": "degradation",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.corrosion_wear.evaluate_corrosion_wear(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/corrosion_wear_results.json",
+        "tests/test_corrosion_wear.py",
+        "docs/CORROSION_WEAR_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.degradation.parabolic_oxidation",
+      "title_ko": "degradation.parabolic_oxidation",
+      "category": "degradation",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 degradation.parabolic_oxidation의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.fabrication.bend_strain",
+      "title_ko": "fabrication.bend_strain",
+      "category": "fabrication",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fabrication_exchange.evaluate_fabrication",
+      "evidence": [
+        "docs/FABRICATION_KO.md",
+        "research/fabrication_results.json",
+        "tests/test_fabrication_exchange.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.fabrication.bolt_preload",
+      "title_ko": "fabrication.bolt_preload",
+      "category": "fabrication",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fabrication_exchange.evaluate_fabrication",
+      "evidence": [
+        "docs/FABRICATION_KO.md",
+        "research/fabrication_results.json",
+        "tests/test_fabrication_exchange.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.fabrication.thickness_budget",
+      "title_ko": "fabrication.thickness_budget",
+      "category": "fabrication",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fabrication_exchange.evaluate_fabrication",
+      "evidence": [
+        "docs/FABRICATION_KO.md",
+        "research/fabrication_results.json",
+        "tests/test_fabrication_exchange.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.fatigue.basquin",
+      "title_ko": "fatigue.basquin",
+      "category": "fatigue",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('fatigue.basquin', parameters, context, location_id=...)",
+      "evidence": [
+        "research/pressure_fatigue_results.json",
+        "docs/PRESSURE_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "기존 재료 엔진의 실제 호출과 선언한 합성 기준을 확인했다. 독립 재료 시험·현장 수명 검증은 아니다.",
+        "형상·온도·응력 범위·응력비·곡선 근거와 표본 해상도를 사용자가 검토한다. 손상 지표를 실패확률로 바꾸지 않는다."
+      ],
+      "next_step": "검토된 현장 형상·벽 온도·재료 곡선과 독립 이력의 비교 확대"
+    },
+    {
+      "id": "materials_engine.fatigue.goodman",
+      "title_ko": "fatigue.goodman",
+      "category": "fatigue",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.cyclic_fatigue.evaluate_cyclic_fatigue(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/cyclic_fatigue_results.json",
+        "tests/test_cyclic_fatigue.py",
+        "docs/CYCLIC_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.fatigue.hysteresis_path",
+      "title_ko": "fatigue.hysteresis_path",
+      "category": "fatigue",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.cyclic_fatigue.evaluate_cyclic_fatigue(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/cyclic_fatigue_results.json",
+        "tests/test_cyclic_fatigue.py",
+        "docs/CYCLIC_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.fatigue.miner",
+      "title_ko": "fatigue.miner",
+      "category": "fatigue",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('fatigue.miner', parameters, context, location_id=...)",
+      "evidence": [
+        "research/pressure_fatigue_results.json",
+        "docs/PRESSURE_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "기존 재료 엔진의 실제 호출과 선언한 합성 기준을 확인했다. 독립 재료 시험·현장 수명 검증은 아니다.",
+        "형상·온도·응력 범위·응력비·곡선 근거와 표본 해상도를 사용자가 검토한다. 손상 지표를 실패확률로 바꾸지 않는다."
+      ],
+      "next_step": "검토된 현장 형상·벽 온도·재료 곡선과 독립 이력의 비교 확대"
+    },
+    {
+      "id": "materials_engine.fatigue.rainflow",
+      "title_ko": "fatigue.rainflow",
+      "category": "fatigue",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('fatigue.rainflow', parameters, context, location_id=...)",
+      "evidence": [
+        "research/pressure_fatigue_results.json",
+        "docs/PRESSURE_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "기존 재료 엔진의 실제 호출과 선언한 합성 기준을 확인했다. 독립 재료 시험·현장 수명 검증은 아니다.",
+        "형상·온도·응력 범위·응력비·곡선 근거와 표본 해상도를 사용자가 검토한다. 손상 지표를 실패확률로 바꾸지 않는다."
+      ],
+      "next_step": "검토된 현장 형상·벽 온도·재료 곡선과 독립 이력의 비교 확대"
+    },
+    {
+      "id": "materials_engine.fatigue.strain_life",
+      "title_ko": "fatigue.strain_life",
+      "category": "fatigue",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.cyclic_fatigue.evaluate_cyclic_fatigue(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/cyclic_fatigue_results.json",
+        "tests/test_cyclic_fatigue.py",
+        "docs/CYCLIC_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.fracture.paris_constant_amplitude",
+      "title_ko": "fracture.paris_constant_amplitude",
+      "category": "fracture",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fracture_exchange / evaluate_material_job",
+      "evidence": [
+        "research/fracture_exchange_results.json",
+        "tests/test_fracture_exchange.py",
+        "docs/FRACTURE_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "원 Mode-I/Paris 계산과 SI·재료/온도·형상/하중·순서/회수·적용성·원 결과/상태를 실제 확인했다.",
+        "동적 균열 정지·시작 수명·소성/혼합 모드·상호작용·지연/과대하중·실제 물성 보정·파손 확률을 제공하지 않는다.",
+        "원 임계 깊이는 검토한 형상/벽 범위 밖이면 qualified 값으로 사용하지 않는다. 실제 시험 관측의 원 정의를 보존한다."
+      ],
+      "next_step": "PI-X04의 자격 있는 형상/응력·계수/인성·환경/시간 근거와 독립 실험 비교 확대"
+    },
+    {
+      "id": "materials_engine.fracture.stress_intensity",
+      "title_ko": "fracture.stress_intensity",
+      "category": "fracture",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fracture_exchange / evaluate_material_job",
+      "evidence": [
+        "research/fracture_exchange_results.json",
+        "tests/test_fracture_exchange.py",
+        "docs/FRACTURE_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "원 Mode-I/Paris 계산과 SI·재료/온도·형상/하중·순서/회수·적용성·원 결과/상태를 실제 확인했다.",
+        "동적 균열 정지·시작 수명·소성/혼합 모드·상호작용·지연/과대하중·실제 물성 보정·파손 확률을 제공하지 않는다.",
+        "원 임계 깊이는 검토한 형상/벽 범위 밖이면 qualified 값으로 사용하지 않는다. 실제 시험 관측의 원 정의를 보존한다."
+      ],
+      "next_step": "PI-X04의 자격 있는 형상/응력·계수/인성·환경/시간 근거와 독립 실험 비교 확대"
+    },
+    {
+      "id": "materials_engine.fracture.variable_paris",
+      "title_ko": "fracture.variable_paris",
+      "category": "fracture",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fracture_exchange / evaluate_material_job",
+      "evidence": [
+        "research/fracture_exchange_results.json",
+        "tests/test_fracture_exchange.py",
+        "docs/FRACTURE_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "원 Mode-I/Paris 계산과 SI·재료/온도·형상/하중·순서/회수·적용성·원 결과/상태를 실제 확인했다.",
+        "동적 균열 정지·시작 수명·소성/혼합 모드·상호작용·지연/과대하중·실제 물성 보정·파손 확률을 제공하지 않는다.",
+        "원 임계 깊이는 검토한 형상/벽 범위 밖이면 qualified 값으로 사용하지 않는다. 실제 시험 관측의 원 정의를 보존한다."
+      ],
+      "next_step": "PI-X04의 자격 있는 형상/응력·계수/인성·환경/시간 근거와 독립 실험 비교 확대"
+    },
+    {
+      "id": "materials_engine.geometry.thickness_grid",
+      "title_ko": "geometry.thickness_grid",
+      "category": "geometry",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.inspection_statistics.evaluate_inspection_statistics(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/inspection_statistics_results.json",
+        "tests/test_inspection_statistics.py",
+        "docs/INSPECTION_STATISTICS_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.inspection.binomial_evidence",
+      "title_ko": "inspection.binomial_evidence",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.inspection_statistics.evaluate_inspection_statistics(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/inspection_statistics_results.json",
+        "tests/test_inspection_statistics.py",
+        "docs/INSPECTION_STATISTICS_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.inspection.gas_expansion_energy",
+      "title_ko": "inspection.gas_expansion_energy",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.pressure_tests.evaluate_pressure_test",
+      "evidence": [
+        "docs/PRESSURE_TESTS_KO.md",
+        "research/pressure_tests_results.json",
+        "tests/test_pressure_tests.py",
+        "scripts/check_pressure_tests.py"
+      ],
+      "limitations": [
+        "원4모델의 strict JSON/버전/단위/실제 호출과 독립 기준을 확인했다. 전체 시험 규격·승인·강도·폭발 피해·실제 누설 경로 유량을 검증한 것은 아니다.",
+        "공개 PE100RC 원파일의 체적/대기압/대표 기체 온도와 변형은 미해결이다. 직접 재고 계산은 보류하고 명시한 가정 시나리오를 분리한다."
+      ],
+      "next_step": "PI-X04의 계측/체적/온도/조성·탈기/투과·승인 규칙과 독립 현장 시험; 원순서/부호·R 기준 보존"
+    },
+    {
+      "id": "materials_engine.inspection.gas_pressure_decay",
+      "title_ko": "inspection.gas_pressure_decay",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.pressure_tests.evaluate_pressure_test",
+      "evidence": [
+        "docs/PRESSURE_TESTS_KO.md",
+        "research/pressure_tests_results.json",
+        "tests/test_pressure_tests.py",
+        "scripts/check_pressure_tests.py"
+      ],
+      "limitations": [
+        "원4모델의 strict JSON/버전/단위/실제 호출과 독립 기준을 확인했다. 전체 시험 규격·승인·강도·폭발 피해·실제 누설 경로 유량을 검증한 것은 아니다.",
+        "공개 PE100RC 원파일의 체적/대기압/대표 기체 온도와 변형은 미해결이다. 직접 재고 계산은 보류하고 명시한 가정 시나리오를 분리한다."
+      ],
+      "next_step": "PI-X04의 계측/체적/온도/조성·탈기/투과·승인 규칙과 독립 현장 시험; 원순서/부호·R 기준 보존"
+    },
+    {
+      "id": "materials_engine.inspection.hit_miss_pod",
+      "title_ko": "inspection.hit_miss_pod",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.inspection_statistics.evaluate_inspection_statistics(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/inspection_statistics_results.json",
+        "tests/test_inspection_statistics.py",
+        "docs/INSPECTION_STATISTICS_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.inspection.logistic_pod",
+      "title_ko": "inspection.logistic_pod",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate / plan_inspections",
+      "evidence": [
+        "research/inspection_planning_results.json",
+        "docs/INSPECTION_PLANNING_KO.md"
+      ],
+      "limitations": [
+        "실제 원 엔진 호출과 가상 기준의 수치·일정 연결을 확인했다.",
+        "현장 POD 교정, 허위 지시, 공동 피복·검출 의존과 물리 위험 감소를 검증한 것은 아니다."
+      ],
+      "next_step": "PI-X04의 시편/검사자/정답·미검출·피복·허위 지시·불확실성 계약 확장과 독립 자료 확보"
+    },
+    {
+      "id": "materials_engine.inspection.no_indication_update",
+      "title_ko": "inspection.no_indication_update",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate / plan_inspections",
+      "evidence": [
+        "research/inspection_planning_results.json",
+        "docs/INSPECTION_PLANNING_KO.md"
+      ],
+      "limitations": [
+        "실제 원 엔진 호출과 가상 기준의 수치·일정 연결을 확인했다.",
+        "현장 POD 교정, 허위 지시, 공동 피복·검출 의존과 물리 위험 감소를 검증한 것은 아니다."
+      ],
+      "next_step": "PI-X04의 시편/검사자/정답·미검출·피복·허위 지시·불확실성 계약 확장과 독립 자료 확보"
+    },
+    {
+      "id": "materials_engine.inspection.pressure_test_load",
+      "title_ko": "inspection.pressure_test_load",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.pressure_tests.evaluate_pressure_test",
+      "evidence": [
+        "docs/PRESSURE_TESTS_KO.md",
+        "research/pressure_tests_results.json",
+        "tests/test_pressure_tests.py",
+        "scripts/check_pressure_tests.py"
+      ],
+      "limitations": [
+        "원4모델의 strict JSON/버전/단위/실제 호출과 독립 기준을 확인했다. 전체 시험 규격·승인·강도·폭발 피해·실제 누설 경로 유량을 검증한 것은 아니다.",
+        "공개 PE100RC 원파일의 체적/대기압/대표 기체 온도와 변형은 미해결이다. 직접 재고 계산은 보류하고 명시한 가정 시나리오를 분리한다."
+      ],
+      "next_step": "PI-X04의 계측/체적/온도/조성·탈기/투과·승인 규칙과 독립 현장 시험; 원순서/부호·R 기준 보존"
+    },
+    {
+      "id": "materials_engine.inspection.tofd_depth",
+      "title_ko": "inspection.tofd_depth",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.inspection_statistics.evaluate_inspection_statistics(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/inspection_statistics_results.json",
+        "tests/test_inspection_statistics.py",
+        "docs/INSPECTION_STATISTICS_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "원 엔진·검토 근거·SI·입력 스키마를 보존한 실제 연동 확인이다. 현장 적합성, 검사 자격 또는 기간 고장·인적오류 확률 보정은 별도 검증이 필요하다."
+      ],
+      "next_step": "가이드의 모집단·물리 조건·증거 계약에 맞춘 독립 실험 검증과 수신 프로젝트 확장"
+    },
+    {
+      "id": "materials_engine.inspection.ultrasonic_thickness",
+      "title_ko": "inspection.ultrasonic_thickness",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.nde.evaluate_echo_thickness / MaterialClient.evaluate",
+      "evidence": [
+        "research/nde_data_review.json",
+        "docs/NDE_DATA_KO.md",
+        "tests/test_nde.py"
+      ],
+      "limitations": [
+        "원 초음파 두께 모델의 입력·단위·시계·상태와 가정한 에코의 수치 연결을 실제 확인했다.",
+        "TUBERS의 물리 에코·음속·영점·입사각은 독립 교정되지 않았으며 현장 두께 검증이 아니다.",
+        "원 시각·결측을 보존하고 선택 구간의 시각/신호 불확정은 보류한다."
+      ],
+      "next_step": "PI-X04의 물리 시편·교정·에코 분류·크기 정답·시계 및 원자료 그룹 계약 확장"
+    },
+    {
+      "id": "materials_engine.inspection.vacuum_rise",
+      "title_ko": "inspection.vacuum_rise",
+      "category": "inspection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.pressure_tests.evaluate_pressure_test",
+      "evidence": [
+        "docs/PRESSURE_TESTS_KO.md",
+        "research/pressure_tests_results.json",
+        "tests/test_pressure_tests.py",
+        "scripts/check_pressure_tests.py"
+      ],
+      "limitations": [
+        "원4모델의 strict JSON/버전/단위/실제 호출과 독립 기준을 확인했다. 전체 시험 규격·승인·강도·폭발 피해·실제 누설 경로 유량을 검증한 것은 아니다.",
+        "공개 PE100RC 원파일의 체적/대기압/대표 기체 온도와 변형은 미해결이다. 직접 재고 계산은 보류하고 명시한 가정 시나리오를 분리한다."
+      ],
+      "next_step": "PI-X04의 계측/체적/온도/조성·탈기/투과·승인 규칙과 독립 현장 시험; 원순서/부호·R 기준 보존"
+    },
+    {
+      "id": "materials_engine.kinetics.arrhenius",
+      "title_ko": "kinetics.arrhenius",
+      "category": "kinetics",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.creep_exchange.evaluate_creep",
+      "evidence": [
+        "src/pipeline_integrity/creep_exchange.py",
+        "scripts/check_creep.py",
+        "research/creep_results.json",
+        "tests/test_creep_exchange.py",
+        "docs/CREEP_KO.md"
+      ],
+      "limitations": [
+        "원 kinetics.arrhenius의 strict 스키마/버전/단위/확률 의미와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "명시한 재료/응력/온도/시간 지원과 블록 생애를 유지한다. 누적 손상·중앙수명·우측 검열·생존 조건부 기간확률을 구분한다.",
+        "BAM CMSX-6의 한 온도/한 재료 조건은 강재 배관·온도 전이·현장/규격 검증이 아니다. 기간확률을 HEP·연간 빈도로 바꾸지 않는다."
+      ],
+      "next_step": "PI-X04의 기구/모수 불확실성·고온 변형/상호작용·독립 재료/온도/서비스 자료; 공통 기간 연결은 PERIOD_RISK로 제공하며 관측 공동 의존성·모수 불확실성·동적 모델 연계 후속"
+    },
+    {
+      "id": "materials_engine.materials.chemistry_reconciliation",
+      "title_ko": "materials.chemistry_reconciliation",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_quality.evaluate_material_quality(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/material_quality_results.json",
+        "scripts/check_material_quality.py",
+        "docs/MATERIAL_QUALITY_KO.md",
+        "tests/test_material_quality.py"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.materials.ductility_retention",
+      "title_ko": "materials.ductility_retention",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.characterization.evaluate_characterization",
+      "evidence": [
+        "docs/CHARACTERIZATION_KO.md",
+        "research/characterization_results.json",
+        "research/copper_tensile_results.json",
+        "tests/test_characterization.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.materials.impact_transition",
+      "title_ko": "materials.impact_transition",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_quality.evaluate_material_quality(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/material_quality_results.json",
+        "scripts/check_material_quality.py",
+        "docs/MATERIAL_QUALITY_KO.md",
+        "tests/test_material_quality.py"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.materials.offset_yield",
+      "title_ko": "materials.offset_yield",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.characterization.evaluate_characterization",
+      "evidence": [
+        "docs/CHARACTERIZATION_KO.md",
+        "research/characterization_results.json",
+        "research/copper_tensile_results.json",
+        "tests/test_characterization.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.materials.pitting_composition_index",
+      "title_ko": "materials.pitting_composition_index",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_quality.evaluate_material_quality(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/material_quality_results.json",
+        "scripts/check_material_quality.py",
+        "docs/MATERIAL_QUALITY_KO.md",
+        "tests/test_material_quality.py"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.materials.ramberg_osgood",
+      "title_ko": "materials.ramberg_osgood",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.characterization.evaluate_characterization",
+      "evidence": [
+        "docs/CHARACTERIZATION_KO.md",
+        "research/characterization_results.json",
+        "research/copper_tensile_results.json",
+        "tests/test_characterization.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.materials.tensile_point",
+      "title_ko": "materials.tensile_point",
+      "category": "materials",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.characterization.evaluate_characterization",
+      "evidence": [
+        "docs/CHARACTERIZATION_KO.md",
+        "research/characterization_results.json",
+        "research/copper_tensile_results.json",
+        "tests/test_characterization.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.mechanics.lame_cylinder",
+      "title_ko": "mechanics.lame_cylinder",
+      "category": "mechanics",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 재료 API의 모델/버전·스키마·SI 단위·확률 의미·원 입력/시계/물리 위치·해시와 선택된 수치 기준을 확인했다.",
+        "원 계산과 needs_data/out_of_scope를 보존한다. 재료값·형상·경계는 사용자 근거가 필요하며 현장 건전성·규격 적합성 승인으로 확대하지 않는다."
+      ],
+      "next_step": "자료별 형상·물성·하중/열 경계·현장 기준을 확보하고 독립 실험 검증 확대"
+    },
+    {
+      "id": "materials_engine.mechanics.plane_stress",
+      "title_ko": "mechanics.plane_stress",
+      "category": "mechanics",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 재료 API의 모델/버전·스키마·SI 단위·확률 의미·원 입력/시계/물리 위치·해시와 선택된 수치 기준을 확인했다.",
+        "원 계산과 needs_data/out_of_scope를 보존한다. 재료값·형상·경계는 사용자 근거가 필요하며 현장 건전성·규격 적합성 승인으로 확대하지 않는다."
+      ],
+      "next_step": "자료별 형상·물성·하중/열 경계·현장 기준을 확보하고 독립 실험 검증 확대"
+    },
+    {
+      "id": "materials_engine.mechanics.thermal_restraint",
+      "title_ko": "mechanics.thermal_restraint",
+      "category": "mechanics",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 재료 API의 모델/버전·스키마·SI 단위·확률 의미·원 입력/시계/물리 위치·해시와 선택된 수치 기준을 확인했다.",
+        "원 계산과 needs_data/out_of_scope를 보존한다. 재료값·형상·경계는 사용자 근거가 필요하며 현장 건전성·규격 적합성 승인으로 확대하지 않는다."
+      ],
+      "next_step": "자료별 형상·물성·하중/열 경계·현장 기준을 확보하고 독립 실험 검증 확대"
+    },
+    {
+      "id": "materials_engine.mechanics.thin_cylinder",
+      "title_ko": "mechanics.thin_cylinder",
+      "category": "mechanics",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('mechanics.thin_cylinder', parameters, context, location_id=...)",
+      "evidence": [
+        "research/pressure_fatigue_results.json",
+        "docs/PRESSURE_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "기존 재료 엔진의 실제 호출과 선언한 합성 기준을 확인했다. 독립 재료 시험·현장 수명 검증은 아니다.",
+        "형상·온도·응력 범위·응력비·곡선 근거와 표본 해상도를 사용자가 검토한다. 손상 지표를 실패확률로 바꾸지 않는다."
+      ],
+      "next_step": "검토된 현장 형상·벽 온도·재료 곡선과 독립 이력의 비교 확대"
+    },
+    {
+      "id": "materials_engine.protection.cathodic_budget",
+      "title_ko": "protection.cathodic_budget",
+      "category": "protection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 protection.cathodic_budget의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.protection.coating_coverage",
+      "title_ko": "protection.coating_coverage",
+      "category": "protection",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.electrochemical_exchange.evaluate_electrochemical",
+      "evidence": [
+        "src/pipeline_integrity/electrochemical_exchange.py",
+        "scripts/check_electrochemical.py",
+        "research/electrochemical_results.json",
+        "tests/test_electrochemical_exchange.py",
+        "docs/ELECTROCHEMICAL_KO.md"
+      ],
+      "limitations": [
+        "원 protection.coating_coverage의 strict schema/version/단위/context와 실제 호출·독립 기준을 확인했다. 원 계산 엔진을 복제하지 않는다.",
+        "부분 용출 전류·순 외부 전류·보호 요구의 의미와 면적/기준전극·재료/환경·방법 검토를 유지한다. 원 자료의 미상 면적과 적용 밖 입력은 보류한다.",
+        "범위가 정해진 연구 계산의 교환이며 현장 부식률·보호 전위·전체 규격·도장 건전성·잔존수명/파손확률의 실증 검증이 아니다."
+      ],
+      "next_step": "PI-X04의 원 전극 면적/기준·부분전류/효율·전위/저항망과 독립 시편/현장 검증; 기존 원 엔진에서 확장"
+    },
+    {
+      "id": "materials_engine.reliability.exclusive_paths",
+      "title_ko": "reliability.exclusive_paths",
+      "category": "reliability",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job(job, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/material_risk_reference_results.json",
+        "scripts/check_material_risk_reference.py",
+        "docs/MATERIAL_RISK_REFERENCE_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다.",
+        "생산 FTA·ETA는 기존 HRA API를 사용한다. 이 원시 기능 대조가 범위 없는 확률을 HEP·기간 확률로 변환하거나 같은 사건을 독립 복제하지 않는다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.reliability.gamma_poisson",
+      "title_ko": "reliability.gamma_poisson",
+      "category": "reliability",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.reliability_exchange.evaluate_physical_reliability",
+      "evidence": [
+        "docs/PHYSICAL_RELIABILITY_KO.md",
+        "research/physical_reliability_results.json",
+        "tests/test_reliability_exchange.py"
+      ],
+      "limitations": [
+        "Verified native API with original authored counts, exposure, prior and survival references; no field calibration.",
+        "A posterior mean intensity, conditional mission probability and demand failure probability retain distinct meanings."
+      ],
+      "next_step": "Acquire reviewed event populations, complete exposure and censoring records before empirical calibration."
+    },
+    {
+      "id": "materials_engine.reliability.independent_gate",
+      "title_ko": "reliability.independent_gate",
+      "category": "reliability",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job(job, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/material_risk_reference_results.json",
+        "scripts/check_material_risk_reference.py",
+        "docs/MATERIAL_RISK_REFERENCE_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다.",
+        "생산 FTA·ETA는 기존 HRA API를 사용한다. 이 원시 기능 대조가 범위 없는 확률을 HEP·기간 확률로 변환하거나 같은 사건을 독립 복제하지 않는다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.reliability.weibull_interval",
+      "title_ko": "reliability.weibull_interval",
+      "category": "reliability",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.reliability_exchange.evaluate_physical_reliability",
+      "evidence": [
+        "docs/PHYSICAL_RELIABILITY_KO.md",
+        "research/physical_reliability_results.json",
+        "tests/test_reliability_exchange.py"
+      ],
+      "limitations": [
+        "Verified native API with original authored counts, exposure, prior and survival references; no field calibration.",
+        "A posterior mean intensity, conditional mission probability and demand failure probability retain distinct meanings."
+      ],
+      "next_step": "Acquire reviewed event populations, complete exposure and censoring records before empirical calibration."
+    },
+    {
+      "id": "materials_engine.structural.profile_capacity",
+      "title_ko": "structural.profile_capacity",
+      "category": "structural",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.profile_capacity.evaluate_profile_capacity(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/profile_capacity_results.json",
+        "scripts/check_profile_capacity.py",
+        "docs/PROFILE_CAPACITY_KO.md",
+        "tests/test_profile_capacity.py"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.testing.brinell",
+      "title_ko": "testing.brinell",
+      "category": "testing",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.hardness_exchange.evaluate_hardness",
+      "evidence": [
+        "docs/HARDNESS_KO.md",
+        "research/hardness_results.json",
+        "tests/test_hardness_exchange.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.testing.vickers",
+      "title_ko": "testing.vickers",
+      "category": "testing",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.hardness_exchange.evaluate_hardness",
+      "evidence": [
+        "docs/HARDNESS_KO.md",
+        "research/hardness_results.json",
+        "tests/test_hardness_exchange.py"
+      ],
+      "limitations": [
+        "Native model equations, SI inputs, source context, receipt and method-specific applicability were exercised; field or standard qualification remains unresolved.",
+        "Do not infer torque factor, cyclic parameters, material acceptance, leak tightness or failure probabilities from unsupported source observations."
+      ],
+      "next_step": "Use the documented source/condition/geometry and partial-output extension contracts in PI-X04 before experimental or field transfer."
+    },
+    {
+      "id": "materials_engine.thermal.cylindrical_layers",
+      "title_ko": "thermal.cylindrical_layers",
+      "category": "thermal",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "MaterialClient.evaluate('thermal.cylindrical_layers', parameters, context, location_id=...)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다."
+      ],
+      "next_step": "소유 프로젝트의 입력 스키마를 확인하고 적용 사례별 수치 검증 추가"
+    },
+    {
+      "id": "materials_engine.thermal.lumped_temperature",
+      "title_ko": "thermal.lumped_temperature",
+      "category": "thermal",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 재료 API의 모델/버전·스키마·SI 단위·확률 의미·원 입력/시계/물리 위치·해시와 선택된 수치 기준을 확인했다.",
+        "원 계산과 needs_data/out_of_scope를 보존한다. 재료값·형상·경계는 사용자 근거가 필요하며 현장 건전성·규격 적합성 승인으로 확대하지 않는다."
+      ],
+      "next_step": "자료별 형상·물성·하중/열 경계·현장 기준을 확보하고 독립 실험 검증 확대"
+    },
+    {
+      "id": "materials_engine.thermal.planar_layers",
+      "title_ko": "thermal.planar_layers",
+      "category": "thermal",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 재료 API의 모델/버전·스키마·SI 단위·확률 의미·원 입력/시계/물리 위치·해시와 선택된 수치 기준을 확인했다.",
+        "원 계산과 needs_data/out_of_scope를 보존한다. 재료값·형상·경계는 사용자 근거가 필요하며 현장 건전성·규격 적합성 승인으로 확대하지 않는다."
+      ],
+      "next_step": "자료별 형상·물성·하중/열 경계·현장 기준을 확보하고 독립 실험 검증 확대"
+    },
+    {
+      "id": "materials_engine.transport.hydrogen_trap_equilibrium",
+      "title_ko": "transport.hydrogen_trap_equilibrium",
+      "category": "transport",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.hydrogen_transport.evaluate_hydrogen_transport(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/hydrogen_transport_results.json",
+        "scripts/check_hydrogen_transport.py",
+        "docs/HYDROGEN_TRANSPORT_KO.md",
+        "tests/test_hydrogen_transport.py"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.transport.semi_infinite_diffusion",
+      "title_ko": "transport.semi_infinite_diffusion",
+      "category": "transport",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.hydrogen_transport.evaluate_hydrogen_transport(request, context)",
+      "evidence": [
+        "research/integration_results.json",
+        "docs/INTEGRATION_KO.md",
+        "research/hydrogen_transport_results.json",
+        "scripts/check_hydrogen_transport.py",
+        "docs/HYDROGEN_TRANSPORT_KO.md",
+        "tests/test_hydrogen_transport.py"
+      ],
+      "limitations": [
+        "소유 프로젝트에 구현이 존재하지만 이 항목의 실제 연계와 수치 검증은 별도로 완료해야 한다.",
+        "설치된 소유 프로젝트의 버전·스키마·가정을 확인한다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "materials_engine.welding.arc_energy",
+      "title_ko": "welding.arc_energy",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.carbon_equivalents",
+      "title_ko": "welding.carbon_equivalents",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.cooling_interval",
+      "title_ko": "welding.cooling_interval",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.dilution",
+      "title_ko": "welding.dilution",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.hardness_traverse",
+      "title_ko": "welding.hardness_traverse",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.heat_treatment_history",
+      "title_ko": "welding.heat_treatment_history",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.joint_profile",
+      "title_ko": "welding.joint_profile",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.welding.waveform_energy",
+      "title_ko": "welding.waveform_energy",
+      "category": "welding",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.welding_exchange.evaluate_welding",
+      "evidence": [
+        "docs/WELDING_KO.md",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/tandem_welding_results.json",
+        "tests/test_welding_exchange.py"
+      ],
+      "limitations": [
+        "원8モデル strict JSON/버전/단위와 실제 호출·작성 수치 기준을 확인했다. 전체 용접 규격·공법/현장 자격·예열 요구·균열 확률은 검증하지 않았다.",
+        "조성 기준·미상 원소·거리/효율·원 시계/결측·센서 위치/열기준·미측정 경도 영역·형상 기준을 보존한다. 서로 다른 실험 자료를 같은 용접의 전기/열 이력으로 합치지 않는다."
+      ],
+      "next_step": "PI-X04의 실제 조성/용융 질량·열효율/경로·계측/구조/야금/절차 근거와 동적 공통 불확실성·독립 현장 검증"
+    },
+    {
+      "id": "materials_engine.workflow.pressure_fatigue",
+      "title_ko": "workflow.pressure_fatigue",
+      "category": "workflow",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fatigue_exchange.assess_pressure_fatigue",
+      "evidence": [
+        "research/pressure_fatigue_results.json",
+        "docs/PRESSURE_FATIGUE_KO.md"
+      ],
+      "limitations": [
+        "기존 재료 엔진의 실제 호출과 선언한 합성 기준을 확인했다. 독립 재료 시험·현장 수명 검증은 아니다.",
+        "형상·온도·응력 범위·응력비·곡선 근거와 표본 해상도를 사용자가 검토한다. 손상 지표를 실패확률로 바꾸지 않는다."
+      ],
+      "next_step": "검토된 현장 형상·벽 온도·재료 곡선과 독립 이력의 비교 확대"
+    },
+    {
+      "id": "monitoring.exchange",
+      "title_ko": "공정 신호·품질·운전모드 교환",
+      "category": "monitoring",
+      "state": "interface_verified",
+      "owner": "process-monitoring-toolkit",
+      "entrypoint": "pipeline_integrity.adapters.monitoring_batch",
+      "evidence": [
+        "docs/INTEGRATION_KO.md"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "hra.exchange",
+      "title_ko": "인적신뢰도 시계·신호 교환",
+      "category": "hra",
+      "state": "interface_verified",
+      "owner": "human-reliability-toolkit",
+      "entrypoint": "pipeline_integrity.adapters.hra_signal_series",
+      "evidence": [
+        "docs/INTEGRATION_KO.md"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "water.epanet",
+      "title_ko": "물 관망 정상·시간대별 수력 해석",
+      "category": "water",
+      "state": "implemented",
+      "owner": "WNTR/EPANET",
+      "entrypoint": "pipeline_integrity.water.simulate_water_network",
+      "evidence": [
+        "docs/API_KO.md",
+        "research/data_application.json"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "thermo.properties",
+      "title_ko": "실제 유체 상태·상변화 경계 확인",
+      "category": "thermo",
+      "state": "implemented",
+      "owner": "CoolProp",
+      "entrypoint": "pipeline_integrity.thermo.CoolPropProvider.resolve",
+      "evidence": [
+        "docs/API_KO.md",
+        "research/data_application.json"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "workflow.composition",
+      "title_ko": "단위 확인 계산 작업 흐름",
+      "category": "workflow",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.workflow.run_workflow",
+      "evidence": [
+        "docs/API_KO.md",
+        "research/data_application.json"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "requirements.numeric",
+      "title_ko": "사용자 선언 수치 기준 판정",
+      "category": "requirements",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.requirements.evaluate_requirement",
+      "evidence": [
+        "docs/API_KO.md",
+        "research/data_application.json"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "procedures.evidence",
+      "title_ko": "현장 절차의 근거·선행 작업 검토",
+      "category": "procedures",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md",
+        "research/data_application.json"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "data.qualification",
+      "title_ko": "출처·권리·무결성 확인과 제한된 취득",
+      "category": "data",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.datasets.acquire",
+      "evidence": [
+        "docs/API_KO.md",
+        "research/data_application.json",
+        "docs/LEAK_MULTISENSOR_DATA_KO.md",
+        "research/leak_multisensor_adapter_status.json"
+      ],
+      "limitations": [
+        "기록된 호출·보존량·스키마 검사 범위에 한정한다."
+      ],
+      "next_step": "독립 사례와 경계 조건 확대"
+    },
+    {
+      "id": "monitoring.statistical",
+      "title_ko": "관리 한계·강건 점수·변화 누적",
+      "category": "monitoring",
+      "state": "interface_verified",
+      "owner": "process-monitoring-toolkit",
+      "entrypoint": "pipeline_integrity.monitoring_exchange.evaluate_monitoring",
+      "evidence": [
+        "research/monitoring_exchange_results.json",
+        "tests/test_monitoring_exchange.py",
+        "docs/MONITORING_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "The selected 59 original detector IDs across seven families have actual fit/calibration/held-out execution, including the original seven statistical and fourteen classical methods.",
+        "Scope is the declared source, parameter, CPU seed, population and clock conditions. No physical fault truth, field detection performance or HEP qualification; unsupported single-channel lag_ridge and explicit authored CBLOF settings are preserved."
+      ],
+      "next_step": "Qualify remaining original registry families with actual native execution and independent reference checks; acquire physical fault truth and population evidence."
+    },
+    {
+      "id": "monitoring.classical",
+      "title_ko": "다변량·군집·이상치 분석",
+      "category": "monitoring",
+      "state": "interface_verified",
+      "owner": "process-monitoring-toolkit",
+      "entrypoint": "pipeline_integrity.monitoring_exchange.evaluate_monitoring",
+      "evidence": [
+        "research/monitoring_exchange_results.json",
+        "tests/test_monitoring_exchange.py",
+        "docs/MONITORING_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "The selected 59 original detector IDs across seven families have actual fit/calibration/held-out execution, including the original seven statistical and fourteen classical methods.",
+        "Scope is the declared source, parameter, CPU seed, population and clock conditions. No physical fault truth, field detection performance or HEP qualification; unsupported single-channel lag_ridge and explicit authored CBLOF settings are preserved."
+      ],
+      "next_step": "Qualify remaining original registry families with actual native execution and independent reference checks; acquire physical fault truth and population evidence."
+    },
+    {
+      "id": "monitoring.forecasting",
+      "title_ko": "시계열 예측 잔차·동적 부분공간",
+      "category": "monitoring",
+      "state": "interface_verified",
+      "owner": "process-monitoring-toolkit",
+      "entrypoint": "pipeline_integrity.monitoring_exchange.evaluate_monitoring",
+      "evidence": [
+        "research/monitoring_exchange_results.json",
+        "tests/test_monitoring_exchange.py",
+        "docs/MONITORING_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "Actual original-owner fit, separate calibration and held-out scoring for the selected 59 IDs across seven registry families, including dynamic PCA, six neural and fourteen temporal neural methods.",
+        "Authored CPU seeds, work budgets, frozen fitted weights/preprocessing and causal history support are checked. SCADA replay has no physical fault truth, field detection or HEP qualification.",
+        "Single-channel lag_ridge remains unsupported for the tested owner/sklearn combination; CBLOF uses explicit authored cluster parameters. Classification, incremental, engineering and subsequence families are not selected by this exchange."
+      ],
+      "next_step": "Evaluate reviewed physical fault populations and larger independently held-out conditions; maintain original source/parameter/clock/seed provenance."
+    },
+    {
+      "id": "monitoring.modern",
+      "title_ko": "딥러닝·그래프·확산·라이브러리 검출기",
+      "category": "monitoring",
+      "state": "interface_verified",
+      "owner": "process-monitoring-toolkit",
+      "entrypoint": "pipeline_integrity.monitoring_exchange.evaluate_monitoring",
+      "evidence": [
+        "research/monitoring_exchange_results.json",
+        "tests/test_monitoring_exchange.py",
+        "docs/MONITORING_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "Actual original-owner fit, separate calibration and held-out scoring for the selected 59 IDs across seven registry families, including dynamic PCA, six neural and fourteen temporal neural methods.",
+        "Authored CPU seeds, work budgets, frozen fitted weights/preprocessing and causal history support are checked. SCADA replay has no physical fault truth, field detection or HEP qualification.",
+        "Single-channel lag_ridge remains unsupported for the tested owner/sklearn combination; CBLOF uses explicit authored cluster parameters. Classification, incremental, engineering and subsequence families are not selected by this exchange."
+      ],
+      "next_step": "Evaluate reviewed physical fault populations and larger independently held-out conditions; maintain original source/parameter/clock/seed provenance."
+    },
+    {
+      "id": "monitoring.alarm_events",
+      "title_ko": "경보 유지·결합·사건 기록",
+      "category": "monitoring",
+      "state": "interface_verified",
+      "owner": "process-monitoring-toolkit",
+      "entrypoint": "pipeline_integrity.alarm_exchange.replay_alarm",
+      "evidence": [
+        "docs/ALARM_SOURCE_KO.md",
+        "docs/RESPONSE_TRACE_KO.md",
+        "research/alarm_source_results.json",
+        "research/response_trace_results.json",
+        "tests/test_alarm_exchange.py"
+      ],
+      "limitations": [
+        "Native alarm persistence, recovery, latch and invalid-input semantics verified; activations are recorded transitions, not true physical onsets.",
+        "The SCADA replay does not establish detection performance, physical leak truth or human failure probabilities."
+      ],
+      "next_step": "Extend reviewed multi-source event semantics and acquire actual cue delivery/response evidence."
+    },
+    {
+      "id": "hra.tasks",
+      "title_ko": "작업 분해·조건·실패 정의",
+      "category": "hra",
+      "state": "interface_verified",
+      "owner": "human-reliability-toolkit",
+      "entrypoint": "human_reliability.Task/analyze_task; pipeline_integrity.schedule_exchange.bind_hra_task",
+      "evidence": [
+        "research/scheduling_results.json",
+        "docs/SCHEDULING_KO.md"
+      ],
+      "limitations": [
+        "실제 Task·ordered_steps·analyze_task·실패 사건 정의와 계획 연결을 호출했다. 정성 결과는 검토 후보다.",
+        "단계/역할/선행 해석을 명시하며 기한은 별도 검토로 남긴다. 계획 시각은 관측 완료·작업 승인·HEP가 아니다."
+      ],
+      "next_step": "시간 기준·담당 역할·계획/관측·선행 조건과 HRA 추정의 구분을 원 API에 수용"
+    },
+    {
+      "id": "hra.estimation",
+      "title_ko": "근거를 선언한 인적실패 확률 추정",
+      "category": "hra",
+      "state": "interface_verified",
+      "owner": "human-reliability-toolkit",
+      "entrypoint": "pipeline_integrity.risk_exchange.HRARiskClient.bind_human_estimate",
+      "evidence": [
+        "docs/RISK_EXCHANGE_KO.md",
+        "research/joint_state_count_adapter_status.json",
+        "research/risk_exchange_results.json"
+      ],
+      "limitations": [
+        "Observed exhaustive Boolean state counts can now be source-bound and normalized into the existing joint-state FTA request without fitting a common-cause model; tests are written and pending Nurion execution.",
+        "실제 관측 건수의 사전분포·분야 전이·포함 효과를 보존한 교환을 확인했다. 다른 HRA 방법 전체나 배관 현장 정확도를 검증한 것은 아니다."
+      ],
+      "next_step": "배관 작업의 실제 오류·기회·회복·노출 자료를 확보하고 독립 검증"
+    },
+    {
+      "id": "hra.recovery",
+      "title_ko": "시간·복구·인지 단계 평가",
+      "category": "hra",
+      "state": "interface_verified",
+      "owner": "human-reliability-toolkit",
+      "entrypoint": "HumanResponseClient.cognitive_estimate / evaluate",
+      "evidence": [
+        "research/human_response_results.json",
+        "docs/HUMAN_RESPONSE_KO.md",
+        "tests/test_response_exchange.py"
+      ],
+      "limitations": [
+        "원 HRA의 조건부 인지 단계·고정 기한 시간 모델·시간 제한 없는 복구와 위험 교환을 실제 호출했다.",
+        "현장 HEP 보정, 확률적인 공정 기한, 공동 시간·복구와 경쟁 실패 추정은 완료하지 않았다.",
+        "계획 시간을 관측 분포로 바꾸거나 이미 포함된 시간·복구 효과를 다시 반영하지 않는다."
+      ],
+      "next_step": "PI-X06의 공동 시간·복구·중단·현장 모집단 계약을 기존 소유 엔진에서 확장하고 새 소스 해시로 재검증"
+    },
+    {
+      "id": "release.pool",
+      "title_ko": "극저온 액체 재고·증발·풀",
+      "category": "release",
+      "state": "interface_verified",
+      "owner": "DynamicLH2PoolX/lh2dt_models",
+      "entrypoint": "pipeline_integrity.pool_exchange.evaluate_pool_request",
+      "evidence": [
+        "research/pool_exchange_results.json",
+        "tests/test_pool_exchange.py",
+        "docs/POOL_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "Actual fixed-source DynamicLH2PoolX spreading/solid-water and fixed-area/solid APIs for liquid already reaching a surface, native HEOS Hydrogen saturation, ZOH inflow and independently checked mass ledger.",
+        "No jet impact/deposition, dispersion or energy ledger qualification. Domain escape and numerical adjustments prevent completed downstream signal export. Authored cases are not field validation."
+      ],
+      "next_step": "Connect independently reviewed surface-arrival quantities and compatible downstream cloud properties after owner release-boundary extensions; retain cumulative mass and scope restrictions."
+    },
+    {
+      "id": "consequence.dispersion",
+      "title_ko": "가스 확산과 영향 범위",
+      "category": "consequence",
+      "state": "interface_verified",
+      "owner": "PRISM/slabx/slabx-lh2",
+      "entrypoint": "pipeline_integrity.consequence_exchange.PRISMConsequenceClient.evaluate",
+      "evidence": [
+        "docs/CONSEQUENCES_KO.md",
+        "research/consequence_results.json"
+      ],
+      "limitations": [
+        "압축성 평면을 거친 일반 수소의 정렬 바람 조건에서 실제 확산 이력·수용체·수지를 확인했다. 횡풍·비스듬한 평면의 실패, 유한 체적 재구성·에너지·독립 실험 비교는 남는다."
+      ],
+      "next_step": "PI-X03의 투영 단면 보존·횡풍 경계를 확장하고 독립 농도 관측과 비교"
+    },
+    {
+      "id": "consequence.thermal",
+      "title_ko": "제트·화재·복사 영향",
+      "category": "consequence",
+      "state": "interface_verified",
+      "owner": "PRISM",
+      "entrypoint": "pipeline_integrity.consequence_exchange.PRISMConsequenceClient.evaluate",
+      "evidence": [
+        "docs/CONSEQUENCES_KO.md",
+        "research/consequence_results.json"
+      ],
+      "limitations": [
+        "기체 방출의 실제 복사·열량·위해도 경계를 확인했다. 복사율·점화는 선언 가정이며 짧은 방출의 화염 형성·열 피드백·현장 위해도는 미검증이다."
+      ],
+      "next_step": "유효한 시간·물성·실험 복사 관측으로 모형과 민감도 비교"
+    },
+    {
+      "id": "consequence.explosion",
+      "title_ko": "폭발 영향 시나리오",
+      "category": "consequence",
+      "state": "interface_verified",
+      "owner": "PRISM",
+      "entrypoint": "pipeline_integrity.consequence_exchange.PRISMConsequenceClient.evaluate",
+      "evidence": [
+        "docs/CONSEQUENCES_KO.md",
+        "research/consequence_results.json"
+      ],
+      "limitations": [
+        "원 엔진의 조건부 폭연 구역·점화·위해도를 호출했다. 제한된 기준 구역이며 연속 압력·충격량·DDT·독립 폭발 검증을 제공하지 않는다."
+      ],
+      "next_step": "사고 시나리오·장애물·미계산 구름의 물리 근거와 독립 기준을 확장"
+    },
+    {
+      "id": "risk.events",
+      "title_ko": "FTA·ETA·LOPA·빈도와 조건부 경로",
+      "category": "risk",
+      "state": "interface_verified",
+      "owner": "human-reliability-toolkit/PRISM",
+      "entrypoint": "pipeline_integrity.risk_exchange.HRARiskClient",
+      "evidence": [
+        "docs/RISK_EXCHANGE_KO.md",
+        "research/risk_exchange_results.json"
+      ],
+      "limitations": [
+        "요구당 확률의 공유 사건 FTA·조건부 ETA·선언 독립 LOPA·PRISM 요구 시 실패를 실제 호출했다. 물리적 누설 빈도·동적 위험 연성·IPL 인증은 아니다."
+      ],
+      "next_step": "PI-X02/03의 원 계보 수용과 물리적인 봉쇄 상실 조건을 연결"
+    },
+    {
+      "id": "risk.aggregation",
+      "title_ko": "조건별 위험 기여 합산",
+      "category": "risk",
+      "state": "interface_verified",
+      "owner": "PRISM",
+      "entrypoint": "pipeline_integrity.consequence_exchange.PRISMConsequenceClient.annual_risk",
+      "evidence": [
+        "docs/CONSEQUENCES_KO.md",
+        "research/consequence_results.json"
+      ],
+      "limitations": [
+        "실제 PRISM으로 시간창 위해도의 연간 환산·빈도 누락·미계산 조건의 0~1 범위를 확인했다. 전체 사고·사업장 위험·인원 공동 분포·F-N 검증은 아니다."
+      ],
+      "next_step": "실제 기상·빈도·재실·전체 사고 시간창과 소유 엔진의 미계산 경로를 확장"
+    },
+    {
+      "id": "knowledge.assistance",
+      "title_ko": "근거 검색과 분석 후보",
+      "category": "knowledge",
+      "state": "partial",
+      "owner": "SAGA",
+      "entrypoint": "pipeline_integrity.knowledge_exchange.evaluate_knowledge",
+      "evidence": [
+        "research/knowledge_exchange_results.json",
+        "tests/test_knowledge_exchange.py",
+        "docs/KNOWLEDGE_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "Actual offline SAGA database retrieval, citation and pending-candidate review on an independently authored MIT corpus; no configured reasoning provider, online API or engineering rule approval.",
+        "The tested optional worker actually imports PyMuPDF under its separate AGPL/commercial terms. Neither that dependency nor any owner source/corpus/database is bundled; lightweight owner library separation is requested."
+      ],
+      "next_step": "Implement PI-X07 lightweight library boundary and a reviewed reasoning/provider contract with source revision, rights, evidence and pending review preserved."
+    },
+    {
+      "id": "dynamics.station",
+      "title_ko": "수소 공급·압축·저장·충전 동역학",
+      "category": "dynamics",
+      "state": "interface_verified",
+      "owner": "hydrogen-station-sim",
+      "entrypoint": "pipeline_integrity.station_exchange.evaluate",
+      "evidence": [
+        "research/station_exchange_results.json",
+        "tests/test_station_exchange.py",
+        "docs/STATION_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "Actual reviewed owner tank/restriction network and bounded full-reference scenario with common RunContext, selected evidence, absolute pressure, property/source pins, clock offsets and verified SignalFrame exchange.",
+        "Network gas/wall mass-energy diagnostics gate downstream export. Full-reference loop mass/energy ledger remains unknown; no active fault/consequence backend or facility engineering qualification."
+      ],
+      "next_step": "Implement PI-X01/03 complete full-loop ledgers, compatible control/fault/consequence boundaries and independent facility observations."
+    },
+    {
+      "id": "network.gas_general",
+      "title_ko": "일반 가스 관망의 보존식 해석",
+      "category": "network",
+      "state": "partial",
+      "owner": "lh2dt_models/integration",
+      "entrypoint": "pipeline_integrity.gas_network.solve_gas_network",
+      "evidence": [
+        "research/gas_network_results.json",
+        "docs/GAS_NETWORK_KO.md"
+      ],
+      "limitations": [
+        "기존 P/h 관망·관과 CoolProp을 실제 재사용해 분기·인출·열·역류·병렬·선언 혼합물을 확인했다.",
+        "저마하·구간 밀도/압력 변화 경계의 정상 선별 해석이다. 운동/위치 에너지·일반 능동 장치·전체 GasLib 운전·독립 실험은 미완료다."
+      ],
+      "next_step": "원 엔진의 전체 에너지·고도·잔차 스케일·능동 장치 계약과 원 GasLib 조건의 매핑 확대"
+    },
+    {
+      "id": "transient.liquid_moc",
+      "title_ko": "반사파·밸브 폐쇄·펌프 정지를 포함한 물 과도 해석",
+      "category": "transient",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.transient.simulate_liquid_transient",
+      "evidence": [
+        "tests/test_transient.py",
+        "research/transient_verification.json",
+        "research/valve_transient_results.json",
+        "docs/VALVE_TRANSIENT_KO.md",
+        "src/pipeline_integrity/pump_transient.py",
+        "tests/test_pump_transient.py",
+        "docs/PUMP_TRANSIENT_KO.md"
+      ],
+      "limitations": [
+        "단상 액체의 고정 Darcy 계수·선형 음향 근사, 수두·실제 인출·동적 CdA 경계에 한정한다.",
+        "기존 유한 구동과 내부 밸브 손실·역류·병렬 연결·관별 수지를 확인했다. 원 펌프 정지 응답의 속도·동력·회전자 에너지 검증 경계를 추가했지만 MOC 동시해법·공동화·다상·독립 실험 검증은 남는다."
+      ],
+      "next_step": "PIPE-EXT-014의 원 펌프 4사분면/구동/관성 API를 구현해 MOC와 동시 결합하고 실제 구동·유압·공동화 자료로 검증"
+    },
+    {
+      "id": "transient.gas_nonisothermal",
+      "title_ko": "가스 비등온 과도 수송",
+      "category": "transient",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.gas_thermal_transient.evaluate_gas_thermal_transient",
+      "evidence": [
+        "src/pipeline_integrity/gas_thermal_transient.py",
+        "tests/test_gas_thermal_transient.py",
+        "docs/GAS_THERMAL_TRANSIENT_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Scoped native adapter and written tests only; numerical/native execution deferred to Nurion. Broad-model qualification remains incomplete; see dedicated guide."
+      ],
+      "next_step": "Run pending native, limiting-case and conservation/eigen-residual tests on Nurion; implement documented owner extensions before broader qualification."
+    },
+    {
+      "id": "transient.multiphase",
+      "title_ko": "혼합상·액주 분리·재결합 과도",
+      "category": "transient",
+      "state": "partial",
+      "owner": "lh2dt_models/integration",
+      "entrypoint": "LH2EquipmentClient.advance_dynamic_pipe",
+      "evidence": [
+        "research/equipment_factory_results.json",
+        "tests/test_equipment_exchange.py"
+      ],
+      "limitations": [
+        "기존 균질 평형 제어체적의 액체/2상 평형과 작은 압력 변화 응답을 호출했다.",
+        "시간 세분화 일치와 독립 물리 검증을 구분한다. 슬립·액주 분리·재결합·파 전파의 완전한 다상 해석은 미구현이다."
+      ],
+      "next_step": "소유 엔진의 보존량 누적·네트워크·실험 경계 연결과 독립 검증"
+    },
+    {
+      "id": "release.line_rupture",
+      "title_ko": "배관 파단과 양방향 잔류 방출",
+      "category": "release",
+      "state": "partial",
+      "owner": "lh2dt_models/integration",
+      "entrypoint": "LH2EquipmentClient.export_accident_history / release_exchange.prism_release",
+      "evidence": [
+        "research/release_exchange_results.json",
+        "tests/test_release_exchange.py",
+        "docs/EXTENSION_REQUESTS_KO.md"
+      ],
+      "limitations": [
+        "일반 수소의 단일 출구·유한 제어체적 방출을 실제 PRISM 패킷으로 전달했다. 양방향 파단·연성 관망은 미구현이다.",
+        "파라수소의 유체 표시와 2상 기체 분기 물성·액체 도달 좌표의 불일치를 재현해 전달을 보류한다.",
+        "명시한 시각의 순간 개구 폐쇄는 유한 밸브 구동·차단 후 관 재고 방출 검증이 아니다."
+      ],
+      "next_step": "PI-X01 원본 물성·좌표 수정과 통합 에너지 원장, 공유 재고를 가진 양방향 경계 검증"
+    },
+    {
+      "id": "release.isolation",
+      "title_ko": "명령·밸브 운동·물리적 차단 시점 연계",
+      "category": "release",
+      "state": "partial",
+      "owner": "lh2dt_models/integration",
+      "entrypoint": "pipeline_integrity.valve_motion.liquid_valve_from_motion",
+      "evidence": [
+        "docs/VALVE_TRANSIENT_KO.md",
+        "research/valve_transient_results.json",
+        "docs/EXTENSION_REQUESTS_KO.md"
+      ],
+      "limitations": [
+        "명령·실제 구동·액체 압력파와 목표 도달 뒤 하류 유량을 연결했다. 고정 속도 구동의 합성 기준이며 기체/2상 잔류 방출·물리적인 차단·현장 검증은 아니다."
+      ],
+      "next_step": "PI-X01/06의 독립 구동기 API·실제 상태 증거·기체/2상 재고 경계를 소유 엔진에서 확장"
+    },
+    {
+      "id": "inventory.segmented",
+      "title_ko": "공간별 압력·온도 재고 적분",
+      "category": "inventory",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('inventory.segmented', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_inventory_segments.py"
+      ],
+      "limitations": [
+        "사용자가 공간 상태·체적·공통 물성 기준을 제공하는 재고 스냅샷 적분. 수송·상 경계 이동은 계산하지 않음."
+      ],
+      "next_step": "독립 설비·관측 자료에 대한 적용·불확실성 검증"
+    },
+    {
+      "id": "transport.batch_interface",
+      "title_ko": "다품종 액체 이송 경계와 혼합 오염",
+      "category": "transport",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.batch_transport.evaluate_batch_transport; pipeline_integrity.water_quality.simulate_water_quality",
+      "evidence": [
+        "docs/BATCH_TRANSPORT_KO.md",
+        "research/batch_transport_adapter_status.json",
+        "tests/test_batch_transport.py",
+        "docs/WATER_QUALITY_KO.md",
+        "research/water_quality_results.json",
+        "tests/test_water_quality.py"
+      ],
+      "limitations": [
+        "A typed owner-provider boundary now validates multi-product composition/property fields and a signed mass ledger without copying transport physics; numerical/provider tests are pending on Nurion.",
+        "일정 밀도 물의 희석 성분·일차 체적 소멸·출처 추적·물 나이만 제공. 제품의 밀도·점도 피드백·축방향 분산·다성분 반응·열 연성은 미구현.",
+        "합성 기준과 공개 관망의 선언된 초기/경계 시나리오를 구분. 공개 관망 수력 경고는 보류하며 독립 현장 수송 검증은 미완료."
+      ],
+      "next_step": "Run provider-boundary regressions on Nurion, then connect a reviewed owner solver and independent product-interface/mixing observations with source-qualified property and boundary data."
+    },
+    {
+      "id": "transport.pig_motion",
+      "title_ko": "피그 이동·마찰·통과 감시",
+      "category": "transport",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.pig_motion.evaluate_pig_motion",
+      "evidence": [
+        "src/pipeline_integrity/pig_motion.py",
+        "tests/test_pig_motion.py",
+        "docs/PIG_MOTION_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Prescribed-boundary rigid 1D mechanics only; numerical tests deferred to Nurion. No coupled hydraulics, seal leakage, deformation or impact qualification."
+      ],
+      "next_step": "Execute pending event, force-work and impulse-budget tests on Nurion; request original hydraulic-engine coupling through the documented contract."
+    },
+    {
+      "id": "transport.slurry",
+      "title_ko": "고형분 함유·비뉴턴 수송",
+      "category": "transport",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.slurry_transport.evaluate_slurry_transport",
+      "evidence": [
+        "src/pipeline_integrity/slurry_transport.py",
+        "tests/test_slurry_transport.py",
+        "docs/SLURRY_TRANSPORT_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Scoped implementation and tests written with numerical/native execution deferred to Nurion; supplier conditions and unsupported physics remain explicit. No independent field qualification."
+      ],
+      "next_step": "Execute the pending tests on Nurion and implement the dedicated guide owner-extension requests; do not expand sample/laminar comparisons into whole-model qualification."
+    },
+    {
+      "id": "transport.hydrate",
+      "title_ko": "수화물과 왁스·고형화 위험",
+      "category": "transport",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.deposition_risk.assess_deposition",
+      "evidence": [
+        "src/pipeline_integrity/deposition_risk.py",
+        "tests/test_deposition_risk.py",
+        "docs/DEPOSITION_RISK_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Reviewed envelope comparison and optional source-build ThermoPack adapter only; PyPI2.2.3 hydrate unsupported. Numerical/native tests pending on Nurion; kinetics, deposition mass and plugging are not computed."
+      ],
+      "next_step": "Run pending envelope/native-source cases on Nurion and implement the documented equilibrium/transport owner extensions before qualification."
+    },
+    {
+      "id": "thermal.soil_coupling",
+      "title_ko": "매설관과 토양의 열 연성",
+      "category": "thermal",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.buried_thermal.evaluate_buried_thermal; pipeline_integrity.pipe_soil_transient.evaluate_pipe_soil_transient",
+      "evidence": [
+        "research/buried_thermal_results.json",
+        "tests/test_buried_thermal.py",
+        "docs/BURIED_THERMAL_KO.md",
+        "docs/PIPE_SOIL_TRANSIENT_KO.md",
+        "research/pipe_soil_transient_results.json",
+        "tests/test_pipe_soil_transient.py",
+        "research/soil_source_results.json"
+      ],
+      "limitations": [
+        "Steady isothermal-plane resistance and original-owner transient concentric pipe-wall/insulation/soil shells with reviewed variable property curves, initial cell averages and time-dependent boundaries.",
+        "A radial outer cylinder is not a horizontal ground plane. No finite thermal contact, moisture transport or two-way fluid energy feedback; measured soil records lack a qualified pipe/material/boundary mapping."
+      ],
+      "next_step": "Connect qualified true cross-section geometry and soil observations; extend moisture/contact and fluid-energy feedback with independent conservation and measurement evidence."
+    },
+    {
+      "id": "thermal.buried_multi",
+      "title_ko": "병렬 매설관 상호 열영향",
+      "category": "thermal",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/FiPy/scikit-fem",
+      "entrypoint": "pipeline_integrity.soil_cross_section.evaluate_soil_cross_section; pipeline_integrity.soil_fem.evaluate_soil_fem",
+      "evidence": [
+        "docs/SOIL_CROSS_SECTION_KO.md",
+        "research/soil_cross_section_results.json",
+        "tests/test_soil_cross_section.py",
+        "docs/SOIL_DATA_KO.md",
+        "research/soil_fem_results.json",
+        "tests/test_soil_fem.py",
+        "docs/SOIL_FEM_KO.md"
+      ],
+      "limitations": [
+        "FiPy remains restricted to qualified orthogonal meshes: a skew exact 24 W case produced about 19.2 W and correction-class replacement was insufficient.",
+        "Separate scikit-fem P1 polygon-cavity path uses explicit nodal fields, native local Delaunay/vertex quadrature and actual matrix/bound/energy gates. Physical facet flux and weak reactions stay separate; shared-corner reaction allocation remains unknown.",
+        "General curved geometry, moisture, groundwater, pipe-wall/fluid feedback and independent field qualification remain incomplete."
+      ],
+      "next_step": "Qualify general curved/nonorthogonal boundary flux, local assembly and energy together; extend wall/fluid/moisture coupling with independent observations and PI-X04 contracts."
+    },
+    {
+      "id": "thermal.phase_change",
+      "title_ko": "비등·응축·동결·극저온 단열",
+      "category": "thermal",
+      "state": "partial",
+      "owner": "lh2dt_models/CoolProp integration",
+      "entrypoint": "pipeline_integrity.phase_change_exchange.evaluate_phase_change",
+      "evidence": [
+        "research/phase_change_results.json",
+        "tests/test_phase_change_exchange.py",
+        "docs/PHASE_CHANGE_KO.md",
+        "research/thermal_process_source_results.json"
+      ],
+      "limitations": [
+        "Actual signed interface kinetics, steady vaporizer/reliquefier, bounded native dynamic CV steps and decomposed cryogenic insulation preserve source/property/port/clock and budget meaning.",
+        "Bulk solidification/front and solid EOS, frost deposition/melt latent coupling, full open-step integrated heat/enthalpy ledgers and independent process validation remain incomplete. LN2 curves and NASA tank tables are not hydrogen interface closure truth."
+      ],
+      "next_step": "PI-X01/04: reviewed solid/latent/front and frost-domain providers, true integrated dynamic boundary ledgers and independent original geometry/thermal observations; qualify NASA cell mapping and LN2 units/clocks before model transfer."
+    },
+    {
+      "id": "thermal.heated_oil",
+      "title_ko": "가열 원유 점도·열수력 연성",
+      "category": "thermal",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.heated_transport.evaluate_heated_transport",
+      "evidence": [
+        "src/pipeline_integrity/heated_transport.py",
+        "tests/test_heated_transport.py",
+        "docs/HEATED_TRANSPORT_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Implementation and tests written; numerical/native execution deferred to Nurion. Scope and unsupported engineering features are recorded in the dedicated guide; no field qualification."
+      ],
+      "next_step": "Execute pending native/provider cases on Nurion and address the guide-specific owner extension requests before qualification."
+    },
+    {
+      "id": "equipment.compressor_map",
+      "title_ko": "다단 압축·맵·서지·인터쿨러",
+      "category": "equipment",
+      "state": "partial",
+      "owner": "lh2dt_models/SciPy/CoolProp integration",
+      "entrypoint": "pipeline_integrity.compressor_train.evaluate_compressor_train",
+      "evidence": [
+        "research/compressor_train_results.json",
+        "tests/test_compressor_train.py",
+        "docs/COMPRESSOR_TRAIN_KO.md",
+        "research/thermal_process_source_results.json"
+      ],
+      "limitations": [
+        "Actual original H2/ParaH2 compressor stages use reviewed same-fluid total-state maps, bounded linear interpolation, serial cooler P/H boundaries and mass/energy/drive-loss ledgers.",
+        "Static surge/choke margins are not surge dynamics, rotor/control/recycle behavior or independent field-map validation. Refinery sensor records have unresolved units/roles/fluid/flow and are not maps."
+      ],
+      "next_step": "PI-X01: native mapped compressor and shaft/drive/control/recycle signatures with integrated energy/flow ledgers; obtain reviewed same-fluid maps and independent chronological physical observations."
+    },
+    {
+      "id": "equipment.pump_system",
+      "title_ko": "병렬·직렬 펌프 곡선과 관망 교점",
+      "category": "equipment",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.evaluate('equipment.pump_system', parameters, context)",
+      "evidence": [
+        "research/example_results.json",
+        "tests/test_pump_curves.py"
+      ],
+      "limitations": [
+        "동일 직렬·병렬 펌프, 공급한 단조 감소 곡선, 정수두+유량 제곱 계통 곡선, 선언 효율에 한정. 외삽·맵·동역학은 미포함."
+      ],
+      "next_step": "독립 설비·관측 자료에 대한 적용·불확실성 검증"
+    },
+    {
+      "id": "equipment.valve_dynamics",
+      "title_ko": "밸브 개도 특성과 구동기 운동",
+      "category": "equipment",
+      "state": "interface_verified",
+      "owner": "lh2dt_models",
+      "entrypoint": "pipeline_integrity.valve_motion.simulate_valve_motion",
+      "evidence": [
+        "research/physics_integration_results.json",
+        "research/equipment_factory_results.json",
+        "research/valve_transient_results.json"
+      ],
+      "limitations": [
+        "기존 유한 스트로크 구동과 액체 CdA 곡선을 분리하고 실제 호출·명령 시계·HRA 신호 교환을 확인했다.",
+        "제조사별 개도 곡선·고장 모드·현장 동특성은 별도 검증이 필요하다."
+      ],
+      "next_step": "제조사 입력의 소비 스키마와 공통 명령/완료 시계 연동 확대"
+    },
+    {
+      "id": "instrument.gas_meter",
+      "title_ko": "압축성 유량계와 상태 보정",
+      "category": "instrument",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit/Fluids/CoolProp",
+      "entrypoint": "pipeline_integrity.gas_meter.evaluate_gas_meter",
+      "evidence": [
+        "research/gas_meter_results.json",
+        "tests/test_gas_meter.py",
+        "research/meter_source_results.json",
+        "docs/GAS_METER_KO.md"
+      ],
+      "limitations": [
+        "Native Fluids differential-pressure meter solution and HEOS same-composition gas/reference states, with explicit geometry/taps, reviewed support, signed ports and reproducible native receipts.",
+        "Moderate-drop single-gas engineering scope; caller-reviewed throat/nonchoked applicability, no wet-to-dry conversion, unknown thermal throat state or standards/field qualification inferred. Real liquid calibration and incomplete compressed-air observations are not gas meter field validation."
+      ],
+      "next_step": "Acquire independent paired gas reference flow with complete geometry/taps/composition/uncertainty; qualify domain and calibration without reusing fitted rows as validation."
+    },
+    {
+      "id": "instrument.custody_transfer",
+      "title_ko": "거래 계량의 교정·불확실도",
+      "category": "instrument",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.calibration.fit_calibration; pipeline_integrity.metrology.propagate_measurement_uncertainty; pipeline_integrity.totalization.totalize_measurements",
+      "evidence": [
+        "research/metrology_results.json",
+        "tests/test_metrology.py",
+        "research/meter_source_results.json",
+        "docs/METROLOGY_KO.md",
+        "research/eiv_calibration_results.json",
+        "tests/test_calibration.py",
+        "docs/EIV_CALIBRATION_KO.md",
+        "research/calibration_source_results.json",
+        "research/totalization_results.json",
+        "tests/test_totalization.py",
+        "docs/TOTALIZATION_KO.md",
+        "docs/JSON_BOUNDARY_KO.md"
+      ],
+      "limitations": [
+        "Full supplied cross-axis/cross-point covariance EIV calibration through shared SciPy, absolute local nuisance-marginal covariance, explicit validation roles and source/units/domain/prediction guards.",
+        "Reading/time joint covariance for point-linear, interval-mean and cumulative-counter windows delegates to metrology; shared quadrature also serves the existing power integrator. Missing intervals/covariance and source timing stay unresolved.",
+        "One MC-derived nozzle campaign reproduces published calibration numbers; VSL counter means permit 224 nominal period amounts but lack full reading/time covariance. Neither is independent field validation or custody certification.",
+        "General singular/exact-y calibration, extrapolation, drift/reset calibration, large-window covariance representation and complete calibration-application uncertainty remain incomplete."
+      ],
+      "next_step": "Independent campaign and end-to-end calibration/application covariance; constrained singular error models, drift/reset and scalable time correlation; caller-specific reviewed custody procedure."
+    },
+    {
+      "id": "instrument.sensor_faults",
+      "title_ko": "시간 지연·드리프트·동기화 오차",
+      "category": "instrument",
+      "state": "partial",
+      "owner": "lh2dt_models/integration",
+      "entrypoint": "pipeline_integrity.instrument_exchange.replay_transmitter",
+      "evidence": [
+        "research/control_exchange_results.json",
+        "tests/test_instrument_exchange.py",
+        "docs/CONTROL_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "원 1차 응답·편향·포화·양자화와 선언한 선형 drift·전송 지연·dropout·시계 offset/rate 시나리오를 연결했다.",
+        "확률·고장률·잡음 분포·실제 동기화/교정 추정은 제공하지 않는다. 미지 입력의 동적 상태는 보류하거나 명시한 reset만 허용한다.",
+        "전달지연이 없고 source/report 시계가 같은 완전한 simulation packet slice만 기존 MonitoringSplit으로 변환한다. 지연 packet·별도 보고시계·음수 보고시각은 현재 owner contract가 표현하지 못해 보류하며, 수치 회귀는 누리온 대기다."
+      ],
+      "next_step": "PIPE-EXT-015에 따라 원 monitoring API에 행별 source/reported/availability 시계를 추가하고 실제 센서 교정·시계 매핑 근거와 독립 시험으로 확장"
+    },
+    {
+      "id": "leak.inverse_localization",
+      "title_ko": "물리 잔차 기반 누설 위치 역추정",
+      "category": "leak",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.inverse_localization.localize_leak",
+      "evidence": [
+        "src/pipeline_integrity/inverse_localization.py",
+        "tests/test_inverse_localization.py",
+        "docs/INVERSE_LOCALIZATION_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Finite reviewed candidates only; implementation written with numerical execution deferred to Nurion. No global or field qualification."
+      ],
+      "next_step": "Execute pending numerical and native-provider tests on Nurion, then extend the documented unresolved engineering scope."
+    },
+    {
+      "id": "leak.acoustic_localization",
+      "title_ko": "음향 상관·도달 시간과 위치",
+      "category": "leak",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.acoustics:localize_acoustic_leak (composes estimate_delay / locate_on_span)",
+      "evidence": [
+        "docs/ACOUSTICS_KO.md",
+        "research/acoustic_results.json",
+        "tests/test_acoustics.py"
+      ],
+      "limitations": [
+        "동일 수량의 두 파형, 명시한 시계 보정, 단일 경로·비분산·구간 내 소스 가정의 조건부 위치와 사용자 오차 경계만 지원.",
+        "실제 40개 동시 실험에서 수치 시간차·모니터링 전달을 확인했으나 파속·정확한 센서 오프셋·상대 지연 오차가 없어 실제 위치를 계산하지 않았다.",
+        "반사·분기·분산·다중 소스와 독립 위치 정답·누설/비누설 검출 정확도는 미검증."
+      ],
+      "next_step": "측정 기반 전파·시계·위치 근거를 확보하고 독립 실험에서 위치 오차를 검증; 다중 경로/주파수 의존성을 모델링"
+    },
+    {
+      "id": "leak.negative_pressure_wave",
+      "title_ko": "음압파 도착과 방향 추론",
+      "category": "leak",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/SciPy",
+      "entrypoint": "pipeline_integrity.pressure_wave.evaluate_pressure_wave",
+      "evidence": [
+        "research/pressure_wave_results.json",
+        "tests/test_pressure_wave.py",
+        "docs/PRESSURE_WAVE_KO.md"
+      ],
+      "limitations": [
+        "Reviewed negative first-difference features, per-sample support, explicit timing/model error bounds and same-event/topology gates are implemented with native SciPy find_peaks.",
+        "Measured/laboratory pairs are now gated before native feature search by a source-bound pressure-pair qualification receipt; synthetic and simulation research paths remain separate.",
+        "Two actual MOC-generated pressure traces at two grids reproduce the separate distance/speed timing reference; no real paired pressure record, onset/cause classifier, multipath/reflection or field detection validation yet.",
+        "First receiver, through-pair travel direction, leak cause and position are distinct; unknown synchronization/model errors and ambiguous/truncated features remain withheld."
+      ],
+      "next_step": "Resolve the reviewed CC-BY4.0 CSV unit/clock/trigger mapping and create a ready pressure-pair qualification from replayed full records; run the new gate regressions on Nurion, then extend PI-X05/06 event-origin and arrival-error validation before cause/HEP integration."
+    },
+    {
+      "id": "leak.sensor_placement",
+      "title_ko": "센서 위치·관측성·비용 최적화",
+      "category": "leak",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.sensor_placement.plan_sensor_placement",
+      "evidence": [
+        "src/pipeline_integrity/sensor_placement.py",
+        "tests/test_sensor_placement.py",
+        "docs/SENSOR_PLACEMENT_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Implementation written; numerical tests and owner execution deferred to Nurion by user instruction. Static checks do not establish validation."
+      ],
+      "next_step": "Run the written tests on Nurion and review native owner results and engineering scope before qualification."
+    },
+    {
+      "id": "leak.external_sensing",
+      "title_ko": "광섬유·가스 감지·원격 관측 연계",
+      "category": "leak",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.external_sensing.adapt_external_sensing",
+      "evidence": [
+        "src/pipeline_integrity/external_sensing.py",
+        "tests/test_external_sensing.py",
+        "docs/EXTERNAL_SENSING_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Implementation and tests written; numerical/native execution deferred to Nurion. Scope and unsupported engineering features are recorded in the dedicated guide; no field qualification."
+      ],
+      "next_step": "Execute pending native/provider cases on Nurion and address the guide-specific owner extension requests before qualification."
+    },
+    {
+      "id": "integrity.defect_matching",
+      "title_ko": "반복 검사 결함 정합과 성장 불확실도",
+      "category": "integrity",
+      "state": "partial",
+      "owner": "matintegrity/integration",
+      "entrypoint": "inspection.match_inspections / evaluate_inspection_track",
+      "evidence": [
+        "research/ili_application.json",
+        "tests/test_inspection.py",
+        "docs/INSPECTION_KO.md"
+      ],
+      "limitations": [
+        "선언한 용접부·좌표 변환과 위치 gate로 일대일 후보·미대응·국소 모호성을 계산한다. 비용은 대응 확률이 아니다.",
+        "실제 자료에는 검토된 정합·시각·계측 오차가 없어 성장 계산을 보류한다. 분할/병합·검출성·위치가 이동하는 최대 깊이의 전문 모델은 후속 과제다."
+      ],
+      "next_step": "PI-X04 계약의 좌표 교정·검출성·계측 편향·독립 대응 정답과 실제 성장 검증"
+    },
+    {
+      "id": "integrity.inspection_selection",
+      "title_ko": "검사 위치·방법·주기 최적화",
+      "category": "integrity",
+      "state": "partial",
+      "owner": "matintegrity/integration",
+      "entrypoint": "pipeline_integrity.inspection_planning.plan_inspections",
+      "evidence": [
+        "research/inspection_planning_results.json",
+        "docs/INSPECTION_PLANNING_KO.md",
+        "tests/test_inspection_planning.py"
+      ],
+      "limitations": [
+        "위치별 한 검사 또는 미선택을 유한 방법·예약 메뉴에서 선택하고 자원·예산·올림 오차를 기록한다.",
+        "장기 적응형 주기, 여러 회차의 의존·성장·수리와 물리 위험 최적화는 미완료다.",
+        "공개 ILI 전체 13개 계획은 needs_data이며 9개 가상 부분 문제를 그 전체의 검증으로 대체하지 않는다."
+      ],
+      "next_step": "원 Mat 검출·성장·수리 계약과 데이터 적합성을 확장하고 여러 회차의 공동 정책을 독립 검증"
+    },
+    {
+      "id": "structural.beam_network",
+      "title_ko": "배관 지지·분기·국부 응력 해석",
+      "category": "structural",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/PyNiteFEA",
+      "entrypoint": "pipeline_integrity.structural.solve_frame",
+      "evidence": [
+        "research/structural_results.json",
+        "tests/test_structural.py",
+        "docs/STRUCTURAL_KO.md",
+        "research/frame_loading_results.json",
+        "tests/test_frame_loading.py",
+        "docs/FRAME_LOADING_KO.md"
+      ],
+      "limitations": [
+        "Explicit straight-segment first-order isotropic elastic frame; transverse shear deformation is omitted.",
+        "Reviewed uniform axial initial strains are recovered into physical member forces. Material-owned uniform thermal strain and isolated straight-cylinder total cap/Poisson effects are supported through prepared contributions.",
+        "Nonuniform temperature/initial curvature, state-dependent stiffness, branch pressure load paths, elbow/local stress, ovalization, buckling, contact/friction, soil, dynamics and independent field qualification remain incomplete."
+      ],
+      "next_step": "Qualified nonuniform thermal/curvature and state-dependent properties; explicit branch pressure load paths; pipe-component flexibility/local stress, nonlinear supports and independent structural observations."
+    },
+    {
+      "id": "structural.soil_pipe",
+      "title_ko": "침하·부력·지반 이동과 관 연성",
+      "category": "structural",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.soil_pipe.evaluate_soil_pipe",
+      "evidence": [
+        "src/pipeline_integrity/soil_pipe.py",
+        "tests/test_soil_pipe.py",
+        "docs/SOIL_PIPE_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Bilateral discrete reviewed spring model using the existing frame owner only; numerical/native tests deferred to Nurion. Unilateral, contact, nonlinear soil and coupled deformation remain unsupported."
+      ],
+      "next_step": "Run pending native equilibrium/reaction cases on Nurion and implement guide-specific owner extension requests before qualification."
+    },
+    {
+      "id": "structural.buckling",
+      "title_ko": "좌굴·붕괴·타원화",
+      "category": "structural",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.buckling.evaluate_buckling",
+      "evidence": [
+        "src/pipeline_integrity/buckling.py",
+        "tests/test_buckling.py",
+        "docs/BUCKLING_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Scoped native adapter and written tests only; numerical/native execution deferred to Nurion. Broad-model qualification remains incomplete; see dedicated guide."
+      ],
+      "next_step": "Run pending native, limiting-case and conservation/eigen-residual tests on Nurion; implement documented owner extensions before broader qualification."
+    },
+    {
+      "id": "structural.fracture_arrest",
+      "title_ko": "연성 파괴 진행과 정지",
+      "category": "structural",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.fracture_arrest.assess_fracture_arrest",
+      "evidence": [
+        "src/pipeline_integrity/fracture_arrest.py",
+        "tests/test_fracture_arrest.py",
+        "docs/FRACTURE_ARREST_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Scoped implementation and tests written with numerical/native execution deferred to Nurion; supplier conditions and unsupported physics remain explicit. No independent field qualification."
+      ],
+      "next_step": "Execute the pending tests on Nurion and implement the dedicated guide owner-extension requests; do not expand sample/laminar comparisons into whole-model qualification."
+    },
+    {
+      "id": "risk.spatial",
+      "title_ko": "공간 노출·개인·사회적 위험 지도",
+      "category": "risk",
+      "state": "interface_verified",
+      "owner": "PRISM/human-reliability-toolkit/integration",
+      "entrypoint": "pipeline_integrity.spatial_risk.evaluate_spatial_risk",
+      "evidence": [
+        "research/spatial_risk_results.json",
+        "tests/test_spatial_risk.py",
+        "docs/SPATIAL_RISK_KO.md"
+      ],
+      "limitations": [
+        "Actual owner annual-risk and integer-PMF event-tree/F-N calls on reviewed disjoint integer-population local ENU representative rectangular cells; fixed/present-person/expected-death meanings remain separate.",
+        "A full reviewed joint per-cell casualty count law is required for integer F-N; expected-death threshold curves are separately named. Unknown/outside/withheld sources remain unresolved.",
+        "Retained source request/facility/context/digests and actual thermal/branch primitive mathematics are reconstructed with owner APIs; full geometry/dispersion/fire replay and independent physical qualification are not claimed.",
+        "No automatic general GIS/CRS/raster projection, fractional modeled-population rounding, continuous contours or full-facility risk qualification."
+      ],
+      "next_step": "Qualified public population/CRS/height/time and uncertainty mapping; owner-shared complete consequence receipt validation and independent physical exposure evidence (PI-X02/03/06)."
+    },
+    {
+      "id": "risk.common_cause",
+      "title_ko": "공통 원인과 조건부 의존성",
+      "category": "risk",
+      "state": "partial",
+      "owner": "human-reliability-toolkit/integration",
+      "entrypoint": "pipeline_integrity.risk_exchange.HRARiskClient.fault_tree",
+      "evidence": [
+        "docs/RISK_EXCHANGE_KO.md",
+        "research/risk_exchange_results.json",
+        "docs/EXTENSION_REQUESTS_KO.md",
+        "docs/PERIOD_RISK_KO.md",
+        "research/period_risk_results.json",
+        "tests/test_period_risk.py"
+      ],
+      "limitations": [
+        "사용자가 선언한 공동 상태 전달과 주변확률·의존 그룹 검사를 확인했다. 공통 원인 모수 추정·동적 의존성·실제 정량 근거는 남아 있다.",
+        "공통 기간의 정적 Boolean/공동 상태와 원 시편 수명 기반의 선언 시나리오를 연결했다. 관측 공동 의존성·모수 불확실성·생존 조건 추정·시간 순서/수리는 미검증이다."
+      ],
+      "next_step": "Run the joint-count adapter regressions on Nurion; obtain reviewed grouped common-cause observations and extend parameter uncertainty, censoring/time dependence and repair in the owner risk engine rather than fitting them in this adapter."
+    },
+    {
+      "id": "risk.dynamic_coupling",
+      "title_ko": "동적 사건과 경계조건 피드백",
+      "category": "risk",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.response_trace.trace_response",
+      "evidence": [
+        "docs/RESPONSE_TRACE_KO.md",
+        "research/response_trace_results.json",
+        "tests/test_response_trace.py",
+        "docs/EXTENSION_REQUESTS_KO.md"
+      ],
+      "limitations": [
+        "Deterministic alarm/cue/command/target/sample-endpoint chronology is bound to native owner receipts.",
+        "Full stochastic process deadlines, timed recovery, competing failures and dynamic accident risk remain unimplemented."
+      ],
+      "next_step": "Use PI-X06/03/01 contracts for joint timing, process endpoints and independent physical validation."
+    },
+    {
+      "id": "economics.optimization",
+      "title_ko": "수송·압축·에너지·투자 최적화",
+      "category": "economics",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.operating_optimization.optimize_operating_plans",
+      "evidence": [
+        "src/pipeline_integrity/operating_optimization.py",
+        "tests/test_operating_optimization.py",
+        "docs/OPERATING_OPTIMIZATION_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Implementation and tests written; numerical/native execution deferred to Nurion. Scope and unsupported engineering features are recorded in the dedicated guide; no field qualification."
+      ],
+      "next_step": "Execute pending native/provider cases on Nurion and address the guide-specific owner extension requests before qualification."
+    },
+    {
+      "id": "economics.lifecycle",
+      "title_ko": "정비·교체·수명주기 비용과 배출",
+      "category": "economics",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit",
+      "entrypoint": "pipeline_integrity.lifecycle.evaluate_lifecycle",
+      "evidence": [
+        "research/lifecycle_results.json",
+        "tests/test_lifecycle.py",
+        "docs/LIFECYCLE_KO.md"
+      ],
+      "limitations": [
+        "Declared-equivalent service, horizon, currency/base-year and constant/nominal basis; unknown amounts or unreviewed inventories are withheld.",
+        "Uses existing cashflow and energy primitives; cost and undiscounted declared CO2e inventories are separate. No automatic taxes, FX, market rates, service-life prediction or full multi-impact LCA.",
+        "Power coverage, planned-operation tariffs and risk expected-count loss mappings preserve source scope. Real tariffs, duty, loss partitions and independent field economic validation require separate evidence."
+      ],
+      "next_step": "Acquire project-specific cost/duty/service/emission evidence; joint uncertainty scenarios, observed work and explicit risk-loss partitions; retain source qualification."
+    },
+    {
+      "id": "construction.route",
+      "title_ko": "경로·횡단·토공 대안 최적화",
+      "category": "construction",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.route_planning.evaluate_routes",
+      "evidence": [
+        "src/pipeline_integrity/route_planning.py",
+        "tests/test_route_planning.py",
+        "docs/ROUTE_PLANNING_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Finite reviewed candidates only; implementation written with numerical execution deferred to Nurion. No global or field qualification."
+      ],
+      "next_step": "Execute pending numerical and native-provider tests on Nurion, then extend the documented unresolved engineering scope."
+    },
+    {
+      "id": "construction.pull",
+      "title_ko": "관 인입·수평 시추의 힘과 곡률",
+      "category": "construction",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.pulling.evaluate_pulling",
+      "evidence": [
+        "src/pipeline_integrity/pulling.py",
+        "tests/test_pulling.py",
+        "docs/PULLING_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Implementation written; numerical tests and owner execution deferred to Nurion by user instruction. Static checks do not establish validation."
+      ],
+      "next_step": "Run the written tests on Nurion and review native owner results and engineering scope before qualification."
+    },
+    {
+      "id": "construction.lifting",
+      "title_ko": "인양·로프·앵커의 공급자 기반 하중 검토",
+      "category": "construction",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit/NumPy",
+      "entrypoint": "pipeline_integrity.lifting.evaluate_lifting",
+      "evidence": [
+        "research/lifting_results.json",
+        "tests/test_lifting.py",
+        "docs/LIFTING_KO.md"
+      ],
+      "limitations": [
+        "Unique tensile forces at a caller-reviewed fixed rigid pose and effective supplier force limits; no vendor tables or standard approval are embedded.",
+        "Shared attachment/anchor vector resultants and directional limits are explicit. Nonunique stiffness/pretension sharing, pose/stability/contact, dynamic lifting and local hardware/soil strength remain outside this static load-review service."
+      ],
+      "next_step": "Obtain actual reviewed supplier envelopes and full free-body/geometry evidence; extend original structural owners for cable compatibility, slack contact, dynamics and independent field qualification."
+    },
+    {
+      "id": "tanks.inventory",
+      "title_ko": "탱크 액위·체적·재고 교환",
+      "category": "tanks",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.tanks.evaluate_tank_inventory",
+      "evidence": [
+        "research/tank_inventory_results.json",
+        "docs/TANK_INVENTORY_KO.md",
+        "tests/test_tanks.py",
+        "tests/test_tank_data.py"
+      ],
+      "limitations": [
+        "명시한 내부 형상/단조 보정표의 액위·체적과 균일 상 밀도에 대한 정적 재고다.",
+        "정수압 분포·평형·층상 열전달·비등·유량·시간 동역학과 규격/현장 교정을 풀지 않는다.",
+        "공개 탱크 자료는 단위·영점·형상·밀도 근거가 미해결이며 실제 물리 재고 검증은 보류다."
+      ],
+      "next_step": "PI-X01의 범용 geometry·DPT·재고/열 경로와 실제 설비의 형상·단위·유량·물성 근거 연계 확장"
+    },
+    {
+      "id": "tanks.breathing",
+      "title_ko": "탱크 호흡·압력·증발손실",
+      "category": "tanks",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.tank_breathing.evaluate_tank_breathing",
+      "evidence": [
+        "src/pipeline_integrity/tank_breathing.py",
+        "tests/test_tank_breathing.py",
+        "docs/TANK_BREATHING_KO.md"
+      ],
+      "limitations": [
+        "계획 항목이며 이 목록만으로 실행 가능한 계산 엔진을 제공하지 않는다.",
+        "Implementation written; numerical tests and owner execution deferred to Nurion by user instruction. Static checks do not establish validation."
+      ],
+      "next_step": "Run the written tests on Nurion and review native owner results and engineering scope before qualification."
+    },
+    {
+      "id": "operations.scheduler",
+      "title_ko": "이송·정비·검사 자원 일정",
+      "category": "operations",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit/OR-Tools",
+      "entrypoint": "pipeline_integrity.scheduling.solve_schedule",
+      "evidence": [
+        "research/scheduling_results.json",
+        "docs/SCHEDULING_KO.md"
+      ],
+      "limitations": [
+        "명시한 정수 시간 격자·유한 기간·비선점 작업의 모드·자원·달력·자원 유지·소모품·시간 관계와 선언 비용을 최적화한다.",
+        "불확실 작업 시간·실제 운영 제어·작업 허가·현장 일정 검증은 아니다. 해 가능성과 최적성 증명을 구분한다."
+      ],
+      "next_step": "검토된 현장 시간·역할 자격·자원 달력과 변동성/실시간 실행의 연동 확대"
+    },
+    {
+      "id": "control.regulation",
+      "title_ko": "압력·유량·온도 제어와 기능 의존",
+      "category": "control",
+      "state": "partial",
+      "owner": "lh2dt_models/integration",
+      "entrypoint": "pipeline_integrity.control_exchange.PIDSession",
+      "evidence": [
+        "research/control_exchange_results.json",
+        "tests/test_control_exchange.py",
+        "docs/CONTROL_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "원 PID의 SI 이득·압력/영점·시계·결측·상태 인수인계와 탱크 압력/온도·유한 구동 밸브 유량의 실제 폐루프 기준을 실행했다.",
+        "자동 PID와 명시한 합성 경계에 한정된다. 수동/자동 전환·실제 구동 추종 적분 보정·인터록·기능 의존성과 전 운전영역/현장 검증은 미완료다.",
+        "온도 기준은 120초에서 약 +0.916K 오차가 남았다. 공개 실험의 800개 shadow 명령을 실제 제어 성능으로 집계하지 않는다."
+      ],
+      "next_step": "PI-X01/06의 모드·명령/실제 위치·방호 우선순위·기한 근거와 폐루프 성능 기준을 소유 엔진에서 확대"
+    },
+    {
+      "id": "uncertainty.coupled",
+      "title_ko": "물성·결함·사람·결과의 공동 불확실성",
+      "category": "uncertainty",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.uncertainty.evaluate_ensemble",
+      "evidence": [
+        "src/pipeline_integrity/uncertainty.py",
+        "tests/test_uncertainty.py",
+        "docs/UNCERTAINTY_KO.md",
+        "research/uncertainty_methods.json",
+        "research/uncertainty_results.json",
+        "src/pipeline_integrity/uncertainty_fit.py",
+        "tests/test_uncertainty_fit.py",
+        "docs/UNCERTAINTY_FIT_KO.md",
+        "research/uncertainty_fit_results.json"
+      ],
+      "limitations": [
+        "공유 표본·원 행 짝·잠재 정규 copula·여섯 주변분포와 미계산 비중을 구현했다. 실제 펌프/HRA/에너지/생애주기 512표본·독립 기준8192표본·공개 전력23964/유량2400표본을 확인했다.",
+        "학습 행만으로 normal/lognormal 및 normal-score 상관을 적합하고 별도 원 순서 구간의 공동 점수/포함률을 평가했다. 원 유압2205회차·128학습/64평가·1024적합 표본의 비용 연결을 확인했다. 실제 정상성·독립성·시간 의존·중첩 추론·모수 불확실성·희귀사건·재료/전체 결과·현장 검증은 미완료다."
+      ],
+      "next_step": "새 독립/운전모드별 자료와 시간/모수 불확실성·꼬리/공통원인·재료 결함/전체 결과 연성 검증; PI-X02/04/05/06의 원 그룹·적합/평가 분할·지원 범위 계약 확장"
+    },
+    {
+      "id": "design.specification",
+      "title_ko": "설계 조건·유체·운전 모드와 검토 기준",
+      "category": "design",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "design.material_selection",
+      "title_ko": "재료·압력 등급·제품 규격 검토",
+      "category": "design",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "design.wall_allowance",
+      "title_ko": "허용응력·제조 공차·부식 여유 검토",
+      "category": "design",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "design.layout",
+      "title_ko": "레이아웃·차단 구획·정비 접근성",
+      "category": "design",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "construction.survey",
+      "title_ko": "측량·위치·지형·매설 이력",
+      "category": "construction",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "construction.excavation",
+      "title_ko": "굴착·토사·지하 매설물 확인",
+      "category": "construction",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "construction.crossing",
+      "title_ko": "도로·하천·특수 횡단 검토",
+      "category": "construction",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "construction.lowering",
+      "title_ko": "관 내리기·지지·복토·손상 확인",
+      "category": "construction",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "welding.qualification",
+      "title_ko": "절차·작업자 자격·추적성",
+      "category": "welding",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "welding.joint_acceptance",
+      "title_ko": "접합 품질과 판정 근거",
+      "category": "welding",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "inspection.ndt_plan",
+      "title_ko": "비파괴 검사 방법·범위·검출성 검토",
+      "category": "inspection",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "inspection.ili_plan",
+      "title_ko": "지능형 피깅 적합성·운전·검사 품질",
+      "category": "inspection",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "inspection.test_boundary",
+      "title_ko": "수압·기밀 시험 경계·에너지·복구",
+      "category": "inspection",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "inspection.calibration",
+      "title_ko": "계측 교정·표준기·불확실도 추적",
+      "category": "inspection",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "protection.coating_acceptance",
+      "title_ko": "도장·코팅 시공과 결함 검사",
+      "category": "protection",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "protection.cathodic_survey",
+      "title_ko": "방식 전위 측정과 간섭 검토",
+      "category": "protection",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "maintenance.isolation",
+      "title_ko": "격리·블라인드·잠금·잔압 확인",
+      "category": "maintenance",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "maintenance.repair_selection",
+      "title_ko": "슬리브·클램프·교체 등 수리 선정",
+      "category": "maintenance",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "maintenance.hotwork",
+      "title_ko": "고온 작업·천공·라인 스톱의 승인 절차",
+      "category": "maintenance",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "operations.commissioning",
+      "title_ko": "세정·건조·퍼지·시운전·재가동",
+      "category": "operations",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "operations.valve_alignment",
+      "title_ko": "밸브 정렬·유동 경로·독립 확인",
+      "category": "operations",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "operations.pigging",
+      "title_ko": "피그 투입·회수·추적·비상 대응",
+      "category": "operations",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "operations.product_quality",
+      "title_ko": "제품 분리·시료·오염과 품질 기록",
+      "category": "operations",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "operations.control_room",
+      "title_ko": "제어실·인수인계·경보 대응 절차",
+      "category": "operations",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "emergency.response",
+      "title_ko": "누설 인지·진단·격리·대피·복구",
+      "category": "emergency",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "safety.excavation_lifting",
+      "title_ko": "굴착·인양·밀폐공간 작업 검토",
+      "category": "safety",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "safety.electrical",
+      "title_ko": "전원·접지·방폭·기능 의존",
+      "category": "safety",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "records.asset_lineage",
+      "title_ko": "재료·용접·검사·변경 이력",
+      "category": "records",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "records.requirement_edition",
+      "title_ko": "적용 규격 판·조항·검토자 추적",
+      "category": "records",
+      "state": "procedure_required",
+      "owner": "site_procedure_provider",
+      "entrypoint": "pipeline_integrity.procedures.assess_procedure",
+      "evidence": [
+        "docs/API_KO.md"
+      ],
+      "limitations": [
+        "현장별 절차·승인·검사 근거를 사용자가 공급한다. 범용 기록 도구는 해당 공법의 안전성·적법성을 계산하지 않는다."
+      ],
+      "next_step": "사용자가 권한을 가진 기준·절차를 ProcedureItem으로 선언하고 증거를 연결"
+    },
+    {
+      "id": "exchange.hydrogen_state",
+      "title_ko": "수소 장치의 실제 P/h 상태 교환",
+      "category": "exchange",
+      "state": "interface_verified",
+      "owner": "lh2dt_models",
+      "entrypoint": "pipeline_integrity.adapters.lh2dt_state",
+      "evidence": [
+        "research/physics_integration_results.json",
+        "tests/test_physics_exchange.py"
+      ],
+      "limitations": [
+        "동일 유체·물성 기준·온도·상 일치를 확인한 실제 상태 교환. 장치 전체 동역학 검증은 아니다."
+      ],
+      "next_step": "공통 시계·재고·포트 경계로 실제 장치 시나리오 확대"
+    },
+    {
+      "id": "exchange.prism_port",
+      "title_ko": "PRISM 장치 포트 계약 교환",
+      "category": "exchange",
+      "state": "interface_verified",
+      "owner": "PRISM",
+      "entrypoint": "pipeline_integrity.adapters.prism_port_state",
+      "evidence": [
+        "research/physics_integration_results.json",
+        "tests/test_physics_exchange.py"
+      ],
+      "limitations": [
+        "현재 수소·파라수소의 액체/기체/2상 포트 형식에 한정. 확산·피해·빈도 계산을 실행하지 않았다.",
+        "대상 스키마의 시계·물성 기준은 별도 교환 봉투에 보존한다."
+      ],
+      "next_step": "소유 엔진의 시계·물성·해제 이력 계약과 연결"
+    },
+    {
+      "id": "materials_engine.transport.hydrogen_slab_kinetic",
+      "title_ko": "transport.hydrogen_slab_kinetic",
+      "category": "hydrogen",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.hydrogen_transport.evaluate_hydrogen_transport(request, context)",
+      "evidence": [
+        "research/ili_application.json",
+        "docs/INTEGRATION_KO.md",
+        "research/hydrogen_transport_results.json",
+        "scripts/check_hydrogen_transport.py",
+        "docs/HYDROGEN_TRANSPORT_KO.md",
+        "tests/test_hydrogen_transport.py"
+      ],
+      "limitations": [
+        "현재 소유 레지스트리의 모델 검색에서 새 ID를 확인했다. 이 모델의 실제 수치 호출·적용 범위·독립 검증은 별도 과제다.",
+        "고정 원 엔진의 실제 인터페이스·작성 수치 기준 확인이다. 물리·재료·시편·조건·근거 검토와 독립 현장 검증은 별도다."
+      ],
+      "next_step": "가이드의 적용 지원·물리량·원 관측과 모집단/기간 의미를 유지한 독립 자료 검증 및 수신 계약 확장"
+    },
+    {
+      "id": "network.calibration",
+      "title_ko": "경계가 있는 물리 모델 파라미터 보정과 시간 분리 검증",
+      "category": "network",
+      "state": "implemented",
+      "owner": "pipeline-integrity-toolkit/integration",
+      "entrypoint": "pipeline_integrity.inverse:fit_parameters",
+      "evidence": [
+        "docs/CALIBRATION_KO.md",
+        "tests/test_inverse.py",
+        "research/calibration_results.json"
+      ],
+      "limitations": [
+        "경계가 있는 국소 최소제곱과 시간 분리 비교. 전역 유일성·확률분포·누설 위치 정답 또는 독립 현장 검증은 제공하지 않는다.",
+        "공개 자료의 고정 수요/거칠기 두 배율은 학습 오차가 감소했으나 다음 날 오차가 증가했다. 원본 모델에 자동 적용하지 않는다."
+      ],
+      "next_step": "독립 평가 구간을 분리하고 수요·경계의 시간 변화와 모델 형태 차이를 검토; 누설 후보 검색 및 불확실성은 별도 범위"
+    },
+    {
+      "id": "materials_engine.thermal.transient_conduction_1d",
+      "title_ko": "평판·원통 반경의 1D 과도 고체 열전도",
+      "category": "thermal",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 유한체적 엔진과 에너지·평판/반경·조건 누락/물성 범위·SignalFrame 연결을 확인했다.",
+        "무열입력 단열 기준은 절대 잔차가 약4.6e-10J지만 원 상대 잔차1로 out_of_scope다. 원 상태를 유지하며 PI-X04에 절대+상대 에너지 판정을 요청했다.",
+        "평면 셀 평균을 원통 열응력의 점 프로필로 바꾸지 않는다. 토양 수분/지표 경계·완전한 매설관 연성은 별도다."
+      ],
+      "next_step": "PI-X04의 기하/투영·열 에너지 절대/상대 허용값·현장 근거와 독립 검증 확대"
+    },
+    {
+      "id": "materials_engine.mechanics.through_wall_thermal_stress",
+      "title_ko": "검토한 평면 두께 프로필의 탄성 열응력",
+      "category": "mechanics",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.material_exchange.evaluate_material_job",
+      "evidence": [
+        "research/material_sections_results.json",
+        "tests/test_material_exchange.py",
+        "docs/MATERIAL_SECTIONS_KO.md"
+      ],
+      "limitations": [
+        "원 평면 단면의 자유/구속·검토 누락·탄성 한계와 결과 계약을 실제 확인했다.",
+        "단축 또는 등2축 평면 응력 모델이다. 원통 반경 열응력·압력/소성/크리프·FVM 셀 평균의 자동 점 변환을 포함하지 않는다."
+      ],
+      "next_step": "PI-X04의 기하/투영·열 에너지 절대/상대 허용값·현장 근거와 독립 검증 확대"
+    },
+    {
+      "id": "materials_engine.structural.failure_assessment_points",
+      "title_ko": "사용자 경계에 대한 파괴평가 좌표와 결과",
+      "category": "structural",
+      "state": "interface_verified",
+      "owner": "matintegrity",
+      "entrypoint": "pipeline_integrity.fracture_exchange.assess_failure_points",
+      "evidence": [
+        "research/fracture_exchange_results.json",
+        "tests/test_fracture_exchange.py",
+        "docs/FRACTURE_EXCHANGE_KO.md"
+      ],
+      "limitations": [
+        "원 중첩 계약을 strict JSON으로 전달해 inside/above/outside-support/미검토를 실제 확인했다.",
+        "규격 곡선·cutoff·계수표를 포함하지 않는다. 사용자 허가 경계의 만족은 규격/현장 승인이나 실패 확률이 아니다.",
+        "K 해·reference stress 해·인성/강도의 정의·물리 위치·하중/재료 상태·출처와 적용성 검토가 필요하다."
+      ],
+      "next_step": "PI-X04의 자격 있는 해/인성/경계와 실제 구성품 독립 검증 확대"
+    },
+    {
+      "id": "hra.collection_risk_binding",
+      "title_ko": "HRA 기회수집 추정과 위험 입력의 증거 연동",
+      "category": "hra",
+      "state": "partial",
+      "owner": "pipeline-integrity-toolkit/human-reliability-toolkit",
+      "entrypoint": "pipeline_integrity.human_collection_exchange.bind_human_collection_estimate",
+      "evidence": [
+        "src/pipeline_integrity/human_collection_exchange.py",
+        "tests/test_human_collection_exchange.py",
+        "docs/HUMAN_COLLECTION_EXCHANGE_KO.md",
+        "research/external_source_versions.json"
+      ],
+      "limitations": [
+        "Pinned HRA 0.5.0 CollectionBundle source is required; seven synthetic regression cases are authored but unexecuted.",
+        "The handoff status remains research even when the owner marks a natural-field collection empirical; industrial HEP qualification and field transfer are not established."
+      ],
+      "next_step": "Execute targeted owner-source and adapter replay cases on Nurion, then qualify supported protocol/event mappings with source-reviewed opportunity data."
+    }
+  ]
+}

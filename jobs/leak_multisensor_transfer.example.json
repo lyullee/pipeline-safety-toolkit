@@ -1,0 +1,23 @@
+{
+  "schema": "pipeline_integrity.hpc_data_transfer.v1",
+  "inventory_digest": "9ecb1bd969c3cfc00ddc46fa119186d66715755780e7afdbd51b531a4bc32ec4",
+  "datasets": [
+    {
+      "id": "leak_multisensor_transients",
+      "license_id": "CC-BY-4.0",
+      "rights_review": "reviewed_license",
+      "citation": "Aghashahi, Mohsen; Sela, Lina; Banks, M. Katherine (2022), Dataset of Leak Simulations in Experimental Testbed Water Network, Mendeley Data V1, doi:10.17632/xw44wv2g88.1",
+      "raw_in_code_release": false
+    }
+  ],
+  "files": [
+    {
+      "dataset_id": "leak_multisensor_transients",
+      "path": "leak_multisensor_transients/Dataset of Leak Simulations in Experimental Testbed Water Network.7z",
+      "bytes": 717637500,
+      "sha256": "c6d4a68901a145155a58ccb691769753cb7c0960416a375acac12128bedfd881"
+    }
+  ],
+  "total_bytes": 717637500,
+  "plan_digest": "b48f8f623e3d5e8facebded316ccb343bb70a4b9ee1f68668fb054609fe55666"
+}

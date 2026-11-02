@@ -1,0 +1,723 @@
+{
+  "schema_version": "pipeline_integrity.soil_source_review.v1",
+  "status": "measured_source_readers_verified_model_mapping_needs_data",
+  "acquired_groups": 2,
+  "acquired_files": 7,
+  "acquired_bytes": 7822891,
+  "assets": [
+    {
+      "dataset_id": "soil_hydrothermal_covers",
+      "filename": "Climate data of experiment.xlsx",
+      "bytes": 129316,
+      "sha256": "81d58641e8f2fb55b2ca07581997a73599a486467eda58f7b93bb2894901a3c9",
+      "expected_checksum": "md5:f5d7effb892aed2dadf86d9d0d884c75",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Wu, Bing; Zhu, Hong-Hu (2025), Soil hydrothermal dynamics under varying surface covers, Zenodo, doi:10.5281/zenodo.16415302",
+      "creators": [
+        "Wu, Bing",
+        "Zhu, Hong-Hu"
+      ],
+      "version": "record 16415302; first published version, API version label absent",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.16415302",
+      "source_url": "https://zenodo.org/api/records/16415302/files/Climate%20data%20of%20experiment.xlsx/content",
+      "dataset_origin": "laboratory_experiment"
+    },
+    {
+      "dataset_id": "soil_hydrothermal_covers",
+      "filename": "Soil temperature.xlsx",
+      "bytes": 71885,
+      "sha256": "430b1810813e84e75ea89f4e8b21e20794bb8c85c812c16ed6ce3e3ac3622593",
+      "expected_checksum": "md5:f5e24ddcd843ed4d6bf6fa1a4e169152",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Wu, Bing; Zhu, Hong-Hu (2025), Soil hydrothermal dynamics under varying surface covers, Zenodo, doi:10.5281/zenodo.16415302",
+      "creators": [
+        "Wu, Bing",
+        "Zhu, Hong-Hu"
+      ],
+      "version": "record 16415302; first published version, API version label absent",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.16415302",
+      "source_url": "https://zenodo.org/api/records/16415302/files/Soil%20temperature.xlsx/content",
+      "dataset_origin": "laboratory_experiment"
+    },
+    {
+      "dataset_id": "soil_hydrothermal_covers",
+      "filename": "Water content.xlsx",
+      "bytes": 1518567,
+      "sha256": "c430d8dad95300872db21f9842f9c0474893b900670821efc61e44244ad5f457",
+      "expected_checksum": "md5:f45ea931c0459fadc6494a51e70b48d0",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Wu, Bing; Zhu, Hong-Hu (2025), Soil hydrothermal dynamics under varying surface covers, Zenodo, doi:10.5281/zenodo.16415302",
+      "creators": [
+        "Wu, Bing",
+        "Zhu, Hong-Hu"
+      ],
+      "version": "record 16415302; first published version, API version label absent",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.16415302",
+      "source_url": "https://zenodo.org/records/16415302/files/Water%20content.xlsx?download=1",
+      "dataset_origin": "laboratory_experiment"
+    },
+    {
+      "dataset_id": "soil_hydrothermal_covers",
+      "filename": "Suction.xlsx",
+      "bytes": 4044309,
+      "sha256": "7b565221b15049365cac2f1da9f436462983107471498e1120aabb0c01d9c8ef",
+      "expected_checksum": "md5:aade3b073fe8d83c43accdcfafa735c9",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Wu, Bing; Zhu, Hong-Hu (2025), Soil hydrothermal dynamics under varying surface covers, Zenodo, doi:10.5281/zenodo.16415302",
+      "creators": [
+        "Wu, Bing",
+        "Zhu, Hong-Hu"
+      ],
+      "version": "record 16415302; first published version, API version label absent",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.16415302",
+      "source_url": "https://zenodo.org/records/16415302/files/Suction.xlsx?download=1",
+      "dataset_origin": "laboratory_experiment"
+    },
+    {
+      "dataset_id": "soil_borehole_heating",
+      "filename": "estimation_data.mat",
+      "bytes": 2047895,
+      "sha256": "f9bc3543abfe43c735aed037a875077388f1c43c87f13d425d9eada56c726ce3",
+      "expected_checksum": "md5:90804a48b444e1912ec52f31b0ba895f",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Bo Zhang; Kai Gu; Peter Bayer; Haibo Qi; Bin Shi; Baojun Wang; Yuehua Jiang; Quanping Zhou (2022), Estimation of groundwater flow rate by an actively heated fiber optics based thermal response test in a grouted borehole, Zenodo, doi:10.5281/zenodo.6480800",
+      "creators": [
+        "Bo Zhang",
+        "Kai Gu",
+        "Peter Bayer",
+        "Haibo Qi",
+        "Bin Shi",
+        "Baojun Wang",
+        "Yuehua Jiang",
+        "Quanping Zhou"
+      ],
+      "version": "1.0",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6480800",
+      "source_url": "https://zenodo.org/records/6480800/files/estimation_data.mat?download=1",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "soil_borehole_heating",
+      "filename": "data_process.mlx",
+      "bytes": 6359,
+      "sha256": "80e4159466193ac1b3257ce1a581a8d2ab671741c543924fd4a8545a1fa3dabc",
+      "expected_checksum": "md5:a8ac3c1bdf4d66c3abc4736e34533a2b",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Bo Zhang; Kai Gu; Peter Bayer; Haibo Qi; Bin Shi; Baojun Wang; Yuehua Jiang; Quanping Zhou (2022), Estimation of groundwater flow rate by an actively heated fiber optics based thermal response test in a grouted borehole, Zenodo, doi:10.5281/zenodo.6480800",
+      "creators": [
+        "Bo Zhang",
+        "Kai Gu",
+        "Peter Bayer",
+        "Haibo Qi",
+        "Bin Shi",
+        "Baojun Wang",
+        "Yuehua Jiang",
+        "Quanping Zhou"
+      ],
+      "version": "1.0",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6480800",
+      "source_url": "https://zenodo.org/api/records/6480800/files/data_process.mlx/content",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "soil_borehole_heating",
+      "filename": "estimation_process.mlx",
+      "bytes": 4560,
+      "sha256": "b600c5a32b2da745fd8218e0f0fd0558c6bb27a7a5d7b8a81da557d9de744ec1",
+      "expected_checksum": "md5:481247a78e5f0fd7dc84e4c94f304c32",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Bo Zhang; Kai Gu; Peter Bayer; Haibo Qi; Bin Shi; Baojun Wang; Yuehua Jiang; Quanping Zhou (2022), Estimation of groundwater flow rate by an actively heated fiber optics based thermal response test in a grouted borehole, Zenodo, doi:10.5281/zenodo.6480800",
+      "creators": [
+        "Bo Zhang",
+        "Kai Gu",
+        "Peter Bayer",
+        "Haibo Qi",
+        "Bin Shi",
+        "Baojun Wang",
+        "Yuehua Jiang",
+        "Quanping Zhou"
+      ],
+      "version": "1.0",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.6480800",
+      "source_url": "https://zenodo.org/api/records/6480800/files/estimation_process.mlx/content",
+      "dataset_origin": "mixed_compilation"
+    }
+  ],
+  "cover_workbooks": {
+    "Climate data of experiment.xlsx": {
+      "origin": "laboratory",
+      "record_digest": "f66c8563fc5dc2e369daba3f4cceb0c0282d8f7142d42e81cd9e1883c9fdfa8e",
+      "worksheet_extents": {
+        "Air temperature": [
+          259,
+          13
+        ],
+        "Rainfall": [
+          3985,
+          11
+        ]
+      },
+      "diagnostics": {
+        "Air temperature": {
+          "clock": {
+            "observations": 257,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 86400.0,
+            "maximum_adjacent_interval_s": 86400.0,
+            "first": "2021-11-19T00:00:00",
+            "last": "2022-08-02T00:00:00",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 0
+          },
+          "source_clock_column": 4,
+          "source_temperature_unit": null,
+          "second_source_clock_column": 5,
+          "second_source_clock": {
+            "observations": 257,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 86246.91,
+            "maximum_adjacent_interval_s": 87661.305,
+            "first": "2021-11-19T00:14:24.045000",
+            "last": "2022-08-02T00:30:26.085000",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 0
+          },
+          "statistic": "daily_air_mean_maximum_minimum_not_soil_surface_temperature"
+        },
+        "Rainfall": {
+          "clock": {
+            "observations": 3984,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 3450.675,
+            "maximum_adjacent_interval_s": 4862.685,
+            "first": "2021-11-19T00:14:24.045000",
+            "last": "2022-05-03T23:30:15.285000",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 0
+          },
+          "source_clock_column": 4,
+          "source_temperature_unit": null,
+          "rain_depth_unit": "mm",
+          "formula_count": 166
+        }
+      },
+      "applicability": {
+        "transient_pipeline_validation": "needs_data",
+        "thermal_property_calibration": "needs_data",
+        "instantaneous_soil_temperature_reconstructed": false,
+        "pipe_geometry": null,
+        "conductivity_W_m_K": null,
+        "volumetric_heat_capacity_J_m3_K": null,
+        "clock_timezone": null
+      }
+    },
+    "Soil temperature.xlsx": {
+      "origin": "laboratory",
+      "record_digest": "0edc7e56b9f36224633f336d8969226ddf241b8a6e4b797d920035531dfab4af",
+      "worksheet_extents": {
+        "B": [
+          285,
+          19
+        ],
+        "T": [
+          172,
+          18
+        ],
+        "S": [
+          278,
+          18
+        ]
+      },
+      "diagnostics": {
+        "B": {
+          "statistic": "daily_maximum_minimum_and_range_not_instantaneous",
+          "clock": {
+            "observations": 274,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 86400.0,
+            "maximum_adjacent_interval_s": 86400.0,
+            "first": "2021-11-19T00:00:00",
+            "last": "2022-08-19T00:00:00",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 8
+          },
+          "daily_rows": 274,
+          "source_date_column": 2,
+          "source_statistic_columns": {
+            "maximum": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "minimum": [
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "range": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "source_temperature_unit": null,
+          "level_labels": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5"
+          ],
+          "level_depths_m": null,
+          "treatment_code": "B",
+          "treatment_code_mapping": null,
+          "complete_header_aligned_range_comparisons": 957,
+          "unresolved_header_aligned_range_comparisons": 413,
+          "inconsistent_header_aligned_ranges": 0,
+          "maximum_abs_header_aligned_range_residual": 0.0,
+          "header_or_value_positions_repaired": false
+        },
+        "T": {
+          "statistic": "daily_maximum_minimum_and_range_not_instantaneous",
+          "clock": {
+            "observations": 167,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 86400.0,
+            "maximum_adjacent_interval_s": 86400.0,
+            "first": "2021-11-19T00:00:00",
+            "last": "2022-05-04T00:00:00",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 0
+          },
+          "daily_rows": 167,
+          "source_date_column": 1,
+          "source_statistic_columns": {
+            "maximum": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "minimum": [
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "range": [
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "source_temperature_unit": null,
+          "level_labels": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5"
+          ],
+          "level_depths_m": null,
+          "treatment_code": "T",
+          "treatment_code_mapping": null,
+          "complete_header_aligned_range_comparisons": 564,
+          "unresolved_header_aligned_range_comparisons": 271,
+          "inconsistent_header_aligned_ranges": 557,
+          "maximum_abs_header_aligned_range_residual": 4.0099999999999945,
+          "header_or_value_positions_repaired": false
+        },
+        "S": {
+          "statistic": "daily_maximum_minimum_and_range_not_instantaneous",
+          "clock": {
+            "observations": 274,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 86400.0,
+            "maximum_adjacent_interval_s": 86400.0,
+            "first": "2021-11-19T00:00:00",
+            "last": "2022-08-19T00:00:00",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 0
+          },
+          "daily_rows": 274,
+          "source_date_column": 1,
+          "source_statistic_columns": {
+            "maximum": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "minimum": [
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "range": [
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "source_temperature_unit": null,
+          "level_labels": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5"
+          ],
+          "level_depths_m": null,
+          "treatment_code": "S",
+          "treatment_code_mapping": null,
+          "complete_header_aligned_range_comparisons": 957,
+          "unresolved_header_aligned_range_comparisons": 413,
+          "inconsistent_header_aligned_ranges": 0,
+          "maximum_abs_header_aligned_range_residual": 0.0,
+          "header_or_value_positions_repaired": false
+        }
+      },
+      "applicability": {
+        "transient_pipeline_validation": "needs_data",
+        "thermal_property_calibration": "needs_data",
+        "instantaneous_soil_temperature_reconstructed": false,
+        "pipe_geometry": null,
+        "conductivity_W_m_K": null,
+        "volumetric_heat_capacity_J_m3_K": null,
+        "clock_timezone": null
+      }
+    },
+    "Water content.xlsx": {
+      "origin": "laboratory",
+      "record_digest": "419cc77f08830c6c857212e99ab9247ac7c309211ccbc00d05be5581f3b63afe",
+      "worksheet_extents": {
+        "含水率全部": [
+          44590,
+          8
+        ]
+      },
+      "diagnostics": {
+        "含水率全部": {
+          "statistic": "reported_sensor_value",
+          "quantity": "water_content",
+          "clock": {
+            "observations": 24048,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 600.0,
+            "maximum_adjacent_interval_s": 600.0,
+            "first": "2021-11-19T00:00:00",
+            "last": "2022-05-04T23:50:00",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 20541
+          },
+          "numeric_observations": 142620,
+          "missing_or_invalid_observations": 1668,
+          "source_unit": null,
+          "source_depth_labels": [
+            "S-5cm",
+            "T-5cm",
+            "B-5cm",
+            "S-15cm",
+            "T-15cm",
+            "B-15cm"
+          ],
+          "depth_m": [
+            0.05,
+            0.05,
+            0.05,
+            0.15,
+            0.15,
+            0.15
+          ],
+          "depth_direction": "below_surface_as_source_cm_label",
+          "treatment_code_mapping": null,
+          "physical_sensor_ids": null
+        }
+      },
+      "applicability": {
+        "transient_pipeline_validation": "needs_data",
+        "thermal_property_calibration": "needs_data",
+        "instantaneous_soil_temperature_reconstructed": false,
+        "pipe_geometry": null,
+        "conductivity_W_m_K": null,
+        "volumetric_heat_capacity_J_m3_K": null,
+        "clock_timezone": null
+      }
+    },
+    "Suction.xlsx": {
+      "origin": "laboratory",
+      "record_digest": "0ac12146c6e44adb62ca66398a2bbf9632185c247c3875f08c0616296bd38365",
+      "worksheet_extents": {
+        "吸力": [
+          23905,
+          8
+        ]
+      },
+      "diagnostics": {
+        "吸力": {
+          "statistic": "reported_sensor_value",
+          "quantity": "signed_suction",
+          "clock": {
+            "observations": 23904,
+            "unresolved_rows": 0,
+            "repeated_adjacent": 0,
+            "decreasing_adjacent": 0,
+            "minimum_adjacent_interval_s": 600.0,
+            "maximum_adjacent_interval_s": 600.0,
+            "first": "2021-11-19T00:00:00",
+            "last": "2022-05-03T23:50:00",
+            "timezone": null,
+            "utc_assigned": false,
+            "source_order_changed": false,
+            "blank_source_rows": 0
+          },
+          "numeric_observations": 140904,
+          "missing_or_invalid_observations": 2520,
+          "source_unit": null,
+          "source_depth_labels": [
+            "S-5cm",
+            "T-5cm",
+            "B-5cm",
+            "S-15cm",
+            "T-15cm",
+            "B-15cm"
+          ],
+          "depth_m": [
+            0.05,
+            0.05,
+            0.05,
+            0.15,
+            0.15,
+            0.15
+          ],
+          "depth_direction": "below_surface_as_source_cm_label",
+          "treatment_code_mapping": null,
+          "physical_sensor_ids": null
+        }
+      },
+      "applicability": {
+        "transient_pipeline_validation": "needs_data",
+        "thermal_property_calibration": "needs_data",
+        "instantaneous_soil_temperature_reconstructed": false,
+        "pipe_geometry": null,
+        "conductivity_W_m_K": null,
+        "volumetric_heat_capacity_J_m3_K": null,
+        "clock_timezone": null
+      }
+    }
+  },
+  "borehole": {
+    "origin": "measured",
+    "record_digest": "275da3226fec10af1907895b305928389075244c9568462d7ea54c038e59ef26",
+    "storage": {
+      "depth": {
+        "hdf5_shape": [
+          1,
+          315
+        ],
+        "dtype": "float64",
+        "matlab_class": "double"
+      },
+      "temperature": {
+        "hdf5_shape": [
+          1054,
+          315
+        ],
+        "dtype": "float64",
+        "matlab_class": "double"
+      },
+      "time_seconds": {
+        "hdf5_shape": [
+          1054,
+          1
+        ],
+        "dtype": "float64",
+        "matlab_class": "double"
+      }
+    },
+    "observations": {
+      "time_clock": {
+        "observations": 1054,
+        "missing_or_invalid": 0,
+        "repeated_adjacent": 0,
+        "decreasing_adjacent": 0,
+        "adjacent_interval_counts": {
+          "122": 1013,
+          "121": 27,
+          "843": 1,
+          "123": 11,
+          "427": 1
+        },
+        "first": 5.0,
+        "last": 129481.0,
+        "source_order_changed": false
+      },
+      "depth_coordinates": {
+        "observations": 315,
+        "missing_or_invalid": 0,
+        "repeated_adjacent": 0,
+        "decreasing_adjacent": 0,
+        "adjacent_interval_counts": {
+          "0.25399999999999778": 70,
+          "0.25500000000000256": 16,
+          "0.25400000000000489": 130,
+          "0.25499999999999545": 34,
+          "0.25399999999999068": 52,
+          "0.25500000000000966": 12
+        },
+        "first": 0.0,
+        "last": 79.818,
+        "source_order_changed": false
+      },
+      "temperatures": 332010,
+      "finite_temperatures": 332010,
+      "missing_or_invalid_temperatures": 0,
+      "minimum_temperature_degC": 17.392,
+      "maximum_temperature_degC": 42.01572580645161,
+      "temperature_orientation": "time_by_depth"
+    },
+    "source_units": {
+      "time_seconds": "s",
+      "depth": "m",
+      "temperature": "degC"
+    },
+    "coordinate_kind": "vertical_borehole_depth_not_radial_radius",
+    "source_clock_kind": "publisher_processing_elapsed_seconds",
+    "source_calendar_origin": null,
+    "source_timezone": null,
+    "processing": {
+      "supplied_estimation_input": true,
+      "original_full_measurements_acquired": false,
+      "correction_and_thinning_described_by_publisher": true,
+      "exact_trace_specific_preprocessing_lineage_resolved": false,
+      "source_time_rebased_or_resampled": false,
+      "independent_depth_specimens_assumed": false
+    },
+    "applicability": {
+      "radial_soil_pipe_model": "needs_data",
+      "transient_pipeline_validation": "needs_data",
+      "thermal_property_calibration": "needs_data",
+      "pipe_geometry": null,
+      "radial_boundary_location_m": null,
+      "heating_power_W": null,
+      "conductivity_W_m_K": null,
+      "volumetric_heat_capacity_J_m3_K": null,
+      "groundwater_advection": null
+    },
+    "selected_depth_observation_frames": 1054,
+    "selected_depth_m": 0.0,
+    "first_frame_time_s": 5.0,
+    "last_frame_time_s": 129481.0,
+    "frame_origin": "measured"
+  },
+  "checks": {
+    "Climate data of experiment.xlsx:receipt": true,
+    "Soil temperature.xlsx:receipt": true,
+    "Water content.xlsx:receipt": true,
+    "Suction.xlsx:receipt": true,
+    "borehole:receipt": true,
+    "source_assets_7": true,
+    "source_bytes_7822891": true,
+    "all_supplier_md5": true,
+    "hdf5_orientation": true,
+    "temperature_count": true,
+    "actual_clock_origin_not_reset": true,
+    "actual_nonuniform_clock": true,
+    "source_kelvin_conversion": true,
+    "vertical_depth_not_radial": true,
+    "no_calendar_invention": true,
+    "no_pipe_validation": true,
+    "no_property_imputation": true,
+    "daily_rows": true,
+    "t_header_alignment_mismatch": true,
+    "no_daily_extrema_to_instantaneous": true,
+    "source_assets_unchanged": true
+  },
+  "source_contract_checks": 21,
+  "independent_physical_model_validation_cases": 0,
+  "actual_source_receipt_corruption_refusals": {
+    "units": true,
+    "clock": true,
+    "geometry": true,
+    "calibration": true,
+    "changed_context_clock": true
+  },
+  "model_or_inverse_calls": 0,
+  "rows_and_detailed_receipts_in_release": false,
+  "unacquired_full_borehole_asset": {
+    "filename": "insitu_measurements.mat",
+    "bytes": 329832492,
+    "expected_checksum": "md5:02e88e184c13af98b165d4bd0f7d6b60",
+    "default": false,
+    "manual_download_requested": false
+  },
+  "runtime": {
+    "openpyxl": "3.1.5",
+    "h5py": "3.16.0",
+    "numpy": "2.5.4"
+  },
+  "doc_python_blocks_executed": 1,
+  "project_file_sha256": {
+    "src/pipeline_integrity/soil_data.py": "9a964c13f39512da414ff057d36e364fd9de82e4caf7c7a011361c51a5fbbdfd",
+    "tests/test_soil_data.py": "fb59725274244f13e840051d5e4c7612ee770d6359f6cc649d44248526225ad2",
+    "scripts/review_soil_source.py": "0ba35daed81260bf638c97fd0f192e00b6943961cba085288d578b76d60b4670",
+    "docs/SOIL_DATA_KO.md": "e92f885fb9c4be1a6eabd244438dc35f3b2bae7dea9f412c7ab6e8c8f41826f7"
+  }
+}

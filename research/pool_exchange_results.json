@@ -1,0 +1,352 @@
+{
+  "schema": "pool-exchange-verification/1",
+  "sdk_version": "0.2.0rc2",
+  "commit": "6a700e8e183039bbb81803bacc416f6c9117ed71",
+  "source": "https://github.com/lyullee/DynamicLH2PoolX",
+  "license": "MIT",
+  "source_pin": "2bfa618bae12eb6a91c180e6345084f821c5c7025a03e62e3497c6baa714f2c6",
+  "source_files": {
+    "__init__.py": "e9980ba436db5ce32f2214397319f6fa44d724d5cda8a14e1588979620e34ef6",
+    "conduction.py": "9e7886a593d0bbbc9f386c2c4b59a917a8ec3cbcdf87f431756e85ba9ceb71f8",
+    "dynamic_fixed_area.py": "f73dcb2ddbeb16e27b98600fdf6b1ee91c083602d8528e7e27eddc32d68bfc43",
+    "dynamic_pool.py": "4c2229f89bfc9d8ca25df7010905a6e2d42e893b8373f06c3cd5658be1b6b0bc",
+    "inflow.py": "e48527d39315167f2f1f03098725453133c16191eefd372fc733bbf76718dce6",
+    "pool.py": "6d9472453803c53a5006483219487fe387c99f850e4bb6ea6ac55d0c746a1ec8",
+    "spreading.py": "2a0ea331451589cde5136c6e478b6e6eecb3f3cc07d33314e03b2e5319f7613e",
+    "substrates.py": "327198276c4502871ce9cc4519c4131f528962acb22ffd0f895a71602328de35",
+    "LICENSE": "d4da9d4088d160b99c207cc1daf5e7b678931226af2eab00a3288069b35d5ad4",
+    "pyproject.toml": "bfdec5079e4d456866603d90e0aedae7ea2f03ce2c0052895343c9d1f34f36cb",
+    "README.md": "b3cbac206ee6b3e67ceb78ddc8ba7cfd7ddd87bf50c160986f29f3bfe97a810d"
+  },
+  "checks": {
+    "solid_spreading_native": true,
+    "solid_spreading_mass": true,
+    "solid_spreading_receipt": true,
+    "solid_spreading_signals": true,
+    "water_spreading_native": true,
+    "water_spreading_mass": true,
+    "water_spreading_receipt": true,
+    "water_spreading_signals": true,
+    "fixed_analytic_native": true,
+    "fixed_analytic_mass": true,
+    "fixed_analytic_receipt": true,
+    "receipt_rejects_enu_tamper": true,
+    "receipt_rejects_native_tamper": true,
+    "rehashed_receipt_rejects_negative_inventory": true,
+    "signal_export_rejects_negative_inventory": true,
+    "rehashed_receipt_rejects_negative_evaporation": true,
+    "signal_export_rejects_negative_evaporation": true,
+    "rehashed_receipt_rejects_decreasing_evaporation": true,
+    "signal_export_rejects_decreasing_evaporation": true,
+    "rehashed_receipt_rejects_scope_escalation": true,
+    "signal_export_rejects_scope_escalation": true,
+    "rehashed_receipt_rejects_mass_imbalance": true,
+    "signal_export_rejects_mass_imbalance": true,
+    "rehashed_receipt_rejects_energy_claim": true,
+    "signal_export_rejects_energy_claim": true,
+    "fixed_analytic_signals": true,
+    "fixed_zero_native": true,
+    "fixed_zero_mass": true,
+    "fixed_zero_receipt": true,
+    "fixed_zero_signals": true,
+    "micro_native": true,
+    "micro_mass": true,
+    "micro_receipt": true,
+    "micro_signals": true,
+    "wet_unreported_native": true,
+    "wet_unreported_mass": true,
+    "wet_unreported_receipt": true,
+    "wet_unreported_signals": true,
+    "dryout_native": true,
+    "dryout_mass": true,
+    "dryout_receipt": true,
+    "dryout_signals": true,
+    "domain_escape_native": true,
+    "domain_escape_mass": true,
+    "domain_escape_receipt": true,
+    "refined_native": true,
+    "refined_mass": true,
+    "refined_receipt": true,
+    "refined_signals": true,
+    "zoh_final_hold_native": true,
+    "zoh_final_hold_mass": true,
+    "zoh_final_hold_receipt": true,
+    "zoh_final_hold_signals": true,
+    "fixed_analytic_integral": true,
+    "property_temperature": true,
+    "property_density": true,
+    "zero_input_empty": true,
+    "micro_inflow_preserved": true,
+    "wet_report_separation": true,
+    "dryout": true,
+    "domain_escape_retained": true,
+    "final_zoh_hold": true,
+    "continuous_thermal_age": true,
+    "refinement_diagnostic": true,
+    "source_unchanged": true,
+    "fault_native_saturation_error_retained": true,
+    "fault_response_budget_retained": true,
+    "fault_timeout_retained": true
+  },
+  "passed": 68,
+  "total": 68,
+  "cases": {
+    "solid_spreading": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 1.734723475976807e-18,
+      "max_independent_mass_residual_kg": 4.169901807788602e-18,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "SolidSemiInfiniteSurface",
+        "ShallowLayerNumerics",
+        "DynamicPoolConfig",
+        "run_dynamic_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "water_spreading": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 8.673617379884035e-18,
+      "max_independent_mass_residual_kg": 1.1275702593849246e-17,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "ConstantHeatFluxWaterSurface",
+        "ShallowLayerNumerics",
+        "DynamicPoolConfig",
+        "run_dynamic_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "fixed_analytic": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 0.0,
+      "max_independent_mass_residual_kg": 0.0,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "Substrate",
+        "FixedAreaPoolConfig",
+        "run_fixed_area_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "fixed_zero": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 0.0,
+      "max_independent_mass_residual_kg": 0.0,
+      "source_statuses": [
+        "input_limited"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "Substrate",
+        "FixedAreaPoolConfig",
+        "run_fixed_area_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "micro": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 3.970466940254533e-23,
+      "max_independent_mass_residual_kg": 2.9778502051908996e-23,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "SolidSemiInfiniteSurface",
+        "ShallowLayerNumerics",
+        "DynamicPoolConfig",
+        "run_dynamic_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "wet_unreported": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 8.673617379884035e-18,
+      "max_independent_mass_residual_kg": 1.1275702593849246e-17,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "ConstantHeatFluxWaterSurface",
+        "ShallowLayerNumerics",
+        "DynamicPoolConfig",
+        "run_dynamic_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "dryout": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 0.0,
+      "max_independent_mass_residual_kg": 0.0,
+      "source_statuses": [
+        "input_limited",
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "Substrate",
+        "FixedAreaPoolConfig",
+        "run_fixed_area_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "domain_escape": {
+      "status": "out_of_scope",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 6.661338147750939e-16,
+      "max_independent_mass_residual_kg": 7.216449660063518e-16,
+      "source_statuses": [
+        "out_of_scope",
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "ConstantHeatFluxWaterSurface",
+        "ShallowLayerNumerics",
+        "DynamicPoolConfig",
+        "run_dynamic_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "refined": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": -8.673617379884035e-19,
+      "max_independent_mass_residual_kg": 5.854691731421724e-18,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "SolidSemiInfiniteSurface",
+        "ShallowLayerNumerics",
+        "DynamicPoolConfig",
+        "run_dynamic_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    },
+    "zoh_final_hold": {
+      "status": "computed",
+      "native_called": true,
+      "row_count": 5,
+      "native_mass_residual_kg": 0.0,
+      "max_independent_mass_residual_kg": 0.0,
+      "source_statuses": [
+        "within_declared_scope"
+      ],
+      "warning_count": 5,
+      "sdk_calls": [
+        "DeclaredInflow",
+        "Substrate",
+        "FixedAreaPoolConfig",
+        "run_fixed_area_pool"
+      ],
+      "runtime": {
+        "CoolProp": "8.0.0",
+        "numpy": "2.5.4"
+      }
+    }
+  },
+  "faults": {
+    "native_saturation_error": {
+      "status": "error",
+      "native_called": true,
+      "reason_class": "ValueError"
+    },
+    "response_budget": {
+      "status": "error",
+      "native_called": true,
+      "reason_class": "ValueError"
+    },
+    "timeout": {
+      "status": "timeout",
+      "native_called": false,
+      "reason_class": "SDK worker timed out; native API returned no partial ledger"
+    }
+  },
+  "adapter_files": {
+    "src/pipeline_integrity/pool_exchange.py": "e690e0359064e1dd65f26af2e56a8853ee38fe67fc5ca96bd6ab59b8ca709215",
+    "src/pipeline_integrity/pool_worker.py": "69e42c8a2ef59b05370e2808b0965c7a2646e77c3d0d348323c756a2d22ef7aa",
+    "tests/test_pool_exchange.py": "c112b2419958a4899db19a8b0fdec2eb0fe41d1d017a5801447b486d7f1aa683",
+    "examples/pool_exchange.py": "82a2ed2ae7960c308ffed93b666f12cb07770952173b2492deaf5b5763ed0e66",
+    "scripts/check_pool_exchange.py": "17fcfed1b91dd2e07096fed9badff21ec4bf50a035e62cc2fe566301e681d975",
+    "docs/POOL_EXCHANGE_KO.md": "68448b711c184e06c207c1aceaa1fb1180045232dac8aa427e323a4b762951a9"
+  },
+  "units": {
+    "pressure": "Pa_abs",
+    "time": "s",
+    "mass": "kg",
+    "rate": "kg/s",
+    "origin": "ENU m"
+  },
+  "limitations": [
+    "synthetic verification only",
+    "no energy balance ledger",
+    "no jet impact, deposition or dispersion",
+    "water empirical closure approximately 50-60s",
+    "receipt is unsigned consistency information"
+  ]
+}

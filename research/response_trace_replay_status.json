@@ -1,0 +1,20 @@
+{
+  "schema": "pipeline_integrity.response_trace_replay_status.v1",
+  "api": "pipeline_integrity.response_trace.verify_response_trace_record",
+  "authored_regression_functions": 1,
+  "numerical_tests_executed": 0,
+  "nurion_submitted": false,
+  "replay_inputs": [
+    "sealed alarm receipt",
+    "sealed valve motion receipt or null",
+    "trace specification",
+    "run context",
+    "original process frame slice",
+    "optional single HRA result or owner-replayed HRA scenario result"
+  ],
+  "scope": "replays the trace adapter and sampled endpoint transformation; native alarm, valve, and HRA owners require their own replay checks",
+  "limitations": [
+    "raw process frames are supplied again and are not embedded in the trace record",
+    "does not infer continuous-time safety or a dynamic accident probability"
+  ]
+}

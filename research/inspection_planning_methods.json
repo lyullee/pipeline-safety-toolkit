@@ -1,0 +1,26 @@
+{
+  "schema": "pipeline_integrity.inspection_planning_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "sources": [
+    {
+      "url": "https://ntrs.nasa.gov/citations/20220013822",
+      "document_id": "20220013822",
+      "publication_date": "2022-09-01",
+      "metadata_rights": "Public Use Permitted",
+      "role": "Inspection qualification remains specific to its design and application domain; no tables or coefficients imported."
+    },
+    {
+      "url": "https://developers.google.com/optimization/cp/cp_solver",
+      "role": "Integer model and solver status documentation; reuse the existing CP-SAT backend."
+    }
+  ],
+  "selection": "Existing owned log-size POD and no-indication update, plus shared scheduler; explicit ceiling approximation bounds.",
+  "remaining_scope": [
+    "Qualified ground truth including misses and false indications",
+    "Clustered repeated inspections and nonrandom coverage",
+    "Joint inspection/growth/remediation policies",
+    "Physical failure likelihoods and independent calibration"
+  ],
+  "extension_request": "PI-X04",
+  "coefficients_or_source_prose_copied": false
+}

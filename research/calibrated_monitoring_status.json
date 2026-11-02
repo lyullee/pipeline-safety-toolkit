@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.calibrated_monitoring_status.v1",
+  "date": "2026-10-29",
+  "state": "implemented_static_validation_pending",
+  "module": "pipeline_integrity.calibrated_monitoring",
+  "entrypoints": [
+    "CalibratedMonitoringInput",
+    "build_calibrated_monitoring_input",
+    "verify_calibrated_monitoring_input"
+  ],
+  "owner_engines_reused": [
+    "calibration_application.verify_calibration_application",
+    "monitoring_exchange.MonitoringSplit"
+  ],
+  "authored_test_functions": 3,
+  "tests_executed": 0,
+  "row_ids_order_clock_unit_invalidity_preserved": true,
+  "partial_or_reordered_valid_sample_application_refused": true,
+  "uncertainty_propagated": false,
+  "clock_transformed": false,
+  "field_qualification": false,
+  "limitations": [
+    "Application receipt structural verification does not replace calibration owner replay.",
+    "Only one selected channel is transformed; monitoring splits must be assembled separately with no overlapping observation identities.",
+    "Input/model uncertainty, clock correction, interpolation, drift/reset and custody qualification are not provided."
+  ],
+  "guide": "docs/CALIBRATED_MONITORING_KO.md"
+}

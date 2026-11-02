@@ -1,0 +1,191 @@
+{
+  "schema": "pipeline_integrity.hydrogen_data_review.v1",
+  "elvhys": {
+    "source": "https://doi.org/10.18710/M5LOLM",
+    "license": "CC0-1.0",
+    "inspected": [
+      {
+        "filename": "ELE431KIT011PRESF20260727.csv",
+        "sha256": "2dd9a76985daed8deaf270da1f045bd64009b5ff88c0afb531fd6b59cb6357bf",
+        "rows": 262144,
+        "channels": 11,
+        "observed_median_interval_s": 1.0000000000065512e-05,
+        "signed_time_span_s": [
+          -0.13107,
+          2.49036
+        ],
+        "invalid_samples_by_channel": {
+          "PC101 - p_2a (bar_a)": 4762,
+          "PC102 - p_2b (bar_a)": 1794,
+          "PC103 - p_2c (bar_a)": 2515,
+          "PC104 - p_2d (bar_a)": 1459,
+          "PC105 - p_2e (bar_a)": 1167,
+          "PC106 - p_2f (bar_a)": 1530,
+          "PW111 (bar_a)": 0,
+          "PW112 (bar_a)": 0,
+          "PW113 (bar_a)": 0,
+          "PW114 (bar_a)": 0,
+          "PW115 (bar_a)": 0
+        },
+        "pressure_reference_conflict_channels": [
+          "PW111 (bar_a)",
+          "PW112 (bar_a)",
+          "PW113 (bar_a)",
+          "PW114 (bar_a)",
+          "PW115 (bar_a)"
+        ],
+        "clock_strictly_increasing": true,
+        "duplicate_adjacent_timestamps": 0,
+        "backward_clock_steps": 0
+      },
+      {
+        "filename": "ELE431KIT011PRESS20260727.csv",
+        "sha256": "a58ba806d24bcacfc17541c351081aa1cc89c5fcbf4d5c27f08a73687e8d70f8",
+        "rows": 48863,
+        "channels": 7,
+        "observed_median_interval_s": 0.0499999799999955,
+        "signed_time_span_s": [
+          -2144.4,
+          298.69999998000003
+        ],
+        "invalid_samples_by_channel": {
+          "p_20 (bar_a)": 16,
+          "p_1 (bar_g)": 0,
+          "p_3 (bar_g)": 0,
+          "Dp_01 (bar)": 0,
+          "V_220 (mbar_g)": 0,
+          "p_V07 (mbar_g)": 0,
+          "p_GFK (mbar_g)": 0
+        },
+        "pressure_reference_conflict_channels": [
+          "p_1 (bar_g)",
+          "p_3 (bar_g)"
+        ],
+        "clock_strictly_increasing": true,
+        "duplicate_adjacent_timestamps": 0,
+        "backward_clock_steps": 0
+      },
+      {
+        "filename": "ELE431KIT011TEMP20260727.csv",
+        "sha256": "e15a901dacceb50209b161e01dfd825ab28115496f6c29930461dde92d187b2e",
+        "rows": 25540,
+        "channels": 7,
+        "observed_median_interval_s": 0.09600000000000364,
+        "signed_time_span_s": [
+          -781.3849998000001,
+          1579.053
+        ],
+        "invalid_samples_by_channel": {
+          "T_2a (K)": 0,
+          "T_2b (K)": 0,
+          "T_2c (K)": 0,
+          "T_2d (K)": 0,
+          "T_2e (K)": 25540,
+          "Jet temperature 1 (K)": 0,
+          "Jet temperature 2 (K)": 0
+        },
+        "pressure_reference_conflict_channels": [],
+        "clock_strictly_increasing": false,
+        "duplicate_adjacent_timestamps": 2,
+        "backward_clock_steps": 0
+      }
+    ],
+    "readme_rate_conflict": "The released high-rate file has a 10-microsecond median interval; the source text also states 10 kHz. Source time knots are used.",
+    "pressure_reference_review": "p_1, p_3 and external PW channels retain unresolved references because source descriptions conflict or labeled absolute values are negative.",
+    "cross_instrument_alignment_qualified": false,
+    "ordinary_pipeline_transient_validation_claim": false
+  },
+  "h2safe": {
+    "source": "https://data.openei.org/submissions/8799",
+    "license": "CC-BY-4.0",
+    "archive_sha256": "f1b8bf747b7787f00152ec416940c80a143ea044fc18ee8a69ac9da204d9158e",
+    "experiments": [
+      {
+        "laboratory": "Lab2_Large",
+        "experiment": "test1",
+        "rows": 3993,
+        "channels": 32,
+        "missing_samples": 15972,
+        "channels_entirely_missing": [
+          "p4",
+          "p26",
+          "p25",
+          "p9"
+        ],
+        "coordinate_matches": 32,
+        "signal_unit": "source_unit_unresolved",
+        "time_unit": "source_unit_unresolved",
+        "physical_model_input_qualified": false
+      },
+      {
+        "laboratory": "Lab2_Large",
+        "experiment": "test2",
+        "rows": 3113,
+        "channels": 32,
+        "missing_samples": 0,
+        "channels_entirely_missing": [],
+        "coordinate_matches": 32,
+        "signal_unit": "source_unit_unresolved",
+        "time_unit": "source_unit_unresolved",
+        "physical_model_input_qualified": false
+      },
+      {
+        "laboratory": "Lab2_Large",
+        "experiment": "test3",
+        "rows": 5646,
+        "channels": 32,
+        "missing_samples": 11292,
+        "channels_entirely_missing": [
+          "p27",
+          "p24"
+        ],
+        "coordinate_matches": 32,
+        "signal_unit": "source_unit_unresolved",
+        "time_unit": "source_unit_unresolved",
+        "physical_model_input_qualified": false
+      },
+      {
+        "laboratory": "Lab2_Large",
+        "experiment": "test4",
+        "rows": 5758,
+        "channels": 32,
+        "missing_samples": 23032,
+        "channels_entirely_missing": [
+          "p27",
+          "p24",
+          "p31",
+          "p32"
+        ],
+        "coordinate_matches": 32,
+        "signal_unit": "source_unit_unresolved",
+        "time_unit": "source_unit_unresolved",
+        "physical_model_input_qualified": false
+      },
+      {
+        "laboratory": "Lab1_Small",
+        "experiment": "test1",
+        "rows": 2542,
+        "channels": 24,
+        "missing_samples": 0,
+        "channels_entirely_missing": [],
+        "coordinate_matches": 24,
+        "signal_unit": "source_unit_unresolved",
+        "time_unit": "source_unit_unresolved",
+        "physical_model_input_qualified": false
+      }
+    ],
+    "supporting_metadata_sha256": "e99119f5f9aadac6e0bd8269b3fc7989a6026bc0a4c68221ea2a54b1eeee58bb",
+    "supporting_metadata_review": {
+      "leak_coordinates_declared_unit": "m",
+      "sensor_coordinates_same_frame_as_leak": true,
+      "sensor_coordinate_unit_inferred_from_supporting_frame": true,
+      "enu_transform_qualified": false,
+      "pressure_values_reference_unspecified": true,
+      "standard_litre_reference_conditions_unspecified": true,
+      "signal_amplitude_unit_confirmed": false,
+      "source_linked_software_http_status": 404
+    },
+    "signal_and_time_units_not_guessed": true,
+    "hep_estimated": false
+  }
+}

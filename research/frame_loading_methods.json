@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.frame_loading_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "runtime_owners": [
+    "PyNiteFEA 3.2.0",
+    "matintegrity mechanics.thermal_restraint",
+    "matintegrity mechanics.lame_cylinder"
+  ],
+  "primary_sources": [
+    "https://mooseframework.inl.gov/source/materials/ComputeThermalExpansionEigenstrain.html",
+    "https://pynite.readthedocs.io/en/latest/member.html",
+    "https://solidmechanics.org/text/Chapter4_1/Chapter4_1.htm",
+    "https://opensees.github.io/OpenSeesDocumentation/user/examples/thermalExamples/thermalexample2.html"
+  ],
+  "reviewed_alternative_context": "OpenSees documented thermal elements were reviewed as a broader thermal/structural comparison. No OpenSees runtime or source was introduced.",
+  "adoption": "Reuse current owner constitutive calculations and PyNite stiffness. Independently assemble uniform initial-strain equivalent forces and recover physical axial/end actions, with external and nodal static audits.",
+  "pressure_convention": "Both absolute face tractions, explicit open/closed ends, Poisson axial coupling; total material stress is not geometric-stability effective force.",
+  "data_source": "https://data.mendeley.com/datasets/sbcf36976g/1",
+  "creators": [
+    "Lauren B. Tomanek",
+    "Daniel S. Stutts"
+  ],
+  "data_license": "CC-BY-4.0",
+  "original_explanations_and_authored_reference_values": true,
+  "third_party_engine_source_or_examples_vendored": false,
+  "raw_or_transformed_observations_in_distribution": false,
+  "actual_rod_structural_response_or_field_qualification": false
+}

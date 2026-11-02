@@ -1,0 +1,91 @@
+{
+  "schema": "pipeline_integrity.pressure_wave_verification.v1",
+  "checks": {
+    "default:replay": true,
+    "default:no_cause_claim": true,
+    "default_no_native": true,
+    "forward:replay": true,
+    "forward:no_cause_claim": true,
+    "known_forward_delay_support": true,
+    "reverse:replay": true,
+    "reverse:no_cause_claim": true,
+    "known_reverse_support": true,
+    "simultaneous:replay": true,
+    "simultaneous:no_cause_claim": true,
+    "overlapping_support_no_direction": true,
+    "unknown_timing:replay": true,
+    "unknown_timing:no_cause_claim": true,
+    "features_not_physical_arrivals": true,
+    "moc_0.001:replay": true,
+    "moc_0.001:no_cause_claim": true,
+    "moc_0.001:separate_distance_speed_reference": true,
+    "moc_0.001:source_budgets": true,
+    "moc_0.001:right_origin_direction": true,
+    "moc_0.002:replay": true,
+    "moc_0.002:no_cause_claim": true,
+    "moc_0.002:separate_distance_speed_reference": true,
+    "moc_0.002:source_budgets": true,
+    "moc_0.002:right_origin_direction": true,
+    "rehashed_refusal:delay": true,
+    "rehashed_refusal:direction": true,
+    "rehashed_refusal:cause": true,
+    "rehashed_refusal:native": true,
+    "rehashed_refusal:source": true
+  },
+  "passed": 30,
+  "total": 30,
+  "records": 7,
+  "statuses": {
+    "needs_data": 2,
+    "computed_diagnostic": 5
+  },
+  "source_applications": [
+    {
+      "source": "existing_single_phase_MOC",
+      "timestep_s": 0.001,
+      "sensors_m": [
+        300.0,
+        700.0
+      ],
+      "reference_arrival_difference_s": -0.4,
+      "arrival_support_s": [
+        -0.40099999999999997,
+        -0.39899999999999997
+      ],
+      "native_result_digest": "4fd28ee0d2e2f6708bfdac19ed2be38ee802764ca64a2b04d0c26be87b51abf4",
+      "source_model_sha256": "e5375196bf7077ad2d6c4824c05ef5fe9188a77bf829ce09dd273e7f49f209f4",
+      "actual_cause": "declared_withdrawal_increase; not a leak onset",
+      "independent_field_validation": false
+    },
+    {
+      "source": "existing_single_phase_MOC",
+      "timestep_s": 0.002,
+      "sensors_m": [
+        300.0,
+        700.0
+      ],
+      "reference_arrival_difference_s": -0.4,
+      "arrival_support_s": [
+        -0.40199999999999997,
+        -0.398
+      ],
+      "native_result_digest": "7143e8decf83f4000c6164e5ccfb3efd938deffdb38eaed813d0fcbd4526d17e",
+      "source_model_sha256": "e5375196bf7077ad2d6c4824c05ef5fe9188a77bf829ce09dd273e7f49f209f4",
+      "actual_cause": "declared_withdrawal_increase; not a leak onset",
+      "independent_field_validation": false
+    }
+  ],
+  "rehashed_mutations_refused": 5,
+  "file_sha256": {
+    "src/pipeline_integrity/pressure_wave.py": "0184cdc8cdbca7912655410085925e38ee48f7f4947730346d834fbabc710478",
+    "src/pipeline_integrity/acoustics.py": "fb6e1d436bc145ca1629c6c05909af37cf20032e885e3d2fdbe1dea10c4e62e1",
+    "src/pipeline_integrity/transient.py": "e5375196bf7077ad2d6c4824c05ef5fe9188a77bf829ce09dd273e7f49f209f4",
+    "tests/test_pressure_wave.py": "a02e019a809ad42373e65c181bb984ef26b37f5b9ba75901edd4dd8d092d4d66",
+    "examples/pressure_wave.py": "dc7aa544db340f9bb7cba85f298c94090cfb1b06df913287c7bb8ea220ef154f",
+    "scripts/check_pressure_wave.py": "25c66d4f663cbeda23166a3e0b011b98164ce26f06100f99e1b934856a0d6012",
+    "docs/PRESSURE_WAVE_KO.md": "c4813bf3bfebd4b165994ceccea789040eac8cece4e116fa486c9890d29ad689"
+  },
+  "independent_physical_validation": false,
+  "real_pressure_wave_records_applied": 0,
+  "cause_classifier_implemented": false
+}

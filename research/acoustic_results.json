@@ -1,0 +1,162 @@
+{
+  "schema": "pipeline_integrity.acoustic_application.v1",
+  "source_citation": "Shekofteh, Mohammad Reza (2026). Acoustic data for the leakage experiments in the CID Lab, University of Sheffield. The University of Sheffield. Dataset. https://doi.org/10.15131/shef.data.32229270.v1",
+  "license_id": "CC-BY-4.0",
+  "archive_sha256": "fd7ebe9b5f72d3e7c6f31d8aaaa5a13d2f44a4bfab2ab5babc82c92333e19799",
+  "data_origin": "laboratory",
+  "paired_records_examined": 40,
+  "samples_per_initial_record": 32768,
+  "sample_rate_hz": 8192.0,
+  "analysis_requests": {
+    "normalized_xcorr": {
+      "method": "normalized_xcorr",
+      "maximum_delay_s": 0.1,
+      "timing": null,
+      "band_hz": [
+        100.0,
+        2000.0
+      ],
+      "filter_order": 4,
+      "detrend": "constant",
+      "polarity": "absolute",
+      "minimum_overlap_fraction": 0.75,
+      "minimum_peak_correlation": 0.2,
+      "peak_exclusion_s": 0.005,
+      "minimum_relative_peak_gap": 0.05,
+      "minimum_rms": 0.0,
+      "coherence_segment_samples": 1024,
+      "minimum_mean_coherence": 0.0,
+      "maximum_samples": 1000000,
+      "maximum_relative_rate_difference": 1e-09,
+      "allow_peak_at_search_boundary": false
+    },
+    "gcc_phat": {
+      "method": "gcc_phat",
+      "maximum_delay_s": 0.1,
+      "timing": null,
+      "band_hz": [
+        100.0,
+        2000.0
+      ],
+      "filter_order": 4,
+      "detrend": "constant",
+      "polarity": "absolute",
+      "minimum_overlap_fraction": 0.75,
+      "minimum_peak_correlation": 0.2,
+      "peak_exclusion_s": 0.005,
+      "minimum_relative_peak_gap": 0.05,
+      "minimum_rms": 0.0,
+      "coherence_segment_samples": 1024,
+      "minimum_mean_coherence": 0.0,
+      "maximum_samples": 1000000,
+      "maximum_relative_rate_difference": 1e-09,
+      "allow_peak_at_search_boundary": false
+    }
+  },
+  "methods": {
+    "normalized_xcorr": {
+      "states": {
+        "estimated": 39,
+        "withheld": 1
+      },
+      "withheld_issues": {
+        "weak_peak_correlation": 1
+      },
+      "qualified_apparent_delay_s": {
+        "minimum": 0.0032958984375,
+        "median": 0.0225830078125,
+        "maximum": 0.037353515625
+      },
+      "qualified_absolute_peak_correlation": {
+        "minimum": 0.20112333558468015,
+        "median": 0.38169691534696537,
+        "maximum": 0.7146540742625913
+      },
+      "mean_coherence_in_band": {
+        "minimum": 0.06526548758310216,
+        "median": 0.16260539389824308,
+        "maximum": 0.7745856024753198
+      }
+    },
+    "gcc_phat": {
+      "states": {
+        "estimated": 28,
+        "withheld": 12
+      },
+      "withheld_issues": {
+        "weak_peak_correlation": 12
+      },
+      "qualified_apparent_delay_s": {
+        "minimum": 0.005126953125,
+        "median": 0.0247802734375,
+        "maximum": 0.03759765625
+      },
+      "qualified_absolute_peak_correlation": {
+        "minimum": 0.20787342670335388,
+        "median": 0.3577357597905272,
+        "maximum": 0.6749395837952805
+      },
+      "mean_coherence_in_band": {
+        "minimum": 0.06526548758310216,
+        "median": 0.16260539389824308,
+        "maximum": 0.7745856024753198
+      }
+    }
+  },
+  "same_record_window_handoff": {
+    "owner_source": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a"
+    },
+    "native_type": "process_monitoring.contracts.SignalBatch",
+    "shape": [
+      7,
+      4
+    ],
+    "units": [
+      "s",
+      "1",
+      "1",
+      "1"
+    ],
+    "origin": "simulation",
+    "valid_values": 28,
+    "total_values": 28,
+    "metadata": {
+      "asset_id": "CID_MDPE_loop",
+      "source_result_digests": [
+        "1139d96564909ca3a07e04a9fbb7d00462538f970ff5f257a2fdffda8290c3cd",
+        "a9155133879a5858a324a90b890068389ea35bb8165daefd010afb0f8b7057ca",
+        "d3c82246325c92c59b87cf244389b461fba00ee47c678ab6bfc27d601d7f2486",
+        "260f08cc445eb984eac5da9e07baeb1dcafba8ab2f05530a3e6b71489919d279",
+        "fa92a6a74d6ae19d692483138c3a4215af6bf94ffe27eab6316ef1cafbc7545f",
+        "49c389fbe7b09aa949ed049a496a1f6cae1b715adf8757b28660b743621591c1",
+        "15a34d746322bfb1212c6f1e1210151956e14a4a229c3510f2c4a73d17831183"
+      ],
+      "input_origin": "laboratory",
+      "features_are_leak_probabilities": false,
+      "clock_id": "sheffield_93116d56_record_elapsed",
+      "stream_id": "paired_acoustic_delay_windows"
+    },
+    "leak_detection_accuracy_or_HEP_computed": false
+  },
+  "same_record_window_count": 7,
+  "single_record_unused_tail_samples": 16384,
+  "combined_spatial_tables_used": false,
+  "native_acceleration_rescaled": false,
+  "physical_position_calculated": false,
+  "location_missing": [
+    "propagation_speed_and_error",
+    "reference_sensor_offset",
+    "relative_latency_error_bound",
+    "single_path_source_bracketing"
+  ],
+  "field_validation_claim": false,
+  "leak_vs_no_leak_detection_evaluated": false,
+  "raw_or_transformed_external_sample_rows_in_public_summary": false,
+  "implementation_files_sha256": {
+    "acoustics.py": "fb6e1d436bc145ca1629c6c05909af37cf20032e885e3d2fdbe1dea10c4e62e1",
+    "acoustic_data.py": "e9f8d4d4ce6ac9289eba303047f82962c5fc6ca21a4c8da6940c0de4f253f5d1"
+  }
+}

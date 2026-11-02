@@ -1,0 +1,1680 @@
+{
+  "schema": "pipeline_integrity.examples.v1",
+  "results": [
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "geometry.pipe",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "inner_diameter_m": 0.2,
+        "outer_diameter_m": 0.22,
+        "length_m": 100.0,
+        "wall_density_kg_m3": 7850.0
+      },
+      "values": {
+        "flow_area_m2": 0.031415926535897934,
+        "internal_volume_m3": 3.1415926535897936,
+        "wall_volume_m3": 0.6597344572538558,
+        "wall_mass_kg": 5178.915489442768,
+        "external_area_m2": 69.11503837897544
+      },
+      "input_units": {
+        "inner_diameter_m": "m",
+        "outer_diameter_m": "m",
+        "length_m": "m",
+        "wall_density_kg_m3": "kg/m3"
+      },
+      "output_units": {
+        "flow_area_m2": "m2",
+        "internal_volume_m3": "m3",
+        "wall_volume_m3": "m3",
+        "wall_mass_kg": "kg",
+        "external_area_m2": "m2"
+      },
+      "assumptions": [
+        "Circular uniform pipe geometry and declared wall density."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "d8ff49a36c73bafa16cc4dc5e04e6c5bef9b195fe531185612af25a7039d4d1a",
+      "model_source_digest": "b8abf6dec8898f4838428d7fbf34858e6d9528cb4d2bf600596574d3f2ab953b",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "a991d3ea9a89ab076fd2bc77b3929fbf966ccabbd031fc73a4e62089121f28e6",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "3b6cfe503f3a3b831c15191eedfa3e547fdf274c82f4e365a8c61f7a93a8c86c",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "hydraulics.liquid_loss",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "diameter_m": 0.2,
+        "length_m": 100.0,
+        "roughness_m": 4.5e-05,
+        "volume_flow_m3_s": 0.02,
+        "minor_loss_coefficient": 0.0,
+        "outlet_minus_inlet_elevation_m": 0.0,
+        "gravity_m_s2": 9.80665,
+        "transition_policy": "withhold",
+        "friction_method": "Clamond",
+        "density_kg_m3": 998.0,
+        "viscosity_pa_s": 0.001
+      },
+      "values": {
+        "velocity_m_s": 0.6366197723675813,
+        "reynolds": 127069.30656456924,
+        "darcy_friction_factor": 0.0184076125162423,
+        "dissipative_pressure_loss_pa": 1861.3509259988302,
+        "static_pressure_change_pa": 0.0,
+        "required_inlet_minus_outlet_pa": 1861.3509259988302,
+        "dissipated_power_w": 37.2270185199766
+      },
+      "input_units": {
+        "diameter_m": "m",
+        "length_m": "m",
+        "roughness_m": "m",
+        "volume_flow_m3_s": "m3/s",
+        "minor_loss_coefficient": "1",
+        "outlet_minus_inlet_elevation_m": "m",
+        "gravity_m_s2": "m/s2",
+        "transition_policy": "selection",
+        "friction_method": "selection",
+        "density_kg_m3": "kg/m3",
+        "viscosity_pa_s": "Pa*s"
+      },
+      "output_units": {
+        "velocity_m_s": "m/s",
+        "reynolds": "1",
+        "darcy_friction_factor": "1",
+        "dissipative_pressure_loss_pa": "Pa",
+        "static_pressure_change_pa": "Pa",
+        "required_inlet_minus_outlet_pa": "Pa",
+        "dissipated_power_w": "W"
+      },
+      "assumptions": [
+        "Steady single-phase constant-property flow; no cavitation or two-phase closure.",
+        "Darcy convention; transition treatment is explicit."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "f5d8d376cfa9e11c6ef4c8346557babfaa1b3645389fd3ad9577ee80ba9f68af",
+      "model_source_digest": "43199fc4b7bbf1aa6f3b157af48cc1cd835cbf10fe9cc47bb856d359ffe11522",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "50cb4e0d863f11d7b21e190fb74ec61d39fe7e032fef7abdf6ef0f26569538c6",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "c7c122707b71f3798b01ed165388b3dafeed0bbb9f8f4a9f9ab5cf0f980b9391",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "hydraulics.liquid_head_loss",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "diameter_m": 0.2,
+        "length_m": 100.0,
+        "roughness_m": 4.5e-05,
+        "volume_flow_m3_s": 0.02,
+        "minor_loss_coefficient": 0.0,
+        "outlet_minus_inlet_elevation_m": 0.0,
+        "gravity_m_s2": 9.80665,
+        "transition_policy": "withhold",
+        "friction_method": "Clamond",
+        "kinematic_viscosity_m2_s": 1.002e-06
+      },
+      "values": {
+        "velocity_m_s": 0.6366197723675813,
+        "reynolds": 127069.8148438286,
+        "darcy_friction_factor": 0.018407601214558502,
+        "dissipative_head_loss_m": 0.19018522564537343,
+        "static_head_change_m": 0.0,
+        "required_inlet_minus_outlet_head_m": 0.19018522564537343
+      },
+      "input_units": {
+        "diameter_m": "m",
+        "length_m": "m",
+        "roughness_m": "m",
+        "volume_flow_m3_s": "m3/s",
+        "minor_loss_coefficient": "1",
+        "outlet_minus_inlet_elevation_m": "m",
+        "gravity_m_s2": "m/s2",
+        "transition_policy": "selection",
+        "friction_method": "selection",
+        "kinematic_viscosity_m2_s": "s"
+      },
+      "output_units": {
+        "velocity_m_s": "m/s",
+        "reynolds": "1",
+        "darcy_friction_factor": "1",
+        "dissipative_head_loss_m": "m",
+        "static_head_change_m": "m",
+        "required_inlet_minus_outlet_head_m": "m"
+      },
+      "assumptions": [
+        "Steady single-phase Newtonian kinematic-viscosity input; no density or absolute pressure is inferred.",
+        "Darcy convention; transition treatment is explicit and shared with the pressure-loss owner.",
+        "The result is a required head difference, not an absolute pressure state or measured sensor mapping."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "12df03f53ce9025060b683a47973428c07e3c3762ba9437352df883681f6a863",
+      "model_source_digest": "99f07fbf108983d2dbcd0f5e7ec45076dda67714fba7b027589c172dcbe8e5a8",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "6022e078ccc375f70ea4047e701acbccd3c912ca3fcefddf5dcc6635317ebc06",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "f8cf8e152fb691d377f356b506f578698d9752acbbeb0d8e277ea0a0942605f4",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "hydraulics.hydrostatic",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "inlet_pressure_pa_abs": 500000.0,
+        "density_kg_m3": 998.0,
+        "outlet_minus_inlet_elevation_m": 10.0,
+        "gravity_m_s2": 9.80665
+      },
+      "values": {
+        "outlet_pressure_pa_abs": 402129.63300000003,
+        "pressure_difference_pa": 97870.36699999997
+      },
+      "input_units": {
+        "inlet_pressure_pa_abs": "Pa_abs",
+        "density_kg_m3": "kg/m3",
+        "outlet_minus_inlet_elevation_m": "m",
+        "gravity_m_s2": "m/s2"
+      },
+      "output_units": {
+        "outlet_pressure_pa_abs": "Pa_abs",
+        "pressure_difference_pa": "Pa"
+      },
+      "assumptions": [
+        "Constant-density stationary fluid under declared gravity."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "77833f5a52a441bad471cd8fde6e20af20e0e40d2536e5eb408ad88c8e5ebb86",
+      "model_source_digest": "b7764d354448ba63348f0a3072c2f840acd25addf10fbbb9da4d4714878954df",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "0cce06e999c615b00a20b3dc6fe1fa85e23751a4294fec8c3c3943f544117f94",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "hydraulics.gas_correlation",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "method": "Panhandle_A",
+        "relative_density_to_air": 0.6,
+        "mean_temperature_k": 288.0,
+        "mean_compressibility": 0.9,
+        "length_m": 10000.0,
+        "diameter_m": 0.5,
+        "inlet_pressure_pa_abs": 5000000.0,
+        "outlet_pressure_pa_abs": 4500000.0,
+        "standard_temperature_k": 288.15,
+        "standard_pressure_pa_abs": 101325.0,
+        "empirical_efficiency": 1.0
+      },
+      "values": {
+        "standard_volume_flow_m3_s": 139.412662181298
+      },
+      "input_units": {
+        "method": "selection",
+        "relative_density_to_air": "1",
+        "mean_temperature_k": "K",
+        "mean_compressibility": "1",
+        "length_m": "m",
+        "diameter_m": "m",
+        "inlet_pressure_pa_abs": "Pa_abs",
+        "outlet_pressure_pa_abs": "Pa_abs",
+        "standard_temperature_k": "K",
+        "standard_pressure_pa_abs": "Pa_abs",
+        "empirical_efficiency": "1"
+      },
+      "output_units": {
+        "standard_volume_flow_m3_s": "m3/s"
+      },
+      "assumptions": [
+        "Empirical directed gas flow with declared mean temperature, compressibility, efficiency and reference conditions.",
+        "The selected correlation's original regime must be reviewed for the target gas and pipe."
+      ],
+      "notes": [
+        "Flow volume belongs to the explicitly supplied reference temperature and pressure."
+      ],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "e5bb2491cb7fa76da350746e23a47ef9ff5e17393e8b60a9bc6440397425f76d",
+      "model_source_digest": "ff2b465430d24d6bd348c2e701d42ade2f55c1cd73a19f3d96bcd6932f76424e",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "3e6c745a37dace1d8257455fdfb7077d95ffbf363cbf3824bf4d51e1d22c6ec2",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "hydraulics.isothermal_gas",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "mean_density_kg_m3": 11.3,
+        "darcy_friction_factor": 0.0185,
+        "inlet_pressure_pa_abs": 1000000.0,
+        "outlet_pressure_pa_abs": 900000.0,
+        "length_m": 1000.0,
+        "diameter_m": 0.5
+      },
+      "values": {
+        "mass_flow_kg_s": 47.164134538502154,
+        "velocity_at_mean_density_m_s": 21.257076526594847
+      },
+      "input_units": {
+        "mean_density_kg_m3": "kg/m3",
+        "darcy_friction_factor": "1",
+        "inlet_pressure_pa_abs": "Pa_abs",
+        "outlet_pressure_pa_abs": "Pa_abs",
+        "length_m": "m",
+        "diameter_m": "m"
+      },
+      "output_units": {
+        "mass_flow_kg_s": "kg/s",
+        "velocity_at_mean_density_m_s": "m/s"
+      },
+      "assumptions": [
+        "Steady horizontal isothermal gas; supplied average density and friction."
+      ],
+      "notes": [
+        "Mean density and friction are reviewed inputs, not a self-consistent thermal solver."
+      ],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "a7fa16cdde69b4d892c64c3c1aee4744008caf079356baac87c2245dcc998bb9",
+      "model_source_digest": "d5751b59c617f2a4b06d1e2fbe7883e48375aa09597a9f78193bff49d1c998ab",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "827f773636f48d025339afebea55f2ad6b1a3cf2881a12af9c15a5071788fe2c",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "3b6cfe503f3a3b831c15191eedfa3e547fdf274c82f4e365a8c61f7a93a8c86c",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "transient.wave_speed",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "density_kg_m3": 998.0,
+        "fluid_bulk_modulus_pa": 2200000000.0,
+        "pipe_elastic_modulus_pa": 200000000000.0,
+        "inner_diameter_m": 0.2,
+        "wall_thickness_m": 0.01,
+        "restraint_coefficient": 1.0
+      },
+      "values": {
+        "wave_speed_m_s": 1344.2070054390929,
+        "rigid_wall_sound_speed_m_s": 1484.725165690698
+      },
+      "input_units": {
+        "density_kg_m3": "kg/m3",
+        "fluid_bulk_modulus_pa": "Pa",
+        "pipe_elastic_modulus_pa": "Pa",
+        "inner_diameter_m": "m",
+        "wall_thickness_m": "m",
+        "restraint_coefficient": "1"
+      },
+      "output_units": {
+        "wave_speed_m_s": "m/s",
+        "rigid_wall_sound_speed_m_s": "m/s"
+      },
+      "assumptions": [
+        "Linear small-disturbance fluid and wall compliance; caller supplies restraint coefficient."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "7e88e540166ff2796a3d4a4a649386d6a282bb085827af2e23314a0963044c28",
+      "model_source_digest": "1908d3b90821fedfdf96225746004a8cc1701c1d5064272db1e904f65533da53",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "805ef7f3db96de8f94a029a423e1d1ef96e5671cedafbd12f9889c1b6e54344f",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "3b6cfe503f3a3b831c15191eedfa3e547fdf274c82f4e365a8c61f7a93a8c86c",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "transient.surge_pulse",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "density_kg_m3": 998.0,
+        "wave_speed_m_s": 1200.0,
+        "initial_velocity_m_s": 1.0,
+        "final_velocity_m_s": 0.0,
+        "length_m": 1000.0,
+        "closure_time_s": 0.5
+      },
+      "values": {
+        "instantaneous_pressure_pulse_pa": 1197600.0,
+        "round_trip_time_s": 1.6666666666666667,
+        "fast_closure": true
+      },
+      "input_units": {
+        "density_kg_m3": "kg/m3",
+        "wave_speed_m_s": "m/s",
+        "initial_velocity_m_s": "m/s",
+        "final_velocity_m_s": "m/s",
+        "length_m": "m",
+        "closure_time_s": "s"
+      },
+      "output_units": {
+        "instantaneous_pressure_pulse_pa": "Pa",
+        "round_trip_time_s": "s",
+        "fast_closure": "bool"
+      },
+      "assumptions": [
+        "Joukowsky pulse scale in a uniform liquid line; not a reflected-wave transient simulation."
+      ],
+      "notes": [
+        "This is a simple-wave pulse scale; reflected waves, cavitation and slow closure require a transient solver."
+      ],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "e0de6c9ab0ceb66330df16601e5004878892645e5a5606c4a7214007e9635c78",
+      "model_source_digest": "d0415c0db4a2c2d373564fa7811d4c77176841a4d2def42bd480a4a154f2d633",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "42c9c6c54a04a27d1e88a246c890116c4fdc1d9a926608d1179708cb969a4863",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "construction.trench_volume",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "bottom_width_m": 1.0,
+        "depth_m": 2.0,
+        "side_slope_horizontal_per_vertical": 0.5,
+        "length_m": 100.0,
+        "loose_volume_ratio": 1.2
+      },
+      "values": {
+        "cross_section_m2": 4.0,
+        "in_place_volume_m3": 400.0,
+        "loose_volume_m3": 480.0
+      },
+      "input_units": {
+        "bottom_width_m": "m",
+        "depth_m": "m",
+        "side_slope_horizontal_per_vertical": "1",
+        "length_m": "m",
+        "loose_volume_ratio": "1"
+      },
+      "output_units": {
+        "cross_section_m2": "m2",
+        "in_place_volume_m3": "m3",
+        "loose_volume_m3": "m3"
+      },
+      "assumptions": [
+        "Uniform declared trench section; soil stability and excavation protections are external requirements."
+      ],
+      "notes": [
+        "Specified geometry does not establish soil stability, safe shoring or excavation compliance."
+      ],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "b46ce47161b02fecb6e16f10b5e784eb680281fb2447b8eec4bca5c6b6acfa50",
+      "model_source_digest": "ba9899822785a7476df356add0c784ab50a48c0ba75364dcfdd4d753228e7b81",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "02fd3e7d7a33d7243a187ba103fd60c167d22c4abfb1e8c636fd7af8546a729f",
+        "model_module_source_sha256": "9e9da1b4c9ce1574055fb128488c446ef7e34facef5ef1b9691ed9d7932c512f",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.pump_power",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "volume_flow_m3_s": 0.02,
+        "density_kg_m3": 998.0,
+        "head_m": 50.0,
+        "pump_efficiency": 0.8,
+        "motor_efficiency": 0.95,
+        "gravity_m_s2": 9.80665
+      },
+      "values": {
+        "hydraulic_power_w": 9787.0367,
+        "shaft_power_w": 12233.795875,
+        "electrical_power_w": 12877.679868421053
+      },
+      "input_units": {
+        "volume_flow_m3_s": "m3/s",
+        "density_kg_m3": "kg/m3",
+        "head_m": "m",
+        "pump_efficiency": "1",
+        "motor_efficiency": "1",
+        "gravity_m_s2": "m/s2"
+      },
+      "output_units": {
+        "hydraulic_power_w": "W",
+        "shaft_power_w": "W",
+        "electrical_power_w": "W"
+      },
+      "assumptions": [
+        "Steady liquid flow and independently declared pump/motor efficiencies."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "83ecccc54bbbc3d38176ef43178b39aa6d2aa1cea2b8c19493883d9be1c18bf8",
+      "model_source_digest": "6907fac9ebff30712d169bd411d06e017f9edd718de55cf1501320ea62b2734d",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "6fd3278769ecced3a192e2a0bc8475ef4d4e6e726dc2b828e298266e2340f68a",
+        "model_module_source_sha256": "5b1e8d9e57761bce6567f90347ca4043e8f7aa1ec62e4cfe1ffb0b8ca4dfa42a",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.pump_affinity",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "reference_flow_m3_s": 0.02,
+        "reference_head_m": 50.0,
+        "reference_power_w": 15000.0,
+        "speed_ratio": 0.9,
+        "geometric_diameter_ratio": 1.0
+      },
+      "values": {
+        "flow_m3_s": 0.018000000000000002,
+        "head_m": 40.5,
+        "power_w": 10935.000000000002
+      },
+      "input_units": {
+        "reference_flow_m3_s": "m3/s",
+        "reference_head_m": "m",
+        "reference_power_w": "W",
+        "speed_ratio": "1",
+        "geometric_diameter_ratio": "1"
+      },
+      "output_units": {
+        "flow_m3_s": "m3/s",
+        "head_m": "m",
+        "power_w": "W"
+      },
+      "assumptions": [
+        "Geometrically similar pumps with unchanged efficiency; not a generic impeller-trim model."
+      ],
+      "notes": [
+        "Assumes similar geometry and unchanged efficiency; impeller trimming needs a separate vendor model."
+      ],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "1c5c57b50ccb198086768285044d492efccd1f8f8650bda44846a14fda3a2147",
+      "model_source_digest": "96af174c1e544eb790a8b2209e06113157c9fc3c58b1863700213060d5f742cf",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "f59ceea6e4f8e78ed9159d10cb15f6af3d2e31c3a55c595e614999566d6b3f46",
+        "model_module_source_sha256": "5b1e8d9e57761bce6567f90347ca4043e8f7aa1ec62e4cfe1ffb0b8ca4dfa42a",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.pump_npsh",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "surface_pressure_pa_abs": 101325.0,
+        "vapour_pressure_pa_abs": 3500.0,
+        "density_kg_m3": 998.0,
+        "surface_above_pump_m": 2.0,
+        "suction_head_loss_m": 1.0,
+        "vendor_required_npsh_m": 3.0,
+        "gravity_m_s2": 9.80665
+      },
+      "values": {
+        "available_npsh_m": 10.995364582621828,
+        "declared_margin_m": 7.9953645826218285
+      },
+      "input_units": {
+        "surface_pressure_pa_abs": "Pa_abs",
+        "vapour_pressure_pa_abs": "Pa_abs",
+        "density_kg_m3": "kg/m3",
+        "surface_above_pump_m": "m",
+        "suction_head_loss_m": "m",
+        "vendor_required_npsh_m": "m",
+        "gravity_m_s2": "m/s2"
+      },
+      "output_units": {
+        "available_npsh_m": "m",
+        "declared_margin_m": "m"
+      },
+      "assumptions": [
+        "Steady suction energy budget with a declared surface pressure, vapour pressure and vendor NPSH."
+      ],
+      "notes": [
+        "Vendor required NPSH and the chosen margin criterion remain external reviewed inputs."
+      ],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "ccb018734d9ae84a9e103b622175ccfa1db0634fe71d2654e097dca67156d531",
+      "model_source_digest": "c4f7023c50033849ab2106526026c0780424a3fef711b308627356df8946e47c",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "421fb9e26174a22afefe4e418c3d55c53a9489f4ddeed2ae28bebf053e82165c",
+        "model_module_source_sha256": "5b1e8d9e57761bce6567f90347ca4043e8f7aa1ec62e4cfe1ffb0b8ca4dfa42a",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.compression",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "fluid": "Nitrogen",
+        "inlet_pressure_pa_abs": 200000.0,
+        "inlet_temperature_k": 300.0,
+        "outlet_pressure_pa_abs": 600000.0,
+        "mass_flow_kg_s": 1.0,
+        "isentropic_efficiency": 0.8
+      },
+      "values": {
+        "specific_work_j_kg": 143723.65721362692,
+        "shaft_power_w": 143723.65721362692,
+        "outlet_temperature_k": 437.86744785021324,
+        "outlet_enthalpy_j_kg": 454699.5102568832
+      },
+      "input_units": {
+        "fluid": "fluid_identifier",
+        "inlet_pressure_pa_abs": "Pa_abs",
+        "inlet_temperature_k": "K",
+        "outlet_pressure_pa_abs": "Pa_abs",
+        "mass_flow_kg_s": "kg/s",
+        "isentropic_efficiency": "1"
+      },
+      "output_units": {
+        "specific_work_j_kg": "J/kg",
+        "shaft_power_w": "W",
+        "outlet_temperature_k": "K",
+        "outlet_enthalpy_j_kg": "J/kg"
+      },
+      "assumptions": [
+        "Steady adiabatic single-phase compression with declared isentropic efficiency."
+      ],
+      "notes": [
+        "Adiabatic steady compressor; no intercooler, stage map or mechanical losses are inferred."
+      ],
+      "source_ids": [
+        "https://coolprop.org/coolprop/HighLevelAPI.html"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "0357e912eb904a86f002d52e51d578a980da96e0f02da7e414a3685ba2693ecf",
+      "model_source_digest": "c2082de83599d3c2d866d0cb9adc63ea865f0a176b3433ccd03d0825b468b468",
+      "runtime": {
+        "python": "3.12.14",
+        "CoolProp": "8.0.0",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "d7493bf4d69910f4613d8f50283b33c795116d3ae4718d02896d0ab7c03ce57e",
+        "model_module_source_sha256": "5b1e8d9e57761bce6567f90347ca4043e8f7aa1ec62e4cfe1ffb0b8ca4dfa42a",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "7bc3bbef58d4d9760b8645958397460faf44a63a57d072045523097155aff3b9",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "instrument.liquid_dp_meter",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "pipe_diameter_m": 0.2,
+        "opening_diameter_m": 0.1,
+        "pressure_difference_pa": 10000.0,
+        "density_kg_m3": 998.0,
+        "discharge_coefficient": 0.61
+      },
+      "values": {
+        "volume_flow_m3_s": 0.022150513843847346,
+        "mass_flow_kg_s": 22.10621281615965,
+        "diameter_ratio": 0.5
+      },
+      "input_units": {
+        "pipe_diameter_m": "m",
+        "opening_diameter_m": "m",
+        "pressure_difference_pa": "Pa",
+        "density_kg_m3": "kg/m3",
+        "discharge_coefficient": "1"
+      },
+      "output_units": {
+        "volume_flow_m3_s": "m3/s",
+        "mass_flow_kg_s": "kg/s",
+        "diameter_ratio": "1"
+      },
+      "assumptions": [
+        "Incompressible single-phase flow with externally reviewed discharge coefficient and geometry."
+      ],
+      "notes": [
+        "Single-phase incompressible differential-pressure relation; coefficient and cavitation applicability are reviewed upstream."
+      ],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "21eb2939e638eaf7f6d1231a9f5f4019539b03d2cf2b11eb7305f28693ab0949",
+      "model_source_digest": "1005ccf1bdcfbe53058c0d45ffe6b6c57e9d668dcb1543934d6009649b113089",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "327c64814a3c8a48e19b565862e95537aa2d99f07ff3de077bb52f06bdaa6ad4",
+        "model_module_source_sha256": "5b1e8d9e57761bce6567f90347ca4043e8f7aa1ec62e4cfe1ffb0b8ca4dfa42a",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "3b6cfe503f3a3b831c15191eedfa3e547fdf274c82f4e365a8c61f7a93a8c86c",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "inventory.uniform",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "fluid": "Methane",
+        "pressure_pa_abs": 5000000.0,
+        "temperature_k": 290.0,
+        "internal_volume_m3": 100.0,
+        "reference_pressure_pa_abs": 101325.0,
+        "reference_temperature_k": 288.15
+      },
+      "values": {
+        "density_kg_m3": 36.64412092199161,
+        "mass_kg": 3664.4120921991607,
+        "reference_volume_m3": 5390.1545420668745,
+        "specific_enthalpy_j_kg": 839639.0787547791
+      },
+      "input_units": {
+        "fluid": "fluid_identifier",
+        "pressure_pa_abs": "Pa_abs",
+        "temperature_k": "K",
+        "internal_volume_m3": "m3",
+        "reference_pressure_pa_abs": "Pa_abs",
+        "reference_temperature_k": "K"
+      },
+      "output_units": {
+        "density_kg_m3": "kg/m3",
+        "mass_kg": "kg",
+        "reference_volume_m3": "m3",
+        "specific_enthalpy_j_kg": "J/kg"
+      },
+      "assumptions": [
+        "Uniform single-phase actual and reference states; no unknown phase or stratification inferred."
+      ],
+      "notes": [
+        "Uniform state inventory; spatially varying pipe states require segment integration."
+      ],
+      "source_ids": [
+        "https://coolprop.org/coolprop/HighLevelAPI.html"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "feb7bde34d5c75e2dc246a8f6695ac83549d0da3bd474b5d3db1ff0648584c44",
+      "model_source_digest": "c3f0fc79da55072c515abfa815ee82e0103d821accf055e03f3b8b3789de3301",
+      "runtime": {
+        "python": "3.12.14",
+        "CoolProp": "8.0.0",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "c1aae6fd3aae66c58683eb4a1fa60579eda57155ed7a3418f27aee90dad54710",
+        "model_module_source_sha256": "ed415c346a7cb0fb2517c2758a4c1e7cfb5802a2288fac21716b35ccbdc4b131",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "7bc3bbef58d4d9760b8645958397460faf44a63a57d072045523097155aff3b9",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "thermal.flow_cooling",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "inlet_temperature_k": 350.0,
+        "ambient_temperature_k": 290.0,
+        "mass_flow_kg_s": 1.0,
+        "specific_heat_j_kg_k": 4200.0,
+        "conductance_w_k": 100.0
+      },
+      "values": {
+        "outlet_temperature_k": 348.5883011991346,
+        "heat_loss_w": 5929.134963634659
+      },
+      "input_units": {
+        "inlet_temperature_k": "K",
+        "ambient_temperature_k": "K",
+        "mass_flow_kg_s": "kg/s",
+        "specific_heat_j_kg_k": "J/(kg*K)",
+        "conductance_w_k": "W/K"
+      },
+      "output_units": {
+        "outlet_temperature_k": "K",
+        "heat_loss_w": "W"
+      },
+      "assumptions": [
+        "Constant ambient, heat capacity and total conductance without phase change."
+      ],
+      "notes": [],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "55255b9e680cb44bd1208dab9f868be16184aaa49471161de80179e6060b7ef2",
+      "model_source_digest": "77a50ab0bbd77e21f9a6c7d4cf21d575bd8bad881cc31cc2bd89acd3703cd8c0",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "d084af166edae8619b341e1c46bc054b15705f987c502ca6000fead2de585261",
+        "model_module_source_sha256": "ed415c346a7cb0fb2517c2758a4c1e7cfb5802a2288fac21716b35ccbdc4b131",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "3b6cfe503f3a3b831c15191eedfa3e547fdf274c82f4e365a8c61f7a93a8c86c",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "thermal.free_expansion",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "reference_length_m": 100.0,
+        "linear_expansion_per_k": 1.2e-05,
+        "reference_temperature_k": 290.0,
+        "operating_temperature_k": 350.0
+      },
+      "values": {
+        "free_length_change_m": 0.07200000000000001,
+        "operating_length_m": 100.072
+      },
+      "input_units": {
+        "reference_length_m": "m",
+        "linear_expansion_per_k": "1/K",
+        "reference_temperature_k": "K",
+        "operating_temperature_k": "K"
+      },
+      "output_units": {
+        "free_length_change_m": "m",
+        "operating_length_m": "m"
+      },
+      "assumptions": [
+        "Small linear unrestrained expansion with a declared coefficient."
+      ],
+      "notes": [
+        "Unrestrained linear expansion; support loads and stress belong to a structural model."
+      ],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "4a94c8a364d4e8abad8b6be0d9b53feccd9440d94131984e6889fd47aa0d41a1",
+      "model_source_digest": "737f47bc9f8fb69f3e68410a02045158da322230c60e77ad666c75bda373ab96",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "c3a27cf0d3d4f08a5371c15988ba1168deea559d7cf4b97033a16c48018c1b1f",
+        "model_module_source_sha256": "ed415c346a7cb0fb2517c2758a4c1e7cfb5802a2288fac21716b35ccbdc4b131",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "economics.cashflow",
+      "model_version": "2",
+      "status": "computed",
+      "inputs": {
+        "cashflows": [
+          -100000.0,
+          40000.0,
+          40000.0,
+          40000.0
+        ],
+        "discount_rate_per_period": 0.05,
+        "period_duration_s": 31557600.0,
+        "currency": "USD",
+        "price_year": 2026,
+        "times_s": null
+      },
+      "values": {
+        "net_present_value": 8929.921174819137,
+        "discounted_cashflows": [
+          -100000.0,
+          38095.23809523809,
+          36281.179138322,
+          34553.50394125905
+        ],
+        "undiscounted_sum": 20000.0
+      },
+      "input_units": {
+        "cashflows": "declared_currency",
+        "discount_rate_per_period": "1",
+        "period_duration_s": "s",
+        "currency": "currency_identifier",
+        "price_year": "calendar_year",
+        "times_s": "s"
+      },
+      "output_units": {
+        "net_present_value": "declared_currency",
+        "discounted_cashflows": "declared_currency",
+        "undiscounted_sum": "declared_currency"
+      },
+      "assumptions": [
+        "Explicit elapsed times or uniform periods with time-zero first cashflow; no cost-year or currency conversion."
+      ],
+      "notes": [
+        "Absent explicit times, the first cashflow is at time zero in uniform periods; no currency conversion or escalation is inferred."
+      ],
+      "source_ids": [
+        "https://numpy.org/numpy-financial/latest/npv.html"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "cf4d56fff7bb40e1ede4f809779363a78a571d03caa3d1f133136794f250d86c",
+      "model_source_digest": "eb163216f9301fd3360765086c794003c8aca0344a448f2d4c5ce719d98dfed0",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "0c29a8563534800612b0f16e0b1bd527f5586b26186ce96000b3694ce659b905",
+        "model_module_source_sha256": "7f07814ae7be2615d233249c36edcf272286d4172e824f1be7f4a444bedf13f2",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "3b6cfe503f3a3b831c15191eedfa3e547fdf274c82f4e365a8c61f7a93a8c86c",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "economics.energy",
+      "model_version": "2",
+      "status": "computed",
+      "inputs": {
+        "electrical_power_w": 10000.0,
+        "operating_duration_s": 3600.0,
+        "price_per_kwh": 0.1,
+        "emission_kg_co2e_per_kwh": 0.4,
+        "currency": "USD",
+        "factor_source": "caller_declared_demo_not_regional_defaults"
+      },
+      "values": {
+        "energy_kwh": 10.0,
+        "energy_cost": 1.0,
+        "declared_emissions_kg_co2e": 4.0
+      },
+      "input_units": {
+        "electrical_power_w": "W",
+        "operating_duration_s": "s",
+        "price_per_kwh": "declared_currency/kWh",
+        "emission_kg_co2e_per_kwh": "kg_CO2e/kWh",
+        "currency": "currency_identifier",
+        "factor_source": "evidence_identifier"
+      },
+      "output_units": {
+        "energy_kwh": "kWh",
+        "energy_cost": "declared_currency",
+        "declared_emissions_kg_co2e": "kg_CO2e"
+      },
+      "assumptions": [
+        "Supplied duty, signed tariff and emissions factor; unknown factors remain null; not a lifecycle result."
+      ],
+      "notes": [
+        "A declared operational-energy inventory, not a complete lifecycle assessment."
+      ],
+      "source_ids": [
+        "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "2f161155320b2f4d4f3a977945ea33ddc0af1b2e77ddfc50c0b2580dbcdc6050",
+      "model_source_digest": "15965cc98cb220bee48a0f0118eae47071b39a63a3ca18821db1ee2641530707",
+      "runtime": {
+        "python": "3.12.14",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "c32e1d21fe5314576e26f0dfafac2bedb409caff939f768fcca55c8ddf18b685",
+        "model_module_source_sha256": "7f07814ae7be2615d233249c36edcf272286d4172e824f1be7f4a444bedf13f2",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "thermal.internal_convection",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "reynolds": 100000.0,
+        "prandtl": 7.0,
+        "diameter_m": 0.2,
+        "conductivity_w_m_k": 0.6,
+        "relative_roughness": 0.0,
+        "method": "Gnielinski"
+      },
+      "values": {
+        "nusselt": 599.0142659679614,
+        "coefficient_w_m2_k": 1797.0427979038839
+      },
+      "input_units": {
+        "reynolds": "1",
+        "prandtl": "1",
+        "diameter_m": "m",
+        "conductivity_w_m_k": "W/(m*K)",
+        "relative_roughness": "1",
+        "method": "selection"
+      },
+      "output_units": {
+        "nusselt": "1",
+        "coefficient_w_m2_k": "W/(m2*K)"
+      },
+      "assumptions": [
+        "Single-phase internal flow with independently checked thermal boundary and regime."
+      ],
+      "notes": [
+        "A regime lookup is not a complete check of entrance length, wall condition or property variation."
+      ],
+      "source_ids": [
+        "https://ht.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "36166e02753203ff36b34e7b620a7e020d24a11180fef5e4755a62cb743bd261",
+      "model_source_digest": "dee2ade64bf72950f427753b15d08200c8842bb41aa50eeb3a4af3124a1e43b8",
+      "runtime": {
+        "python": "3.12.14",
+        "ht": "1.2.0",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "ae0ded96ecd63039145fde24f054193d3a70853ab3f26869eec037dbfa2d9963",
+        "model_module_source_sha256": "f6fa533c2ce2aada14000203e748998fe13b35725956a1fbf3b3e0ef6ea18f30",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.control_valve_liquid",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "density_kg_m3": 998.0,
+        "vapour_pressure_pa_abs": 3500.0,
+        "critical_pressure_pa_abs": 22064000.0,
+        "viscosity_pa_s": 0.001,
+        "inlet_pressure_pa_abs": 500000.0,
+        "outlet_pressure_pa_abs": 300000.0,
+        "volume_flow_m3_s": 0.01,
+        "inlet_diameter_m": 0.15,
+        "outlet_diameter_m": 0.15,
+        "valve_diameter_m": 0.1,
+        "pressure_recovery_factor": 0.9,
+        "valve_style_factor": 0.46
+      },
+      "values": {
+        "kv": 25.465599227318563,
+        "diagnostics": {
+          "FLP": 0.8985924312103021,
+          "FP": 0.9990648486629584,
+          "FR": null,
+          "FF": 0.9564734509469808,
+          "choked": false,
+          "Kv": 25.465599227318563,
+          "laminar": false,
+          "Rev": 244222.40217627515
+        }
+      },
+      "input_units": {
+        "density_kg_m3": "kg/m3",
+        "vapour_pressure_pa_abs": "Pa_abs",
+        "critical_pressure_pa_abs": "Pa_abs",
+        "viscosity_pa_s": "Pa*s",
+        "inlet_pressure_pa_abs": "Pa_abs",
+        "outlet_pressure_pa_abs": "Pa_abs",
+        "volume_flow_m3_s": "m3/s",
+        "inlet_diameter_m": "m",
+        "outlet_diameter_m": "m",
+        "valve_diameter_m": "m",
+        "pressure_recovery_factor": "1",
+        "valve_style_factor": "1"
+      },
+      "output_units": {
+        "kv": "Kv_conventional_m3/h",
+        "diagnostics": "structured_library_diagnostics"
+      },
+      "assumptions": [
+        "Library sizing correlation with explicitly supplied manufacturer factors and diameters."
+      ],
+      "notes": [
+        "Kv is the conventional water coefficient in m3/h at a 1-bar drop, not an SI volumetric conductance.",
+        "Manufacturer coefficients and installed behavior need independent confirmation."
+      ],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "6aa0a15db1f8a99a8f6ab518c1f23a23251410a34f7c441b58a5afc5d52900f8",
+      "model_source_digest": "031cec4deeaccdfc2c0ac5baab40717455e628ac792e7d5b3129fafee4a26dca",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "018797ca71cf9d325ef152a9810c8099b1f9ad5401d89565e8a364b8bacc04c6",
+        "model_module_source_sha256": "f6fa533c2ce2aada14000203e748998fe13b35725956a1fbf3b3e0ef6ea18f30",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.control_valve_gas",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "temperature_k": 300.0,
+        "molar_mass_kg_mol": 0.0280134,
+        "viscosity_pa_s": 1.8e-05,
+        "heat_capacity_ratio": 1.4,
+        "compressibility": 1.0,
+        "inlet_pressure_pa_abs": 500000.0,
+        "outlet_pressure_pa_abs": 300000.0,
+        "standard_volume_flow_m3_s": 0.1,
+        "reference_temperature_k": 273.15,
+        "reference_pressure_pa_abs": 101325.0,
+        "inlet_diameter_m": 0.15,
+        "outlet_diameter_m": 0.15,
+        "valve_diameter_m": 0.1,
+        "pressure_recovery_factor": 0.9,
+        "valve_style_factor": 0.46,
+        "terminal_pressure_ratio_factor": 0.7
+      },
+      "values": {
+        "kv": 5.240811761724379,
+        "diagnostics": {
+          "FP": 0.9999602686795726,
+          "xTP": 0.6999840963768651,
+          "FR": null,
+          "choked": false,
+          "Y": 0.8095238095238095,
+          "Rev": 1681816.8623499132,
+          "Kv": 5.240811761724379,
+          "laminar": false
+        }
+      },
+      "input_units": {
+        "temperature_k": "K",
+        "molar_mass_kg_mol": "kg/mol",
+        "viscosity_pa_s": "Pa*s",
+        "heat_capacity_ratio": "1",
+        "compressibility": "1",
+        "inlet_pressure_pa_abs": "Pa_abs",
+        "outlet_pressure_pa_abs": "Pa_abs",
+        "standard_volume_flow_m3_s": "m3/s",
+        "reference_temperature_k": "K",
+        "reference_pressure_pa_abs": "Pa_abs",
+        "inlet_diameter_m": "m",
+        "outlet_diameter_m": "m",
+        "valve_diameter_m": "m",
+        "pressure_recovery_factor": "1",
+        "valve_style_factor": "1",
+        "terminal_pressure_ratio_factor": "1"
+      },
+      "output_units": {
+        "kv": "Kv_conventional_m3/h",
+        "diagnostics": "structured_library_diagnostics"
+      },
+      "assumptions": [
+        "Gas reference volume at 273.15 K and 101325 Pa; explicit manufacturer factors."
+      ],
+      "notes": [
+        "Gas reference flow is specifically at 273.15 K and 101325 Pa; no other normal-volume convention is substituted."
+      ],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "98dbc73da682a87c4fcfe643c6df47160b621c688a6e3a942b64624cb3a58e68",
+      "model_source_digest": "4ebe75459acb72f58a594cd1e2c15f8ada0ece256bd276b655c00b432b53cdaf",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "246078437cd7fa24aeacfbfa4267a9fafefb98bc4863d4907183e251d75f2c03",
+        "model_module_source_sha256": "f6fa533c2ce2aada14000203e748998fe13b35725956a1fbf3b3e0ef6ea18f30",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.relief_gas",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "mass_flow_kg_s": 1.0,
+        "temperature_k": 350.0,
+        "compressibility": 1.0,
+        "molar_mass_kg_mol": 0.0280134,
+        "heat_capacity_ratio": 1.4,
+        "relieving_pressure_pa_abs": 1000000.0,
+        "back_pressure_pa_abs": 101325.0,
+        "discharge_coefficient": 0.975,
+        "back_pressure_factor": 1.0,
+        "combination_factor": 1.0
+      },
+      "values": {
+        "required_area_m2": 0.0004827825588706865
+      },
+      "input_units": {
+        "mass_flow_kg_s": "kg/s",
+        "temperature_k": "K",
+        "compressibility": "1",
+        "molar_mass_kg_mol": "kg/mol",
+        "heat_capacity_ratio": "1",
+        "relieving_pressure_pa_abs": "Pa_abs",
+        "back_pressure_pa_abs": "Pa_abs",
+        "discharge_coefficient": "1",
+        "back_pressure_factor": "1",
+        "combination_factor": "1"
+      },
+      "output_units": {
+        "required_area_m2": "m2"
+      },
+      "assumptions": [
+        "Single-phase gas correlation; declared coefficients, back pressure and relieving load."
+      ],
+      "notes": [
+        "External Fluids correlation only; relief scenarios, certified devices and complete standards compliance are outside this result."
+      ],
+      "source_ids": [
+        "https://fluids.readthedocs.io/"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "5e1dadabe36b1c64063bfe434ce49c4aa1372e4995a25010e19f3e5a1b092ced",
+      "model_source_digest": "498aae0cac60817a8c3d9d55a48ed0c23ffb144db2ffcd05325f2f3ea9268c40",
+      "runtime": {
+        "python": "3.12.14",
+        "fluids": "1.3.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "f472d5698916aec8a29e2fa79888545a534ecb392d6ea2ea57eec59c4be2a265",
+        "model_module_source_sha256": "f6fa533c2ce2aada14000203e748998fe13b35725956a1fbf3b3e0ef6ea18f30",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "a5441eef8ffbfa29b9e0c1b0714bd3c932c6a86c0e05eefcf6c169854d8d9e2a",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "equipment.pump_system",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "reference_curve": {
+          "volume_flow_m3_s": [
+            0.0,
+            0.01,
+            0.02
+          ],
+          "head_m": [
+            60.0,
+            40.0,
+            20.0
+          ],
+          "source_id": "synthetic_linear_reference"
+        },
+        "static_head_m": 20.0,
+        "resistance_head_s2_m5": 200000.0,
+        "parallel_pumps": 1,
+        "series_pumps": 1,
+        "speed_ratio": 1.0,
+        "geometric_diameter_ratio": 1.0,
+        "density_kg_m3": 1000.0,
+        "pump_efficiency": 0.8,
+        "motor_efficiency": 0.9,
+        "gravity_m_s2": 9.80665
+      },
+      "values": {
+        "volume_flow_m3_s": 0.009999999999999998,
+        "total_head_m": 39.99999999999999,
+        "flow_per_parallel_branch_m3_s": 0.009999999999999998,
+        "head_per_series_stage_m": 39.99999999999999,
+        "head_intersection_residual_m": 7.105427357601002e-15,
+        "hydraulic_power_w": 3922.6599999999985,
+        "shaft_power_w": 4903.324999999998,
+        "electrical_power_w": 5448.138888888887
+      },
+      "input_units": {
+        "reference_curve": "flow_head_curve_SI",
+        "static_head_m": "m",
+        "resistance_head_s2_m5": "s2/m5",
+        "parallel_pumps": "1",
+        "series_pumps": "1",
+        "speed_ratio": "1",
+        "geometric_diameter_ratio": "1",
+        "density_kg_m3": "kg/m3",
+        "pump_efficiency": "1",
+        "motor_efficiency": "1",
+        "gravity_m_s2": "m/s2"
+      },
+      "output_units": {
+        "volume_flow_m3_s": "m3/s",
+        "total_head_m": "m",
+        "flow_per_parallel_branch_m3_s": "m3/s",
+        "head_per_series_stage_m": "m",
+        "head_intersection_residual_m": "m",
+        "hydraulic_power_w": "W",
+        "shaft_power_w": "W",
+        "electrical_power_w": "W"
+      },
+      "assumptions": [
+        "Caller-owned monotone pump curve and static-plus-quadratic system head.",
+        "Identical series/parallel pumps and declared constant efficiencies."
+      ],
+      "notes": [
+        "Identical pumps, forward monotone branch; declared static/quadratic head plus optional reviewed serial-pipe losses at the solved common flow.",
+        "PCHIP interpolation preserves the supplied branch shape; data are never extrapolated.",
+        "Similar geometry and declared constant efficiencies; no surge, cavitation or actuator dynamics qualification."
+      ],
+      "source_ids": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.PchipInterpolator.html"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "90deff0a396996376e1173be73a6c7d94cb3f7ba69cf6541f1df48f30975500a",
+      "model_source_digest": "23426d73d89721028dbb738ef37badaed34b5d1bad6d5742795f8a0dabe4e61a",
+      "runtime": {
+        "python": "3.12.14",
+        "scipy": "1.18.1",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "f72e092c01435ff300e86f5ec13a2c4e335fb02c0060ccd5895e58e7c43406f7",
+        "model_module_source_sha256": "2d3ae70d4ea639853093f2529e5cacf29536d82fe64050ac67696a6649c2dee0",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "33b8669d4c67ca9b9e8356304b76ef1c23232bfac56a98fad3d7e1c4f174c060",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    },
+    {
+      "schema_version": "pipeline_integrity.result.v1",
+      "model_id": "inventory.segmented",
+      "model_version": "1",
+      "status": "computed",
+      "inputs": {
+        "fluid": "Methane",
+        "segments": [
+          {
+            "id": "upstream",
+            "pressure_pa_abs": 6000000.0,
+            "temperature_k": 300.0,
+            "internal_volume_m3": 50.0
+          },
+          {
+            "id": "downstream",
+            "pressure_pa_abs": 4000000.0,
+            "temperature_k": 290.0,
+            "internal_volume_m3": 50.0
+          }
+        ],
+        "reference_pressure_pa_abs": 101325.0,
+        "reference_temperature_k": 288.15
+      },
+      "values": {
+        "total_mass_kg": 3569.9572306353166,
+        "total_internal_volume_m3": 100.0,
+        "reference_volume_m3": 5251.216483718446,
+        "mass_weighted_enthalpy_j_kg": 853388.4718990787,
+        "total_internal_energy_j": 2546560345.79694,
+        "segment_results": [
+          {
+            "id": "upstream",
+            "volume_m3": 50.0,
+            "mass_kg": 2132.1225325621244,
+            "density_kg_m3": 42.642450651242484,
+            "enthalpy_j_kg": 855284.8842936999,
+            "internal_energy_j": 1523572173.562387,
+            "phase": "supercritical"
+          },
+          {
+            "id": "downstream",
+            "volume_m3": 50.0,
+            "mass_kg": 1437.8346980731922,
+            "density_kg_m3": 28.756693961463842,
+            "enthalpy_j_kg": 850576.3380682423,
+            "internal_energy_j": 1022988172.2345526,
+            "phase": "supercritical_gas"
+          }
+        ]
+      },
+      "input_units": {
+        "fluid": "fluid_identifier",
+        "segments": "inventory_segments_SI",
+        "reference_pressure_pa_abs": "Pa_abs",
+        "reference_temperature_k": "K"
+      },
+      "output_units": {
+        "total_mass_kg": "kg",
+        "total_internal_volume_m3": "m3",
+        "reference_volume_m3": "m3",
+        "mass_weighted_enthalpy_j_kg": "J/kg",
+        "total_internal_energy_j": "J",
+        "segment_results": "inventory_segment_results_SI"
+      },
+      "assumptions": [
+        "Caller supplies resolved spatial segments and a common fluid/property reference.",
+        "Every state is individually single phase; no transport or interface motion is inferred."
+      ],
+      "notes": [
+        "Snapshot sum of resolved uniform segments; pressure and temperature gradients come from the caller.",
+        "Stored internal energy uses u=h-P/rho on a common property reference; kinetic and gravitational energy are excluded.",
+        "This inventory integration is not a transient transport or phase-interface solver."
+      ],
+      "source_ids": [
+        "https://coolprop.org/coolprop/HighLevelAPI.html"
+      ],
+      "context": {
+        "asset_id": "demo_pipe_01",
+        "scenario_id": "declared_parameter_example",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "input_digest": "5a8084b5ba5e02767bd68d17bdeb9447401b7dcfd6f0abe46a07cf951f64c86a",
+      "model_source_digest": "6d10bc3438397e9e8b114b7c63d96580816653166fc2ccec3e93ca8bb8a3b47a",
+      "runtime": {
+        "python": "3.12.14",
+        "CoolProp": "8.0.0",
+        "source_fingerprint_schema": "pipeline_integrity.model_source.v3",
+        "model_callable_source_sha256": "93abfe1a6c1ff8a11970da432d29f0fe6b71c221b6f82b641c73b535afcb13bb",
+        "model_module_source_sha256": "ed415c346a7cb0fb2517c2758a4c1e7cfb5802a2288fac21716b35ccbdc4b131",
+        "model_source_scope": "callable_source_and_module_bytes_and_callable_binding_partial",
+        "callable_binding_sha256": "11dca3b38f184ddb727c4be777ba40e4654c43dae159bfe0ba76a15c246f8009",
+        "callable_binding_scope": "partial"
+      },
+      "qualification": "engineering_screening"
+    }
+  ],
+  "field_validation_claim": false
+}

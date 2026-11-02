@@ -1,0 +1,42 @@
+{
+  "schema": "pipeline_integrity.handover_consistency_audit.v1",
+  "passed": true,
+  "checks": {
+    "data_summary_recomputes": true,
+    "scope_count_matches_catalog": true,
+    "scope_states_match_catalog": true,
+    "confirmed_count_matches_states": true,
+    "confirmed_total_matches_catalog": true,
+    "confirmed_percent_matches_catalog": true,
+    "extension_ids_are_contiguous": true,
+    "extension_document_count_matches": true,
+    "requirements_data_fact_is_current": true,
+    "requirements_request_fact_is_current": true,
+    "status_progress_fact_is_current": true,
+    "dataset_crosswalk_matches_catalog_and_acquisition": true,
+    "dataset_crosswalk_preserves_unresolved_equivalence": true
+  },
+  "authoritative_facts": {
+    "data": {
+      "candidate_families": 57,
+      "acquired_families": 49,
+      "acquired_files": 252,
+      "acquired_bytes": 11047623204
+    },
+    "capabilities": 201,
+    "states": {
+      "implemented": 36,
+      "interface_verified": 99,
+      "partial": 37,
+      "procedure_required": 29
+    },
+    "confirmed_scope": {
+      "completed": 135,
+      "total": 201,
+      "percent": 67.2
+    },
+    "extension_requests": 15,
+    "dataset_crosswalk_records": 3
+  },
+  "tests_executed": 0
+}

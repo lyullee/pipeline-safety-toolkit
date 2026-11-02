@@ -1,0 +1,29 @@
+{
+  "schema": "pipeline_integrity.field_source_application_status.v1",
+  "kind": "actual_source_reading_not_numerical_model_validation",
+  "files": [
+    {
+      "filename": "Q_P_46_Leak2.xlsx",
+      "source_rows": 46,
+      "excluded_source_rows": 8,
+      "original_sha256": "9380a23b5d11b7448989f97dad34d3c501084dd5effe8c9713ba51648735b6df",
+      "reader_record_digest": "e289ca30c6e44db16d7ea118b811b0d012834bc756262cc311b39e4abaf2f8bd",
+      "source_relative_clock_resolved": true,
+      "utc_assigned": false,
+      "pressure_converted_to_Pa": false
+    },
+    {
+      "filename": "Q_P_80_Leak1.xlsx",
+      "source_rows": 80,
+      "excluded_source_rows": 8,
+      "original_sha256": "a291d351079dc83ee8844b1c90011f2eaf00bb5d6f90ece55e98478acfb70315",
+      "reader_record_digest": "40e01d76e7573e583ff8978c0da96748ca169199fdf48b62fc4c960e147fc8a4",
+      "source_relative_clock_resolved": true,
+      "utc_assigned": false,
+      "pressure_converted_to_Pa": false
+    }
+  ],
+  "source_observations_read": 126,
+  "hydraulic_fit_or_detector_training_executed": false,
+  "tests_executed": 0
+}

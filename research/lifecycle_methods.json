@@ -1,0 +1,20 @@
+{
+  "schema": "pipeline_integrity.lifecycle_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "primary_sources": [
+    "https://www.nist.gov/services-resources/software/building-life-cycle-cost-programs",
+    "https://blcc.nist.gov/",
+    "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems"
+  ],
+  "adoption": "Reuse and extend existing economics.cashflow/economics.energy primitives. Add declared lifecycle ledgers, equivalent-service/basis checks, separate undiscounted CO2e inventory and explicit source valuations.",
+  "existing_primitive_versions": {
+    "economics.cashflow": "2",
+    "economics.energy": "2"
+  },
+  "external_tools_reviewed": "Current NIST BLCC public resources were inspected as a comparison context; no government tool, prescribed rate, cost/emission table or example was copied.",
+  "new_runtime_dependency": false,
+  "independent_fictional_inputs": true,
+  "raw_or_transformed_observations_distributed": false,
+  "market_price_or_discount_rate_recommendation": false,
+  "full_lca_or_independent_field_economic_validation": false
+}

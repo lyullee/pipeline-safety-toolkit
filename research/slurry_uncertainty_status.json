@@ -1,0 +1,15 @@
+{
+  "schema": "pipeline_integrity.slurry_uncertainty_status.v1",
+  "implementation": "pipeline_integrity.slurry_uncertainty.slurry_transport_node",
+  "reuses": "pipeline_integrity.uncertainty.evaluate_ensemble and pipeline_integrity.slurry_transport.evaluate_slurry_transport",
+  "authored_regression_functions": 3,
+  "numerical_tests_executed": 0,
+  "nurion_submitted": false,
+  "field_qualified": false,
+  "notes": [
+    "Exact-unit bindings are allowlisted; no implicit unit conversion or expression evaluation.",
+    "Dimension-dependent consistency coefficient and rheology-law switches are not sample bindings.",
+    "Unresolved draw weight remains needs_data; owner applicability failures remain out_of_scope.",
+    "Ensemble summaries are finite-design descriptions and do not estimate operational failure probability or independent-trial confidence intervals."
+  ]
+}

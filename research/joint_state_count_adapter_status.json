@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.joint_state_count_adapter_status.v1",
+  "date": "2026-10-28",
+  "state": "implemented_static_validation_pending",
+  "contracts": [
+    "JointStateCount",
+    "JointStateCountTable",
+    "joint_states_from_counts",
+    "fault_tree_request_from_joint_counts",
+    "verify_joint_state_count_receipt"
+  ],
+  "behavior": [
+    "requires exact Boolean event keys and nonduplicated observed states",
+    "preserves condition, opportunity, population, grouping unit, evidence and source digest",
+    "normalizes positive integer counts only",
+    "binds the result to the existing joint-state FTA owner request"
+  ],
+  "common_cause_model_fitted": false,
+  "sampling_uncertainty_quantified": false,
+  "field_validation_claim": false,
+  "fault_tree_request_lineage": "joint_state_receipt_digest",
+  "owner_extension_request": "docs/owner_requests/PIPE-EXT-011.md",
+  "new_test_functions_written": 4,
+  "new_parameterized_cases_written": 5,
+  "pytest_executed": false,
+  "numerical_owner_executed": false,
+  "confirmed_scope_percent_after_change": 67.2
+}

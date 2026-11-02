@@ -1,0 +1,34 @@
+{
+  "schema": "pipeline_integrity.independent_data_screen.v1",
+  "date_kst": "2026-11-03",
+  "official_completed_profiles": 198,
+  "sources": [
+    {
+      "url": "https://www.scidb.cn/en/detail?dataSetId=9b7cffd51b5d4394b03858f70ad4764d",
+      "doi": "10.57760/sciencedb.13651",
+      "license": "ODC-BY",
+      "status": "local_four_summaries_already_inspected_not_new_validation",
+      "next": "Acquire additional unseen steady raw runs after fixing selection and acceptance; do not relabel old comparison cases as new validation."
+    },
+    {
+      "url": "https://rodare.hzdr.de/record/363",
+      "doi": "10.14278/rodare.363",
+      "status": "restricted_access_rejected_for_automatic_acquisition",
+      "reason": "Public metadata describes relevant pressure measurements, but files are restricted to project partners; no access request sent."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8481959/",
+      "xml_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8481959/fullTextXML",
+      "xml_sha256": "719286d689650d35912caedf879e21b381d717eb0ef70e8dc6edcce04f5afa2e",
+      "license": "CC BY-NC-ND 4.0",
+      "status": "reference_only_not_selected_for_public_fixture_or_parameter_derivation",
+      "reason": "Relevant primary horizontal pressure-drop measurement attachment exists, but restrictive reuse terms conflict with the desired unrestricted public benchmark packaging."
+    },
+    {
+      "url": "https://data.mendeley.com/datasets/k637x42yxx/3",
+      "license": "CC BY 4.0",
+      "status": "not_sufficient_for_pressure_drop_validation",
+      "reason": "Dataset description concerns literature-digitized flow-pattern observations; independent pressure-drop measurements and primary reuse provenance still need review."
+    }
+  ]
+}

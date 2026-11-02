@@ -1,0 +1,77 @@
+{
+  "schema": "pipeline_integrity.material_quality_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "materials.chemistry_reconciliation": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "3a2ab6a4d97c6d31a4c0b53ecda3894e377718ac8713a75b8186fcdd86aa2a26"
+    },
+    "materials.pitting_composition_index": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "54d4cdbd2dbb6caeda316146987bcc8a134accbd72ae74dc3e5adc821541cf73"
+    },
+    "materials.impact_transition": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "d8adc92d88bf3b1f23397deae08fd7c9d2f5b014bab91285f09046b1d022bd4f"
+    }
+  },
+  "native_case_count": 13,
+  "case_status_counts": {
+    "computed": 12,
+    "needs_data": 9,
+    "out_of_scope": 1
+  },
+  "independent_reference_count": 18,
+  "maximum_reference_absolute_error": 2.842170943040401e-14,
+  "refusals": [
+    "bool_is_not_measured_nitrogen",
+    "negative_energy",
+    "duplicate_impact_specimens",
+    "unknown_temperature_unit",
+    "percent_is_not_fraction",
+    "nonfinite_composition",
+    "wrong_source_pin",
+    "different_physical_chemistry_scope",
+    "pinned_job_input_changed"
+  ],
+  "refusal_count": 9,
+  "pinned_job_replay_verified": true,
+  "no_target_temperature_extrapolation": true,
+  "missing_and_censored_assays_preserved": true,
+  "zero_none_false_nan_are_distinct": true,
+  "owner_fit_algorithm_reimplemented": false,
+  "external_source_unchanged": true,
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_support_files_before": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "external_support_files_after": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "experimental_field_validation": false,
+  "public_data_calibration_performed": false,
+  "detailed_native_receipts_and_observations_in_public_summary": false,
+  "implementation_sha256": "4c4dc26655c9728eab371f406a142b4198f50cf69eea3035d7fecedada80c00b",
+  "source_guard_sha256": "37e1508b2fdcdeb946f999c3989687c5b9499de40f7fb03f7557be92f36198c1",
+  "script_sha256": "df495026b34b1ee62ffc580f94034876382e8718f56f18668ef84049b3ac1766",
+  "example_sha256": "0a919589b5546db956f981061f14b0269b51dc262567797c0319ab77324772f2"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "pipeline_integrity.inspection_track_provenance_status.v1",
+  "date": "2026-10-29",
+  "existing_api": "pipeline_integrity.inspection.evaluate_inspection_track",
+  "change": "Owner trend dispatch now requires exact source ID/SHA/origin, each elapsed-time basis EvidenceRef, registration review EvidenceRef, and every approved correspondence review EvidenceRef in a unique RunContext evidence set.",
+  "failure_behavior": "Returns needs_data without invoking owner when required evidence is absent or mismatched.",
+  "authored_regressions": {
+    "test_function_count": 1,
+    "parameterized_missing_evidence_cases": 4,
+    "executed": false
+  },
+  "tests_executed": 0,
+  "nurion_job_submitted": false,
+  "field_or_growth_qualification": false,
+  "guide": "docs/INSPECTION_KO.md"
+}

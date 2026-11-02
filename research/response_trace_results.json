@@ -1,0 +1,81 @@
+{
+  "schema": "pipeline_integrity.response_trace_verification.v1",
+  "passed": true,
+  "native_owners": {
+    "monitoring": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+      "source_tree_files": 28
+    },
+    "lh2dt": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c",
+      "source_tree_files": 52
+    },
+    "hra": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    }
+  },
+  "native_sources_unchanged": true,
+  "authored_reference": {
+    "alarm_s": 3.0,
+    "cue_s": 4.0,
+    "command_s": 5.0,
+    "target_bracket_s": [
+      8.0,
+      9.0
+    ],
+    "sampled_endpoint_s": 10.0,
+    "residual_target_area_m2": 1e-08
+  },
+  "human_command_probability_references": [
+    {
+      "native": 0.26626281520135864,
+      "independent": 0.2662628152013588
+    },
+    {
+      "native": 0.36696229870757713,
+      "independent": 0.36696229870757713
+    }
+  ],
+  "command_eta_terminal_count": 2,
+  "command_eta_frequency_sum_per_year": 0.1,
+  "command_deadline_replaced_by_process_limit_rejected": true,
+  "repeated_timing_rejected": true,
+  "missing_process_endpoint_withheld": true,
+  "missing_cue_not_zero": true,
+  "coupled_liquid": {
+    "trace_status": "exchange_checked",
+    "command_by_deadline": "met",
+    "target_by_process_limit": "met",
+    "sampled_process_endpoint": "not_observed_by_limit",
+    "target_completion_bracket_s": [
+      0.275,
+      0.30000000000000004
+    ],
+    "downstream_flow_at_target_m3_s": 0.01,
+    "volume_balance_passed": true,
+    "maximum_pipe_volume_residual_m3": 8.673617379884035e-18,
+    "maximum_junction_residual_m3_s": 8.673617379884035e-18
+  },
+  "alarm_or_single_trajectory_used_as_hep": false,
+  "full_dynamic_risk_probability_calculated": false,
+  "field_validation": false,
+  "implementation_sha256": "d1096299fac174a4f5d3d930cdfd1efda33146c78f28a9c0b4cc97b539059c4a",
+  "script_sha256": "9eed66b50bc20f0fb08a22eea912f1d6dde6f83e6191c5a0f4b966cced7cab81",
+  "example_sha256": "98879720fa4c089daf21b77eca01d9a2bd02cc2827f387f8917424f93c8e823a",
+  "alarm_exchange_sha256": "b51c8b74e0d770d4f95e55b708e4f4d139b5a59fcc1fcb32b014d6c3b4e5a855",
+  "private_record_sha256": {
+    "authored_reference": "9b35d1e8873d33e45cab50cd6a3f40e6193e682a3d10e792e42865f5ae50c1d9",
+    "missing_process": "a98780759e3430aa6a2ab7122505527714b3a84c776dbf14f54b66444b1f7188",
+    "unknown_cue": "9ab316fbc438b93b2236178e7375f0a26103bbf328228edfaedf5224b5c22f24",
+    "command_eta": "c926ae1ad0ac50dec066faa805cd58f0da4a080ec2aca21996219cb286bcf120",
+    "coupled_liquid": "2a9baf0a1491cbbc86c4ff0863f757cbe7d84d1711c5288ad2a4d1b39c6925f6",
+    "coupled_liquid_result": "3783635259373efc03fa81ecf2552eb50027b4bf72473b56fdaf636454be4514"
+  }
+}

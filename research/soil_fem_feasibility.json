@@ -1,0 +1,79 @@
+{
+  "status": "mixed_bounded_results_not_production_qualified",
+  "versions": {
+    "scikit-fem": "12.0.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "license": "BSD-3-Clause for skfem/ and PyPI distribution; documentation examples may differ; none copied",
+  "license_sha256": "383a8df7a707975913b2439594903a9b7e4f31372da3cd7be9b096ce1839ed34",
+  "package_python_tree_sha256": "8b2084612fb06e710dc03b4dfd727e9e0e635bec971d40a3d553550d8935f773",
+  "package_python_file_count": 137,
+  "wheel": {
+    "filename": "scikit_fem-12.0.2-py3-none-any.whl",
+    "bytes": 178478,
+    "publisher_sha256": "34cd891f80072c0c1eb759a2371e82f0eeec91ff7c08acab96d27b6edbbe1b05",
+    "pip_report_sha256": "34cd891f80072c0c1eb759a2371e82f0eeec91ff7c08acab96d27b6edbbe1b05"
+  },
+  "source": "https://github.com/kinnala/scikit-fem",
+  "primary_documentation": [
+    "https://scikit-fem.readthedocs.io/en/stable/howto.html",
+    "https://scikit-fem.readthedocs.io/en/latest/gettingstarted.html",
+    "https://pypi.org/pypi/scikit-fem/12.0.2/json"
+  ],
+  "geometry": "Existing convex soil polygons fan-triangulated locally, no triangles inside either pipe cavity; no external mesher.",
+  "initial_and_Dirichlet_projection": "Authored analytic nodal field, not an inferred projection from original cell or face averages.",
+  "qualification_categories": {
+    "stationary_affine_solution_and_physical_normal_heat": "passed bounded independent analytic field/gradient/reaction references",
+    "consistent_mass_transient": "ENERGY_ONLY_PASSED; physical initial-maximum bounds FAILED on the coarse cases",
+    "vertex_quadrature_lumped_transient": "coarse energy and bounds passed; refined skew temperature bounds FAILED; no general maximum-principle qualification",
+    "production_adapter": "NOT_IMPLEMENTED_OR_QUALIFIED"
+  },
+  "schema": "pipeline_integrity.soil_fem_feasibility.v1",
+  "production_adapter_implemented": false,
+  "credited_in_scope_percent": false,
+  "authored_base_cases": 12,
+  "authored_refinement_cases": 12,
+  "native_sparse_solves": 93,
+  "base_geometry_algebra_reference_checks": 37,
+  "stationary_affine_cases": [
+    {
+      "shear": 0.0,
+      "nodes": 35,
+      "triangles": 44,
+      "soil_area_m2": 22.00000000000004,
+      "maximum_nodal_temperature_error_K": 0.0,
+      "ground_geometric_normal_flux_W": 24.000000000000004,
+      "ground_native_constraint_reaction_W": 24.00000000000057
+    },
+    {
+      "shear": 0.3,
+      "nodes": 35,
+      "triangles": 44,
+      "soil_area_m2": 22.000000000000043,
+      "maximum_nodal_temperature_error_K": 5.684341886080802e-14,
+      "ground_geometric_normal_flux_W": 24.000000000000227,
+      "ground_native_constraint_reaction_W": 24.00000000000057
+    },
+    {
+      "shear": 0.75,
+      "nodes": 35,
+      "triangles": 44,
+      "soil_area_m2": 22.00000000000004,
+      "maximum_nodal_temperature_error_K": 1.1368683772161603e-13,
+      "ground_geometric_normal_flux_W": 24.000000000000004,
+      "ground_native_constraint_reaction_W": 24.000000000000398
+    }
+  ],
+  "conservative_temperature_bound_qualification": false,
+  "observations": "Coarse consistent-mass Robin overshoot 0.465-0.503 K; vertex-lumped coarse cases pass but refined skew case still overshoots by 0.024673177184354245 K. Energy closure is not a maximum-principle qualification.",
+  "main_environment_unchanged": true,
+  "binaries_or_owner_source_in_release": false,
+  "actual_measured_validation_cases": 0,
+  "next_contracts": [
+    "Explicit P1 nodal temperature and continuous boundary trace versus P0 cell/face average mapping.",
+    "Define shared outer-corner reaction allocation; complete cavity reactions are disjoint.",
+    "Qualify stiffness off-diagonal signs, Robin and mass discretization, monotonicity and mesh/time convergence together.",
+    "Production source/runtime/context/receipt/budget contracts remain unimplemented."
+  ]
+}

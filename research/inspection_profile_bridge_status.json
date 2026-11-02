@@ -1,0 +1,20 @@
+{
+  "schema": "pipeline_integrity.inspection_profile_bridge_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.inspection_profile_bridge",
+  "owner_model": "structural.profile_capacity",
+  "entrypoints": [
+    "bind_inspection_profile",
+    "evaluate_inspection_profile_capacity",
+    "verify_inspection_profile_capacity_record"
+  ],
+  "authored_test_functions": 4,
+  "tests_executed": 0,
+  "numerical_validation": "deferred_to_nurion",
+  "nurion_job_submitted": false,
+  "uncertainty_policy": "subtract declared worst-case ligament error bound; no probability or covariance propagation",
+  "coverage_inferred": false,
+  "owner_solver_duplicated": false,
+  "field_or_standard_qualification": false,
+  "guide": "docs/INSPECTION_PROFILE_BRIDGE_KO.md"
+}

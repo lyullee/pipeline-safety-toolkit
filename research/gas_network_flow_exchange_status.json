@@ -1,0 +1,24 @@
+{
+  "schema": "pipeline_integrity.gas_network_flow_exchange_status.v1",
+  "date": "2026-10-29",
+  "implementation": "authored_static_review_pending_nurion",
+  "owner_solver_unchanged": true,
+  "new_exchange": "GasNetworkResult.checks.pipe_flow_summary",
+  "flow_sign_convention": "positive means from declared GasPipe.start_node toward end_node; native segment left/right reversals are normalized per segment",
+  "units": {
+    "mass_flow_signed_kg_s": "kg/s",
+    "max_adjacent_segment_flow_step_kg_s": "kg/s"
+  },
+  "identity_fields": [
+    "source GasPipe ID",
+    "start node ID",
+    "end node ID",
+    "native segmented link IDs"
+  ],
+  "continuity_gate": "native segment endpoints must form the declared undirected chain; signed rates are normalized to declared pipe orientation before adjacent absolute/relative continuity comparison",
+  "failure_behavior": "mark normalized pipe flow unresolved and withhold result",
+  "tests_authored": 3,
+  "tests_executed": false,
+  "numerical_validation": "pending Nurion; no job submitted",
+  "scope_progress_credit": false
+}

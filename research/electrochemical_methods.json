@@ -1,0 +1,40 @@
+{
+  "schema": "pipeline_integrity.electrochemical_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "implementation_policy": "Reuse the application-owned strict MaterialJob API for all seven physical laws; this package implements meaning, review, signal reduction and source binding only.",
+  "new_runtime_dependencies": [],
+  "native_models": [
+    "corrosion.coupon_loss",
+    "corrosion.faraday",
+    "corrosion.charge_to_loss",
+    "corrosion.stern_geary",
+    "corrosion.galvanic_linear",
+    "protection.coating_coverage",
+    "protection.cathodic_budget"
+  ],
+  "native_advanced_candidate": "The owner also has curve-based mixed-potential calculations. Compatible branch/area/reference/environment support must be established before extending the verified linear-coupling scope; no engine code is copied.",
+  "data_rights": {
+    "version_doi": "10.5281/zenodo.13886478",
+    "source_version": "v3",
+    "creators": ["Jirina Vontorova", "Vlastimil Novak", "Petra Vanova"],
+    "source": "https://zenodo.org/records/13886478",
+    "rights_metadata_url": "https://api.datacite.org/dois/10.5281/zenodo.13886478",
+    "retrieved_rights_identifier": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "cached_metadata_sha256": "779009ed6378a694ac6ab324921fda5d11331ce60d99fd4441d251c4bd2c7aa8",
+    "assets_verified": 5,
+    "bytes": 315521,
+    "publisher_md5_and_local_sha256_recorded": true,
+    "source_or_transformed_observations_in_release": false
+  },
+  "additional_metadata_candidate": {
+    "doi": "10.17632/z6m27978vj.2",
+    "creator": "Michael Trask",
+    "source": "https://data.mendeley.com/datasets/z6m27978vj/2",
+    "license": "CC-BY-4.0",
+    "raw_acquisition": "HTTP 403; not acquired or applied"
+  },
+  "public_explanations_and_comments_original": true,
+  "supplier_tables_or_design_criteria_copied": false,
+  "legal_or_field_qualification_claim": false
+}

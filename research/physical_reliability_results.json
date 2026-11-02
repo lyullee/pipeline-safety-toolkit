@@ -1,0 +1,150 @@
+{
+  "schema": "pipeline_integrity.physical_reliability_verification.v1",
+  "status": "passed",
+  "native_models": [
+    "reliability.gamma_poisson",
+    "reliability.weibull_interval"
+  ],
+  "native_computed_case_count": 9,
+  "native_model_versions": {
+    "reliability.gamma_poisson": "1.0.0",
+    "reliability.weibull_interval": "1.0.0"
+  },
+  "independent_reference_count": 18,
+  "independent_references": {
+    "posterior_shape_with_explicit_prior": {
+      "actual": 5.0,
+      "expected": 5.0,
+      "absolute_error": 0.0
+    },
+    "posterior_total_exposure_seconds": {
+      "actual": 347133600.0,
+      "expected": 347133600.0,
+      "absolute_error": 0.0
+    },
+    "posterior_mean_events_per_second": {
+      "actual": 1.4403676279104068e-08,
+      "expected": 1.4403676279104068e-08,
+      "absolute_error": 0.0
+    },
+    "posterior_intensity_variance": {
+      "actual": 4.149317807064504e-17,
+      "expected": 4.149317807064504e-17,
+      "absolute_error": 0.0
+    },
+    "declared_Julian_year_mean_event_count": {
+      "actual": 0.45454545454545453,
+      "expected": 0.45454545454545453,
+      "absolute_error": 0.0
+    },
+    "declared_365_day_year_mean_event_count": {
+      "actual": 0.4542343351378259,
+      "expected": 0.4542343351378259,
+      "absolute_error": 0.0
+    },
+    "zero_events_preserve_prior_shape": {
+      "actual": 2.0,
+      "expected": 2.0,
+      "absolute_error": 0.0
+    },
+    "zero_events_do_not_imply_zero_intensity": {
+      "actual": 5.761470511641627e-09,
+      "expected": 5.761470511641627e-09,
+      "absolute_error": 0.0
+    },
+    "split_exposure_preserves_posterior_shape": {
+      "actual": 5.0,
+      "expected": 5.0,
+      "absolute_error": 0.0
+    },
+    "split_exposure_preserves_posterior_mean": {
+      "actual": 1.4403676279104068e-08,
+      "expected": 1.4403676279104068e-08,
+      "absolute_error": 0.0
+    },
+    "aged_interval_integrated_hazard": {
+      "actual": 0.75,
+      "expected": 0.75,
+      "absolute_error": 0.0
+    },
+    "aged_interval_conditional_probability": {
+      "actual": 0.5276334472589853,
+      "expected": 0.5276334472589853,
+      "absolute_error": 0.0
+    },
+    "equivalent_hazard_is_not_event_intensity": {
+      "actual": 0.015,
+      "expected": 0.015,
+      "absolute_error": 0.0
+    },
+    "fresh_interval_conditional_probability": {
+      "actual": 0.22119921692859512,
+      "expected": 0.22119921692859512,
+      "absolute_error": 0.0
+    },
+    "contiguous_conditional_survival_product": {
+      "actual": 0.4723665527410147,
+      "expected": 0.4723665527410147,
+      "absolute_error": 0.0
+    },
+    "shape_one_memoryless_reference": {
+      "actual": 0.09516258196404044,
+      "expected": 0.09516258196404048,
+      "absolute_error": 4.163336342344337e-17
+    },
+    "mapped_period_preserves_native_probability": {
+      "actual": 0.5276334472589853,
+      "expected": 0.5276334472589853,
+      "absolute_error": 0.0
+    },
+    "clock_translation_preserves_survival_probability": {
+      "actual": 0.5276334472589853,
+      "expected": 0.5276334472589853,
+      "absolute_error": 0.0
+    }
+  },
+  "withheld_cases": {
+    "incomplete_event_ascertainment": "needs_data",
+    "unknown_event_count": "needs_data",
+    "unknown_exposure": "needs_data",
+    "unknown_prior": "needs_data",
+    "unreviewed_year_basis": "needs_data",
+    "unreviewed_survival": "needs_data"
+  },
+  "invalid_native_inputs_rejected": 7,
+  "conditional_survival_and_age_preserved": true,
+  "seconds_per_year_explicit": true,
+  "physical_mean_intensity_is_not_demand_HEP": true,
+  "posterior_predictive_occurrence_probability_inferred": false,
+  "gates_or_exclusive_path_engine_added": false,
+  "observed_accident_data_used": false,
+  "field_calibration_or_validation_claim": false,
+  "original_authored_inputs_not_observations": true,
+  "source_record_digests": {
+    "physical_count": "78c3979ebd8744d54ecfabb460c52d9a1811a965c4325b553f77acd9f86b884f",
+    "zero_observed_events": "4340404d06bce49e3e6bacc03bee55199d3de26554c59769004fa2e6c00e5b62",
+    "first_disjoint_exposure": "434db78e57c8b1ec3bd3607df510f1be4b4e9ef6b999441cdc0f306c73311ea3",
+    "second_disjoint_exposure": "734c54ec4b69dad75753faacd53ccf62bfa9e5f50a30fdb342bedd69219a3bc5",
+    "aged_first_failure": "c0b72f9954f43f9d773d58a0d404aad742327f0e8d48d7f377bbe1692bff1713",
+    "fresh_first_failure": "eac84baf93d9663c6661a163053dd0965903612ff41c7b673ebf501dfdc17d38",
+    "first_conditional_subinterval": "f60ec8092b2bdc6896424def15f0c4db493eab75ec05555b5ac83d945331b585",
+    "second_conditional_subinterval": "b025608ad5164a09e19f514c142f5ef73912af2d4a01fba1172a528e8a05d139",
+    "exponential_aged_interval": "c27f57e66aa7d53ad6bddd5e6c77c0374260b63c158201f91586bbd40b7c9047"
+  },
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "7e266afcacb4695284b576c9dc9e17f162de9266fbe1e98c3515a58fc5d1196c",
+    "source_tree_files": 68
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "7e266afcacb4695284b576c9dc9e17f162de9266fbe1e98c3515a58fc5d1196c",
+    "source_tree_files": 68
+  },
+  "external_source_unchanged": true,
+  "implementation_sha256": "ee4fcd614d9ac333709644dc1ac70147df581af760a521e495286bacbf7ada5c",
+  "script_sha256": "86a1983b2ccfbdb6c6b2b00f8ac389416e402a1e0bf966215b5a4d3f4e5cdc2e",
+  "example_sha256": "99f7e4d1e83e0c7c62470af7bef7dd89a6db47ac405e1cda0e507c45aa74cbe9"
+}

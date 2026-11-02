@@ -1,0 +1,9 @@
+{
+  "transfer_plan": "/REPLACE/WITH/leak_multisensor_transfer.example.json",
+  "raw_root": "/REPLACE/WITH/VERIFIED/data/raw",
+  "test_files": [
+    "tests/test_leak_multisensor_archive_hpc.py"
+  ],
+  "access_mode": "shared_read_only",
+  "maximum_verify_bytes": 717637500
+}

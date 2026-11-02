@@ -1,0 +1,249 @@
+{
+  "schema": "pipeline_integrity.inspection_statistics_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "inspection.binomial_evidence": {
+      "version": "1.0.0",
+      "input_schema_digest": "5f1d98074afe401d86e92bb15609976a7dfaef214e06824f24d26caf6f25239e",
+      "output_units": {
+        "probability_estimate": "1",
+        "one_sided_lower_probability": "1",
+        "one_sided_upper_probability": "1",
+        "confidence_level": "1"
+      },
+      "probability_semantics": {}
+    },
+    "inspection.hit_miss_pod": {
+      "version": "1.0.0",
+      "input_schema_digest": "6cfcc51cf16c49bf7061084376af30bf26bc1bde3a10547f10ed4b14e3d0f346",
+      "output_units": {
+        "target_size_estimate_m": "m",
+        "target_size_upper_confidence_m": "m",
+        "logistic_midpoint_size_m": "m",
+        "logistic_log_size_scale": "1",
+        "probability_of_detection": "1",
+        "pointwise_lower_probability_of_detection": "1",
+        "confidence_level": "1",
+        "likelihood_ratio_cutoff": "1"
+      },
+      "probability_semantics": {
+        "probability_of_detection": "detection_given_flaw_and_procedure"
+      }
+    },
+    "inspection.tofd_depth": {
+      "version": "1.0.0",
+      "input_schema_digest": "6435bff07fef16c45ae07051a68e6c905ba0440fd2f3a9a3fca94898aab12d5f",
+      "output_units": {
+        "tip_depth_m": "m",
+        "remaining_backwall_ligament_m": "m"
+      },
+      "probability_semantics": {}
+    },
+    "geometry.thickness_grid": {
+      "version": "1.0.0",
+      "input_schema_digest": "79479fca74f9b13bb41b11f63e2d2a6be502a847f85ceaa162cf7d64ac357ac1",
+      "output_units": {
+        "minimum_measured_thickness_m": "m",
+        "mean_measured_thickness_m": "m",
+        "observed_area_m2": "m^2",
+        "missing_area_m2": "m^2",
+        "observed_fraction": "1",
+        "net_measured_loss_volume_m3": "m^3",
+        "connected_below_threshold_areas_m2": "m^2"
+      },
+      "probability_semantics": {}
+    }
+  },
+  "case_count": 15,
+  "case_states": {
+    "inspection.binomial_evidence": "computed",
+    "inspection.hit_miss_pod": "computed",
+    "inspection.tofd_depth": "computed",
+    "geometry.thickness_grid": "computed",
+    "verified_blanks_zero_false_calls": "computed",
+    "POD_complete_separation": "needs_data",
+    "POD_unbounded_search_domain": "computed",
+    "TOFD_zero_delay": "computed",
+    "TOFD_beyond_wall": "out_of_scope",
+    "grid_net_thicker_than_reference": "computed",
+    "grid_all_unknown": "needs_data",
+    "inspection.binomial_evidence_dependence_unreviewed": "needs_data",
+    "inspection.hit_miss_pod_dependence_unreviewed": "needs_data",
+    "actual_data_without_truth_withheld": "needs_data",
+    "POD_pinned_job": "computed"
+  },
+  "independent_reference_count": 24,
+  "independent_references": {
+    "all_hits_point_estimate": {
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0
+    },
+    "all_hits_lower_exact_tail": {
+      "actual": 0.7411344491069478,
+      "expected": 0.7411344491069477,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    "all_hits_upper": {
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0
+    },
+    "blank_zero_false_call_estimate": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0
+    },
+    "blank_zero_false_call_lower": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0
+    },
+    "blank_zero_false_call_upper_exact_tail": {
+      "actual": 0.2588655508930522,
+      "expected": 0.2588655508930523,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    "POD_original_query_order_0": {
+      "actual": 0.7999999999888435,
+      "expected": 0.8,
+      "absolute_error": 1.1156520152155736e-11
+    },
+    "POD_original_query_order_1": {
+      "actual": 0.2000000000111565,
+      "expected": 0.2,
+      "absolute_error": 1.115649239658012e-11
+    },
+    "POD_original_query_order_2": {
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0
+    },
+    "POD_midpoint_m": {
+      "actual": 0.0020000000000000005,
+      "expected": 0.002,
+      "absolute_error": 4.336808689942018e-19
+    },
+    "POD_log_size_scale": {
+      "actual": 0.5000000000251492,
+      "expected": 0.5,
+      "absolute_error": 2.5149216043018896e-11
+    },
+    "POD_target_half_size_m": {
+      "actual": 0.0020000000000000005,
+      "expected": 0.002,
+      "absolute_error": 4.336808689942018e-19
+    },
+    "POD_intercept_covariance": {
+      "actual": 0.17543859648710758,
+      "expected": 0.17543859649122806,
+      "absolute_error": 4.120481733593806e-12
+    },
+    "POD_slope_covariance": {
+      "actual": 0.20833333332461731,
+      "expected": 0.20833333333333334,
+      "absolute_error": 8.716027899424716e-12
+    },
+    "TOFD_depth_from_authored_right_triangle_m": {
+      "actual": 0.0099498743710662,
+      "expected": 0.0099498743710662,
+      "absolute_error": 0.0
+    },
+    "TOFD_ligament_m": {
+      "actual": 0.010050125628933801,
+      "expected": 0.010050125628933801,
+      "absolute_error": 0.0
+    },
+    "TOFD_zero_delay_depth_m": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0
+    },
+    "grid_minimum_measured_thickness_m": {
+      "actual": 0.004,
+      "expected": 0.004,
+      "absolute_error": 0.0
+    },
+    "grid_mean_measured_thickness_m": {
+      "actual": 0.007500000000000001,
+      "expected": 0.0075,
+      "absolute_error": 8.673617379884035e-19
+    },
+    "grid_observed_area_m2": {
+      "actual": 0.0024,
+      "expected": 0.0024,
+      "absolute_error": 0.0
+    },
+    "grid_missing_area_m2": {
+      "actual": 0.0012,
+      "expected": 0.0012,
+      "absolute_error": 0.0
+    },
+    "grid_observed_fraction": {
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "absolute_error": 0.0
+    },
+    "grid_net_measured_loss_volume_m3": {
+      "actual": 5.999999999999999e-06,
+      "expected": 6e-06,
+      "absolute_error": 8.470329472543003e-22
+    },
+    "grid_negative_net_loss_is_not_clipped": {
+      "actual": -5.999999999999999e-06,
+      "expected": -6e-06,
+      "absolute_error": 8.470329472543003e-22
+    }
+  },
+  "authored_trial_counts": {
+    "POD": 30,
+    "single_size_detection": 10,
+    "verified_blank": 10
+  },
+  "raw_or_derived_observation_rows_in_public_summary": false,
+  "private_record_sha256": "c31a7468563e9576cb0845b85a4f47be22c36ca5c8030e7ca4aa65d1274475fa",
+  "private_record_digest": "d25ddf8034ec73631ace0f8ac53a3dde1e070738e7eb3b750ae7602911ac6f44",
+  "data_rights": {
+    "authored_examples": "MIT",
+    "external_engine": "matintegrity; separate source ownership and attribution",
+    "external_engine_source_redistributed": false,
+    "TUBERS_or_ILI_relabelled_as_independent_hit_miss_truth": false
+  },
+  "limitations": [
+    "Authored synthetic contract and numerical verification, not independent experimental validation.",
+    "No POD calibration from TUBERS or ILI: independent detection/truth observations are absent.",
+    "One-sided binomial bounds are separate tails; POD confidence is pointwise and asymptotic.",
+    "Missing cells, blank trials, clusters, separation and an unbounded search remain explicit.",
+    "No acceptance, dead-zone clearance, human-error or period-failure probability is inferred."
+  ],
+  "external_material_version": "0.1.0.dev0",
+  "external_source_execution": {
+    "source_kind": "reviewed_checkout",
+    "selected_source_licenses_and_package_resources_preserved": true,
+    "license_notice_and_package_resource_sha256": {
+      "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+      "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+      "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb",
+      "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+      "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f"
+    },
+    "source_checkout_path_in_public_summary": false
+  },
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_source_unchanged": true,
+  "implementation_sha256": "4cdad5b48c90c0cfbf2afe36e1acef59f0bbd96f5161a6d40b72153047906ce0",
+  "source_guard_implementation_sha256": "37e1508b2fdcdeb946f999c3989687c5b9499de40f7fb03f7557be92f36198c1",
+  "script_sha256": "d37df92d7f8226062e79448f6346c416417a0a5850611c762ae0d288fc387cd5",
+  "example_sha256": "bab26e3bb2fa93c8dd76c9d50bf33d9c16867032f7b91324795b12531368decd"
+}

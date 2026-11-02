@@ -1,0 +1,596 @@
+{
+  "schema": "pipeline_integrity.uncertainty_verification.v1",
+  "analytic_joint_normal_reference": {
+    "0.0": {
+      "samples": 4096,
+      "analytic_expected_power_w": 5811.348148148148,
+      "estimated_power_w": 5811.352802822869,
+      "absolute_error_w": 0.00465467472167802,
+      "relative_tolerance": 0.0002,
+      "design_digest": "3724c6c63c9b87157f4ae0dfec699ab3d4d2d6572f86cc2c1f356c764b8e8c38",
+      "result_digest": "ee962f57f515e246143e8781b71127f76a920ff652ecbc050a7e6dd2e0b061f6"
+    },
+    "0.8": {
+      "samples": 4096,
+      "analytic_expected_power_w": 5857.8389333333325,
+      "estimated_power_w": 5857.814680460225,
+      "absolute_error_w": 0.024252873107798223,
+      "relative_tolerance": 0.0002,
+      "design_digest": "d0a252d616cce7e322788d367ed9e1fa25eff0b4a3e6d5f24bc4478916c4584d",
+      "result_digest": "0ec87c5b7afa7f6ffa9aaa9ffe5f4ff2e3db7398c9567b933765fb8cc68f2ff0"
+    }
+  },
+  "native_chain": {
+    "draws": 512,
+    "status": "computed",
+    "metrics": {
+      "pump_lifecycle": {
+        "adjusted_power_w": {
+          "status": "computed",
+          "unit": "W",
+          "meaning": "quantity",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 5857.4386479696495,
+          "conditional_on_valid_mean": 5857.4386479696495,
+          "full_design_mean": 5857.4386479696495,
+          "conditional_on_valid_quantiles": [
+            4025.949269984057,
+            5829.107487374602,
+            7868.380530968276
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        },
+        "keep_present_cost": {
+          "status": "computed",
+          "unit": "REF",
+          "meaning": "cost",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 12341.455170204476,
+          "conditional_on_valid_mean": 12341.455170204476,
+          "full_design_mean": 12341.455170204476,
+          "conditional_on_valid_quantiles": [
+            9088.82959746043,
+            12317.874986875882,
+            15886.12630160611
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        },
+        "replace_present_cost": {
+          "status": "computed",
+          "unit": "REF",
+          "meaning": "cost",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 12241.736627494587,
+          "conditional_on_valid_mean": 12241.736627494587,
+          "full_design_mean": 12241.736627494587,
+          "conditional_on_valid_quantiles": [
+            8989.11105475054,
+            12218.156444165994,
+            15786.407758896221
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        },
+        "replace_minus_keep": {
+          "status": "computed",
+          "unit": "REF",
+          "meaning": "cost",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": -99.71854270988891,
+          "conditional_on_valid_mean": -99.71854270988891,
+          "full_design_mean": -99.71854270988891,
+          "conditional_on_valid_quantiles": [
+            -99.71854270989024,
+            -99.71854270988842,
+            -99.71854270988842
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        },
+        "conditional_error_probability": {
+          "status": "computed",
+          "unit": "1",
+          "meaning": "conditional_probability",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 0.09999668010919896,
+          "conditional_on_valid_mean": 0.09999668010919896,
+          "full_design_mean": 0.09999668010919896,
+          "conditional_on_valid_quantiles": [
+            0.019388282941140637,
+            0.08793100412918631,
+            0.2259744955625967
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        },
+        "annual_expected_events": {
+          "status": "computed",
+          "unit": "year^-1",
+          "meaning": "expected_count_rate",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 2.999900403275969,
+          "conditional_on_valid_mean": 2.999900403275969,
+          "full_design_mean": 2.999900403275969,
+          "conditional_on_valid_quantiles": [
+            0.5816484882342191,
+            2.6379301238755892,
+            6.779234866877901
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": null
+        }
+      }
+    },
+    "covariances": [
+      {
+        "left": [
+          "pump_lifecycle",
+          "adjusted_power_w"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "keep_present_cost"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 2218753.494023894,
+        "unit_product": [
+          "W",
+          "REF"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "adjusted_power_w"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "replace_present_cost"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 2218753.494023894,
+        "unit_product": [
+          "W",
+          "REF"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "adjusted_power_w"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "replace_minus_keep"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 7.949314861613315e-11,
+        "unit_product": [
+          "W",
+          "REF"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "adjusted_power_w"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "conditional_error_probability"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 19.935089349683736,
+        "unit_product": [
+          "W",
+          "1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "adjusted_power_w"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "annual_expected_events"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 598.052680490512,
+        "unit_product": [
+          "W",
+          "year^-1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "keep_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "replace_present_cost"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 3999681.4566270006,
+        "unit_product": [
+          "REF",
+          "REF"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "keep_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "replace_minus_keep"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 1.5539833576907932e-10,
+        "unit_product": [
+          "REF",
+          "REF"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "keep_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "conditional_error_probability"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 48.43229254965501,
+        "unit_product": [
+          "REF",
+          "1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "keep_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "annual_expected_events"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 1452.9687764896503,
+        "unit_product": [
+          "REF",
+          "year^-1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "replace_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "replace_minus_keep"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 1.5539833576907997e-10,
+        "unit_product": [
+          "REF",
+          "REF"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "replace_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "conditional_error_probability"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 48.43229254965502,
+        "unit_product": [
+          "REF",
+          "1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "replace_present_cost"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "annual_expected_events"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 1452.9687764896505,
+        "unit_product": [
+          "REF",
+          "year^-1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "replace_minus_keep"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "conditional_error_probability"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 5.46111971637165e-15,
+        "unit_product": [
+          "REF",
+          "1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "replace_minus_keep"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "annual_expected_events"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 1.638335914911495e-13,
+        "unit_product": [
+          "REF",
+          "year^-1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      },
+      {
+        "left": [
+          "pump_lifecycle",
+          "conditional_error_probability"
+        ],
+        "right": [
+          "pump_lifecycle",
+          "annual_expected_events"
+        ],
+        "paired_known_weight": 1.0,
+        "conditional_on_paired_valid_covariance": 0.1285041301868919,
+        "unit_product": [
+          "1",
+          "year^-1"
+        ],
+        "population_weighted": true,
+        "independent_sample_estimator": false
+      }
+    ],
+    "design_digest": "fe2e37f8608bef85c4545d488aaa1483ee871ed54ab2985a6a1097edd4c2f086",
+    "result_digest": "4d3fb5febb414972508a79d5bcea6fb54d2bcc7941a5e5b437621f8a64280641",
+    "probability_parameters_assumed": true,
+    "expected_loss_REF_per_event": 25.0,
+    "annual_demands": 30.0,
+    "alternatives_receive_identical_additional_energy_and_risk_costs": true
+  },
+  "data": {
+    "id": "hydraulic",
+    "citation": "Condition monitoring of hydraulic systems; https://doi.org/10.24432/C5CW21",
+    "creators": [
+      "Nikolai Helwig",
+      "Eliseo Pignanelli",
+      "Andreas Sch\u00fctze"
+    ],
+    "license_id": "CC-BY-4.0",
+    "source": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+    "archive_sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2",
+    "original_numeric_rows_verified": 8,
+    "cycles": [
+      0,
+      100,
+      1100,
+      2204
+    ],
+    "power_samples_used": 23964,
+    "flow_samples_used": 2400,
+    "common_interval_s": [
+      0.0,
+      59.9
+    ],
+    "source_receipts": {
+      "0": {
+        "power_receipt_digest": "8bad4c7fb5fa3c73c186d20781f9ef09e2f914d824065e9c717dd36de384a0a5",
+        "source_clock_id": "hydraulic_cycle_0_elapsed",
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "energy_absolute_error_j": 0.0,
+        "volume_integration": "piecewise_linear_trapezoid_on_native_10Hz",
+        "power_samples": 5991,
+        "flow_samples": 600
+      },
+      "100": {
+        "power_receipt_digest": "be4fdf7ec69e13a372feba6f51fdcbc0095e32b26fddc8f570813185ca4f721d",
+        "source_clock_id": "hydraulic_cycle_100_elapsed",
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "energy_absolute_error_j": 0.0,
+        "volume_integration": "piecewise_linear_trapezoid_on_native_10Hz",
+        "power_samples": 5991,
+        "flow_samples": 600
+      },
+      "1100": {
+        "power_receipt_digest": "b0f7f342ddde7306efa89767beb3783945727f676cc3d4c5488e2c199b3d9f84",
+        "source_clock_id": "hydraulic_cycle_1100_elapsed",
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "energy_absolute_error_j": 2.9103830456733704e-11,
+        "volume_integration": "piecewise_linear_trapezoid_on_native_10Hz",
+        "power_samples": 5991,
+        "flow_samples": 600
+      },
+      "2204": {
+        "power_receipt_digest": "afde194c9c1358fba7d64411a18df78f45bd088e8e35df828fee8c92647b6dc6",
+        "source_clock_id": "hydraulic_cycle_2204_elapsed",
+        "common_interval_s": [
+          0.0,
+          59.9
+        ],
+        "energy_absolute_error_j": 0.0,
+        "volume_integration": "piecewise_linear_trapezoid_on_native_10Hz",
+        "power_samples": 5991,
+        "flow_samples": 600
+      }
+    },
+    "paired": {
+      "paired_meter_quantity": {
+        "specific_energy": {
+          "status": "computed",
+          "unit": "J/m3",
+          "meaning": "quantity",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 22706103.600617636,
+          "conditional_on_valid_mean": 22706103.600617636,
+          "full_design_mean": 22706103.600617636,
+          "conditional_on_valid_quantiles": [
+            21868060.395300858,
+            22715541.886047013,
+            23424365.11774197
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "interpretation": "scenario",
+            "finite_design_weight": true,
+            "operational_failure_probability": false
+          }
+        }
+      }
+    },
+    "unpaired_counterfactual": {
+      "paired_meter_quantity": {
+        "specific_energy": {
+          "status": "computed",
+          "unit": "J/m3",
+          "meaning": "quantity",
+          "known_weight": 1.0,
+          "unresolved_weight": 0.0,
+          "known_weighted_sum": 22709864.63095464,
+          "conditional_on_valid_mean": 22709864.63095464,
+          "full_design_mean": 22709864.63095464,
+          "conditional_on_valid_quantiles": [
+            21525152.636945114,
+            22715541.886047013,
+            23969684.990705878
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": {
+            "lower": 0.0,
+            "upper": 0.0,
+            "interpretation": "scenario",
+            "finite_design_weight": true,
+            "operational_failure_probability": false
+          }
+        }
+      }
+    },
+    "missing_volume": {
+      "paired_meter_quantity": {
+        "specific_energy": {
+          "status": "needs_data",
+          "unit": "J/m3",
+          "meaning": "quantity",
+          "known_weight": 0.75,
+          "unresolved_weight": 0.25,
+          "known_weighted_sum": 17001991.84977246,
+          "conditional_on_valid_mean": 22669322.46636328,
+          "full_design_mean": null,
+          "conditional_on_valid_quantiles": [
+            21868060.395300858,
+            22715541.886047013,
+            23424365.11774197
+          ],
+          "declared_support_trusted": true,
+          "full_design_mean_bounds": null,
+          "threshold_weight_bounds": {
+            "lower": 0.0,
+            "upper": 0.25,
+            "interpretation": "scenario",
+            "finite_design_weight": true,
+            "operational_failure_probability": false
+          }
+        }
+      }
+    },
+    "independent_ratio_reference": 22706103.600617636,
+    "population_sampling_claim": false,
+    "raw_or_derived_case_rows_in_release": false
+  },
+  "external_hra": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+    "source_tree_files": 28
+  },
+  "external_hra_unchanged": true,
+  "interpretation_limits": [
+    "Distributions, correlations, model multiplier, HEP, tariffs, duty and losses are declared scenarios, not fitted or field validated.",
+    "Gaussian copula matrix is latent normal correlation, not a general physical Pearson matrix.",
+    "A single scrambled Sobol design supplies no independent-trial confidence interval.",
+    "Curated paired hydraulic cycles do not establish a population distribution or human error rate.",
+    "Variance decomposition, epistemic/aleatory nested inference, tail qualification and joint failure inference remain future work."
+  ],
+  "module_sha256": "fbcbb20c9b1a2e7c97ebecbc9bb4b14a9a33d270368db5abd4d6d247336080e4",
+  "example_sha256": "ed4fc0ad438790069d1240ac93229a68474ea61cfb0336bc770c12c9a1a2bc51",
+  "script_sha256": "c8b23c2c25e796bb5b8741db736e5e734e498697da3bf1c247a0c2530064eae4"
+}

@@ -1,0 +1,248 @@
+{
+  "schema": "pipeline_integrity.thermal_process_source_review.v1",
+  "checks": {
+    "cryogenic_ln2_boiling:original_replay": true,
+    "cryogenic_ln2_boiling:not_physical_validation": true,
+    "cryogenic_ln2_boiling:no_program_execution": true,
+    "refinery_compressor_process:original_replay": true,
+    "refinery_compressor_process:not_physical_validation": true,
+    "refinery_compressor_process:no_program_execution": true,
+    "nasa_lh2_d4171:original_replay": true,
+    "nasa_lh2_d4171:not_physical_validation": true,
+    "nasa_lh2_d4171:no_program_execution": true,
+    "actual_35036_by_25": true,
+    "actual_clock_no_timezone_invention": true,
+    "actual_units_not_guessed": true,
+    "dcs_not_map_truth": true,
+    "actual_ln2_89_curves": true,
+    "no_standard_uncertainty_or_independence_invented": true,
+    "no_nitrogen_to_hydrogen_transfer": true,
+    "corrected_comparison_columns_not_used": true,
+    "actual_original_50page_report": true,
+    "ocr_not_validated_numbers": true,
+    "local_sha_not_supplier_verification": true,
+    "zenodo_supplier_checksums": true,
+    "rehashed_refusal:unit": true,
+    "rehashed_refusal:fluid": true,
+    "rehashed_refusal:coverage": true,
+    "rehashed_refusal:clock": true,
+    "rehashed_refusal:origin": true
+  },
+  "passed": 26,
+  "total": 26,
+  "acquired_groups": 3,
+  "acquired_files": 8,
+  "acquired_bytes": 55737399,
+  "assets": [
+    {
+      "dataset_id": "cryogenic_ln2_boiling",
+      "filename": "All boiling curves_after ANSYS.xlsx",
+      "bytes": 18484,
+      "sha256": "b7ee3562f4346478b7b00e9fabaa3abd5d29b4dc904c4165918f6fac998c7e10",
+      "expected_checksum": "md5:b479091886174b1dd6706c4434766449",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Reza, Mohammad S; Ignatoff, Philip; Almacddissi, Jimmy; Hartwig, Jason; Chung, Jacob; Song, Youngsup (2026), Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling, doi:10.5281/zenodo.19792024",
+      "creators": [
+        "Reza, Mohammad S",
+        "Ignatoff, Philip",
+        "Almacddissi, Jimmy",
+        "Hartwig, Jason",
+        "Chung, Jacob",
+        "Song, Youngsup"
+      ],
+      "version": "Zenodo record 19792024; version label absent in API",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.19792024",
+      "source_url": "https://zenodo.org/api/records/19792024/files/All%20boiling%20curves_after%20ANSYS.xlsx/content",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "cryogenic_ln2_boiling",
+      "filename": "LN2 Press and temp_1g experiment.xlsx",
+      "bytes": 25619507,
+      "sha256": "127b995ecbdfdec85e118effe75099dc1211e92dae1c4af1dfb479416ffeb3d7",
+      "expected_checksum": "md5:00b15a25cd0959805faa65f52e210902",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Reza, Mohammad S; Ignatoff, Philip; Almacddissi, Jimmy; Hartwig, Jason; Chung, Jacob; Song, Youngsup (2026), Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling, doi:10.5281/zenodo.19792024",
+      "creators": [
+        "Reza, Mohammad S",
+        "Ignatoff, Philip",
+        "Almacddissi, Jimmy",
+        "Hartwig, Jason",
+        "Chung, Jacob",
+        "Song, Youngsup"
+      ],
+      "version": "Zenodo record 19792024; version label absent in API",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.19792024",
+      "source_url": "https://zenodo.org/api/records/19792024/files/LN2%20Press%20and%20temp_1g%20experiment.xlsx/content",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "cryogenic_ln2_boiling",
+      "filename": "Uncertainty Data_All curves.xlsx",
+      "bytes": 20264,
+      "sha256": "4fe8d28026990fe53135f7dea16f6be9e672f0cbd5fb7a5e34e7122661c3064e",
+      "expected_checksum": "md5:e95154c3e59206aed9c4915c885b75cb",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Reza, Mohammad S; Ignatoff, Philip; Almacddissi, Jimmy; Hartwig, Jason; Chung, Jacob; Song, Youngsup (2026), Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling, doi:10.5281/zenodo.19792024",
+      "creators": [
+        "Reza, Mohammad S",
+        "Ignatoff, Philip",
+        "Almacddissi, Jimmy",
+        "Hartwig, Jason",
+        "Chung, Jacob",
+        "Song, Youngsup"
+      ],
+      "version": "Zenodo record 19792024; version label absent in API",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.19792024",
+      "source_url": "https://zenodo.org/api/records/19792024/files/Uncertainty%20Data_All%20curves.xlsx/content",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "cryogenic_ln2_boiling",
+      "filename": "LN2 Press and temp_ug experiments.xlsx",
+      "bytes": 16408114,
+      "sha256": "5ce200c2b7b5950cdbce6e386484e6eb977fc951beb03caba842cca967fad9c2",
+      "expected_checksum": "md5:a8980e2b51080656864880ec83f5a070",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Reza, Mohammad S; Ignatoff, Philip; Almacddissi, Jimmy; Hartwig, Jason; Chung, Jacob; Song, Youngsup (2026), Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling, doi:10.5281/zenodo.19792024",
+      "creators": [
+        "Reza, Mohammad S",
+        "Ignatoff, Philip",
+        "Almacddissi, Jimmy",
+        "Hartwig, Jason",
+        "Chung, Jacob",
+        "Song, Youngsup"
+      ],
+      "version": "Zenodo record 19792024; version label absent in API",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.19792024",
+      "source_url": "https://zenodo.org/api/records/19792024/files/LN2%20Press%20and%20temp_ug%20experiments.xlsx/content",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "cryogenic_ln2_boiling",
+      "filename": "Spreading Coefficient_All curves.xlsx",
+      "bytes": 10300,
+      "sha256": "420790da67e2caaa6b62637ca926455b32c476b796defc22a556d3394965f80e",
+      "expected_checksum": "md5:0f91a41ef7fa57d85eeba193f25b8b09",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Reza, Mohammad S; Ignatoff, Philip; Almacddissi, Jimmy; Hartwig, Jason; Chung, Jacob; Song, Youngsup (2026), Decoupling Surface Topography from Gravitational Acceleration in Cryogenic Pool Boiling, doi:10.5281/zenodo.19792024",
+      "creators": [
+        "Reza, Mohammad S",
+        "Ignatoff, Philip",
+        "Almacddissi, Jimmy",
+        "Hartwig, Jason",
+        "Chung, Jacob",
+        "Song, Youngsup"
+      ],
+      "version": "Zenodo record 19792024; version label absent in API",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.19792024",
+      "source_url": "https://zenodo.org/api/records/19792024/files/Spreading%20Coefficient_All%20curves.xlsx/content",
+      "dataset_origin": "mixed_compilation"
+    },
+    {
+      "dataset_id": "refinery_compressor_process",
+      "filename": "Centrifugal compressor _2022.xlsx",
+      "bytes": 11051153,
+      "sha256": "384565606d78f857655ac01bc4b006a31ae9d095a00472e031a9f82070715e62",
+      "expected_checksum": "md5:9ebf0bf829d2567f279f385523a765c5",
+      "checksum_origin": "publisher_metadata",
+      "supplier_checksum_verified": true,
+      "citation": "Ntafalias, Aristotelis; Chrysovalantis, Savvidis; Lamprinoudakis, Pantelis; Kitsatoglou, Alkis (2025), Refinery Compressor Sensor Data, One-Year Dataset, doi:10.5281/zenodo.14866092",
+      "creators": [
+        "Ntafalias, Aristotelis",
+        "Chrysovalantis, Savvidis",
+        "Lamprinoudakis, Pantelis",
+        "Kitsatoglou, Alkis"
+      ],
+      "version": "Zenodo record 14866092; version label absent in API",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://api.datacite.org/dois/10.5281/zenodo.14866092",
+      "source_url": "https://zenodo.org/api/records/14866092/files/Centrifugal%20compressor%20_2022.xlsx/content",
+      "dataset_origin": "measured_process"
+    },
+    {
+      "dataset_id": "nasa_lh2_d4171",
+      "filename": "19670028965.pdf",
+      "bytes": 2537004,
+      "sha256": "bf2fa1d3a4c7b0248cf26cee18ebfdd89f21a0f34a769f04a10731c97d711893",
+      "expected_checksum": "sha256:bf2fa1d3a4c7b0248cf26cee18ebfdd89f21a0f34a769f04a10731c97d711893",
+      "checksum_origin": "previous_acquisition",
+      "supplier_checksum_verified": false,
+      "license_id": "US-GOV-PUBLIC-USE-PERMITTED",
+      "rights_evidence_url": "https://ntrs.nasa.gov/api/citations/19670028965",
+      "source_url": "https://ntrs.nasa.gov/api/citations/19670028965/downloads/19670028965.pdf",
+      "citation": "Aydelott, John C. (1967), NASA TN D-4171, Normal Gravity Self-Pressurization of 9-Inch (23 cm) Diameter Spherical Liquid Hydrogen Tankage, NTRS19670028965",
+      "creators": [
+        "John C Aydelott"
+      ],
+      "version": "NASA-TN-D-4171; NTRS19670028965",
+      "dataset_origin": "laboratory_experiment"
+    },
+    {
+      "dataset_id": "nasa_lh2_d4171",
+      "filename": "19670028965.txt",
+      "bytes": 72573,
+      "sha256": "a1610c69e4c1a89dfead3febd3098f12c071f163de0d8cc92e30f0e9741da985",
+      "expected_checksum": "sha256:a1610c69e4c1a89dfead3febd3098f12c071f163de0d8cc92e30f0e9741da985",
+      "checksum_origin": "previous_acquisition",
+      "supplier_checksum_verified": false,
+      "license_id": "US-GOV-PUBLIC-USE-PERMITTED",
+      "rights_evidence_url": "https://ntrs.nasa.gov/api/citations/19670028965",
+      "source_url": "https://ntrs.nasa.gov/api/citations/19670028965/downloads/19670028965.txt",
+      "citation": "Aydelott, John C. (1967), NASA TN D-4171, Normal Gravity Self-Pressurization of 9-Inch (23 cm) Diameter Spherical Liquid Hydrogen Tankage, NTRS19670028965",
+      "creators": [
+        "John C Aydelott"
+      ],
+      "version": "NASA-TN-D-4171; NTRS19670028965",
+      "dataset_origin": "laboratory_experiment"
+    }
+  ],
+  "source_observations": {
+    "refinery_chronological_observations": 35036,
+    "refinery_sensor_columns": 25,
+    "processed_ln2_curve_rows": 89,
+    "ln2_raw_complete_rows_qualified": false,
+    "nasa_numeric_cells_qualified": false
+  },
+  "source_runtime": {
+    "cryogenic_ln2_boiling": {
+      "python": "3.12.14",
+      "openpyxl": "3.1.5"
+    },
+    "refinery_compressor_process": {
+      "python": "3.12.14",
+      "openpyxl": "3.1.5"
+    },
+    "nasa_lh2_d4171": {
+      "python": "3.12.14",
+      "pypdf": "6.10.0"
+    }
+  },
+  "source_records_sha256": {
+    "cryogenic_ln2_boiling": "7e9783e0059fd084cf567b473571770c389126bd7df8af1125ce3908d03681eb",
+    "refinery_compressor_process": "1c1e9c7cf94e87712a75691949d7b0b7a43f96ba8c3d229906eb01f1e1192e11",
+    "nasa_lh2_d4171": "ab27f46d7f45aa115409ea73d14cf0e5aa607f6d28dda11c8366fd33c94eab70"
+  },
+  "file_sha256": {
+    "src/pipeline_integrity/thermal_process_data.py": "e35c8f6ca4ee4b8358e28605d5d50d0c02c298c7cf09a552343bd4353264331b",
+    "src/pipeline_integrity/soil_data.py": "9a964c13f39512da414ff057d36e364fd9de82e4caf7c7a011361c51a5fbbdfd",
+    "tests/test_thermal_process_data.py": "8f138b4eb1637a9049892bb778bf4fba1523ba49ed6c02fbb1f0876e8339cbc1",
+    "tests/test_source_budgets.py": "b19e0b29fc2f2c2eb4113779a71e426ae52af3723b5b002378fe0c713a564d60",
+    "scripts/review_thermal_process_source.py": "b48986900dd573dadb2bd7c02a0101f823a29afb21ef89830c4d743a2119da7c",
+    "docs/THERMAL_PROCESS_DATA_KO.md": "7dd728b8d0cfdcf0fa548babd475f3eefb9f95c0b688142bc8b8517afbac84aa"
+  },
+  "rehashed_mutations_refused": 5,
+  "actual_native_equipment_calls": 0,
+  "independent_physical_validation": false,
+  "source_rows_or_detailed_receipts_in_release": false
+}

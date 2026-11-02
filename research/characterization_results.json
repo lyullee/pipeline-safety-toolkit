@@ -1,0 +1,90 @@
+{
+  "schema": "pipeline_integrity.characterization_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "materials.tensile_point": "1.0.0",
+    "materials.ductility_retention": "1.0.0",
+    "materials.offset_yield": "1.0.0",
+    "materials.ramberg_osgood": "1.0.0"
+  },
+  "independent_reference_count": 11,
+  "independent_references": {
+    "engineering_stress_Pa": {
+      "actual": 200000000.0,
+      "expected": 200000000.0,
+      "absolute_error": 0.0
+    },
+    "engineering_strain": {
+      "actual": 0.09999999999999999,
+      "expected": 0.1,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    "uniform_true_stress_Pa": {
+      "actual": 220000000.00000003,
+      "expected": 220000000.0,
+      "absolute_error": 2.9802322387695312e-08
+    },
+    "uniform_log_strain": {
+      "actual": 0.09531017980432485,
+      "expected": 0.09531017980432493,
+      "absolute_error": 8.326672684688674e-17
+    },
+    "retention_can_exceed_one": {
+      "actual": 1.25,
+      "expected": 1.25,
+      "absolute_error": 0.0
+    },
+    "negative_loss_is_not_clipped": {
+      "actual": -0.25,
+      "expected": -0.25,
+      "absolute_error": 0.0
+    },
+    "offset_stress_Pa": {
+      "actual": 320000000.0,
+      "expected": 320000000.0,
+      "absolute_error": 0.0
+    },
+    "offset_strain": {
+      "actual": 0.0036,
+      "expected": 0.0036,
+      "absolute_error": 0.0
+    },
+    "elastic_amplitude": {
+      "actual": 0.001,
+      "expected": 0.001,
+      "absolute_error": 0.0
+    },
+    "plastic_amplitude": {
+      "actual": 0.0003200000000000001,
+      "expected": 0.00032,
+      "absolute_error": 5.421010862427522e-20
+    },
+    "total_amplitude": {
+      "actual": 0.00132,
+      "expected": 0.00132,
+      "absolute_error": 0.0
+    }
+  },
+  "nonuniform_true_stress_withheld": true,
+  "zero_load_preserved": true,
+  "no_crossing_needs_data": true,
+  "nonmonotonic_branch_rejected_without_sorting": true,
+  "cyclic_parameters_inferred_from_monotonic_data": false,
+  "experimental_field_validation": false,
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "3fcc36fd86683621b48636372fe2c40e64cc4743eb805b474170704bad76c293",
+    "source_tree_files": 70
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "3fcc36fd86683621b48636372fe2c40e64cc4743eb805b474170704bad76c293",
+    "source_tree_files": 70
+  },
+  "external_source_unchanged": true,
+  "implementation_sha256": "969f8aa09c2ebb107cf343dcd273c6148062d33609bfb6ab90042a1cd7a060cc",
+  "script_sha256": "641d6ebc9bb0b96ae526ec2648d65fb6d5d77f705b955f0bd828382b6b990079",
+  "example_sha256": "34b1b11d8313b3aa343b5b8aa4f4fe75f3485162f1eaf01a6e9391a7a06bc523"
+}

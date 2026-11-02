@@ -1,0 +1,3 @@
+# Optional owner engine for pipeline_integrity.human_collection_exchange.
+# Install with: python -m pip install -r requirements-hra.txt
+human-reliability-toolkit @ git+https://github.com/lyullee/human-reliability-toolkit.git@d2754bbea16e12d00240e88d13cb4badbe672ac3

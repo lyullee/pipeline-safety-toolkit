@@ -1,0 +1,205 @@
+{
+  "schema": "pipeline_integrity.external_source_versions.v1",
+  "inspected_on": "2026-10-27",
+  "sources": [
+    {
+      "owner": "lh2dt_models",
+      "url": "https://github.com/lyullee/lh2dt_models",
+      "commit": "b2f276333c1b1793c39f25763703d196d36742ec",
+      "evidence": "research/physics_integration_results.json",
+      "note": "Public source snapshot; the executed source-tree digest is recorded separately.",
+      "additional_evidence": [
+        "research/gas_network_results.json",
+        "research/valve_transient_results.json",
+        "research/tank_inventory_results.json",
+        "research/control_exchange_results.json",
+        "research/response_trace_results.json"
+      ]
+    },
+    {
+      "owner": "PRISM",
+      "url": "https://github.com/lyullee/prism",
+      "commit": "884b0553341beb2d51d1d3c563f86982f378e160",
+      "source_subdirectory": "lh2-tno/src",
+      "evidence": "research/risk_exchange_results.json",
+      "additional_evidence": [
+        "research/physics_integration_results.json",
+        "research/release_exchange_results.json",
+        "research/consequence_results.json"
+      ],
+      "note": "Port, release and demand exchanges plus conditional diagnostic consequences and finite-window annual bounds. A complete accident or facility risk calculation was not qualified."
+    },
+    {
+      "owner": "process-monitoring-toolkit",
+      "url": "https://github.com/lyullee/process-monitoring-toolkit",
+      "commit": "79b4cf52a0acd0d0cbd3addbe82c3d98d6385e5a",
+      "evidence": "research/integration_results.json",
+      "note": "The executed checkout status and source digest are in the integration evidence.",
+      "additional_evidence": [
+        "research/tank_inventory_results.json",
+        "research/control_exchange_results.json",
+        "research/material_sections_results.json",
+        "research/fracture_exchange_results.json",
+        "research/structural_results.json",
+        "research/frame_loading_results.json",
+        "research/lifecycle_results.json",
+        "research/alarm_source_results.json",
+        "research/response_trace_results.json",
+        "research/monitoring_exchange_results.json"
+      ],
+      "monitoring_source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+      "monitoring_owner_version": "0.1.0",
+      "monitoring_selected_original_ids": 59,
+      "monitoring_selected_original_families": 7,
+      "isolated_deep_distribution_version": "2.14.1",
+      "isolated_deep_runtime_version": "2.14.1+cpu",
+      "deep_runtime_evidence": "research/monitoring_exchange_results.json"
+    },
+    {
+      "owner": "human-reliability-toolkit",
+      "url": "https://github.com/lyullee/human-reliability-toolkit",
+      "commit": "6617d36664a467dc3469905ed30bb2ae21366146",
+      "evidence": "research/risk_exchange_results.json",
+      "additional_evidence": [
+        "research/integration_results.json",
+        "research/scheduling_results.json",
+        "research/valve_transient_results.json",
+        "research/human_response_results.json",
+        "research/control_exchange_results.json",
+        "research/material_sections_results.json",
+        "research/fracture_exchange_results.json",
+        "research/structural_results.json",
+        "research/frame_loading_results.json",
+        "research/lifecycle_results.json",
+        "research/uncertainty_results.json",
+        "research/creep_results.json",
+        "research/period_risk_results.json",
+        "research/response_trace_results.json",
+        "research/material_risk_reference_results.json"
+      ],
+      "note": "The final execution used the public source snapshot at the acquisition commit; source-tree digest is retained separately.",
+      "prospective_integration": {
+        "version": "0.5.0",
+        "commit": "d2754bbea16e12d00240e88d13cb4badbe672ac3",
+        "module": "pipeline_integrity.human_collection_exchange",
+        "source_sha256": {
+          "collection.py": "6a5119c6b30942d3caf6e19e8adf9fbc2931a43bbb148fa0400537580b84e1cb",
+          "opportunity_validation.py": "044e71664c59b5047906667d25055f4756794a3391d959b5f06e4f7e270d84d0",
+          "observations.py": "7d30a6c30ec7ec4c16c944133f1a8fbc332884f56c1333f97d7c1d5f103c4aa3",
+          "contracts.py": "b1d80221d420b93ad98a0e8405d0dfad6c0ee8f612c6a265d18b75b184856704",
+          "probability.py": "e5d2eb96341a727d20bee30779432a31552caf86bc9d70e42a26a00abc806d8f"
+        },
+        "state": "authored_unexecuted",
+        "execution_evidence": null,
+        "field_qualification": false
+      }
+    },
+    {
+      "owner": "slabx",
+      "url": "https://github.com/lyullee/slabx",
+      "commit": "820e368ba6454aad8627dac5967115d9648c80c7",
+      "evidence": "research/consequence_results.json",
+      "note": "Separately acquired MIT source at the pinned commit; source package hash is in the native backend evidence."
+    },
+    {
+      "owner": "slabx-lh2",
+      "url": "https://github.com/lyullee/slabx-lh2",
+      "commit": "1ef613102819de1c2feebd062aff3b49997e1927",
+      "evidence": "research/consequence_results.json",
+      "note": "Separately acquired MIT source; this flat-layout package is pinned independently from SLABx."
+    },
+    {
+      "owner": "matintegrity",
+      "url": null,
+      "commit": null,
+      "evidence": "research/integration_results.json",
+      "note": "Supplied local source, version and source digest; no remote location inferred.",
+      "additional_evidence": [
+        "research/ili_application.json",
+        "research/pressure_fatigue_results.json",
+        "research/material_sections_results.json",
+        "research/fracture_exchange_results.json",
+        "research/structural_results.json",
+        "research/frame_loading_results.json",
+        "research/electrochemical_results.json",
+        "research/creep_results.json",
+        "research/period_risk_results.json",
+        "research/pressure_tests_results.json",
+        "research/welding_results.json",
+        "research/ebw_thermal_results.json",
+        "research/physical_reliability_results.json",
+        "research/fabrication_results.json",
+        "research/hardness_results.json",
+        "research/characterization_results.json",
+        "research/copper_tensile_results.json",
+        "research/copper_hardness_results.json",
+        "research/fastener_source_results.json",
+        "research/inspection_statistics_results.json",
+        "research/cyclic_fatigue_results.json",
+        "research/corrosion_wear_results.json",
+        "research/corrosion_source_results.json",
+        "research/material_quality_results.json",
+        "research/hydrogen_transport_results.json",
+        "research/profile_capacity_results.json",
+        "research/material_risk_reference_results.json",
+        "research/material_process_data_results.json",
+        "research/pipe_soil_transient_results.json"
+      ],
+      "latest_source_snapshot": {
+        "commit": null,
+        "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+        "source_tree_files": 76,
+        "license_id": "MIT",
+        "upstream_license_and_notices_preserved": true,
+        "included_in_code_release": false,
+        "reason": "Freeze source bytes while another local research session continues changing the owner checkout."
+      }
+    },
+    {
+      "owner": "PyNiteFEA",
+      "url": "https://github.com/JWock82/Pynite",
+      "distribution_version": "3.2.0",
+      "commit": null,
+      "evidence": "research/structural_results.json",
+      "note": "Separately installed PyPI distribution, MIT. Executed Python source-tree fingerprint is recorded in backend evidence; no native solver code is vendored.",
+      "additional_evidence": [
+        "research/frame_loading_results.json"
+      ]
+    },
+    {
+      "owner": "DynamicLH2PoolX",
+      "url": "https://github.com/lyullee/DynamicLH2PoolX",
+      "commit": "6a700e8e183039bbb81803bacc416f6c9117ed71",
+      "distribution_version": "0.2.0rc2",
+      "source_manifest_sha256": "2bfa618bae12eb6a91c180e6345084f821c5c7025a03e62e3497c6baa714f2c6",
+      "evidence": "research/pool_exchange_results.json",
+      "note": "Original MIT SDK source acquired separately with publisher Git blob verification; no owner source or data is bundled."
+    },
+    {
+      "owner": "hydrogen-station-sim",
+      "url": "https://github.com/lyullee/hydrogen-station-sim",
+      "commit": null,
+      "distribution_version": "0.1.2",
+      "evidence": "research/station_exchange_results.json",
+      "note": "Source bytes and independently generated CoolProp property-table artifact are pinned separately from the original checkout. Only bounded research episodes, not facility engineering qualification."
+    },
+    {
+      "owner": "SAGA-PY",
+      "url": "https://github.com/lyullee/saga-py",
+      "commit": null,
+      "distribution_version": "2.0.1",
+      "namespace_api_version": "2.0.0",
+      "source_manifest_sha256": "572eca2cd0bfae7363920a2680b2559a10a1d2797922fc084b447ed5d7545ffd",
+      "evidence": "research/knowledge_exchange_results.json",
+      "note": "Offline library paths only; no configured reasoner or online service. Optional worker actually imports separately licensed PyMuPDF (AGPL/commercial); it is not bundled or a mandatory dependency."
+    },
+    {
+      "owner": "FiPy",
+      "url": "https://github.com/usnistgov/fipy",
+      "distribution_version": "4.0.3",
+      "commit": null,
+      "evidence": "research/soil_cross_section_results.json",
+      "note": "Optional separately installed NIST package with retained NIST and bundled Hinsen notices. Only declared orthogonal polygon cross sections qualified; skew/correction physical failures retained and general soil/wall/fluid coupling remains partial. No solver source or binaries bundled."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "pipeline_integrity.dataset_crosswalk_integrity.v1",
+  "crosswalk_digest": "81f7a2d8c070afc5525e2874c8a488afd00cb50c996a575dbaa00819ae025cfb",
+  "inventory_digest": "04bed840513591daf279ea2c874b7f5620abd0a6cfc1a8b5f1dd9d001e0c405a",
+  "expected_dataset_ids": [
+    "leak_multisensor_transients",
+    "leak_testbed",
+    "potash_cp"
+  ],
+  "declared_dataset_ids": [
+    "leak_multisensor_transients",
+    "leak_testbed",
+    "potash_cp"
+  ],
+  "dataset_count": 3,
+  "consistent_dataset_count": 3,
+  "datasets": [
+    {
+      "dataset_id": "potash_cp",
+      "catalog_asset": "Current Density to Protect Carbon Steel in Saturated Brine.docx",
+      "status": "consistent",
+      "issues": [],
+      "supplier_checksum_verified": true
+    },
+    {
+      "dataset_id": "leak_testbed",
+      "catalog_asset": "leak_testbed-v1.zip",
+      "status": "consistent",
+      "issues": [],
+      "supplier_checksum_verified": false
+    },
+    {
+      "dataset_id": "leak_multisensor_transients",
+      "catalog_asset": "Dataset of Leak Simulations in Experimental Testbed Water Network.7z",
+      "status": "consistent",
+      "issues": [],
+      "supplier_checksum_verified": true
+    }
+  ],
+  "issues": [],
+  "signal_observations_read": false,
+  "archive_member_content_compared": false,
+  "independent_experiment_or_trial_established": false,
+  "record_digest": "4a6dcbbbf5cbcf9ee831f70b97a304711eacab239f3f1b82dd6b7ddecfb5ba38",
+  "implementation_sha256": "1b5067b2deb127f7427c5d073b52afd9651409c6ff9880827af4fadc69643fdc"
+}

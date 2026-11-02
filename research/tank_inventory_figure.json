@@ -1,0 +1,8 @@
+{
+  "schema": "pipeline_integrity.tank_inventory_figure.v1",
+  "source_sha256": "cbf2a3c2ff802ed557ac769210855d0a6d393c0a9dca8138adea8ef7011850b2",
+  "generator_sha256": "f3626cef438cd4f12c52234c4ab53f8f81047c9d6dd3b63b8f37a4a051bc3977",
+  "figure_sha256": "d6649b0d759e022264af9d015030571e0257167aec138477dffffc1e39cf9403",
+  "original_geometry_inputs": true,
+  "experimental_observations_plotted": false
+}

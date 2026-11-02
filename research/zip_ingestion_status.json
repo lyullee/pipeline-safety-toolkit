@@ -1,0 +1,30 @@
+{
+  "schema": "pipeline_integrity.zip_ingestion_status.v1",
+  "date": "2026-10-29",
+  "implementation": "pipeline_integrity.datasets.inspect_zip",
+  "state": "implemented_static_validation_pending",
+  "archive_is_extracted": false,
+  "rejects": [
+    "absolute, parent-traversal, noncanonical, drive-qualified, backslash, and control-character member names",
+    "duplicate normalized paths and case-insensitive collisions",
+    "encrypted members",
+    "symbolic links and non-regular filesystem entries",
+    "file-parent path conflicts in either archive order, including case-folded parents"
+  ],
+  "records": [
+    "member name",
+    "uncompressed byte count",
+    "CRC32 metadata",
+    "file or directory kind",
+    "regular-entry classification"
+  ],
+  "crc_payload_recomputed": false,
+  "zip_bomb_expansion_limit": false,
+  "authored_regressions": 6,
+  "tests_executed": 0,
+  "numerical_or_archive_fixture_execution": "deferred_to_nurion",
+  "pbs_submitted": false,
+  "scope_progress_claimed": false,
+  "guide": "docs/DATA_KO.md",
+  "hierarchy_guide": "docs/ZIP_PATH_HIERARCHY_KO.md"
+}

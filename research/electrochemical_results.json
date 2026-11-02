@@ -1,0 +1,358 @@
+{
+  "schema": "pipeline_integrity.electrochemical_verification.v1",
+  "authored_cases": {
+    "corrosion.coupon_loss": {
+      "status": "computed",
+      "values": {
+        "mean_penetration_m": 1.2738853503184714e-05,
+        "rate_m_s": 1.2738853503184714e-08,
+        "rate_mm_year": 402.00764331210195
+      },
+      "units": {
+        "mean_penetration_m": "m",
+        "rate_m_s": "m/s",
+        "rate_mm_year": "mm/year"
+      },
+      "result_digest": "7087c18430fbe1f9b6af8583124dcf691b1be307e480d20932249192ef913558",
+      "model_version": "1.0.0"
+    },
+    "corrosion.faraday": {
+      "status": "computed",
+      "values": {
+        "rate_m_s": 6.635839172720574e-12,
+        "penetration_m": 6.635839172720574e-07
+      },
+      "units": {
+        "rate_m_s": "m/s",
+        "penetration_m": "m"
+      },
+      "result_digest": "a0df79fa636815bc310e0f3b16b63946de52f8c5973fbb7756bac82203cf9671",
+      "model_version": "1.0.0"
+    },
+    "corrosion.charge_to_loss": {
+      "status": "computed",
+      "values": {
+        "dissolved_mass_kg": 2.79225e-06,
+        "dissolved_volume_m3": 3.5570063694267514e-10
+      },
+      "units": {
+        "dissolved_mass_kg": "kg",
+        "dissolved_volume_m3": "m^3"
+      },
+      "result_digest": "46a355776dd3c6d6f1fbf3288054c36eb1e987d376c4e53881f00bf520915fc9",
+      "model_version": "1.0.0"
+    },
+    "corrosion.stern_geary": {
+      "status": "computed",
+      "values": {
+        "stern_geary_coefficient_V": 0.026057668914195104,
+        "corrosion_current_density_A_m2": 1.3028834457097551
+      },
+      "units": {
+        "stern_geary_coefficient_V": "V",
+        "corrosion_current_density_A_m2": "A/m^2"
+      },
+      "result_digest": "2df425cff2cd699009f22aaa16d316e7d371520b04900773625b6516ec340df9",
+      "model_version": "1.0.0"
+    },
+    "corrosion.galvanic_linear": {
+      "status": "computed",
+      "values": {
+        "coupling_current_A": 0.003333333333333336,
+        "anodic_current_density_A_m2": 0.03333333333333336,
+        "cathodic_current_density_A_m2": 0.01666666666666668,
+        "anodic_overpotential_V": 0.006666666666666672,
+        "cathodic_overpotential_magnitude_V": 0.001666666666666668
+      },
+      "units": {
+        "coupling_current_A": "A",
+        "anodic_current_density_A_m2": "A/m^2",
+        "cathodic_current_density_A_m2": "A/m^2",
+        "anodic_overpotential_V": "V",
+        "cathodic_overpotential_magnitude_V": "V"
+      },
+      "result_digest": "a65edbef97aff8d453c2221242ba4b87742ac8397f2c3e826d4dace6846ec4db",
+      "model_version": "1.0.0"
+    },
+    "protection.coating_coverage": {
+      "status": "computed",
+      "values": {
+        "dry_volume_m3": 0.02,
+        "wet_thickness_m": 0.0004,
+        "required_wet_volume_m3": 0.05714285714285715
+      },
+      "units": {
+        "dry_volume_m3": "m^3",
+        "wet_thickness_m": "m",
+        "required_wet_volume_m3": "m^3"
+      },
+      "result_digest": "961656f4d72e032a20c2cc93e7cf4caa232090abd1ee4a7f62a2025cb3370eaf",
+      "model_version": "1.0.0"
+    },
+    "protection.cathodic_budget": {
+      "status": "computed",
+      "values": {
+        "required_charge_C": 6.666666666666666,
+        "mean_current_A": 1.6666666666666665,
+        "peak_current_A": 2.5,
+        "peak_time_s": 2.0,
+        "required_continuous_anode_mass_kg": 8.333333333333333e-05,
+        "minimum_anodes_by_charge": 1,
+        "minimum_anodes_by_peak_current": 3,
+        "minimum_anodes_for_declared_budget": 3,
+        "installed_charge_margin_C": 23993.333333333336,
+        "installed_peak_current_margin_A": 0.5,
+        "declared_budget_outcome": "satisfied"
+      },
+      "units": {
+        "required_charge_C": "C",
+        "mean_current_A": "A",
+        "peak_current_A": "A",
+        "peak_time_s": "s",
+        "required_continuous_anode_mass_kg": "kg",
+        "installed_charge_margin_C": "C",
+        "installed_peak_current_margin_A": "A"
+      },
+      "result_digest": "7558d284a0c56b5ab4aae41c47b8a1611f8d253044cde3da90e75cb2014a0ff7",
+      "model_version": "1.0.0"
+    }
+  },
+  "independent_references": {
+    "coupon_penetration_m": {
+      "actual": 1.2738853503184714e-05,
+      "expected": 1.2738853503184714e-05,
+      "absolute_error": 0.0
+    },
+    "faraday_rate_m_s": {
+      "actual": 6.635839172720574e-12,
+      "expected": 6.635839172720574e-12,
+      "absolute_error": 0.0
+    },
+    "charge_mass_kg": {
+      "actual": 2.79225e-06,
+      "expected": 2.7922500000000002e-06,
+      "absolute_error": 4.235164736271502e-22
+    },
+    "stern_geary_coefficient_V": {
+      "actual": 0.026057668914195104,
+      "expected": 0.026057668914195108,
+      "absolute_error": 3.469446951953614e-18
+    },
+    "galvanic_current_A": {
+      "actual": 0.003333333333333336,
+      "expected": 0.0033333333333333335,
+      "absolute_error": 2.6020852139652106e-18
+    },
+    "coating_wet_volume_m3": {
+      "actual": 0.05714285714285715,
+      "expected": 0.05714285714285715,
+      "absolute_error": 0.0
+    },
+    "cathodic_charge_C": {
+      "actual": 6.666666666666666,
+      "expected": 6.666666666666667,
+      "absolute_error": 8.881784197001252e-16
+    },
+    "cathodic_interior_peak_A": {
+      "actual": 2.5,
+      "expected": 2.5,
+      "absolute_error": 0.0
+    },
+    "cathodic_interior_peak_time_s": {
+      "actual": 2.0,
+      "expected": 2.0,
+      "absolute_error": 0.0
+    },
+    "bound_charge_mass_kg": {
+      "actual": 4.6303411116316885e-06,
+      "expected": 4.6303411116316885e-06,
+      "absolute_error": 0.0
+    }
+  },
+  "all_cases": {
+    "corrosion.coupon_loss": {
+      "status": "computed",
+      "result_digest": "7087c18430fbe1f9b6af8583124dcf691b1be307e480d20932249192ef913558"
+    },
+    "corrosion.coupon_loss_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "735810a0ce1e5aac7f1f4bd3451d9181ff502b316cae70f7c838dcc5b32d2cc8"
+    },
+    "corrosion.faraday": {
+      "status": "computed",
+      "result_digest": "a0df79fa636815bc310e0f3b16b63946de52f8c5973fbb7756bac82203cf9671"
+    },
+    "corrosion.faraday_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "4b227bd7d7121e0b13e3cdb3aa512e2c28b86127178b426fcca0ed199f47aab2"
+    },
+    "corrosion.charge_to_loss": {
+      "status": "computed",
+      "result_digest": "46a355776dd3c6d6f1fbf3288054c36eb1e987d376c4e53881f00bf520915fc9"
+    },
+    "corrosion.charge_to_loss_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "f755b77d12594e0bb0abe8fbf6b5e61080d979fc38bd6161f1b8de243e1a28b8"
+    },
+    "corrosion.stern_geary": {
+      "status": "computed",
+      "result_digest": "2df425cff2cd699009f22aaa16d316e7d371520b04900773625b6516ec340df9"
+    },
+    "corrosion.stern_geary_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "6a7b0ec889b548cb9516c6a3ca747afe60c26ad92eb2a25fcb987df2c71b44ac"
+    },
+    "corrosion.galvanic_linear": {
+      "status": "computed",
+      "result_digest": "a65edbef97aff8d453c2221242ba4b87742ac8397f2c3e826d4dace6846ec4db"
+    },
+    "corrosion.galvanic_linear_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "8aca4815e5e7946dc60829f594101edd125f8f999aa32d578c244e8081ff3ac9"
+    },
+    "protection.coating_coverage": {
+      "status": "computed",
+      "result_digest": "961656f4d72e032a20c2cc93e7cf4caa232090abd1ee4a7f62a2025cb3370eaf"
+    },
+    "protection.coating_coverage_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "0587101812903f5e50e93f76e524d23db14ef93b2baea021706c55def0fcdf41"
+    },
+    "protection.cathodic_budget": {
+      "status": "computed",
+      "result_digest": "7558d284a0c56b5ab4aae41c47b8a1611f8d253044cde3da90e75cb2014a0ff7"
+    },
+    "protection.cathodic_budget_unreviewed": {
+      "status": "needs_data",
+      "result_digest": "af61bfc75cd47e9bde3bb6cf880ef85f09386f70e92bdaf5b7f4b243b7ddc36b"
+    },
+    "protective_current_is_not_dissolution": {
+      "status": "out_of_scope",
+      "result_digest": "3ea80a464759c27afc0cc69a7f5b1c3bb6614ed81f95a8944f3244bdd10e3d3c"
+    },
+    "net_current_is_not_dissolution": {
+      "status": "out_of_scope",
+      "result_digest": "700b747aef868bfe0a85dbbb57df92be6687cdf3240dd4fbc7b46bb62d37b13d"
+    },
+    "galvanic_outside_linear_support": {
+      "status": "out_of_scope",
+      "result_digest": "f5c2351a588f3bb6d1fd9bb14566fd51634ff191e902e22899118eb098a3b387"
+    },
+    "missing_potential_reference": {
+      "status": "needs_data",
+      "result_digest": "87d1b0319a127212fd628b65f4728ef03cb5acaaa6a61612941d8354a9807032"
+    },
+    "bound_dissolution_history": {
+      "status": "computed",
+      "result_digest": "bb7150411abb12ee0162f96b9191018080375f0874ae2506c59bdc11f84072b8"
+    },
+    "bound_protective_demand": {
+      "status": "computed",
+      "result_digest": "df16d5f7ebebfb693beb404e806023d7c8c9a007c3d7ba38d89bb88d1eab7961"
+    }
+  },
+  "source": {
+    "dataset_id": "galvanized_polarization",
+    "citation": "Vontorov\u00e1, Ji\u0159ina; Nov\u00e1k, Vlastimil; V\u00e1\u0148ov\u00e1, Petra; https://doi.org/10.5281/zenodo.13886478",
+    "creators": [
+      "Ji\u0159ina Vontorov\u00e1",
+      "Vlastimil Nov\u00e1k",
+      "Petra V\u00e1\u0148ov\u00e1"
+    ],
+    "license_id": "CC-BY-4.0",
+    "source": "https://zenodo.org/records/13886478",
+    "assets": [
+      {
+        "filename": "metals-3156094_potentiodynamic_polarization_HCl_data.xlsx",
+        "bytes": 97931,
+        "sha256": "686f102a3b3fbcbe0687f13216c808493fc64297c69001b86a333d7372636640",
+        "supplier_checksum": "md5:b6b314cc923aed381ac5dc5d06b7ac00"
+      },
+      {
+        "filename": "metals-3156094_potentiodynamic_polarization_H2SO4_data.xlsx",
+        "bytes": 98400,
+        "sha256": "0bea36d0bb23de745aef708da83d15431d31678f44d6ca60c25334db678b6a0f",
+        "supplier_checksum": "md5:fb36966daeba2c6dc4ee76f22658db9b"
+      },
+      {
+        "filename": "metals-3156094_data.xlsx",
+        "bytes": 15554,
+        "sha256": "e7a9047a6afb3c1bdfef57c0c73ca14e19aa1c903a7da746516d21921d541638",
+        "supplier_checksum": "md5:6b59a1e964b9b410d1824d429501c62b"
+      },
+      {
+        "filename": "metals-3156094_potentiodynamic_polarization_NaCl_data.xlsx",
+        "bytes": 102557,
+        "sha256": "b46fe0a5ea169d805d82f6d32eae2d4f40ba0218bd1e01aafad0a0121795b675",
+        "supplier_checksum": "md5:735fe2203dc995219334d6776f2455b3"
+      },
+      {
+        "filename": "ReadMe.txt",
+        "bytes": 1079,
+        "sha256": "0f80a2a736ec5b9b37650f3c1d351795f33cbc49c4230ed11aec4a6b9f2df384",
+        "supplier_checksum": "md5:d71d0282c53f8ede3ff7cf17f27991ce"
+      }
+    ],
+    "reported_summary_rows": 24,
+    "unresolved_area_or_reference_cases": 24,
+    "conditional_bare_steel_cases": 12,
+    "conditional_penetration_m_range": [
+      4.055235049995905e-07,
+      1.6479000612256088e-05
+    ],
+    "hypothetical_exposure_s": 100000.0,
+    "conditional_Fe2_density_kg_m3": 7850.0,
+    "current_efficiency_assumed": 1.0,
+    "measured_dissolution_or_service_rate_validated": false,
+    "plus_minus_kind": "source unspecified; no independent specimen or distribution inference",
+    "polarization_workbooks": [
+      {
+        "filename": "metals-3156094_potentiodynamic_polarization_HCl_data.xlsx",
+        "sheets": [
+          {
+            "name": "Hydrochloric acid",
+            "rows": 1026,
+            "columns": 24
+          }
+        ]
+      },
+      {
+        "filename": "metals-3156094_potentiodynamic_polarization_H2SO4_data.xlsx",
+        "sheets": [
+          {
+            "name": "Sulfuric acid",
+            "rows": 1026,
+            "columns": 24
+          }
+        ]
+      },
+      {
+        "filename": "metals-3156094_potentiodynamic_polarization_NaCl_data.xlsx",
+        "sheets": [
+          {
+            "name": "Sodium_chloride",
+            "rows": 1026,
+            "columns": 24
+          }
+        ]
+      }
+    ],
+    "raw_or_derived_observations_in_code_release": false
+  },
+  "potash_cp": {
+    "status": "metadata_only",
+    "source": "https://data.mendeley.com/datasets/z6m27978vj/2",
+    "raw_access": "HTTP 403; no observations acquired or applied"
+  },
+  "external_materials": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "bc5af99a205ac42c63af28bd636b8fc12e76f29363358e86413bbe4f130c959a",
+    "source_tree_files": 68
+  },
+  "external_materials_unchanged": true,
+  "implementation_sha256": "939fd08db59a68fec08f19fab7d68b4a6c4a008c53af1c30040c9e7d5395dbc2",
+  "script_sha256": "bc991967e9dafdf790fcee7c228ae7a24e5681715e32fd9e22577c4f9d0b213e",
+  "example_sha256": "99486178043773f045ed386836b1dc36e67272fe0daee305d487202bdc4389cc",
+  "field_or_standard_qualification": false
+}

@@ -1,0 +1,17 @@
+{
+  "model_id": "hydraulics.liquid_loss",
+  "parameters": {
+    "diameter_m": 0.2,
+    "length_m": 100,
+    "roughness_m": 0.000045,
+    "volume_flow_m3_s": 0.02,
+    "density_kg_m3": 998,
+    "viscosity_pa_s": 0.001
+  },
+  "context": {
+    "asset_id": "demo_pipe_01",
+    "scenario_id": "declared_parameter_example",
+    "clock_id": "elapsed",
+    "origin": "synthetic"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "pipeline_integrity.ebw_download_wrapper_ingestion.v1",
+  "status": "source_ingested_provenance_only",
+  "dataset_id": "ebw_thermal",
+  "doi": "10.17632/c7d9mt9h9x.1",
+  "license_id": "CC-BY-4.0",
+  "rights_evidence_url": "https://api.datacite.org/dois/10.17632/c7d9mt9h9x.1",
+  "wrapper": {
+    "kind": "single_member_download_wrapper",
+    "wrapper_filename": "Dataset on thermal cycles and cooling times during.zip",
+    "wrapper_bytes": 368511,
+    "wrapper_sha256": "24deb672a08f8657039a9c84c12705d8a77d4a4749d732fdd7c984185359b433",
+    "member_path": "Dataset on thermal cycles and cooling times during/EBW_ThermalCycle_CoolingTime_Data_HSSS.zip",
+    "member_compressed_bytes": 368211,
+    "member_publisher_bytes": 368314,
+    "member_crc32": "ae100810",
+    "member_crc32_verified_by_zip_reader": true,
+    "publisher_asset_sha256": "329063f7b187e7df6a245f7fb868972d6a24b7f9ad6fdffc336a270dc2e6be5b",
+    "publisher_sha256_verified": true
+  },
+  "publisher_asset": {
+    "filename": "EBW_ThermalCycle_CoolingTime_Data_HSSS.zip",
+    "bytes": 368314,
+    "sha256": "329063f7b187e7df6a245f7fb868972d6a24b7f9ad6fdffc336a270dc2e6be5b",
+    "supplier_checksum": "sha256:329063f7b187e7df6a245f7fb868972d6a24b7f9ad6fdffc336a270dc2e6be5b",
+    "publisher_checksum_verified_before_xlsx_open": true
+  },
+  "source_record_digest": "bbbed6a3c21ef98255604dfd432aab62c93b8fb5f421ac91470404c708157fe6",
+  "physical_experiment_count": 5,
+  "sensor_history_count": 7,
+  "physical_time_rows": 19781,
+  "sensor_samples": 25416,
+  "complete_source_rows_retained": true,
+  "common_absolute_clock_across_experiments_established": false,
+  "missing_values_imputed": false,
+  "numerical_models_executed": false,
+  "tests_executed": 0,
+  "raw_observations_in_receipt": false,
+  "implementation_sha256": "fc62a3df82096c20b1e0668214cb7540ee99bfd9ec3aa8614e13f0bb578837c1",
+  "ingestion_script_sha256": "b5199350674514e649e918a5249c35d2bb8e166588bd6a533bf83e9214842618",
+  "record_digest": "f8a53785612a76ec63d3c5540333d8a39fa043ba012b9c35cb3e4c841d0b6316"
+}

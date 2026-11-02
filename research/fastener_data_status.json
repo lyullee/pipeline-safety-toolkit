@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.fastener_data_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.fastener_data",
+  "entrypoint": "read_fastener_trace(path, kind=None)",
+  "dataset_id": "fastener_clamping",
+  "license_id": "CC-BY-4.0",
+  "publisher_asset_pin_required": true,
+  "preserves": [
+    "source DOI/creator/version/license",
+    "publisher SHA-256 and byte count",
+    "trial identity",
+    "source row/cells",
+    "signed and missing values",
+    "angle coordinate and nonmonotone/repeated order"
+  ],
+  "conversion": "force kN to N by 1000; torque Nm retained",
+  "pointwise_result_is_private_data": true,
+  "elapsed_time_inferred": false,
+  "synchronization_inferred": false,
+  "solver_duplicated": false,
+  "authored_test_functions": 2,
+  "authored_parametrized_rejection_cases": 3,
+  "tests_executed": 0,
+  "nurion_job_submitted": false,
+  "field_qualification": false,
+  "guide": "docs/FASTENER_DATA_KO.md"
+}

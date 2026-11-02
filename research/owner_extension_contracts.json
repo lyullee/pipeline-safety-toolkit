@@ -1,0 +1,352 @@
+{
+  "schema": "pipeline_integrity.owner_contract_snapshots.v1",
+  "kind": "static_source_contracts_not_execution",
+  "requests": [
+    {
+      "request_id": "PIPE-EXT-001",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.gas_thermal_transient",
+          "source_path": "src/pipeline_integrity/gas_thermal_transient.py",
+          "sha256": "741310009bbfb7c060ff44224f6d664e55570acd39e9405ed5b21f379a13d68d",
+          "contract_names": [
+            "GasThermalTransientRequest",
+            "GasThermalCell",
+            "GasThermalWindow"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-002",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.tank_breathing",
+          "source_path": "src/pipeline_integrity/tank_breathing.py",
+          "sha256": "9a70eb1153eb83d7ce9068502213bf86f70f8ef906f7a7e68e1c36414de5cb36",
+          "contract_names": [
+            "TankBreathingRequest",
+            "TankBreathingWindow",
+            "TankBreathingVent"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-003",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.compressor_train",
+          "source_path": "src/pipeline_integrity/compressor_train.py",
+          "sha256": "0323f3086ef68767e7fc686ef044fff47b549be802b5289260f63dba9d31df68",
+          "contract_names": [
+            "CompressorTrainRequest"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.operating_optimization",
+          "source_path": "src/pipeline_integrity/operating_optimization.py",
+          "sha256": "e5a7bb81405a5adda09a8107745159bd499a4883eb6c8100efb599dd45c8d15c",
+          "contract_names": [
+            "OperatingOptimizationRequest",
+            "SuppliedOperatingBatch"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-004",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.phase_change_exchange",
+          "source_path": "src/pipeline_integrity/phase_change_exchange.py",
+          "sha256": "9f467f00524d299f9b232dd3c4f96edcc36d6f71b3fc30ecb358f7c40f76ffd6",
+          "contract_names": [
+            "PhaseChangeRequest"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.heated_transport",
+          "source_path": "src/pipeline_integrity/heated_transport.py",
+          "sha256": "7e8c77fb0c4a92761b3d8e92f2347dd544ce8eff7222e491e9b051eae18f5e7a",
+          "contract_names": [
+            "HeatedTransportRequest"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.deposition_risk",
+          "source_path": "src/pipeline_integrity/deposition_risk.py",
+          "sha256": "643a80298ce0ceaccb4d5daf125fdd2e086768bd5566c43056299521b975e6fd",
+          "contract_names": [
+            "DepositionRequest",
+            "DepositionEnvelope"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-005",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.external_sensing",
+          "source_path": "src/pipeline_integrity/external_sensing.py",
+          "sha256": "495bf2bf6c361cb8ad3ded8a13d599fbb29480d8755b4ecd2f485c8d463358be",
+          "contract_names": [
+            "ExternalSensingRequest",
+            "ExternalChannel",
+            "SensorFootprint"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-006",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.inverse_localization",
+          "source_path": "src/pipeline_integrity/inverse_localization.py",
+          "sha256": "b7e3f30cc7efeccc704ada3f303ee036f8e003ea2de5b3f66b9a0851fb7da254",
+          "contract_names": [
+            "LocalizationRequest",
+            "LocalizationProvider"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.sensor_placement",
+          "source_path": "src/pipeline_integrity/sensor_placement.py",
+          "sha256": "4071c6c0e02f25ff790d1c868d5000afb7e83e82db0843101c11dcb8952d30c9",
+          "contract_names": [
+            "SensorPlacementRequest",
+            "DesignLinearization",
+            "JointDesignNoise"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-007",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.fracture_arrest",
+          "source_path": "src/pipeline_integrity/fracture_arrest.py",
+          "sha256": "ef609e4c444376229026006d42f3ad056e91d780202c06ac8005657f605d5657",
+          "contract_names": [
+            "FractureArrestRequest",
+            "ArrestTrajectory"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-008",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.soil_pipe",
+          "source_path": "src/pipeline_integrity/soil_pipe.py",
+          "sha256": "f2929f38f5395bb5b40409656380bab66e2436f1a3530fdb2d7de366a2429cce",
+          "contract_names": [
+            "SoilPipeRequest"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.buckling",
+          "source_path": "src/pipeline_integrity/buckling.py",
+          "sha256": "1ed70f7a2a1afde40bb3d5c2daeea646409bc0c523c21692a044986d80c1d5f5",
+          "contract_names": [
+            "BucklingRequest",
+            "BucklingMatrices"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.pulling",
+          "source_path": "src/pipeline_integrity/pulling.py",
+          "sha256": "98965942fa61038239fbf9bf3064b4bbc77925b40f8cae283cdb4a59cd48634c",
+          "contract_names": [
+            "PullingRequest"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.structural",
+          "source_path": "src/pipeline_integrity/structural.py",
+          "sha256": "89b1874a8f58b0824792fe9ea6a02c61edc25a6bbb7799ac3ee2b123552f9a3c",
+          "contract_names": [
+            "NativeFrameAssembly",
+            "build_native_frame",
+            "audit_frame_equilibrium",
+            "assemble_frame_stiffness"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-009",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.procedures",
+          "source_path": "src/pipeline_integrity/procedures.py",
+          "sha256": "ddf828f91b7173b6819fc86cb5259699073b40020d0278bd9356786cb44c9f0e",
+          "contract_names": [
+            "Procedure",
+            "ProcedureRecord"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.response_trace",
+          "source_path": "src/pipeline_integrity/response_trace.py",
+          "sha256": "f30bb933121d7d050e4fea3a974f36a6d54fe9d37e13c1b78fa446d2c4ce8cea",
+          "contract_names": [
+            "ResponseTraceSpec"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-010",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.pressure_wave_data",
+          "source_path": "src/pipeline_integrity/pressure_wave_data.py",
+          "sha256": "fcf21bc4b94d2e1b52171896ebe04eaa681c28ac6fe29c583c9f31c660e4d215",
+          "contract_names": [
+            "pressure_source_publication_metadata",
+            "qualify_pressure_pair",
+            "build_pressure_pair_trace_record",
+            "verify_pressure_pair_trace_record"
+          ]
+        },
+        {
+          "module": "pipeline_integrity.pressure_wave",
+          "source_path": "src/pipeline_integrity/pressure_wave.py",
+          "sha256": "e4d4380e89aca7123d5580387d50e083833b1a0d8cac16093086d6de645b2e65",
+          "contract_names": [
+            "PressureWaveRequest",
+            "bind_pressure_wave_pair_request"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-011",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.risk_exchange",
+          "source_path": "src/pipeline_integrity/risk_exchange.py",
+          "sha256": "678b716f4d8e59b340545ea5fc143a89388f0e79ef0c58f56d039b4711aad37b",
+          "contract_names": [
+            "JointStateCountTable",
+            "joint_states_from_counts",
+            "verify_joint_state_count_receipt",
+            "fault_tree_request_from_joint_counts",
+            "HRARiskClient"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-012",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.batch_transport",
+          "source_path": "src/pipeline_integrity/batch_transport.py",
+          "sha256": "3c07f4f6c73eadd4d3bf493c16918cf84674d414ec0f41072e33939588a4041d",
+          "contract_names": [
+            "BatchComposition",
+            "BatchInletStep",
+            "BatchTransportRequest",
+            "BatchTransportProvider",
+            "evaluate_batch_transport",
+            "verify_batch_transport_record"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-013",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.leak_multisensor_data",
+          "source_path": "src/pipeline_integrity/leak_multisensor_data.py",
+          "sha256": "9d63c8030892b3361bbe9f6ef0371a9c876b475c2db38d3e0489bafee02f8407",
+          "contract_names": [
+            "inventory_leak_multisensor_archive",
+            "accelerometer_member_labels",
+            "read_accelerometer_member",
+            "parse_accelerometer_csv",
+            "verify_accelerometer_csv_record",
+            "qualify_accelerometer_pair",
+            "verify_accelerometer_pair_qualification",
+            "build_accelerometer_pair_trace_record",
+            "verify_accelerometer_pair_trace_record",
+            "bind_accelerometer_delay_request",
+            "hydrophone_member_labels",
+            "read_hydrophone_member",
+            "verify_hydrophone_source_record"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-014",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.pump_transient",
+          "source_path": "src/pipeline_integrity/pump_transient.py",
+          "sha256": "10c8fc2bc3e45da395324bd20212b441f96f37fd81f494d36e3184e6a29b88a2",
+          "contract_names": [
+            "PumpCoastdownRequest",
+            "PumpTransientProvider",
+            "evaluate_pump_coastdown",
+            "verify_pump_coastdown_record"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    },
+    {
+      "request_id": "PIPE-EXT-015",
+      "consumer_sources": [
+        {
+          "module": "pipeline_integrity.instrument_exchange",
+          "source_path": "src/pipeline_integrity/instrument_exchange.py",
+          "sha256": "33b41f8de4785f1fb7619e6f0e1d1d3160172f115a48c01d376c80571d63651b",
+          "contract_names": [
+            "TransmitterScenario",
+            "TransmitterMonitoringInput",
+            "replay_transmitter",
+            "transmitter_monitoring_input",
+            "packet_observation"
+          ]
+        }
+      ],
+      "owner_implementation_verified": false,
+      "tests_executed": 0
+    }
+  ]
+}

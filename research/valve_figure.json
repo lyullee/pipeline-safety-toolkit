@@ -1,0 +1,15 @@
+{
+  "schema": "pipeline_integrity.figure.v1",
+  "figure": "docs/images/valve_transient_reference.png",
+  "figure_sha256": "a57e833676a4001d25ec70e4886e39d141cec491b01f539da60bbdaa2629e7f5",
+  "matplotlib_version": "3.11.2",
+  "script_sha256": "679938ae2fe7ffdf385a4ae9b32cca8a8c1ac0ca872d59ae125cf9cbec2b52f5",
+  "source_sha256": {
+    "fast": "6290ac649aa959484f9a318c391619d39e2eff7529a95016b5484366f87c29d7",
+    "delayed": "5a707830ec9b94a41d37e55ecb529e72bddceb6879c89efef92509c292712306",
+    "no_command": "48c240860b575269b455951b4ac05591963bcf85ffa93bd7cb394ce5373a5ae4",
+    "slow": "0beb554c428a65a2219c79609b6134657b13916512a8b11333a4d5046c3611f9",
+    "closed_leakage": "fcb5133770dec8c50fffe133ee7461d6218ed607d7ac491e696f11a9a75cd9f8"
+  },
+  "field_validation_claim": false
+}

@@ -1,0 +1,153 @@
+{
+  "network": "water_transport.inp",
+  "specification": {
+    "duration_s": 600.0,
+    "hydraulic_timestep_s": 100.0,
+    "report_timestep_s": 100.0,
+    "continuity_tolerance_m3_s": 1e-06,
+    "solver_relative_accuracy": 1e-08,
+    "solver_head_error_m": 1e-07,
+    "solver_flow_change_m3_s": 1e-09,
+    "solver_maximum_trials": 200,
+    "maximum_hydraulic_periods": 1000000
+  },
+  "sensors": [
+    {
+      "channel_id": "pressure:J",
+      "element_id": "J",
+      "quantity": "pressure_head",
+      "flow_sign": 1
+    },
+    {
+      "channel_id": "flow:P",
+      "element_id": "P",
+      "quantity": "volume_flow",
+      "flow_sign": 1
+    }
+  ],
+  "bindings": [
+    {
+      "parameter_id": "demand",
+      "kind": "demand_multiplier",
+      "element_ids": []
+    },
+    {
+      "parameter_id": "roughness",
+      "kind": "pipe_roughness_multiplier",
+      "element_ids": [
+        "P"
+      ]
+    }
+  ],
+  "observations": {
+    "id": "authored_known_parameters",
+    "asset_id": "authored_water_line",
+    "clock_id": "elapsed",
+    "origin": "synthetic",
+    "source_digests": {
+      "network": "8b58d5253559e80ab3b92259f58f97e1b4f87eee96da641ac1a5a322071766d2",
+      "authored_generation": "88606b12d41ca339cdccc6cdb233b550b1745411a4694f4267e8ec85ac701d34"
+    },
+    "time_s": [
+      0.0,
+      100.0,
+      200.0,
+      300.0,
+      400.0,
+      500.0,
+      600.0
+    ],
+    "channels": [
+      {
+        "id": "pressure:J",
+        "scale": {
+          "value": 0.01,
+          "unit": "m",
+          "source_id": "authored_reference_weight"
+        },
+        "values": [
+          99.89344024658203,
+          99.89344024658203,
+          99.89344024658203,
+          99.89344024658203,
+          99.89344024658203,
+          99.89344024658203,
+          99.89344024658203
+        ],
+        "valid": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "id": "flow:P",
+        "scale": {
+          "value": 1e-05,
+          "unit": "m3/s",
+          "source_id": "authored_reference_weight"
+        },
+        "values": [
+          0.011200000531971455,
+          0.011200000531971455,
+          0.011200000531971455,
+          0.011200000531971455,
+          0.011200000531971455,
+          0.011200000531971455,
+          0.011200000531971455
+        ],
+        "valid": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "fit": {
+    "parameters": [
+      {
+        "id": "demand",
+        "unit": "1",
+        "lower": 0.8,
+        "upper": 1.2,
+        "initial": 1.0
+      },
+      {
+        "id": "roughness",
+        "unit": "1",
+        "lower": 0.8,
+        "upper": 1.2,
+        "initial": 1.0
+      }
+    ],
+    "provider_id": "water_forward",
+    "provider_version": "1",
+    "fit_end_s": 200.0,
+    "validation_start_s": 300.0,
+    "validation_end_s": 600.0,
+    "loss": "linear",
+    "loss_scale": 1.0,
+    "difference_step_fraction": 0.005,
+    "identifiability_relative_tolerance": 1e-06,
+    "maximum_model_evaluations": 500,
+    "maximum_optimizer_evaluations": 50,
+    "parameter_tolerance": 1e-05
+  },
+  "context": {
+    "asset_id": "authored_water_line",
+    "scenario_id": "known_parameter_recovery",
+    "clock_id": "elapsed",
+    "origin": "synthetic",
+    "evidence": [],
+    "metadata": {}
+  }
+}

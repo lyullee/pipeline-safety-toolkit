@@ -1,0 +1,19 @@
+{
+  "network": "water_transport.inp",
+  "context": {
+    "asset_id": "authored_water_line",
+    "scenario_id": "passive_front",
+    "clock_id": "reference_elapsed",
+    "origin": "synthetic"
+  },
+  "specification": {
+    "hydraulics": {"duration_s": 1000.0, "hydraulic_timestep_s": 60.0, "report_timestep_s": 5.0},
+    "mode": "concentration",
+    "parameter_source_id": "independently_authored_reference",
+    "quality_timestep_s": 1.0,
+    "quality_tolerance": 0.00000001,
+    "initial_default_value": 0.0,
+    "species_id": "passive_marker",
+    "sources": [{"source_id": "inlet", "node_id": "R", "source_type": "CONCEN", "strength": 0.001, "unit": "kg/m3"}]
+  }
+}

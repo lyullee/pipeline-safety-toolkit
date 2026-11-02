@@ -1,0 +1,31 @@
+{
+  "schema": "pipeline_integrity.structural_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "backend": {
+    "distribution": "PyNiteFEA",
+    "version": "3.2.0",
+    "license": "MIT",
+    "sparse": true,
+    "source_tree_sha256": "e29a5a721cfadc8e18fde8ff5e059a00aa5b191f11c12f7fb02aade39db31653",
+    "source_tree_files": 23,
+    "warnings": [],
+    "diagnostic_output": []
+  },
+  "primary_sources": [
+    "https://pypi.org/project/PyNiteFEA/",
+    "https://pynite.readthedocs.io/en/latest/member.html",
+    "https://pynite.readthedocs.io/en/latest/analysis.html",
+    "https://pynite.readthedocs.io/en/latest/stability.html",
+    "https://github.com/JWock82/Pynite/blob/main/LICENSE"
+  ],
+  "distribution_license": "MIT",
+  "copyright_holder": "D. Craig Brinck",
+  "installed_wheel_sha256": "3e2d0e8e294ac1b328c756349131596b39c4c4dfce3663ec3b53cbf16f6aa99b",
+  "published_pypi_wheel_sha256": "3e2d0e8e294ac1b328c756349131596b39c4c4dfce3663ec3b53cbf16f6aa99b",
+  "installed_wheel_bytes": 203480,
+  "native_solver_source_vendored": false,
+  "adoption": "Optional native linear elastic frame solve with independent external force/moment integration and typed SI/quality/context boundaries.",
+  "independent_references": "Original geometry, loads and elastic reference expressions; no standards or vendor tables.",
+  "source_observations_redistributed": false,
+  "actual_pipe_local_stress_or_dynamic_experiment_qualified": false
+}

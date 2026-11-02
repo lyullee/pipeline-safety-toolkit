@@ -1,0 +1,71 @@
+{
+  "schema": "pipeline_integrity.welding_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "native_models": {
+    "welding.arc_energy": "1.0.0",
+    "welding.waveform_energy": "1.0.0",
+    "welding.carbon_equivalents": "1.0.0",
+    "welding.cooling_interval": "1.0.0",
+    "welding.heat_treatment_history": "1.0.0",
+    "welding.dilution": "1.0.0",
+    "welding.hardness_traverse": "1.0.0",
+    "welding.joint_profile": "1.0.0"
+  },
+  "implementation_policy": "Reuse strict owner MaterialJob laws, existing signed power integration, units and source contracts. Source readers preserve signs, clocks, missing data and explicit selections; no supplier code, standards tables or notebook is copied.",
+  "new_optional_dependency": {
+    "name": "h5py",
+    "tested_version": "3.16.0",
+    "license": "BSD-3-Clause",
+    "use": "Read reviewed NetCDF/HDF5 members; no dependency source or binaries vendored"
+  },
+  "tandem_source": {
+    "doi": "10.5281/zenodo.21824586",
+    "version": "v2.0.0",
+    "previous_version_not_selected": "10.5281/zenodo.17951725 v1.0.0",
+    "creators": [
+      "Prashant Kumar Chaurasia",
+      "Cagtay Fabry",
+      "Andreas Pittner",
+      "Michael Rethmeier"
+    ],
+    "license_id": "CC-BY-4.0",
+    "rights_url": "https://api.datacite.org/dois/10.5281/zenodo.21824586",
+    "rights_cache_sha256": "bc1057fab4f243eb992aa242923d3fd942d8f5dfb10f02cf7d89bad6fb0d4f63",
+    "metadata_cache_sha256": "d8c18933ff2627f359090258da23a9888d9ab73185cd75c702830405b83ee0ae",
+    "selected_assets": 3,
+    "selected_bytes": 231713903,
+    "selected_workpieces": 1,
+    "selected_layers": 2,
+    "all_thirty_passes_acquired": false
+  },
+  "ebw_source": {
+    "doi": "10.17632/c7d9mt9h9x.1",
+    "publisher_version": "1",
+    "datacite_version": null,
+    "creators": [
+      "Raghawendra Pratap Singh Sisodia",
+      "Piotr Sliwinski",
+      "Marek St. Weglowski"
+    ],
+    "license_id": "CC-BY-4.0",
+    "rights_url": "https://api.datacite.org/dois/10.17632/c7d9mt9h9x.1",
+    "rights_cache_sha256": "ca5de7314fc1651124afe341f851f6e7e5e5b76a55ca7c8701047e9f6d5c52e7",
+    "metadata_cache_sha256": "8828894753c1bd6e5a7dc22a70f467bf0b3a88724017d2e8df64031c1801187a",
+    "original_archive_sha256": "329063f7b187e7df6a245f7fb868972d6a24b7f9ad6fdffc336a270dc2e6be5b",
+    "bytes": 368314,
+    "experiments": 5,
+    "sensors": 7
+  },
+  "dependency_api": "https://docs.h5py.org/en/stable/high/dataset.html",
+  "independent_authored_references": 22,
+  "profile_fit_modes": [
+    "ols",
+    "theil_sen",
+    "soft_l1"
+  ],
+  "source_or_transformed_observation_rows_in_release": false,
+  "nominal_grade_to_assay_or_wps_inferred": false,
+  "physical_fusion_of_independent_source_experiments": false,
+  "public_explanations_original": true,
+  "procedure_or_field_qualification": false
+}

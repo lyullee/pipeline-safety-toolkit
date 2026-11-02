@@ -1,0 +1,150 @@
+{
+  "schema": "pipeline_integrity.public_validation_status.v1",
+  "version": "0.1.0a1",
+  "prepared_at_utc": "2026-11-02T22:39:34.766812+00:00",
+  "fixed_engineering_scope": {
+    "models": 223,
+    "implemented": 223,
+    "required_variants": 339,
+    "distinct_apis": 304,
+    "implementation_percent": 100.0
+  },
+  "current_source_representative_campaign": {
+    "cases": 16795,
+    "passed": 16795,
+    "failure": 0,
+    "error": 0,
+    "skipped": 0,
+    "models_by_kind": {
+      "integration": {
+        "executed_models": 223,
+        "passed_models": 223,
+        "cases": 226,
+        "passed_cases": 226
+      },
+      "regression": {
+        "executed_models": 223,
+        "passed_models": 223,
+        "cases": 16346,
+        "passed_cases": 16346,
+        "basis": "Re-executed existing input, independent-formula and numerical-limit baselines; broader legacy inventory is reported separately."
+      },
+      "end_to_end": {
+        "executed_models": 223,
+        "passed_models": 223,
+        "cases": 223,
+        "passed_cases": 223
+      }
+    },
+    "source_receipt_sha256": "784adf12c078635f5453c32ea87bb493634202244982d278f877017ced429d5b",
+    "reproduce": "python scripts/run_remaining_engineering_campaign.py",
+    "external_owner_and_reference_staging_required": true
+  },
+  "bounded_physical_campaign": {
+    "completed_profiles": 198,
+    "total_models": 223,
+    "scope_percent": 88.78923766816143,
+    "cases": 2013,
+    "passed": 2013,
+    "source_receipt_sha256": "5cfbc40b35b93fbd2ae023bf0a055d6062f8a2931f32821ea63824b8df4e8f98",
+    "whole_model_all_variants_qualified": false,
+    "reproduce": "python scripts/run_physical_campaign_223.py",
+    "elapsed_wall_s": 447.35899999999674,
+    "parallel_subprocesses": 4,
+    "dependency_source_frozen": true,
+    "failure": 0,
+    "error": 0,
+    "skipped": 0,
+    "reused_profiles": 0,
+    "executed_profiles_this_batch": 198
+  },
+  "portable_public_checks": {
+    "source": {
+      "test_files": 17,
+      "cases": 276,
+      "passed": 276,
+      "failure": 0,
+      "error": 0,
+      "skipped": 0,
+      "passed_all": true,
+      "elapsed_wall_s": 27.125
+    },
+    "installed_wheel": {
+      "test_files": 17,
+      "cases": 276,
+      "passed": 276,
+      "failure": 0,
+      "error": 0,
+      "skipped": 0,
+      "passed_all": true,
+      "elapsed_wall_s": 24.89099999999962
+    }
+  },
+  "core_installation": {
+    "passed": true,
+    "optional_modules_absent": 30,
+    "engineering_method_bindings": 223,
+    "wheel_sha256": "06cdda5d7a91eaec018244e214a5691a59b016cd587bca590313042534ec4c9f",
+    "reproduce": "python scripts/check_isolated_core.py"
+  },
+  "pump_import_fix_regression": {
+    "cases": 24,
+    "passed": 24
+  },
+  "archive_boundary_self_checks": {
+    "cases": 11,
+    "passed": 11
+  },
+  "known_empirical_acceptance_failures": {
+    "total": 4,
+    "pipe_friction": 2,
+    "fixed_power_rate_strength": 1,
+    "censored_creep_life": 1,
+    "original_gates_preserved": true
+  },
+  "unexecuted_windows_privilege_checks": 2,
+  "legacy_full_inventory": {
+    "files": 700,
+    "cases": 25458,
+    "passed": 25452,
+    "failure": 4,
+    "error": 0,
+    "skipped": 2,
+    "version_policy": "Historical whole-file discovery and repair evidence; not a single current-source full-suite run."
+  },
+  "lint": {
+    "syntax_and_undefined_names": 0,
+    "full_rule_findings": 6488,
+    "by_rule": {
+      "I001": 827,
+      "F401": 64,
+      "E401": 33,
+      "E402": 13,
+      "E702": 3178,
+      "B023": 229,
+      "E701": 1643,
+      "B007": 7,
+      "B905": 410,
+      "E731": 35,
+      "E741": 23,
+      "B904": 1,
+      "F841": 11,
+      "F811": 3,
+      "B004": 1,
+      "F403": 2,
+      "F405": 7,
+      "B017": 1
+    },
+    "full_style_pass": false,
+    "ci_full_style_job": "advisory; known findings remain visible"
+  },
+  "execution_platforms": {
+    "Windows": "executed locally",
+    "Linux": "CI configured; not executed locally",
+    "GitHub_Actions": "configured; remote run not yet performed"
+  },
+  "automated_scan_is_not_legal_clearance": true,
+  "independent_field_qualification_claim": false,
+  "distribution_name": "pipeline-safety-toolkit",
+  "python_namespace": "pipeline_integrity"
+}

@@ -1,0 +1,244 @@
+{
+  "schema": "pipeline_integrity.alarm_source_verification.v1",
+  "status": "passed",
+  "primary_data": {
+    "dataset_id": "battledim",
+    "source": "https://zenodo.org/records/4017659",
+    "citation": "Stelios G. Vrachimis; Demetrios G. Eliades; Riccardo Taormina; Avi Ostfeld; Zoran Kapelan; Shuming Liu; Marios S. Kyriakou; Pavlos Pavlou; Mengning Qiu; Marios Polycarpou; https://doi.org/10.5281/zenodo.4017659",
+    "creators": [
+      "Stelios G. Vrachimis",
+      "Demetrios G. Eliades",
+      "Riccardo Taormina",
+      "Avi Ostfeld",
+      "Zoran Kapelan",
+      "Shuming Liu",
+      "Marios S. Kyriakou",
+      "Pavlos Pavlou",
+      "Mengning Qiu",
+      "Marios Polycarpou"
+    ],
+    "version": "v1",
+    "license_id": "CC-BY-4.0",
+    "rights_evidence_url": "https://zenodo.org/records/4017659",
+    "origin": "simulation",
+    "files": {
+      "2018_SCADA_Pressures.csv": {
+        "bytes": 22593812,
+        "supplier_checksum": "md5:d389d8541350c19ff0bfc6b80f246d35",
+        "checksum_origin": "publisher_metadata",
+        "supplier_checksum_verified": true,
+        "current_sha256": "7782d890a7195699be94ddc01cba392da7ca285908afff619065a9616e04dcae"
+      },
+      "2018_SCADA_Flows.csv": {
+        "bytes": 4023420,
+        "supplier_checksum": "md5:d0602c06946b46287e956f007e4264ee",
+        "checksum_origin": "publisher_metadata",
+        "supplier_checksum_verified": true,
+        "current_sha256": "7f7e8625c9d92b083ee079a54cffb9ef803876de1e35017c1da0455968daf3ff"
+      },
+      "2018_SCADA_Levels.csv": {
+        "bytes": 2721000,
+        "supplier_checksum": "md5:92a512d6749ddf66fd6d99f2bdde6cc4",
+        "checksum_origin": "publisher_metadata",
+        "supplier_checksum_verified": true,
+        "current_sha256": "a1fc5f0229448a620b6220f4d079b3162a255b3070acdce448608fbfc760903c"
+      },
+      "README.txt": {
+        "bytes": 5303,
+        "supplier_checksum": "md5:7ad5cdc2eebfe78197a3412e80d07ddc",
+        "checksum_origin": "publisher_metadata",
+        "supplier_checksum_verified": true,
+        "current_sha256": "e6a3e83bdf7f116c47c72640de6e4785fd3437b96428448adf9ca76f066f2226"
+      }
+    },
+    "source_checksum_manifest": "992dc0ecb46126c475feb9e39471d3702a2e631e880d9571d333baefb203fbf7",
+    "publisher_md5_verified_files": 4,
+    "first_source_rows_used": 864,
+    "selected_channels": [
+      "pressure_head:n1",
+      "volume_flow:PUMP_1"
+    ],
+    "independent_physical_sources": 1,
+    "same_network_time_rows_are_independent_experiments": false
+  },
+  "source_quality": {
+    "source_frame_count": 864,
+    "source_frames_digest": "de085a46a6e6616d95a29828d03c53ca35e562afbb4c2965aeeac359c3048614",
+    "source_clock_id": "battledim_2018_local_elapsed",
+    "source_clock_is_elapsed": true,
+    "absolute_UTC_alignment_inferred": false,
+    "observed_span_s": 258900.0,
+    "sample_interval_s": 300.0,
+    "samples_sorted_resampled_or_filled": false,
+    "missing_or_invalid_pressure_head_samples": 0,
+    "missing_or_invalid_contextual_flow_samples": 0
+  },
+  "score_transform": {
+    "pressure_channel": "pressure_head:n1",
+    "pressure_quantity": "source pressure head in metres, not absolute pressure in Pa",
+    "contextual_flow_channel": "volume_flow:PUMP_1",
+    "contextual_flow_used_in_score": false,
+    "flow_source_unit": "m3/hour",
+    "flow_model_boundary_unit": "m3/s",
+    "flow_scale": 0.0002777777777777778,
+    "score_channel": "declared_low_pressure_head_score",
+    "score_unit": "1",
+    "rule": "score = (reference_head_m - pressure_head_m) / head_scale_m",
+    "reference_head_m": 35.0,
+    "head_scale_m": 5.0,
+    "negative_scores_clipped_or_rectified": false,
+    "missing_pressure_head_yields_missing_invalid_score": true,
+    "parameters_fitted_or_tuned": false,
+    "parameter_basis": "independent authored research scenario; no plant alarm setting or learned baseline",
+    "hydraulic_pressure_or_flow_model_fitted": false
+  },
+  "declared_policy": {
+    "trigger": 1.0,
+    "reset": 0.0,
+    "persistence_s": 600.0,
+    "recovery_s": 600.0,
+    "max_gap_s": 300.0,
+    "latch": false
+  },
+  "unreviewed_policy_status": "needs_data",
+  "source_replay": {
+    "status": "exchange_checked",
+    "source_frames_digest": "2918e0219a096cded311535d57e33bcfa7be354a97b4b41ba004edcd0306731f",
+    "result_digest": "38a6b68ece12cc0389b34945b7b75d588f70c3f38420716d1367191e81798e76",
+    "provider": {
+      "id": "process_monitoring.events.AlarmPolicy",
+      "version": "0.1.0",
+      "source_sha256": "9b65722ab6436a50892a1526dcabf55ab293aa7b38c97cb573e9640fba576b8d"
+    },
+    "observations": 864,
+    "states": {
+      "PENDING": 2,
+      "ALARM": 862
+    },
+    "active_observations": 862,
+    "invalid_observations": 0,
+    "gaps_before_observations": 0,
+    "observed_activation_count": 1,
+    "issues": [],
+    "score_is_probability": false,
+    "field_qualified": false,
+    "activation_time_basis": "recorded_first_valid_alarm_transition",
+    "true_onset_estimated": false
+  },
+  "same_owner_API_sequence_comparison": {
+    "observations_compared": 864,
+    "matches": true,
+    "interpretation": "fresh same-owner AlarmPolicy comparison; not independent physical validation"
+  },
+  "synthetic_contract_checks": {
+    "synthetic_missing": {
+      "status": "exchange_checked",
+      "source_frames_digest": "4e8f9bc250b10691350f1d6b8056e0e3700081329e916253501edd67c4278e60",
+      "result_digest": "40a69ab5d96879e8c4c60255a81e99631c3afa75f3b1026d6c9d7ce266c03c39",
+      "provider": {
+        "id": "process_monitoring.events.AlarmPolicy",
+        "version": "0.1.0",
+        "source_sha256": "9b65722ab6436a50892a1526dcabf55ab293aa7b38c97cb573e9640fba576b8d"
+      },
+      "observations": 9,
+      "states": {
+        "PENDING": 3,
+        "ALARM": 3,
+        "UNKNOWN": 1,
+        "NORMAL": 2
+      },
+      "active_observations": 4,
+      "invalid_observations": 1,
+      "gaps_before_observations": 0,
+      "observed_activation_count": 1,
+      "issues": [
+        "missing_or_invalid_score_observations"
+      ],
+      "score_is_probability": false,
+      "field_qualified": false,
+      "activation_time_basis": "recorded_first_valid_alarm_transition",
+      "true_onset_estimated": false
+    },
+    "synthetic_gap": {
+      "status": "exchange_checked",
+      "source_frames_digest": "9e3e1a4854339fbaf0ce701ea3c645bd3a6e992c9844a389f168eab204d8f8b7",
+      "result_digest": "2de7437d0e95d0891032319f3b9d7b8a9811f2a4dd005d5805c4d983d8145163",
+      "provider": {
+        "id": "process_monitoring.events.AlarmPolicy",
+        "version": "0.1.0",
+        "source_sha256": "9b65722ab6436a50892a1526dcabf55ab293aa7b38c97cb573e9640fba576b8d"
+      },
+      "observations": 5,
+      "states": {
+        "PENDING": 4,
+        "ALARM": 1
+      },
+      "active_observations": 1,
+      "invalid_observations": 0,
+      "gaps_before_observations": 1,
+      "observed_activation_count": 1,
+      "issues": [
+        "observation_gap_exceeded"
+      ],
+      "score_is_probability": false,
+      "field_qualified": false,
+      "activation_time_basis": "recorded_first_valid_alarm_transition",
+      "true_onset_estimated": false
+    },
+    "synthetic_latch": {
+      "status": "exchange_checked",
+      "source_frames_digest": "69a7fe9ae981400ed1a48125a33d148e7dc5a82168c74c472a8fbad787c54f4e",
+      "result_digest": "b3b54beee6bf95ecc5fe75ebda43c3626840aaa513984a86b4ef1e84654640e7",
+      "provider": {
+        "id": "process_monitoring.events.AlarmPolicy",
+        "version": "0.1.0",
+        "source_sha256": "9b65722ab6436a50892a1526dcabf55ab293aa7b38c97cb573e9640fba576b8d"
+      },
+      "observations": 7,
+      "states": {
+        "PENDING": 2,
+        "ALARM": 4,
+        "NORMAL": 1
+      },
+      "active_observations": 4,
+      "invalid_observations": 0,
+      "gaps_before_observations": 0,
+      "observed_activation_count": 1,
+      "issues": [],
+      "score_is_probability": false,
+      "field_qualified": false,
+      "activation_time_basis": "recorded_first_valid_alarm_transition",
+      "true_onset_estimated": false
+    }
+  },
+  "synthetic_unknown_retains_active_and_resets_timers": true,
+  "synthetic_gap_restarts_persistence_without_filling": true,
+  "synthetic_latch_requires_authored_reset_request": true,
+  "synthetic_checks_are_source_or_human_observations": false,
+  "external_monitoring_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+    "source_tree_files": 28
+  },
+  "external_monitoring_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+    "source_tree_files": 28
+  },
+  "external_monitoring_source_unchanged": true,
+  "public_summary_contains_source_or_transformed_sample_rows": false,
+  "source_labels_or_human_reactions_read": false,
+  "threshold_fit_or_tuning_performed": false,
+  "held_out_performance_claimed": false,
+  "physical_leak_false_alarm_rate": null,
+  "physical_leak_detection_rate": null,
+  "human_error_probability": null,
+  "observed_delivery_delay_s": null,
+  "activation_count_is_leak_incidence_or_HRA_demand_rate": false,
+  "alarm_policy_delivery_human_response_or_field_qualification": false,
+  "loader_sha256": "7806b27491f6b72752d23f6e8484bb386ada699b22026592a55256ff3446560e",
+  "alarm_exchange_sha256": "b51c8b74e0d770d4f95e55b708e4f4d139b5a59fcc1fcb32b014d6c3b4e5a855",
+  "script_sha256": "fb66d24e08de9f7f8d9cd1e712bc00e58768a96b57c1f0e46288841091329938"
+}

@@ -1,0 +1,545 @@
+{
+  "schema": "pipeline_integrity.creep_verification.v1",
+  "authored_cases": {
+    "creep.norton": {
+      "status": "computed",
+      "values": {
+        "steady_creep_strain_rate_per_s": 1e-08,
+        "steady_creep_strain": 0.0001
+      },
+      "result_digest": "ca4cd6da186f78c5b4dc8a6e5668d7332a3f58c4164a356782e6402d74abd6b9"
+    },
+    "creep.norton_unreviewed": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "20a33a914981aa898ecd765939ab10a1463a46da7e4315739ee91399ef5c0baa"
+    },
+    "creep.larson_miller": {
+      "status": "computed",
+      "values": {
+        "parameter_K": 19386.149999999998
+      },
+      "result_digest": "5d44e937d7d422a3a38e8f85419e19f22336e746185eb5f6ce7bf9360190cfbc"
+    },
+    "creep.larson_miller_unreviewed": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "3d02ac9c895aec7dc6338e2c45f807e51bbb2be8035ce4979c6e79d8844a2769"
+    },
+    "creep.time_fraction": {
+      "status": "computed",
+      "values": {
+        "time_fraction_damage": 0.15000000000000002
+      },
+      "result_digest": "6fa5d48ab59f5af0087fc73b44ec074ff4b924ece7396e14826eeb05c78f5aee"
+    },
+    "creep.time_fraction_unreviewed": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "67bb3adaf87682d400243070291aeb1d8fdc6a509ebf41e9ada31bfc993ca9d9"
+    },
+    "kinetics.arrhenius": {
+      "status": "computed",
+      "values": {
+        "rate": 3.8051655559595e-09,
+        "temperature_factor": 3.8051655559595003
+      },
+      "result_digest": "f3ff9db256d80acf42b624edc0f65bba3166efadb416bbf74aa67d2fa7541c78"
+    },
+    "kinetics.arrhenius_unreviewed": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "5a2686ffd37ddecfe5fb106574382c443d457cefc7fe78b742cd3823f21791f2"
+    },
+    "degradation.parabolic_oxidation": {
+      "status": "computed",
+      "values": {
+        "oxide_thickness_m": 1.414213562373095e-06,
+        "oxide_growth_m": 4.14213562373095e-07
+      },
+      "result_digest": "14fd56a3ce7e64a9c83f2b89cbd019cadbb5fc7dfc47caf9a8cdb46bb6f79da8"
+    },
+    "degradation.parabolic_oxidation_unreviewed": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "5691893126c130467086f4f481169c40c385dd1a1d9380e854addbfaea9b5ffb"
+    },
+    "creep.lognormal_life_fit": {
+      "status": "computed",
+      "values": {
+        "model": {
+          "schema_version": "matintegrity.creep_life.v1",
+          "family": "stress_only",
+          "material_condition_id": "authored_single_material_condition",
+          "stress_basis": "initial_nominal_constant_load",
+          "temperature_basis": "nominal_specified",
+          "reference_stress_Pa": 165487545.98234448,
+          "reference_temperature_K": 923.1499999999999,
+          "log_reference_median_time_s": 14.383774834267443,
+          "stress_exponent": 3.0000000000001172,
+          "activation_energy_J_mol": null,
+          "log_life_sigma": 0.14142135595765004,
+          "temperature_tolerance_K": 0.0,
+          "support_stress_Pa": [
+            100000000.0,
+            150000000.0,
+            200000000.0,
+            250000000.0
+          ],
+          "support_temperature_K": [
+            923.15,
+            923.15,
+            923.15,
+            923.15
+          ],
+          "longest_observed_failure_time_s": 9771222.06528136,
+          "training_digest": "dd25f3163b71f1c4b2c83dc590e104a274711e41f2ef4334fc934d8a23caa806",
+          "observations": 20,
+          "failures": 20,
+          "evidence": [
+            {
+              "source_id": "reference",
+              "origin": "synthetic",
+              "citation": "Original uncensored log-life regression reference",
+              "license_id": "MIT",
+              "sha256": null
+            }
+          ]
+        },
+        "negative_log_likelihood_seconds": 276.9340372945602,
+        "information_condition_number": 25.000000000000018,
+        "right_censored": 0,
+        "parameter_uncertainty_included": false
+      },
+      "result_digest": "d500a1323d5ee4e4e78f9a017d5c9bbb1dd098212172f9248a3291aef01cff5a"
+    },
+    "creep.lognormal_life_fit_unreviewed": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "8dbe136594b0a1988d76cf54fe3e64c8c2c4f2a58adfc58b14e7cc1734ee7112"
+    },
+    "creep.conditional_life": {
+      "status": "computed",
+      "values": {
+        "median_life_s": 1000000.0000300235,
+        "log_median_life_s": 13.815510557994298,
+        "median_beyond_declared_time_support": false,
+        "probability_given_survival": 0.4999997618926012,
+        "log_life_sigma": 0.14142135595765004,
+        "parameter_uncertainty_included": false,
+        "declared_time_bound_s": 9771222.06528136,
+        "model_digest": "1ff2bbc1c456c27edd5c359d86a863cdb4945c7c9aed2f075198cce56058b06b"
+      },
+      "result_digest": "4c2c987a6815f618983a71d3bbfafbb258f80be202760a26813bc278a7260f7c"
+    },
+    "outside_stress": {
+      "status": "out_of_scope",
+      "values": {},
+      "result_digest": "292c3ec34624c74e4022152b145ef2efd55227265d1c17d8c2c568ca9c8e3eea"
+    },
+    "unknown_full_history": {
+      "status": "needs_data",
+      "values": {},
+      "result_digest": "a32dfd86fbcebed7c94a071738caa88b39da5a2cb91b925c8c0435f60efe77c2"
+    }
+  },
+  "independent_references": {
+    "norton_rate": {
+      "actual": 1e-08,
+      "expected": 1e-08,
+      "absolute_error": 0.0
+    },
+    "norton_strain": {
+      "actual": 0.0001,
+      "expected": 0.0001,
+      "absolute_error": 0.0
+    },
+    "larson_miller_hours": {
+      "actual": 19386.149999999998,
+      "expected": 19386.149999999998,
+      "absolute_error": 0.0
+    },
+    "time_fraction": {
+      "actual": 0.15000000000000002,
+      "expected": 0.15,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    "sequence": {
+      "actual": 0.15000000000000002,
+      "expected": 0.15,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    "arrhenius_factor": {
+      "actual": 3.8051655559595003,
+      "expected": 3.8051655559595003,
+      "absolute_error": 0.0
+    },
+    "oxide_thickness": {
+      "actual": 1.414213562373095e-06,
+      "expected": 1.4142135623730952e-06,
+      "absolute_error": 2.117582368135751e-22
+    },
+    "lognormal_stress_exponent": {
+      "actual": 3.0000000000001172,
+      "expected": 3.0,
+      "absolute_error": 1.1723955140041653e-13
+    },
+    "lognormal_sigma": {
+      "actual": 0.14142135595765004,
+      "expected": 0.1414213562373095,
+      "absolute_error": 2.796594622545001e-10
+    },
+    "conditional_median": {
+      "actual": 1000000.0000300235,
+      "expected": 1000000.0,
+      "absolute_error": 3.002351149916649e-05
+    },
+    "conditional_survival_probability": {
+      "actual": 0.4999997618926012,
+      "expected": 0.49999976189260137,
+      "absolute_error": 1.6653345369377348e-16
+    },
+    "native_single_event_period_gate": {
+      "actual": 0.4999997618926012,
+      "expected": 0.4999997618926012,
+      "absolute_error": 0.0
+    }
+  },
+  "sequence": {
+    "status": "computed",
+    "damage": 0.15000000000000002,
+    "result_digest": "d0b4f1ccdcc1d442dac96425bad9a0b905bbfe3a9da8beaf25290f227717a99a",
+    "damage_is_probability": false
+  },
+  "period_risk": {
+    "status": "computed",
+    "measure": "mission_probability",
+    "endpoint": "creep_rupture",
+    "probability": 0.4999997618926012,
+    "native_single_event_period_probability": 0.4999997618926012,
+    "hra_provider": {
+      "id": "human-reliability-toolkit",
+      "version": "0.2.0",
+      "source_digest": "b6ccef70258a46ad7f806f5d955ea72413285b851ca9cf3815f4aef6901863ee"
+    },
+    "demand_annualization_status": "withheld",
+    "demand_fta_adapter_status": "withheld",
+    "generic_multievent_period_adapter_completed": false
+  },
+  "primary_data": {
+    "dataset_id": "cmsx6_creep",
+    "source": "https://zenodo.org/records/14750432",
+    "citation": "\u00c1vila Calder\u00f3n, Luis A.; Schriever, Sina; Han, Ying; Olbricht, Juergen; Dolabella Portella, Pedro; Skrotzki, Birgit; https://doi.org/10.5281/zenodo.14750432",
+    "creators": [
+      "Luis A. Avila Calderon",
+      "Sina Schriever",
+      "Ying Han",
+      "Juergen Olbricht",
+      "Pedro Dolabella Portella",
+      "Birgit Skrotzki"
+    ],
+    "license_id": "CC-BY-4.0",
+    "assets": [
+      {
+        "filename": "Vh5205_C-97.LIS",
+        "bytes": 360637,
+        "sha256": "8d36deb384b2777af0d3347515328855bce240d06036f60fd5fecf46d60d716a",
+        "supplier_checksum": "md5:c9a1e0cf2430762634b8da84cfe10fdd"
+      },
+      {
+        "filename": "2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx",
+        "bytes": 290084,
+        "sha256": "ba3b7ba142e9578096502ca083704043bfa28eb2e3f307a6892a390241a88495",
+        "supplier_checksum": "md5:d59a1be8f22264cebe5abfd11ee7ce62"
+      },
+      {
+        "filename": "Vh5205_C-89.LIS",
+        "bytes": 341769,
+        "sha256": "89053503dcd326cf5637ecceac5517ff215887e370c6d002c1beab9b1a03c9de",
+        "supplier_checksum": "md5:91815206431ce302eeab88b3cc3a8f5e"
+      },
+      {
+        "filename": "Vh5205_C-82.LIS",
+        "bytes": 401248,
+        "sha256": "b7f181e15c98e1f4993a8084cc83566e2e16c4a2d18bfcee3a6f64ee9c559eb5",
+        "supplier_checksum": "md5:99c704e85e87597ab1f5041144285241"
+      },
+      {
+        "filename": "Vh5205_C-80.LIS",
+        "bytes": 321051,
+        "sha256": "7bb25bdc9ee324a99e83980f2bd98987b54ef175e01a6fc42084855ef2bfc50b",
+        "supplier_checksum": "md5:cb48a3a5ef62597e0e9f0b58c5fb144c"
+      },
+      {
+        "filename": "Vh5205_C-91.LIS",
+        "bytes": 565537,
+        "sha256": "18f3d5a3cd629a90198c1d6c03005205e55b43cb6b254b74620d80f164a90b29",
+        "supplier_checksum": "md5:89a2e4e8657f19b687a65e90dea16725"
+      },
+      {
+        "filename": "Vh5205_C-99.LIS",
+        "bytes": 382882,
+        "sha256": "efa91cb7b779269b8e579d309daadb6d1ed90609fdb0daf80602c43effdc4e46",
+        "supplier_checksum": "md5:56d3b4db93dccd821944dc44fcc5d288"
+      },
+      {
+        "filename": "Vh5205_C-94.LIS",
+        "bytes": 444859,
+        "sha256": "9cd1411cb710450be64ae1d01a6f061f1dfaf24ab5303f42d7a01d093ccdc03a",
+        "supplier_checksum": "md5:26b49c8c989aeffa5cc4a49c8d37ab82"
+      },
+      {
+        "filename": "Vh5205_C-85.LIS",
+        "bytes": 462783,
+        "sha256": "0a8409d505e826ac2be7bfc9ed1cc6432d050adad4b93dbda80757ce18845315",
+        "supplier_checksum": "md5:80f392962b757be4a0e3af5727cb449f"
+      },
+      {
+        "filename": "Vh5205_C-98.LIS",
+        "bytes": 543744,
+        "sha256": "4e14339f56bead5df97cc4b58a62821892a0a3935a2ee0ef882a1173fc596b52",
+        "supplier_checksum": "md5:7ac2bdd5961562f26bf2f884636c8190"
+      },
+      {
+        "filename": "Vh5205_C-78.LIS",
+        "bytes": 347095,
+        "sha256": "5009e086ae35864f994758054ee0b16440e5bd244fcc4711ba5d1c1619133bab",
+        "supplier_checksum": "md5:610326ba69e38a3287d20b173e1629dd"
+      },
+      {
+        "filename": "Vh5205_C-95.LIS",
+        "bytes": 457722,
+        "sha256": "bc54a2aa62c6d4c916beb8691888361987b15f8b842ab5950279d91fca65d0f8",
+        "supplier_checksum": "md5:3df58f302a589f6ab334cb66b7880f84"
+      },
+      {
+        "filename": "Vh5205_C-81.LIS",
+        "bytes": 551167,
+        "sha256": "6d7bd9399cfbce875fc6b97ad6406fd91626512d412676c259ba6de81f10c9f3",
+        "supplier_checksum": "md5:cddbb74a27ad8b2f1f42b02363fe528f"
+      }
+    ],
+    "specimens": 12,
+    "ruptures": 9,
+    "administrative_right_censored": 3,
+    "temperature_levels_K": [
+      1253.15
+    ],
+    "stress_levels_Pa": [
+      140000000.0,
+      170000000.0,
+      200000000.0,
+      230000000.0
+    ],
+    "fit_status": "computed",
+    "fitted_population_model": {
+      "schema_version": "matintegrity.creep_life.v1",
+      "family": "stress_only",
+      "material_condition_id": "BAM-CMSX6-reference-v1.0-single-crystal-heat-treated",
+      "stress_basis": "initial_nominal_constant_load",
+      "temperature_basis": "nominal_specified",
+      "reference_stress_Pa": 181900418.05372396,
+      "reference_temperature_K": 1253.1500000000005,
+      "log_reference_median_time_s": 13.946292818141833,
+      "stress_exponent": 6.203592569020971,
+      "activation_energy_J_mol": null,
+      "log_life_sigma": 0.04043977382937669,
+      "temperature_tolerance_K": 0.0,
+      "support_stress_Pa": [
+        140000000.0,
+        170000000.0,
+        200000000.0,
+        230000000.0
+      ],
+      "support_temperature_K": [
+        1253.15,
+        1253.15,
+        1253.15,
+        1253.15
+      ],
+      "longest_observed_failure_time_s": 1771200.0,
+      "training_digest": "555499b4a07782d474abedf110422acf7a46b797cacf172c31f232b51eda944a",
+      "observations": 12,
+      "failures": 9,
+      "evidence": [
+        {
+          "source_id": "source",
+          "origin": "open_dataset",
+          "citation": "\u00c1vila Calder\u00f3n, Luis A.; Schriever, Sina; Han, Ying; Olbricht, Juergen; Dolabella Portella, Pedro; Skrotzki, Birgit; https://doi.org/10.5281/zenodo.14750432",
+          "license_id": "CC-BY-4.0",
+          "sha256": "ba3b7ba142e9578096502ca083704043bfa28eb2e3f307a6892a390241a88495"
+        }
+      ]
+    },
+    "parameter_uncertainty_included": false,
+    "independent_field_validation": false,
+    "activation_energy_fit_status": "needs_data",
+    "conditional_prediction_status": "computed",
+    "conditional_prediction": {
+      "median_life_s": 632751.178649263,
+      "log_median_life_s": 13.35783254114647,
+      "median_beyond_declared_time_support": false,
+      "probability_given_survival": 2.400042271016681e-76,
+      "log_life_sigma": 0.04043977382937669,
+      "parameter_uncertainty_included": false,
+      "declared_time_bound_s": 1771200.0,
+      "model_digest": "110ff685f7e94fe64bad84957233bd06f871265bfab19819765fde44e4ffec27"
+    },
+    "traces": [
+      {
+        "specimen_id": "Vh5205_C-97",
+        "source_sha256": "8d36deb384b2777af0d3347515328855bce240d06036f60fd5fecf46d60d716a",
+        "rows": 9817,
+        "repeated_clock_intervals": 2,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-89",
+        "source_sha256": "89053503dcd326cf5637ecceac5517ff215887e370c6d002c1beab9b1a03c9de",
+        "rows": 9085,
+        "repeated_clock_intervals": 2,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-82",
+        "source_sha256": "b7f181e15c98e1f4993a8084cc83566e2e16c4a2d18bfcee3a6f64ee9c559eb5",
+        "rows": 10949,
+        "repeated_clock_intervals": 4,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-80",
+        "source_sha256": "7bb25bdc9ee324a99e83980f2bd98987b54ef175e01a6fc42084855ef2bfc50b",
+        "rows": 8836,
+        "repeated_clock_intervals": 4,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-91",
+        "source_sha256": "18f3d5a3cd629a90198c1d6c03005205e55b43cb6b254b74620d80f164a90b29",
+        "rows": 14934,
+        "repeated_clock_intervals": 3,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-99",
+        "source_sha256": "efa91cb7b779269b8e579d309daadb6d1ed90609fdb0daf80602c43effdc4e46",
+        "rows": 10348,
+        "repeated_clock_intervals": 3,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-94",
+        "source_sha256": "9cd1411cb710450be64ae1d01a6f061f1dfaf24ab5303f42d7a01d093ccdc03a",
+        "rows": 12276,
+        "repeated_clock_intervals": 0,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "administrative_time_limit",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-85",
+        "source_sha256": "0a8409d505e826ac2be7bfc9ed1cc6432d050adad4b93dbda80757ce18845315",
+        "rows": 12428,
+        "repeated_clock_intervals": 0,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "administrative_time_limit",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-98",
+        "source_sha256": "4e14339f56bead5df97cc4b58a62821892a0a3935a2ee0ef882a1173fc596b52",
+        "rows": 14695,
+        "repeated_clock_intervals": 1,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-78",
+        "source_sha256": "5009e086ae35864f994758054ee0b16440e5bd244fcc4711ba5d1c1619133bab",
+        "rows": 9602,
+        "repeated_clock_intervals": 3,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-95",
+        "source_sha256": "bc54a2aa62c6d4c916beb8691888361987b15f8b842ab5950279d91fca65d0f8",
+        "rows": 12153,
+        "repeated_clock_intervals": 0,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "administrative_time_limit",
+        "rupture_inferred_from_trace_endpoint": false
+      },
+      {
+        "specimen_id": "Vh5205_C-81",
+        "source_sha256": "6d7bd9399cfbce875fc6b97ad6406fd91626512d412676c259ba6de81f10c9f3",
+        "rows": 14909,
+        "repeated_clock_intervals": 1,
+        "source_clock_origin": "end_of_loading",
+        "source_time_unit": "h",
+        "source_extension_unit": "percent",
+        "endpoint_kind": "rupture",
+        "rupture_inferred_from_trace_endpoint": false
+      }
+    ],
+    "total_trace_rows": 140032,
+    "repeated_clock_intervals": 23,
+    "raw_or_derived_specimen_and_trace_rows_in_code_release": false
+  },
+  "external_sources": {
+    "materials": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "1c985da3ff3fe84c788dbcdb0efde3e5ab82ffcabef3c8130a34ad1083bcf986",
+      "source_tree_files": 68
+    },
+    "hra": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    }
+  },
+  "external_sources_unchanged": true,
+  "implementation_sha256": "c9f06ed0a6f7a5368e0e87b7afa888c81adc7257fd6b1a33fbda416d69ae2026",
+  "script_sha256": "f9bd7f386eece65fafe5c534df96f5fe90a44902b9dc0668006f9d17789df4c0",
+  "example_sha256": "6602412f5d70af15bf8648971c3b4b306a323b7dcbcbaa129d1c61379f8c492a",
+  "field_or_standard_qualification": false
+}

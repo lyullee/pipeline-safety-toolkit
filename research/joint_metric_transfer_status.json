@@ -1,0 +1,215 @@
+{
+  "schema": "pipeline_integrity.joint_metric_transfer_status.v1",
+  "kind": "joint_residual_source_implementation_and_raw_integrity_not_numerical_validation",
+  "baseline_bundle_sha256": "a0f0f778398841a7da320a76a77de0cbb11647e32f3ae5a796663dcfbbd0f53c",
+  "source_changes": [
+    {
+      "source_path": "src/pipeline_integrity/friction_study.py",
+      "baseline_sha256": "118b81b4c7f8da86e60ef5dac700e1412f55f750c18b98db41d64cd87ce8dfb5",
+      "current_sha256": "864a6d7b8adf0a852af9f8d5aba0de2247509e47995289283e5a9491234fe4b7"
+    },
+    {
+      "source_path": "src/pipeline_integrity/inverse.py",
+      "baseline_sha256": "82cea7b02bf6b1259c91221dc0ed1ddf77829709630fef3efdd89d0116e93228",
+      "current_sha256": "59a909d1906ae1d9f252e2728b9abe3e2e668500eb595caf6a02435c8964e6c8"
+    },
+    {
+      "source_path": "scripts/hpc_data.py",
+      "baseline_sha256": null,
+      "current_sha256": "b67c70f7d19d8860d3ac846811b8a139994976f2505caf0249a2d6aa6bec6432"
+    },
+    {
+      "source_path": "scripts/inspect_pressure_source_prefix.py",
+      "baseline_sha256": "eacfec5f53fd2d06ba637b608e5397f84ae909d5bc5749ccbeb5791cfaa2e9e9",
+      "current_sha256": "ddabcb8f83f2d42582d7e38b1b6b67e7087a55045526df99974444834a39b131"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "baseline_sha256": "08a9147887fd30c26fbbeae5e4ddf0bb201178d694379f07a72c184ffc0467b1",
+      "current_sha256": "651bd98dcdb22f0b165667c7fe8a3703f367c73e8ce71b1991612c9413be42e7"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "baseline_sha256": null,
+      "current_sha256": "eba5f6feaba8a56994e83165c80651c6a4de3a55de09ed5dd0c5edb1cf69c44f"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "baseline_sha256": null,
+      "current_sha256": "193b9adbc324744e9d7f18969d4894fac7f1fd5a0af600e6ff5f9c59ea59cedb"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "baseline_sha256": null,
+      "current_sha256": "21a535c9cf9a5befed299f7b67ce95f6f6fb9068f6f7326379ffea56d8dbaf73"
+    }
+  ],
+  "added_unexecuted_test_functions": [
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_explicit_joint_metric_preserves_source_row_order_units_and_core_contract"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_joint_metric_source_hash_cannot_conflict_with_actual_evidence"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_unreviewed_joint_metric_retains_head_forward_and_withholds_inverse"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_joint_metric_does_not_silently_reinterpret_scalar_error_model"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_requested_joint_mode_without_metric_is_not_diagonalized"
+    },
+    {
+      "source_path": "tests/test_friction_study.py",
+      "function": "test_unknown_joint_metric_source_hash_is_withheld_not_inferred"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_transfer_checks_original_bytes_and_keeps_rights_separate"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_missing_and_wrong_size_are_not_passes"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_inventory_path_escape_is_rejected"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_resealed_duplicate_and_case_collision_are_rejected"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_policy_missing_provenance_and_incomplete_acquisition_are_rejected"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_single_link_rule_and_exclusive_output"
+    },
+    {
+      "source_path": "tests/test_hpc_data.py",
+      "function": "test_duplicate_json_and_nonfinite_metadata_rejected"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_declared_matrix_row_order_and_analytic_quadratic_form"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_holdout_uses_marginal_block_despite_nonzero_cross_split_covariance"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_unknown_cross_block_never_becomes_independence_or_global_spd_claim"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_valid_mask_selects_covariance_submatrix_without_conditioning_on_missing_row"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_unknown_metric_withholds_before_forward_or_native_factor"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_invalid_metric_contract_is_not_an_inferred_covariance"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_joint_gls_does_not_apply_scalar_normalization_twice"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_robust_loss_is_not_silently_applied_after_order_dependent_whitening"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_raw_budgets_precede_numeric_coercion_and_shape_allocation"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_extreme_valid_scales_preserve_tiny_representable_correlation"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_default_scalar_path_and_deterministic_joint_scale_keep_meaning_separate"
+    },
+    {
+      "source_path": "tests/test_operating_point_inverse.py",
+      "function": "test_mask_and_row_order_are_retained_in_request_digest"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_prefix_preserves_exact_crlf_bytes_and_leaves_physical_units_unknown"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_complete_text_is_not_adopted_after_tool_failure_or_timeout"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_partial_crlf_or_insufficient_line_goal_is_not_reported_complete"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_changed_source_with_complete_prefix_is_withheld"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_format_inspector_does_not_accept_partial_quotes_multiline_or_nonfinite_fields"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_different_header_requires_separate_review_instead_of_automatic_mapping"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_invalid_budget_does_not_access_archive"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_empty_or_unselected_member_is_not_extracted"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_rehashed_receipt_inconsistency_is_rejected"
+    },
+    {
+      "source_path": "tests/test_pressure_source_prefix.py",
+      "function": "test_receipt_writer_cannot_overwrite_archive_tool_or_prior_artifact"
+    }
+  ],
+  "added_unexecuted_test_function_count": 35,
+  "test_cases_collected": false,
+  "numerical_tests_executed": 0,
+  "pressure_prefix_v2_executed_against_archive": false,
+  "raw_transfer_check": "research/raw_transfer_status.json",
+  "full_raw_fixture_staging_implemented": false,
+  "confirmed_scope": {
+    "completed": 135,
+    "total": 201,
+    "percent": 67.2
+  },
+  "source_bundle": "artifacts/hpc/nurion-source-20261028-batch10.tar.gz",
+  "manifest": "artifacts/hpc/manifest-20261028-batch10.json",
+  "nurion_submitted": false,
+  "local_static_checks": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed; 430 files already formatted",
+    "compileall": "passed",
+    "scope": [
+      "src",
+      "scripts",
+      "tests",
+      "examples"
+    ],
+    "does_not_execute_tests_or_models": true
+  }
+}

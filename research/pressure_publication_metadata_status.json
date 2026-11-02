@@ -1,0 +1,36 @@
+{
+  "schema": "pipeline_integrity.pressure_publication_metadata_status.v1",
+  "kind": "public_article_metadata_review_not_csv_calibration_or_numerical_validation",
+  "dataset_id": "leak_multisensor_transients",
+  "article": {
+    "doi": "10.1016/j.dib.2023.109148",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10147960/",
+    "license_id": "CC-BY-4.0"
+  },
+  "reviewed_publication_facts": {
+    "dynamic_pressure_sensor": "PCB 102B16",
+    "daq": "NI-9234",
+    "software": "LabVIEW NXG 5.1",
+    "measurement_frequency_Hz": 51200.0,
+    "record_duration_s": 30.0,
+    "sensor_sensitivity_V_Pa": 7.25e-6,
+    "sensor_measurement_range_Pa": [1000.0, 689000.0]
+  },
+  "unresolved_csv_contract": {
+    "sample_column_unit": null,
+    "sample_column_scale_to_s": null,
+    "value_column_quantity": null,
+    "value_column_scale_to_Pa": null,
+    "pressure_reference": null,
+    "P1_P2_common_trigger_verified": false,
+    "P1_P2_sample_alignment_verified": false
+  },
+  "publication_frequency_applied_to_csv": false,
+  "reason": "Published acquisition hardware and frequency do not alone establish the stored CSV column conversion or paired trigger; the observed prefix coordinate spacing has not been reconciled with the publication frequency.",
+  "raw_archive_or_member_read_in_this_review": false,
+  "numerical_tests_executed": 0,
+  "added_unexecuted_test_functions": [
+    "test_publication_hardware_metadata_does_not_invent_csv_mapping_or_pairing"
+  ],
+  "engineering_or_field_qualification": false
+}

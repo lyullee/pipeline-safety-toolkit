@@ -1,0 +1,674 @@
+{
+  "schema": "pipeline_integrity.equipment_factory_checks.v1",
+  "source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "ba888bbf393696b2dba4b73509d61e549fe4fe86fd794c914ddd3cc49d86279c"
+  },
+  "factory_model_ids": [
+    "ambient_air_vaporizer",
+    "check_valve",
+    "compressor",
+    "dynamic_hem_pipe",
+    "dynamic_reliquefier",
+    "dynamic_vaporizer",
+    "hem_pipe",
+    "homogeneous_tank",
+    "mapped_pump",
+    "pipe",
+    "pressure_relief_valve",
+    "pump",
+    "radial_axial_tank",
+    "reliquefier",
+    "stratified_tank",
+    "stroke_limited_commanded_valve",
+    "temperature_protection_valve",
+    "valve",
+    "vaporizer",
+    "vaporizer_resistance_network",
+    "vent_stack",
+    "virtual_pump"
+  ],
+  "unknown_parameter_rejection": {
+    "schema_version": "pipeline_integrity.equipment_build.v1",
+    "owner": "lh2dt_models",
+    "status": "rejected",
+    "asset_id": "pipe_factory_demo",
+    "model_id": "pipe",
+    "parameter_digest": "c3f2f3b71468055aea2474e51b14e75a000c5eb2690bb16d8d8a472d60552761",
+    "missing_parameters": [],
+    "issues": [
+      "Unreviewed parameter names are not passed silently to the owner factory."
+    ],
+    "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+    "fluid": "ParaHydrogen",
+    "context": {
+      "asset_id": "pipe_factory_demo",
+      "scenario_id": "declared_reference",
+      "clock_id": "elapsed",
+      "origin": "synthetic",
+      "evidence": [],
+      "metadata": {}
+    },
+    "physical_model_validated": false,
+    "parameter_policy": "reviewed_fields_only",
+    "unreviewed_parameter_names": [
+      "unrecognized_demo_parameter"
+    ],
+    "owner_version": null,
+    "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+    "owner_code_digest_scope": "owner_package_python_sources_only"
+  },
+  "owner_native_unknown_name_reproducer": {
+    "schema_version": "pipeline_integrity.equipment_build.v1",
+    "owner": "lh2dt_models",
+    "status": "ready",
+    "asset_id": "pipe_factory_demo",
+    "model_id": "pipe",
+    "parameter_digest": "b4dda5f9a0898e891d418f10cee693233ad4ee5b913a4ca97899f08d84841bcf",
+    "missing_parameters": [],
+    "issues": [],
+    "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+    "fluid": "ParaHydrogen",
+    "context": {
+      "asset_id": "pipe_factory_demo",
+      "scenario_id": "declared_reference",
+      "clock_id": "elapsed",
+      "origin": "synthetic",
+      "evidence": [],
+      "metadata": {}
+    },
+    "physical_model_validated": false,
+    "parameter_policy": "owner_native",
+    "unreviewed_parameter_names": [
+      "unrecognized_demo_parameter"
+    ],
+    "owner_version": null,
+    "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+    "owner_code_digest_scope": "owner_package_python_sources_only"
+  },
+  "missing_parameters_result": {
+    "schema_version": "pipeline_integrity.equipment_build.v1",
+    "owner": "lh2dt_models",
+    "status": "needs_data",
+    "asset_id": "pipe_factory_demo",
+    "model_id": "pipe",
+    "parameter_digest": "4a4abdee5ee0fa35bc316dbea65ba111843e3cbb625a2f8005a7212367234268",
+    "missing_parameters": [
+      "inner_diameter_m",
+      "roughness_m",
+      "local_loss_coefficient",
+      "heat_into_fluid_W",
+      "elevation_change_m"
+    ],
+    "issues": [],
+    "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+    "fluid": "ParaHydrogen",
+    "context": {
+      "asset_id": "pipe_factory_demo",
+      "scenario_id": "declared_reference",
+      "clock_id": "elapsed",
+      "origin": "synthetic",
+      "evidence": [],
+      "metadata": {}
+    },
+    "physical_model_validated": false,
+    "parameter_policy": "reviewed_fields_only",
+    "unreviewed_parameter_names": [],
+    "owner_version": null,
+    "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+    "owner_code_digest_scope": "owner_package_python_sources_only"
+  },
+  "steady_pipe": {
+    "schema": "pipeline_integrity.equipment_result.v1",
+    "status": "computed",
+    "owner": "lh2dt_models",
+    "build": {
+      "schema_version": "pipeline_integrity.equipment_build.v1",
+      "owner": "lh2dt_models",
+      "status": "ready",
+      "asset_id": "pipe_factory_demo",
+      "model_id": "pipe",
+      "parameter_digest": "16025fcb1c3a8d0f0be2ec16a07b66ed9b778758b76291a2020d051767d5aeeb",
+      "missing_parameters": [],
+      "issues": [],
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "fluid": "ParaHydrogen",
+      "context": {
+        "asset_id": "pipe_factory_demo",
+        "scenario_id": "declared_reference",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "physical_model_validated": false,
+      "parameter_policy": "reviewed_fields_only",
+      "unreviewed_parameter_names": [],
+      "owner_version": null,
+      "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+      "owner_code_digest_scope": "owner_package_python_sources_only"
+    },
+    "left_state_request": {
+      "fluid": "ParaHydrogen",
+      "backend": "HEOS",
+      "inputs": {
+        "P": 300000.0,
+        "T": 20.0
+      },
+      "single_phase_required": true
+    },
+    "right_state_request": {
+      "fluid": "ParaHydrogen",
+      "backend": "HEOS",
+      "inputs": {
+        "P": 290000.0,
+        "T": 20.0
+      },
+      "single_phase_required": true
+    },
+    "owner_result_type": "PipeResult",
+    "owner_result": {
+      "mass_flow_kg_s": 0.08017026821891748,
+      "outlet_specific_enthalpy_J_kg": -726.941142637802,
+      "reynolds_number": 727544.9546755856,
+      "darcy_friction_factor": 0.013707267699297762,
+      "heat_into_fluid_W": 0.0,
+      "upstream_side": "left",
+      "pressure_drop_Pa": 10000.000000000002,
+      "momentum_residual_Pa": -1.8189894035458565e-12
+    },
+    "owner_qualification_flags": {},
+    "native_result_digest": "9ee7d480ef4c76f76d6befdc856cf788e69e75a82384a898f9c60cc539043671",
+    "whole_system_or_field_validation": false
+  },
+  "mapped_pump_conversion": {
+    "native_parameter": "head_curve_points",
+    "head_curve_points": [
+      [
+        0.0,
+        42018.42188933605
+      ],
+      [
+        0.7141144340717108,
+        28012.281259557367
+      ],
+      [
+        1.4282288681434216,
+        14006.140629778683
+      ]
+    ],
+    "native_coordinate_units": [
+      "kg/s",
+      "Pa_difference"
+    ],
+    "source_coordinate_units": [
+      "m3/s",
+      "m"
+    ],
+    "reference_density_kg_m3": 71.41144340717108,
+    "gravity_m_s2": 9.80665,
+    "source_id": "synthetic_curve",
+    "conversion_digest": "4fa96289765fd77a342610d774c77beb71b71f527381bf180c8b17f4a6a319b6",
+    "fluid_transfer_or_cavitation_qualification": false
+  },
+  "mapped_pump": {
+    "schema": "pipeline_integrity.equipment_result.v1",
+    "status": "computed",
+    "owner": "lh2dt_models",
+    "build": {
+      "schema_version": "pipeline_integrity.equipment_build.v1",
+      "owner": "lh2dt_models",
+      "status": "ready",
+      "asset_id": "mapped_pump_demo",
+      "model_id": "mapped_pump",
+      "parameter_digest": "cff8de8433ceb50dab4063b6dfdb30496f61ceb9a025172cf035d407e4565fc7",
+      "missing_parameters": [],
+      "issues": [],
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "fluid": "ParaHydrogen",
+      "context": {
+        "asset_id": "mapped_pump_demo",
+        "scenario_id": "declared_reference",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "physical_model_validated": false,
+      "parameter_policy": "reviewed_fields_only",
+      "unreviewed_parameter_names": [],
+      "owner_version": null,
+      "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+      "owner_code_digest_scope": "owner_package_python_sources_only"
+    },
+    "left_state_request": {
+      "fluid": "ParaHydrogen",
+      "backend": "HEOS",
+      "inputs": {
+        "P": 300000.0,
+        "T": 20.0
+      },
+      "single_phase_required": true
+    },
+    "right_state_request": {
+      "fluid": "ParaHydrogen",
+      "backend": "HEOS",
+      "inputs": {
+        "P": 320000.0,
+        "T": 20.0
+      },
+      "single_phase_required": true
+    },
+    "owner_result_type": "MappedPumpResult",
+    "owner_result": {
+      "mass_flow_kg_s": 1.122627089237204,
+      "outlet_specific_enthalpy_J_kg": -376.8955976520958,
+      "pressure_rise_Pa": 20000.0,
+      "shaft_power_W": 392.9706112677541,
+      "hydraulic_power_W": 314.41097831792894,
+      "npsh_available_m": 294.99276048509,
+      "npsh_required_m": 1.0,
+      "cavitation_margin_m": 293.99276048509,
+      "upstream_side": "left",
+      "map_head_pressure_rise_Pa": 20000.0,
+      "map_limited": false,
+      "momentum_residual_Pa": 0.0,
+      "inlet_quality": null
+    },
+    "owner_qualification_flags": {
+      "operating_point_physical_valid": true
+    },
+    "native_result_digest": "d464477d30867cf19df368c820566a54b24ccebb6633a469ac454126180e1a4b",
+    "whole_system_or_field_validation": false
+  },
+  "mapped_pump_reference_mass_flow_kg_s": 1.122627089237204,
+  "mapped_pump_invalid_margin": {
+    "schema": "pipeline_integrity.equipment_result.v1",
+    "status": "withheld",
+    "owner": "lh2dt_models",
+    "build": {
+      "schema_version": "pipeline_integrity.equipment_build.v1",
+      "owner": "lh2dt_models",
+      "status": "ready",
+      "asset_id": "mapped_pump_demo",
+      "model_id": "mapped_pump",
+      "parameter_digest": "9c091dd5447e79c8642d8bc954dbffe909742e3a0a3ee7eb72dd171f1afa54ac",
+      "missing_parameters": [],
+      "issues": [],
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "fluid": "ParaHydrogen",
+      "context": {
+        "asset_id": "mapped_pump_demo",
+        "scenario_id": "declared_reference",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "physical_model_validated": false,
+      "parameter_policy": "reviewed_fields_only",
+      "unreviewed_parameter_names": [],
+      "owner_version": null,
+      "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+      "owner_code_digest_scope": "owner_package_python_sources_only"
+    },
+    "left_state_request": {
+      "fluid": "ParaHydrogen",
+      "backend": "HEOS",
+      "inputs": {
+        "P": 300000.0,
+        "T": 20.0
+      },
+      "single_phase_required": true
+    },
+    "right_state_request": {
+      "fluid": "ParaHydrogen",
+      "backend": "HEOS",
+      "inputs": {
+        "P": 320000.0,
+        "T": 20.0
+      },
+      "single_phase_required": true
+    },
+    "owner_result_type": "MappedPumpResult",
+    "owner_result": {
+      "mass_flow_kg_s": 1.122627089237204,
+      "outlet_specific_enthalpy_J_kg": -376.8955976520958,
+      "pressure_rise_Pa": 20000.0,
+      "shaft_power_W": 392.9706112677541,
+      "hydraulic_power_W": 314.41097831792894,
+      "npsh_available_m": 294.99276048509,
+      "npsh_required_m": 1000000.0,
+      "cavitation_margin_m": -999705.007239515,
+      "upstream_side": "left",
+      "map_head_pressure_rise_Pa": 20000.0,
+      "map_limited": false,
+      "momentum_residual_Pa": 0.0,
+      "inlet_quality": null
+    },
+    "owner_qualification_flags": {
+      "operating_point_physical_valid": false
+    },
+    "native_result_digest": "48da34dc7acae321193c44da6c629a2cea2bdca6b1e2641891fbc8b5b53d5eb9",
+    "whole_system_or_field_validation": false
+  },
+  "liquid_equilibrium_step": {
+    "schema": "pipeline_integrity.dynamic_equipment_step.v1",
+    "owner": "lh2dt_models",
+    "build": {
+      "schema_version": "pipeline_integrity.equipment_build.v1",
+      "owner": "lh2dt_models",
+      "status": "ready",
+      "asset_id": "pipe_factory_demo",
+      "model_id": "dynamic_hem_pipe",
+      "parameter_digest": "909a6c6f61e15f8b36174f251d8b3d807301199d80c4b8028d745e7aabdb7375",
+      "missing_parameters": [],
+      "issues": [],
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "fluid": "ParaHydrogen",
+      "context": {
+        "asset_id": "pipe_factory_demo",
+        "scenario_id": "declared_reference",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "physical_model_validated": false,
+      "parameter_policy": "reviewed_fields_only",
+      "unreviewed_parameter_names": [],
+      "owner_version": null,
+      "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+      "owner_code_digest_scope": "owner_package_python_sources_only"
+    },
+    "time_start_s": 0.0,
+    "time_end_s": 0.001,
+    "clock_id": "elapsed",
+    "state_before": {
+      "mass_kg": 0.005608641649755298,
+      "internal_energy_J": -27.639097271441766,
+      "wall_temperature_K": 20.0
+    },
+    "owner_step": {
+      "state": {
+        "mass_kg": 0.005608641649755298,
+        "internal_energy_J": -27.639097271441766,
+        "wall_temperature_K": 20.0
+      },
+      "fluid": {
+        "pressure_Pa": 300000.00000003976,
+        "temperature_K": 20.000000000000007,
+        "density_kg_m3": 71.41144340717108,
+        "specific_enthalpy_J_kg": -726.941142636685,
+        "specific_internal_energy_J_kg": -4927.948511855388,
+        "specific_entropy_J_kgK": -174.8290878682892,
+        "quality": null,
+        "phase": "liquid"
+      },
+      "derivative": {
+        "mass_kg_s": 0.0,
+        "internal_energy_W": 0.0,
+        "wall_temperature_K_s": 0.0,
+        "mass_flow_in_kg_s": 0.0,
+        "mass_flow_out_kg_s": 0.0,
+        "inlet_enthalpy_flow_W": -0.0,
+        "outlet_enthalpy_flow_W": -0.0,
+        "heat_from_wall_W": -0.0,
+        "heat_from_ambient_W": 0.0
+      },
+      "mass_balance_residual_kg_s": 0.0,
+      "energy_balance_residual_W": 0.0,
+      "wall_energy_balance_residual_W": 0.0
+    },
+    "owner_step_digest": "998e0e91abf703c5121454bed99ef1e692d348634e5e72bcc0e7da4bab183dd9",
+    "residual_scope": "owner's end-state differential equations",
+    "integrated_mass_energy_ledger_qualified": false,
+    "field_validation": false
+  },
+  "two_phase_equilibrium_step": {
+    "schema": "pipeline_integrity.dynamic_equipment_step.v1",
+    "owner": "lh2dt_models",
+    "build": {
+      "schema_version": "pipeline_integrity.equipment_build.v1",
+      "owner": "lh2dt_models",
+      "status": "ready",
+      "asset_id": "pipe_factory_demo",
+      "model_id": "dynamic_hem_pipe",
+      "parameter_digest": "909a6c6f61e15f8b36174f251d8b3d807301199d80c4b8028d745e7aabdb7375",
+      "missing_parameters": [],
+      "issues": [],
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "fluid": "ParaHydrogen",
+      "context": {
+        "asset_id": "pipe_factory_demo",
+        "scenario_id": "declared_reference",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "physical_model_validated": false,
+      "parameter_policy": "reviewed_fields_only",
+      "unreviewed_parameter_names": [],
+      "owner_version": null,
+      "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+      "owner_code_digest_scope": "owner_package_python_sources_only"
+    },
+    "time_start_s": 0.0,
+    "time_end_s": 0.001,
+    "clock_id": "elapsed",
+    "state_before": {
+      "mass_kg": 0.0005457953318259859,
+      "internal_energy_J": 115.67419761280395,
+      "wall_temperature_K": 24.56581107077982
+    },
+    "owner_step": {
+      "state": {
+        "mass_kg": 0.0005457953318259859,
+        "internal_energy_J": 115.67419761280395,
+        "wall_temperature_K": 24.56581107077982
+      },
+      "fluid": {
+        "pressure_Pa": 299999.9999999998,
+        "temperature_K": 24.565811070779816,
+        "density_kg_m3": 6.949281998126954,
+        "specific_enthalpy_J_kg": 255106.87687435126,
+        "specific_internal_energy_J_kg": 211936.94937955966,
+        "specific_entropy_J_kgK": 10445.76119789056,
+        "quality": 0.4999999999999998,
+        "phase": "twophase"
+      },
+      "derivative": {
+        "mass_kg_s": 0.0,
+        "internal_energy_W": 0.0,
+        "wall_temperature_K_s": 0.0,
+        "mass_flow_in_kg_s": 0.0,
+        "mass_flow_out_kg_s": 0.0,
+        "inlet_enthalpy_flow_W": 0.0,
+        "outlet_enthalpy_flow_W": 0.0,
+        "heat_from_wall_W": 0.0,
+        "heat_from_ambient_W": 0.0
+      },
+      "mass_balance_residual_kg_s": 0.0,
+      "energy_balance_residual_W": 0.0,
+      "wall_energy_balance_residual_W": 0.0
+    },
+    "owner_step_digest": "e000c9391423cd4fcca550cabc364401783eb5a7a408389300aa842f701aa215",
+    "residual_scope": "owner's end-state differential equations",
+    "integrated_mass_energy_ledger_qualified": false,
+    "field_validation": false
+  },
+  "two_phase_pressure_response_step": {
+    "schema": "pipeline_integrity.dynamic_equipment_advance.v1",
+    "status": "computed",
+    "build": {
+      "schema_version": "pipeline_integrity.equipment_build.v1",
+      "owner": "lh2dt_models",
+      "status": "ready",
+      "asset_id": "pipe_factory_demo",
+      "model_id": "dynamic_hem_pipe",
+      "parameter_digest": "909a6c6f61e15f8b36174f251d8b3d807301199d80c4b8028d745e7aabdb7375",
+      "missing_parameters": [],
+      "issues": [],
+      "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+      "fluid": "ParaHydrogen",
+      "context": {
+        "asset_id": "pipe_factory_demo",
+        "scenario_id": "declared_reference",
+        "clock_id": "elapsed",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "physical_model_validated": false,
+      "parameter_policy": "reviewed_fields_only",
+      "unreviewed_parameter_names": [],
+      "owner_version": null,
+      "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+      "owner_code_digest_scope": "owner_package_python_sources_only"
+    },
+    "time_start_s": 0.0,
+    "time_end_s": 1e-05,
+    "clock_id": "elapsed",
+    "accepted_substeps": 8,
+    "state_before": {
+      "mass_kg": 0.0005457953318259859,
+      "internal_energy_J": 115.67419761280395,
+      "wall_temperature_K": 24.56581107077982
+    },
+    "state_after": {
+      "mass_kg": 0.0005457065494801674,
+      "internal_energy_J": 115.65154905658112,
+      "wall_temperature_K": 24.56581107077982
+    },
+    "tolerance": {
+      "mass_absolute_kg": 1e-12,
+      "energy_absolute_j": 1e-08,
+      "wall_temperature_absolute_k": 1e-06,
+      "relative": 1e-07,
+      "maximum_refinements": 6
+    },
+    "refinement_history": [
+      {
+        "substeps": 2,
+        "absolute_differences": {
+          "mass_kg": 2.695361725696746e-10,
+          "internal_energy_J": 6.875737344103072e-05,
+          "wall_temperature_K": 0.0
+        },
+        "agreement_limits": {
+          "mass_kg": 5.5570643307748435e-11,
+          "internal_energy_J": 1.1575151936273616e-05,
+          "wall_temperature_K": 3.4565811070779815e-06
+        },
+        "accepted": false
+      },
+      {
+        "substeps": 4,
+        "absolute_differences": {
+          "mass_kg": 8.771536741305347e-11,
+          "internal_energy_J": 2.237582050668152e-05,
+          "wall_temperature_K": 0.0
+        },
+        "agreement_limits": {
+          "mass_kg": 5.5570652079285175e-11,
+          "internal_energy_J": 1.1575154173855667e-05,
+          "wall_temperature_K": 3.4565811070779815e-06
+        },
+        "accepted": false
+      },
+      {
+        "substeps": 8,
+        "absolute_differences": {
+          "mass_kg": 2.8687315652316248e-11,
+          "internal_energy_J": 7.31802444420282e-06,
+          "wall_temperature_K": 0.0
+        },
+        "agreement_limits": {
+          "mass_kg": 5.557065494801674e-11,
+          "internal_energy_J": 1.1575154905658112e-05,
+          "wall_temperature_K": 3.4565811070779815e-06
+        },
+        "accepted": true
+      }
+    ],
+    "last_native_step": {
+      "schema": "pipeline_integrity.dynamic_equipment_step.v1",
+      "owner": "lh2dt_models",
+      "build": {
+        "schema_version": "pipeline_integrity.equipment_build.v1",
+        "owner": "lh2dt_models",
+        "status": "ready",
+        "asset_id": "pipe_factory_demo",
+        "model_id": "dynamic_hem_pipe",
+        "parameter_digest": "909a6c6f61e15f8b36174f251d8b3d807301199d80c4b8028d745e7aabdb7375",
+        "missing_parameters": [],
+        "issues": [],
+        "property_basis": "CoolProp8_HEOS_ParaHydrogen_default_reference",
+        "fluid": "ParaHydrogen",
+        "context": {
+          "asset_id": "pipe_factory_demo",
+          "scenario_id": "declared_reference",
+          "clock_id": "elapsed",
+          "origin": "synthetic",
+          "evidence": [],
+          "metadata": {}
+        },
+        "physical_model_validated": false,
+        "parameter_policy": "reviewed_fields_only",
+        "unreviewed_parameter_names": [],
+        "owner_version": null,
+        "owner_code_digest": "5406adc4092bfad5c9d4671874951999a9e5f83ee2ffafaf823bb1a6bf2e3e61",
+        "owner_code_digest_scope": "owner_package_python_sources_only"
+      },
+      "time_start_s": 8.750000000000001e-06,
+      "time_end_s": 1e-05,
+      "clock_id": "elapsed",
+      "state_before": {
+        "mass_kg": 0.0005457166391973578,
+        "internal_energy_J": 115.65412291592911,
+        "wall_temperature_K": 24.56581107077982
+      },
+      "owner_step": {
+        "state": {
+          "mass_kg": 0.0005457065494801674,
+          "internal_energy_J": 115.65154905658112,
+          "wall_temperature_K": 24.56581107077982
+        },
+        "fluid": {
+          "pressure_Pa": 299943.7259787492,
+          "temperature_K": 24.564945309324905,
+          "density_kg_m3": 6.948151586191249,
+          "specific_enthalpy_J_kg": 255098.77852816627,
+          "specific_internal_energy_J_kg": 211929.92674680045,
+          "specific_entropy_J_kgK": 10445.761203205428,
+          "quality": 0.49999531314362383,
+          "phase": "twophase"
+        },
+        "derivative": {
+          "mass_kg_s": -0.007984094413223746,
+          "internal_energy_W": -2036.7153710979642,
+          "wall_temperature_K_s": 0.0,
+          "mass_flow_in_kg_s": 0.002143816598267747,
+          "mass_flow_out_kg_s": 0.010127911011491493,
+          "inlet_enthalpy_flow_W": 546.902356975481,
+          "outlet_enthalpy_flow_W": 2583.617728073445,
+          "heat_from_wall_W": 0.0,
+          "heat_from_ambient_W": 0.0
+        },
+        "mass_balance_residual_kg_s": 0.0,
+        "energy_balance_residual_W": 0.0,
+        "wall_energy_balance_residual_W": 0.0
+      },
+      "owner_step_digest": "6bd249b815bab5a7b718afb4861dde33a722270e2110e02a397f3ffe27fa5b75",
+      "residual_scope": "owner's end-state differential equations",
+      "integrated_mass_energy_ledger_qualified": false,
+      "field_validation": false
+    },
+    "independent_error_bound_or_field_validation": false
+  },
+  "two_phase_refinement_mass_difference_kg": 2.8687315652316248e-11,
+  "dynamic_release_or_column_separation_qualified": false,
+  "independent_field_validation": false
+}

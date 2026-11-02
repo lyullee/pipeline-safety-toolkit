@@ -1,0 +1,637 @@
+{
+  "schema": "pipeline_integrity.owner_extension_requests.v1",
+  "kind": "reviewable_requests_not_owner_implementation",
+  "requests": [
+    {
+      "id": "PIPE-EXT-001",
+      "title_ko": "비등온 가스의 일반 EOS와 분포 운동량",
+      "target_components": [
+        "lh2dt_models",
+        "hydrogen-station-sim"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "transient.gas_nonisothermal"
+      ],
+      "consumer_contracts": {
+        "gas_thermal_transient": [
+          "GasThermalTransientRequest",
+          "GasThermalCell",
+          "GasThermalWindow"
+        ]
+      },
+      "requirements": [
+        "Expose a versioned pure/mixture/user-EOS interface with rho-u flash, enthalpy/internal energy reference identity and transport coefficients.",
+        "Extend the original cell network with supported momentum/geometry terms and declared acoustic, elevation and heat-conduction domains rather than relabeling quasi-steady faces.",
+        "Return accepted-stage and cumulative mass, transport-energy, ambient-heat and wall-energy ledgers with native failure reasons."
+      ],
+      "acceptance_evidence_required": [
+        "Closed/adiabatic and steady limiting cases, time/cell refinement and independent source-qualified comparisons.",
+        "Reference-state change consistency and explicit unsupported EOS/phase/domain refusal."
+      ],
+      "guide": "docs/GAS_THERMAL_TRANSIENT_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-002",
+      "title_ko": "벤트와 PSV 사건 적분",
+      "target_components": [
+        "lh2dt_models"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "tanks.breathing"
+      ],
+      "consumer_contracts": {
+        "tank_breathing": [
+          "TankBreathingRequest",
+          "TankBreathingWindow",
+          "TankBreathingVent"
+        ]
+      },
+      "requirements": [
+        "Update PSV latch only at accepted events/steps; trial RHS evaluation must have no permanent latch mutation.",
+        "Return each port integrated mass/enthalpy and separately signed/gross phase-transfer ledgers on the same native steps.",
+        "Declare multi-component headspace and entrained-liquid support instead of treating bulk outflow as pure vapor vent."
+      ],
+      "acceptance_evidence_required": [
+        "Repeated replay and rejected-step evaluation do not change latch state.",
+        "Opening/reseating events and port/phase budgets converge under time refinement."
+      ],
+      "guide": "docs/TANK_BREATHING_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-003",
+      "title_ko": "압축기 성능과 운전 배치 영수증",
+      "target_components": [
+        "lh2dt_models",
+        "hydrogen-station-sim"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "equipment.compressor_map",
+        "economics.optimization"
+      ],
+      "consumer_contracts": {
+        "compressor_train": [
+          "CompressorTrainRequest"
+        ],
+        "operating_optimization": [
+          "OperatingOptimizationRequest",
+          "SuppliedOperatingBatch"
+        ]
+      },
+      "requirements": [
+        "Export source-bound delivered mass and integrated electric/auxiliary energy for the exact dispatch window, service definition and forecast.",
+        "Preserve composition, map-speed/flow support, cooling/property basis and native state/balance results.",
+        "Provide dynamic surge or transient capability only when the original engine implements and qualifies it."
+      ],
+      "acceptance_evidence_required": [
+        "Altered provider/window/service/forecast or ports cannot reuse an old performance receipt.",
+        "Independent map/part-load and cooling cases with actual mass/energy budgets and explicit unsupported regions."
+      ],
+      "guide": "docs/COMPRESSOR_TRAIN_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-004",
+      "title_ko": "상변화·원유·고형화의 물성 공급 경계",
+      "target_components": [
+        "lh2dt_models",
+        "ThermoPack source-build provider"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "thermal.phase_change",
+        "thermal.heated_oil",
+        "transport.hydrate"
+      ],
+      "consumer_contracts": {
+        "phase_change_exchange": [
+          "PhaseChangeRequest"
+        ],
+        "heated_transport": [
+          "HeatedTransportRequest"
+        ],
+        "deposition_risk": [
+          "DepositionRequest",
+          "DepositionEnvelope"
+        ]
+      },
+      "requirements": [
+        "Expose composition/activity/inhibitor/wax characterization with equilibrium uncertainty and source-build capability identity.",
+        "Implement missing solidification, distributed conjugate heat/viscosity or deposition kinetics in the appropriate original solver, with separate support flags.",
+        "Do not advertise PyPI ThermoPack2.2.3 as hydrate-capable; reject missing native methods before object execution."
+      ],
+      "acceptance_evidence_required": [
+        "Phase/reference-state and energy consistency, supported-domain cases and original source/binary fingerprint evidence.",
+        "Equilibrium exposure is not reported as deposited mass, continuous duration or plugging probability."
+      ],
+      "guide": "docs/DEPOSITION_RISK_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-005",
+      "title_ko": "검열·공간지지·노출시간 모니터링",
+      "target_components": [
+        "process-monitoring-toolkit"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "leak.external_sensing",
+        "instrument.sensor_faults"
+      ],
+      "consumer_contracts": {
+        "external_sensing": [
+          "ExternalSensingRequest",
+          "ExternalChannel",
+          "SensorFootprint"
+        ]
+      },
+      "requirements": [
+        "Receive spatial footprints, source/report clocks, exposure supports and mapping uncertainty alongside exact values.",
+        "Represent non-detect, saturation, missing and invalid observations explicitly without zero-fill or time compression.",
+        "Keep species and point concentration, path/pixel column and DAS strain definitions separate."
+      ],
+      "acceptance_evidence_required": [
+        "Censored/missing values never become normal exact observations or leak probabilities.",
+        "Train/calibration/evaluation preserve original event/device/site grouping and reject incompatible geometry/species/unit support."
+      ],
+      "guide": "docs/EXTERNAL_SENSING_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-006",
+      "title_ko": "위치 예측과 센서 설계 원자료",
+      "target_components": [
+        "lh2dt_models",
+        "process-monitoring-toolkit"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "leak.inverse_localization",
+        "leak.sensor_placement"
+      ],
+      "consumer_contracts": {
+        "inverse_localization": [
+          "LocalizationRequest",
+          "LocalizationProvider"
+        ],
+        "sensor_placement": [
+          "SensorPlacementRequest",
+          "DesignLinearization",
+          "JointDesignNoise"
+        ]
+      },
+      "requirements": [
+        "Export original physical candidate predictions and reviewed local Jacobians with exact observation/parameter ordering, scales and native evaluation/configuration identity.",
+        "Preserve covariance, model discrepancy, bias/clock corrections and source qualification without assuming independence.",
+        "Return native unknown/nonconverged status and prevent finite-menu optimum from being called global physical optimum."
+      ],
+      "acceptance_evidence_required": [
+        "Candidate/model/source/window mutations invalidate predictions and sensitivity receipts.",
+        "Rank-deficient/indistinguishable alternatives and non-SPD/noise-unknown cases remain explicit."
+      ],
+      "guide": "docs/INVERSE_LOCALIZATION_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-007",
+      "title_ko": "동적 파괴 진행과 정지 원 궤적",
+      "target_components": [
+        "matintegrity material-mechanics owner",
+        "lh2dt_models decompression owner"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "structural.fracture_arrest"
+      ],
+      "consumer_contracts": {
+        "fracture_arrest": [
+          "FractureArrestRequest",
+          "ArrestTrajectory"
+        ]
+      },
+      "requirements": [
+        "Couple dynamic crack driving energy/resistance, decompression/EOS and propagation velocity on the same space/time path.",
+        "Expose material orientation, temperature/rate support and native convergence/budget receipts.",
+        "Static KI/Paris outputs cannot substitute for dynamic arrest resistance or continuous hold evidence."
+      ],
+      "acceptance_evidence_required": [
+        "Independent propagation/arrest experiment qualification and spatial/time refinement with pinned sources.",
+        "Re-initiation/gaps and withheld native states never become proved arrest from stationary sample windows."
+      ],
+      "guide": "docs/FRACTURE_ARREST_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-008",
+      "title_ko": "프레임·지반·셸의 원 구조 확장",
+      "target_components": [
+        "structural owner within pipeline-integrity-toolkit",
+        "PyNite upstream",
+        "matintegrity material owner"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "structural.soil_pipe",
+        "structural.buckling",
+        "construction.pull"
+      ],
+      "consumer_contracts": {
+        "soil_pipe": [
+          "SoilPipeRequest"
+        ],
+        "buckling": [
+          "BucklingRequest",
+          "BucklingMatrices"
+        ],
+        "pulling": [
+          "PullingRequest"
+        ],
+        "structural": [
+          "NativeFrameAssembly",
+          "build_native_frame",
+          "audit_frame_equilibrium",
+          "assemble_frame_stiffness"
+        ]
+      },
+      "requirements": [
+        "Preserve and stabilize the existing public build_native_frame/audit_frame_equilibrium/assemble_frame_stiffness APIs and source/DOF/support/reference-load receipts; do not recreate the factory or copied private assembly.",
+        "Add unilateral/gap/nonlinear soil contact and finite pipe stiffness in the original structural solver with active-set and equilibrium evidence.",
+        "Qualify shell ovalization/collapse, plasticity/imperfection and follower-load behavior separately from linear frame eigen buckling."
+      ],
+      "acceptance_evidence_required": [
+        "Rigid/gauge and reference-load scaling, reaction equilibrium, energy and mesh/step refinement are recorded.",
+        "No positive finite eigenvalue is not infinite strength; unsupported contact/shell domains stay unqualified."
+      ],
+      "guide": "docs/BUCKLING_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "Public source-bound native frame construction, equilibrium audit and Ke/Kg assembly APIs now exist in structural.py; soil_pipe and buckling consume them."
+      ]
+    },
+    {
+      "id": "PIPE-EXT-009",
+      "title_ko": "절차·사건·인적 추정값 의미 보존",
+      "target_components": [
+        "human-reliability-toolkit",
+        "caller-owned record-management system"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "operations.control_room",
+        "maintenance.isolation",
+        "risk.dynamic_coupling"
+      ],
+      "consumer_contracts": {
+        "procedures": [
+          "Procedure",
+          "ProcedureRecord"
+        ],
+        "response_trace": [
+          "ResponseTraceSpec"
+        ]
+      },
+      "requirements": [
+        "Receive task/event/context/evidence and planned/observed/cancelled action completion as distinct fields.",
+        "Preserve immutable observation identity, review/version/withdrawal lineage and source-system time/authority metadata.",
+        "Keep procedure-record satisfaction, correct command, target attained and process rule achieved separate from HEP estimation."
+      ],
+      "acceptance_evidence_required": [
+        "Conflicting or altered evidence/endpoint identity cannot reuse an earlier estimate or completion receipt.",
+        "No observation completeness flag or recorded satisfaction is converted to HEP=0 or automatic work authorization."
+      ],
+      "guide": "docs/PROCEDURES_KO.md",
+      "shared_invariants": [
+        "SI and absolute-pressure/reference-state meaning preserved",
+        "asset/scenario/clock/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred probability or safety authorization",
+        "original engine owns physics/statistics; consumer adapter must not copy that engine"
+      ],
+      "owner_changes_performed_by_this_export": false
+    },
+    {
+      "id": "PIPE-EXT-010",
+      "title_ko": "동압 취득·교정·센서쌍 근거 계약",
+      "target_components": [
+        "caller-owned data-acquisition metadata provider",
+        "process-monitoring-toolkit ingestion boundary"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "leak.negative_pressure_wave"
+      ],
+      "consumer_contracts": {
+        "pressure_wave_data": [
+          "pressure_source_publication_metadata",
+          "qualify_pressure_pair",
+          "build_pressure_pair_trace_record",
+          "verify_pressure_pair_trace_record"
+        ],
+        "pressure_wave": [
+          "PressureWaveRequest",
+          "bind_pressure_wave_pair_request"
+        ]
+      },
+      "requirements": [
+        "Provide a versioned per-channel mapping artifact that binds archive/member hash, stored columns, exact value-to-Pa equation, pressure reference, coordinate-to-second equation, clock origin, nominal acquisition frequency, hardware channel and calibration evidence without inferring them from filenames.",
+        "Provide P1/P2 common-trigger and synchronization evidence with offset, drift, uncertainty/support interval and sample-alignment policy; preserve unresolved or contradictory evidence instead of setting a shared clock from equal coordinate prefixes.",
+        "Provide surveyed sensor positions and explicit left/right or network-node roles with coordinate reference and evidence; keep leak actuation/onset truth, hydraulic transient changes and detected feature arrivals as separate event fields.",
+        "Return immutable source/mapping/pairing/role evidence identities that can be pinned by pressure_pair qualification, trace bridge and pressure-wave request receipts."
+      ],
+      "acceptance_evidence_required": [
+        "Replay both complete original CSV members to the same SI records and show independent calibration checks across supported amplitudes, pressure reference and clock coordinates; no prefix-only or publication-frequency substitution.",
+        "Changing archive bytes, member, column equation, calibration, trigger, clock mapping, sensor role or event identity invalidates all dependent receipts before native feature search.",
+        "Independent known-event experiments report arrival-time error and false/missed event behavior by held-out experiment while preserving ambiguous, reflected, truncated and missing signals."
+      ],
+      "guide": "docs/PRESSURE_WAVE_DATA_KO.md",
+      "shared_invariants": [
+        "SI and pressure-reference/clock-origin meaning preserved",
+        "asset/scenario/clock/sensor/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred leak cause, probability, position or safety authorization",
+        "original acquisition/monitoring owner supplies metadata and calibration; consumer adapter must not copy or invent them"
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "Source-bound CSV parsing, P1/P2 qualification, fixed-grid trace construction, explicit sensor-role binding and NPW pre-native gating now exist; complete CSV unit/clock/trigger/role evidence remains unavailable."
+      ]
+    },
+    {
+      "id": "PIPE-EXT-011",
+      "title_ko": "공통원인 관측·모수·시간의존 위험 계약",
+      "target_components": [
+        "human-reliability-toolkit"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "risk.common_cause"
+      ],
+      "consumer_contracts": {
+        "risk_exchange": [
+          "JointStateCountTable",
+          "joint_states_from_counts",
+          "verify_joint_state_count_receipt",
+          "fault_tree_request_from_joint_counts",
+          "HRARiskClient"
+        ]
+      },
+      "requirements": [
+        "Accept source-bound grouped joint observations with event/opportunity/population/grouping identities, exposure, censoring, observation window and missing-state meaning; do not treat omitted or unobserved combinations as observed independence.",
+        "Implement reviewed common-cause parameter models and posterior or interval uncertainty in the owner risk engine, with explicit model family, parameter support, prior/likelihood or frequentist construction and held-out applicability evidence.",
+        "Represent time ordering, repair/recovery, changing exposure and shared latent conditions separately from one-demand static Boolean states; retain compatibility with exact empirical joint-state evaluation.",
+        "Return owner-native receipts that preserve original counts, fitted/evaluated population split, event marginals, dependence groups and probability measure without converting demand probability to annual frequency."
+      ],
+      "acceptance_evidence_required": [
+        "Independent arithmetic for exact count normalization and model limiting cases, plus synthetic recovery of known dependence parameters with coverage/calibration checks appropriate to the declared uncertainty meaning.",
+        "Held-out grouped observations or experiments demonstrate transfer limits; altered grouping, opportunity denominator, censoring, clock, source or event definition invalidates dependent FTA/ETA/LOPA receipts.",
+        "Static joint states, fitted common-cause parameters and dynamic repair models produce distinct typed outputs and cannot silently substitute for one another."
+      ],
+      "guide": "docs/RISK_EXCHANGE_KO.md",
+      "shared_invariants": [
+        "probability measure, conditioning and opportunity denominator preserved",
+        "asset/scenario/clock/event/population/group/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred annual frequency, field validation or safety authorization",
+        "human-reliability owner implements dependence mathematics; pipeline consumer only binds source evidence and calls it"
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "Exact observed Boolean state counts can be normalized, replay-verified and bound to the existing joint-state FTA request without fitting a common-cause model."
+      ]
+    },
+    {
+      "id": "PIPE-EXT-012",
+      "title_ko": "다품종 액체 배치 수송 원 해석기 계약",
+      "target_components": [
+        "caller-owned multi-product transport solver",
+        "lh2dt_models thermal/property owner where applicable"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "transport.batch_interface"
+      ],
+      "consumer_contracts": {
+        "batch_transport": [
+          "BatchComposition",
+          "BatchInletStep",
+          "BatchTransportRequest",
+          "BatchTransportProvider",
+          "evaluate_batch_transport",
+          "verify_batch_transport_record"
+        ]
+      },
+      "requirements": [
+        "Implement the owner numerical model for multi-product advection, axial dispersion and interface tracking on the requested route and inlet schedule; do not relabel the EPANET dilute-water quality adapter as a product-batch solver.",
+        "Return source-bound time-by-position component fractions, density, dynamic viscosity, temperature and absolute pressure in the exact declared layout, with property package/version/basis and any CoolProp or reviewed mixture-model provenance.",
+        "Return total and per-component signed mass ledgers using initial + inlet - outlet - final + numerical_adjustment, and where thermal coupling is enabled return an independently checkable energy ledger without hiding closure in numerical adjustment.",
+        "Preserve phase, pressure reference, flow direction, boundary interpolation, geometry, clock, source and convergence meaning; unsupported phase change, mixing rules, pig interaction or reversal stays explicit."
+      ],
+      "acceptance_evidence_required": [
+        "Piston-displacement, zero/finite-dispersion, constant-property and conservative multi-component limiting cases agree with independent arithmetic or analytic references, with mesh/time-step refinement and residual histories.",
+        "Every component and total mass ledger closes within caller-declared tolerances and component ledger terms sum to their total counterparts; energy closure is reported separately when heat transfer or variable properties are active.",
+        "Held-out experimental or operational interface arrival and contamination-width observations quantify error and applicability by product pair and operating regime; calibration rows are not reused as independent validation.",
+        "Changing source, geometry, inlet schedule, property model, boundary interpolation, grid or provider version invalidates replay receipts."
+      ],
+      "guide": "docs/BATCH_TRANSPORT_KO.md",
+      "shared_invariants": [
+        "SI units, absolute pressure, temperature and mixture/property basis preserved",
+        "asset/scenario/clock/route/ports/source/configuration and evidence bound to the evaluated request",
+        "unknown/unsupported/nonconverged stays explicit; no inferred field accuracy or operating authorization",
+        "original transport/property owner implements physics; pipeline consumer validates and records the exchange"
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "A source-bound provider adapter now validates grids, composition closure, positive property fields, total/per-component ledgers, ledger-sum consistency and deterministic replay; no owner transport solver or independent product-batch validation is claimed."
+      ]
+    },
+    {
+      "id": "PIPE-EXT-013",
+      "title_ko": "누수 실험 가속도·하이드로폰 취득/교정 계약",
+      "target_components": [
+        "caller-owned data-acquisition metadata provider",
+        "process-monitoring-toolkit ingestion boundary"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "data.qualification",
+        "leak.acoustic_localization"
+      ],
+      "consumer_contracts": {
+        "leak_multisensor_data": [
+          "inventory_leak_multisensor_archive",
+          "accelerometer_member_labels",
+          "read_accelerometer_member",
+          "parse_accelerometer_csv",
+          "verify_accelerometer_csv_record",
+          "qualify_accelerometer_pair",
+          "verify_accelerometer_pair_qualification",
+          "build_accelerometer_pair_trace_record",
+          "verify_accelerometer_pair_trace_record",
+          "bind_accelerometer_delay_request",
+          "hydrophone_member_labels",
+          "read_hydrophone_member",
+          "verify_hydrophone_source_record"
+        ]
+      },
+      "requirements": [
+        "Provide versioned per-channel accelerometer mappings that bind source/member hash, exact Sample-to-second equation, Value-to-m/s2 equation, offset, axis/orientation, mounting, calibration uncertainty, acquisition range, clock origin and hardware channel without inferring them from numeric spacing or filenames.",
+        "Provide a reviewed decoder contract for each hydrophone RAW variant including byte order, signedness, sample width, framing/header/trailer rules, channel layout, sample rate/clock origin, saturation/missing-code meaning and exact code-to-pressure equation with pressure reference and calibration evidence.",
+        "Provide A1/A2 and H1/H2 common-trigger, offset, drift, alignment uncertainty and surveyed sensor-position/role evidence; keep scheduled flow changes, leak actuation, physical onset and detected arrivals separate.",
+        "Return immutable mapping/calibration/pairing/role evidence identities and decoder source/version/license hashes suitable for consumer replay; do not require bundling supplier executables into the public source release."
+      ],
+      "acceptance_evidence_required": [
+        "Replay complete representative files from every supported acquisition variant and compare decoded sample counts, coordinates and calibrated amplitudes against an independently reviewed supplier export or documented reference vectors.",
+        "Calibration checks span supported frequency/amplitude ranges and report uncertainty, clipping and transfer limits; altered bytes, decoder version, endian/layout, mapping, clock, calibration or sensor role invalidates dependent receipts.",
+        "Held-out known-event experiments report arrival-time/localization and false/missed-event behavior by sensor family while preserving ambiguous, reflected, saturated, truncated and missing signals.",
+        "Licensing evidence permits distribution of the implemented decoder or documents a clean-room/open specification path; raw observations remain separately licensed and excluded from source-only bundles."
+      ],
+      "guide": "docs/LEAK_MULTISENSOR_DATA_KO.md",
+      "shared_invariants": [
+        "SI quantity/unit, pressure reference, axis/orientation and clock origin preserved",
+        "asset/scenario/sensor/channel/source/configuration and evidence bound to each decoded record",
+        "unknown/unsupported/nonconverged stays explicit; no inferred leak cause, probability, onset, position or safety authorization",
+        "acquisition/monitoring owner supplies decoder and calibration truth; consumer adapter does not reverse-engineer or invent it"
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "The pinned archive inventory, explicit accelerometer CSV mapping/replay, reviewed A1/A2 qualification, fixed-grid SampledTrace bridge, source-sealed explicit-role delay request binding and opaque H1/H2 RAW source receipts exist; hydrophone RAW decoding, sensor calibration, paired clock evidence, surveyed roles and independent event truth are intentionally absent."
+      ]
+    },
+    {
+      "id": "PIPE-EXT-014",
+      "title_ko": "펌프 정지 동특성·액체 MOC 동시 결합 계약",
+      "target_components": [
+        "caller-owned pump and drive transient solver",
+        "pipeline-integrity-toolkit liquid MOC coupling boundary"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "transient.liquid_moc",
+        "equipment.pump_system"
+      ],
+      "consumer_contracts": {
+        "pump_transient": [
+          "PumpCoastdownRequest",
+          "PumpTransientProvider",
+          "evaluate_pump_coastdown",
+          "verify_pump_coastdown_record"
+        ]
+      },
+      "requirements": [
+        "Provide a versioned pump/drive transient API for trip and coastdown with signed four-quadrant flow, head or torque, angular speed, rotor inertia, drive torque, hydraulic torque, loss torque, check-valve state and convergence histories; do not derive time response from a static affinity point alone.",
+        "Couple the owner pump equations and the liquid MOC characteristic/node equations at the same accepted time level so flow and head are solved together rather than replaying a one-way prescribed trace as a coupled solution.",
+        "Return source-bound power histories and an independently checkable rotor energy ledger with initial/final 0.5*I*omega^2, drive work, hydraulic work, dissipated energy and bounded numerical adjustment.",
+        "Detect and type unsupported cavitation, column separation, reverse rotation, motor regeneration, check-valve impact and operating-map extrapolation without clipping them into the supported domain."
+      ],
+      "acceptance_evidence_required": [
+        "Zero-inertia/quasi-steady, no-hydraulic-load, constant resisting torque, energy-conserving rotor and pump-trip limiting cases agree with independent analytic or arithmetic references across time-step refinement.",
+        "The simultaneous MOC/pump node residual, network volume balance, rho*g*Q*H power identity, torque-power identity and full rotor energy ledger each meet caller-declared tolerances without excessive numerical adjustment.",
+        "Independent pump coastdown or trip experiments provide synchronized speed, pressure/head and flow with inertia, fluid properties, sensor calibration and clock uncertainty; calibration and held-out validation runs remain separate.",
+        "Changing pump curve/map, inertia, drive/control logic, check-valve rule, fluid property, clock, source or solver version invalidates dependent receipts."
+      ],
+      "guide": "docs/PUMP_TRANSIENT_KO.md",
+      "shared_invariants": [
+        "signed flow/head/torque, angular speed, absolute pressure and energy sign conventions preserved",
+        "asset/scenario/clock/pump/drive/fluid/source/configuration and evidence bound to the response",
+        "unknown/unsupported/nonconverged stays explicit; no inferred cavitation safety, field accuracy or operating authorization",
+        "pump owner implements dynamics and drive physics; the consumer validates exchange and MOC coupling"
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "A source-bound adapter validates owner speed/flow/head/power histories, power integrals, rotor kinetic energy, energy closure, convergence and replay. It does not yet implement direct simultaneous liquid-MOC coupling."
+      ]
+    },
+    {
+      "id": "PIPE-EXT-015",
+      "title_ko": "모니터링 입력의 시계·전달시각 보존",
+      "target_components": [
+        "process-monitoring-toolkit"
+      ],
+      "status": "requested_owner_change_not_implemented_or_verified",
+      "capability_ids": [
+        "instrument.sensor_faults"
+      ],
+      "consumer_contracts": {
+        "instrument_exchange": [
+          "TransmitterScenario",
+          "TransmitterMonitoringInput",
+          "replay_transmitter",
+          "transmitter_monitoring_input",
+          "packet_observation"
+        ]
+      },
+      "requirements": [
+        "Accept per-row source acquisition time, instrument-reported time and packet availability time as separate quantities with explicit source/reported clock identities and mapping evidence.",
+        "Preserve invalid, dropout, unknown, future-reported and not-yet-available states in training, calibration and evaluation splits without zero-fill, time compression, row sorting or accidental future access.",
+        "Make split chronology and event-window purging operate only on a declared common clock mapping; refuse cross-clock comparisons when mapping evidence is absent.",
+        "Bind the monitoring result to the transmitter replay digest, source frame IDs, channel/unit mapping and clock transformation so any change invalidates dependent evaluations."
+      ],
+      "acceptance_evidence_required": [
+        "Exact-clock, offset, rate-error, negative reported-time, delayed delivery, dropout and invalid-input examples preserve both time domains and yield explicit withheld or invalid states without dropping original packet identities.",
+        "Chronological calibration/evaluation rejects overlapping source rows and prevents a sample from being visible before its declared availability time, including after checkpoint/replay.",
+        "Changing source/reported clock identity, mapping, packet availability, invalidity, units, replay digest or split membership invalidates the sealed monitoring input and downstream result.",
+        "Independent acquisition/playback traces verify clock mapping, transport latency and missing-packet semantics; injected fault examples remain simulations and are not counted as field calibration."
+      ],
+      "guide": "docs/CONTROL_EXCHANGE_KO.md",
+      "shared_invariants": [
+        "Preserve SI quantity, channel identity, source and reported clock, acquisition time, arrival time, packet order and invalidity separately.",
+        "Bind asset/scenario/source/configuration/replay digest and evidence to every monitoring split and result.",
+        "Unknown timing, unsupported clock mappings and unavailable packets remain explicit; no inferred sensor reliability, alarm probability or safety authorization.",
+        "Monitoring owner owns detection/statistics; transmitter adapter only preserves declared signal and timing semantics."
+      ],
+      "owner_changes_performed_by_this_export": false,
+      "already_available_here_pending_numerical_validation": [
+        "A source-bound adapter converts complete zero-delivery-delay transmitter packet slices into existing MonitoringSplit records, preserving source order, reported clock identity and dropout/invalid rows. Delayed packets and negative reported-time rows are rejected because the current MonitoringSplit schema cannot represent their availability or timestamp."
+      ]
+    }
+  ]
+}

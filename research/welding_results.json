@@ -1,0 +1,286 @@
+{
+  "schema": "pipeline_integrity.welding_verification.v1",
+  "native_models": {
+    "welding.arc_energy": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "arc_energy_J_m": 400000.0,
+        "net_heat_input_J_m": 320000.0
+      }
+    },
+    "welding.waveform_energy": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "arc_energy_J": 600.0,
+        "net_heat_input_J_m": 48000.0
+      }
+    },
+    "welding.carbon_equivalents": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "CE_IIW": 0.39999999999999997,
+        "Pcm": 0.2058333333333333
+      }
+    },
+    "welding.cooling_interval": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "upper_crossing_s": 5.0,
+        "lower_crossing_s": 16.666666666666664,
+        "cooling_interval_s": 11.666666666666664
+      }
+    },
+    "welding.heat_treatment_history": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "simultaneous_hold_intervals_s": [
+          [
+            10.0,
+            25.0
+          ],
+          [
+            35.0,
+            43.333333333333336
+          ]
+        ],
+        "total_simultaneous_hold_s": 23.333333333333336,
+        "longest_continuous_hold_s": 15.0,
+        "maximum_heating_rate_K_s": 15.0,
+        "maximum_cooling_rate_K_s": 15.0,
+        "maximum_sensor_spread_K": 50.0
+      }
+    },
+    "welding.dilution": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "total_melted_mass_kg": 0.004,
+        "role_mass_fractions": {
+          "base": 0.5,
+          "filler": 0.25,
+          "previous_layer": 0.25
+        },
+        "mixed_composition_mass_fraction": {
+          "C": 0.0175,
+          "Cr": null,
+          "Ni": 0.07500000000000001
+        },
+        "constituents_missing_element_evidence": {
+          "C": [],
+          "Cr": [
+            "previous"
+          ],
+          "Ni": []
+        }
+      }
+    },
+    "welding.hardness_traverse": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "outcome": "not_satisfied",
+        "regions": [
+          {
+            "region_id": "base",
+            "outcome": "satisfied",
+            "observations": 1,
+            "peak_hardness_Pa": 1500000000.0,
+            "peak_point_id": "B",
+            "peak_position_m": -0.01,
+            "declared_upper_limit_Pa": 2000000000.0
+          },
+          {
+            "region_id": "HAZ",
+            "outcome": "unknown",
+            "observations": 1,
+            "peak_hardness_Pa": 3100000000.0,
+            "peak_point_id": "H",
+            "peak_position_m": 0.0,
+            "declared_upper_limit_Pa": 3000000000.0
+          },
+          {
+            "region_id": "weld",
+            "outcome": "not_satisfied",
+            "observations": 1,
+            "peak_hardness_Pa": 4500000000.0,
+            "peak_point_id": "W",
+            "peak_position_m": 0.01,
+            "declared_upper_limit_Pa": 4000000000.0
+          },
+          {
+            "region_id": "unmeasured",
+            "outcome": "unknown",
+            "observations": 0
+          }
+        ],
+        "regions_without_declared_limits": []
+      }
+    },
+    "welding.joint_profile": {
+      "status": "computed",
+      "model_version": "1.0.0",
+      "values": {
+        "signed_surface_offset_at_joint_m": 0.0020000000000000026,
+        "signed_angular_mismatch_rad": 0.009997667286485256,
+        "left_slope": 0.00999999999999999,
+        "right_slope": 0.01999999999999995,
+        "left_profile_rmse_m": 6.25964416140483e-20,
+        "right_profile_rmse_m": 1.2266347333466993e-18,
+        "left_fit_observations": 3,
+        "right_fit_observations": 3
+      }
+    }
+  },
+  "independent_references": {
+    "steady_arc_per_length": {
+      "actual": 400000.0,
+      "expected": 400000.0,
+      "absolute_error": 0.0
+    },
+    "declared_net_heat_per_length": {
+      "actual": 320000.0,
+      "expected": 320000.0,
+      "absolute_error": 0.0
+    },
+    "synchronized_waveform_energy": {
+      "actual": 600.0,
+      "expected": 600.0,
+      "absolute_error": 0.0
+    },
+    "waveform_declared_net_heat": {
+      "actual": 48000.0,
+      "expected": 48000.0,
+      "absolute_error": 0.0
+    },
+    "mass_percent_CE": {
+      "actual": 0.39999999999999997,
+      "expected": 0.4,
+      "absolute_error": 5.551115123125783e-17
+    },
+    "mass_percent_Pcm": {
+      "actual": 0.2058333333333333,
+      "expected": 0.20583333333333334,
+      "absolute_error": 2.7755575615628914e-17
+    },
+    "upper_crossing": {
+      "actual": 5.0,
+      "expected": 5.0,
+      "absolute_error": 0.0
+    },
+    "lower_crossing": {
+      "actual": 16.666666666666664,
+      "expected": 16.666666666666668,
+      "absolute_error": 3.552713678800501e-15
+    },
+    "cooling_duration": {
+      "actual": 11.666666666666664,
+      "expected": 11.666666666666666,
+      "absolute_error": 1.7763568394002505e-15
+    },
+    "simultaneous_hold_union": {
+      "actual": 23.333333333333336,
+      "expected": 23.333333333333332,
+      "absolute_error": 3.552713678800501e-15
+    },
+    "longest_continuous_hold": {
+      "actual": 15.0,
+      "expected": 15.0,
+      "absolute_error": 0.0
+    },
+    "maximum_sensor_spread": {
+      "actual": 50.0,
+      "expected": 50.0,
+      "absolute_error": 0.0
+    },
+    "maximum_heating_rate": {
+      "actual": 15.0,
+      "expected": 15.0,
+      "absolute_error": 0.0
+    },
+    "melted_base_mass_fraction": {
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0
+    },
+    "mixed_carbon_mass_fraction": {
+      "actual": 0.0175,
+      "expected": 0.0175,
+      "absolute_error": 0.0
+    },
+    "mixed_nickel_mass_fraction": {
+      "actual": 0.07500000000000001,
+      "expected": 0.075,
+      "absolute_error": 1.3877787807814457e-17
+    },
+    "profile_signed_offset": {
+      "actual": 0.0020000000000000026,
+      "expected": 0.002,
+      "absolute_error": 2.6020852139652106e-18
+    },
+    "profile_signed_angle": {
+      "actual": 0.009997667286485256,
+      "expected": 0.009997667286485297,
+      "absolute_error": 4.163336342344337e-17
+    },
+    "theil_sen_contaminated_offset": {
+      "actual": 0.002,
+      "expected": 0.002,
+      "absolute_error": 0.0
+    },
+    "common_power_integrator_same_samples": {
+      "actual": 600.0,
+      "expected": 600.0,
+      "absolute_error": 0.0
+    },
+    "negative_electrical_exchange_retained": {
+      "actual": 150.0,
+      "expected": 150.0,
+      "absolute_error": 0.0
+    },
+    "recorded_temperature_adapter_crossing": {
+      "actual": 11.666666666666664,
+      "expected": 11.666666666666666,
+      "absolute_error": 1.7763568394002505e-15
+    }
+  },
+  "hardness_region_outcomes": {
+    "base": "satisfied",
+    "HAZ": "unknown",
+    "weld": "not_satisfied",
+    "unmeasured": "unknown"
+  },
+  "unknown_dilution_element_preserved": true,
+  "profile_outlier_comparison": {
+    "ols": {
+      "signed_offset_m": -0.004666666666666667,
+      "absolute_error_m": 0.006666666666666667
+    },
+    "theil_sen": {
+      "signed_offset_m": 0.002,
+      "absolute_error_m": 0.0
+    },
+    "soft_l1": {
+      "signed_offset_m": 0.0019884530271491526,
+      "absolute_error_m": 1.1546972850847489e-05
+    }
+  },
+  "incomplete_heat_input_status": "needs_data",
+  "negative_power_native_heat_status": "out_of_scope",
+  "external_material_source": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "7e266afcacb4695284b576c9dc9e17f162de9266fbe1e98c3515a58fc5d1196c",
+    "source_tree_files": 68
+  },
+  "external_source_unchanged": true,
+  "implementation_sha256": "9e82efacff9294b0ea6e49be83df2b1ab90b0c5c805163668217ec54f88cfc42",
+  "script_sha256": "386d55b53c63caa727877ae2a99e6441b7d286b240b25ca2c1f56b2807ccfdc7",
+  "example_sha256": "2ea8d16b258326a538084f252aa6462e33b7130c6639ca49f8fa4fc58b71434c",
+  "original_authored_inputs_not_supplier_rules": true,
+  "procedure_or_field_qualification": false
+}

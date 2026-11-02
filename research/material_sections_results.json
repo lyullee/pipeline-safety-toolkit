@@ -1,0 +1,711 @@
+{
+  "schema": "pipeline_integrity.material_sections_verification.v1",
+  "model_cases": {
+    "pure_shear": {
+      "model_id": "mechanics.plane_stress",
+      "status": "computed",
+      "result_digest": "9092df940e55726c7d56c6e809b60aede9e24e02a890aec0c555d1f85864144e",
+      "authored_reference_values": {
+        "principal_max_Pa": 3000000.0,
+        "principal_min_Pa": -3000000.0,
+        "von_mises_Pa": 5196152.422706632
+      }
+    },
+    "uniform_restraint_0.0": {
+      "model_id": "mechanics.thermal_restraint",
+      "status": "computed",
+      "result_digest": "722ad87b25ad5a651037c9e20ee8ddcca3269e1dcb0139a0c6d38f2a72a493b6",
+      "authored_reference_values": {
+        "free_thermal_strain": 0.0002,
+        "restrained_uniaxial_stress_Pa": -0.0
+      }
+    },
+    "uniform_restraint_1.0": {
+      "model_id": "mechanics.thermal_restraint",
+      "status": "computed",
+      "result_digest": "a35ffe264e02187b0715489be951b840e3db6282c3aaf19e2f1775c490102752",
+      "authored_reference_values": {
+        "free_thermal_strain": 0.0002,
+        "restrained_uniaxial_stress_Pa": -40000000.0
+      }
+    },
+    "planar_layers": {
+      "model_id": "thermal.planar_layers",
+      "status": "computed",
+      "result_digest": "b8f4a9904dcc78996c9f3b58c162d3dcbd28957777787871c75c218e6241fa65",
+      "authored_reference_values": {
+        "thermal_resistance_K_W": 0.001,
+        "heat_rate_W": 100000.0
+      }
+    },
+    "lumped_tau": {
+      "model_id": "thermal.lumped_temperature",
+      "status": "computed",
+      "result_digest": "2ed23746ca4c4afefdb59726c51365730513f0dd70c16f008fc603185d822934",
+      "authored_reference_values": {
+        "biot_number": 0.01,
+        "time_constant_s": 100.0,
+        "temperature_K": 314.7151776468577
+      }
+    },
+    "lumped_biot_outside": {
+      "model_id": "thermal.lumped_temperature",
+      "status": "out_of_scope",
+      "result_digest": "73bf37508ca3cc74a50ed8c02e9f3fd6550db99479e7ef2c437308a66f179956",
+      "authored_reference_values": {
+        "biot_number": 1.0,
+        "time_constant_s": 100.0,
+        "temperature_K": 314.7151776468577
+      }
+    },
+    "plane_free_uniform": {
+      "model_id": "mechanics.through_wall_thermal_stress",
+      "status": "computed",
+      "result_digest": "82eb374f79046c51876b9c45e49518ad9da9dd1e4717c46c256f43d941e4307f",
+      "authored_reference_values": {
+        "section_midpoint_m": 0.01,
+        "free_thermal_strain": [
+          0.0002,
+          0.0002,
+          0.0002,
+          0.0002,
+          0.0002
+        ],
+        "midplane_total_strain": 0.0002,
+        "curvature_1_m": 1.0950600426440346e-18,
+        "stress_Pa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "membrane_force_N_m": -1.1641532182693481e-10,
+        "bending_moment_N": -1.0097419586828951e-28,
+        "membrane_force_residual_N_m": -1.1641532182693481e-10,
+        "bending_moment_residual_N": -1.0097419586828951e-28,
+        "elastic_limit_utilization_at_profile_points": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maximum_evaluated_elastic_limit_utilization": 0.0,
+        "maximum_evaluated_tensile_stress_Pa": 0.0,
+        "minimum_evaluated_compressive_stress_Pa": 0.0,
+        "section_quadrature_order": 12
+      }
+    },
+    "plane_clamped_uniform": {
+      "model_id": "mechanics.through_wall_thermal_stress",
+      "status": "computed",
+      "result_digest": "3a89e1518cda833dccc9fe4ad417a5013421ff0e0fb88d36a1faa8c47484e32a",
+      "authored_reference_values": {
+        "section_midpoint_m": 0.01,
+        "free_thermal_strain": [
+          0.0002,
+          0.0002,
+          0.0002,
+          0.0002,
+          0.0002
+        ],
+        "midplane_total_strain": 0.0,
+        "curvature_1_m": 0.0,
+        "stress_Pa": [
+          -40000000.0,
+          -40000000.0,
+          -40000000.0,
+          -40000000.0,
+          -40000000.0
+        ],
+        "membrane_force_N_m": -800000.0000000001,
+        "bending_moment_N": -6.465938895416912e-13,
+        "membrane_force_residual_N_m": 0.0,
+        "bending_moment_residual_N": 0.0,
+        "elastic_limit_utilization_at_profile_points": [
+          0.16,
+          0.16,
+          0.16,
+          0.16,
+          0.16
+        ],
+        "maximum_evaluated_elastic_limit_utilization": 0.16,
+        "maximum_evaluated_tensile_stress_Pa": -40000000.0,
+        "minimum_evaluated_compressive_stress_Pa": -40000000.0,
+        "section_quadrature_order": 12
+      }
+    },
+    "plane_review_missing": {
+      "model_id": "mechanics.through_wall_thermal_stress",
+      "status": "needs_data",
+      "result_digest": "2e835aba97deda1df4159e4154bddc930cebd0e4322859a83371407c1cc21d37",
+      "authored_reference_values": {}
+    },
+    "plane_elastic_limit": {
+      "model_id": "mechanics.through_wall_thermal_stress",
+      "status": "out_of_scope",
+      "result_digest": "ac3c43e38ab790b0319f18b32adf71ccebcd2112366f055f02c0056817a2dcc5",
+      "authored_reference_values": {
+        "section_midpoint_m": 0.01,
+        "free_thermal_strain": [
+          0.002,
+          0.002,
+          0.002,
+          0.002,
+          0.002
+        ],
+        "midplane_total_strain": 0.0,
+        "curvature_1_m": 0.0,
+        "stress_Pa": [
+          -400000000.0,
+          -400000000.0,
+          -400000000.0,
+          -400000000.0,
+          -400000000.0
+        ],
+        "membrane_force_N_m": -8000000.000000002,
+        "bending_moment_N": -2.5011104298755527e-12,
+        "membrane_force_residual_N_m": 0.0,
+        "bending_moment_residual_N": 0.0,
+        "elastic_limit_utilization_at_profile_points": [
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6
+        ],
+        "maximum_evaluated_elastic_limit_utilization": 1.6,
+        "maximum_evaluated_tensile_stress_Pa": -400000000.0,
+        "minimum_evaluated_compressive_stress_Pa": -400000000.0,
+        "section_quadrature_order": 12
+      }
+    },
+    "solid_adiabatic": {
+      "model_id": "thermal.transient_conduction_1d",
+      "status": "out_of_scope",
+      "result_digest": "d59c68b569d11ac04d4b20baa028e3b45fe7b0bd7fef0c9257f911a80a44726f",
+      "authored_reference_values": {
+        "cell_centers_m": [
+          0.001,
+          0.003,
+          0.005,
+          0.007,
+          0.009000000000000001,
+          0.011,
+          0.013000000000000001,
+          0.015000000000000001,
+          0.017,
+          0.019
+        ],
+        "temperature_history_K": [
+          [
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0
+          ],
+          [
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.00000000000006,
+            300.0000000000001,
+            300.0,
+            300.0,
+            300.0
+          ],
+          [
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.00000000000006,
+            300.0000000000001,
+            300.0,
+            300.0,
+            300.0
+          ]
+        ],
+        "boundary_surface_temperature_K": [
+          [
+            300.0,
+            300.0
+          ],
+          [
+            300.0,
+            300.0
+          ],
+          [
+            300.0,
+            300.0
+          ]
+        ],
+        "boundary_heat_rate_into_solid_W": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "distributed_heat_rate_into_solid_W": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "volumetric_generation_rate_W": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cumulative_boundary_energy_into_solid_J": [
+          0.0,
+          0.0
+        ],
+        "cumulative_distributed_energy_into_solid_J": 0.0,
+        "cumulative_generated_energy_J": 0.0,
+        "maximum_absolute_discrete_energy_balance_error_J": 4.6193599700927755e-10,
+        "maximum_relative_discrete_energy_balance_error": 1.0,
+        "internal_steps": 20,
+        "maximum_nonlinear_iterations_used": 1
+      }
+    },
+    "solid_flux_energy": {
+      "model_id": "thermal.transient_conduction_1d",
+      "status": "computed",
+      "result_digest": "101632b8ad0df1554ce02a6749bf5d78a2c72f0d08140261a8a3e0be54692ff3",
+      "authored_reference_values": {
+        "cell_centers_m": [
+          0.001,
+          0.003,
+          0.005,
+          0.007,
+          0.009000000000000001,
+          0.011,
+          0.013000000000000001,
+          0.015000000000000001,
+          0.017,
+          0.019
+        ],
+        "temperature_history_K": [
+          [
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0
+          ],
+          [
+            300.01627988458097,
+            300.0060637860119,
+            300.001933924808,
+            300.00054365575085,
+            300.00013788460575,
+            300.0000321262966,
+            300.00000697318137,
+            300.0000014257393,
+            300.0000002784109,
+            300.00000006061396
+          ],
+          [
+            300.02638308058954,
+            300.0134500067545,
+            300.0061601723959,
+            300.0025521444041,
+            300.0009647850252,
+            300.0003357835552,
+            300.0001085146816,
+            300.00003284250687,
+            300.0000095013984,
+            300.00000316868767
+          ]
+        ],
+        "boundary_surface_temperature_K": [
+          [
+            300.01,
+            300.0
+          ],
+          [
+            300.02627988458096,
+            300.00000006061396
+          ],
+          [
+            300.03638308058953,
+            300.00000316868767
+          ]
+        ],
+        "boundary_heat_rate_into_solid_W": [
+          [
+            100.0,
+            0.0
+          ],
+          [
+            100.0,
+            0.0
+          ],
+          [
+            100.0,
+            0.0
+          ]
+        ],
+        "distributed_heat_rate_into_solid_W": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "volumetric_generation_rate_W": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cumulative_boundary_energy_into_solid_J": [
+          200.0,
+          0.0
+        ],
+        "cumulative_distributed_energy_into_solid_J": 0.0,
+        "cumulative_generated_energy_J": 0.0,
+        "maximum_absolute_discrete_energy_balance_error_J": 9.387726151999232e-10,
+        "maximum_relative_discrete_energy_balance_error": 9.387726151999231e-11,
+        "internal_steps": 20,
+        "maximum_nonlinear_iterations_used": 2
+      }
+    },
+    "solid_property_outside": {
+      "model_id": "thermal.transient_conduction_1d",
+      "status": "out_of_scope",
+      "result_digest": "c4d1e4a1046e5e5f9d773f82dab4193b6f12de72ac52116f3cc8ab6e937b38f5",
+      "authored_reference_values": {}
+    },
+    "solid_boundary_unreviewed": {
+      "model_id": "thermal.transient_conduction_1d",
+      "status": "needs_data",
+      "result_digest": "6ced77c105cd7af27d09c36b2cdd26a749bf429a0cdd8c3c1a4dce8f6fc0b00a",
+      "authored_reference_values": {}
+    },
+    "solid_radial_10": {
+      "model_id": "thermal.transient_conduction_1d",
+      "status": "computed",
+      "result_digest": "a7569c03bce7ad2360a57e1bc3bc69aab89741be622af2bb7656ff3dbd60e523",
+      "authored_reference_values": {
+        "cell_centers_m": [
+          0.0510098029794274,
+          0.0530094331227943,
+          0.05500909015790027,
+          0.0570087712549569,
+          0.05900847396772772,
+          0.061008196170678576,
+          0.06300793600809346,
+          0.06500769185258004,
+          0.06700746227100382,
+          0.06900724599634447
+        ],
+        "temperature_history_K": [
+          [
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0
+          ],
+          [
+            337.6230045832175,
+            333.0518040569811,
+            328.64982826461403,
+            324.40499774352253,
+            320.3064815808368,
+            316.34453110650395,
+            312.51034037940053,
+            308.7959284491756,
+            305.1940394393246,
+            301.6980573100936
+          ]
+        ],
+        "boundary_surface_temperature_K": [
+          [
+            340.0,
+            300.0
+          ],
+          [
+            340.0,
+            300.0
+          ]
+        ],
+        "boundary_heat_rate_into_solid_W": [
+          [
+            125696.23565011995,
+            0.0
+          ],
+          [
+            7469.484401178779,
+            -7469.484401178546
+          ]
+        ],
+        "distributed_heat_rate_into_solid_W": [
+          0.0,
+          0.0
+        ],
+        "volumetric_generation_rate_W": [
+          0.0,
+          0.0
+        ],
+        "cumulative_boundary_energy_into_solid_J": [
+          747116014.2785302,
+          -746848162.1774448
+        ],
+        "cumulative_distributed_energy_into_solid_J": 0.0,
+        "cumulative_generated_energy_J": 0.0,
+        "maximum_absolute_discrete_energy_balance_error_J": 3.0781728632689465e-07,
+        "maximum_relative_discrete_energy_balance_error": 2.0604990252607294e-14,
+        "internal_steps": 100,
+        "maximum_nonlinear_iterations_used": 2
+      }
+    },
+    "solid_radial_20": {
+      "model_id": "thermal.transient_conduction_1d",
+      "status": "computed",
+      "result_digest": "9ad02672742a5b63f4f714e723ed6156fc71f613836ec50aa6a69033af848581",
+      "authored_reference_values": {
+        "cell_centers_m": [
+          0.05050247518686585,
+          0.05150242712727236,
+          0.052502380898393555,
+          0.05350233639758174,
+          0.054502293529722225,
+          0.05550225220655465,
+          0.056502212346066595,
+          0.05750217387195027,
+          0.05850213671311502,
+          0.05950210080324896,
+          0.06050206608042407,
+          0.06150203248673983,
+          0.06250199996800103,
+          0.06350196847342608,
+          0.0645019379553824,
+          0.06550190836914602,
+          0.06650187967268295,
+          0.06750185182644992,
+          0.06850182479321262,
+          0.06950179853787958
+        ],
+        "temperature_history_K": [
+          [
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0,
+            300.0
+          ],
+          [
+            338.8112727095993,
+            336.48043118050725,
+            334.1944079455562,
+            331.9515120554422,
+            329.7501464803683,
+            327.58880128149144,
+            325.46604739185784,
+            323.3805309426941,
+            321.3309680786589,
+            319.31614021234765,
+            317.33488967414104,
+            315.3861157185222,
+            313.4687708523781,
+            311.5818574546287,
+            309.7244246598808,
+            307.89556548174136,
+            306.09441415400926,
+            304.32014367024016,
+            302.5719635041844,
+            300.8491174953751
+          ]
+        ],
+        "boundary_surface_temperature_K": [
+          [
+            340.0,
+            300.0
+          ],
+          [
+            340.0,
+            300.0
+          ]
+        ],
+        "boundary_heat_rate_into_solid_W": [
+          [
+            251343.9192150114,
+            0.0
+          ],
+          [
+            7469.484401179012,
+            -7469.484401178081
+          ]
+        ],
+        "distributed_heat_rate_into_solid_W": [
+          0.0,
+          0.0
+        ],
+        "volumetric_generation_rate_W": [
+          0.0,
+          0.0
+        ],
+        "cumulative_boundary_energy_into_solid_J": [
+          747116513.0692562,
+          -746848535.3561894
+        ],
+        "cumulative_distributed_energy_into_solid_J": 0.0,
+        "cumulative_generated_energy_J": 0.0,
+        "maximum_absolute_discrete_energy_balance_error_J": 1.4512908581565398e-06,
+        "maximum_relative_discrete_energy_balance_error": 9.714800080598791e-14,
+        "internal_steps": 100,
+        "maximum_nonlinear_iterations_used": 2
+      }
+    }
+  },
+  "pressure_sections": {
+    "closed": {
+      "sampled_radii": 129,
+      "boundary_residuals": {
+        "inner_radial_traction_pa": 1.862645149230957e-09,
+        "outer_radial_traction_pa": 9.313225746154785e-10
+      },
+      "hoop_resultant_residual_n_m": 1.4778925105929375e-07,
+      "axial_force_residual_n": -1.8189894035458565e-12,
+      "maximum_evaluated_von_mises_pa": 10770206.839791924,
+      "record_digest": "2737e1b08d8a0e3336e6b526789a436079c116e4420e71ba791615699e15385f"
+    },
+    "open_zero_axial": {
+      "sampled_radii": 129,
+      "boundary_residuals": {
+        "inner_radial_traction_pa": 1.862645149230957e-09,
+        "outer_radial_traction_pa": 9.313225746154785e-10
+      },
+      "hoop_resultant_residual_n_m": 1.4778925105929375e-07,
+      "axial_force_residual_n": 0.0,
+      "maximum_evaluated_von_mises_pa": 11566780.590256754,
+      "record_digest": "7e4095814f93c82271e4576e2ab3de47d490ad96670e53db30efb25c50e55069"
+    },
+    "hydrostatic": {
+      "sampled_radii": 129,
+      "boundary_residuals": {
+        "inner_radial_traction_pa": 5.820766091346741e-11,
+        "outer_radial_traction_pa": 5.820766091346741e-11
+      },
+      "hoop_resultant_residual_n_m": 0.0,
+      "axial_force_residual_n": 4.547473508864641e-13,
+      "maximum_evaluated_von_mises_pa": 0.0,
+      "record_digest": "00b5a7d6323ca113c6c069454faa9136b7b82cf78fdfce0fa1c5d37ff9337027"
+    },
+    "external_dominant": {
+      "sampled_radii": 129,
+      "boundary_residuals": {
+        "inner_radial_traction_pa": -2.7939677238464355e-09,
+        "outer_radial_traction_pa": -1.862645149230957e-09
+      },
+      "hoop_resultant_residual_n_m": -1.4777469914406538e-07,
+      "axial_force_residual_n": 0.0,
+      "maximum_evaluated_von_mises_pa": 10770206.839791922,
+      "record_digest": "7341a81ec583cb114cfc056a94eedc3303110e4c78440a6ad9af90042e34112f"
+    }
+  },
+  "zero_heat_adiabatic_issue": {
+    "native_status": "out_of_scope",
+    "absolute_energy_residual_j": 4.6193599700927755e-10,
+    "relative_energy_residual": 1.0,
+    "status_overridden": false,
+    "owner_extension_request": "PI-X04",
+    "interpretation": "Near-zero heat transfer needs a reviewed absolute-plus-relative energy criterion; preserve native status."
+  },
+  "radial_steady_center_diagnostic_max_error_k": [
+    2.2737367544323206e-13,
+    7.958078640513122e-13
+  ],
+  "radial_steady_volume_average_max_error_k": [
+    0.015230549846194208,
+    0.0038842993824346195
+  ],
+  "rod_data": {
+    "source": "https://doi.org/10.17632/sbcf36976g.1",
+    "license_id": "CC-BY-4.0",
+    "creators": [
+      "Lauren B. Tomanek",
+      "Daniel S. Stutts"
+    ],
+    "archive_sha256": "9226632888404fe792358bc5a33cf2edacbb16e35352a36a6c0c1c4c155e723a",
+    "raw_runs": 77,
+    "total_rows": 215001,
+    "negative_excess_values": 28161,
+    "full_native_reader_values_equal_original_csv": true,
+    "monitoring_rows": 1937,
+    "hra_samples": 1937,
+    "native_thermal_output_rows": 21,
+    "source_status": "needs_data",
+    "conditioned_input_points": 21,
+    "ambient_geometry_properties_sensor_face_and_transfer_are_hypotheses": true,
+    "controller_counts_converted_to_heat": false,
+    "independent_prediction_accuracy_scored": false,
+    "excess_temperature_reference_needs_receiver_metadata": true
+  },
+  "source_versions": {
+    "materials": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "713a5fe2426808ed757fe7f061b6d6d7c022445c893a5078f6a0f6ee88b0c9fe",
+      "source_tree_files": 64
+    },
+    "monitoring": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+      "source_tree_files": 28
+    },
+    "hra": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    }
+  },
+  "module_sha256": "3ada36ca77ff57866ea1473fb591675d360ab95574d21159e0cbd8faaed74a28",
+  "example_sha256": "f3e35ccbdf4e7b67edadc2922866887f5ae82584310a828837cd3fa13ed98800",
+  "script_sha256": "ac6571988affc9969bedc53d3c81d49962887915bf652b687c64dec61df2de5f",
+  "field_or_design_qualification": false
+}

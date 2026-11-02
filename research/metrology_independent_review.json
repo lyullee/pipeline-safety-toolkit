@@ -1,0 +1,36 @@
+{
+  "source_sha256": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb",
+  "source_unchanged": true,
+  "checks": {
+    "nan_covariance": {
+      "rejected": true
+    },
+    "inf_metadata": {
+      "rejected": true
+    },
+    "symmetry_and_chaining": {
+      "passed": true,
+      "covariance": [
+        [
+          0.004271303577511518,
+          0.01004895821666914
+        ],
+        [
+          0.01004895821666914,
+          0.023880854142427677
+        ]
+      ]
+    },
+    "rehashed_uncertainty": {
+      "rejected": true
+    },
+    "subnormal_range": {
+      "status": "out_of_scope",
+      "output_covariance": null,
+      "reported_standard_uncertainty": null,
+      "expected_nonzero_standard_uncertainty": 9.99994433575849e-171
+    }
+  },
+  "review_script_sha256": "b82f07f4ce829f55670b3b9878c86f8c1713fd5163972a02bbd3ad68838ceffb",
+  "all_passed": true
+}

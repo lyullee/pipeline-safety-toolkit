@@ -1,0 +1,67 @@
+{
+  "schema": "pipeline_integrity.information_response_missingness_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.response_exchange",
+  "entrypoints": [
+    "information_response_missingness_audit",
+    "verify_information_response_missingness_audit",
+    "information_response_missing_outcome_bounds",
+    "verify_information_response_missing_outcome_bounds",
+    "information_response_fault_tree_missing_outcome_bounds",
+    "verify_information_response_fault_tree_missing_outcome_bounds"
+  ],
+  "test_module": "tests/test_information_response.py",
+  "authored_test_functions": 7,
+  "tests_executed": 0,
+  "numerical_verification": "deferred_to_nurion",
+  "pbs_submitted": false,
+  "patterns": [
+    "complete_00",
+    "complete_01",
+    "complete_10",
+    "complete_11",
+    "missing_information_only",
+    "missing_response_only",
+    "missing_both"
+  ],
+  "cluster_summary_policy": "only caller-declared non-trial sampling clusters; trial-level observations are aggregated without emitting one summary per trial",
+  "unknown_outcomes_imputed": false,
+  "missingness_mechanism_inferred": false,
+  "selection_bias_corrected": false,
+  "independent_sampling_claim": false,
+  "field_validation_claim": false,
+  "guide": "docs/HUMAN_RESPONSE_KO.md",
+  "finite_record_bounds": {
+    "states": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "unknown_completion": "all Boolean values compatible with each observed field",
+    "denominator": "all supplied trials",
+    "imputation": false,
+    "missingness_mechanism_assumed": false,
+    "selection_bias_corrected": false,
+    "sampling_uncertainty_estimated": false,
+    "population_transfer_qualified": false,
+    "bounds_scope": "four separate state-wise finite-record identification bounds; not a simultaneous region"
+  },
+  "fta_missing_outcome_bounds": {
+    "owner_engine_reused": "HRARiskClient.fault_tree",
+    "deterministic_paired_states_evaluated": 4,
+    "replay_required": true,
+    "work_budget": "four owner tree evaluations bounded by maximum_tree_nodes and maximum_fault_tree_work",
+    "withheld_owner_state": "whole result rejected",
+    "sampling_uncertainty_estimated": false,
+    "missingness_adjusted": false,
+    "field_population_transfer_qualified": false,
+    "receipt_invariants": [
+      "exactly four distinct Boolean truth-table rows",
+      "observed complete top-event count cannot exceed complete records",
+      "endpoint counts must reconcile with complete and incomplete record counts",
+      "endpoint probabilities must equal endpoint count divided by all supplied records",
+      "provider identity kind must match source digest availability"
+    ]
+  }
+}

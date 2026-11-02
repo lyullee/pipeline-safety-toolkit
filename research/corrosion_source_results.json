@@ -1,0 +1,151 @@
+{
+  "schema_version": "pipeline_integrity.corrosion_source_review.v1",
+  "status": "source_observations_preserved_model_conditions_need_data",
+  "assets": [
+    {
+      "dataset_id": "copper_wire_corrosion",
+      "source": "https://zenodo.org/records/10640939",
+      "citation": "Kuchař, M., & Fišer, J. (2024). Copper Wire Corrosion and Meteorological Conditions in a Hangar (0.2). Zenodo. https://doi.org/10.5281/zenodo.10640939",
+      "creators": [
+        "Michal Kuchař",
+        "Jaromír Fišer"
+      ],
+      "version": "0.2",
+      "license_id": "CC-BY-4.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/10640939",
+      "rights_review": "reviewed_license",
+      "checked_on": "2026-10-27",
+      "filename": "procraft_corrosion_kbely_data_v02.csv",
+      "bytes": 2545534,
+      "sha256": "1c6f00e21363aac085faa8e6318b5b0d1454287d0c38acfc0ef683455c2ce1a3",
+      "supplier_checksum": "md5:b168dba29ba1e01196d31e4a440dea2c",
+      "publisher_checksum_verified": true
+    },
+    {
+      "dataset_id": "afm_steel_wear",
+      "source": "https://zenodo.org/records/4743140",
+      "citation": "Walker, J., Umer, J., Mohammadpour, M., Theodossiades, S., Bewsher, S. R., Offner, G., Bansal, H., Leighton, M., Braunstingl, M., & Flesch, H.-G. (2021). Asperity level characterisation of abrasive wear using atomic force microscopy [Dataset]. Dryad. https://doi.org/10.5061/dryad.s7h44j16j",
+      "creators": [
+        "Walker, Jack",
+        "Umer, Jamal",
+        "Mohammadpour, Mahdi",
+        "Theodossiades, Stephanos",
+        "Bewsher, Stephen Richard",
+        "Offner, Guenter",
+        "Bansal, Hemant",
+        "Leighton, Michael",
+        "Braunstingl, Michael",
+        "Flesch, Heinz-Georg"
+      ],
+      "version": "2021-05-17; Zenodo record 4743140 revision 4",
+      "license_id": "CC0-1.0",
+      "rights_evidence_url": "https://zenodo.org/api/records/4743140",
+      "rights_review": "reviewed_license",
+      "checked_on": "2026-10-27",
+      "filename": "Asperity_Level_Characterisation_of_Abrasive_Wear_Using_Atomic_Force_Microscopy_.csv",
+      "bytes": 99505,
+      "sha256": "665e22dd0131d4e7879dbcdb45628d57d77e5ba0d543fe5f074c04554cf6dbfd",
+      "supplier_checksum": "md5:6f633b0e84c70d33b6d6d6a1d36d707c",
+      "publisher_checksum_verified": true
+    }
+  ],
+  "acquired_files": 2,
+  "acquired_bytes": 2645039,
+  "source_observation_digest": "659c0b5136e1612ddcd3fe34f144eae455e820c58ee89b0fc903279e6733e079",
+  "copper": {
+    "summary": {
+      "rows": 9387,
+      "invalid_clocks": 0,
+      "repeated_adjacent_clocks": 0,
+      "decreasing_adjacent_clocks": 0,
+      "adjacent_intervals_other_than_3600_s": 4,
+      "missing_or_invalid_numeric_cells": 0,
+      "negative_corrosion_values": 0,
+      "negative_provider_differences": 0,
+      "checked_adjacent_differences": 9386,
+      "maximum_provider_difference_residual_source_unit": 2.859583229930518e-18,
+      "source_unit_minimum": 0.0,
+      "source_unit_maximum": 0.0271
+    },
+    "source_depth_unit": null,
+    "depth_to_SI_scale": null,
+    "physical_exposure_origin": null,
+    "source_numeric_columns_have_unit_labels": false,
+    "observation_time_is_physical_exposure_age": false,
+    "article_methods": "https://doi.org/10.1186/s40494-024-01212-6",
+    "article_plotted_depth_unit": "nm",
+    "article_to_csv_depth_scale_explicitly_declared": false,
+    "provider_differences_retained": true,
+    "independent_physical_specimens_resolved": null,
+    "physical_power_law_fit_performed": false,
+    "inferred_unit_or_zero_clock_used": false
+  },
+  "afm": {
+    "summary": {
+      "figure_sections": 9,
+      "nanoindentation_hardness_rows": 5,
+      "average_pass_volume_rows": 6,
+      "continuous_load_volume_rows": 12,
+      "repeated_load_occurrences": 1,
+      "nanoindentation_to_scratch_hardness_mapping_reviewed": false,
+      "independent_physical_specimens_resolved": null
+    },
+    "source_rows": 1346,
+    "source_normal_force_unit": "microN",
+    "normal_force_to_N": 1e-06,
+    "source_volume_unit": "micron^3",
+    "volume_to_m3": 1e-18,
+    "source_hardness_load_unit": "mN",
+    "hardness_load_to_N": 0.001,
+    "source_hardness_unit": "Gpa",
+    "hardness_to_Pa": 1000000000.0,
+    "reviewed_directional_pass_distance_m": 5e-06,
+    "reviewed_Figure10_passes": 2000,
+    "reviewed_Figure10_sliding_distance_m": 0.01,
+    "specific_reported_removed_volume_units": "m^3/(N*m)",
+    "specific_reported_removed_volume_range": [
+      4.629011438999422e-15,
+      4.3737172345041926e-13
+    ],
+    "specific_volume_is_dimensionless_archard_coefficient": false,
+    "reported_removed_and_pile_up_volumes_kept_distinct": true,
+    "matched_scratch_hardness_Pa": null,
+    "distributed_wear_area_m2": null,
+    "physical_scratch_identity_resolved": false,
+    "nanoscale_to_pipeline_contact_transfer_reviewed": false,
+    "primary_method": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8336757/",
+    "primary_method_cached_sha256": "9647a9f01a2b6655912204c9b7f0e769558bb114772d24fd96530f223459b811"
+  },
+  "requested_model_boundaries": 14,
+  "boundary_status_counts": {
+    "needs_data": 14
+  },
+  "owner_native_model_calls": 0,
+  "physical_source_calibration_performed": false,
+  "independent_experimental_validation_performed": false,
+  "pit_equal_area_block_maxima_available": false,
+  "known_flaw_hit_miss_and_blank_trials_available": false,
+  "period_failure_probability_computed": false,
+  "source_rows_transformed_rows_or_detailed_native_receipts_in_public_summary": false,
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_unchanged": true,
+  "script_sha256": "caf22970f27d32e4d72a2851386ee5f2532eb29eb61e7dfff2695191d0de2cac",
+  "reader_sha256": "942d6ca001d8a11f868ae69a781846859255a6b908f27051dc5fc9422c05a141",
+  "limitations": [
+    "Copper CSV loss units and exposure zero are unresolved; row chronology is preserved without physical power-law fitting.",
+    "AFM dimensional specific volume is descriptive; hardness, wear footprint and specimen identities do not qualify native Archard transfer.",
+    "No equal-area pit maxima, independent hit/miss flaw truth or blank trials support Gumbel or POD.",
+    "Repeated sensor hours, passes and averaged figure rows are not independent experimental specimens."
+  ]
+}

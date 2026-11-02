@@ -1,0 +1,84 @@
+{
+  "schema": "pipeline_integrity.pipe_soil_transient_summary.v1",
+  "scope_state_recommendation": "partial",
+  "original_model": "thermal.transient_conduction_1d",
+  "original_model_version": "1.0.0",
+  "original_schema_digest": "86786d7965892ebd9fb380b590e1e68cf3b2aaa4cbb7d678f6623b57c5d4c196",
+  "source_before": {
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "source_after": {
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "case_count": 13,
+  "native_count": 10,
+  "status_counts": {
+    "computed": 9,
+    "needs_data": 2,
+    "out_of_scope": 2
+  },
+  "checks": {
+    "varying_fluid_and_outer_temperature_clock_and_origin": true,
+    "varying_fluid_and_outer_temperature_energy": true,
+    "constant_flux_1_clock_and_origin": true,
+    "constant_flux_1_energy": true,
+    "flux_1_known_integral": true,
+    "flux_1_known_storage": true,
+    "constant_flux_-1_clock_and_origin": true,
+    "constant_flux_-1_energy": true,
+    "flux_-1_known_integral": true,
+    "flux_-1_known_storage": true,
+    "steady_log_multimaterial_clock_and_origin": true,
+    "steady_log_multimaterial_energy": true,
+    "steady_log_profile": true,
+    "steady_log_boundary_heat": true,
+    "steady_native_status_preserved": true,
+    "eigenmode_4_clock_and_origin": true,
+    "eigenmode_4_energy": true,
+    "eigenmode_8_clock_and_origin": true,
+    "eigenmode_8_energy": true,
+    "eigenmode_16_clock_and_origin": true,
+    "eigenmode_16_energy": true,
+    "radial_eigenmode_spatial_refinement": true,
+    "radial_eigenmode_fine_error": true,
+    "eigenmode_time_coarse_clock_and_origin": true,
+    "eigenmode_time_coarse_energy": true,
+    "radial_eigenmode_time_refinement": true,
+    "variable_conductivity_capacity_clock_and_origin": true,
+    "variable_conductivity_capacity_energy": true,
+    "variable_capacity_energy": true,
+    "native_support_overrun_retained": true,
+    "finite_contact_before_owner": true,
+    "missing_initial_before_owner": true,
+    "missing_properties_before_owner": true,
+    "source_unchanged": true
+  },
+  "checks_passed": true,
+  "reference_and_contract_check_count": 34,
+  "rehashed_corruptions_refused": 12,
+  "documentation_python_blocks_executed": 1,
+  "radial_eigenmode_maximum_absolute_errors_K": {
+    "4": 0.14762537123738184,
+    "8": 0.0400159870821426,
+    "16": 0.010547532858709019
+  },
+  "radial_eigenmode_coarse_time_error_K": 0.053686536638394955,
+  "maximum_steady_temperature_change_K": 2.2737367544323206e-12,
+  "maximum_independent_energy_residual_J": 6.074769771657884e-07,
+  "output_heat_meaning": "point boundary W versus native substep-integrated final J",
+  "qualification": "authored_software_references_not_field_calibration",
+  "limitations": [
+    "Concentric cylindrical outer boundary is not a horizontal ground plane.",
+    "Perfect interfaces; no finite contact, moisture flow, multiple pipes or two-way fluid energy feedback.",
+    "Owner zero-net-heat status is preserved; no override of its numerical acceptance."
+  ],
+  "code_sha256": {
+    "src/pipeline_integrity/pipe_soil_transient.py": "048c0ea029c6eb79eff0055c3a0e5f8ea51a7c271c395e101867c6e0e162022f",
+    "examples/pipe_soil_transient.py": "5e72769f919c2cac1f5a028483b5000e967215d81b9c679fe0e72ec558b99975",
+    "tests/test_pipe_soil_transient.py": "3bbb9dbb560270f236a5651269292a6b33c44715a5a5fe23304ba510abe15ec2",
+    "scripts/check_pipe_soil_transient.py": "d7d5986bb551f7ac857066a18d0ebdfcaa7c677536b081ef994b0d2ee1067c10",
+    "docs/PIPE_SOIL_TRANSIENT_KO.md": "163f5ee727c8c2826eab2181cdca34f328b8b0917969cf55eddf110fd9db3ace"
+  }
+}

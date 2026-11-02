@@ -1,0 +1,17 @@
+{
+  "schema": "pipeline_integrity.audio_source_identity_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.audio_data.read_training_audio",
+  "state": "implemented_static_validation_pending",
+  "archive_requires_regular_non_symlink_file": true,
+  "archive_resolved_object_identity_checked_before_and_after_member_read": true,
+  "publisher_checksum_still_required": true,
+  "supplier_signature_claim": false,
+  "atomic_snapshot_claim": false,
+  "authored_regressions": 1,
+  "tests_executed": 0,
+  "nurion_execution": "pending",
+  "pbs_submitted": false,
+  "scope_progress_claimed": false,
+  "guide": "docs/AUDIO_STUDY_KO.md"
+}

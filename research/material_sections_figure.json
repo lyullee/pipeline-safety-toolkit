@@ -1,0 +1,15 @@
+{
+  "schema": "pipeline_integrity.material_sections_figure.v1",
+  "source_sha256": "9200c50c46b6eb98eb506aaefcecdaba5963bb86f46e2b1ded556e03a5477152",
+  "generator_sha256": "7cdba4567c0870f7ff82ce34bd461fef14be0808d15cbc27a3d6d542a4b94c0b",
+  "figure_sha256": "c4f3e79d41cc79c58423803362aa63dea30652d2e175dcc931afa41058e5585b",
+  "authored_input_files_sha256": {
+    "closed.json": "3c060f08b39ab3c2181c31fc6f9ba322073d5100ddec53dd9b9d29f72b64c6d8",
+    "solid_radial_10.json": "2fd5f5a6414d275a1e51f758c39ab22eb5f9b0d7587b9b98e925a3c94e46e82a",
+    "solid_radial_20.json": "e6c16854f5bdc5b441d8dae57e4c553b2824ee653354acd2d3a95c518c158cdc",
+    "plane_free_uniform.json": "1bfad46abc96e16600ac8e1448ab28ef27f8ff35a6f8434a370c4c66463880e3",
+    "plane_clamped_uniform.json": "94c86d0479a24b023dd422a01dad1004b3f93299f8cb418602c8fcc64963084e"
+  },
+  "experimental_observations_plotted": false,
+  "zero_heat_native_status_is_not_overridden": true
+}

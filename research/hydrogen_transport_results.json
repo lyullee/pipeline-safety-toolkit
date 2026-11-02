@@ -1,0 +1,93 @@
+{
+  "schema": "pipeline_integrity.hydrogen_transport_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "transport.semi_infinite_diffusion": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "e5535e817b2b44326fa36b3521f4dde73e520b022cb5bb1c810e11f37e80e79a"
+    },
+    "transport.hydrogen_trap_equilibrium": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "52eb7b5983749197246dc716b3e33a44ffa4ef055b11b4444156e2936a9c6b6f"
+    },
+    "transport.hydrogen_slab_kinetic": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "c4475e47ac5f9bf9f5430b6b47ecfe61dbfb863e666c40779d2d748c14a64de9"
+    }
+  },
+  "native_case_count": 16,
+  "case_status_counts": {
+    "computed": 12,
+    "needs_data": 7,
+    "out_of_scope": 3
+  },
+  "independent_reference_count": 21,
+  "maximum_reference_absolute_error": 1.8602008822199423e-11,
+  "spatial_refinement": [
+    {
+      "cells": 8,
+      "native_mean_mol_m3": 68.79146133069187,
+      "continuum_mean_mol_m3": 69.78819062267267,
+      "absolute_error": 0.9967292919807988,
+      "relative_mass_balance_error": 3.5303987143008756e-16
+    },
+    {
+      "cells": 16,
+      "native_mean_mol_m3": 69.39099398847085,
+      "continuum_mean_mol_m3": 69.78819062267267,
+      "absolute_error": 0.39719663420181917,
+      "relative_mass_balance_error": 1.9999407718702247e-16
+    }
+  ],
+  "spatial_comparison_is_global_convergence_or_field_validation": false,
+  "refusal_count": 4,
+  "refusals": [
+    "zero_exposure",
+    "negative_concentration",
+    "reversed_time_knots",
+    "wrong_source_pin"
+  ],
+  "pinned_job_replay_verified": true,
+  "signed_desorption_and_zero_hydrogen_preserved": true,
+  "independent_frequency_histories_not_overwritten_by_binding_energy": true,
+  "incomplete_trajectory_withheld": true,
+  "current_was_inverted_into_boundary_concentration": false,
+  "public_data_calibration_performed": false,
+  "experimental_field_validation": false,
+  "limitations": [
+    "Concentrations count mol of H atoms; kinetic profiles are cell averages and both surface fluxes are positive inward.",
+    "A local equilibrium differential diffusivity is concentration dependent, not one fitted transient permeation coefficient.",
+    "Two meshes and declared mass/time tolerances are numerical evidence only; they do not qualify global accuracy, physical surfaces, trapping, embrittlement or failure probability."
+  ],
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_source_unchanged": true,
+  "external_support_files_before": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "external_support_files_after": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "implementation_sha256": "df652779c0adb1df6c6ec1cbbfee791e8d278a4afdbe8aeff8e28e3171bafaa6",
+  "source_guard_sha256": "37e1508b2fdcdeb946f999c3989687c5b9499de40f7fb03f7557be92f36198c1",
+  "script_sha256": "af7be4e2df1a23d904a6e41a4d36ff4a3bc1bf7191b2c6d349f455aeb9194bc9",
+  "example_sha256": "5e477c7fdf12b4667cb651f61aea59ee3cbfcd93d6f36c41efeb8793783b39f1"
+}

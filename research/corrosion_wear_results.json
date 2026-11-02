@@ -1,0 +1,77 @@
+{
+  "schema": "pipeline_integrity.corrosion_wear_verification.v1",
+  "status": "passed",
+  "native_models": {
+    "corrosion.power_law": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "f553506e08c9f8b31aa4b6023a6dc84014a4a35432e75c326a4deb18d61039b7"
+    },
+    "degradation.archard_wear": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "ae9692d587e76f5e3ebca2db8b3915889b00cdb549bc7b6947af9d9db505751d"
+    },
+    "corrosion.gumbel_area_maximum": {
+      "model_version": "1.0.0",
+      "input_schema_digest": "52a6602df875873765b14bcd204df8a80b6945c9e72fbc364a0e35828741290b"
+    }
+  },
+  "native_case_count": 12,
+  "case_status_counts": {
+    "computed": 8,
+    "needs_data": 9,
+    "out_of_scope": 4
+  },
+  "independent_reference_count": 11,
+  "maximum_reference_absolute_error": 2.498001805406602e-16,
+  "refusal_count": 5,
+  "refusals": [
+    "zero_reference_time",
+    "zero_distributed_area",
+    "duplicate_blocks",
+    "negative_block_depth",
+    "wrong_source_pin"
+  ],
+  "pinned_job_replay_verified": true,
+  "zero_and_unknown_are_distinct": true,
+  "calibration_extrapolation_withheld": true,
+  "spatial_exceedance_is_period_failure_probability": false,
+  "experimental_field_validation": false,
+  "public_data_calibration_performed": false,
+  "parameter_interval_is_prediction_interval": false,
+  "limitations": [
+    "Independent scalar identities do not independently validate Gumbel fitting, resampling or the physical tail.",
+    "Physical exposure origin and contact support require separate evidence; authored inputs are software references.",
+    "Equal-area independence, uncensored maxima and unchanged population remain caller reviews, not field qualification."
+  ],
+  "external_material_source_before": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_material_source_after": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "0d9471bbe4e38b86b34610221e7adacd114e4e31d442fcdb9bb5afc7fec3efda",
+    "source_tree_files": 76
+  },
+  "external_source_unchanged": true,
+  "external_support_files_before": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "external_support_files_after": {
+    "LICENSE": "709b311f7bc0a5e69a8ac7c88b5dd272ae7e879fcc2db98a5c23afc3d22f5676",
+    "THIRD_PARTY_NOTICES.md": "77b64946322df093e44189a118ee0c81767af656f9d69a64b93d04bda4a6632c",
+    "src/matintegrity/catalog_data/capabilities.json": "cd31b9e4a22482d2bcbdd0b01e228f9db2d2fff119c93bcba6dcd2b3ade44e2f",
+    "src/matintegrity/catalog_data/datasets.json": "b1fc66e773c5e8730dfeb38ad5559af22150747eebd9ae922a9d2f3588a7ef0a",
+    "src/matintegrity/catalog_data/sources.json": "e7108def84253bcffc1f5f3d2321b25a5e2f8965f2968382daad6246f0c613eb"
+  },
+  "implementation_sha256": "0bb92a40af92e853ad4857b9eef2e4803111060bb114f962edd02fc248127c46",
+  "source_guard_sha256": "37e1508b2fdcdeb946f999c3989687c5b9499de40f7fb03f7557be92f36198c1",
+  "script_sha256": "9c5e00d171c38f1ffac0d3aab56a82b87a2168b61e28581d14413abbb8b50c73",
+  "example_sha256": "d1426eb0db30f6b0055d288f7d002e042dba1908d8067120a20e958821ea9ed3"
+}

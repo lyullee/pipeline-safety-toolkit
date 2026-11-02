@@ -1,0 +1,23 @@
+{
+  "schema": "pipeline_integrity.clock_correction_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.clock_correction",
+  "entrypoints": [
+    "ClockCorrectionModel",
+    "ClockCorrectionRecord",
+    "apply_clock_correction_candidate",
+    "verify_clock_correction_candidate"
+  ],
+  "authored_test_functions": 5,
+  "tests_executed": 0,
+  "static_compile_checked": true,
+  "nurion_job_submitted": false,
+  "field_qualification": false,
+  "limitations": [
+    "Caller review is a declaration, not independent approval evidence validation.",
+    "No clock model fit, residual distribution, or uncertainty propagation is performed.",
+    "Candidate output does not prove cross-sensor synchronization or causal event order.",
+    "Downstream consumers must explicitly accept the candidate reference clock."
+  ],
+  "guide": "docs/CLOCK_CORRECTION_KO.md"
+}

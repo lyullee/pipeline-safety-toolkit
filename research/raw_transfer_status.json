@@ -1,0 +1,16 @@
+{
+  "schema": "pipeline_integrity.raw_transfer_status.v1",
+  "kind": "raw_byte_integrity_not_numerical_validation",
+  "checker_source_sha256": "b67c70f7d19d8860d3ac846811b8a139994976f2505caf0249a2d6aa6bec6432",
+  "dataset_id": "pipe_friction_roughness",
+  "selected_files": 4,
+  "selected_bytes": 12340,
+  "plan_digest": "86c205a417a02e07eed0a89426282338aed94c1a84ec4247d5efb925bad7eedc",
+  "verified": true,
+  "source_mutation_scope": "path/descriptor identity, size and timestamps checked before/after bounded hashing",
+  "initial_attempt": "withheld due to Windows path stat vs descriptor fstat ctime semantics; receipt preserved privately",
+  "numerical_tests_executed": 0,
+  "new_regression_tests_executed": 0,
+  "redistribution_clearance": false,
+  "fixture_layout_or_full_data_readiness_proven": false
+}

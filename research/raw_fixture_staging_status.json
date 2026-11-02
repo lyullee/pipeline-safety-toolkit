@@ -1,0 +1,64 @@
+{
+  "schema": "pipeline_integrity.raw_fixture_staging_status.v1",
+  "kind": "source_and_byte_staging_review_not_pytest_or_numerical_validation",
+  "baseline_bundle_sha256": "195b371d2ebce428d84b4143f8fa4a3cff8a35ba56b79e189388c556d503d6ce",
+  "source_changes": [
+    {
+      "path": "scripts/hpc_tests.py",
+      "baseline_sha256": "ff02d1143cd48007496a226c3fc9b56db8607908167be3b4a4d99f4f2ac16038",
+      "current_sha256": "bd7350b398c06a44be2cb6fec6acd287bef9d5e550a7026c3ef265870db29b0e"
+    },
+    {
+      "path": "tests/test_hpc_tests.py",
+      "baseline_sha256": "5cbf8314857a20c75ff9ab80fcd17f78fe3294d72f0e3d39ae79a52f3b42ae7d",
+      "current_sha256": "52f41cb0cdfb5d04f3fd2e204770d6c34dbfc024e49b06a69e4aa94088c3afaa"
+    },
+    {
+      "path": "jobs/nurion_pytest.pbs",
+      "baseline_sha256": "215409f2c1df967e2b4ddac1508e6686a8799e69ab9996f1f4b23605c291daa2",
+      "current_sha256": "da20e3bfab6a486720c79cf7970d8017e8c9198dbb14d63642d40641c511038c"
+    },
+    {
+      "path": "jobs/nurion_data.example.json",
+      "baseline_sha256": null,
+      "current_sha256": "8ff43e6aea90bea9fa6ab80ca92babdc72b0a0208254949799e6ffab4381cd9c"
+    }
+  ],
+  "added_unexecuted_test_functions": [
+    "test_data_fixture_is_pinned_and_staged_only_from_verified_plan",
+    "test_data_fixture_rejects_unknown_consumer_and_oversized_stage",
+    "test_manifest_binds_data_consumer_without_storing_private_root"
+  ],
+  "local_static_checks": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed; 430 files already formatted",
+    "compileall": "passed",
+    "tests_executed": 0
+  },
+  "actual_bounded_stage_review": {
+    "dataset_id": "pipe_friction_roughness",
+    "consumer_test_file": "tests/test_friction_study.py",
+    "assigned_rank": 3,
+    "files": 4,
+    "bytes": 12340,
+    "plan_digest": "a56da687eeda4e6478eb7b59b016cf57a3dbda1f2ba7f1836333a149519cc48a",
+    "staged_and_verified": true,
+    "post_stage_matches": true,
+    "pytest_executed": false
+  },
+  "limitations": {
+    "maximum_rank_stage_bytes": 536870912,
+    "large_shared_data_staging_implemented": false,
+    "pressure_archive_staged": false,
+    "mpi_or_pbs_executed": false,
+    "redistribution_clearance_implied": false
+  },
+  "manifest": "artifacts/hpc/manifest-20261028-batch14.json",
+  "source_bundle": "artifacts/hpc/nurion-source-20261028-batch14.tar.gz",
+  "source_bundle_contains_raw_or_private_data_map": false,
+  "confirmed_scope": {
+    "completed": 135,
+    "total": 201,
+    "percent": 67.2
+  }
+}

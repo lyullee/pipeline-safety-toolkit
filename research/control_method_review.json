@@ -1,0 +1,36 @@
+{
+  "schema": "pipeline_integrity.control_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "adopted": {
+    "owner": "lh2dt_models",
+    "license": "MIT",
+    "source": "https://github.com/lyullee/lh2dt_models",
+    "engines": [
+      "PIDController",
+      "FirstOrderTransmitter",
+      "HomogeneousTank",
+      "StrokeLimitedCommandedValve",
+      "Valve"
+    ],
+    "implementation_vendored": false
+  },
+  "alternatives_reviewed": [
+    {
+      "source": "https://python-control.readthedocs.io/en/latest/examples/cruise-control.html",
+      "scope": "nonlinear I/O modelling and comparison of controller structures",
+      "decision": "reference only; no duplicate runtime or copied example; require a qualified plant model and operating criteria before comparing designs"
+    },
+    {
+      "source": "https://control.ros.org/jazzy/doc/control_toolbox/doc/index.html",
+      "scope": "conditional integration, back-calculation and integral retention during reset",
+      "decision": "tracking and mode transfer are useful extension candidates for the existing owner; no source or defaults copied"
+    }
+  ],
+  "field_performance_validation": false,
+  "source_prose_or_standard_coefficients_copied": false,
+  "source_data": "Existing coupled_tank v1.0.0 CC-BY-4.0 observations; laboratory origin and unresolved unit/datum retained",
+  "extension_requests": [
+    "PI-X01",
+    "PI-X06"
+  ]
+}

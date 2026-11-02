@@ -1,0 +1,17 @@
+{
+  "context": {"asset_id":"reference_liquid_pipe","scenario_id":"withdrawal_reduction","clock_id":"elapsed","origin":"synthetic"},
+  "specification": {
+    "nodes": [
+      {"id":"reservoir","elevation_m":0.0,"initial_head_m":100.0,"boundary":"head",
+       "history":{"time_s":[0.0],"values":[100.0]}},
+      {"id":"outlet","elevation_m":0.0,"initial_head_m":100.0,"boundary":"withdrawal",
+       "history":{"time_s":[0.0,0.5,0.6],"values":[0.01,0.01,0.0]}}
+    ],
+    "pipes": [
+      {"id":"reference_pipe","start_node":"reservoir","end_node":"outlet","length_m":1000.0,
+       "diameter_m":0.2,"wave_speed_m_s":1000.0,"darcy_friction_factor":0.0,"initial_volume_flow_m3_s":0.01}
+    ],
+    "duration_s":6.0,"requested_timestep_s":0.025,"density_kg_m3":998.0,
+    "ambient_pressure_pa_abs":101325.0,"vapour_pressure_pa_abs":2339.0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "pipeline_integrity.common_cause_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.common_cause",
+  "entrypoints": [
+    "CommonCauseBinding",
+    "fault_tree_request_from_common_cause_counts",
+    "verify_common_cause_binding_receipt"
+  ],
+  "owner_api": "pipeline_integrity.risk_exchange.fault_tree_request_from_verified_joint_counts",
+  "test_module": "tests/test_common_cause.py",
+  "authored_test_functions": 7,
+  "tests_executed": 0,
+  "numerical_verification": "deferred_to_nurion",
+  "pbs_submitted": false,
+  "source_point_values_embedded": false,
+  "common_cause_model_fitted": false,
+  "marginal_only_dependence_inference": false,
+  "sampling_uncertainty_quantified": false,
+  "field_validation_claim": false,
+  "limitations": [
+    "FTA event leaves must explicitly consume the declared cause and all affected events.",
+    "Caller must classify shared-cause occurrence and affected event set with evidence.",
+    "Joint count completeness and grouping unit are caller-reviewed; this adapter does not infer causality or independence.",
+    "Owner FTA must validate request and evidence before any result is accepted.",
+    "Receipt replay revalidates the embedded count table and checks joint states, event evidence and dependency groups; it remains a lineage check, not proof that source observations are true."
+  ],
+  "guide": "docs/COMMON_CAUSE_KO.md"
+}

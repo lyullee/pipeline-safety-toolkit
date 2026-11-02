@@ -1,0 +1,915 @@
+{
+  "schema": "pipeline_integrity.tandem_welding_verification.v1",
+  "dataset_id": "tandem_gmaw",
+  "source": "https://zenodo.org/records/21824586",
+  "citation": "Prashant Kumar Chaurasia; Cagtay Fabry; Andreas Pittner; Michael Rethmeier; https://doi.org/10.5281/zenodo.21824586",
+  "license_id": "CC-BY-4.0",
+  "version": "v2.0.0; DOI 10.5281/zenodo.21824586",
+  "selected_workpieces": 1,
+  "selected_layers": 2,
+  "source_records": {
+    "L1_process": {
+      "dataset_id": "tandem_gmaw",
+      "source_version": "v2.0.0; DOI 10.5281/zenodo.21824586",
+      "citation": "Prashant Kumar Chaurasia; Cagtay Fabry; Andreas Pittner; Michael Rethmeier; https://doi.org/10.5281/zenodo.21824586",
+      "license_id": "CC-BY-4.0",
+      "archive_filename": "WID631_L1.zip",
+      "archive_bytes": 123909469,
+      "archive_sha256": "233d6a29fb90afb70983a1bdf77186eb636b14bcf50bd256b7f3b8b5141e0b7c",
+      "supplier_checksum": "md5:7a7496025f0b9b3ebefaaf4ebd8a6a13",
+      "supplier_checksum_verified": true,
+      "member": "WID631_L1_T1_process.nc",
+      "member_bytes": 6050605,
+      "member_crc32": "510aee31",
+      "member_sha256": "64a07ba419f83560629b35ac00c5bb07bd8c54117b6a7c243572f2f1f7bcce59",
+      "raw_in_code_release": false,
+      "schema": "pipeline_integrity.tandem_gmaw_recording.v1",
+      "record_id": "WID631_L1_T1",
+      "kind": "process",
+      "time_units_raw": "nanoseconds since 2025-08-20T08:28:42.106000",
+      "time_origin_utc": "2025-08-20T08:28:42.106+00:00",
+      "calendar": "proleptic_gregorian",
+      "time_ticks_sha256": "d5c771db5fca8b1f8ebefd6ded2155ef16e8c0c25f99f74417816b29adc8e1b8",
+      "channel_sha256": {
+        "current_leading": "dc004d1cd9e6097cc63c3abcbdfb7db1c9c697e89d30937e4d8557ceb3d278d0",
+        "current_trailing": "dddfc2cdc16429bdb0d572d2ae1be3886a4f027a4c8e7ebb63af4ba6212a0cfa",
+        "voltage_leading": "95c66e8985e1236809013b09c9ff8e62d84edb23e0070458a08ff4e306fbfc16",
+        "voltage_trailing": "a63530c2a59e998701a004864ab44d8172b04af56826c1e45d392f72c89df9b0",
+        "video_frame": "2a8c798f9c06393abec0518dd07f8c3c553cbd759d5ca30b0b8a9610e32b428f",
+        "video_recording": "36249a308337821fa259890f67a0e07974d845956ad0502be06231a6accfbe3d"
+      },
+      "channel_units": {
+        "current_leading": "A",
+        "current_trailing": "A",
+        "voltage_leading": "V",
+        "voltage_trailing": "V",
+        "video_frame": "",
+        "video_recording": ""
+      },
+      "source_samples": 408242,
+      "source_full_span_s": [
+        0.0,
+        40.828
+      ],
+      "clock_quality": {
+        "strictly_increasing": true,
+        "minimum_step_ticks": 99999,
+        "maximum_step_ticks": 4000000,
+        "minimum_step_s": 9.9999e-05,
+        "maximum_step_s": 0.004,
+        "distinct_step_counts": {
+          "99999": 6370,
+          "100000": 395500,
+          "100001": 6370,
+          "4000000": 1
+        },
+        "tick_unit": "nanoseconds",
+        "first_tick": 0,
+        "last_tick": 40828000000,
+        "samples_dropped": 0,
+        "sorted_or_repaired": false
+      },
+      "quality": {
+        "current_leading": {
+          "shape": [
+            408242
+          ],
+          "elements": 408242,
+          "finite": 408241,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 408241,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": -1.739501953125,
+          "maximum_finite": 521.514892578125
+        },
+        "current_trailing": {
+          "shape": [
+            408242
+          ],
+          "elements": 408242,
+          "finite": 408241,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 408241,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": 0.396728515625,
+          "maximum_finite": 2.5634765625
+        },
+        "voltage_leading": {
+          "shape": [
+            408242
+          ],
+          "elements": 408242,
+          "finite": 408241,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 408241,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": -0.054931640625,
+          "maximum_finite": 63.19580078125
+        },
+        "voltage_trailing": {
+          "shape": [
+            408242
+          ],
+          "elements": 408242,
+          "finite": 408241,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 408241,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": -0.2471923828125,
+          "maximum_finite": 8.67919921875
+        },
+        "video_frame": {
+          "shape": [
+            408242
+          ],
+          "elements": 408242,
+          "finite": 408241,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 408241,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": 0.0,
+          "maximum_finite": 1.0
+        },
+        "video_recording": {
+          "shape": [
+            408242
+          ],
+          "elements": 408242,
+          "finite": 408241,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 408241,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": 0.0,
+          "maximum_finite": 1.0
+        }
+      },
+      "origin": "laboratory",
+      "temperature_validity_rule": "finite and Celsius >= -273.15; original values retained",
+      "empty_units_are_unresolved": true,
+      "coordinate_path_inferred": false,
+      "electrical_product_quality": {
+        "leading": {
+          "finite_pairs": 408241,
+          "negative_products": 26464,
+          "polarity_rectified": false
+        },
+        "trailing": {
+          "finite_pairs": 408241,
+          "negative_products": 35737,
+          "polarity_rectified": false
+        }
+      }
+    },
+    "L1_robot": {
+      "dataset_id": "tandem_gmaw",
+      "source_version": "v2.0.0; DOI 10.5281/zenodo.21824586",
+      "citation": "Prashant Kumar Chaurasia; Cagtay Fabry; Andreas Pittner; Michael Rethmeier; https://doi.org/10.5281/zenodo.21824586",
+      "license_id": "CC-BY-4.0",
+      "archive_filename": "WID631_L1.zip",
+      "archive_bytes": 123909469,
+      "archive_sha256": "233d6a29fb90afb70983a1bdf77186eb636b14bcf50bd256b7f3b8b5141e0b7c",
+      "supplier_checksum": "md5:7a7496025f0b9b3ebefaaf4ebd8a6a13",
+      "supplier_checksum_verified": true,
+      "member": "WID631_L1_T1_robot.nc",
+      "member_bytes": 4083667,
+      "member_crc32": "036069c6",
+      "member_sha256": "ffc07bc427969bb93e3d4704b01fbe4ec420a9ff7cffe769e9905b74f5cc481b",
+      "raw_in_code_release": false,
+      "schema": "pipeline_integrity.tandem_gmaw_recording.v1",
+      "record_id": "WID631_L1_T1",
+      "kind": "robot",
+      "time_units_raw": "milliseconds since 2025-08-20 08:27:48.924000",
+      "time_origin_utc": "2025-08-20T08:27:48.924+00:00",
+      "calendar": "proleptic_gregorian",
+      "time_ticks_sha256": "115e83b8ef57e940579853e1175cda06449535831fc6d4c162fdb08134bd180f",
+      "channel_sha256": {
+        "arc_on": "28c0d7e301349544b76ee2782196d113dc39652a59989177e1c565aee94b8a1c",
+        "tcp_tool_number": "e4766a49f24709575f44e162d152f76ce235f5e44e78f84b15a2a5cd2d961b68",
+        "gas_flow_leading": "f088f60b89c16c4711009e8a6bd89a5bdfd4ad65e9dad81280bb16393657768b",
+        "gas_flow_trailing": "ea1beb39b5d65efd5a20d4de9728c0a0de4a40044826948ceeef0c82b9ae08a9",
+        "power_leading": "ce62dbb9978d444fa385385015b8f0e252e7104e92d07a9174d5a147ce50d9a2",
+        "power_trailing": "811efb838da04209bd3959c74db9bc99321f230549697efdcde1c21a2007358b",
+        "power_robot": "7afe4d667664c6a0890edf84bd095f9ad65f52933a2ad7410289a5c2360e8794",
+        "thermo_1": "e0e21af03df671a36b05fe9a6e87aeaf4a2e91dbbf4b955596154891a8eb1f82",
+        "thermo_2": "c3fb7c3d881fdd02576a61f050f58b14c0a538fc909ae33a748c566cb9767e5c",
+        "tcp_coords": "0f0ffc118b0fa85a4abfe61cf3a3a58d50d370a26b99ac3e6f255993ba840526",
+        "tcp_angles": "2e82f51aff785ed1e7e5d9d158e7dcf75cb3c13a0a54f6c9c47b80383174079c"
+      },
+      "channel_units": {
+        "arc_on": "",
+        "tcp_tool_number": "",
+        "gas_flow_leading": "liter/min",
+        "gas_flow_trailing": "liter/min",
+        "power_leading": "",
+        "power_trailing": "",
+        "power_robot": "",
+        "thermo_1": "\u00b0C",
+        "thermo_2": "\u00b0C",
+        "tcp_coords": "mm",
+        "tcp_angles": "deg"
+      },
+      "source_samples": 146527,
+      "source_full_span_s": [
+        0.0,
+        146.526
+      ],
+      "clock_quality": {
+        "strictly_increasing": true,
+        "minimum_step_ticks": 1,
+        "maximum_step_ticks": 1,
+        "minimum_step_s": 0.001,
+        "maximum_step_s": 0.001,
+        "distinct_step_counts": {
+          "1": 146526
+        },
+        "tick_unit": "milliseconds",
+        "first_tick": 0,
+        "last_tick": 146526,
+        "samples_dropped": 0,
+        "sorted_or_repaired": false
+      },
+      "quality": {
+        "arc_on": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 0.0,
+          "maximum_finite": 1.0
+        },
+        "tcp_tool_number": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 18316,
+          "nan": 128211,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 18316,
+          "invalid_finite": 0,
+          "rows_with_invalid": 128211,
+          "minimum_finite": 4.0,
+          "maximum_finite": 5.0
+        },
+        "gas_flow_leading": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 0.0,
+          "maximum_finite": 35.81
+        },
+        "gas_flow_trailing": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 0.0,
+          "maximum_finite": 33.83
+        },
+        "power_leading": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 27.2218285,
+          "maximum_finite": 11892.7637
+        },
+        "power_trailing": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 22.3879967,
+          "maximum_finite": 100.967636
+        },
+        "power_robot": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 338.177917,
+          "maximum_finite": 491.271179
+        },
+        "thermo_1": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146527,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 101.442,
+          "maximum_finite": 177.525
+        },
+        "thermo_2": {
+          "shape": [
+            146527
+          ],
+          "elements": 146527,
+          "finite": 146527,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 146467,
+          "invalid_finite": 60,
+          "rows_with_invalid": 60,
+          "minimum_finite": -448.394,
+          "maximum_finite": 1529.871
+        },
+        "tcp_coords": {
+          "shape": [
+            146527,
+            3
+          ],
+          "elements": 439581,
+          "finite": 54948,
+          "nan": 384633,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 54948,
+          "invalid_finite": 0,
+          "rows_with_invalid": 128211,
+          "minimum_finite": -20.081024067271187,
+          "maximum_finite": 319.92789823217834
+        },
+        "tcp_angles": {
+          "shape": [
+            146527,
+            3
+          ],
+          "elements": 439581,
+          "finite": 54948,
+          "nan": 384633,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 54948,
+          "invalid_finite": 0,
+          "rows_with_invalid": 128211,
+          "minimum_finite": -4.008401676729488,
+          "maximum_finite": 0.08795524762284171
+        }
+      },
+      "origin": "laboratory",
+      "temperature_validity_rule": "finite and Celsius >= -273.15; original values retained",
+      "empty_units_are_unresolved": true,
+      "coordinate_path_inferred": false
+    },
+    "L2_process": {
+      "dataset_id": "tandem_gmaw",
+      "source_version": "v2.0.0; DOI 10.5281/zenodo.21824586",
+      "citation": "Prashant Kumar Chaurasia; Cagtay Fabry; Andreas Pittner; Michael Rethmeier; https://doi.org/10.5281/zenodo.21824586",
+      "license_id": "CC-BY-4.0",
+      "archive_filename": "WID631_L2.zip",
+      "archive_bytes": 107795436,
+      "archive_sha256": "6bb1a24503f65eabcbd11304f125242df989bb754335b3f07fa713d2a6f96be6",
+      "supplier_checksum": "md5:7c761e6b8da5ccbd2ee4c277dcd573eb",
+      "supplier_checksum_verified": true,
+      "member": "WID631_L2_T1_process.nc",
+      "member_bytes": 4695263,
+      "member_crc32": "815c8325",
+      "member_sha256": "a5b1bbbff9a41863b1ab30d45431e98c5c60691597bd5b2b1aee79d4e0ded0ec",
+      "raw_in_code_release": false,
+      "schema": "pipeline_integrity.tandem_gmaw_recording.v1",
+      "record_id": "WID631_L2_T1",
+      "kind": "process",
+      "time_units_raw": "nanoseconds since 2025-08-20T08:40:33.980000",
+      "time_origin_utc": "2025-08-20T08:40:33.98+00:00",
+      "calendar": "proleptic_gregorian",
+      "time_ticks_sha256": "1a9843de60f916b901e7d69d7982fbe1102e14e102409f5802cdc5ff9db8e478",
+      "channel_sha256": {
+        "current_leading": "1143e3f6a50f01cf2c6dd0e9bf2ab6e52f675945582e1464b4ecbb383e283857",
+        "current_trailing": "d3bb2587f4172486fbc2a3d47fd5a5dbcb8b662e535147d8a92d2b08c1a3c0f0",
+        "voltage_leading": "eb0b88d272a82ff32531368a41c7000e6aae4ebb3abd9ba04a715aab2f348e46",
+        "voltage_trailing": "68d74fa64fcf751711a71917f398eec686788ec42d0150f83093304c33b6bcf6",
+        "video_frame": "c823ab2af9b613bda4fb4e8b7382e2c463aab7894fc17638303f37e5cbfa8f73",
+        "video_recording": "da8f3b7099f75e9fd4b01610e1b952848249a73abce280e3fb06bd5043219cc3"
+      },
+      "channel_units": {
+        "current_leading": "A",
+        "current_trailing": "A",
+        "voltage_leading": "V",
+        "voltage_trailing": "V",
+        "video_frame": "",
+        "video_recording": ""
+      },
+      "source_samples": 288572,
+      "source_full_span_s": [
+        0.0,
+        28.858
+      ],
+      "clock_quality": {
+        "strictly_increasing": true,
+        "minimum_step_ticks": 99999,
+        "maximum_step_ticks": 1000000,
+        "minimum_step_s": 9.9999e-05,
+        "maximum_step_s": 0.001,
+        "distinct_step_counts": {
+          "99999": 3186,
+          "100000": 282198,
+          "100001": 3186,
+          "1000000": 1
+        },
+        "tick_unit": "nanoseconds",
+        "first_tick": 0,
+        "last_tick": 28858000000,
+        "samples_dropped": 0,
+        "sorted_or_repaired": false
+      },
+      "quality": {
+        "current_leading": {
+          "shape": [
+            288572
+          ],
+          "elements": 288572,
+          "finite": 288571,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 288571,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": -1.800537109375,
+          "maximum_finite": 549.25537109375
+        },
+        "current_trailing": {
+          "shape": [
+            288572
+          ],
+          "elements": 288572,
+          "finite": 288571,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 288571,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": 0.457763671875,
+          "maximum_finite": 620.819091796875
+        },
+        "voltage_leading": {
+          "shape": [
+            288572
+          ],
+          "elements": 288572,
+          "finite": 288571,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 288571,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": -0.067138671875,
+          "maximum_finite": 74.560546875
+        },
+        "voltage_trailing": {
+          "shape": [
+            288572
+          ],
+          "elements": 288572,
+          "finite": 288571,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 288571,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": -0.6134033203125,
+          "maximum_finite": 72.7142333984375
+        },
+        "video_frame": {
+          "shape": [
+            288572
+          ],
+          "elements": 288572,
+          "finite": 288571,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 288571,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": 0.0,
+          "maximum_finite": 1.0
+        },
+        "video_recording": {
+          "shape": [
+            288572
+          ],
+          "elements": 288572,
+          "finite": 288571,
+          "nan": 1,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 288571,
+          "invalid_finite": 0,
+          "rows_with_invalid": 1,
+          "minimum_finite": 0.0,
+          "maximum_finite": 1.0
+        }
+      },
+      "origin": "laboratory",
+      "temperature_validity_rule": "finite and Celsius >= -273.15; original values retained",
+      "empty_units_are_unresolved": true,
+      "coordinate_path_inferred": false,
+      "electrical_product_quality": {
+        "leading": {
+          "finite_pairs": 288571,
+          "negative_products": 26399,
+          "polarity_rectified": false
+        },
+        "trailing": {
+          "finite_pairs": 288571,
+          "negative_products": 18918,
+          "polarity_rectified": false
+        }
+      }
+    },
+    "L2_robot": {
+      "dataset_id": "tandem_gmaw",
+      "source_version": "v2.0.0; DOI 10.5281/zenodo.21824586",
+      "citation": "Prashant Kumar Chaurasia; Cagtay Fabry; Andreas Pittner; Michael Rethmeier; https://doi.org/10.5281/zenodo.21824586",
+      "license_id": "CC-BY-4.0",
+      "archive_filename": "WID631_L2.zip",
+      "archive_bytes": 107795436,
+      "archive_sha256": "6bb1a24503f65eabcbd11304f125242df989bb754335b3f07fa713d2a6f96be6",
+      "supplier_checksum": "md5:7c761e6b8da5ccbd2ee4c277dcd573eb",
+      "supplier_checksum_verified": true,
+      "member": "WID631_L2_T1_robot.nc",
+      "member_bytes": 3830794,
+      "member_crc32": "80bc2895",
+      "member_sha256": "4c7f53ca85f75ee093be578a8fbf0fb194d489f47ef153ea87759453482eae62",
+      "raw_in_code_release": false,
+      "schema": "pipeline_integrity.tandem_gmaw_recording.v1",
+      "record_id": "WID631_L2_T1",
+      "kind": "robot",
+      "time_units_raw": "milliseconds since 2025-08-20 08:39:41.297000",
+      "time_origin_utc": "2025-08-20T08:39:41.297+00:00",
+      "calendar": "proleptic_gregorian",
+      "time_ticks_sha256": "abe76d1903cf2e296061b50ca2fcf0ff62cdb48a8d6344e72c1ea9d28e947b12",
+      "channel_sha256": {
+        "arc_on": "7bf20d95504deff71879c20d3bbeba67efb8a18496b00bfc623a889f211e91f1",
+        "tcp_tool_number": "7c64730674511acc9025796dd1126b37acc2f7c003ca62539aff615076035ad3",
+        "gas_flow_leading": "d0d2663b20c8ab04e5c4419f14e09122c501d60a03c66f29ea54dcf849307244",
+        "gas_flow_trailing": "498a45fba01422c3de5c4a79aa5e38fdde5b37eec08d1af5f7dc7a769c36159d",
+        "power_leading": "6a6324a9e177a0da444ada2fb951d455feec86aa21f3715b6034139469b316fc",
+        "power_trailing": "598f8b8a2d3c187d3af580b85b0a1d651e1572ef52bb478e7cc562ed56237e28",
+        "power_robot": "f83114391ece31d54e5e0b07f93df702cb6f487b3f2b367d91fd137fd3129525",
+        "thermo_1": "a9709640889ad0b1d09f1a94afeb50a819de4ac6fa9250019a0acedd062be5b4",
+        "thermo_2": "6099c79c4385e7dc33f3686fb1dccd1297d1e96d7c6e663840e423d25eb04fa5",
+        "tcp_coords": "e3fb44ec43091cde0d4f074f9eb0ea9a6388d1081327292976735c98f84a3747",
+        "tcp_angles": "4076e0ba309ee56a0da0caf96d3db2c1071ac14d9dd1fbe10883a26a1f818137"
+      },
+      "channel_units": {
+        "arc_on": "",
+        "tcp_tool_number": "",
+        "gas_flow_leading": "liter/min",
+        "gas_flow_trailing": "liter/min",
+        "power_leading": "",
+        "power_trailing": "",
+        "power_robot": "",
+        "thermo_1": "\u00b0C",
+        "thermo_2": "\u00b0C",
+        "tcp_coords": "mm",
+        "tcp_angles": "deg"
+      },
+      "source_samples": 134063,
+      "source_full_span_s": [
+        0.0,
+        134.062
+      ],
+      "clock_quality": {
+        "strictly_increasing": true,
+        "minimum_step_ticks": 1,
+        "maximum_step_ticks": 1,
+        "minimum_step_s": 0.001,
+        "maximum_step_s": 0.001,
+        "distinct_step_counts": {
+          "1": 134062
+        },
+        "tick_unit": "milliseconds",
+        "first_tick": 0,
+        "last_tick": 134062,
+        "samples_dropped": 0,
+        "sorted_or_repaired": false
+      },
+      "quality": {
+        "arc_on": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 0.0,
+          "maximum_finite": 1.0
+        },
+        "tcp_tool_number": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 16758,
+          "nan": 117305,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 16758,
+          "invalid_finite": 0,
+          "rows_with_invalid": 117305,
+          "minimum_finite": 4.0,
+          "maximum_finite": 5.0
+        },
+        "gas_flow_leading": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 0.0,
+          "maximum_finite": 35.22
+        },
+        "gas_flow_trailing": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 0.0,
+          "maximum_finite": 33.2
+        },
+        "power_leading": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 31.8214188,
+          "maximum_finite": 12943.1689
+        },
+        "power_trailing": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 22.34557,
+          "maximum_finite": 12953.1064
+        },
+        "power_robot": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 336.708862,
+          "maximum_finite": 490.443542
+        },
+        "thermo_1": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 134063,
+          "invalid_finite": 0,
+          "rows_with_invalid": 0,
+          "minimum_finite": 94.712,
+          "maximum_finite": 208.071
+        },
+        "thermo_2": {
+          "shape": [
+            134063
+          ],
+          "elements": 134063,
+          "finite": 134063,
+          "nan": 0,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 133974,
+          "invalid_finite": 89,
+          "rows_with_invalid": 89,
+          "minimum_finite": -517.028,
+          "maximum_finite": 1594.413
+        },
+        "tcp_coords": {
+          "shape": [
+            134063,
+            3
+          ],
+          "elements": 402189,
+          "finite": 50274,
+          "nan": 351915,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 50274,
+          "invalid_finite": 0,
+          "rows_with_invalid": 117305,
+          "minimum_finite": -18.96363025163612,
+          "maximum_finite": 319.9968056255476
+        },
+        "tcp_angles": {
+          "shape": [
+            134063,
+            3
+          ],
+          "elements": 402189,
+          "finite": 50274,
+          "nan": 351915,
+          "positive_infinity": 0,
+          "negative_infinity": 0,
+          "valid": 50274,
+          "invalid_finite": 0,
+          "rows_with_invalid": 117305,
+          "minimum_finite": -4.01816251566505,
+          "maximum_finite": 0.08550455379194992
+        }
+      },
+      "origin": "laboratory",
+      "temperature_validity_rule": "finite and Celsius >= -273.15; original values retained",
+      "empty_units_are_unresolved": true,
+      "coordinate_path_inferred": false
+    }
+  },
+  "experiment_metadata_sha256": "0b2d024091b815b6c4196eacebd7af4e7018f8c568f2d60e5465e5351d95d5f6",
+  "nominal_grade_not_expanded_to_chemistry": true,
+  "inactive_root_trailing_channel_not_a_second_arc": true,
+  "explicit_window_diagnostics": [
+    {
+      "layer": 1,
+      "side": "leading",
+      "requested_source_window_s": [
+        5.0,
+        5.1
+      ],
+      "selected_samples": 1000,
+      "electrical_status": "computed",
+      "heat_input_status": "needs_data",
+      "native_heat_input_inferred": false,
+      "selection_digest": "6f55c34ac436e311eb5097561a9d84117fcc740ef1ab99640413af9d70bbc09f",
+      "result_digest": "8b6eaea59d96e905abe31f65bea6691cb08fd873c16262535348c8cc61cd1d38",
+      "comparison_absolute_error_J": 0.0
+    },
+    {
+      "layer": 1,
+      "side": "trailing",
+      "requested_source_window_s": [
+        5.0,
+        5.1
+      ],
+      "selected_samples": 1000,
+      "electrical_status": "computed",
+      "heat_input_status": "needs_data",
+      "native_heat_input_inferred": false,
+      "selection_digest": "48964e8f8c49f069d0647dc2c56e02d36f54b0eee527dcfd13ba370c6ff2fa76",
+      "result_digest": "1951799ae67bc3c7094f1e50b94389a59954afe3570305e96bea4e1a7507b4ff",
+      "comparison_absolute_error_J": 0.0
+    },
+    {
+      "layer": 2,
+      "side": "leading",
+      "requested_source_window_s": [
+        5.0,
+        5.1
+      ],
+      "selected_samples": 1000,
+      "electrical_status": "computed",
+      "heat_input_status": "needs_data",
+      "native_heat_input_inferred": false,
+      "selection_digest": "eab20ea2da53722d899cb4bab1b72cdf5be76405c90bbe484ffa880c5c86c65c",
+      "result_digest": "2af434c77ce38e8d454575204d26e2592703bfe98bdc47c7d0cd3aacb42965f0",
+      "comparison_absolute_error_J": 0.0
+    },
+    {
+      "layer": 2,
+      "side": "trailing",
+      "requested_source_window_s": [
+        5.0,
+        5.1
+      ],
+      "selected_samples": 1000,
+      "electrical_status": "computed",
+      "heat_input_status": "needs_data",
+      "native_heat_input_inferred": false,
+      "selection_digest": "bf5a54b45994382074486b5283075526e865b754c5ffedc24412e9af408cf02b",
+      "result_digest": "a246340beb2df10c76dd830eb068360b2055ccf4d97f05771a216e890189884c",
+      "comparison_absolute_error_J": 0.0
+    }
+  ],
+  "maximum_independent_signed_integral_error_J": 0.0,
+  "source_origin_offsets_ns": {
+    "L1": 53182000000,
+    "L2": 52683000000
+  },
+  "recorded_UTC_coordinate_alignment_only": true,
+  "hardware_clock_sync_or_drift_validated": false,
+  "source_nan_or_negative_power_repaired": false,
+  "full_pass_heat_input_or_distance_inferred": false,
+  "raw_or_transformed_sample_rows_in_code_release": false,
+  "procedure_or_field_qualification": false,
+  "reader_sha256": "7cac1f15625c95ad7da358e57f5228c9ad23a14db23e54ff165fceb7c87b6404",
+  "implementation_sha256": "9e82efacff9294b0ea6e49be83df2b1ab90b0c5c805163668217ec54f88cfc42",
+  "script_sha256": "10d0596ae7e2a62bc923fd4c1700ced655909421179283934e74ae24778958e9"
+}

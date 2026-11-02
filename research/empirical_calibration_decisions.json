@@ -1,0 +1,39 @@
+{
+  "schema": "pipeline_integrity.empirical_calibration_decisions.v1",
+  "evidence": {
+    "receipt": "artifacts/quick-empirical-options/20261102T135008896783Z/receipt.json",
+    "sha256": "32d1994dd1f81e780874ff753160af45db5c816b053e1ef4778d8c526bdec033"
+  },
+  "original_failed_cases": 4,
+  "newly_qualified_original_cases": 0,
+  "decisions": [
+    {
+      "group": "pipe_friction",
+      "case_count": 2,
+      "status": "rig_specific_candidate_available",
+      "maximum_candidate_error_percent": 1.1559357621397703,
+      "original_baseline_replaced": false,
+      "new_independent_validation": false,
+      "required_before_approval": "New comparison conditions and reviewed rig/sensor/geometry basis; a segment effective coefficient is not an identified wall roughness."
+    },
+    {
+      "group": "rate_strength_fixed_power_yield",
+      "case_count": 1,
+      "status": "calibration_rejected_by_original_gate",
+      "scope": "Inspected material/temperature/geometry and strength definition only; no universal rejection of the power-law equation.",
+      "alternative": "Log-law yield candidate has lower inspected RMSE but wider intervals; review separately.",
+      "production_default_changed": false
+    },
+    {
+      "group": "creep_life",
+      "case_count": 1,
+      "status": "deferred_by_small_task_scope",
+      "original_failure_retained": true
+    }
+  ],
+  "global_physical_profile_progress": {
+    "passed_bounded_profiles": 24,
+    "total_models": 223,
+    "percent": 10.762331838565023
+  }
+}

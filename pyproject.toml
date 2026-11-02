@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeline-safety-toolkit"
+version = "0.1.0a1"
+description = "Composable pipeline safety engineering with explicit model contracts and reproducible verification"
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Ugwiyeon Lee"}]
+dependencies = ["numpy>=2,<3", "pydantic>=2.10,<3", "pydantic-core>=2.27,<3", "pint>=0.24,<1"]
+
+[project.urls]
+Homepage = "https://github.com/lyullee/pipeline-safety-toolkit"
+Documentation = "https://github.com/lyullee/pipeline-safety-toolkit/tree/main/docs"
+Repository = "https://github.com/lyullee/pipeline-safety-toolkit"
+Issues = "https://github.com/lyullee/pipeline-safety-toolkit/issues"
+Changelog = "https://github.com/lyullee/pipeline-safety-toolkit/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+engineering = ["scipy>=1.15,<2", "fluids>=1.3.1,<2", "ht>=1.2,<2"]
+thermo = ["CoolProp>=8,<9"]
+data = ["pandas>=2.2,<4", "openpyxl>=3.1,<4", "rdata>=1,<2", "h5py>=3.16,<4", "pypdf>=6.10,<7"]
+water = ["wntr>=1.5,<2"]
+figures = ["matplotlib>=3.9,<4"]
+scheduling = ["ortools>=9.15,<10"]
+structural = ["PyNiteFEA==3.2.0"]
+differentiation = ["autograd>=1.9,<2"]
+mooring = ["MoorPy>=1.3,<2"]
+soil = ["FiPy>=4.0.3,<5"]
+soil-fem = ["scikit-fem>=12.0.2,<13", "scipy>=1.15,<2"]
+calibration-reference = ["odrpack==0.7.0"]
+hra = ["scipy>=1.15,<2"]
+dev = ["pytest>=8,<10", "build>=1,<2", "ruff>=0.14,<1"]
+
+[project.scripts]
+pipeline-integrity = "pipeline_integrity.cli:main"
+pipeline-safety-toolkit = "pipeline_integrity.cli:main"
+pipeline-safety = "pipeline_integrity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pipeline_integrity = ["catalog_data/*.json", "py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B"]

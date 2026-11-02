@@ -1,0 +1,43 @@
+{
+  "schema": "pipeline_integrity.leak_testbed_archive_structure.v1",
+  "dataset_id": "leak_testbed",
+  "doi": "10.17632/tbrnp6vrnj.1",
+  "license_id": "CC-BY-4.0",
+  "archive": {
+    "filename": "leak_testbed-v1.zip",
+    "bytes": 1080066320,
+    "sha256": "a8954b3cec0a0773a956177fed388fb891b25ef2cdf2d264b4b9557cf2a271a1",
+    "checksum_origin": "locally_measured_public_aggregate_zip",
+    "supplier_checksum_verified": false
+  },
+  "outer_members": [
+    {
+      "filename": "Accelerometer.zip",
+      "bytes": 459278311,
+      "sensor_members": 80
+    },
+    {
+      "filename": "Dynamic Pressure Sensor.zip",
+      "bytes": 562748973,
+      "sensor_members": 80
+    },
+    {
+      "filename": "Hydrophone.zip",
+      "bytes": 63994754,
+      "sensor_members": 122
+    },
+    {
+      "filename": "Python code to convert RAW acoustic data to pandas DataFrame.py",
+      "bytes": 1722,
+      "executed_or_bundled": false
+    }
+  ],
+  "crosswalk_to_xw44wv2g88": {
+    "member_path_counts_match": true,
+    "member_byte_counts_match": true,
+    "member_content_hashes_compared": false,
+    "exact_content_equivalence_established": false,
+    "independent_experiment_status": "not_established",
+    "raw_member_bytes_copied": false
+  }
+}

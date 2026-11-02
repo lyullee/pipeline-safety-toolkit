@@ -1,0 +1,79 @@
+{
+  "checks": {
+    "independent_14kg_point_integral": true,
+    "full_joint_factored_covariance": true,
+    "duration_full_clock_covariance": true,
+    "amount_duration_cross_covariance": true,
+    "common_clock_factor_cancels": true,
+    "exact_record_replay": true,
+    "representable_offset_preserves_total_and_covariance": true,
+    "gap_not_filled": true,
+    "invalid_not_omitted_or_zero": true,
+    "rehashed_cross_covariance_change_refused": true,
+    "VSL_224_counter_periods_not_wall_windows": true,
+    "VSL_50_turbine_durations_unknown": true,
+    "VSL-selected-0-uncertainty-or-time-needs-data": true,
+    "VSL-selected-0-period-q-times-tau": true,
+    "VSL-selected-0-no-false-standard-uncertainty": true,
+    "VSL-selected-1-uncertainty-or-time-needs-data": true,
+    "VSL-selected-1-period-q-times-tau": true,
+    "VSL-selected-1-no-false-standard-uncertainty": true,
+    "VSL-selected-2-uncertainty-or-time-needs-data": true,
+    "VSL-turbine-no-wall-duration-filled": true,
+    "source_files_unchanged": true
+  },
+  "passed": 21,
+  "total": 21,
+  "observations": {
+    "covariance": {
+      "expected_amount_variance": 0.320075,
+      "expected_duration_variance": 0.0026,
+      "expected_cross_covariance": 0.0039499999999999995,
+      "actual": [
+        [
+          0.32007500000000005,
+          0.003950000000000018
+        ],
+        [
+          0.003950000000000018,
+          0.002600000000000005
+        ]
+      ],
+      "common_clock_factor": 0.0
+    }
+  },
+  "source_proposal": {
+    "actual_periods": 274,
+    "available_counter_periods": 224,
+    "mass_periods": 160,
+    "local_liquid_volume_periods": 64,
+    "turbine_counter_duration_unknown": 50,
+    "selected_actual_requests": 3,
+    "selected_actual_statuses": [
+      "needs_data",
+      "needs_data",
+      "needs_data"
+    ],
+    "correct_reading": "MUT indicated counter-period mean, not a point sample and not the reference meter's possibly different averaging window",
+    "correct_clock": "declared relative counter elapsed coordinate0..tau; never source wall-start/end, UTC, or cross-period interpolation",
+    "covariance": "unknown full joint reading/time covariance; no combined error U decomposition, no zero offdiagonal assumption",
+    "multiple_periods_summed_as_one_inventory": false,
+    "independent_calibration_or_human_error_validation": false,
+    "source_model_means_only": true,
+    "source_record_digest": "a4e4159b86303f01e46864b4c83855e630a4fdc71a6526f432adf95821e2fe18"
+  },
+  "producer_pins_before": {
+    "totalization.py": "0ec0215e05bd3bdaa3d655dc60d5d4928c0c7546e983d46c518f2bbd40a854fb",
+    "quadrature.py": "6ac83808c54d31989f1e32ef688738df8df8f75d0a00a799b17068688fc89325",
+    "contracts.py": "32f37a1f61606ee64d48e397268b95ed2523238afad0df3daf06688611d34d4e",
+    "metrology.py": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb"
+  },
+  "producer_pins_after": {
+    "totalization.py": "0ec0215e05bd3bdaa3d655dc60d5d4928c0c7546e983d46c518f2bbd40a854fb",
+    "quadrature.py": "6ac83808c54d31989f1e32ef688738df8df8f75d0a00a799b17068688fc89325",
+    "contracts.py": "32f37a1f61606ee64d48e397268b95ed2523238afad0df3daf06688611d34d4e",
+    "metrology.py": "10b10670316cbb9c60f2c6db0e85bc83c06ee1fa4b87a6d7f12f41baf21fe3bb"
+  },
+  "shared_source_changed_during_review": false,
+  "review_driver_sha256": "8a621c2d8a9ee76ecee7aad22fe07f94fd8f71acdad65c7fd72876cc557897ac"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "pipeline_integrity.material_sections_method_review.v1",
+  "reviewed_on": "2026-10-27",
+  "owner": "matintegrity; existing MIT mechanics, thermal models and rod reader; no engine source vendored",
+  "dataset": {
+    "source": "https://data.mendeley.com/datasets/sbcf36976g/1",
+    "doi": "10.17632/sbcf36976g.1",
+    "creators": [
+      "Lauren B. Tomanek",
+      "Daniel S. Stutts"
+    ],
+    "license": "CC-BY-4.0",
+    "version": "1",
+    "archive_bytes": 2099328,
+    "checksum_origin": "previous_acquisition",
+    "raw_observations_redistributed": false
+  },
+  "alternative": {
+    "source": "https://www.solids4foam.com/tutorials/more-tutorials/solid-mechanics/thermoelasticity/hotCylinder.html",
+    "declared_software_license": "MIT",
+    "decision": "reference only; cylinder plane-strain benchmark differs from the adopted planar stress profile. No source or example parameters were copied; a geometry-qualified owner extension remains required."
+  },
+  "checks": [
+    "native pressure traction and transverse/axial equilibrium",
+    "point-center and volume-average radial references kept separate",
+    "zero-heat relative-energy issue retained",
+    "full raw CSV numeric comparison",
+    "temperature-difference and controller-count semantics retained"
+  ],
+  "field_qualification": false,
+  "source_prose_or_restricted_tables_copied": false,
+  "extension_requests": [
+    "PI-X04",
+    "PI-X06"
+  ]
+}

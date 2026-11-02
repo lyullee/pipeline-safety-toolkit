@@ -1,0 +1,15 @@
+{
+  "schema": "pipeline_integrity.pressure_csv_parser_status.v1",
+  "implementation": "pipeline_integrity.pressure_wave_data.parse_pressure_csv",
+  "strict_csv_quoting": true,
+  "field_size_failure": "normalized to ValueError; no row/field truncation",
+  "authored_regression_functions": 2,
+  "tests_executed": 0,
+  "nurion_job_submitted": false,
+  "physical_interpretation_changed": false,
+  "notes": [
+    "Unclosed quoting and oversized fields are parser-format failures.",
+    "The caller must still provide explicit column, scale, offset, clock, sensor and pressure-reference mapping.",
+    "An oversized unused column can still exceed the standard-library CSV field limit."
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "pipeline_integrity.inspection_planning_verification.v1",
+  "materials": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "80b9ee70fb8e4573585759dd6a26ebe0c45bb9504ed8049a924171a003ba99f0",
+    "source_tree_files": 59,
+    "version": "0.1.0.dev0"
+  },
+  "scheduler_provider": {
+    "id": "OR-Tools CP-SAT",
+    "version": "9.15.6755",
+    "workers": 1,
+    "seed": 0,
+    "wall_time_s": 0.0103569
+  },
+  "native_model_versions": {
+    "inspection.no_indication_update": "1.0.0",
+    "inspection.logistic_pod": "1.0.0"
+  },
+  "cases": {
+    "reference": {
+      "status": "optimal",
+      "unrounded_model_score": 0.9999999999999999,
+      "rounded_objective": 1000,
+      "model_score_lower_bound": 0.997,
+      "rounding_error_upper_bound": 0.003,
+      "selected_targets": [
+        "A",
+        "B"
+      ],
+      "issues": [],
+      "native_material_calls": 15,
+      "record_sha256": "bcb5b64b31bd04ae65af62ad58914efd3b75e45d9d8af03bb44b418df4ec4c27"
+    },
+    "zero_budget": {
+      "status": "optimal",
+      "unrounded_model_score": 3.0,
+      "rounded_objective": 3000,
+      "model_score_lower_bound": 2.997,
+      "rounding_error_upper_bound": 0.003,
+      "selected_targets": [],
+      "issues": [],
+      "native_material_calls": 15,
+      "record_sha256": "90c675d2300b093e7e3110199d342af9035a98d1b862b1e70c7ae1b1482d5581"
+    },
+    "one_budget": {
+      "status": "optimal",
+      "unrounded_model_score": 1.7999999999999998,
+      "rounded_objective": 1800,
+      "model_score_lower_bound": 1.797,
+      "rounding_error_upper_bound": 0.003,
+      "selected_targets": [
+        "A"
+      ],
+      "issues": [],
+      "native_material_calls": 15,
+      "record_sha256": "472567ecc6b413788f70a01993b3c55b362f8c3abf740fd28cbbc26043c7bea2"
+    },
+    "three_budget": {
+      "status": "optimal",
+      "unrounded_model_score": 0.5999999999999999,
+      "rounded_objective": 600,
+      "model_score_lower_bound": 0.597,
+      "rounding_error_upper_bound": 0.003,
+      "selected_targets": [
+        "A",
+        "B",
+        "C"
+      ],
+      "issues": [],
+      "native_material_calls": 15,
+      "record_sha256": "d4215bcd9fe50faadd1736e1f8839b88536e25a451d7f11bbf70c9c2f6e62b68"
+    },
+    "coarse_rounding": {
+      "status": "optimal",
+      "unrounded_model_score": 0.9999999999999999,
+      "rounded_objective": 3,
+      "model_score_lower_bound": 0.0,
+      "rounding_error_upper_bound": 2.1,
+      "selected_targets": [
+        "A",
+        "B"
+      ],
+      "issues": [],
+      "native_material_calls": 15,
+      "record_sha256": "f24f644171d9b1b196c0c7ff99d03b6df8b91a52a14ec95be8a22823555b5029"
+    },
+    "partial_coverage": {
+      "status": "optimal",
+      "unrounded_model_score": 2.2,
+      "rounded_objective": 2200,
+      "model_score_lower_bound": 2.197,
+      "rounding_error_upper_bound": 0.003,
+      "selected_targets": [
+        "B"
+      ],
+      "issues": [],
+      "native_material_calls": 15,
+      "record_sha256": "eb61e6410337503f855dd9ee758dbcc68ccb86556828aefbcbfa73f235b6dc41"
+    },
+    "required_conflicting_appointments": {
+      "status": "infeasible",
+      "unrounded_model_score": null,
+      "rounded_objective": null,
+      "model_score_lower_bound": null,
+      "rounding_error_upper_bound": 0.002,
+      "selected_targets": [],
+      "issues": [],
+      "native_material_calls": 6,
+      "record_sha256": "3f53e103b9a772480ea847ff8425bececddc7e3940a4cfc9fc847703a10e9bc2"
+    },
+    "unsupported_detection_size": {
+      "status": "needs_data",
+      "unrounded_model_score": null,
+      "rounded_objective": null,
+      "model_score_lower_bound": null,
+      "rounding_error_upper_bound": 0.001,
+      "selected_targets": [],
+      "issues": [
+        "detection_size_outside_reviewed_support:A:method_at_0:flaw"
+      ],
+      "native_material_calls": 2,
+      "record_sha256": "7d3428c3fc5983a5d067e5206a5d9a7ba0cd3bb8a558789031a73013e3f552c4"
+    },
+    "zero_probability_no_indication": {
+      "status": "optimal",
+      "unrounded_model_score": 0.0,
+      "rounded_objective": 0,
+      "model_score_lower_bound": 0.0,
+      "rounding_error_upper_bound": 0.001,
+      "selected_targets": [
+        "A"
+      ],
+      "issues": [],
+      "native_material_calls": 1,
+      "record_sha256": "d9e56667bacac932e354e3ae03c84c8b9f8e09e453df7c13f1d7c1a45eda76df"
+    },
+    "ili_all_reported_candidates": {
+      "status": "needs_data",
+      "unrounded_model_score": null,
+      "rounded_objective": null,
+      "model_score_lower_bound": null,
+      "rounding_error_upper_bound": 0.0013,
+      "selected_targets": [],
+      "issues": [
+        "detection_size_outside_reviewed_support:ili_label_1:row:4:authored_reinspection:flaw",
+        "detection_size_outside_reviewed_support:ili_label_1:row:5:authored_reinspection:flaw",
+        "detection_size_outside_reviewed_support:ili_label_1:row:8:authored_reinspection:flaw",
+        "detection_size_outside_reviewed_support:ili_label_1:row:10:authored_reinspection:flaw"
+      ],
+      "native_material_calls": 44,
+      "record_sha256": "7bfa73f6d4b7632e0cd4bee29041b3584034aefe31591a226d338acc95ee664e"
+    },
+    "ili_assumed_curve_domain_subset": {
+      "status": "optimal",
+      "unrounded_model_score": 3.6460101941831247,
+      "rounded_objective": 36462,
+      "model_score_lower_bound": 3.6453,
+      "rounding_error_upper_bound": 0.0009,
+      "selected_targets": [
+        "ili_label_1:row:2",
+        "ili_label_1:row:3",
+        "ili_label_1:row:12",
+        "ili_label_1:row:13"
+      ],
+      "issues": [],
+      "native_material_calls": 36,
+      "record_sha256": "70cf08d3fdedfb46ede7e5db365d7b33cceaa255215387379157902b1c4aa018"
+    }
+  },
+  "native_model_ids": [
+    "inspection.logistic_pod",
+    "inspection.no_indication_update"
+  ],
+  "ili": {
+    "source": "https://doi.org/10.17632/c2h2jf5c54.1",
+    "license_id": "CC-BY-4.0",
+    "creators": [
+      "Rioshar Yarveisy",
+      "Faisal Khan",
+      "Rouzbeh Abbassi"
+    ],
+    "archive_sha256": "255c7fa88f4c5656baeb21e56c5a5e4961c446016faebae58bf834bd75a05c6c",
+    "scan_cache_key": "b3b17b20733451ccbd68c0e269da0aa520a505d30b36319ce0237742a7b4bc5b",
+    "reported_candidates": 13,
+    "separate_hypothetical_subset_candidates": 9,
+    "excluded_from_subset_for_missing_detection_support": [
+      "ili_label_1:row:4",
+      "ili_label_1:row:5",
+      "ili_label_1:row:8",
+      "ili_label_1:row:10"
+    ],
+    "original_data_application_status": "needs_data",
+    "detection_curve_qualified": false,
+    "priors_resources_appointments_and_weights_are_authored": true,
+    "elapsed_time_inferred_from_year_labels": false,
+    "misses_or_growth_inferred": false,
+    "independently_enumerated_feasible_menus": 96
+  },
+  "module_sha256": "b5b023da50fa337dfc03803a85082b5f414acf1367dd954b1be2bbcc46a8cd5e",
+  "scheduler_sha256": "2448ac5a8cfb6109feaf144698a5e2e15dd4880c7c9f3eb884f04675e1a03273",
+  "script_sha256": "2ec45ebbc6dc837afbb507093257de8bee43ff07b2cf75245b50d73262f09792",
+  "field_calibrated": false,
+  "physical_failure_probability_calculated": false,
+  "work_authorized": false
+}

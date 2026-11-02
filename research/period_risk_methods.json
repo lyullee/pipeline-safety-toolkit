@@ -1,0 +1,36 @@
+{
+  "schema": "pipeline_integrity.period_risk_methods.v1",
+  "reviewed_date": "2026-10-27",
+  "owner": "human-reliability-toolkit",
+  "owner_source_url": "https://github.com/lyullee/human-reliability-toolkit",
+  "native_api": ["Event", "Gate", "fault_probability", "fault_probability_joint"],
+  "implementation_policy": "Reuse original RiskProbability/FaultNode/JointState contracts, scope validators and the separately installed owner Boolean engine. This package maps exact periods, common survival conditioning, contexts, source receipts and lineage; no new Boolean solver is implemented.",
+  "new_runtime_dependencies": [],
+  "native_backend": "existing owner default enumerate; at most 20 distinct events with an explicit state budget",
+  "independent_authored_reference_cases": 6,
+  "primary_data": {
+    "dataset_id": "cmsx6_creep",
+    "source_doi": "10.5281/zenodo.14750432",
+    "rights_and_attribution": "research/creep_methods.json",
+    "fit_recomputed_from_current_checked_workbook": true,
+    "specimens": 12,
+    "ruptures": 9,
+    "right_censored": 3,
+    "hypothetical_component_stresses_Pa": [200000000.0, 201000000.0],
+    "temperature_K": 1253.15,
+    "hypothetical_period_s": [400000.0, 600000.0],
+    "common_survival_and_fresh_material_origin_are_declared_assumptions": true,
+    "joint_scenarios": "Two explicitly declared feasible extreme-overlap joint distributions; no observed inter-component dependence is inferred.",
+    "parameter_uncertainty_included": false,
+    "raw_or_transformed_observation_rows_in_code_release": false
+  },
+  "source_execution_evidence": "research/period_risk_results.json",
+  "limitations": [
+    "A period Boolean AND does not establish temporal coincidence or failure sequence.",
+    "No repair, repeated failures, annual frequency, containment-loss conversion or field applicability is inferred.",
+    "Point-fit specimen scatter is not parameter uncertainty; common conditioning and observed joint dependence remain separate research requirements.",
+    "Code scope extension does not change the state of risk.common_cause from partial."
+  ],
+  "explanations_and_reference_inputs_original": true,
+  "source_owner_or_standard_text_copied": false
+}

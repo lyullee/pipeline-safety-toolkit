@@ -1,0 +1,25 @@
+{
+  "schema": "pipeline_integrity.hra_response_replay_status.v1",
+  "date": "2026-10-29",
+  "module": "pipeline_integrity.response_exchange",
+  "entrypoint": "HumanResponseClient.verify_result",
+  "supported_result_kinds": [
+    "deadline",
+    "recovery"
+  ],
+  "test_module": "tests/test_response_exchange.py",
+  "authored_test_functions": 1,
+  "tests_executed": 0,
+  "numerical_verification": "deferred_to_nurion",
+  "pbs_submitted": false,
+  "replay_checks": [
+    "current provider identity",
+    "source estimate",
+    "event",
+    "request",
+    "context",
+    "owner result"
+  ],
+  "field_qualification_claim": false,
+  "guide": "docs/HUMAN_RESPONSE_KO.md"
+}

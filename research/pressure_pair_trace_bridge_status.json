@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.pressure_pair_trace_bridge_status.v1",
+  "date": "2026-10-28",
+  "state": "implemented_static_validation_pending",
+  "builder": "pipeline_integrity.pressure_wave_data.build_pressure_pair_trace_record",
+  "verifier": "pipeline_integrity.pressure_wave_data.verify_pressure_pair_trace_record",
+  "input_contracts": [
+    "two replayed pressure CSV records and original byte payloads",
+    "ready pressure-pair qualification with caller-pinned evidence identity",
+    "explicit asset and distinct trace IDs",
+    "measured or laboratory origin",
+    "explicit time-origin shift and evidence identity",
+    "explicit maximum fixed-grid representation error"
+  ],
+  "preserved": [
+    "sensor-specific original CSV SHA-256",
+    "clock identity",
+    "pressure reference through the qualification",
+    "original Pa values",
+    "observed fixed-grid error"
+  ],
+  "interpolation_or_resampling_performed": false,
+  "new_test_functions_written": 2,
+  "new_parameterized_cases_written": 5,
+  "pytest_executed": false,
+  "numerical_model_executed": false,
+  "confirmed_scope_percent_after_change": 67.2
+}

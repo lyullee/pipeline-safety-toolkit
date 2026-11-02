@@ -1,0 +1,41 @@
+{
+  "schema": "pipeline_integrity.gaslib_network_adapter_status.v1",
+  "date": "2026-10-29",
+  "implementation": "authored_static_review_pending_nurion",
+  "existing_reader": "pipeline_integrity.gaslib.read_gaslib",
+  "owner_solver": "pipeline_integrity.gas_network.solve_gas_network",
+  "adapter": "pipeline_integrity.gaslib_network.prepare_gaslib_network / solve_gaslib_network / verify_gaslib_network_run",
+  "source_revalidation": "archive and selected member digests are re-read and compared before mapping",
+  "explicit_inputs": [
+    "fluid and backend/EOS",
+    "property basis and composition evidence",
+    "node role, absolute pressure Pa, temperature K and optional junction withdrawal kg/s",
+    "pipe local loss, heat W, segment count and evidence",
+    "pressure reference, nomination interpretation, mapping review"
+  ],
+  "preserved": [
+    "node/connection identifiers",
+    "source archive and member SHA-256",
+    "source SI geometry",
+    "selected scenario ID",
+    "owner result and checks"
+  ],
+  "unsupported_gates": [
+    "active non-pipe connections",
+    "nonzero endpoint elevation change",
+    "unreviewed or incomplete mapping",
+    "context and mapping scenario ID mismatch",
+    "missing or non-unique evidence"
+  ],
+  "nomination_values_applied": false,
+  "reference_solution_reproduced": false,
+  "field_qualification": false,
+  "synthetic_regression_functions_authored": 7,
+  "regressions_executed": false,
+  "numerical_validation": "pending Nurion; no job submitted",
+  "known_dataset_limit": "documented GasLib-11 includes one valve and two compressors and is rejected as a whole by this pipe-only mapping",
+  "run_receipt_replay": "revalidates mapping/context identity, thermodynamic choices, complete required evidence IDs, exact node roles/states, pipe controls against sealed owner specification, owner specification/context, and source archive/member SHA-256 plus CC BY 3.0 evidence; caller-reviewed flag must remain true",
+  "new_parameterized_tamper_cases": 4,
+  "input_snapshot_policy": "source record, mapping and context are JSON/model snapshots taken before archive revalidation and owner solve; the same snapshots feed the solver and receipt",
+  "concurrent_input_mutation_regression": "authored, unexecuted"
+}

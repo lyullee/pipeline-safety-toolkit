@@ -1,0 +1,16 @@
+{
+  "schema": "pipeline_integrity.liquid_head_registry_status.v1",
+  "registry_model_id": "hydraulics.liquid_head_loss",
+  "implementation": "existing models.hydraulics.liquid_head_loss owner; no second solver",
+  "shared_consumer": "uncertainty.registry_node -> uncertainty.evaluate_ensemble",
+  "new_authored_regression_functions": 1,
+  "parameterized_regression_cases": 0,
+  "tests_executed": 0,
+  "nurion_submitted": false,
+  "scope_progress_changed": false,
+  "notes": [
+    "Registry declares only head outputs in metres plus velocity/Reynolds/Darcy factor; it does not infer density, absolute pressure, mass flow, or power.",
+    "The regression constructs two caller-declared joint head scenarios and routes the existing owner through the shared registry-backed ensemble API.",
+    "Ensemble summaries remain design-conditional descriptions, not operational failure probabilities or confidence intervals."
+  ]
+}

@@ -1,0 +1,580 @@
+{
+  "schema": "pipeline_integrity.ili_application.v1",
+  "source": "https://doi.org/10.17632/c2h2jf5c54.1",
+  "license_id": "CC-BY-4.0",
+  "creators": [
+    "Rioshar Yarveisy",
+    "Faisal Khan",
+    "Rouzbeh Abbassi"
+  ],
+  "scan_reports": [
+    {
+      "schema": "pipeline_integrity.ili_load.v1",
+      "run_id": "ili_label_1",
+      "member": "Dataset (.xlsx)/External Features Year One.xlsx",
+      "archive_sha256": "255c7fa88f4c5656baeb21e56c5a5e4961c446016faebae58bf834bd75a05c6c",
+      "workbook_sha256": "68dc9b2b651f07f27b8f3a28d24f3909f74e505f9da17fa8782e750f0c3db49f",
+      "actual_source_rows_scanned": 735755,
+      "reported_worksheet_extent": {
+        "rows": 735756,
+        "columns": 15
+      },
+      "reader_uses_xml_end_instead_of_reported_row_extent": true,
+      "source_scan_complete": true,
+      "source_year_labels": {
+        "1": 735755
+      },
+      "distinct_joint_count": 19479,
+      "selected_joint_row_counts": {
+        "14": 13
+      },
+      "selected_source_rows": 13,
+      "selected_features": 13,
+      "invalid_selected_rows": [],
+      "source_rows_without_joint_id": 0,
+      "selected_nonpositive_nominal_ligaments": 0,
+      "source_time_labels_are_not_calendar_timestamps": true,
+      "absolute_distance_and_unclear_significant_point_coordinate_not_used": true,
+      "elapsed_time_or_measurement_error_inferred": false
+    },
+    {
+      "schema": "pipeline_integrity.ili_load.v1",
+      "run_id": "ili_label_3",
+      "member": "Dataset (.xlsx)/External Features Year Three.xlsx",
+      "archive_sha256": "255c7fa88f4c5656baeb21e56c5a5e4961c446016faebae58bf834bd75a05c6c",
+      "workbook_sha256": "3622b9d5689e504bd09c3cf389e2fc2b1c638fb50d13a0b290d84f3464a2f611",
+      "actual_source_rows_scanned": 832681,
+      "reported_worksheet_extent": {
+        "rows": 832682,
+        "columns": 15
+      },
+      "reader_uses_xml_end_instead_of_reported_row_extent": true,
+      "source_scan_complete": true,
+      "source_year_labels": {
+        "3": 832681
+      },
+      "distinct_joint_count": 19479,
+      "selected_joint_row_counts": {
+        "14": 22
+      },
+      "selected_source_rows": 22,
+      "selected_features": 22,
+      "invalid_selected_rows": [],
+      "source_rows_without_joint_id": 0,
+      "selected_nonpositive_nominal_ligaments": 0,
+      "source_time_labels_are_not_calendar_timestamps": true,
+      "absolute_distance_and_unclear_significant_point_coordinate_not_used": true,
+      "elapsed_time_or_measurement_error_inferred": false
+    },
+    {
+      "schema": "pipeline_integrity.ili_load.v1",
+      "run_id": "ili_label_5",
+      "member": "Dataset (.xlsx)/External Features Year Five.xlsx",
+      "archive_sha256": "255c7fa88f4c5656baeb21e56c5a5e4961c446016faebae58bf834bd75a05c6c",
+      "workbook_sha256": "2e948c8f23aa0668e57798c03e4ac9b34b617c89599631c8e93da1601d63d31c",
+      "actual_source_rows_scanned": 759683,
+      "reported_worksheet_extent": {
+        "rows": 759684,
+        "columns": 15
+      },
+      "reader_uses_xml_end_instead_of_reported_row_extent": true,
+      "source_scan_complete": true,
+      "source_year_labels": {
+        "5": 759683
+      },
+      "distinct_joint_count": 19479,
+      "selected_joint_row_counts": {
+        "14": 12
+      },
+      "selected_source_rows": 12,
+      "selected_features": 12,
+      "invalid_selected_rows": [],
+      "source_rows_without_joint_id": 0,
+      "selected_nonpositive_nominal_ligaments": 0,
+      "source_time_labels_are_not_calendar_timestamps": true,
+      "absolute_distance_and_unclear_significant_point_coordinate_not_used": true,
+      "elapsed_time_or_measurement_error_inferred": false
+    },
+    {
+      "schema": "pipeline_integrity.ili_load.v1",
+      "run_id": "ili_label_7",
+      "member": "Dataset (.xlsx)/External Features Year Seven.xlsx",
+      "archive_sha256": "255c7fa88f4c5656baeb21e56c5a5e4961c446016faebae58bf834bd75a05c6c",
+      "workbook_sha256": "37128dfb91f40325314af71cb4e8771e76577ef3ca0f75ed5020f771b8cab462",
+      "actual_source_rows_scanned": 870301,
+      "reported_worksheet_extent": {
+        "rows": 870302,
+        "columns": 15
+      },
+      "reader_uses_xml_end_instead_of_reported_row_extent": true,
+      "source_scan_complete": true,
+      "source_year_labels": {
+        "7": 870301
+      },
+      "distinct_joint_count": 19479,
+      "selected_joint_row_counts": {
+        "14": 16
+      },
+      "selected_source_rows": 16,
+      "selected_features": 16,
+      "invalid_selected_rows": [],
+      "source_rows_without_joint_id": 0,
+      "selected_nonpositive_nominal_ligaments": 0,
+      "source_time_labels_are_not_calendar_timestamps": true,
+      "absolute_distance_and_unclear_significant_point_coordinate_not_used": true,
+      "elapsed_time_or_measurement_error_inferred": false
+    }
+  ],
+  "selected_joints": [
+    "14"
+  ],
+  "matches": [
+    {
+      "baseline_run_id": "ili_label_1",
+      "followup_run_id": "ili_label_3",
+      "registration": {
+        "registration_id": "candidate_ili_label_1_ili_label_3",
+        "baseline_run_id": "ili_label_1",
+        "followup_run_id": "ili_label_3",
+        "baseline_frame_id": "joint_start_instrument_clock_label_1",
+        "followup_frame_id": "joint_start_instrument_clock_label_3",
+        "joint_map": {
+          "14": "14"
+        },
+        "axial_mode": "fraction_of_joint_length",
+        "axial_offset_m": 0.0,
+        "circumferential_offset_rad": 0.0,
+        "provenance": "unreviewed_joint_fraction_and_clock_angle_assumption",
+        "review_evidence_id": null
+      },
+      "policy": {
+        "axial_gate_m": 0.25,
+        "angular_gate_rad": 0.3490658503988659,
+        "unmatched_cost": 2.5,
+        "ambiguity_gap": 0.1,
+        "maximum_matrix_cells": 2000000
+      },
+      "candidate_edges": 18,
+      "selected_proposals": 13,
+      "ambiguous_proposals": 4,
+      "unmatched_baseline_count": 0,
+      "unmatched_followup_count": 9,
+      "result_digest": "2ab5199873711f988a09b60c3204ca31b62764c941cd01b6490cc73ac6c8c934"
+    },
+    {
+      "baseline_run_id": "ili_label_3",
+      "followup_run_id": "ili_label_5",
+      "registration": {
+        "registration_id": "candidate_ili_label_3_ili_label_5",
+        "baseline_run_id": "ili_label_3",
+        "followup_run_id": "ili_label_5",
+        "baseline_frame_id": "joint_start_instrument_clock_label_3",
+        "followup_frame_id": "joint_start_instrument_clock_label_5",
+        "joint_map": {
+          "14": "14"
+        },
+        "axial_mode": "fraction_of_joint_length",
+        "axial_offset_m": 0.0,
+        "circumferential_offset_rad": 0.0,
+        "provenance": "unreviewed_joint_fraction_and_clock_angle_assumption",
+        "review_evidence_id": null
+      },
+      "policy": {
+        "axial_gate_m": 0.25,
+        "angular_gate_rad": 0.3490658503988659,
+        "unmatched_cost": 2.5,
+        "ambiguity_gap": 0.1,
+        "maximum_matrix_cells": 2000000
+      },
+      "candidate_edges": 16,
+      "selected_proposals": 12,
+      "ambiguous_proposals": 0,
+      "unmatched_baseline_count": 10,
+      "unmatched_followup_count": 0,
+      "result_digest": "f2361f1edf7a66de7aa742e838facf3a8fd46ef0adf1821091223f2e027b90d5"
+    },
+    {
+      "baseline_run_id": "ili_label_5",
+      "followup_run_id": "ili_label_7",
+      "registration": {
+        "registration_id": "candidate_ili_label_5_ili_label_7",
+        "baseline_run_id": "ili_label_5",
+        "followup_run_id": "ili_label_7",
+        "baseline_frame_id": "joint_start_instrument_clock_label_5",
+        "followup_frame_id": "joint_start_instrument_clock_label_7",
+        "joint_map": {
+          "14": "14"
+        },
+        "axial_mode": "fraction_of_joint_length",
+        "axial_offset_m": 0.0,
+        "circumferential_offset_rad": 0.0,
+        "provenance": "unreviewed_joint_fraction_and_clock_angle_assumption",
+        "review_evidence_id": null
+      },
+      "policy": {
+        "axial_gate_m": 0.25,
+        "angular_gate_rad": 0.3490658503988659,
+        "unmatched_cost": 2.5,
+        "ambiguity_gap": 0.1,
+        "maximum_matrix_cells": 2000000
+      },
+      "candidate_edges": 14,
+      "selected_proposals": 12,
+      "ambiguous_proposals": 0,
+      "unmatched_baseline_count": 0,
+      "unmatched_followup_count": 4,
+      "result_digest": "2fdba45f577cb26ede284f2c33e611f4100bae95785fed166c39e2a3a911da19"
+    }
+  ],
+  "matching_implementation": {
+    "algorithm_version": "1.0.0",
+    "implementation_sha256": "21407b42a1818bb3d7adedfad83b016dcc45d0641230e40baf003935be73e632",
+    "runtime_versions": {
+      "python": "3.12.14",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pydantic": "2.14.1"
+    }
+  },
+  "application_script_sha256": "7f7c55644c7c9ea288a79c9c84acf3d9406c3d6762117bf59705f9cc7bd50006",
+  "candidate_growth": {
+    "status": "needs_data",
+    "issues": [
+      "missing_inspection_time:ili_label_1",
+      "missing_ligament_error_bound:ili_label_1",
+      "missing_inspection_time:ili_label_3",
+      "missing_ligament_error_bound:ili_label_3",
+      "missing_inspection_time:ili_label_5",
+      "missing_ligament_error_bound:ili_label_5",
+      "missing_inspection_time:ili_label_7",
+      "missing_ligament_error_bound:ili_label_7",
+      "correspondence_not_reviewed:ili_label_1:ili_label_3",
+      "registration_not_reviewed:ili_label_1:ili_label_3",
+      "correspondence_not_reviewed:ili_label_3:ili_label_5",
+      "registration_not_reviewed:ili_label_3:ili_label_5",
+      "correspondence_not_reviewed:ili_label_5:ili_label_7",
+      "registration_not_reviewed:ili_label_5:ili_label_7"
+    ],
+    "material_growth_called": false
+  },
+  "synthetic_handoff": {
+    "owner_source": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "545d4e2b893b6808914014d96e97adaedfc4bb435095e6684ae275cc74d83cda"
+    },
+    "expected_rate_m_s": 6.33761756280579e-12,
+    "actual_result": {
+      "schema": "pipeline_integrity.inspection_track.v1",
+      "implementation_sha256": "21407b42a1818bb3d7adedfad83b016dcc45d0641230e40baf003935be73e632",
+      "track": {
+        "track_id": "synthetic_known_pit",
+        "feature_id_by_run": {
+          "synthetic-0": "known_pit_0",
+          "synthetic-1": "known_pit_1",
+          "synthetic-2": "known_pit_2"
+        },
+        "reviews": [
+          {
+            "match_result_digest": "fc12543903e93e171a2f495176081490b5da4b03e132b2254cc37145a370d00b",
+            "baseline_feature_id": "known_pit_0",
+            "followup_feature_id": "known_pit_1",
+            "reviewer_id": "synthetic_truth_fixture",
+            "evidence_id": "declared_synthetic_identity",
+            "approved": true
+          },
+          {
+            "match_result_digest": "2d008409019a2098ba911e31b8331bd31c37698a81b7a77c45b45b030eda4159",
+            "baseline_feature_id": "known_pit_1",
+            "followup_feature_id": "known_pit_2",
+            "reviewer_id": "synthetic_truth_fixture",
+            "evidence_id": "declared_synthetic_identity",
+            "approved": true
+          }
+        ],
+        "observation_meaning": "nominal_ligament_at_reported_feature_maximum"
+      },
+      "context": {
+        "asset_id": "synthetic_line",
+        "scenario_id": "analytic_linear_loss",
+        "clock_id": "synthetic_year_seconds",
+        "origin": "synthetic",
+        "evidence": [],
+        "metadata": {}
+      },
+      "run_digests": [
+        "38c8ed6ded8aeb3a48338147be240a50c05d43937e313d24a355f0cd13f72503",
+        "cb7dc874f93c0d5cceae9ed4f1abc5ddbdd59548a4bfa0a65e8712b8cdfb757e",
+        "d24bb3d8a1bc8f7e3668d2558d3af413cfdd22bcc9f571da275a1584f47a8d65"
+      ],
+      "observations": [
+        {
+          "run_id": "synthetic-0",
+          "feature": {
+            "feature_id": "known_pit_0",
+            "joint_id": "synthetic_joint",
+            "joint_length_m": 10.0,
+            "axial_position_m": 2.0,
+            "circumferential_angle_rad": 6.27,
+            "nominal_wall_m": 0.008,
+            "maximum_depth_m": 0.001,
+            "length_m": null,
+            "width_m": null,
+            "remaining_ligament_error_bound_m": 5e-05,
+            "source_row": 2
+          },
+          "source_id": "declared_synthetic_reference",
+          "source_sha256": "b0a4138af7c9dcae4237253da48fc03aa76894c2dc14e2c5d227fd40f85e9188",
+          "origin": "synthetic",
+          "time_s": 0.0,
+          "clock_id": "synthetic_year_seconds",
+          "time_basis_evidence_id": "declared_365_25_day_year"
+        },
+        {
+          "run_id": "synthetic-1",
+          "feature": {
+            "feature_id": "known_pit_1",
+            "joint_id": "synthetic_joint",
+            "joint_length_m": 10.0,
+            "axial_position_m": 2.03,
+            "circumferential_angle_rad": 0.01681469282041359,
+            "nominal_wall_m": 0.008,
+            "maximum_depth_m": 0.0012000000000000001,
+            "length_m": null,
+            "width_m": null,
+            "remaining_ligament_error_bound_m": 5e-05,
+            "source_row": 2
+          },
+          "source_id": "declared_synthetic_reference",
+          "source_sha256": "b3585b0bdc0d4fb37b2cb19efef3a25b5b682428c66d7f0bec0f9897d3bf76bc",
+          "origin": "synthetic",
+          "time_s": 31557600.0,
+          "clock_id": "synthetic_year_seconds",
+          "time_basis_evidence_id": "declared_365_25_day_year"
+        },
+        {
+          "run_id": "synthetic-2",
+          "feature": {
+            "feature_id": "known_pit_2",
+            "joint_id": "synthetic_joint",
+            "joint_length_m": 10.0,
+            "axial_position_m": 2.06,
+            "circumferential_angle_rad": 0.04681469282041295,
+            "nominal_wall_m": 0.008,
+            "maximum_depth_m": 0.0014,
+            "length_m": null,
+            "width_m": null,
+            "remaining_ligament_error_bound_m": 5e-05,
+            "source_row": 2
+          },
+          "source_id": "declared_synthetic_reference",
+          "source_sha256": "37b0a902d4eab361d42550b7dd692e689528e006ce84df2dfe30064ab6a91563",
+          "origin": "synthetic",
+          "time_s": 63115200.0,
+          "clock_id": "synthetic_year_seconds",
+          "time_basis_evidence_id": "declared_365_25_day_year"
+        }
+      ],
+      "issues": [],
+      "status": "computed",
+      "source_observations_are_nominal_ligament_estimates": true,
+      "field_validation_claim": false,
+      "parameters": {
+        "time_s": [
+          0.0,
+          31557600.0,
+          63115200.0
+        ],
+        "thickness_m": [
+          0.007,
+          0.0068000000000000005,
+          0.0066
+        ],
+        "method": "theil_sen"
+      },
+      "external_result": {
+        "schema_version": "pipeline_integrity.external_result.v1",
+        "owner": "matintegrity",
+        "owner_schema": "matintegrity.assessment.v1",
+        "status": "computed",
+        "asset_id": "synthetic_line",
+        "payload": {
+          "schema_version": "matintegrity.assessment.v1",
+          "model_id": "corrosion.thickness_trend",
+          "model_version": "1.0.0",
+          "status": "computed",
+          "inputs": {
+            "time_s": [
+              0.0,
+              31557600.0,
+              63115200.0
+            ],
+            "thickness_m": [
+              0.007,
+              0.0068000000000000005,
+              0.0066
+            ],
+            "method": "theil_sen"
+          },
+          "values": {
+            "rate_m_s": 6.337617562805795e-12,
+            "thickness_at_first_time_m": 0.007,
+            "residual_rmse_m": 5.127900497022836e-19,
+            "rate_interval_m_s": [
+              6.337617562805767e-12,
+              6.337617562805824e-12
+            ]
+          },
+          "units": {
+            "rate_m_s": "m/s",
+            "thickness_at_first_time_m": "m",
+            "residual_rmse_m": "m",
+            "rate_interval_m_s": "m/s"
+          },
+          "assumptions": [
+            "Same measurement location and unchanged repair/operating regime; residuals are not POD."
+          ],
+          "notes": [],
+          "context": {
+            "asset_id": "synthetic_line",
+            "location_id": "synthetic_known_pit",
+            "time_basis": "synthetic_year_seconds",
+            "evidence": [],
+            "metadata": {
+              "pipeline_scenario_id": "analytic_linear_loss",
+              "pipeline_origin": "synthetic",
+              "pipeline_evidence_origins": {},
+              "pipeline_context_digest": "289a88062b6b12e6ba1663893687fb0b6e9a4fd0620448460ad956e119bb9846"
+            }
+          },
+          "input_digest": "6b5562ff6ab4139c180525ca0a498f502dd383f59f97bc55bee38e9e99aef97d",
+          "source_ids": [
+            "scipy_theilslopes"
+          ],
+          "qualification": "engineering_screening",
+          "runtime": {
+            "matintegrity": "0.1.0.dev0",
+            "python": "3.12.14",
+            "numpy": "2.5.4",
+            "pydantic": "2.14.1",
+            "pint": "0.26.2",
+            "scipy": "1.18.1"
+          },
+          "probability_semantics": {}
+        },
+        "payload_digest": "7b65257904f32a3c2ff99668f2ae9a1b2a2852261030369c66b5bf8dd3c3ea34",
+        "field_or_protection_qualification": false
+      },
+      "adjacent_measurement_rate_bounds": [
+        {
+          "baseline_run_id": "synthetic-0",
+          "followup_run_id": "synthetic-1",
+          "rate_bounds_m_s": [
+            3.168808781402884e-12,
+            9.506426344208674e-12
+          ],
+          "bounds_meaning": "worst_case_declared_measurement_bounds_not_confidence_interval"
+        },
+        {
+          "baseline_run_id": "synthetic-1",
+          "followup_run_id": "synthetic-2",
+          "rate_bounds_m_s": [
+            3.1688087814029117e-12,
+            9.506426344208702e-12
+          ],
+          "bounds_meaning": "worst_case_declared_measurement_bounds_not_confidence_interval"
+        }
+      ]
+    },
+    "owner_model_discovery_count": 75,
+    "owner_model_ids": [
+      "corrosion.charge_to_loss",
+      "corrosion.coupon_loss",
+      "corrosion.faraday",
+      "corrosion.galvanic_linear",
+      "corrosion.gumbel_area_maximum",
+      "corrosion.power_law",
+      "corrosion.stern_geary",
+      "corrosion.thickness_trend",
+      "corrosion.uniform_forecast",
+      "creep.conditional_life",
+      "creep.larson_miller",
+      "creep.lognormal_life_fit",
+      "creep.norton",
+      "creep.time_fraction",
+      "degradation.archard_wear",
+      "degradation.parabolic_oxidation",
+      "fabrication.bend_strain",
+      "fabrication.bolt_preload",
+      "fabrication.thickness_budget",
+      "fatigue.basquin",
+      "fatigue.goodman",
+      "fatigue.hysteresis_path",
+      "fatigue.miner",
+      "fatigue.rainflow",
+      "fatigue.strain_life",
+      "fracture.paris_constant_amplitude",
+      "fracture.stress_intensity",
+      "fracture.variable_paris",
+      "geometry.thickness_grid",
+      "inspection.binomial_evidence",
+      "inspection.gas_expansion_energy",
+      "inspection.gas_pressure_decay",
+      "inspection.hit_miss_pod",
+      "inspection.logistic_pod",
+      "inspection.no_indication_update",
+      "inspection.pressure_test_load",
+      "inspection.tofd_depth",
+      "inspection.ultrasonic_thickness",
+      "inspection.vacuum_rise",
+      "kinetics.arrhenius",
+      "materials.chemistry_reconciliation",
+      "materials.ductility_retention",
+      "materials.impact_transition",
+      "materials.offset_yield",
+      "materials.pitting_composition_index",
+      "materials.ramberg_osgood",
+      "materials.tensile_point",
+      "mechanics.lame_cylinder",
+      "mechanics.plane_stress",
+      "mechanics.thermal_restraint",
+      "mechanics.thin_cylinder",
+      "protection.cathodic_budget",
+      "protection.coating_coverage",
+      "reliability.exclusive_paths",
+      "reliability.gamma_poisson",
+      "reliability.independent_gate",
+      "reliability.weibull_interval",
+      "structural.profile_capacity",
+      "testing.brinell",
+      "testing.vickers",
+      "thermal.cylindrical_layers",
+      "thermal.lumped_temperature",
+      "thermal.planar_layers",
+      "transport.hydrogen_slab_kinetic",
+      "transport.hydrogen_trap_equilibrium",
+      "transport.semi_infinite_diffusion",
+      "welding.arc_energy",
+      "welding.carbon_equivalents",
+      "welding.cooling_interval",
+      "welding.dilution",
+      "welding.hardness_traverse",
+      "welding.heat_treatment_history",
+      "welding.joint_profile",
+      "welding.waveform_energy",
+      "workflow.pressure_fatigue"
+    ],
+    "trend_input_schema_checked": true,
+    "model_discovery_is_not_all_model_validation": true
+  },
+  "runtime_versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pydantic": "2.14.1",
+    "openpyxl": "3.1.5"
+  },
+  "full_source_scans_complete": true,
+  "independently_validated_real_defect_correspondences": false,
+  "field_corrosion_rate_qualified": false,
+  "raw_or_transformed_feature_rows_in_public_summary": false
+}

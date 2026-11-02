@@ -1,0 +1,8 @@
+{
+  "transfer_plan": "/REPLACE/WITH/data-plan-20261029-human-control-room-v1.json",
+  "raw_root": "/REPLACE/WITH/VERIFIED/data/raw",
+  "test_files": [
+    "tests/test_human_control_room_study.py"
+  ],
+  "maximum_stage_bytes": 116494
+}

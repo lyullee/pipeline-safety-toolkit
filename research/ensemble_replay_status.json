@@ -1,0 +1,13 @@
+{
+  "schema": "pipeline_integrity.ensemble_replay_status.v1",
+  "api": "pipeline_integrity.uncertainty.verify_ensemble_result",
+  "authored_regression_functions": 1,
+  "numerical_tests_executed": 0,
+  "nurion_submitted": false,
+  "verification": "Re-evaluates every draw and compares node definitions, native payload digests, outputs, summaries and seal using the original design and node tuple.",
+  "limitations": [
+    "Node callbacks/providers must replay deterministically.",
+    "Caller-declared node source_digest is not an external signature or independent provenance proof.",
+    "No statistical independence, distribution fit, or field qualification is established."
+  ]
+}

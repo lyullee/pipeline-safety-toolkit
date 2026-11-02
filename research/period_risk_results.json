@@ -1,0 +1,97 @@
+{
+  "schema": "pipeline_integrity.period_logic_verification.v1",
+  "independent_references": {
+    "independent_or": {
+      "actual": 0.28,
+      "expected": 0.28,
+      "absolute_error": 0.0
+    },
+    "shared_identity": {
+      "actual": 0.2,
+      "expected": 0.2,
+      "absolute_error": 0.0
+    },
+    "period_and": {
+      "actual": 0.020000000000000004,
+      "expected": 0.02,
+      "absolute_error": 3.469446951953614e-18
+    },
+    "vote_one": {
+      "actual": 0.28,
+      "expected": 0.28,
+      "absolute_error": 0.0
+    },
+    "neither": {
+      "actual": 0.7200000000000001,
+      "expected": 0.72,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    "joint_or": {
+      "actual": 0.25,
+      "expected": 0.25,
+      "absolute_error": 0.0
+    }
+  },
+  "primary_data": {
+    "dataset_id": "cmsx6_creep",
+    "source": "https://zenodo.org/records/14750432",
+    "citation": "\u00c1vila Calder\u00f3n, Luis A.; Schriever, Sina; Han, Ying; Olbricht, Juergen; Dolabella Portella, Pedro; Skrotzki, Birgit; https://doi.org/10.5281/zenodo.14750432",
+    "license_id": "CC-BY-4.0",
+    "source_sha256": "ba3b7ba142e9578096502ca083704043bfa28eb2e3f307a6892a390241a88495",
+    "specimens": 12,
+    "failures": 9,
+    "right_censored": 3,
+    "source_fit_recomputed": true,
+    "hypothetical_components": 2,
+    "common_survival_and_fresh_age_are_declared_assumptions": true,
+    "shared_model_independence_status": "withheld",
+    "fitted_period_marginals": {
+      "A": 0.0943825652280562,
+      "B": 0.29145609585632926
+    },
+    "scenarios": {
+      "maximum_overlap": {
+        "probability": 0.29145609585632926,
+        "algebraic_reference": 0.29145609585632926,
+        "declared_not_observed_joint_distribution": true,
+        "result_digest": "6b07283849a77f14ac11576e94bc35dc8220344686cf3b97bf85f602c6a28352"
+      },
+      "minimum_overlap": {
+        "probability": 0.38583866108438547,
+        "algebraic_reference": 0.38583866108438547,
+        "declared_not_observed_joint_distribution": true,
+        "result_digest": "5fd6ff4429acf811595cc772394b15a57a455884dcf2eac12974e54767d2b006"
+      }
+    },
+    "parameter_uncertainty_included": false,
+    "observed_joint_dependence_available": false,
+    "independent_field_validation": false
+  },
+  "demand_annualization_status": "withheld",
+  "provider": {
+    "id": "human-reliability-toolkit",
+    "version": "0.2.0",
+    "source_digest": "b6ccef70258a46ad7f806f5d955ea72413285b851ca9cf3815f4aef6901863ee"
+  },
+  "external_sources": {
+    "hra": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    },
+    "materials": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "fdf2c26095236a86ab68ebfc6c684196d21d599c21b30e74df8b7a3ec3567179",
+      "source_tree_files": 68
+    }
+  },
+  "external_sources_unchanged": true,
+  "implementation_sha256": "a0fd6ac2514a82caeda4055b04fd6bb20811e32e9b6df1dd5795c266b6b00583",
+  "script_sha256": "f97917090ce94984ed15e998c5fe0999b8543a562dd82d06f83fb3ab9a910883",
+  "example_sha256": "2aab6e642b9b493696b05ed5dbd8f3ada66f926179dd6828f6fc383d47ce2385",
+  "temporal_coincidence_or_repair_modelled": false,
+  "source_or_transformed_specimen_rows_in_release": false,
+  "field_validation_claim": false
+}

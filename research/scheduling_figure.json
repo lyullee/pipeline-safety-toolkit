@@ -1,0 +1,9 @@
+{
+  "schema": "pipeline_integrity.schedule_figure.v1",
+  "generator_sha256": "8663fe0d9fac83e4da39c4ae780efc5528b4172cf2731999fc6794e5eea839d6",
+  "source_case_sha256": "d0c587d979d1d8279adf11bf716774a0a9cdab6daed9b387d2e2a999f1d17765",
+  "figure_sha256": "ce015cfe52843ae643b9588c09383989c4de4cd3856068b4f2e66dad2036b595",
+  "matplotlib": "3.11.2",
+  "original_synthetic_case": true,
+  "field_schedule_validation": false
+}

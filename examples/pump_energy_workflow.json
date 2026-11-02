@@ -1,0 +1,40 @@
+{
+  "schema_version": "pipeline_integrity.workflow.v1",
+  "id": "pump_energy_demo",
+  "context": {
+    "asset_id": "demo_pipe_01",
+    "scenario_id": "declared_parameter_example",
+    "clock_id": "elapsed",
+    "origin": "synthetic"
+  },
+  "steps": [
+    {
+      "id": "pump",
+      "model_id": "equipment.pump_power",
+      "parameters": {
+        "volume_flow_m3_s": 0.02,
+        "density_kg_m3": 998,
+        "head_m": 50,
+        "pump_efficiency": 0.8,
+        "motor_efficiency": 0.95
+      }
+    },
+    {
+      "id": "energy",
+      "model_id": "economics.energy",
+      "parameters": {
+        "operating_duration_s": 3600,
+        "price_per_kwh": 0.1,
+        "emission_kg_co2e_per_kwh": 0.4,
+        "currency": "USD",
+        "factor_source": "caller_declared_demo"
+      },
+      "bindings": {
+        "electrical_power_w": {
+          "step_id": "pump",
+          "output_name": "electrical_power_w"
+        }
+      }
+    }
+  ]
+}

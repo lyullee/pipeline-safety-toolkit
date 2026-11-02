@@ -1,0 +1,33 @@
+{
+  "title": "Najuch and Sun 2019 suspension rheology simulation data",
+  "authors": [
+    "Tim Najuch",
+    "Jin Sun"
+  ],
+  "year": 2019,
+  "doi": "10.7488/ds/2553",
+  "publication_doi": "10.1016/j.compfluid.2019.05.004",
+  "source_url": "https://datashare.ed.ac.uk/items/e609b324-901a-4672-b1c9-382799305769/full",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_basis": "Explicit dc.rights field of the official University of Edinburgh dataset metadata. The repository license.txt is a depositor agreement, not the CC license text.",
+  "archive_sha256": "37134fdf1ea9f88927d31b2bf225c31bab71f577f86fc02789882c368faac8e2",
+  "files": [
+    {
+      "file": "sp_reference.dat",
+      "archive_member": "LBM_stresslet_paper_data_graphics_2019-05-18/shearedSuspensions_phiMax0p25_mono/SS_Eq9_Re0p1/visc-stress-data",
+      "sha256": "0f534c2257cece1d3ece54769aa6deff0bb10deae4e3c2093a433e0a9922e1ca",
+      "unchanged_numeric_member": true
+    },
+    {
+      "file": "bb_comparison.dat",
+      "archive_member": "LBM_stresslet_paper_data_graphics_2019-05-18/shearedSuspensions_phiMax0p25_mono/SS_Eq8_Re0p1/visc-stress-data",
+      "sha256": "4b631b4d186c295675d10d19c06c49092eb235d187a297938bf1cd39b0d43996",
+      "unchanged_numeric_member": true
+    }
+  ],
+  "reference_scope": "Published independent LBM-DEM simulations of identical spheres under simple shear at Re=0.1 and five volume fractions 0.05 through 0.25. Not laboratory measurements.",
+  "method_selection": "SP is the reference branch because the primary dataset description identifies its stresslet consistency. BB is retained for comparison; it is not silently combined or selected by fit error.",
+  "modifications": "Original numeric members retained without alteration; renamed files and added this attribution/provenance object. No figures, plotting scripts, copied paper text or third-party digitized curves included.",
+  "acceptance_budget": "5 percent relative viscosity screening budget fixed before the first implementation run; not an uncertainty estimate or a claim to other suspensions."
+}

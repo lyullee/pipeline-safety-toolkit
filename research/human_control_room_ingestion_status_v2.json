@@ -1,0 +1,139 @@
+{
+  "schema": "pipeline_integrity.human_control_room_ingestion.v1",
+  "dataset_id": "human_control_room",
+  "source_record": "https://zenodo.org/records/13984198",
+  "license_id": "CC-BY-4.0",
+  "source_archive_bytes": 116494,
+  "source_archive_md5": "22c0303c109ea5f00e4cfe22ca954db0",
+  "source_archive_sha256": "b7c317f96354dbfd587656e0e4d4c9fe6f2a6c9d1b0df808b46efe67e4090038",
+  "workbook_sha256": "1fbc5bea29ae4cb543b90fbbdd214027b3334f354c77210ee0501b07c6e981f7",
+  "reader_sha256": "3c64558a663253270f90a1a8055e57d22333dd8e491d4645bcb698cc22e02d4c",
+  "python_version": "3.12.14",
+  "openpyxl_version": "3.1.5",
+  "sheet_count": 11,
+  "data_row_count": 1458,
+  "formula_cell_count": 0,
+  "publisher_reported_participant_count": 92,
+  "participant_count_reconciliation_complete": false,
+  "sheets": [
+    {
+      "sheet_name": "participant_info",
+      "data_rows": 57,
+      "column_count": 7,
+      "header_digest": "7804e0fcd8ee4d07537d13e890a2634d05892a291473a6f8b935e64b867274a5",
+      "formula_cell_count": 0,
+      "blank_cell_count": 27,
+      "distinct_participant_count": 57,
+      "distinct_scenario_count": null
+    },
+    {
+      "sheet_name": "spam",
+      "data_rows": 174,
+      "column_count": 7,
+      "header_digest": "4819d1e4629b0d865cb794c7488cedee90bdb28dd0354577da9d820aa7a0baa2",
+      "formula_cell_count": 0,
+      "blank_cell_count": 32,
+      "distinct_participant_count": 58,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "support_questions",
+      "data_rows": 144,
+      "column_count": 7,
+      "header_digest": "849f6d9ce9788a1ab09336f24ff245cc7c5805a2f45e23f16550a524159543be",
+      "formula_cell_count": 0,
+      "blank_cell_count": 41,
+      "distinct_participant_count": 48,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "AI_questions",
+      "data_rows": 72,
+      "column_count": 12,
+      "header_digest": "711186d96804fe111903f7d8867e9cec5328d4f299ded7a3a2e9462fdef7912a",
+      "formula_cell_count": 0,
+      "blank_cell_count": 174,
+      "distinct_participant_count": 24,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "nasa_tlx",
+      "data_rows": 174,
+      "column_count": 10,
+      "header_digest": "d774f3123333dd5c4c1f2121203390275e564db6b0c00905c2059c6e4abb2a72",
+      "formula_cell_count": 0,
+      "blank_cell_count": 14,
+      "distinct_participant_count": 58,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "sart",
+      "data_rows": 174,
+      "column_count": 17,
+      "header_digest": "e8ce4d883c35a045aeba7375f3d606c0a5c4217afe4ec7b456a71ec670efdbd5",
+      "formula_cell_count": 0,
+      "blank_cell_count": 30,
+      "distinct_participant_count": 58,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "indexes",
+      "data_rows": 174,
+      "column_count": 8,
+      "header_digest": "e5486b4ceb9f26e03a57dc198b3b67002d7fded4b6abe5eb930eea67c234ac5f",
+      "formula_cell_count": 0,
+      "blank_cell_count": 357,
+      "distinct_participant_count": 58,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "simulator_logs",
+      "data_rows": 139,
+      "column_count": 14,
+      "header_digest": "46ce926a0c8da61527102074475452ead27ef4348c5bd6ce86dc57f3ca79f583",
+      "formula_cell_count": 0,
+      "blank_cell_count": 5,
+      "distinct_participant_count": 47,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "watch_data",
+      "data_rows": 93,
+      "column_count": 6,
+      "header_digest": "a4c1a05dae3a15a877a4b2ebe196db858a1bfc7dfa6edabc2984fe94f2e83bde",
+      "formula_cell_count": 0,
+      "blank_cell_count": 0,
+      "distinct_participant_count": 30,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "eye_tracking",
+      "data_rows": 187,
+      "column_count": 21,
+      "header_digest": "85ecc77c6698628b62abef44027fb896d6784ede271e90a339529d8653ccafcb",
+      "formula_cell_count": 0,
+      "blank_cell_count": 768,
+      "distinct_participant_count": 66,
+      "distinct_scenario_count": 3
+    },
+    {
+      "sheet_name": "AI_vs_human",
+      "data_rows": 70,
+      "column_count": 5,
+      "header_digest": "f071abb28d2fb5e3c76b1bafaeea57445b0ab9d8d0b950a2469420a4c0fd047b",
+      "formula_cell_count": 0,
+      "blank_cell_count": 0,
+      "distinct_participant_count": 24,
+      "distinct_scenario_count": 3
+    }
+  ],
+  "participant_level_rows_included": false,
+  "participant_identifiers_included": false,
+  "header_text_included": false,
+  "units_mapped": false,
+  "time_axis_mapped": false,
+  "task_outcomes_mapped": false,
+  "human_failure_probability_estimated": false,
+  "pipeline_field_transfer_established": false,
+  "record_digest": "ada3bb0719d0afabb2a23baf34cd27d222ff73e955cd63ae94f3f3e86e1098e6"
+}

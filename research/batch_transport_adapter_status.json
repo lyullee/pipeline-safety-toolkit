@@ -1,0 +1,30 @@
+{
+  "schema": "pipeline_integrity.batch_transport_adapter_status.v1",
+  "date": "2026-10-28",
+  "state": "implemented_static_validation_pending",
+  "entrypoints": [
+    "pipeline_integrity.batch_transport.evaluate_batch_transport",
+    "pipeline_integrity.batch_transport.verify_batch_transport_record"
+  ],
+  "owner_physics_reimplemented": false,
+  "validated_contract_fields": [
+    "source-bound request and context",
+    "explicit component and inlet boundary definitions",
+    "bounded time-major/position-minor grids",
+    "component fraction closure",
+    "density, viscosity, temperature and absolute-pressure fields",
+    "total and per-component signed mass ledgers and caller tolerances",
+    "component-ledger sum consistency with every total-ledger term"
+    ,
+    "typed prescribed-temperature versus energy-coupled mode",
+    "signed energy ledger and independent caller tolerances for coupled thermal results",
+    "caller limits for total, component and energy numerical adjustments",
+    "lowercase SHA-256 provider source identity"
+  ],
+  "water_quality_relabelled_as_product_batch_model": false,
+  "new_test_functions_written": 7,
+  "new_parameterized_cases_written": 5,
+  "pytest_executed": false,
+  "numerical_owner_executed": false,
+  "confirmed_scope_percent_after_change": 67.2
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "pipeline_integrity.wds_event_ingestion_summary.v1",
+  "archive_bytes": 2265766,
+  "archive_md5": "4ac57517151a5958ebc2226954254f8d",
+  "archive_sha256": "d1452c4a311f2c3132ddda1b78caab4c782f5c658553c5e32266cee230db459c",
+  "repository": "https://github.com/Moazeni-s-Concise-Lab/WDSEventDB",
+  "repository_commit": "b9a3b54fbfce153e0728ec7c7e9f1e18414a0c19",
+  "license_id": "CC0-1.0",
+  "workbook_count": 9,
+  "data_row_count": 25165,
+  "category_rows": {
+    "clean": 9743,
+    "cyberattack": 5869,
+    "leakage": 4108,
+    "sensor_failure": 5445
+  },
+  "formula_cell_count": 706,
+  "blank_cell_count": 0,
+  "units_mapped": false,
+  "time_axis_mapped": false,
+  "formulas_evaluated": false,
+  "source_rows_included": false,
+  "workbooks": [
+    {
+      "member": "WDSEventDB/Clean/CleanData.xlsx",
+      "category": "clean",
+      "event_id": "CleanData",
+      "workbook_sha256": "b1bb33ece43ca87267c84adcbddf3b5a44b098485d0fc3496cc5fd0668245bc1",
+      "data_rows": 9743,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Leakage/LeakEvent1.xlsx",
+      "category": "leakage",
+      "event_id": "LeakEvent1",
+      "workbook_sha256": "98f67224850fb7ea9cf55e14a2965e7eb7e7e76852d81cb5ae72380e769c61bf",
+      "data_rows": 1368,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Leakage/LeakEvent2.xlsx",
+      "category": "leakage",
+      "event_id": "LeakEvent2",
+      "workbook_sha256": "37e3fecebc6a6f9b616dc5b8a2398f361bfc4ea877fd552681624519670f89ad",
+      "data_rows": 1385,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 535,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Leakage/LeakEvent3.xlsx",
+      "category": "leakage",
+      "event_id": "LeakEvent3",
+      "workbook_sha256": "2d7b3ba14a5da931f9d13259aa044533d4db5acc076c19c284d4145288c6cac1",
+      "data_rows": 1355,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Sensor Failure/SensorEvent1.xlsx",
+      "category": "sensor_failure",
+      "event_id": "SensorEvent1",
+      "workbook_sha256": "7874e4d5990bd8101dc6bd86476bc8cbabd7a986b220fd54f8f6e7385e4c0826",
+      "data_rows": 1360,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Sensor Failure/SensorEvent23.xlsx",
+      "category": "sensor_failure",
+      "event_id": "SensorEvent23",
+      "workbook_sha256": "465eb4e3ad5dba47d1e91399dae21ebde6e53c82e947c5794998d84bf0233d7f",
+      "data_rows": 1362,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Sensor Failure/SensorEvent45.xlsx",
+      "category": "sensor_failure",
+      "event_id": "SensorEvent45",
+      "workbook_sha256": "d8a825097ceb657574ac0e9ba9a1b802a5d4f5fe71faa9f7ffc888bece6ec955",
+      "data_rows": 1361,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Sensor Failure/SensorEvent67.xlsx",
+      "category": "sensor_failure",
+      "event_id": "SensorEvent67",
+      "workbook_sha256": "5b67ce752f54c0a0b4619ed0a30394dac942c621dff49ae098defd51f8c03c71",
+      "data_rows": 1362,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 0,
+      "blank_cells": 0
+    },
+    {
+      "member": "WDSEventDB/Cyberattack/CyberEvent1-4.xlsx",
+      "category": "cyberattack",
+      "event_id": "CyberEvent1-4",
+      "workbook_sha256": "4971d13475ab21d4805f78bcb9bbb8b18de6d8b552a54ed70d098099d94fc99e",
+      "data_rows": 5869,
+      "header_sha256": "52ad63f266e5174417ac42a75420398ea2440efee6786f8a3c95505cce2ef475",
+      "formula_cells": 171,
+      "blank_cells": 0
+    }
+  ],
+  "record_digest": "d67b77a29c45f17ff8ee307f6949f42bd2d1d4a2d8a27c715a32b3131c3ceaed"
+}

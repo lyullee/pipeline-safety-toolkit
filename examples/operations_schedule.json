@@ -1,0 +1,230 @@
+{
+  "specification": {
+    "horizon_s": 600.0,
+    "time_quantum_s": 60.0,
+    "operations": [
+      {
+        "id": "isolate",
+        "modes": [
+          {
+            "id": "normal",
+            "duration_s": 60.0,
+            "resources": {
+              "operator": 1
+            },
+            "consumables": {},
+            "fixed_cost": 0,
+            "evidence_id": "declared_operations_reference",
+            "earliest_start_s": null,
+            "latest_finish_s": null
+          }
+        ],
+        "earliest_start_s": 0.0,
+        "latest_finish_s": null,
+        "due_s": null,
+        "completion_cost_per_tick": 0,
+        "tardiness_cost_per_tick": 0
+      },
+      {
+        "id": "verify",
+        "modes": [
+          {
+            "id": "normal",
+            "duration_s": 60.0,
+            "resources": {
+              "inspector": 1
+            },
+            "consumables": {},
+            "fixed_cost": 0,
+            "evidence_id": "declared_operations_reference",
+            "earliest_start_s": null,
+            "latest_finish_s": null
+          }
+        ],
+        "earliest_start_s": 0.0,
+        "latest_finish_s": null,
+        "due_s": null,
+        "completion_cost_per_tick": 0,
+        "tardiness_cost_per_tick": 0
+      },
+      {
+        "id": "inspect",
+        "modes": [
+          {
+            "id": "one_person",
+            "duration_s": 120.0,
+            "resources": {
+              "inspector": 1
+            },
+            "consumables": {},
+            "fixed_cost": 0,
+            "evidence_id": "declared_operations_reference",
+            "earliest_start_s": null,
+            "latest_finish_s": null
+          },
+          {
+            "id": "two_people",
+            "duration_s": 60.0,
+            "resources": {
+              "inspector": 2
+            },
+            "consumables": {
+              "spare": 1
+            },
+            "fixed_cost": 3,
+            "evidence_id": "declared_operations_reference",
+            "earliest_start_s": null,
+            "latest_finish_s": null
+          }
+        ],
+        "earliest_start_s": 0.0,
+        "latest_finish_s": null,
+        "due_s": null,
+        "completion_cost_per_tick": 0,
+        "tardiness_cost_per_tick": 0
+      },
+      {
+        "id": "restore",
+        "modes": [
+          {
+            "id": "normal",
+            "duration_s": 60.0,
+            "resources": {
+              "operator": 1
+            },
+            "consumables": {},
+            "fixed_cost": 0,
+            "evidence_id": "declared_operations_reference",
+            "earliest_start_s": null,
+            "latest_finish_s": null
+          }
+        ],
+        "earliest_start_s": 0.0,
+        "latest_finish_s": null,
+        "due_s": null,
+        "completion_cost_per_tick": 0,
+        "tardiness_cost_per_tick": 0
+      },
+      {
+        "id": "other_use",
+        "modes": [
+          {
+            "id": "normal",
+            "duration_s": 180.0,
+            "resources": {
+              "asset": 1
+            },
+            "consumables": {},
+            "fixed_cost": 0,
+            "evidence_id": "declared_operations_reference",
+            "earliest_start_s": null,
+            "latest_finish_s": null
+          }
+        ],
+        "earliest_start_s": 0.0,
+        "latest_finish_s": null,
+        "due_s": null,
+        "completion_cost_per_tick": 0,
+        "tardiness_cost_per_tick": 0
+      }
+    ],
+    "resources": [
+      {
+        "id": "operator",
+        "capacity": 1,
+        "calendar": [
+          {
+            "start_s": 0.0,
+            "finish_s": 60.0,
+            "capacity": 0
+          }
+        ],
+        "evidence_id": "declared_operations_reference"
+      },
+      {
+        "id": "inspector",
+        "capacity": 2,
+        "calendar": [],
+        "evidence_id": "declared_operations_reference"
+      },
+      {
+        "id": "asset",
+        "capacity": 1,
+        "calendar": [],
+        "evidence_id": "declared_operations_reference"
+      }
+    ],
+    "relations": [
+      {
+        "id": "isolate_before_verify",
+        "before": "isolate",
+        "after": "verify",
+        "before_event": "finish",
+        "after_event": "start",
+        "minimum_lag_s": 0.0,
+        "maximum_lag_s": null
+      },
+      {
+        "id": "verify_before_inspect",
+        "before": "verify",
+        "after": "inspect",
+        "before_event": "finish",
+        "after_event": "start",
+        "minimum_lag_s": 0.0,
+        "maximum_lag_s": null
+      },
+      {
+        "id": "inspect_before_restore",
+        "before": "inspect",
+        "after": "restore",
+        "before_event": "finish",
+        "after_event": "start",
+        "minimum_lag_s": 0.0,
+        "maximum_lag_s": null
+      }
+    ],
+    "holds": [
+      {
+        "id": "declared_asset_hold",
+        "from_operation": "isolate",
+        "to_operation": "restore",
+        "from_event": "start",
+        "to_event": "finish",
+        "resources": {
+          "asset": 1
+        },
+        "evidence_id": "declared_operations_reference"
+      }
+    ],
+    "consumable_budgets": {
+      "spare": 1
+    },
+    "makespan_cost_per_tick": 1,
+    "objective_unit": "declared_planning_cost",
+    "evidence_id": "declared_operations_reference",
+    "maximum_operations": 1000,
+    "maximum_intervals": 20000,
+    "maximum_seconds": 30.0,
+    "relative_gap_limit": 0.0,
+    "workers": 1,
+    "random_seed": 0
+  },
+  "context": {
+    "asset_id": "example_pipe",
+    "scenario_id": "inspection_planning",
+    "clock_id": "planning_elapsed",
+    "origin": "synthetic",
+    "evidence": [
+      {
+        "id": "declared_operations_reference",
+        "citation": "Original planning example with hypothetical durations and resources",
+        "origin": "synthetic",
+        "locator": "",
+        "sha256": null,
+        "license_id": "MIT",
+        "limitations": []
+      }
+    ],
+    "metadata": {}
+  }
+}

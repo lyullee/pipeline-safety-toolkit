@@ -1,0 +1,19 @@
+{
+  "schema": "pipeline_integrity.backend_limits.v1",
+  "limits": [
+    {
+      "model": "thermo.cubic_gas_eos",
+      "provider": "CoolProp",
+      "provider_version": "8.0.0",
+      "backend": "PR",
+      "fluid": "Nitrogen",
+      "pressure_Pa_abs": 2000000.0,
+      "temperature_K": 350.0,
+      "limitation": "Automatic P,T gas-density search raises ValueError. The original failing receipt is retained.",
+      "original_failure_receipt": "artifacts/physical-campaign-223/20261102T152437276991Z/receipt.json",
+      "verified_alternative": "The same PR backend accepts T,Dmass at the independently solved cubic density and recovers the requested pressure. No phase is forced and no backend is substituted.",
+      "test": "tests/test_cubic_eos_independent.py",
+      "upstream_PT_limitation_fixed": false
+    }
+  ]
+}

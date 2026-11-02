@@ -1,0 +1,221 @@
+{
+  "schema": "pipeline_integrity.integration_checks.v1",
+  "materials": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "d0b98ce9972cfc882abbca0b2da18b9c56b709f401c5d8a3d8d582e810c046ec",
+    "source_tree_files": 64,
+    "version": "0.1.0.dev0",
+    "model_results": [
+      {
+        "schema_version": "pipeline_integrity.external_result.v1",
+        "owner": "matintegrity",
+        "owner_schema": "matintegrity.assessment.v1",
+        "status": "computed",
+        "asset_id": "example_pipe",
+        "payload": {
+          "schema_version": "matintegrity.assessment.v1",
+          "model_id": "corrosion.uniform_forecast",
+          "model_version": "1.0.0",
+          "status": "computed",
+          "inputs": {
+            "current_thickness_m": 0.01,
+            "required_thickness_m": 0.006,
+            "rate_m_s": 1e-11,
+            "horizon_s": 31557600.0
+          },
+          "values": {
+            "thickness_margin_m": 0.004,
+            "predicted_thickness_m": 0.009684424,
+            "forecast_margin_m": 0.0036844240000000004,
+            "time_to_required_s": 400000000.00000006
+          },
+          "units": {
+            "thickness_margin_m": "m",
+            "predicted_thickness_m": "m",
+            "forecast_margin_m": "m",
+            "time_to_required_s": "s"
+          },
+          "assumptions": [
+            "Constant nonnegative growth; required thickness supplied by a separately qualified assessment."
+          ],
+          "notes": [
+            "linear extrapolation under fixed conditions",
+            "Loss of positive wall thickness invalidates continued linear evolution."
+          ],
+          "context": {
+            "asset_id": "example_pipe",
+            "location_id": "example_segment",
+            "time_basis": "inspection_elapsed",
+            "evidence": [
+              {
+                "source_id": "declared_example",
+                "origin": "synthetic",
+                "citation": "Caller-declared demonstration parameters",
+                "license_id": "MIT",
+                "sha256": null
+              }
+            ],
+            "metadata": {
+              "pipeline_scenario_id": "declared_parameter_demo",
+              "pipeline_origin": "synthetic",
+              "pipeline_evidence_origins": {
+                "declared_example": "synthetic"
+              },
+              "pipeline_context_digest": "edb8120e1b43a42834909248ef3a738e252e2aa2126339903f329ee8664d2a63"
+            }
+          },
+          "input_digest": "83fc1baa6a4fe49d98fa0570ab18c080c1af2f4d4ed2e7cc040b9e0c8f29dd80",
+          "source_ids": [
+            "linear_degradation"
+          ],
+          "qualification": "engineering_screening",
+          "runtime": {
+            "matintegrity": "0.1.0.dev0",
+            "python": "3.12.14",
+            "numpy": "2.5.4",
+            "pydantic": "2.14.1",
+            "pint": "0.26.2",
+            "scipy": "1.18.1",
+            "rainflow": "3.2.0"
+          },
+          "probability_semantics": {}
+        },
+        "payload_digest": "364a62ecc143648b5721dab667251473dbc7bcca6a3cd47556360ad7aa1ae1f6",
+        "field_or_protection_qualification": false
+      },
+      {
+        "schema_version": "pipeline_integrity.external_result.v1",
+        "owner": "matintegrity",
+        "owner_schema": "matintegrity.assessment.v1",
+        "status": "computed",
+        "asset_id": "example_pipe",
+        "payload": {
+          "schema_version": "matintegrity.assessment.v1",
+          "model_id": "thermal.cylindrical_layers",
+          "model_version": "1.0.0",
+          "status": "computed",
+          "inputs": {
+            "radii_m": [
+              0.05,
+              0.055,
+              0.1
+            ],
+            "conductivity_W_m_K": [
+              45.0,
+              0.04
+            ],
+            "length_m": 1.0,
+            "inner_fluid_temperature_K": 350.0,
+            "ambient_temperature_K": 293.15,
+            "radiative_environment_temperature_K": 293.15,
+            "inner_convection_W_m2_K": 1000.0,
+            "outer_convection_W_m2_K": 8.0,
+            "outer_emissivity": 0.8
+          },
+          "values": {
+            "heat_rate_outward_W": 22.665949435137005,
+            "interface_temperatures_K": [
+              349.92785204215056,
+              349.9202115590004,
+              296.00431314479516
+            ],
+            "conduction_resistances_K_W": [
+              0.0003370908053963473,
+              2.3787178458372535
+            ],
+            "outer_balance_residual_W": 2.1316282072803006e-14
+          },
+          "units": {
+            "heat_rate_outward_W": "W",
+            "interface_temperatures_K": "K",
+            "conduction_resistances_K_W": "K/W",
+            "outer_balance_residual_W": "W"
+          },
+          "assumptions": [
+            "Concentric cylindrical layers with two convection boundaries and optional outer radiation."
+          ],
+          "notes": [
+            "Steady constant-conductivity radial layers; end effects, contact resistance, moisture and multidimensional bridges excluded."
+          ],
+          "context": {
+            "asset_id": "example_pipe",
+            "location_id": "example_segment",
+            "time_basis": "inspection_elapsed",
+            "evidence": [
+              {
+                "source_id": "declared_example",
+                "origin": "synthetic",
+                "citation": "Caller-declared demonstration parameters",
+                "license_id": "MIT",
+                "sha256": null
+              }
+            ],
+            "metadata": {
+              "pipeline_scenario_id": "declared_parameter_demo",
+              "pipeline_origin": "synthetic",
+              "pipeline_evidence_origins": {
+                "declared_example": "synthetic"
+              },
+              "pipeline_context_digest": "edb8120e1b43a42834909248ef3a738e252e2aa2126339903f329ee8664d2a63"
+            }
+          },
+          "input_digest": "3c2b5d1854e8a2cb0c672410a448126a43fee5d173570a521305a024fbdba608",
+          "source_ids": [
+            "inl_cylindrical_heat"
+          ],
+          "qualification": "engineering_screening",
+          "runtime": {
+            "matintegrity": "0.1.0.dev0",
+            "python": "3.12.14",
+            "numpy": "2.5.4",
+            "pydantic": "2.14.1",
+            "pint": "0.26.2",
+            "scipy": "1.18.1",
+            "rainflow": "3.2.0"
+          },
+          "probability_semantics": {}
+        },
+        "payload_digest": "4e34175c7604173d1bcf810b7a2dccfbc0cbb956a1736c8d0c830ab88962aaee",
+        "field_or_protection_qualification": false
+      }
+    ]
+  },
+  "monitoring": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+    "source_tree_files": 28,
+    "version": "0.1.0",
+    "detector": "robust_z",
+    "origin": "simulation",
+    "ordered_temporal_partitions": {
+      "fit_rows": 288,
+      "calibration_rows": 288,
+      "evaluation_rows": 288
+    },
+    "valid_evaluation_rows": 288,
+    "alarm_count": 1,
+    "threshold": 2037055.7434551616,
+    "raw_training_zero_mad_channels": [
+      "pressure_head:n215",
+      "volume_flow:PUMP_1"
+    ],
+    "scale_policy_requires_review": true,
+    "leak_detection_accuracy_established": false,
+    "note": "Three early days exercise the interface; this is not a labeled detector benchmark."
+  },
+  "hra": {
+    "commit": null,
+    "working_tree_modified": null,
+    "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+    "source_tree_files": 28,
+    "version": "0.2.0",
+    "actual_signal_series_rows": 864,
+    "clock_id": "battledim_2018_local_elapsed",
+    "unit": "m",
+    "origin": "simulation",
+    "hep_inferred_from_pressure": false
+  },
+  "other_repositories_modified": false
+}

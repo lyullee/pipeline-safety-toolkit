@@ -1,0 +1,25 @@
+[TITLE]
+Independently authored constant-demand water transport reference
+
+[JUNCTIONS]
+; ID elevation_m demand_L_s
+J 0 10
+
+[RESERVOIRS]
+; ID head_m
+R 100
+
+[PIPES]
+; ID start end length_m diameter_mm H_W_coefficient minor_loss status
+P R J 100 200 120 0 OPEN
+
+[OPTIONS]
+UNITS LPS
+HEADLOSS H-W
+QUALITY NONE
+
+[REPORT]
+STATUS NO
+SUMMARY NO
+
+[END]

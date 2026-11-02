@@ -1,0 +1,28 @@
+{
+  "schema": "pipeline_integrity.potash_pipe_cp_structure.v1",
+  "dataset_id": "potash_cp",
+  "doi": "10.17632/z6m27978vj.2",
+  "version": "2",
+  "license_id": "CC-BY-4.0",
+  "source_filename": "Current Density to Protect Carbon Steel in Saturated Brine.docx",
+  "source_bytes": 15345,
+  "source_sha256": "de262b94567fb6d72c6ed520cdbecb5660d68579e266e33d0b33c023def9ed2f",
+  "package_parts": 11,
+  "embedded_media_count": 0,
+  "table_count": 1,
+  "table_row_count": 22,
+  "header_row_count": 2,
+  "data_row_count": 20,
+  "column_count_per_data_row": [
+    6
+  ],
+  "replicate_columns": 3,
+  "time_unit": "min",
+  "time_points_unique_increasing": true,
+  "time_start_min": 0.0,
+  "time_end_min": 95.0,
+  "time_step_min": [
+    5.0
+  ],
+  "raw_observations_included": false
+}

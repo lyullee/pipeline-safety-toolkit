@@ -1,0 +1,3276 @@
+{
+  "schema": "pipeline_integrity.structural_verification.v1",
+  "authored_cases": {
+    "cantilever_point": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "bdb4d981964e1e9cf37d1e0136a8eb3d367bc343e81b020f980af92bc7307703",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                1000.0000000000011,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                4000.0000000000045
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -0.003949177612825939,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.0014809416048097272
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                4000.0000000000045,
+                0.0,
+                -1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                8.167238959037533e-13
+              ],
+              "native_global_end_actions": [
+                0.0,
+                1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                4000.0000000000045,
+                0.0,
+                -1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                8.167238959037533e-13
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                4000.0000000000045,
+                0.0,
+                -1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                8.167238959037533e-13
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                4000.0000000000045,
+                0.0,
+                -1000.0000000000011,
+                0.0,
+                0.0,
+                0.0,
+                8.167238959037533e-13
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1000.0000000000011,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 4000.0000000000045,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1000.0000000000011,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 3000.0000000000036,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0003393824511022292,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1000.0000000000011,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 2000.0000000000023,
+                  "local_translation_m": [
+                    0.0,
+                    -0.001234118004008106,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1000.0000000000011,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1000.0000000000009,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0024990889581164156,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1000.0000000000011,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    -0.003949177612825939,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              1.1368683772161603e-12,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              4.547473508864641e-12
+            ],
+            "force_limit_n": 2.1000000000000012e-05,
+            "moment_limit_nm": 8.100000000000004e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 2.1000000000000023e-05,
+                "moment_limit_nm": 8.100000000000009e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  -1.1368683772161603e-12,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  8.167238959037533e-13
+                ],
+                "force_limit_n": 2.1000000000000012e-05,
+                "moment_limit_nm": 1.0000000000000082e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.0009872944032064848,
+            "maximum_sampled_member_translation_over_length": 0.0009872944032064848,
+            "maximum_node_rotation_rad": 0.0014809416048097272,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "cantilever_FX": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "0168fa738d73237ebe12e7208301c4d232b26f14fc5bba0069fa41b8fee4c967",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                1000.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                -3.350630380882003e-06,
+                0.0,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_global_end_actions": [
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 1000.0,
+                  "elastic_axial_force_tension_positive_n": -1000.0,
+                  "mean_elastic_axial_stress_pa": -167531.51904410016,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 1000.0,
+                  "elastic_axial_force_tension_positive_n": -1000.0,
+                  "mean_elastic_axial_stress_pa": -167531.51904410016,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    -8.376575952205007e-07,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 1000.0,
+                  "elastic_axial_force_tension_positive_n": -1000.0,
+                  "mean_elastic_axial_stress_pa": -167531.51904410016,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    -1.6753151904410015e-06,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 1000.0,
+                  "elastic_axial_force_tension_positive_n": -1000.0,
+                  "mean_elastic_axial_stress_pa": -167531.51904410016,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    -2.512972785661502e-06,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 1000.0,
+                  "elastic_axial_force_tension_positive_n": -1000.0,
+                  "mean_elastic_axial_stress_pa": -167531.51904410016,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    -3.350630380882003e-06,
+                    0.0,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "force_limit_n": 2.1000000000000002e-05,
+            "moment_limit_nm": 1e-06,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 2.1000000000000002e-05,
+                "moment_limit_nm": 1e-06,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 2.1000000000000002e-05,
+                "moment_limit_nm": 1e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 8.376575952205007e-07,
+            "maximum_sampled_member_translation_over_length": 8.376575952205007e-07,
+            "maximum_node_rotation_rad": 0.0,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 8.376575952205007e-07,
+            "maximum_mean_total_axial_strain": 8.376575952205007e-07
+          }
+        }
+      }
+    },
+    "cantilever_FZ": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "450ce556e9061374b86ade9ac617e7a551433db42340ce4b6eaa06ecc746a8c5",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                1000.0000000000014
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                -4000.0000000000045,
+                0.0
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                0.0,
+                -0.003949177612825939
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0014809416048097272,
+                -0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                0.0,
+                1000.0000000000014,
+                0.0,
+                -4000.0000000000045,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000014,
+                0.0,
+                -9.094947017729282e-13,
+                0.0
+              ],
+              "native_global_end_actions": [
+                0.0,
+                0.0,
+                1000.0000000000014,
+                0.0,
+                -4000.0000000000045,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000014,
+                0.0,
+                -9.094947017729282e-13,
+                0.0
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                0.0,
+                1000.0000000000014,
+                0.0,
+                -4000.0000000000045,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000014,
+                0.0,
+                -9.094947017729282e-13,
+                0.0
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                0.0,
+                1000.0000000000014,
+                0.0,
+                -4000.0000000000045,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000014,
+                0.0,
+                -9.094947017729282e-13,
+                0.0
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 1000.0000000000014,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": 4000.0000000000045,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 1000.0000000000014,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": 3000.000000000003,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    -0.0003393824511022292
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 1000.0000000000014,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": 2000.0000000000018,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    -0.001234118004008106
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 1000.0000000000014,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": 1000.0000000000005,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    -0.002499088958116415
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 1000.0000000000014,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -9.094947017729282e-13,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    -0.003949177612825939
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              0.0,
+              1.3642420526593924e-12
+            ],
+            "moment_residual_nm": [
+              0.0,
+              -4.547473508864641e-12,
+              0.0
+            ],
+            "force_limit_n": 2.1000000000000016e-05,
+            "moment_limit_nm": 8.100000000000004e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 2.100000000000003e-05,
+                "moment_limit_nm": 8.100000000000009e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  -1.3642420526593924e-12
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  -9.094947017729282e-13,
+                  0.0
+                ],
+                "force_limit_n": 2.1000000000000016e-05,
+                "moment_limit_nm": 1.000000000000009e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.0009872944032064848,
+            "maximum_sampled_member_translation_over_length": 0.0009872944032064848,
+            "maximum_node_rotation_rad": 0.0014809416048097272,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "cantilever_MX": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "0a0b33d269ed9b8fdb1ec4203c5f80b459a7705d858c06644d995ed4181dec59",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                1000.0,
+                0.0,
+                0.0
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                0.0,
+                -0.0
+              ],
+              "rotation_rad": [
+                -0.0009626120431263218,
+                0.0,
+                -0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                0.0,
+                0.0,
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0
+              ],
+              "native_global_end_actions": [
+                0.0,
+                0.0,
+                0.0,
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                0.0,
+                0.0,
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                0.0,
+                0.0,
+                1000.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0,
+                0.0,
+                0.0
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 1000.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 1000.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 1000.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 1000.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 1000.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "force_limit_n": 1e-06,
+            "moment_limit_nm": 2.1000000000000002e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 1e-06,
+                "moment_limit_nm": 2.1000000000000002e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 1e-06,
+                "moment_limit_nm": 2.1000000000000002e-05,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.0,
+            "maximum_sampled_member_translation_over_length": 0.0,
+            "maximum_node_rotation_rad": 0.0009626120431263218,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "cantilever_MZ": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "9ec09920ff1f444522e051bc0a2e1c0ba755a37fc8dc05250861248136659a99",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                1.1603430427007517e-13,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                1000.0000000000011
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -0.0014809416048097272,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.0007404708024048635
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                1000.0000000000011,
+                0.0,
+                -1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000003
+              ],
+              "native_global_end_actions": [
+                0.0,
+                1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                1000.0000000000011,
+                0.0,
+                -1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000003
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                1000.0000000000011,
+                0.0,
+                -1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000003
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                1000.0000000000011,
+                0.0,
+                -1.1603430427007517e-13,
+                0.0,
+                0.0,
+                0.0,
+                -1000.0000000000003
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.1603430427007517e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1000.0000000000011,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.1603430427007517e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1000.000000000001,
+                  "local_translation_m": [
+                    0.0,
+                    -9.255885030060803e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.1603430427007517e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1000.0000000000009,
+                  "local_translation_m": [
+                    0.0,
+                    -0.00037023540120243196,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.1603430427007517e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1000.0000000000008,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0008330296527054719,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.1603430427007517e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1000.0000000000007,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0014809416048097274,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              1.1603430427007517e-13,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              1.1368683772161603e-12
+            ],
+            "force_limit_n": 1.000000000000001e-06,
+            "moment_limit_nm": 2.1000000000000012e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 1.0000000000000023e-06,
+                "moment_limit_nm": 2.1000000000000023e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  -1.1603430427007517e-13,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  -3.410605131648481e-13
+                ],
+                "force_limit_n": 1.000000000000001e-06,
+                "moment_limit_nm": 2.1000000000000006e-05,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.0003702354012024318,
+            "maximum_sampled_member_translation_over_length": 0.00037023540120243185,
+            "maximum_node_rotation_rad": 0.0007404708024048635,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "uniform": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "9be8c696eddd7ece1dc102cc8d95e5be7aefa9416010dea1704cbaedff82cb2b",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                400.00000000000017,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                800.0000000000007
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -0.0005923766419238908,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.00019745888064129697
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                400.00000000000017,
+                0.0,
+                0.0,
+                0.0,
+                800.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                1.1368683772161603e-13
+              ],
+              "native_global_end_actions": [
+                0.0,
+                400.00000000000017,
+                0.0,
+                0.0,
+                0.0,
+                800.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                1.1368683772161603e-13
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                400.00000000000017,
+                0.0,
+                0.0,
+                0.0,
+                800.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                1.1368683772161603e-13
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                400.00000000000017,
+                0.0,
+                0.0,
+                0.0,
+                800.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                1.1368683772161603e-13
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 400.00000000000017,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 800.0000000000007,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 300.00000000000017,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 450.0000000000005,
+                  "local_translation_m": [
+                    0.0,
+                    -6.247722395291037e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 200.00000000000017,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 200.00000000000034,
+                  "local_translation_m": [
+                    0.0,
+                    -0.000209800060681378,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100.00000000000017,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 50.00000000000023,
+                  "local_translation_m": [
+                    0.0,
+                    -0.00039568908503509904,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.7053025658242404e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0005923766419238909,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              1.7053025658242404e-13,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              6.821210263296962e-13
+            ],
+            "force_limit_n": 9.000000000000004e-06,
+            "moment_limit_nm": 1.7000000000000007e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 9.000000000000004e-06,
+                "moment_limit_nm": 1.7000000000000013e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  -1.7053025658242404e-13,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  1.1368683772161603e-13
+                ],
+                "force_limit_n": 1.0000000000000016e-06,
+                "moment_limit_nm": 1.000000000000001e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.0001480941604809727,
+            "maximum_sampled_member_translation_over_length": 0.00014809416048097273,
+            "maximum_node_rotation_rad": 0.00019745888064129697,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "partial_triangle": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "5be75fd7b47db4b81f9d8f694bdc785e8db6bc6f0f0519b4939b471f75b178e7",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                360.0000000000002,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                864.0000000000007
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -0.000632373912786592,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.0002025928115379707
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                360.0000000000002,
+                0.0,
+                0.0,
+                0.0,
+                864.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                8.526512829121202e-14
+              ],
+              "native_global_end_actions": [
+                0.0,
+                360.0000000000002,
+                0.0,
+                0.0,
+                0.0,
+                864.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                8.526512829121202e-14
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                360.0000000000002,
+                0.0,
+                0.0,
+                0.0,
+                864.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                8.526512829121202e-14
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                360.0000000000002,
+                0.0,
+                0.0,
+                0.0,
+                864.0000000000007,
+                0.0,
+                -1.7053025658242404e-13,
+                0.0,
+                0.0,
+                0.0,
+                8.526512829121202e-14
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 360.0000000000002,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 864.0000000000007,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 357.5000000000002,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 504.16666666666714,
+                  "local_translation_m": [
+                    0.0,
+                    -6.886384632955247e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 270.0000000000002,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 180.00000000000017,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0002315067154302757,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 57.50000000000023,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 5.8333333333332575,
+                  "local_translation_m": [
+                    0.0,
+                    -0.00042978474189673307,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 1.7053025658242404e-13,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": -7.958078640513119e-14,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0006323739127865918,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              1.7053025658242404e-13,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              4.547473508864641e-13
+            ],
+            "force_limit_n": 8.200000000000003e-06,
+            "moment_limit_nm": 1.828000000000001e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 8.200000000000004e-06,
+                "moment_limit_nm": 1.8280000000000015e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  -1.7053025658242404e-13,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  8.526512829121202e-14
+                ],
+                "force_limit_n": 1.0000000000000016e-06,
+                "moment_limit_nm": 1.0000000000000008e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.000158093478196648,
+            "maximum_sampled_member_translation_over_length": 0.00015809347819664796,
+            "maximum_node_rotation_rad": 0.0002025928115379707,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "simply_supported": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "49629904612fa43b634f7a10c332f7bc9b3b264a24bdddceb93a1ffe72584b41",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -4.93647201603242e-05
+              ],
+              "reaction_force_n": [
+                0.0,
+                200.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                4.93647201603242e-05
+              ],
+              "reaction_force_n": [
+                0.0,
+                200.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "native_global_end_actions": [
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 200.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": -150.0,
+                  "local_translation_m": [
+                    0.0,
+                    -4.3965453892788735e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 0.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": -200.0,
+                  "local_translation_m": [
+                    0.0,
+                    -6.170590020040523e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": -100.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": -150.0,
+                  "local_translation_m": [
+                    0.0,
+                    -4.3965453892788714e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": -200.0,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 0.0,
+                  "local_translation_m": [
+                    0.0,
+                    2.710505431213761e-20,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "force_limit_n": 9e-06,
+            "moment_limit_nm": 1.7e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 4.9999999999999996e-06,
+                "moment_limit_nm": 1e-06,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 4.9999999999999996e-06,
+                "moment_limit_nm": 1e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.0,
+            "maximum_sampled_member_translation_over_length": 1.5426475050101308e-05,
+            "maximum_node_rotation_rad": 4.93647201603242e-05,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "tip_spring": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "e9c66cad2597fc4c8806d4d3e4ff6417353922f04aa9455b959160232bcb26c3",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                716.8881404739756,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                2867.5525618959036
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -0.00283111859526024,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.0010616694732225901
+              ],
+              "reaction_force_n": [
+                0.0,
+                283.11185952602403,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                2867.5525618959036,
+                0.0,
+                -716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                -4.3342818835541104e-13
+              ],
+              "native_global_end_actions": [
+                0.0,
+                716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                2867.5525618959036,
+                0.0,
+                -716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                -4.3342818835541104e-13
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                2867.5525618959036,
+                0.0,
+                -716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                -4.3342818835541104e-13
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                2867.5525618959036,
+                0.0,
+                -716.8881404739756,
+                0.0,
+                0.0,
+                0.0,
+                -4.3342818835541104e-13
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 716.8881404739756,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 2867.5525618959036,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 716.8881404739756,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 2150.664421421928,
+                  "local_translation_m": [
+                    0.0,
+                    -0.00024329925428017676,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 716.8881404739756,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1433.7762809479525,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0008847245610188249,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 716.8881404739756,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 716.8881404739768,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0017915672360631204,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 716.8881404739756,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1.3642420526593924e-12,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0028311185952602405,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              -3.979039320256561e-13,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              -2.2737367544323206e-13
+            ],
+            "force_limit_n": 2.0999999999999995e-05,
+            "moment_limit_nm": 8.1e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 1.533776280947951e-05,
+                "moment_limit_nm": 5.8351051237918074e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  3.979039320256561e-13,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  -4.3342818835541104e-13
+                ],
+                "force_limit_n": 2.0999999999999995e-05,
+                "moment_limit_nm": 1.0000000000000042e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.00070777964881506,
+            "maximum_sampled_member_translation_over_length": 0.0007077796488150601,
+            "maximum_node_rotation_rad": 0.0010616694732225901,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "imposed_movement": {
+      "status": "computed",
+      "issues": [],
+      "record_digest": "19a340ef6e03c670fa134f4c62af88a85c96f5056c2affd6e0ffd4b2574cc956",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                253.2172766178587,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                1012.869106471435
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -0.001,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -0.00037500000000000006
+              ],
+              "reaction_force_n": [
+                0.0,
+                -253.2172766178587,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                1012.869106471435,
+                0.0,
+                -253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                -1.4219757368218456e-13
+              ],
+              "native_global_end_actions": [
+                0.0,
+                253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                1012.869106471435,
+                0.0,
+                -253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                -1.4219757368218456e-13
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                1012.869106471435,
+                0.0,
+                -253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                -1.4219757368218456e-13
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                1012.869106471435,
+                0.0,
+                -253.2172766178587,
+                0.0,
+                0.0,
+                0.0,
+                -1.4219757368218456e-13
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 253.2172766178587,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 1012.869106471435,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 253.2172766178587,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 759.6518298535763,
+                  "local_translation_m": [
+                    0.0,
+                    -8.593750000000001e-05,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 253.2172766178587,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 506.4345532357176,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0003125,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 253.2172766178587,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 253.21727661785894,
+                  "local_translation_m": [
+                    0.0,
+                    -0.0006328125000000001,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 253.2172766178587,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 2.2737367544323206e-13,
+                  "local_translation_m": [
+                    0.0,
+                    -0.001,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              2.2737367544323206e-13
+            ],
+            "force_limit_n": 6.0643455323571736e-06,
+            "moment_limit_nm": 2.12573821294287e-05,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 6.0643455323571736e-06,
+                "moment_limit_nm": 2.12573821294287e-05,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  -1.4219757368218456e-13
+                ],
+                "force_limit_n": 6.0643455323571736e-06,
+                "moment_limit_nm": 1.0000000000000014e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 0.00025,
+            "maximum_sampled_member_translation_over_length": 0.00025,
+            "maximum_node_rotation_rad": 0.00037500000000000006,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    },
+    "unreviewed": {
+      "status": "needs_data",
+      "issues": [
+        "frame applicability reviews remain unresolved"
+      ],
+      "record_digest": "738b1a66f4747186c75d55aee6645cea653c42755326e9755d137706498be82b",
+      "combinations": {}
+    },
+    "missing_load": {
+      "status": "needs_data",
+      "issues": [
+        "a nodal force or moment is unresolved"
+      ],
+      "record_digest": "8f389290a7bce7bd7a11dd81eba7cbe3bbf4024e5ffd698607e2984eb6d93e2c",
+      "combinations": {}
+    },
+    "unstable": {
+      "status": "out_of_scope",
+      "issues": [
+        "native solver reported an unstable frame"
+      ],
+      "record_digest": "165c7acb76d5074251bed738f6ff6c36ca5db5aa607cdcfa88cfd3dcbdf0762f",
+      "combinations": {}
+    },
+    "large_response": {
+      "status": "out_of_scope",
+      "issues": [
+        "service: declared small-displacement limits exceeded"
+      ],
+      "record_digest": "0dbb08ff1bd09c0e7ba56820715f72af772c2cb25a2f798f2cebe37633241e4e",
+      "combinations": {
+        "service": {
+          "nodes": {
+            "anchor": {
+              "translation_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_force_n": [
+                0.0,
+                100000000.00000009,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                400000000.0000004
+              ]
+            },
+            "tip": {
+              "translation_m": [
+                0.0,
+                -394.91776128259386,
+                -0.0
+              ],
+              "rotation_rad": [
+                0.0,
+                0.0,
+                -148.0941604809727
+              ],
+              "reaction_force_n": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reaction_moment_nm": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "members": {
+            "pipe": {
+              "length_m": 4.0,
+              "global_to_local": [
+                [
+                  1.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              "native_local_end_actions": [
+                0.0,
+                100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                400000000.0000004,
+                0.0,
+                -100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                6.448292379756786e-08
+              ],
+              "native_global_end_actions": [
+                0.0,
+                100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                400000000.0000004,
+                0.0,
+                -100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                6.448292379756786e-08
+              ],
+              "initial_strain_adjusted_local_end_actions": [
+                0.0,
+                100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                400000000.0000004,
+                0.0,
+                -100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                6.448292379756786e-08
+              ],
+              "initial_strain_adjusted_global_end_actions": [
+                0.0,
+                100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                400000000.0000004,
+                0.0,
+                -100000000.00000009,
+                0.0,
+                0.0,
+                0.0,
+                6.448292379756786e-08
+              ],
+              "uniform_stress_free_axial_strain": 0,
+              "native_axial_n_is_compression_positive_and_before_initial_strain_correction": true,
+              "samples": [
+                {
+                  "fraction": 0.0,
+                  "x_m": 0.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100000000.00000009,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 400000000.0000004,
+                  "local_translation_m": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.25,
+                  "x_m": 1.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100000000.00000009,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 300000000.00000036,
+                  "local_translation_m": [
+                    0.0,
+                    -33.9382451102229,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.5,
+                  "x_m": 2.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100000000.00000009,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 200000000.00000024,
+                  "local_translation_m": [
+                    0.0,
+                    -123.41180040081058,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 0.75,
+                  "x_m": 3.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100000000.00000009,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 100000000.00000018,
+                  "local_translation_m": [
+                    0.0,
+                    -249.90889581164143,
+                    0.0
+                  ]
+                },
+                {
+                  "fraction": 1.0,
+                  "x_m": 4.0,
+                  "axial_n": 0.0,
+                  "elastic_axial_force_tension_positive_n": -0.0,
+                  "mean_elastic_axial_stress_pa": -0.0,
+                  "shear_y_n": 100000000.00000009,
+                  "shear_z_n": 0.0,
+                  "torque_nm": 0.0,
+                  "moment_y_nm": -0.0,
+                  "moment_z_nm": 5.960464477539063e-08,
+                  "local_translation_m": [
+                    0.0,
+                    -394.9177612825939,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          },
+          "static_balance": {
+            "force_residual_n": [
+              0.0,
+              8.940696716308594e-08,
+              0.0
+            ],
+            "moment_residual_nm": [
+              0.0,
+              0.0,
+              4.172325134277344e-07
+            ],
+            "force_limit_n": 2.000001000000001,
+            "moment_limit_nm": 8.000001000000005,
+            "passed": true,
+            "reference_point_m": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "nodal_balance": {
+            "nodes": {
+              "anchor": {
+                "force_residual_n": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "force_limit_n": 2.000001000000002,
+                "moment_limit_nm": 8.000001000000008,
+                "passed": true
+              },
+              "tip": {
+                "force_residual_n": [
+                  0.0,
+                  -8.940696716308594e-08,
+                  0.0
+                ],
+                "moment_residual_nm": [
+                  0.0,
+                  0.0,
+                  6.448292379756786e-08
+                ],
+                "force_limit_n": 2.000001000000001,
+                "moment_limit_nm": 1.0000000006448292e-06,
+                "passed": true
+              }
+            },
+            "passed": true,
+            "equivalent_initial_strain_forces_treated_as_physical_external_loads": false
+          },
+          "applicability_checks": {
+            "maximum_node_translation_over_minimum_member_length": 98.72944032064846,
+            "maximum_sampled_member_translation_over_length": 98.72944032064848,
+            "maximum_node_rotation_rad": 148.0941604809727,
+            "maximum_stress_free_axial_strain": 0.0,
+            "maximum_mean_elastic_axial_strain": 0.0,
+            "maximum_mean_total_axial_strain": 0.0
+          }
+        }
+      }
+    }
+  },
+  "independent_references": {
+    "point_tip_dy_m": {
+      "actual": -0.003949177612825939,
+      "independent_reference": -0.003949177612825936,
+      "absolute_error": 3.469446951953614e-18
+    },
+    "axial_tip_dx_m": {
+      "actual": -3.350630380882003e-06,
+      "independent_reference": -3.350630380882003e-06,
+      "absolute_error": 0.0
+    },
+    "torsion_tip_rx_rad": {
+      "actual": -0.0009626120431263218,
+      "independent_reference": -0.0009626120431263218,
+      "absolute_error": 0.0
+    },
+    "uniform_tip_dy_m": {
+      "actual": -0.0005923766419238908,
+      "independent_reference": -0.0005923766419238904,
+      "absolute_error": 4.336808689942018e-19
+    },
+    "partial_triangle_tip_dy_m": {
+      "actual": -0.000632373912786592,
+      "independent_reference": -0.0006323739127865916,
+      "absolute_error": 3.2526065174565133e-19
+    },
+    "simply_supported_mid_dy_m": {
+      "actual": -6.170590020040523e-05,
+      "independent_reference": -6.170590020040525e-05,
+      "absolute_error": 1.3552527156068805e-20
+    },
+    "sprung_tip_dy_m": {
+      "actual": -0.00283111859526024,
+      "independent_reference": -0.0028311185952602405,
+      "absolute_error": 4.336808689942018e-19
+    },
+    "imposed_tip_dy_m": {
+      "actual": -0.001,
+      "independent_reference": -0.001,
+      "absolute_error": 0.0
+    }
+  },
+  "backend": {
+    "distribution": "PyNiteFEA",
+    "version": "3.2.0",
+    "license": "MIT",
+    "sparse": true,
+    "source_tree_sha256": "e29a5a721cfadc8e18fde8ff5e059a00aa5b191f11c12f7fb02aade39db31653",
+    "source_tree_files": 23,
+    "warnings": [],
+    "diagnostic_output": []
+  },
+  "primary_load_exchange": {
+    "source": "https://data.mendeley.com/datasets/g69875w65c/1",
+    "creator": "Puyi Gao",
+    "license_id": "CC-BY-4.0",
+    "archive_sha256": "233f70de5d51148b93eab68654297d4ac4aa782864a5c7e43a3520be8ca54bde",
+    "specimen_id": "L7_m123_cantilver_W20_LMM",
+    "source_rows": 4631,
+    "contiguous_source_rows_used": 32,
+    "negative_source_force_samples": 32,
+    "source_clock_id": "crack_arrest:L7_m123_cantilver_W20_LMM:854350b6073be2c1b2e9bed7c32b68f8fa4fc569bdd3e59721d969f00a1b1afe",
+    "selected_source_rows_preserved": true,
+    "maximum_axial_reference_error_m": 0.0,
+    "monitoring_rows": 32,
+    "monitoring_channels": 24,
+    "hra_samples": 32,
+    "source_origin": "laboratory",
+    "predicted_origin": "simulation",
+    "invalid_source_load_status": "needs_data",
+    "actual_fixture_geometry_or_quasistatic_validity_qualified": false,
+    "structural_experiment_validated": false,
+    "source_header_representation_normalized": true
+  },
+  "source_versions": {
+    "materials": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "d25685aa1e83aa35b62b5b993ef9998992af8d531e10cdca23a3e74e27ef30e4",
+      "source_tree_files": 65
+    },
+    "monitoring": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "a8856f3e30f7bddf7539dbe0b74ea7d47ada4127f52f765bf61e4a134300fe0a",
+      "source_tree_files": 28
+    },
+    "hra": {
+      "commit": null,
+      "working_tree_modified": null,
+      "source_tree_sha256": "38d0c9efe100cd8b7abc9f20b1502fd902f0afb8609e18b2a02fe66a6ef9562d",
+      "source_tree_files": 28
+    }
+  },
+  "module_sha256": "56470da2e5eada022b820543483f8b90b3dbd173dcbccc5397c340ca97ae084f",
+  "example_sha256": "d375896a860ade024df788541650edb255ba467520f415d341154a8cfcd29bd7",
+  "script_sha256": "b576d19eac2616ef4cc17e74159184eca20e71b6d63fcdabc23bdacc6a69093d",
+  "code_or_field_acceptance": false,
+  "failure_probability_inferred": false
+}
