@@ -4,10 +4,11 @@
 
 1. [README](../README.md): 설치·실행·현재 범위와 한계.
 2. [상세 사용 설명서](USER_GUIDE_KO.md): 입력·물성·데이터·연결·오류 처리.
-3. [223개 모델 카탈로그](MODEL_CATALOG_KO.md): 지원 영역·실제 API·독립 프로필.
-4. [개발 이력](DEVELOPMENT_HISTORY_KO.md), [연구 재개](RESEARCH_CONTINUATION_KO.md).
-5. [미완료 물리시험](PHYSICAL_VERIFICATION_BACKLOG_KO.md), [공개 검증](RELEASE_VERIFICATION_KO.md).
-6. [배포 절차](PUBLISHING_KO.md), [기여](CONTRIBUTING_KO.md).
+3. [모든 API의 입출력·기본값 명세](MODULE_IO_REFERENCE_KO.md), [25개 기본 계산 스키마](../research/registry_io_reference.json).
+4. [223개 모델 카탈로그](MODEL_CATALOG_KO.md): 지원 영역·실제 API·독립 프로필.
+5. [개발 이력](DEVELOPMENT_HISTORY_KO.md), [연구 재개](RESEARCH_CONTINUATION_KO.md).
+6. [미완료 물리시험](PHYSICAL_VERIFICATION_BACKLOG_KO.md), [공개 검증](RELEASE_VERIFICATION_KO.md).
+7. [배포 절차](PUBLISHING_KO.md), [기여](CONTRIBUTING_KO.md).
 
 아래는 개발 중 작성한 세부 안내와 날짜별 기록이다. 후속 구현으로 해결된 과거 미완료 문구나 다른 분모가 있을 수 있으므로 현재 카탈로그·공개 상태와 함께 읽는다.
 

@@ -1,0 +1,2222 @@
+{
+  "models": [
+    {
+      "model": {
+        "id": "construction.trench_volume",
+        "version": "1",
+        "title": "Declared trapezoidal excavation volume",
+        "category": "construction",
+        "input_units": {
+          "bottom_width_m": "m",
+          "depth_m": "m",
+          "side_slope_horizontal_per_vertical": "1",
+          "length_m": "m",
+          "loose_volume_ratio": "1"
+        },
+        "output_units": {
+          "cross_section_m2": "m2",
+          "in_place_volume_m3": "m3",
+          "loose_volume_m3": "m3"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Uniform declared trench section; soil stability and excavation protections are external requirements."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "bottom_width_m": {
+            "exclusiveMinimum": 0,
+            "title": "Bottom Width M",
+            "type": "number"
+          },
+          "depth_m": {
+            "exclusiveMinimum": 0,
+            "title": "Depth M",
+            "type": "number"
+          },
+          "side_slope_horizontal_per_vertical": {
+            "minimum": 0,
+            "title": "Side Slope Horizontal Per Vertical",
+            "type": "number"
+          },
+          "length_m": {
+            "exclusiveMinimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "loose_volume_ratio": {
+            "exclusiveMinimum": 0,
+            "title": "Loose Volume Ratio",
+            "type": "number"
+          }
+        },
+        "required": [
+          "bottom_width_m",
+          "depth_m",
+          "side_slope_horizontal_per_vertical",
+          "length_m",
+          "loose_volume_ratio"
+        ],
+        "title": "TrenchVolume",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "economics.cashflow",
+        "version": "2",
+        "title": "Declared-period discounted cashflow",
+        "category": "economics",
+        "input_units": {
+          "cashflows": "declared_currency",
+          "discount_rate_per_period": "1",
+          "period_duration_s": "s",
+          "currency": "currency_identifier",
+          "price_year": "calendar_year",
+          "times_s": "s"
+        },
+        "output_units": {
+          "net_present_value": "declared_currency",
+          "discounted_cashflows": "declared_currency",
+          "undiscounted_sum": "declared_currency"
+        },
+        "sources": [
+          "https://numpy.org/numpy-financial/latest/npv.html"
+        ],
+        "assumptions": [
+          "Explicit elapsed times or uniform periods with time-zero first cashflow; no cost-year or currency conversion."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "cashflows": {
+            "items": {
+              "type": "number"
+            },
+            "minItems": 1,
+            "title": "Cashflows",
+            "type": "array"
+          },
+          "discount_rate_per_period": {
+            "exclusiveMinimum": -1,
+            "title": "Discount Rate Per Period",
+            "type": "number"
+          },
+          "period_duration_s": {
+            "exclusiveMinimum": 0,
+            "title": "Period Duration S",
+            "type": "number"
+          },
+          "currency": {
+            "minLength": 1,
+            "title": "Currency",
+            "type": "string"
+          },
+          "price_year": {
+            "minimum": 1900,
+            "title": "Price Year",
+            "type": "integer"
+          },
+          "times_s": {
+            "anyOf": [
+              {
+                "items": {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Times S"
+          }
+        },
+        "required": [
+          "cashflows",
+          "discount_rate_per_period",
+          "period_duration_s",
+          "currency",
+          "price_year"
+        ],
+        "title": "DiscountedCashflow",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "economics.energy",
+        "version": "2",
+        "title": "Operational energy, cost and declared emissions",
+        "category": "economics",
+        "input_units": {
+          "electrical_power_w": "W",
+          "operating_duration_s": "s",
+          "price_per_kwh": "declared_currency/kWh",
+          "emission_kg_co2e_per_kwh": "kg_CO2e/kWh",
+          "currency": "currency_identifier",
+          "factor_source": "evidence_identifier"
+        },
+        "output_units": {
+          "energy_kwh": "kWh",
+          "energy_cost": "declared_currency",
+          "declared_emissions_kg_co2e": "kg_CO2e"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+        ],
+        "assumptions": [
+          "Supplied duty, signed tariff and emissions factor; unknown factors remain null; not a lifecycle result."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "electrical_power_w": {
+            "minimum": 0,
+            "title": "Electrical Power W",
+            "type": "number"
+          },
+          "operating_duration_s": {
+            "minimum": 0,
+            "title": "Operating Duration S",
+            "type": "number"
+          },
+          "price_per_kwh": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price Per Kwh"
+          },
+          "emission_kg_co2e_per_kwh": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Emission Kg Co2E Per Kwh"
+          },
+          "currency": {
+            "minLength": 1,
+            "title": "Currency",
+            "type": "string"
+          },
+          "factor_source": {
+            "minLength": 1,
+            "title": "Factor Source",
+            "type": "string"
+          }
+        },
+        "required": [
+          "electrical_power_w",
+          "operating_duration_s",
+          "price_per_kwh",
+          "emission_kg_co2e_per_kwh",
+          "currency",
+          "factor_source"
+        ],
+        "title": "EnergyBudget",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.compression",
+        "version": "1",
+        "title": "Real-fluid isentropic-reference compressor",
+        "category": "equipment",
+        "input_units": {
+          "fluid": "fluid_identifier",
+          "inlet_pressure_pa_abs": "Pa_abs",
+          "inlet_temperature_k": "K",
+          "outlet_pressure_pa_abs": "Pa_abs",
+          "mass_flow_kg_s": "kg/s",
+          "isentropic_efficiency": "1"
+        },
+        "output_units": {
+          "specific_work_j_kg": "J/kg",
+          "shaft_power_w": "W",
+          "outlet_temperature_k": "K",
+          "outlet_enthalpy_j_kg": "J/kg"
+        },
+        "sources": [
+          "https://coolprop.org/coolprop/HighLevelAPI.html"
+        ],
+        "assumptions": [
+          "Steady adiabatic single-phase compression with declared isentropic efficiency."
+        ],
+        "dependency": "CoolProp",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "fluid": {
+            "minLength": 1,
+            "title": "Fluid",
+            "type": "string"
+          },
+          "inlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "inlet_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Temperature K",
+            "type": "number"
+          },
+          "outlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "mass_flow_kg_s": {
+            "minimum": 0,
+            "title": "Mass Flow Kg S",
+            "type": "number"
+          },
+          "isentropic_efficiency": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Isentropic Efficiency",
+            "type": "number"
+          }
+        },
+        "required": [
+          "fluid",
+          "inlet_pressure_pa_abs",
+          "inlet_temperature_k",
+          "outlet_pressure_pa_abs",
+          "mass_flow_kg_s",
+          "isentropic_efficiency"
+        ],
+        "title": "Compression",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.control_valve_gas",
+        "version": "1",
+        "title": "Installed gas control-valve coefficient",
+        "category": "equipment",
+        "input_units": {
+          "temperature_k": "K",
+          "molar_mass_kg_mol": "kg/mol",
+          "viscosity_pa_s": "Pa*s",
+          "heat_capacity_ratio": "1",
+          "compressibility": "1",
+          "inlet_pressure_pa_abs": "Pa_abs",
+          "outlet_pressure_pa_abs": "Pa_abs",
+          "standard_volume_flow_m3_s": "m3/s",
+          "reference_temperature_k": "K",
+          "reference_pressure_pa_abs": "Pa_abs",
+          "inlet_diameter_m": "m",
+          "outlet_diameter_m": "m",
+          "valve_diameter_m": "m",
+          "pressure_recovery_factor": "1",
+          "valve_style_factor": "1",
+          "terminal_pressure_ratio_factor": "1"
+        },
+        "output_units": {
+          "kv": "Kv_conventional_m3/h",
+          "diagnostics": "structured_library_diagnostics"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Gas reference volume at 273.15 K and 101325 Pa; explicit manufacturer factors."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Temperature K",
+            "type": "number"
+          },
+          "molar_mass_kg_mol": {
+            "exclusiveMinimum": 0,
+            "title": "Molar Mass Kg Mol",
+            "type": "number"
+          },
+          "viscosity_pa_s": {
+            "exclusiveMinimum": 0,
+            "title": "Viscosity Pa S",
+            "type": "number"
+          },
+          "heat_capacity_ratio": {
+            "exclusiveMinimum": 1,
+            "title": "Heat Capacity Ratio",
+            "type": "number"
+          },
+          "compressibility": {
+            "exclusiveMinimum": 0,
+            "title": "Compressibility",
+            "type": "number"
+          },
+          "inlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "outlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "standard_volume_flow_m3_s": {
+            "exclusiveMinimum": 0,
+            "title": "Standard Volume Flow M3 S",
+            "type": "number"
+          },
+          "reference_temperature_k": {
+            "const": 273.15,
+            "title": "Reference Temperature K",
+            "type": "number"
+          },
+          "reference_pressure_pa_abs": {
+            "const": 101325.0,
+            "title": "Reference Pressure Pa Abs",
+            "type": "number"
+          },
+          "inlet_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Diameter M",
+            "type": "number"
+          },
+          "outlet_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Diameter M",
+            "type": "number"
+          },
+          "valve_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Valve Diameter M",
+            "type": "number"
+          },
+          "pressure_recovery_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Pressure Recovery Factor",
+            "type": "number"
+          },
+          "valve_style_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Valve Style Factor",
+            "type": "number"
+          },
+          "terminal_pressure_ratio_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Terminal Pressure Ratio Factor",
+            "type": "number"
+          }
+        },
+        "required": [
+          "temperature_k",
+          "molar_mass_kg_mol",
+          "viscosity_pa_s",
+          "heat_capacity_ratio",
+          "compressibility",
+          "inlet_pressure_pa_abs",
+          "outlet_pressure_pa_abs",
+          "standard_volume_flow_m3_s",
+          "reference_temperature_k",
+          "reference_pressure_pa_abs",
+          "inlet_diameter_m",
+          "outlet_diameter_m",
+          "valve_diameter_m",
+          "pressure_recovery_factor",
+          "valve_style_factor",
+          "terminal_pressure_ratio_factor"
+        ],
+        "title": "GasControlValve",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.control_valve_liquid",
+        "version": "1",
+        "title": "Installed liquid control-valve coefficient",
+        "category": "equipment",
+        "input_units": {
+          "density_kg_m3": "kg/m3",
+          "vapour_pressure_pa_abs": "Pa_abs",
+          "critical_pressure_pa_abs": "Pa_abs",
+          "viscosity_pa_s": "Pa*s",
+          "inlet_pressure_pa_abs": "Pa_abs",
+          "outlet_pressure_pa_abs": "Pa_abs",
+          "volume_flow_m3_s": "m3/s",
+          "inlet_diameter_m": "m",
+          "outlet_diameter_m": "m",
+          "valve_diameter_m": "m",
+          "pressure_recovery_factor": "1",
+          "valve_style_factor": "1"
+        },
+        "output_units": {
+          "kv": "Kv_conventional_m3/h",
+          "diagnostics": "structured_library_diagnostics"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Library sizing correlation with explicitly supplied manufacturer factors and diameters."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "vapour_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Vapour Pressure Pa Abs",
+            "type": "number"
+          },
+          "critical_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Critical Pressure Pa Abs",
+            "type": "number"
+          },
+          "viscosity_pa_s": {
+            "exclusiveMinimum": 0,
+            "title": "Viscosity Pa S",
+            "type": "number"
+          },
+          "inlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "outlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "volume_flow_m3_s": {
+            "exclusiveMinimum": 0,
+            "title": "Volume Flow M3 S",
+            "type": "number"
+          },
+          "inlet_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Diameter M",
+            "type": "number"
+          },
+          "outlet_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Diameter M",
+            "type": "number"
+          },
+          "valve_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Valve Diameter M",
+            "type": "number"
+          },
+          "pressure_recovery_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Pressure Recovery Factor",
+            "type": "number"
+          },
+          "valve_style_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Valve Style Factor",
+            "type": "number"
+          }
+        },
+        "required": [
+          "density_kg_m3",
+          "vapour_pressure_pa_abs",
+          "critical_pressure_pa_abs",
+          "viscosity_pa_s",
+          "inlet_pressure_pa_abs",
+          "outlet_pressure_pa_abs",
+          "volume_flow_m3_s",
+          "inlet_diameter_m",
+          "outlet_diameter_m",
+          "valve_diameter_m",
+          "pressure_recovery_factor",
+          "valve_style_factor"
+        ],
+        "title": "LiquidControlValve",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.pump_affinity",
+        "version": "1",
+        "title": "Similar-pump operating-point scaling",
+        "category": "equipment",
+        "input_units": {
+          "reference_flow_m3_s": "m3/s",
+          "reference_head_m": "m",
+          "reference_power_w": "W",
+          "speed_ratio": "1",
+          "geometric_diameter_ratio": "1"
+        },
+        "output_units": {
+          "flow_m3_s": "m3/s",
+          "head_m": "m",
+          "power_w": "W"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Geometrically similar pumps with unchanged efficiency; not a generic impeller-trim model."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "reference_flow_m3_s": {
+            "minimum": 0,
+            "title": "Reference Flow M3 S",
+            "type": "number"
+          },
+          "reference_head_m": {
+            "minimum": 0,
+            "title": "Reference Head M",
+            "type": "number"
+          },
+          "reference_power_w": {
+            "minimum": 0,
+            "title": "Reference Power W",
+            "type": "number"
+          },
+          "speed_ratio": {
+            "exclusiveMinimum": 0,
+            "title": "Speed Ratio",
+            "type": "number"
+          },
+          "geometric_diameter_ratio": {
+            "default": 1.0,
+            "exclusiveMinimum": 0,
+            "title": "Geometric Diameter Ratio",
+            "type": "number"
+          }
+        },
+        "required": [
+          "reference_flow_m3_s",
+          "reference_head_m",
+          "reference_power_w",
+          "speed_ratio"
+        ],
+        "title": "PumpAffinity",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.pump_npsh",
+        "version": "1",
+        "title": "Available suction head and declared vendor margin",
+        "category": "equipment",
+        "input_units": {
+          "surface_pressure_pa_abs": "Pa_abs",
+          "vapour_pressure_pa_abs": "Pa_abs",
+          "density_kg_m3": "kg/m3",
+          "surface_above_pump_m": "m",
+          "suction_head_loss_m": "m",
+          "vendor_required_npsh_m": "m",
+          "gravity_m_s2": "m/s2"
+        },
+        "output_units": {
+          "available_npsh_m": "m",
+          "declared_margin_m": "m"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Steady suction energy budget with a declared surface pressure, vapour pressure and vendor NPSH."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "surface_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Surface Pressure Pa Abs",
+            "type": "number"
+          },
+          "vapour_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Vapour Pressure Pa Abs",
+            "type": "number"
+          },
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "surface_above_pump_m": {
+            "title": "Surface Above Pump M",
+            "type": "number"
+          },
+          "suction_head_loss_m": {
+            "minimum": 0,
+            "title": "Suction Head Loss M",
+            "type": "number"
+          },
+          "vendor_required_npsh_m": {
+            "minimum": 0,
+            "title": "Vendor Required Npsh M",
+            "type": "number"
+          },
+          "gravity_m_s2": {
+            "default": 9.80665,
+            "exclusiveMinimum": 0,
+            "title": "Gravity M S2",
+            "type": "number"
+          }
+        },
+        "required": [
+          "surface_pressure_pa_abs",
+          "vapour_pressure_pa_abs",
+          "density_kg_m3",
+          "surface_above_pump_m",
+          "suction_head_loss_m",
+          "vendor_required_npsh_m"
+        ],
+        "title": "PumpNPSH",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.pump_power",
+        "version": "1",
+        "title": "Pump hydraulic, shaft and electrical power",
+        "category": "equipment",
+        "input_units": {
+          "volume_flow_m3_s": "m3/s",
+          "density_kg_m3": "kg/m3",
+          "head_m": "m",
+          "pump_efficiency": "1",
+          "motor_efficiency": "1",
+          "gravity_m_s2": "m/s2"
+        },
+        "output_units": {
+          "hydraulic_power_w": "W",
+          "shaft_power_w": "W",
+          "electrical_power_w": "W"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+        ],
+        "assumptions": [
+          "Steady liquid flow and independently declared pump/motor efficiencies."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "volume_flow_m3_s": {
+            "minimum": 0,
+            "title": "Volume Flow M3 S",
+            "type": "number"
+          },
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "head_m": {
+            "minimum": 0,
+            "title": "Head M",
+            "type": "number"
+          },
+          "pump_efficiency": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Pump Efficiency",
+            "type": "number"
+          },
+          "motor_efficiency": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Motor Efficiency",
+            "type": "number"
+          },
+          "gravity_m_s2": {
+            "default": 9.80665,
+            "exclusiveMinimum": 0,
+            "title": "Gravity M S2",
+            "type": "number"
+          }
+        },
+        "required": [
+          "volume_flow_m3_s",
+          "density_kg_m3",
+          "head_m",
+          "pump_efficiency",
+          "motor_efficiency"
+        ],
+        "title": "PumpPower",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.pump_system",
+        "version": "1",
+        "title": "Identical-pump and equivalent-system operating point",
+        "category": "equipment",
+        "input_units": {
+          "reference_curve": "flow_head_curve_SI",
+          "static_head_m": "m",
+          "resistance_head_s2_m5": "s2/m5",
+          "parallel_pumps": "1",
+          "series_pumps": "1",
+          "speed_ratio": "1",
+          "geometric_diameter_ratio": "1",
+          "density_kg_m3": "kg/m3",
+          "pump_efficiency": "1",
+          "motor_efficiency": "1",
+          "gravity_m_s2": "m/s2"
+        },
+        "output_units": {
+          "volume_flow_m3_s": "m3/s",
+          "total_head_m": "m",
+          "flow_per_parallel_branch_m3_s": "m3/s",
+          "head_per_series_stage_m": "m",
+          "head_intersection_residual_m": "m",
+          "hydraulic_power_w": "W",
+          "shaft_power_w": "W",
+          "electrical_power_w": "W"
+        },
+        "sources": [
+          "https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.PchipInterpolator.html"
+        ],
+        "assumptions": [
+          "Caller-owned monotone pump curve and static-plus-quadratic system head.",
+          "Identical series/parallel pumps and declared constant efficiencies."
+        ],
+        "dependency": "scipy",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "$defs": {
+          "ReferencePumpCurve": {
+            "additionalProperties": false,
+            "properties": {
+              "volume_flow_m3_s": {
+                "items": {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "minItems": 2,
+                "title": "Volume Flow M3 S",
+                "type": "array"
+              },
+              "head_m": {
+                "items": {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "minItems": 2,
+                "title": "Head M",
+                "type": "array"
+              },
+              "source_id": {
+                "minLength": 1,
+                "title": "Source Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "volume_flow_m3_s",
+              "head_m",
+              "source_id"
+            ],
+            "title": "ReferencePumpCurve",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "reference_curve": {
+            "$ref": "#/$defs/ReferencePumpCurve"
+          },
+          "static_head_m": {
+            "title": "Static Head M",
+            "type": "number"
+          },
+          "resistance_head_s2_m5": {
+            "minimum": 0,
+            "title": "Resistance Head S2 M5",
+            "type": "number"
+          },
+          "parallel_pumps": {
+            "maximum": 10000,
+            "minimum": 1,
+            "title": "Parallel Pumps",
+            "type": "integer"
+          },
+          "series_pumps": {
+            "maximum": 10000,
+            "minimum": 1,
+            "title": "Series Pumps",
+            "type": "integer"
+          },
+          "speed_ratio": {
+            "default": 1.0,
+            "exclusiveMinimum": 0,
+            "title": "Speed Ratio",
+            "type": "number"
+          },
+          "geometric_diameter_ratio": {
+            "default": 1.0,
+            "exclusiveMinimum": 0,
+            "title": "Geometric Diameter Ratio",
+            "type": "number"
+          },
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "pump_efficiency": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Pump Efficiency",
+            "type": "number"
+          },
+          "motor_efficiency": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Motor Efficiency",
+            "type": "number"
+          },
+          "gravity_m_s2": {
+            "default": 9.80665,
+            "exclusiveMinimum": 0,
+            "title": "Gravity M S2",
+            "type": "number"
+          }
+        },
+        "required": [
+          "reference_curve",
+          "static_head_m",
+          "resistance_head_s2_m5",
+          "parallel_pumps",
+          "series_pumps",
+          "density_kg_m3",
+          "pump_efficiency",
+          "motor_efficiency"
+        ],
+        "title": "PumpSystem",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "equipment.relief_gas",
+        "version": "1",
+        "title": "Gas relief-area correlation adapter",
+        "category": "equipment",
+        "input_units": {
+          "mass_flow_kg_s": "kg/s",
+          "temperature_k": "K",
+          "compressibility": "1",
+          "molar_mass_kg_mol": "kg/mol",
+          "heat_capacity_ratio": "1",
+          "relieving_pressure_pa_abs": "Pa_abs",
+          "back_pressure_pa_abs": "Pa_abs",
+          "discharge_coefficient": "1",
+          "back_pressure_factor": "1",
+          "combination_factor": "1"
+        },
+        "output_units": {
+          "required_area_m2": "m2"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Single-phase gas correlation; declared coefficients, back pressure and relieving load."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "mass_flow_kg_s": {
+            "exclusiveMinimum": 0,
+            "title": "Mass Flow Kg S",
+            "type": "number"
+          },
+          "temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Temperature K",
+            "type": "number"
+          },
+          "compressibility": {
+            "exclusiveMinimum": 0,
+            "title": "Compressibility",
+            "type": "number"
+          },
+          "molar_mass_kg_mol": {
+            "exclusiveMinimum": 0,
+            "title": "Molar Mass Kg Mol",
+            "type": "number"
+          },
+          "heat_capacity_ratio": {
+            "exclusiveMinimum": 1,
+            "title": "Heat Capacity Ratio",
+            "type": "number"
+          },
+          "relieving_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Relieving Pressure Pa Abs",
+            "type": "number"
+          },
+          "back_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Back Pressure Pa Abs",
+            "type": "number"
+          },
+          "discharge_coefficient": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Discharge Coefficient",
+            "type": "number"
+          },
+          "back_pressure_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Back Pressure Factor",
+            "type": "number"
+          },
+          "combination_factor": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Combination Factor",
+            "type": "number"
+          }
+        },
+        "required": [
+          "mass_flow_kg_s",
+          "temperature_k",
+          "compressibility",
+          "molar_mass_kg_mol",
+          "heat_capacity_ratio",
+          "relieving_pressure_pa_abs",
+          "back_pressure_pa_abs",
+          "discharge_coefficient",
+          "back_pressure_factor",
+          "combination_factor"
+        ],
+        "title": "ReliefGas",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "geometry.pipe",
+        "version": "1",
+        "title": "Pipe flow and wall geometry",
+        "category": "geometry",
+        "input_units": {
+          "inner_diameter_m": "m",
+          "outer_diameter_m": "m",
+          "length_m": "m",
+          "wall_density_kg_m3": "kg/m3"
+        },
+        "output_units": {
+          "flow_area_m2": "m2",
+          "internal_volume_m3": "m3",
+          "wall_volume_m3": "m3",
+          "wall_mass_kg": "kg",
+          "external_area_m2": "m2"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Circular uniform pipe geometry and declared wall density."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "inner_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Inner Diameter M",
+            "type": "number"
+          },
+          "outer_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Outer Diameter M",
+            "type": "number"
+          },
+          "length_m": {
+            "exclusiveMinimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "wall_density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Wall Density Kg M3",
+            "type": "number"
+          }
+        },
+        "required": [
+          "inner_diameter_m",
+          "outer_diameter_m",
+          "length_m",
+          "wall_density_kg_m3"
+        ],
+        "title": "PipeGeometry",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "hydraulics.gas_correlation",
+        "version": "1",
+        "title": "Selectable empirical gas pipeline correlation",
+        "category": "hydraulics",
+        "input_units": {
+          "method": "selection",
+          "relative_density_to_air": "1",
+          "mean_temperature_k": "K",
+          "mean_compressibility": "1",
+          "length_m": "m",
+          "diameter_m": "m",
+          "inlet_pressure_pa_abs": "Pa_abs",
+          "outlet_pressure_pa_abs": "Pa_abs",
+          "standard_temperature_k": "K",
+          "standard_pressure_pa_abs": "Pa_abs",
+          "empirical_efficiency": "1"
+        },
+        "output_units": {
+          "standard_volume_flow_m3_s": "m3/s"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Empirical directed gas flow with declared mean temperature, compressibility, efficiency and reference conditions.",
+          "The selected correlation's original regime must be reviewed for the target gas and pipe."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "method": {
+            "enum": [
+              "Weymouth",
+              "Panhandle_A",
+              "Panhandle_B",
+              "Spitzglass_high"
+            ],
+            "title": "Method",
+            "type": "string"
+          },
+          "relative_density_to_air": {
+            "exclusiveMinimum": 0,
+            "title": "Relative Density To Air",
+            "type": "number"
+          },
+          "mean_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Mean Temperature K",
+            "type": "number"
+          },
+          "mean_compressibility": {
+            "exclusiveMinimum": 0,
+            "title": "Mean Compressibility",
+            "type": "number"
+          },
+          "length_m": {
+            "exclusiveMinimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Diameter M",
+            "type": "number"
+          },
+          "inlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "outlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "standard_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Standard Temperature K",
+            "type": "number"
+          },
+          "standard_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Standard Pressure Pa Abs",
+            "type": "number"
+          },
+          "empirical_efficiency": {
+            "default": 1.0,
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Empirical Efficiency",
+            "type": "number"
+          }
+        },
+        "required": [
+          "method",
+          "relative_density_to_air",
+          "mean_temperature_k",
+          "mean_compressibility",
+          "length_m",
+          "diameter_m",
+          "inlet_pressure_pa_abs",
+          "outlet_pressure_pa_abs",
+          "standard_temperature_k",
+          "standard_pressure_pa_abs"
+        ],
+        "title": "GasCorrelation",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "hydraulics.hydrostatic",
+        "version": "1",
+        "title": "Hydrostatic absolute pressure",
+        "category": "hydraulics",
+        "input_units": {
+          "inlet_pressure_pa_abs": "Pa_abs",
+          "density_kg_m3": "kg/m3",
+          "outlet_minus_inlet_elevation_m": "m",
+          "gravity_m_s2": "m/s2"
+        },
+        "output_units": {
+          "outlet_pressure_pa_abs": "Pa_abs",
+          "pressure_difference_pa": "Pa"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Constant-density stationary fluid under declared gravity."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "inlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "outlet_minus_inlet_elevation_m": {
+            "title": "Outlet Minus Inlet Elevation M",
+            "type": "number"
+          },
+          "gravity_m_s2": {
+            "default": 9.80665,
+            "exclusiveMinimum": 0,
+            "title": "Gravity M S2",
+            "type": "number"
+          }
+        },
+        "required": [
+          "inlet_pressure_pa_abs",
+          "density_kg_m3",
+          "outlet_minus_inlet_elevation_m"
+        ],
+        "title": "Hydrostatic",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "hydraulics.isothermal_gas",
+        "version": "1",
+        "title": "Isothermal gas mass-flow calculation",
+        "category": "hydraulics",
+        "input_units": {
+          "mean_density_kg_m3": "kg/m3",
+          "darcy_friction_factor": "1",
+          "inlet_pressure_pa_abs": "Pa_abs",
+          "outlet_pressure_pa_abs": "Pa_abs",
+          "length_m": "m",
+          "diameter_m": "m"
+        },
+        "output_units": {
+          "mass_flow_kg_s": "kg/s",
+          "velocity_at_mean_density_m_s": "m/s"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Steady horizontal isothermal gas; supplied average density and friction."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "mean_density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Mean Density Kg M3",
+            "type": "number"
+          },
+          "darcy_friction_factor": {
+            "exclusiveMinimum": 0,
+            "title": "Darcy Friction Factor",
+            "type": "number"
+          },
+          "inlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "outlet_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Outlet Pressure Pa Abs",
+            "type": "number"
+          },
+          "length_m": {
+            "exclusiveMinimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Diameter M",
+            "type": "number"
+          }
+        },
+        "required": [
+          "mean_density_kg_m3",
+          "darcy_friction_factor",
+          "inlet_pressure_pa_abs",
+          "outlet_pressure_pa_abs",
+          "length_m",
+          "diameter_m"
+        ],
+        "title": "IsothermalGas",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "hydraulics.liquid_head_loss",
+        "version": "1",
+        "title": "Signed liquid hydraulic head demand without density",
+        "category": "hydraulics",
+        "input_units": {
+          "diameter_m": "m",
+          "length_m": "m",
+          "roughness_m": "m",
+          "volume_flow_m3_s": "m3/s",
+          "minor_loss_coefficient": "1",
+          "outlet_minus_inlet_elevation_m": "m",
+          "gravity_m_s2": "m/s2",
+          "transition_policy": "selection",
+          "friction_method": "selection",
+          "kinematic_viscosity_m2_s": "s"
+        },
+        "output_units": {
+          "velocity_m_s": "m/s",
+          "reynolds": "1",
+          "darcy_friction_factor": "1",
+          "dissipative_head_loss_m": "m",
+          "static_head_change_m": "m",
+          "required_inlet_minus_outlet_head_m": "m"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Steady single-phase Newtonian kinematic-viscosity input; no density or absolute pressure is inferred.",
+          "Darcy convention; transition treatment is explicit and shared with the pressure-loss owner.",
+          "The result is a required head difference, not an absolute pressure state or measured sensor mapping."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Diameter M",
+            "type": "number"
+          },
+          "length_m": {
+            "minimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "roughness_m": {
+            "minimum": 0,
+            "title": "Roughness M",
+            "type": "number"
+          },
+          "volume_flow_m3_s": {
+            "title": "Volume Flow M3 S",
+            "type": "number"
+          },
+          "minor_loss_coefficient": {
+            "default": 0.0,
+            "minimum": 0,
+            "title": "Minor Loss Coefficient",
+            "type": "number"
+          },
+          "outlet_minus_inlet_elevation_m": {
+            "default": 0.0,
+            "title": "Outlet Minus Inlet Elevation M",
+            "type": "number"
+          },
+          "gravity_m_s2": {
+            "default": 9.80665,
+            "exclusiveMinimum": 0,
+            "title": "Gravity M S2",
+            "type": "number"
+          },
+          "transition_policy": {
+            "default": "withhold",
+            "enum": [
+              "withhold",
+              "use_declared_correlation"
+            ],
+            "title": "Transition Policy",
+            "type": "string"
+          },
+          "friction_method": {
+            "default": "Clamond",
+            "enum": [
+              "Clamond",
+              "Colebrook",
+              "Haaland",
+              "Swamee_Jain_1976"
+            ],
+            "title": "Friction Method",
+            "type": "string"
+          },
+          "kinematic_viscosity_m2_s": {
+            "exclusiveMinimum": 0,
+            "title": "Kinematic Viscosity M2 S",
+            "type": "number"
+          }
+        },
+        "required": [
+          "diameter_m",
+          "length_m",
+          "roughness_m",
+          "volume_flow_m3_s",
+          "kinematic_viscosity_m2_s"
+        ],
+        "title": "LiquidHeadLoss",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "hydraulics.liquid_loss",
+        "version": "1",
+        "title": "Signed liquid pressure and energy budget",
+        "category": "hydraulics",
+        "input_units": {
+          "diameter_m": "m",
+          "length_m": "m",
+          "roughness_m": "m",
+          "volume_flow_m3_s": "m3/s",
+          "minor_loss_coefficient": "1",
+          "outlet_minus_inlet_elevation_m": "m",
+          "gravity_m_s2": "m/s2",
+          "transition_policy": "selection",
+          "friction_method": "selection",
+          "density_kg_m3": "kg/m3",
+          "viscosity_pa_s": "Pa*s"
+        },
+        "output_units": {
+          "velocity_m_s": "m/s",
+          "reynolds": "1",
+          "darcy_friction_factor": "1",
+          "dissipative_pressure_loss_pa": "Pa",
+          "static_pressure_change_pa": "Pa",
+          "required_inlet_minus_outlet_pa": "Pa",
+          "dissipated_power_w": "W"
+        },
+        "sources": [
+          "https://fluids.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Steady single-phase constant-property flow; no cavitation or two-phase closure.",
+          "Darcy convention; transition treatment is explicit."
+        ],
+        "dependency": "fluids",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Diameter M",
+            "type": "number"
+          },
+          "length_m": {
+            "minimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "roughness_m": {
+            "minimum": 0,
+            "title": "Roughness M",
+            "type": "number"
+          },
+          "volume_flow_m3_s": {
+            "title": "Volume Flow M3 S",
+            "type": "number"
+          },
+          "minor_loss_coefficient": {
+            "default": 0.0,
+            "minimum": 0,
+            "title": "Minor Loss Coefficient",
+            "type": "number"
+          },
+          "outlet_minus_inlet_elevation_m": {
+            "default": 0.0,
+            "title": "Outlet Minus Inlet Elevation M",
+            "type": "number"
+          },
+          "gravity_m_s2": {
+            "default": 9.80665,
+            "exclusiveMinimum": 0,
+            "title": "Gravity M S2",
+            "type": "number"
+          },
+          "transition_policy": {
+            "default": "withhold",
+            "enum": [
+              "withhold",
+              "use_declared_correlation"
+            ],
+            "title": "Transition Policy",
+            "type": "string"
+          },
+          "friction_method": {
+            "default": "Clamond",
+            "enum": [
+              "Clamond",
+              "Colebrook",
+              "Haaland",
+              "Swamee_Jain_1976"
+            ],
+            "title": "Friction Method",
+            "type": "string"
+          },
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "viscosity_pa_s": {
+            "exclusiveMinimum": 0,
+            "title": "Viscosity Pa S",
+            "type": "number"
+          }
+        },
+        "required": [
+          "diameter_m",
+          "length_m",
+          "roughness_m",
+          "volume_flow_m3_s",
+          "density_kg_m3",
+          "viscosity_pa_s"
+        ],
+        "title": "LiquidPressureLoss",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "instrument.liquid_dp_meter",
+        "version": "1",
+        "title": "Liquid differential-pressure flow meter",
+        "category": "instrument",
+        "input_units": {
+          "pipe_diameter_m": "m",
+          "opening_diameter_m": "m",
+          "pressure_difference_pa": "Pa",
+          "density_kg_m3": "kg/m3",
+          "discharge_coefficient": "1"
+        },
+        "output_units": {
+          "volume_flow_m3_s": "m3/s",
+          "mass_flow_kg_s": "kg/s",
+          "diameter_ratio": "1"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Incompressible single-phase flow with externally reviewed discharge coefficient and geometry."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "pipe_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Pipe Diameter M",
+            "type": "number"
+          },
+          "opening_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Opening Diameter M",
+            "type": "number"
+          },
+          "pressure_difference_pa": {
+            "minimum": 0,
+            "title": "Pressure Difference Pa",
+            "type": "number"
+          },
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "discharge_coefficient": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Discharge Coefficient",
+            "type": "number"
+          }
+        },
+        "required": [
+          "pipe_diameter_m",
+          "opening_diameter_m",
+          "pressure_difference_pa",
+          "density_kg_m3",
+          "discharge_coefficient"
+        ],
+        "title": "LiquidMeter",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "inventory.segmented",
+        "version": "1",
+        "title": "Spatially declared real-fluid inventory integration",
+        "category": "inventory",
+        "input_units": {
+          "fluid": "fluid_identifier",
+          "segments": "inventory_segments_SI",
+          "reference_pressure_pa_abs": "Pa_abs",
+          "reference_temperature_k": "K"
+        },
+        "output_units": {
+          "total_mass_kg": "kg",
+          "total_internal_volume_m3": "m3",
+          "reference_volume_m3": "m3",
+          "mass_weighted_enthalpy_j_kg": "J/kg",
+          "total_internal_energy_j": "J",
+          "segment_results": "inventory_segment_results_SI"
+        },
+        "sources": [
+          "https://coolprop.org/coolprop/HighLevelAPI.html"
+        ],
+        "assumptions": [
+          "Caller supplies resolved spatial segments and a common fluid/property reference.",
+          "Every state is individually single phase; no transport or interface motion is inferred."
+        ],
+        "dependency": "CoolProp",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "$defs": {
+          "InventorySegment": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "minLength": 1,
+                "title": "Id",
+                "type": "string"
+              },
+              "pressure_pa_abs": {
+                "exclusiveMinimum": 0,
+                "title": "Pressure Pa Abs",
+                "type": "number"
+              },
+              "temperature_k": {
+                "exclusiveMinimum": 0,
+                "title": "Temperature K",
+                "type": "number"
+              },
+              "internal_volume_m3": {
+                "exclusiveMinimum": 0,
+                "title": "Internal Volume M3",
+                "type": "number"
+              }
+            },
+            "required": [
+              "id",
+              "pressure_pa_abs",
+              "temperature_k",
+              "internal_volume_m3"
+            ],
+            "title": "InventorySegment",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "fluid": {
+            "minLength": 1,
+            "title": "Fluid",
+            "type": "string"
+          },
+          "segments": {
+            "items": {
+              "$ref": "#/$defs/InventorySegment"
+            },
+            "minItems": 1,
+            "title": "Segments",
+            "type": "array"
+          },
+          "reference_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Reference Pressure Pa Abs",
+            "type": "number"
+          },
+          "reference_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Reference Temperature K",
+            "type": "number"
+          }
+        },
+        "required": [
+          "fluid",
+          "segments",
+          "reference_pressure_pa_abs",
+          "reference_temperature_k"
+        ],
+        "title": "SegmentedInventory",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "inventory.uniform",
+        "version": "1",
+        "title": "Uniform real-fluid inventory and reference volume",
+        "category": "inventory",
+        "input_units": {
+          "fluid": "fluid_identifier",
+          "pressure_pa_abs": "Pa_abs",
+          "temperature_k": "K",
+          "internal_volume_m3": "m3",
+          "reference_pressure_pa_abs": "Pa_abs",
+          "reference_temperature_k": "K"
+        },
+        "output_units": {
+          "density_kg_m3": "kg/m3",
+          "mass_kg": "kg",
+          "reference_volume_m3": "m3",
+          "specific_enthalpy_j_kg": "J/kg"
+        },
+        "sources": [
+          "https://coolprop.org/coolprop/HighLevelAPI.html"
+        ],
+        "assumptions": [
+          "Uniform single-phase actual and reference states; no unknown phase or stratification inferred."
+        ],
+        "dependency": "CoolProp",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "fluid": {
+            "minLength": 1,
+            "title": "Fluid",
+            "type": "string"
+          },
+          "pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Pressure Pa Abs",
+            "type": "number"
+          },
+          "temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Temperature K",
+            "type": "number"
+          },
+          "internal_volume_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Internal Volume M3",
+            "type": "number"
+          },
+          "reference_pressure_pa_abs": {
+            "exclusiveMinimum": 0,
+            "title": "Reference Pressure Pa Abs",
+            "type": "number"
+          },
+          "reference_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Reference Temperature K",
+            "type": "number"
+          }
+        },
+        "required": [
+          "fluid",
+          "pressure_pa_abs",
+          "temperature_k",
+          "internal_volume_m3",
+          "reference_pressure_pa_abs",
+          "reference_temperature_k"
+        ],
+        "title": "Inventory",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "thermal.flow_cooling",
+        "version": "1",
+        "title": "Constant-property flow thermal relaxation",
+        "category": "thermal",
+        "input_units": {
+          "inlet_temperature_k": "K",
+          "ambient_temperature_k": "K",
+          "mass_flow_kg_s": "kg/s",
+          "specific_heat_j_kg_k": "J/(kg*K)",
+          "conductance_w_k": "W/K"
+        },
+        "output_units": {
+          "outlet_temperature_k": "K",
+          "heat_loss_w": "W"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+        ],
+        "assumptions": [
+          "Constant ambient, heat capacity and total conductance without phase change."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "inlet_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Inlet Temperature K",
+            "type": "number"
+          },
+          "ambient_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Ambient Temperature K",
+            "type": "number"
+          },
+          "mass_flow_kg_s": {
+            "exclusiveMinimum": 0,
+            "title": "Mass Flow Kg S",
+            "type": "number"
+          },
+          "specific_heat_j_kg_k": {
+            "exclusiveMinimum": 0,
+            "title": "Specific Heat J Kg K",
+            "type": "number"
+          },
+          "conductance_w_k": {
+            "minimum": 0,
+            "title": "Conductance W K",
+            "type": "number"
+          }
+        },
+        "required": [
+          "inlet_temperature_k",
+          "ambient_temperature_k",
+          "mass_flow_kg_s",
+          "specific_heat_j_kg_k",
+          "conductance_w_k"
+        ],
+        "title": "Cooling",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "thermal.free_expansion",
+        "version": "1",
+        "title": "Unrestrained linear thermal expansion",
+        "category": "thermal",
+        "input_units": {
+          "reference_length_m": "m",
+          "linear_expansion_per_k": "1/K",
+          "reference_temperature_k": "K",
+          "operating_temperature_k": "K"
+        },
+        "output_units": {
+          "free_length_change_m": "m",
+          "operating_length_m": "m"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-2/pages/3-introduction"
+        ],
+        "assumptions": [
+          "Small linear unrestrained expansion with a declared coefficient."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "reference_length_m": {
+            "exclusiveMinimum": 0,
+            "title": "Reference Length M",
+            "type": "number"
+          },
+          "linear_expansion_per_k": {
+            "minimum": 0,
+            "title": "Linear Expansion Per K",
+            "type": "number"
+          },
+          "reference_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Reference Temperature K",
+            "type": "number"
+          },
+          "operating_temperature_k": {
+            "exclusiveMinimum": 0,
+            "title": "Operating Temperature K",
+            "type": "number"
+          }
+        },
+        "required": [
+          "reference_length_m",
+          "linear_expansion_per_k",
+          "reference_temperature_k",
+          "operating_temperature_k"
+        ],
+        "title": "Expansion",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "thermal.internal_convection",
+        "version": "1",
+        "title": "Selectable internal-flow convection correlation",
+        "category": "thermal",
+        "input_units": {
+          "reynolds": "1",
+          "prandtl": "1",
+          "diameter_m": "m",
+          "conductivity_w_m_k": "W/(m*K)",
+          "relative_roughness": "1",
+          "method": "selection"
+        },
+        "output_units": {
+          "nusselt": "1",
+          "coefficient_w_m2_k": "W/(m2*K)"
+        },
+        "sources": [
+          "https://ht.readthedocs.io/"
+        ],
+        "assumptions": [
+          "Single-phase internal flow with independently checked thermal boundary and regime."
+        ],
+        "dependency": "ht",
+        "implementation": "library_adapter",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "reynolds": {
+            "exclusiveMinimum": 0,
+            "title": "Reynolds",
+            "type": "number"
+          },
+          "prandtl": {
+            "exclusiveMinimum": 0,
+            "title": "Prandtl",
+            "type": "number"
+          },
+          "diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Diameter M",
+            "type": "number"
+          },
+          "conductivity_w_m_k": {
+            "exclusiveMinimum": 0,
+            "title": "Conductivity W M K",
+            "type": "number"
+          },
+          "relative_roughness": {
+            "default": 0.0,
+            "maximum": 0.1,
+            "minimum": 0,
+            "title": "Relative Roughness",
+            "type": "number"
+          },
+          "method": {
+            "enum": [
+              "Gnielinski",
+              "Churchill-Zajic",
+              "Dittus-Boelter",
+              "Laminar - constant T",
+              "Laminar - constant Q"
+            ],
+            "title": "Method",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reynolds",
+          "prandtl",
+          "diameter_m",
+          "conductivity_w_m_k",
+          "method"
+        ],
+        "title": "InternalConvection",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "transient.surge_pulse",
+        "version": "1",
+        "title": "Simple-wave pressure pulse and closure timescale",
+        "category": "transient",
+        "input_units": {
+          "density_kg_m3": "kg/m3",
+          "wave_speed_m_s": "m/s",
+          "initial_velocity_m_s": "m/s",
+          "final_velocity_m_s": "m/s",
+          "length_m": "m",
+          "closure_time_s": "s"
+        },
+        "output_units": {
+          "instantaneous_pressure_pulse_pa": "Pa",
+          "round_trip_time_s": "s",
+          "fast_closure": "bool"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Joukowsky pulse scale in a uniform liquid line; not a reflected-wave transient simulation."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "wave_speed_m_s": {
+            "exclusiveMinimum": 0,
+            "title": "Wave Speed M S",
+            "type": "number"
+          },
+          "initial_velocity_m_s": {
+            "title": "Initial Velocity M S",
+            "type": "number"
+          },
+          "final_velocity_m_s": {
+            "title": "Final Velocity M S",
+            "type": "number"
+          },
+          "length_m": {
+            "exclusiveMinimum": 0,
+            "title": "Length M",
+            "type": "number"
+          },
+          "closure_time_s": {
+            "exclusiveMinimum": 0,
+            "title": "Closure Time S",
+            "type": "number"
+          }
+        },
+        "required": [
+          "density_kg_m3",
+          "wave_speed_m_s",
+          "initial_velocity_m_s",
+          "final_velocity_m_s",
+          "length_m",
+          "closure_time_s"
+        ],
+        "title": "SurgePulse",
+        "type": "object"
+      }
+    },
+    {
+      "model": {
+        "id": "transient.wave_speed",
+        "version": "1",
+        "title": "Elastic-pipe liquid wave speed",
+        "category": "transient",
+        "input_units": {
+          "density_kg_m3": "kg/m3",
+          "fluid_bulk_modulus_pa": "Pa",
+          "pipe_elastic_modulus_pa": "Pa",
+          "inner_diameter_m": "m",
+          "wall_thickness_m": "m",
+          "restraint_coefficient": "1"
+        },
+        "output_units": {
+          "wave_speed_m_s": "m/s",
+          "rigid_wall_sound_speed_m_s": "m/s"
+        },
+        "sources": [
+          "https://openstax.org/books/university-physics-volume-1/pages/14-introduction"
+        ],
+        "assumptions": [
+          "Linear small-disturbance fluid and wall compliance; caller supplies restraint coefficient."
+        ],
+        "dependency": null,
+        "implementation": "native",
+        "qualification": "engineering_screening"
+      },
+      "input_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "density_kg_m3": {
+            "exclusiveMinimum": 0,
+            "title": "Density Kg M3",
+            "type": "number"
+          },
+          "fluid_bulk_modulus_pa": {
+            "exclusiveMinimum": 0,
+            "title": "Fluid Bulk Modulus Pa",
+            "type": "number"
+          },
+          "pipe_elastic_modulus_pa": {
+            "exclusiveMinimum": 0,
+            "title": "Pipe Elastic Modulus Pa",
+            "type": "number"
+          },
+          "inner_diameter_m": {
+            "exclusiveMinimum": 0,
+            "title": "Inner Diameter M",
+            "type": "number"
+          },
+          "wall_thickness_m": {
+            "exclusiveMinimum": 0,
+            "title": "Wall Thickness M",
+            "type": "number"
+          },
+          "restraint_coefficient": {
+            "minimum": 0,
+            "title": "Restraint Coefficient",
+            "type": "number"
+          }
+        },
+        "required": [
+          "density_kg_m3",
+          "fluid_bulk_modulus_pa",
+          "pipe_elastic_modulus_pa",
+          "inner_diameter_m",
+          "wall_thickness_m",
+          "restraint_coefficient"
+        ],
+        "title": "WaveSpeed",
+        "type": "object"
+      }
+    }
+  ]
+}

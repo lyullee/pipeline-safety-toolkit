@@ -2,6 +2,8 @@
 
 버전0.1.0a1의 고정 범위는223개이며,339개 변형의 구현 매핑과304개 공개 API가 있다. 이 목록은 모델 탐색용이며 모든 변형의 현장 적합성 인증이 아니다. 지원 설명·실제 Python 함수·독립 물리시험 프로필을 함께 읽는다. 독립 프로필은198개, 나머지25개는 별도 기준이 필요하다.
 
+**입출력부터 확인하려면:** [README의 223개 모델 입출력 표](../README.md#모델별-목적입력출력-223개) · [304개 API의 필수값·기본값·중첩 계약](MODULE_IO_REFERENCE_KO.md)
+
 [README](../README.md) · [사용 설명서](USER_GUIDE_KO.md) · [API 계약](API_KO.md) · [미완료 목록](PHYSICAL_VERIFICATION_BACKLOG_KO.md)
 
 ## 1. `acoustics.supplied_compressor_volume_correlation`
