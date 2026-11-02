@@ -15,5 +15,20 @@
     "case_records_passed": 2013,
     "pending": 25
   },
-  "pypi_status": "GitHub trusted publishing workflow dispatched; verify its terminal result before claiming publication."
+  "pypi_status": "published",
+  "pypi": "https://pypi.org/project/pipeline-safety-toolkit/0.1.0a1/",
+  "publishing_workflow": "https://github.com/lyullee/pipeline-safety-toolkit/actions/runs/41540078636",
+  "publishing_workflow_conclusion": "success",
+  "pypi_wheel_sha256": "25eef9c530ec9506b40873ac68c8dfde65ffc846047e1250717bafa88e368d81",
+  "pypi_package_files_match_workspace": 449,
+  "pypi_package_file_mismatches": [],
+  "release_ci": {
+    "run": 41540066915,
+    "conclusion": "success",
+    "core_wheel_windows": "success",
+    "core_wheel_linux": "success",
+    "portable_engineering_windows": "success",
+    "portable_engineering_linux": "success",
+    "advisory_style_audit": "failure: known style debt; continue-on-error, not a correctness claim"
+  }
 }
